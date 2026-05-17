@@ -1,0 +1,39 @@
+============================================================
+CodeTruth Agent V1 - TC07 Output
+============================================================
+
+Generated : 2026-05-17 12:24:09.898996
+Test Case : TC07
+Name      : Nested Function Duplicate
+
+Runtime Test Case:
+------------------------------------------------------------
+# =============================================================================
+# TC07 — Nested Function Duplicate
+# =============================================================================
+
+def outer_process(data):
+
+    def clean(x):
+        return x.strip().lower()
+
+    return [clean(x) for x in data]
+
+def normalize_text(items):
+    return [x.strip().lower() for x in items]
+------------------------------------------------------------
+
+CodeTruth Agent V1 - Isolated Execution
+------------------------------------------------------------
+Execution Time: 2026-05-17 12:24:09.893090
+
+Files scanned: 1
+Scanned file: TC07
+Total functions found: 2
+Total duplicates found: 0
+
+No duplicate functions found.
+
+============================================================
+End Of Report
+============================================================

@@ -1,0 +1,49 @@
+============================================================
+CodeTruth Agent V1 - TC04 Output
+============================================================
+
+Generated : 2026-05-17 12:24:09.835205
+Test Case : TC04
+Name      : Business Logic Conflict
+
+Runtime Test Case:
+------------------------------------------------------------
+# =============================================================================
+# TC04 — Business Logic Conflict
+# =============================================================================
+
+def calculate_tax(amount):
+    return amount * 0.10
+
+def compute_tax(value):
+    return value * 0.20
+------------------------------------------------------------
+
+CodeTruth Agent V1 - Isolated Execution
+------------------------------------------------------------
+Execution Time: 2026-05-17 12:24:09.835205
+
+Files scanned: 1
+Scanned file: TC04
+Total functions found: 2
+Total duplicates found: 1
+
+============================================================
+TEST CASE RESULT
+============================================================
+Function 1: calculate_tax
+Function 2: compute_tax
+Similarity: 100.0%
+Duplicate Type: BUSINESS_LOGIC_CONFLICT
+Reason: Different constant values detected
+Semantic Reason: No major semantic conflict detected.
+Constant Reason: Different constant values detected: [0.1] vs [0.2]
+Operation Reason: No operation conflict detected.
+Type Reason: No type conflict detected
+Nested Reason: No nested structure conflict detected
+Auto Merge Safe: False
+
+
+============================================================
+End Of Report
+============================================================

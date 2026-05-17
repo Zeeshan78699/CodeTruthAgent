@@ -1,0 +1,91 @@
+============================================================
+CodeTruth Agent V1 - TC20 Output
+============================================================
+
+Generated : 2026-05-17 12:24:10.217655
+Test Case : TC20
+Name      : Full Pipeline End to End
+
+Runtime Test Case:
+------------------------------------------------------------
+# =============================================================================
+# TC20 — Full Pipeline End to End
+# =============================================================================
+
+def square(n):
+    return n * n
+
+def sq(n):
+    return n * n
+
+def greet(name):
+    return f"Hello, {name}!"
+
+def say_hello(name):
+    return f"Hello, {name}!"
+
+def get_vat(amount):
+    return amount * 0.05
+
+def calc_vat(amount):
+    return amount * 0.20
+------------------------------------------------------------
+
+CodeTruth Agent V1 - Isolated Execution
+------------------------------------------------------------
+Execution Time: 2026-05-17 12:24:10.217655
+
+Files scanned: 1
+Scanned file: TC20
+Total functions found: 6
+Total duplicates found: 3
+
+============================================================
+TEST CASE RESULT
+============================================================
+Function 1: square
+Function 2: sq
+Similarity: 100.0%
+Duplicate Type: SAFE_LOGICAL_DUPLICATE
+Reason: Same logic
+Semantic Reason: No major semantic conflict detected.
+Constant Reason: No constant conflict detected.
+Operation Reason: No operation conflict detected.
+Type Reason: No type conflict detected
+Nested Reason: No nested structure conflict detected
+Auto Merge Safe: True
+
+============================================================
+TEST CASE RESULT
+============================================================
+Function 1: greet
+Function 2: say_hello
+Similarity: 100.0%
+Duplicate Type: SAFE_LOGICAL_DUPLICATE
+Reason: Same logic
+Semantic Reason: No major semantic conflict detected.
+Constant Reason: No constant conflict detected.
+Operation Reason: No operation conflict detected.
+Type Reason: No type conflict detected
+Nested Reason: No nested structure conflict detected
+Auto Merge Safe: True
+
+============================================================
+TEST CASE RESULT
+============================================================
+Function 1: get_vat
+Function 2: calc_vat
+Similarity: 100.0%
+Duplicate Type: BUSINESS_LOGIC_CONFLICT
+Reason: Different constant values detected
+Semantic Reason: No major semantic conflict detected.
+Constant Reason: Different constant values detected: [0.05] vs [0.2]
+Operation Reason: No operation conflict detected.
+Type Reason: No type conflict detected
+Nested Reason: No nested structure conflict detected
+Auto Merge Safe: False
+
+
+============================================================
+End Of Report
+============================================================

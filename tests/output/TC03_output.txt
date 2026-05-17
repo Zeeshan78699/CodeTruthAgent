@@ -1,0 +1,35 @@
+============================================================
+CodeTruth Agent V1 - TC03 Output
+============================================================
+
+Generated : 2026-05-17 12:24:09.817432
+Test Case : TC03
+Name      : Different Logic Same Name Pattern
+
+Runtime Test Case:
+------------------------------------------------------------
+# =============================================================================
+# TC03 — Different Logic Same Name Pattern
+# =============================================================================
+
+def process_data(data):
+    return [x * 2 for x in data]
+
+def process_data_v2(data):
+    return [x ** 2 for x in data]
+------------------------------------------------------------
+
+CodeTruth Agent V1 - Isolated Execution
+------------------------------------------------------------
+Execution Time: 2026-05-17 12:24:09.817432
+
+Files scanned: 1
+Scanned file: TC03
+Total functions found: 2
+Total duplicates found: 0
+
+No duplicate functions found.
+
+============================================================
+End Of Report
+============================================================

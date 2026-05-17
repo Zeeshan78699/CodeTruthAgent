@@ -1,0 +1,49 @@
+============================================================
+CodeTruth Agent V1 - TC05 Output
+============================================================
+
+Generated : 2026-05-17 12:24:09.859960
+Test Case : TC05
+Name      : Semantic Domain Conflict
+
+Runtime Test Case:
+------------------------------------------------------------
+# =============================================================================
+# TC05 — Semantic Domain Conflict
+# =============================================================================
+
+def validate_email(text):
+    return len(text) > 0 and "@" in text
+
+def validate_username(text):
+    return len(text) > 0 and "@" in text
+------------------------------------------------------------
+
+CodeTruth Agent V1 - Isolated Execution
+------------------------------------------------------------
+Execution Time: 2026-05-17 12:24:09.858010
+
+Files scanned: 1
+Scanned file: TC05
+Total functions found: 2
+Total duplicates found: 1
+
+============================================================
+TEST CASE RESULT
+============================================================
+Function 1: validate_email
+Function 2: validate_username
+Similarity: 100.0%
+Duplicate Type: SEMANTIC_REVIEW_REQUIRED
+Reason: Semantic conflict
+Semantic Reason: Different domains: email vs username
+Constant Reason: No constant conflict detected.
+Operation Reason: No operation conflict detected.
+Type Reason: No type conflict detected
+Nested Reason: No nested structure conflict detected
+Auto Merge Safe: False
+
+
+============================================================
+End Of Report
+============================================================

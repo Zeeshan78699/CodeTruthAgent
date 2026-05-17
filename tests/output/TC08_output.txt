@@ -1,0 +1,49 @@
+============================================================
+CodeTruth Agent V1 - TC08 Output
+============================================================
+
+Generated : 2026-05-17 12:24:09.917428
+Test Case : TC08
+Name      : Type Conflict Detection
+
+Runtime Test Case:
+------------------------------------------------------------
+# =============================================================================
+# TC08 — Type Conflict Detection
+# =============================================================================
+
+def sum_integers(numbers: list):
+    return sum(numbers)
+
+def sum_strings(values: list):
+    return sum(values)
+------------------------------------------------------------
+
+CodeTruth Agent V1 - Isolated Execution
+------------------------------------------------------------
+Execution Time: 2026-05-17 12:24:09.915159
+
+Files scanned: 1
+Scanned file: TC08
+Total functions found: 2
+Total duplicates found: 1
+
+============================================================
+TEST CASE RESULT
+============================================================
+Function 1: sum_integers
+Function 2: sum_strings
+Similarity: 100.0%
+Duplicate Type: SEMANTIC_REVIEW_REQUIRED
+Reason: Type conflict
+Semantic Reason: No major semantic conflict detected.
+Constant Reason: No constant conflict detected.
+Operation Reason: No operation conflict detected.
+Type Reason: sum_integers handles int, but sum_strings does not
+Nested Reason: No nested structure conflict detected
+Auto Merge Safe: False
+
+
+============================================================
+End Of Report
+============================================================

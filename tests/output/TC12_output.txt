@@ -1,0 +1,57 @@
+============================================================
+CodeTruth Agent V1 - TC12 Output
+============================================================
+
+Generated : 2026-05-17 12:24:10.024724
+Test Case : TC12
+Name      : Recursive Function Detection
+
+Runtime Test Case:
+------------------------------------------------------------
+# =============================================================================
+# TC12 — Recursive Function Detection
+# =============================================================================
+
+def factorial(n):
+
+    if n == 0:
+        return 1
+
+    return n * factorial(n - 1)
+
+def calc_factorial(n):
+
+    if n == 0:
+        return 1
+
+    return n * calc_factorial(n - 1)
+------------------------------------------------------------
+
+CodeTruth Agent V1 - Isolated Execution
+------------------------------------------------------------
+Execution Time: 2026-05-17 12:24:10.024724
+
+Files scanned: 1
+Scanned file: TC12
+Total functions found: 2
+Total duplicates found: 1
+
+============================================================
+TEST CASE RESULT
+============================================================
+Function 1: factorial
+Function 2: calc_factorial
+Similarity: 100.0%
+Duplicate Type: SEMANTIC_REVIEW_REQUIRED
+Reason: Recursive function detected — requires manual review
+Semantic Reason: No major semantic conflict detected.
+Constant Reason: No constant conflict detected.
+Operation Reason: No operation conflict detected.
+Type Reason: No type conflict detected
+Nested Reason: Recursive function detected — requires manual review
+Auto Merge Safe: False
+
+
+============================================================
+End Of Report
+============================================================

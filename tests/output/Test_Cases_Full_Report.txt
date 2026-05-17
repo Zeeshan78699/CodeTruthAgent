@@ -1,0 +1,2639 @@
+============================================================
+CodeTruth Agent V1 - Full Test Cases Report
+Generated : 2026-05-17 12:14:23
+Test Cases: 22
+============================================================
+
+
+============================================================
+TC01 - Basic Identical Duplicate
+============================================================
+
+Objective : Detect 100% identical functions
+Problem   : Developer copy-pasted function without knowing original exists
+
+Code:
+----------------------------------------
+  def add(a, b):
+      return a + b
+  
+  def add_copy(a, b):
+      return a + b
+----------------------------------------
+
+Expected:
+  Similarity: 100%
+  Type: SAFE_LOGICAL_DUPLICATE
+  Approval prompt shown
+
+Auto Input: 'yes'
+
+------------------------------------------------------------
+VS Code Output:
+------------------------------------------------------------
+
+CodeTruth Agent v1 (Learning System)
+------------------------------------
+Execution Time: 2026-05-17 12:14:23.841502
+
+Files scanned:
+.\billing.py
+.\db_prod.py
+.\db_test.py
+.\helpers.py
+.\inventory.py
+.\orders.py
+.\reports.py
+.\sample_code.py
+.\utils.py
+.\core\code_modifier.py
+.\core\dependency_tracker.py
+.\core\duplicate_detector.py
+.\core\memory_store.py
+.\core\merge_advisor.py
+.\core\parser.py
+.\core\project_scanner.py
+.\core\quality_checker.py
+.\core\risk_analyzer.py
+.\core\__init__.py
+.\real_world\utils.py
+Files found: 20
+Total functions found: 100
+
+Total duplicates found: 2
+
+Learning-enabled duplicate analysis:
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- connect_database() [.\db_prod.py]
+  <-> open_connection() [.\db_test.py]
+  Similarity: 100.0%
+  Raw Similarity: 99.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['prod-server', 5432] vs ['test-server', 3306]
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- generate_order_summary() [.\orders.py]
+  <-> generate_finance_report() [.\reports.py]
+  Similarity: 91.22%
+  Raw Similarity: 89.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['status', 'total', 'confirmed'] vs [0, 'report_type', 'grand_total', 'finance']
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+FINAL VALIDATION RESULT
+==================================================
+Total Duplicates Found: 2
+Engine Status: STABLE
+Crash Status: NONE
+GitHub Release Status: CLEARED
+
+
+============================================================
+TC02 - Different Function Names Same Logic
+============================================================
+
+Objective : Detect duplicates despite different naming
+Problem   : Two developers wrote same function independently with different names
+
+Code:
+----------------------------------------
+  def calculate_area(width, height):
+      return width * height
+  
+  def get_area(w, h):
+      return w * h
+----------------------------------------
+
+Expected:
+  Similarity: ~90-100%
+  Type: SAFE_LOGICAL_DUPLICATE
+  Best choice suggested
+
+Auto Input: 'yes'
+
+------------------------------------------------------------
+VS Code Output:
+------------------------------------------------------------
+
+CodeTruth Agent v1 (Learning System)
+------------------------------------
+Execution Time: 2026-05-17 12:14:34.942361
+
+Files scanned:
+.\billing.py
+.\db_prod.py
+.\db_test.py
+.\helpers.py
+.\inventory.py
+.\orders.py
+.\reports.py
+.\sample_code.py
+.\utils.py
+.\core\code_modifier.py
+.\core\dependency_tracker.py
+.\core\duplicate_detector.py
+.\core\memory_store.py
+.\core\merge_advisor.py
+.\core\parser.py
+.\core\project_scanner.py
+.\core\quality_checker.py
+.\core\risk_analyzer.py
+.\core\__init__.py
+.\real_world\utils.py
+Files found: 20
+Total functions found: 100
+
+Total duplicates found: 2
+
+Learning-enabled duplicate analysis:
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- connect_database() [.\db_prod.py]
+  <-> open_connection() [.\db_test.py]
+  Similarity: 100.0%
+  Raw Similarity: 99.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['prod-server', 5432] vs ['test-server', 3306]
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- generate_order_summary() [.\orders.py]
+  <-> generate_finance_report() [.\reports.py]
+  Similarity: 91.22%
+  Raw Similarity: 89.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['status', 'total', 'confirmed'] vs [0, 'report_type', 'grand_total', 'finance']
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+FINAL VALIDATION RESULT
+==================================================
+Total Duplicates Found: 2
+Engine Status: STABLE
+Crash Status: NONE
+GitHub Release Status: CLEARED
+
+
+============================================================
+TC03 - Different Logic Same Name Pattern
+============================================================
+
+Objective : Reject false positives with similar names
+Problem   : Engine should NOT flag different logic as duplicate
+
+Code:
+----------------------------------------
+  def process_data(data):
+      return [x * 2 for x in data]
+  
+  def process_data_v2(data):
+      return [x ** 2 for x in data]
+----------------------------------------
+
+Expected:
+  No duplicate found
+  Engine correctly filters
+
+------------------------------------------------------------
+VS Code Output:
+------------------------------------------------------------
+
+CodeTruth Agent v1 (Learning System)
+------------------------------------
+Execution Time: 2026-05-17 12:14:44.011138
+
+Files scanned:
+.\billing.py
+.\db_prod.py
+.\db_test.py
+.\helpers.py
+.\inventory.py
+.\orders.py
+.\reports.py
+.\sample_code.py
+.\utils.py
+.\core\code_modifier.py
+.\core\dependency_tracker.py
+.\core\duplicate_detector.py
+.\core\memory_store.py
+.\core\merge_advisor.py
+.\core\parser.py
+.\core\project_scanner.py
+.\core\quality_checker.py
+.\core\risk_analyzer.py
+.\core\__init__.py
+.\real_world\utils.py
+Files found: 20
+Total functions found: 100
+
+Total duplicates found: 2
+
+Learning-enabled duplicate analysis:
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- connect_database() [.\db_prod.py]
+  <-> open_connection() [.\db_test.py]
+  Similarity: 100.0%
+  Raw Similarity: 99.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['prod-server', 5432] vs ['test-server', 3306]
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- generate_order_summary() [.\orders.py]
+  <-> generate_finance_report() [.\reports.py]
+  Similarity: 91.22%
+  Raw Similarity: 89.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['status', 'total', 'confirmed'] vs [0, 'report_type', 'grand_total', 'finance']
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+FINAL VALIDATION RESULT
+==================================================
+Total Duplicates Found: 2
+Engine Status: STABLE
+Crash Status: NONE
+GitHub Release Status: CLEARED
+
+
+============================================================
+TC04 - Business Logic Conflict
+============================================================
+
+Objective : Detect same structure but different business values
+Problem   : Merging would silently break one business rule
+
+Code:
+----------------------------------------
+  def calculate_tax(amount):
+      return amount * 0.10
+  
+  def compute_tax(value):
+      return value * 0.20
+----------------------------------------
+
+Expected:
+  Type: BUSINESS_LOGIC_CONFLICT
+  Constant conflict: [0.10] vs [0.20]
+  Risk: CRITICAL
+  Approval disabled
+
+------------------------------------------------------------
+VS Code Output:
+------------------------------------------------------------
+
+CodeTruth Agent v1 (Learning System)
+------------------------------------
+Execution Time: 2026-05-17 12:14:53.317462
+
+Files scanned:
+.\billing.py
+.\db_prod.py
+.\db_test.py
+.\helpers.py
+.\inventory.py
+.\orders.py
+.\reports.py
+.\sample_code.py
+.\utils.py
+.\core\code_modifier.py
+.\core\dependency_tracker.py
+.\core\duplicate_detector.py
+.\core\memory_store.py
+.\core\merge_advisor.py
+.\core\parser.py
+.\core\project_scanner.py
+.\core\quality_checker.py
+.\core\risk_analyzer.py
+.\core\__init__.py
+.\real_world\utils.py
+Files found: 20
+Total functions found: 100
+
+Total duplicates found: 2
+
+Learning-enabled duplicate analysis:
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- connect_database() [.\db_prod.py]
+  <-> open_connection() [.\db_test.py]
+  Similarity: 100.0%
+  Raw Similarity: 99.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['prod-server', 5432] vs ['test-server', 3306]
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- generate_order_summary() [.\orders.py]
+  <-> generate_finance_report() [.\reports.py]
+  Similarity: 91.22%
+  Raw Similarity: 89.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['status', 'total', 'confirmed'] vs [0, 'report_type', 'grand_total', 'finance']
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+FINAL VALIDATION RESULT
+==================================================
+Total Duplicates Found: 2
+Engine Status: STABLE
+Crash Status: NONE
+GitHub Release Status: CLEARED
+
+
+============================================================
+TC05 - Semantic Domain Conflict
+============================================================
+
+Objective : Detect same logic different business domain
+Problem   : Functions look identical but serve different domains
+
+Code:
+----------------------------------------
+  def validate_email(text):
+      return len(text) > 0 and '@' in text
+  
+  def validate_username(text):
+      return len(text) > 0 and '@' in text
+----------------------------------------
+
+Expected:
+  Type: SEMANTIC_REVIEW_REQUIRED
+  Risk: High
+  Approval disabled
+  Manual review forced
+
+------------------------------------------------------------
+VS Code Output:
+------------------------------------------------------------
+
+CodeTruth Agent v1 (Learning System)
+------------------------------------
+Execution Time: 2026-05-17 12:15:02.156436
+
+Files scanned:
+.\billing.py
+.\db_prod.py
+.\db_test.py
+.\helpers.py
+.\inventory.py
+.\orders.py
+.\reports.py
+.\sample_code.py
+.\utils.py
+.\core\code_modifier.py
+.\core\dependency_tracker.py
+.\core\duplicate_detector.py
+.\core\memory_store.py
+.\core\merge_advisor.py
+.\core\parser.py
+.\core\project_scanner.py
+.\core\quality_checker.py
+.\core\risk_analyzer.py
+.\core\__init__.py
+.\real_world\utils.py
+Files found: 20
+Total functions found: 100
+
+Total duplicates found: 2
+
+Learning-enabled duplicate analysis:
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- connect_database() [.\db_prod.py]
+  <-> open_connection() [.\db_test.py]
+  Similarity: 100.0%
+  Raw Similarity: 99.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['prod-server', 5432] vs ['test-server', 3306]
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- generate_order_summary() [.\orders.py]
+  <-> generate_finance_report() [.\reports.py]
+  Similarity: 91.22%
+  Raw Similarity: 89.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['status', 'total', 'confirmed'] vs [0, 'report_type', 'grand_total', 'finance']
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+FINAL VALIDATION RESULT
+==================================================
+Total Duplicates Found: 2
+Engine Status: STABLE
+Crash Status: NONE
+GitHub Release Status: CLEARED
+
+
+============================================================
+TC06 - High Usage CRITICAL Block
+============================================================
+
+Objective : Block merge when function is heavily used
+Problem   : Removing heavily used function breaks entire codebase
+
+Code:
+----------------------------------------
+  def calculate_discount(amount):
+      return amount * 0.15
+  
+  def apply_discount(value):
+      return value * 0.15
+  
+  # calculate_discount called across billing.py, orders.py, reports.py
+----------------------------------------
+
+Expected:
+  Risk: CRITICAL
+  Usage: 15+ times
+  Decision: BLOCKED
+  Approval disabled
+
+------------------------------------------------------------
+VS Code Output:
+------------------------------------------------------------
+
+CodeTruth Agent v1 (Learning System)
+------------------------------------
+Execution Time: 2026-05-17 12:15:10.918798
+
+Files scanned:
+.\billing.py
+.\db_prod.py
+.\db_test.py
+.\helpers.py
+.\inventory.py
+.\orders.py
+.\reports.py
+.\sample_code.py
+.\utils.py
+.\core\code_modifier.py
+.\core\dependency_tracker.py
+.\core\duplicate_detector.py
+.\core\memory_store.py
+.\core\merge_advisor.py
+.\core\parser.py
+.\core\project_scanner.py
+.\core\quality_checker.py
+.\core\risk_analyzer.py
+.\core\__init__.py
+.\real_world\utils.py
+Files found: 20
+Total functions found: 100
+
+Total duplicates found: 2
+
+Learning-enabled duplicate analysis:
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- connect_database() [.\db_prod.py]
+  <-> open_connection() [.\db_test.py]
+  Similarity: 100.0%
+  Raw Similarity: 99.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['prod-server', 5432] vs ['test-server', 3306]
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- generate_order_summary() [.\orders.py]
+  <-> generate_finance_report() [.\reports.py]
+  Similarity: 91.22%
+  Raw Similarity: 89.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['status', 'total', 'confirmed'] vs [0, 'report_type', 'grand_total', 'finance']
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+FINAL VALIDATION RESULT
+==================================================
+Total Duplicates Found: 2
+Engine Status: STABLE
+Crash Status: NONE
+GitHub Release Status: CLEARED
+
+
+============================================================
+TC07 - Nested Function Duplicate
+============================================================
+
+Objective : Detect similar logic with structural difference
+Problem   : One uses nested function other uses inline - unsafe to auto-merge
+
+Code:
+----------------------------------------
+  def outer_process(data):
+      def clean(x):
+          return x.strip().lower()
+      return [clean(x) for x in data]
+  
+  def normalize_text(items):
+      return [x.strip().lower() for x in items]
+----------------------------------------
+
+Expected:
+  Similarity: ~85-90%
+  Type: SEMANTIC_REVIEW_REQUIRED
+  Structure: nested vs flat detected
+  Approval disabled
+
+------------------------------------------------------------
+VS Code Output:
+------------------------------------------------------------
+
+CodeTruth Agent v1 (Learning System)
+------------------------------------
+Execution Time: 2026-05-17 12:15:19.674321
+
+Files scanned:
+.\billing.py
+.\db_prod.py
+.\db_test.py
+.\helpers.py
+.\inventory.py
+.\orders.py
+.\reports.py
+.\sample_code.py
+.\utils.py
+.\core\code_modifier.py
+.\core\dependency_tracker.py
+.\core\duplicate_detector.py
+.\core\memory_store.py
+.\core\merge_advisor.py
+.\core\parser.py
+.\core\project_scanner.py
+.\core\quality_checker.py
+.\core\risk_analyzer.py
+.\core\__init__.py
+.\real_world\utils.py
+Files found: 20
+Total functions found: 100
+
+Total duplicates found: 2
+
+Learning-enabled duplicate analysis:
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- connect_database() [.\db_prod.py]
+  <-> open_connection() [.\db_test.py]
+  Similarity: 100.0%
+  Raw Similarity: 99.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['prod-server', 5432] vs ['test-server', 3306]
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- generate_order_summary() [.\orders.py]
+  <-> generate_finance_report() [.\reports.py]
+  Similarity: 91.22%
+  Raw Similarity: 89.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['status', 'total', 'confirmed'] vs [0, 'report_type', 'grand_total', 'finance']
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+FINAL VALIDATION RESULT
+==================================================
+Total Duplicates Found: 2
+Engine Status: STABLE
+Crash Status: NONE
+GitHub Release Status: CLEARED
+
+
+============================================================
+TC08 - Type Conflict Detection
+============================================================
+
+Objective : Detect same logic different data types
+Problem   : Merging int and string functions causes runtime errors
+
+Code:
+----------------------------------------
+  def sum_integers(numbers: list):
+      return sum(numbers)
+  
+  def sum_strings(values: list):
+      return sum(values)
+----------------------------------------
+
+Expected:
+  Type: SEMANTIC_REVIEW_REQUIRED
+  Type conflict detected
+  Approval disabled
+
+------------------------------------------------------------
+VS Code Output:
+------------------------------------------------------------
+
+CodeTruth Agent v1 (Learning System)
+------------------------------------
+Execution Time: 2026-05-17 12:15:28.296515
+
+Files scanned:
+.\billing.py
+.\db_prod.py
+.\db_test.py
+.\helpers.py
+.\inventory.py
+.\orders.py
+.\reports.py
+.\sample_code.py
+.\utils.py
+.\core\code_modifier.py
+.\core\dependency_tracker.py
+.\core\duplicate_detector.py
+.\core\memory_store.py
+.\core\merge_advisor.py
+.\core\parser.py
+.\core\project_scanner.py
+.\core\quality_checker.py
+.\core\risk_analyzer.py
+.\core\__init__.py
+.\real_world\utils.py
+Files found: 20
+Total functions found: 100
+
+Total duplicates found: 2
+
+Learning-enabled duplicate analysis:
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- connect_database() [.\db_prod.py]
+  <-> open_connection() [.\db_test.py]
+  Similarity: 100.0%
+  Raw Similarity: 99.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['prod-server', 5432] vs ['test-server', 3306]
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- generate_order_summary() [.\orders.py]
+  <-> generate_finance_report() [.\reports.py]
+  Similarity: 91.22%
+  Raw Similarity: 89.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['status', 'total', 'confirmed'] vs [0, 'report_type', 'grand_total', 'finance']
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+FINAL VALIDATION RESULT
+==================================================
+Total Duplicates Found: 2
+Engine Status: STABLE
+Crash Status: NONE
+GitHub Release Status: CLEARED
+
+
+============================================================
+TC09 - Clean Codebase No False Positives
+============================================================
+
+Objective : Verify engine stays silent on legitimate unique functions
+Problem   : Engine must not flag legitimate unique functions
+
+Code:
+----------------------------------------
+  def calculate_area(w, h):
+      return w * h
+  
+  def calculate_perimeter(w, h):
+      return 2 * (w + h)
+  
+  def calculate_volume(w, h, d):
+      return w * h * d
+----------------------------------------
+
+Expected:
+  No duplicate functions found
+  Zero false positives
+
+------------------------------------------------------------
+VS Code Output:
+------------------------------------------------------------
+
+CodeTruth Agent v1 (Learning System)
+------------------------------------
+Execution Time: 2026-05-17 12:15:37.150911
+
+Files scanned:
+.\billing.py
+.\db_prod.py
+.\db_test.py
+.\helpers.py
+.\inventory.py
+.\orders.py
+.\reports.py
+.\sample_code.py
+.\utils.py
+.\core\code_modifier.py
+.\core\dependency_tracker.py
+.\core\duplicate_detector.py
+.\core\memory_store.py
+.\core\merge_advisor.py
+.\core\parser.py
+.\core\project_scanner.py
+.\core\quality_checker.py
+.\core\risk_analyzer.py
+.\core\__init__.py
+.\real_world\utils.py
+Files found: 20
+Total functions found: 100
+
+Total duplicates found: 2
+
+Learning-enabled duplicate analysis:
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- connect_database() [.\db_prod.py]
+  <-> open_connection() [.\db_test.py]
+  Similarity: 100.0%
+  Raw Similarity: 99.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['prod-server', 5432] vs ['test-server', 3306]
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- generate_order_summary() [.\orders.py]
+  <-> generate_finance_report() [.\reports.py]
+  Similarity: 91.22%
+  Raw Similarity: 89.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['status', 'total', 'confirmed'] vs [0, 'report_type', 'grand_total', 'finance']
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+FINAL VALIDATION RESULT
+==================================================
+Total Duplicates Found: 2
+Engine Status: STABLE
+Crash Status: NONE
+GitHub Release Status: CLEARED
+
+
+============================================================
+TC10 - Approval Yes Path
+============================================================
+
+Objective : Verify safe merge executes correctly on approval
+Problem   : Approved change must modify file and create backup
+
+Code:
+----------------------------------------
+  def add_two(a, b):
+      return a + b
+  
+  def sum_two(a, b):
+      return a + b
+----------------------------------------
+
+Expected:
+  Approve change? yes
+  Change applied safely
+  Backup created: sample_code.py.bak
+
+Auto Input: 'yes'
+
+------------------------------------------------------------
+VS Code Output:
+------------------------------------------------------------
+
+CodeTruth Agent v1 (Learning System)
+------------------------------------
+Execution Time: 2026-05-17 12:15:46.913943
+
+Files scanned:
+.\billing.py
+.\db_prod.py
+.\db_test.py
+.\helpers.py
+.\inventory.py
+.\orders.py
+.\reports.py
+.\sample_code.py
+.\utils.py
+.\core\code_modifier.py
+.\core\dependency_tracker.py
+.\core\duplicate_detector.py
+.\core\memory_store.py
+.\core\merge_advisor.py
+.\core\parser.py
+.\core\project_scanner.py
+.\core\quality_checker.py
+.\core\risk_analyzer.py
+.\core\__init__.py
+.\real_world\utils.py
+Files found: 20
+Total functions found: 100
+
+Total duplicates found: 2
+
+Learning-enabled duplicate analysis:
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- connect_database() [.\db_prod.py]
+  <-> open_connection() [.\db_test.py]
+  Similarity: 100.0%
+  Raw Similarity: 99.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['prod-server', 5432] vs ['test-server', 3306]
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- generate_order_summary() [.\orders.py]
+  <-> generate_finance_report() [.\reports.py]
+  Similarity: 91.22%
+  Raw Similarity: 89.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['status', 'total', 'confirmed'] vs [0, 'report_type', 'grand_total', 'finance']
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+FINAL VALIDATION RESULT
+==================================================
+Total Duplicates Found: 2
+Engine Status: STABLE
+Crash Status: NONE
+GitHub Release Status: CLEARED
+
+
+============================================================
+TC11 - Rejection Path
+============================================================
+
+Objective : Verify file untouched on rejection
+Problem   : Rejected change must never modify any file
+
+Code:
+----------------------------------------
+  def multiply(a, b):
+      return a * b
+  
+  def multiply_copy(a, b):
+      return a * b
+----------------------------------------
+
+Expected:
+  Approve change? no
+  Change skipped
+  File unchanged verified
+
+Auto Input: 'no'
+
+------------------------------------------------------------
+VS Code Output:
+------------------------------------------------------------
+
+CodeTruth Agent v1 (Learning System)
+------------------------------------
+Execution Time: 2026-05-17 12:15:55.755480
+
+Files scanned:
+.\billing.py
+.\db_prod.py
+.\db_test.py
+.\helpers.py
+.\inventory.py
+.\orders.py
+.\reports.py
+.\sample_code.py
+.\utils.py
+.\core\code_modifier.py
+.\core\dependency_tracker.py
+.\core\duplicate_detector.py
+.\core\memory_store.py
+.\core\merge_advisor.py
+.\core\parser.py
+.\core\project_scanner.py
+.\core\quality_checker.py
+.\core\risk_analyzer.py
+.\core\__init__.py
+.\real_world\utils.py
+Files found: 20
+Total functions found: 100
+
+Total duplicates found: 2
+
+Learning-enabled duplicate analysis:
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- connect_database() [.\db_prod.py]
+  <-> open_connection() [.\db_test.py]
+  Similarity: 100.0%
+  Raw Similarity: 99.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['prod-server', 5432] vs ['test-server', 3306]
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- generate_order_summary() [.\orders.py]
+  <-> generate_finance_report() [.\reports.py]
+  Similarity: 91.22%
+  Raw Similarity: 89.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['status', 'total', 'confirmed'] vs [0, 'report_type', 'grand_total', 'finance']
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+FINAL VALIDATION RESULT
+==================================================
+Total Duplicates Found: 2
+Engine Status: STABLE
+Crash Status: NONE
+GitHub Release Status: CLEARED
+
+
+============================================================
+TC12 - Recursive Function Detection
+============================================================
+
+Objective : Detect duplicate recursive functions safely
+Problem   : Recursive duplicates are dangerous to merge carelessly
+
+Code:
+----------------------------------------
+  def factorial(n):
+      if n == 0:
+          return 1
+      return n * factorial(n - 1)
+  
+  def calc_factorial(n):
+      if n == 0:
+          return 1
+      return n * calc_factorial(n - 1)
+----------------------------------------
+
+Expected:
+  Similarity: ~95-100%
+  Type: SEMANTIC_REVIEW_REQUIRED
+  Risk: High
+  Approval disabled
+
+------------------------------------------------------------
+VS Code Output:
+------------------------------------------------------------
+
+CodeTruth Agent v1 (Learning System)
+------------------------------------
+Execution Time: 2026-05-17 12:16:04.614150
+
+Files scanned:
+.\billing.py
+.\db_prod.py
+.\db_test.py
+.\helpers.py
+.\inventory.py
+.\orders.py
+.\reports.py
+.\sample_code.py
+.\utils.py
+.\core\code_modifier.py
+.\core\dependency_tracker.py
+.\core\duplicate_detector.py
+.\core\memory_store.py
+.\core\merge_advisor.py
+.\core\parser.py
+.\core\project_scanner.py
+.\core\quality_checker.py
+.\core\risk_analyzer.py
+.\core\__init__.py
+.\real_world\utils.py
+Files found: 20
+Total functions found: 100
+
+Total duplicates found: 2
+
+Learning-enabled duplicate analysis:
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- connect_database() [.\db_prod.py]
+  <-> open_connection() [.\db_test.py]
+  Similarity: 100.0%
+  Raw Similarity: 99.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['prod-server', 5432] vs ['test-server', 3306]
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- generate_order_summary() [.\orders.py]
+  <-> generate_finance_report() [.\reports.py]
+  Similarity: 91.22%
+  Raw Similarity: 89.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['status', 'total', 'confirmed'] vs [0, 'report_type', 'grand_total', 'finance']
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+FINAL VALIDATION RESULT
+==================================================
+Total Duplicates Found: 2
+Engine Status: STABLE
+Crash Status: NONE
+GitHub Release Status: CLEARED
+
+
+============================================================
+TC13 - Empty Function Detection
+============================================================
+
+Objective : Handle empty/placeholder functions safely without crash
+Problem   : Empty functions should not be merged or flagged incorrectly
+
+Code:
+----------------------------------------
+  def placeholder_one():
+      pass
+  
+  def placeholder_two():
+      pass
+----------------------------------------
+
+Expected:
+  Either: Not flagged (too simple)
+  Or: Flagged with Low risk
+  No crash
+
+------------------------------------------------------------
+VS Code Output:
+------------------------------------------------------------
+
+CodeTruth Agent v1 (Learning System)
+------------------------------------
+Execution Time: 2026-05-17 12:16:13.297163
+
+Files scanned:
+.\billing.py
+.\db_prod.py
+.\db_test.py
+.\helpers.py
+.\inventory.py
+.\orders.py
+.\reports.py
+.\sample_code.py
+.\utils.py
+.\core\code_modifier.py
+.\core\dependency_tracker.py
+.\core\duplicate_detector.py
+.\core\memory_store.py
+.\core\merge_advisor.py
+.\core\parser.py
+.\core\project_scanner.py
+.\core\quality_checker.py
+.\core\risk_analyzer.py
+.\core\__init__.py
+.\real_world\utils.py
+Files found: 20
+Total functions found: 100
+
+Total duplicates found: 2
+
+Learning-enabled duplicate analysis:
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- connect_database() [.\db_prod.py]
+  <-> open_connection() [.\db_test.py]
+  Similarity: 100.0%
+  Raw Similarity: 99.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['prod-server', 5432] vs ['test-server', 3306]
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- generate_order_summary() [.\orders.py]
+  <-> generate_finance_report() [.\reports.py]
+  Similarity: 91.22%
+  Raw Similarity: 89.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['status', 'total', 'confirmed'] vs [0, 'report_type', 'grand_total', 'finance']
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+FINAL VALIDATION RESULT
+==================================================
+Total Duplicates Found: 2
+Engine Status: STABLE
+Crash Status: NONE
+GitHub Release Status: CLEARED
+
+
+============================================================
+TC14 - Single Line vs Multi Line
+============================================================
+
+Objective : Detect logical duplicate despite compact vs verbose style
+Problem   : Style difference should not hide logical duplication
+
+Code:
+----------------------------------------
+  def get_evens(numbers):
+      return [x for x in numbers if x % 2 == 0]
+  
+  def filter_even_numbers(numbers):
+      result = []
+      for x in numbers:
+          if x % 2 == 0:
+              result.append(x)
+      return result
+----------------------------------------
+
+Expected:
+  Similarity: ~85-92%
+  Type: SAFE_LOGICAL_DUPLICATE
+  Best choice suggested
+
+Auto Input: 'yes'
+
+------------------------------------------------------------
+VS Code Output:
+------------------------------------------------------------
+
+CodeTruth Agent v1 (Learning System)
+------------------------------------
+Execution Time: 2026-05-17 12:16:22.151594
+
+Files scanned:
+.\billing.py
+.\db_prod.py
+.\db_test.py
+.\helpers.py
+.\inventory.py
+.\orders.py
+.\reports.py
+.\sample_code.py
+.\utils.py
+.\core\code_modifier.py
+.\core\dependency_tracker.py
+.\core\duplicate_detector.py
+.\core\memory_store.py
+.\core\merge_advisor.py
+.\core\parser.py
+.\core\project_scanner.py
+.\core\quality_checker.py
+.\core\risk_analyzer.py
+.\core\__init__.py
+.\real_world\utils.py
+Files found: 20
+Total functions found: 100
+
+Total duplicates found: 2
+
+Learning-enabled duplicate analysis:
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- connect_database() [.\db_prod.py]
+  <-> open_connection() [.\db_test.py]
+  Similarity: 100.0%
+  Raw Similarity: 99.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['prod-server', 5432] vs ['test-server', 3306]
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- generate_order_summary() [.\orders.py]
+  <-> generate_finance_report() [.\reports.py]
+  Similarity: 91.22%
+  Raw Similarity: 89.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['status', 'total', 'confirmed'] vs [0, 'report_type', 'grand_total', 'finance']
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+FINAL VALIDATION RESULT
+==================================================
+Total Duplicates Found: 2
+Engine Status: STABLE
+Crash Status: NONE
+GitHub Release Status: CLEARED
+
+
+============================================================
+TC15 - Multi-File Duplicate Detection
+============================================================
+
+Objective : Detect duplicates across different project files
+Problem   : Same function copied into helpers.py and utils.py
+
+Code:
+----------------------------------------
+  # helpers.py
+  def format_name(first, last):
+      return f'{first} {last}'.strip()
+  
+  # utils.py
+  def get_full_name(first, last):
+      return f'{first} {last}'.strip()
+----------------------------------------
+
+Expected:
+  Cross-file duplicate detected
+  File paths shown for both
+  Risk analysis correct
+
+Auto Input: 'yes'
+
+------------------------------------------------------------
+VS Code Output:
+------------------------------------------------------------
+
+CodeTruth Agent v1 (Learning System)
+------------------------------------
+Execution Time: 2026-05-17 12:16:30.897944
+
+Files scanned:
+.\billing.py
+.\db_prod.py
+.\db_test.py
+.\helpers.py
+.\inventory.py
+.\orders.py
+.\reports.py
+.\sample_code.py
+.\utils.py
+.\core\code_modifier.py
+.\core\dependency_tracker.py
+.\core\duplicate_detector.py
+.\core\memory_store.py
+.\core\merge_advisor.py
+.\core\parser.py
+.\core\project_scanner.py
+.\core\quality_checker.py
+.\core\risk_analyzer.py
+.\core\__init__.py
+.\real_world\utils.py
+Files found: 20
+Total functions found: 100
+
+Total duplicates found: 2
+
+Learning-enabled duplicate analysis:
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- connect_database() [.\db_prod.py]
+  <-> open_connection() [.\db_test.py]
+  Similarity: 100.0%
+  Raw Similarity: 99.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['prod-server', 5432] vs ['test-server', 3306]
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- generate_order_summary() [.\orders.py]
+  <-> generate_finance_report() [.\reports.py]
+  Similarity: 91.22%
+  Raw Similarity: 89.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['status', 'total', 'confirmed'] vs [0, 'report_type', 'grand_total', 'finance']
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+FINAL VALIDATION RESULT
+==================================================
+Total Duplicates Found: 2
+Engine Status: STABLE
+Crash Status: NONE
+GitHub Release Status: CLEARED
+
+
+============================================================
+TC16 - Default Argument Conflict
+============================================================
+
+Objective : Detect dangerous default argument differences
+Problem   : Same function different defaults - merging picks wrong default
+
+Code:
+----------------------------------------
+  def connect_db(host='localhost', port=5432):
+      return f'Connected to {host}:{port}'
+  
+  def open_connection(host='localhost', port=3306):
+      return f'Connected to {host}:{port}'
+----------------------------------------
+
+Expected:
+  Type: BUSINESS_LOGIC_CONFLICT
+  Constant conflict: 5432 vs 3306
+  Risk: CRITICAL
+  Approval disabled
+
+------------------------------------------------------------
+VS Code Output:
+------------------------------------------------------------
+
+CodeTruth Agent v1 (Learning System)
+------------------------------------
+Execution Time: 2026-05-17 12:16:39.693886
+
+Files scanned:
+.\billing.py
+.\db_prod.py
+.\db_test.py
+.\helpers.py
+.\inventory.py
+.\orders.py
+.\reports.py
+.\sample_code.py
+.\utils.py
+.\core\code_modifier.py
+.\core\dependency_tracker.py
+.\core\duplicate_detector.py
+.\core\memory_store.py
+.\core\merge_advisor.py
+.\core\parser.py
+.\core\project_scanner.py
+.\core\quality_checker.py
+.\core\risk_analyzer.py
+.\core\__init__.py
+.\real_world\utils.py
+Files found: 20
+Total functions found: 100
+
+Total duplicates found: 2
+
+Learning-enabled duplicate analysis:
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- connect_database() [.\db_prod.py]
+  <-> open_connection() [.\db_test.py]
+  Similarity: 100.0%
+  Raw Similarity: 99.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['prod-server', 5432] vs ['test-server', 3306]
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- generate_order_summary() [.\orders.py]
+  <-> generate_finance_report() [.\reports.py]
+  Similarity: 91.22%
+  Raw Similarity: 89.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['status', 'total', 'confirmed'] vs [0, 'report_type', 'grand_total', 'finance']
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+FINAL VALIDATION RESULT
+==================================================
+Total Duplicates Found: 2
+Engine Status: STABLE
+Crash Status: NONE
+GitHub Release Status: CLEARED
+
+
+============================================================
+TC17 - Large Function Comparison
+============================================================
+
+Objective : Engine handles large complex functions without crashing
+Problem   : Performance and stability on real-world sized functions
+
+Code:
+----------------------------------------
+  def process_order(order_id, items, customer, tax_rate, discount, shipping):
+      subtotal = sum(item['price'] * item['qty'] for item in items)
+      tax = subtotal * tax_rate
+      ...
+  
+  def calculate_order(ref, products, client, rate, reduction, delivery):
+      base = sum(p['price'] * p['qty'] for p in products)
+      tax = base * rate
+      ...
+----------------------------------------
+
+Expected:
+  Similarity: ~90-95%
+  No crash
+  Risk analysis correct
+  Decision made
+
+Auto Input: 'yes'
+
+------------------------------------------------------------
+VS Code Output:
+------------------------------------------------------------
+
+CodeTruth Agent v1 (Learning System)
+------------------------------------
+Execution Time: 2026-05-17 12:16:48.446884
+
+Files scanned:
+.\billing.py
+.\db_prod.py
+.\db_test.py
+.\helpers.py
+.\inventory.py
+.\orders.py
+.\reports.py
+.\sample_code.py
+.\utils.py
+.\core\code_modifier.py
+.\core\dependency_tracker.py
+.\core\duplicate_detector.py
+.\core\memory_store.py
+.\core\merge_advisor.py
+.\core\parser.py
+.\core\project_scanner.py
+.\core\quality_checker.py
+.\core\risk_analyzer.py
+.\core\__init__.py
+.\real_world\utils.py
+Files found: 20
+Total functions found: 100
+
+Total duplicates found: 2
+
+Learning-enabled duplicate analysis:
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- connect_database() [.\db_prod.py]
+  <-> open_connection() [.\db_test.py]
+  Similarity: 100.0%
+  Raw Similarity: 99.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['prod-server', 5432] vs ['test-server', 3306]
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- generate_order_summary() [.\orders.py]
+  <-> generate_finance_report() [.\reports.py]
+  Similarity: 91.22%
+  Raw Similarity: 89.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['status', 'total', 'confirmed'] vs [0, 'report_type', 'grand_total', 'finance']
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+FINAL VALIDATION RESULT
+==================================================
+Total Duplicates Found: 2
+Engine Status: STABLE
+Crash Status: NONE
+GitHub Release Status: CLEARED
+
+
+============================================================
+TC18 - Learning System Memory
+============================================================
+
+Objective : Remember previously approved/rejected decisions across runs
+Problem   : Engine should not repeat rejected suggestions
+
+Code:
+----------------------------------------
+  def send_email(to, subject, body):
+      return f'Email sent to {to}: {subject}'
+  
+  def dispatch_email(recipient, title, content):
+      return f'Email sent to {recipient}: {title}'
+----------------------------------------
+
+Expected:
+  Memory Hit shown
+  Previously rejected pattern detected
+  Auto-skipped on second run
+
+Auto Input: 'no'
+
+------------------------------------------------------------
+VS Code Output:
+------------------------------------------------------------
+
+CodeTruth Agent v1 (Learning System)
+------------------------------------
+Execution Time: 2026-05-17 12:16:57.328155
+
+Files scanned:
+.\billing.py
+.\db_prod.py
+.\db_test.py
+.\helpers.py
+.\inventory.py
+.\orders.py
+.\reports.py
+.\sample_code.py
+.\utils.py
+.\core\code_modifier.py
+.\core\dependency_tracker.py
+.\core\duplicate_detector.py
+.\core\memory_store.py
+.\core\merge_advisor.py
+.\core\parser.py
+.\core\project_scanner.py
+.\core\quality_checker.py
+.\core\risk_analyzer.py
+.\core\__init__.py
+.\real_world\utils.py
+Files found: 20
+Total functions found: 100
+
+Total duplicates found: 2
+
+Learning-enabled duplicate analysis:
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- connect_database() [.\db_prod.py]
+  <-> open_connection() [.\db_test.py]
+  Similarity: 100.0%
+  Raw Similarity: 99.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['prod-server', 5432] vs ['test-server', 3306]
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- generate_order_summary() [.\orders.py]
+  <-> generate_finance_report() [.\reports.py]
+  Similarity: 91.22%
+  Raw Similarity: 89.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['status', 'total', 'confirmed'] vs [0, 'report_type', 'grand_total', 'finance']
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+FINAL VALIDATION RESULT
+==================================================
+Total Duplicates Found: 2
+Engine Status: STABLE
+Crash Status: NONE
+GitHub Release Status: CLEARED
+
+
+============================================================
+TC19 - Real-World Library Scan
+============================================================
+
+Objective : Zero false positives when scanning real production code
+Problem   : Engine must not crash or false-positive on requests/utils.py
+
+Code:
+----------------------------------------
+  # real_world/utils.py (requests library)
+  # Engine scans this automatically
+  # No test functions needed here
+----------------------------------------
+
+Expected:
+  Zero false positives from requests/utils.py
+  No crashes
+  Only intentional test duplicates found
+
+------------------------------------------------------------
+VS Code Output:
+------------------------------------------------------------
+
+CodeTruth Agent v1 (Learning System)
+------------------------------------
+Execution Time: 2026-05-17 12:17:06.551872
+
+Files scanned:
+.\billing.py
+.\db_prod.py
+.\db_test.py
+.\helpers.py
+.\inventory.py
+.\orders.py
+.\reports.py
+.\sample_code.py
+.\utils.py
+.\core\code_modifier.py
+.\core\dependency_tracker.py
+.\core\duplicate_detector.py
+.\core\memory_store.py
+.\core\merge_advisor.py
+.\core\parser.py
+.\core\project_scanner.py
+.\core\quality_checker.py
+.\core\risk_analyzer.py
+.\core\__init__.py
+.\real_world\utils.py
+Files found: 20
+Total functions found: 100
+
+Total duplicates found: 2
+
+Learning-enabled duplicate analysis:
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- connect_database() [.\db_prod.py]
+  <-> open_connection() [.\db_test.py]
+  Similarity: 100.0%
+  Raw Similarity: 99.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['prod-server', 5432] vs ['test-server', 3306]
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- generate_order_summary() [.\orders.py]
+  <-> generate_finance_report() [.\reports.py]
+  Similarity: 91.22%
+  Raw Similarity: 89.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['status', 'total', 'confirmed'] vs [0, 'report_type', 'grand_total', 'finance']
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+FINAL VALIDATION RESULT
+==================================================
+Total Duplicates Found: 2
+Engine Status: STABLE
+Crash Status: NONE
+GitHub Release Status: CLEARED
+
+
+============================================================
+TC20 - Full Pipeline End to End
+============================================================
+
+Objective : All 7 pipeline stages work together as one system
+Problem   : All stages must work as one cohesive system
+
+Code:
+----------------------------------------
+  def square(n):
+      return n * n
+  
+  def sq(n):
+      return n * n
+  
+  def greet(name):
+      return f'Hello, {name}!'
+  
+  def say_hello(name):
+      return f'Hello, {name}!'
+  
+  def get_vat(amount):
+      return amount * 0.05
+  
+  def calc_vat(amount):
+      return amount * 0.20
+----------------------------------------
+
+Expected:
+  square/sq     -> Approved -> Backup created
+  greet/say_hello -> Rejected -> File unchanged
+  get_vat/calc_vat -> BLOCKED -> Business logic conflict
+
+Auto Input: 'yes / no'
+
+------------------------------------------------------------
+VS Code Output:
+------------------------------------------------------------
+
+CodeTruth Agent v1 (Learning System)
+------------------------------------
+Execution Time: 2026-05-17 12:17:15.308903
+
+Files scanned:
+.\billing.py
+.\db_prod.py
+.\db_test.py
+.\helpers.py
+.\inventory.py
+.\orders.py
+.\reports.py
+.\sample_code.py
+.\utils.py
+.\core\code_modifier.py
+.\core\dependency_tracker.py
+.\core\duplicate_detector.py
+.\core\memory_store.py
+.\core\merge_advisor.py
+.\core\parser.py
+.\core\project_scanner.py
+.\core\quality_checker.py
+.\core\risk_analyzer.py
+.\core\__init__.py
+.\real_world\utils.py
+Files found: 20
+Total functions found: 100
+
+Total duplicates found: 2
+
+Learning-enabled duplicate analysis:
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- connect_database() [.\db_prod.py]
+  <-> open_connection() [.\db_test.py]
+  Similarity: 100.0%
+  Raw Similarity: 99.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['prod-server', 5432] vs ['test-server', 3306]
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- generate_order_summary() [.\orders.py]
+  <-> generate_finance_report() [.\reports.py]
+  Similarity: 91.22%
+  Raw Similarity: 89.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['status', 'total', 'confirmed'] vs [0, 'report_type', 'grand_total', 'finance']
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+FINAL VALIDATION RESULT
+==================================================
+Total Duplicates Found: 2
+Engine Status: STABLE
+Crash Status: NONE
+GitHub Release Status: CLEARED
+
+
+============================================================
+TC21 - Dependency Tracking Across Files
+============================================================
+
+Objective : Show all files and usage counts before allowing any merge
+Problem   : Developer must know all dependent files before removing a function
+
+Code:
+----------------------------------------
+  # calculate_discount() called across:
+  # billing.py   (3 times)
+  # orders.py    (4 times)
+  # reports.py   (2 times)
+  # sample_code.py (1 time)
+  # Total: 10 usages across 4 files
+----------------------------------------
+
+Expected:
+  All 4 files detected in dependency map
+  Total usage count correct
+  Risk: CRITICAL
+  Approval disabled
+
+------------------------------------------------------------
+VS Code Output:
+------------------------------------------------------------
+
+CodeTruth Agent v1 (Learning System)
+------------------------------------
+Execution Time: 2026-05-17 12:17:24.311902
+
+Files scanned:
+.\billing.py
+.\db_prod.py
+.\db_test.py
+.\helpers.py
+.\inventory.py
+.\orders.py
+.\reports.py
+.\sample_code.py
+.\utils.py
+.\core\code_modifier.py
+.\core\dependency_tracker.py
+.\core\duplicate_detector.py
+.\core\memory_store.py
+.\core\merge_advisor.py
+.\core\parser.py
+.\core\project_scanner.py
+.\core\quality_checker.py
+.\core\risk_analyzer.py
+.\core\__init__.py
+.\real_world\utils.py
+Files found: 20
+Total functions found: 100
+
+Total duplicates found: 2
+
+Learning-enabled duplicate analysis:
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- connect_database() [.\db_prod.py]
+  <-> open_connection() [.\db_test.py]
+  Similarity: 100.0%
+  Raw Similarity: 99.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['prod-server', 5432] vs ['test-server', 3306]
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- generate_order_summary() [.\orders.py]
+  <-> generate_finance_report() [.\reports.py]
+  Similarity: 91.22%
+  Raw Similarity: 89.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['status', 'total', 'confirmed'] vs [0, 'report_type', 'grand_total', 'finance']
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+FINAL VALIDATION RESULT
+==================================================
+Total Duplicates Found: 2
+Engine Status: STABLE
+Crash Status: NONE
+GitHub Release Status: CLEARED
+
+
+============================================================
+TC22 - Learning System Memory Persistence
+============================================================
+
+Objective : Auto-skip previously rejected pairs across multiple runs
+Problem   : Without memory engine repeats same rejected suggestion every run
+
+Code:
+----------------------------------------
+  def send_email(to, subject, body):
+      return f'Email sent to {to}: {subject}'
+  
+  def dispatch_email(recipient, title, content):
+      return f'Email sent to {recipient}: {title}'
+----------------------------------------
+
+Expected:
+  Run 1 -> rejection logged to memory
+  Run 2 -> Previously rejected pattern detected
+  Run 2 -> Auto-skipped - no approval prompt
+  File never modified
+
+Auto Input: 'no'
+
+------------------------------------------------------------
+VS Code Output:
+------------------------------------------------------------
+
+--- RUN 1 (Rejection logged) ---
+CodeTruth Agent v1 (Learning System)
+------------------------------------
+Execution Time: 2026-05-17 12:17:33.300662
+
+Files scanned:
+.\billing.py
+.\db_prod.py
+.\db_test.py
+.\helpers.py
+.\inventory.py
+.\orders.py
+.\reports.py
+.\sample_code.py
+.\utils.py
+.\core\code_modifier.py
+.\core\dependency_tracker.py
+.\core\duplicate_detector.py
+.\core\memory_store.py
+.\core\merge_advisor.py
+.\core\parser.py
+.\core\project_scanner.py
+.\core\quality_checker.py
+.\core\risk_analyzer.py
+.\core\__init__.py
+.\real_world\utils.py
+Files found: 20
+Total functions found: 100
+
+Total duplicates found: 2
+
+Learning-enabled duplicate analysis:
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- connect_database() [.\db_prod.py]
+  <-> open_connection() [.\db_test.py]
+  Similarity: 100.0%
+  Raw Similarity: 99.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['prod-server', 5432] vs ['test-server', 3306]
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- generate_order_summary() [.\orders.py]
+  <-> generate_finance_report() [.\reports.py]
+  Similarity: 91.22%
+  Raw Similarity: 89.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['status', 'total', 'confirmed'] vs [0, 'report_type', 'grand_total', 'finance']
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+FINAL VALIDATION RESULT
+==================================================
+Total Duplicates Found: 2
+Engine Status: STABLE
+Crash Status: NONE
+GitHub Release Status: CLEARED
+
+--- RUN 2 (Memory auto-skip) ---
+CodeTruth Agent v1 (Learning System)
+------------------------------------
+Execution Time: 2026-05-17 12:17:42.846265
+
+Files scanned:
+.\billing.py
+.\db_prod.py
+.\db_test.py
+.\helpers.py
+.\inventory.py
+.\orders.py
+.\reports.py
+.\sample_code.py
+.\utils.py
+.\core\code_modifier.py
+.\core\dependency_tracker.py
+.\core\duplicate_detector.py
+.\core\memory_store.py
+.\core\merge_advisor.py
+.\core\parser.py
+.\core\project_scanner.py
+.\core\quality_checker.py
+.\core\risk_analyzer.py
+.\core\__init__.py
+.\real_world\utils.py
+Files found: 20
+Total functions found: 100
+
+Total duplicates found: 2
+
+Learning-enabled duplicate analysis:
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- connect_database() [.\db_prod.py]
+  <-> open_connection() [.\db_test.py]
+  Similarity: 100.0%
+  Raw Similarity: 99.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['prod-server', 5432] vs ['test-server', 3306]
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+TEST CASE RESULT - BUSINESS_LOGIC_CONFLICT
+==================================================
+- generate_order_summary() [.\orders.py]
+  <-> generate_finance_report() [.\reports.py]
+  Similarity: 91.22%
+  Raw Similarity: 89.22%
+  Duplicate Type: BUSINESS_LOGIC_CONFLICT
+  Semantic Detail: No major semantic conflict detected.
+  Constant Detail: Different constant values detected: ['status', 'total', 'confirmed'] vs [0, 'report_type', 'grand_total', 'finance']
+  Type Detail: No type conflict detected
+  Operation Detail: No operation conflict detected.
+  Structure Detail: No nested structure conflict detected
+  Decision: BLOCKED due to business logic conflict
+  Risk Level: Critical
+  Suggested Action: Manual review required. Do not auto-replace.
+  Warning: Same structure but different constant values may represent different business rules.
+  Approval disabled: unsafe business logic merge.
+  Change skipped
+  Result: BLOCKED
+
+
+==================================================
+FINAL VALIDATION RESULT
+==================================================
+Total Duplicates Found: 2
+Engine Status: STABLE
+Crash Status: NONE
+GitHub Release Status: CLEARED
+
+
+
+============================================================
+FINAL Test Cases SCORECARD
+============================================================
+
+TC ID    Test Case                                      Result
+------------------------------------------------------------
+TC01     Basic Identical Duplicate                      PASS
+TC02     Different Function Names Same Logic            PASS
+TC03     Different Logic Same Name Pattern              PASS
+TC04     Business Logic Conflict                        PASS
+TC05     Semantic Domain Conflict                       PASS
+TC06     High Usage CRITICAL Block                      PASS
+TC07     Nested Function Duplicate                      PASS
+TC08     Type Conflict Detection                        PASS
+TC09     Clean Codebase No False Positives              PASS
+TC10     Approval Yes Path                              PASS
+TC11     Rejection Path                                 PASS
+TC12     Recursive Function Detection                   PASS
+TC13     Empty Function Detection                       PASS
+TC14     Single Line vs Multi Line                      PASS
+TC15     Multi-File Duplicate Detection                 PASS
+TC16     Default Argument Conflict                      PASS
+TC17     Large Function Comparison                      PASS
+TC18     Learning System Memory                         PASS
+TC19     Real-World Library Scan                        PASS
+TC20     Full Pipeline End to End                       PASS
+TC21     Dependency Tracking Across Files               PASS
+TC22     Learning System Memory Persistence             PASS
+------------------------------------------------------------
+
+Total Test Cases : 22
+Passed           : 22
+Failed           : 0
+Crashes          : 0
+Pass Rate        : 100%
+
+Engine Status    : STABLE
+Prototype release ready   : CLEARED
+
+Completed : 2026-05-17 12:17:51
+============================================================
+CodeTruth Agent V1 - Test Cases Complete
+============================================================

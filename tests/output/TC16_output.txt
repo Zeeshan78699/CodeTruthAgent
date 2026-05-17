@@ -1,0 +1,49 @@
+============================================================
+CodeTruth Agent V1 - TC16 Output
+============================================================
+
+Generated : 2026-05-17 12:24:10.107444
+Test Case : TC16
+Name      : Default Argument Conflict
+
+Runtime Test Case:
+------------------------------------------------------------
+# =============================================================================
+# TC16 — Default Argument Conflict
+# =============================================================================
+
+def connect_db(host="localhost", port=5432):
+    return f"Connected to {host}:{port}"
+
+def open_connection(host="localhost", port=3306):
+    return f"Connected to {host}:{port}"
+------------------------------------------------------------
+
+CodeTruth Agent V1 - Isolated Execution
+------------------------------------------------------------
+Execution Time: 2026-05-17 12:24:10.105304
+
+Files scanned: 1
+Scanned file: TC16
+Total functions found: 2
+Total duplicates found: 1
+
+============================================================
+TEST CASE RESULT
+============================================================
+Function 1: connect_db
+Function 2: open_connection
+Similarity: 100.0%
+Duplicate Type: BUSINESS_LOGIC_CONFLICT
+Reason: Different constant values detected
+Semantic Reason: No major semantic conflict detected.
+Constant Reason: Different constant values detected: ['localhost', 5432, 'Connected to '] vs ['localhost', 3306, 'Connected to ']
+Operation Reason: No operation conflict detected.
+Type Reason: No type conflict detected
+Nested Reason: No nested structure conflict detected
+Auto Merge Safe: False
+
+
+============================================================
+End Of Report
+============================================================

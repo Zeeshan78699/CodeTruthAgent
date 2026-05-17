@@ -1,0 +1,49 @@
+============================================================
+CodeTruth Agent V1 - TC11 Output
+============================================================
+
+Generated : 2026-05-17 12:24:09.994838
+Test Case : TC11
+Name      : Rejection Path
+
+Runtime Test Case:
+------------------------------------------------------------
+# =============================================================================
+# TC11 — Rejection Path
+# =============================================================================
+
+def multiply(a, b):
+    return a * b
+
+def multiply_copy(a, b):
+    return a * b
+------------------------------------------------------------
+
+CodeTruth Agent V1 - Isolated Execution
+------------------------------------------------------------
+Execution Time: 2026-05-17 12:24:09.994838
+
+Files scanned: 1
+Scanned file: TC11
+Total functions found: 2
+Total duplicates found: 1
+
+============================================================
+TEST CASE RESULT
+============================================================
+Function 1: multiply
+Function 2: multiply_copy
+Similarity: 100.0%
+Duplicate Type: SAFE_LOGICAL_DUPLICATE
+Reason: Same logic
+Semantic Reason: No major semantic conflict detected.
+Constant Reason: No constant conflict detected.
+Operation Reason: No operation conflict detected.
+Type Reason: No type conflict detected
+Nested Reason: No nested structure conflict detected
+Auto Merge Safe: True
+
+
+============================================================
+End Of Report
+============================================================

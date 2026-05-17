@@ -1,0 +1,43 @@
+============================================================
+CodeTruth Agent V1 - TC14 Output
+============================================================
+
+Generated : 2026-05-17 12:24:10.068927
+Test Case : TC14
+Name      : Single Line vs Multi Line
+
+Runtime Test Case:
+------------------------------------------------------------
+# =============================================================================
+# TC14 — Single Line vs Multi Line
+# =============================================================================
+
+def get_evens(numbers):
+    return [x for x in numbers if x % 2 == 0]
+
+def filter_even_numbers(numbers):
+
+    result = []
+
+    for x in numbers:
+
+        if x % 2 == 0:
+            result.append(x)
+
+    return result
+------------------------------------------------------------
+
+CodeTruth Agent V1 - Isolated Execution
+------------------------------------------------------------
+Execution Time: 2026-05-17 12:24:10.067666
+
+Files scanned: 1
+Scanned file: TC14
+Total functions found: 2
+Total duplicates found: 0
+
+No duplicate functions found.
+
+============================================================
+End Of Report
+============================================================

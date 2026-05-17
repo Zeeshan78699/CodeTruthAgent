@@ -1,0 +1,49 @@
+============================================================
+CodeTruth Agent V1 - TC18 Output
+============================================================
+
+Generated : 2026-05-17 12:24:10.164844
+Test Case : TC18
+Name      : Learning System Memory
+
+Runtime Test Case:
+------------------------------------------------------------
+# =============================================================================
+# TC18 — Learning System Memory
+# =============================================================================
+
+def send_email(to, subject, body):
+    return f"Email sent to {to}: {subject}"
+
+def dispatch_email(recipient, title, content):
+    return f"Email sent to {recipient}: {title}"
+------------------------------------------------------------
+
+CodeTruth Agent V1 - Isolated Execution
+------------------------------------------------------------
+Execution Time: 2026-05-17 12:24:10.164844
+
+Files scanned: 1
+Scanned file: TC18
+Total functions found: 2
+Total duplicates found: 1
+
+============================================================
+TEST CASE RESULT
+============================================================
+Function 1: send_email
+Function 2: dispatch_email
+Similarity: 100.0%
+Duplicate Type: SAFE_LOGICAL_DUPLICATE
+Reason: Same logic
+Semantic Reason: No major semantic conflict detected.
+Constant Reason: No constant conflict detected.
+Operation Reason: No operation conflict detected.
+Type Reason: No type conflict detected
+Nested Reason: No nested structure conflict detected
+Auto Merge Safe: True
+
+
+============================================================
+End Of Report
+============================================================

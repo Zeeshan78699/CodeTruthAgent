@@ -1,0 +1,49 @@
+============================================================
+CodeTruth Agent V1 - TC06 Output
+============================================================
+
+Generated : 2026-05-17 12:24:09.879373
+Test Case : TC06
+Name      : High Usage CRITICAL Block
+
+Runtime Test Case:
+------------------------------------------------------------
+# =============================================================================
+# TC06 — High Usage CRITICAL Block
+# =============================================================================
+
+def calculate_discount(amount):
+    return amount * 0.15
+
+def apply_discount(value):
+    return value * 0.15
+------------------------------------------------------------
+
+CodeTruth Agent V1 - Isolated Execution
+------------------------------------------------------------
+Execution Time: 2026-05-17 12:24:09.878326
+
+Files scanned: 1
+Scanned file: TC06
+Total functions found: 2
+Total duplicates found: 1
+
+============================================================
+TEST CASE RESULT
+============================================================
+Function 1: calculate_discount
+Function 2: apply_discount
+Similarity: 100.0%
+Duplicate Type: SAFE_LOGICAL_DUPLICATE
+Reason: Same logic
+Semantic Reason: No major semantic conflict detected.
+Constant Reason: No constant conflict detected.
+Operation Reason: No operation conflict detected.
+Type Reason: No type conflict detected
+Nested Reason: No nested structure conflict detected
+Auto Merge Safe: True
+
+
+============================================================
+End Of Report
+============================================================

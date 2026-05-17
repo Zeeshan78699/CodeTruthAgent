@@ -1,0 +1,91 @@
+============================================================
+CodeTruth Agent V1 - TC17 Output
+============================================================
+
+Generated : 2026-05-17 12:24:10.142819
+Test Case : TC17
+Name      : Large Function Comparison
+
+Runtime Test Case:
+------------------------------------------------------------
+# =============================================================================
+# TC17 — Large Function Comparison
+# =============================================================================
+
+def process_order(order_id, items, customer, tax_rate, discount, shipping):
+
+    subtotal = sum(
+        item['price'] * item['qty']
+        for item in items
+    )
+
+    tax = subtotal * tax_rate
+
+    disc = subtotal * discount
+
+    total = subtotal + tax - disc + shipping
+
+    return {
+        "order_id": order_id,
+        "customer": customer,
+        "subtotal": subtotal,
+        "tax": tax,
+        "discount": disc,
+        "shipping": shipping,
+        "total": total,
+        "status": "confirmed"
+    }
+
+def calculate_order(ref, products, client, rate, reduction, delivery):
+
+    base = sum(
+        p['price'] * p['qty']
+        for p in products
+    )
+
+    tax = base * rate
+
+    disc = base * reduction
+
+    total = base + tax - disc + delivery
+
+    return {
+        "order_id": ref,
+        "customer": client,
+        "subtotal": base,
+        "tax": tax,
+        "discount": disc,
+        "shipping": delivery,
+        "total": total,
+        "status": "confirmed"
+    }
+------------------------------------------------------------
+
+CodeTruth Agent V1 - Isolated Execution
+------------------------------------------------------------
+Execution Time: 2026-05-17 12:24:10.142819
+
+Files scanned: 1
+Scanned file: TC17
+Total functions found: 2
+Total duplicates found: 1
+
+============================================================
+TEST CASE RESULT
+============================================================
+Function 1: process_order
+Function 2: calculate_order
+Similarity: 100.0%
+Duplicate Type: SAFE_LOGICAL_DUPLICATE
+Reason: Same logic
+Semantic Reason: No major semantic conflict detected.
+Constant Reason: No constant conflict detected.
+Operation Reason: No operation conflict detected.
+Type Reason: No type conflict detected
+Nested Reason: No nested structure conflict detected
+Auto Merge Safe: True
+
+
+============================================================
+End Of Report
+============================================================

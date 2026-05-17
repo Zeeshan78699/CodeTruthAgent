@@ -1,0 +1,49 @@
+============================================================
+CodeTruth Agent V1 - TC02 Output
+============================================================
+
+Generated : 2026-05-17 12:24:09.799157
+Test Case : TC02
+Name      : Different Function Names Same Logic
+
+Runtime Test Case:
+------------------------------------------------------------
+# =============================================================================
+# TC02 — Different Function Names Same Logic
+# =============================================================================
+
+def calculate_area(width, height):
+    return width * height
+
+def get_area(w, h):
+    return w * h
+------------------------------------------------------------
+
+CodeTruth Agent V1 - Isolated Execution
+------------------------------------------------------------
+Execution Time: 2026-05-17 12:24:09.799157
+
+Files scanned: 1
+Scanned file: TC02
+Total functions found: 2
+Total duplicates found: 1
+
+============================================================
+TEST CASE RESULT
+============================================================
+Function 1: calculate_area
+Function 2: get_area
+Similarity: 100.0%
+Duplicate Type: SAFE_LOGICAL_DUPLICATE
+Reason: Same logic
+Semantic Reason: No major semantic conflict detected.
+Constant Reason: No constant conflict detected.
+Operation Reason: No operation conflict detected.
+Type Reason: No type conflict detected
+Nested Reason: No nested structure conflict detected
+Auto Merge Safe: True
+
+
+============================================================
+End Of Report
+============================================================

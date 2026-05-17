@@ -1,0 +1,31 @@
+# ─────────────────────────────────────────────
+# CodeTruth Agent V1 — .gitignore
+# ─────────────────────────────────────────────
+
+# Backup files created by CodeTruth Agent
+*.bak
+
+# Runtime memory file (regenerated each run)
+memory.json
+
+# Development notes — not for public release
+Error.txt
+Improvement.txt
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# VS Code settings
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db

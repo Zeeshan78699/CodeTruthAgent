@@ -1,0 +1,247 @@
+{
+    "test_case": "TC_V2_045",
+    "category": "Real Engine Integration Validation",
+    "pipeline": "SemanticDecisionEngine -> BehavioralSignatureEngine -> FusionEngine",
+    "tests_executed": 6,
+    "tests_passed": 6,
+    "tests_failed": 0,
+    "tests_errored": 0,
+    "decision_accuracy_percent": 100.0,
+    "overall_status": "PASS",
+    "fixture_file": "C:\\AI_Project\\CodeTruthAgent\\tests\\output\\v2\\integration_validation_reports\\fixtures\\tc_v2_045_integration_fixture.py",
+    "results": [
+        {
+            "category": "OPPOSING",
+            "description": "create_backup vs restore_backup (opposing)",
+            "func_a": "create_backup",
+            "func_b": "restore_backup",
+            "semantic_score": 0.71,
+            "semantic_decision": "REVIEW",
+            "semantic_lexical_score": 0.14,
+            "semantic_confidence": 0.68,
+            "semantic_reasoning": [
+                "High semantic similarity detected",
+                "Shared business domain detected",
+                "Behavioral side effects detected"
+            ],
+            "behavior_a_tags": [
+                "BACKUP_OPERATION",
+                "FILE_WRITE",
+                "STATE_MUTATION"
+            ],
+            "behavior_b_tags": [
+                "DELETE_OPERATION",
+                "FILE_WRITE",
+                "RECOVERY_OPERATION",
+                "STATE_MUTATION"
+            ],
+            "behavior_a_risk": "MEDIUM",
+            "behavior_b_risk": "HIGH",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 90,
+            "fusion_risk_level": "CRITICAL",
+            "opposing_detected": true,
+            "shared_behavior_tags": [
+                "FILE_WRITE",
+                "STATE_MUTATION"
+            ],
+            "fusion_reasoning": [
+                "Opposing behaviors detected between the two functions.",
+                "High-impact behaviors detected: ['DELETE_OPERATION', 'RECOVERY_OPERATION']",
+                "Override: opposing behaviors force BLOCK decision."
+            ],
+            "expected_decision": "BLOCK",
+            "actual_decision": "BLOCK",
+            "decision_match": true,
+            "rationale": "BACKUP_OPERATION vs RECOVERY_OPERATION = opposing",
+            "status": "PASS"
+        },
+        {
+            "category": "SIMILAR_HIGH_IMPACT",
+            "description": "save_user_data vs store_user_data (similar)",
+            "func_a": "save_user_data",
+            "func_b": "store_user_data",
+            "semantic_score": 0.88,
+            "semantic_decision": "REVIEW",
+            "semantic_lexical_score": 0.78,
+            "semantic_confidence": 0.9,
+            "semantic_reasoning": [
+                "High semantic similarity detected",
+                "Shared business domain detected",
+                "Behavioral side effects detected"
+            ],
+            "behavior_a_tags": [
+                "FILE_READ",
+                "FILE_WRITE",
+                "STATE_MUTATION"
+            ],
+            "behavior_b_tags": [
+                "FILE_READ",
+                "FILE_WRITE",
+                "STATE_MUTATION"
+            ],
+            "behavior_a_risk": "MEDIUM",
+            "behavior_b_risk": "MEDIUM",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 35,
+            "fusion_risk_level": "MEDIUM",
+            "opposing_detected": false,
+            "shared_behavior_tags": [
+                "FILE_READ",
+                "FILE_WRITE",
+                "STATE_MUTATION"
+            ],
+            "fusion_reasoning": [],
+            "expected_decision": "REVIEW",
+            "actual_decision": "REVIEW",
+            "decision_match": true,
+            "rationale": "Both FILE_WRITE - shared high-impact behavior, high semantic similarity",
+            "status": "PASS"
+        },
+        {
+            "category": "SHARED_HIGH_IMPACT",
+            "description": "delete_temp_file vs cleanup_temp_file",
+            "func_a": "delete_temp_file",
+            "func_b": "cleanup_temp_file",
+            "semantic_score": 0.86,
+            "semantic_decision": "REVIEW",
+            "semantic_lexical_score": 0.28,
+            "semantic_confidence": 0.49,
+            "semantic_reasoning": [
+                "High semantic similarity detected",
+                "Business domains differ",
+                "No major side effects detected"
+            ],
+            "behavior_a_tags": [
+                "DELETE_OPERATION"
+            ],
+            "behavior_b_tags": [
+                "DELETE_OPERATION"
+            ],
+            "behavior_a_risk": "HIGH",
+            "behavior_b_risk": "HIGH",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 66,
+            "fusion_risk_level": "HIGH",
+            "opposing_detected": false,
+            "shared_behavior_tags": [
+                "DELETE_OPERATION"
+            ],
+            "fusion_reasoning": [
+                "High-impact behaviors detected: ['DELETE_OPERATION']",
+                "High-impact behavior present; minimum REVIEW."
+            ],
+            "expected_decision": "REVIEW",
+            "actual_decision": "REVIEW",
+            "decision_match": true,
+            "rationale": "Both DELETE_OPERATION - shared HIGH-impact behavior, minimum REVIEW required",
+            "status": "PASS"
+        },
+        {
+            "category": "BOTH_CLEAN",
+            "description": "calculate_sum vs add_numbers (pure functions)",
+            "func_a": "calculate_sum",
+            "func_b": "add_numbers",
+            "semantic_score": 0.47,
+            "semantic_decision": "REVIEW",
+            "semantic_lexical_score": 0.0,
+            "semantic_confidence": 0.43,
+            "semantic_reasoning": [
+                "Low semantic similarity detected",
+                "Shared business domain detected",
+                "No major side effects detected"
+            ],
+            "behavior_a_tags": [],
+            "behavior_b_tags": [],
+            "behavior_a_risk": "LOW",
+            "behavior_b_risk": "LOW",
+            "fusion_decision": "SAFE",
+            "fusion_risk_score": 21,
+            "fusion_risk_level": "LOW",
+            "opposing_detected": false,
+            "shared_behavior_tags": [],
+            "fusion_reasoning": [
+                "Neither function exhibits tracked behaviors."
+            ],
+            "expected_decision": "SAFE",
+            "actual_decision": "SAFE",
+            "decision_match": true,
+            "rationale": "No tracked behaviors, semantically similar pure functions",
+            "status": "PASS"
+        },
+        {
+            "category": "UNRELATED",
+            "description": "send_email_notification vs calculate_invoice_total",
+            "func_a": "send_email_notification",
+            "func_b": "calculate_invoice_total",
+            "semantic_score": 0.03,
+            "semantic_decision": "BLOCK",
+            "semantic_lexical_score": 0.0,
+            "semantic_confidence": 0.12,
+            "semantic_reasoning": [
+                "Low semantic similarity detected",
+                "Business domains differ",
+                "Behavioral side effects detected"
+            ],
+            "behavior_a_tags": [
+                "NETWORK_OPERATION"
+            ],
+            "behavior_b_tags": [],
+            "behavior_a_risk": "MEDIUM",
+            "behavior_b_risk": "LOW",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 70,
+            "fusion_risk_level": "HIGH",
+            "opposing_detected": false,
+            "shared_behavior_tags": [],
+            "fusion_reasoning": [
+                "Semantic engine returned BLOCK (functions unrelated).",
+                "Functions are semantically unrelated and share no behavioral tags."
+            ],
+            "expected_decision": "BLOCK",
+            "actual_decision": "BLOCK",
+            "decision_match": true,
+            "rationale": "Semantically unrelated, no shared behaviors",
+            "status": "PASS"
+        },
+        {
+            "category": "AUTH_DOMAIN",
+            "description": "authenticate_user vs validate_login (auth pair)",
+            "func_a": "authenticate_user",
+            "func_b": "validate_login",
+            "semantic_score": 0.65,
+            "semantic_decision": "REVIEW",
+            "semantic_lexical_score": 0.62,
+            "semantic_confidence": 0.65,
+            "semantic_reasoning": [
+                "Moderate semantic similarity detected",
+                "Shared business domain detected",
+                "No major side effects detected"
+            ],
+            "behavior_a_tags": [
+                "AUTH_OPERATION"
+            ],
+            "behavior_b_tags": [
+                "AUTH_OPERATION"
+            ],
+            "behavior_a_risk": "HIGH",
+            "behavior_b_risk": "HIGH",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 74,
+            "fusion_risk_level": "HIGH",
+            "opposing_detected": false,
+            "shared_behavior_tags": [
+                "AUTH_OPERATION"
+            ],
+            "fusion_reasoning": [
+                "High-impact behaviors detected: ['AUTH_OPERATION']",
+                "High-impact behavior present; minimum REVIEW."
+            ],
+            "expected_decision": "REVIEW",
+            "actual_decision": "REVIEW",
+            "decision_match": true,
+            "rationale": "Both AUTH_OPERATION - shared HIGH-impact behavior, minimum REVIEW required",
+            "status": "PASS"
+        }
+    ]
+}

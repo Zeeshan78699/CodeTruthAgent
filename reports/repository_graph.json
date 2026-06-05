@@ -1,0 +1,4013 @@
+{
+    "root_path": "C:\\AI_Project\\CodeTruthAgent",
+    "files": {
+        "billing.py": {
+            "file_path": "billing.py",
+            "imports": [],
+            "from_imports": [],
+            "functions": [
+                {
+                    "name": "calculate_invoice_total",
+                    "file_path": "billing.py",
+                    "line_number": 1,
+                    "calls": [],
+                    "method_calls": []
+                }
+            ],
+            "classes": [],
+            "top_level_calls": []
+        },
+        "db_prod.py": {
+            "file_path": "db_prod.py",
+            "imports": [],
+            "from_imports": [],
+            "functions": [
+                {
+                    "name": "connect_database",
+                    "file_path": "db_prod.py",
+                    "line_number": 1,
+                    "calls": [],
+                    "method_calls": []
+                }
+            ],
+            "classes": [],
+            "top_level_calls": []
+        },
+        "db_test.py": {
+            "file_path": "db_test.py",
+            "imports": [],
+            "from_imports": [],
+            "functions": [
+                {
+                    "name": "open_connection",
+                    "file_path": "db_test.py",
+                    "line_number": 1,
+                    "calls": [],
+                    "method_calls": []
+                }
+            ],
+            "classes": [],
+            "top_level_calls": []
+        },
+        "helpers.py": {
+            "file_path": "helpers.py",
+            "imports": [],
+            "from_imports": [],
+            "functions": [
+                {
+                    "name": "format_name",
+                    "file_path": "helpers.py",
+                    "line_number": 1,
+                    "calls": [],
+                    "method_calls": []
+                }
+            ],
+            "classes": [],
+            "top_level_calls": []
+        },
+        "inventory.py": {
+            "file_path": "inventory.py",
+            "imports": [],
+            "from_imports": [],
+            "functions": [
+                {
+                    "name": "get_stock_value",
+                    "file_path": "inventory.py",
+                    "line_number": 2,
+                    "calls": [
+                        "sum"
+                    ],
+                    "method_calls": []
+                },
+                {
+                    "name": "format_currency",
+                    "file_path": "inventory.py",
+                    "line_number": 6,
+                    "calls": [],
+                    "method_calls": []
+                }
+            ],
+            "classes": [],
+            "top_level_calls": []
+        },
+        "main.py": {
+            "file_path": "main.py",
+            "imports": [
+                "os"
+            ],
+            "from_imports": [
+                "core.code_modifier.apply_safe_merge",
+                "core.dependency_tracker.analyze_global_risk",
+                "core.duplicate_detector.find_duplicates",
+                "core.memory_store.check_memory",
+                "core.memory_store.store_decision",
+                "core.memory_store.store_rejection",
+                "core.merge_advisor.suggest_merge",
+                "core.parser.extract_functions_from_files",
+                "core.project_scanner.get_python_files",
+                "core.quality_checker.compare_functions",
+                "datetime.datetime"
+            ],
+            "functions": [
+                {
+                    "name": "print_section",
+                    "file_path": "main.py",
+                    "line_number": 23,
+                    "calls": [
+                        "print"
+                    ],
+                    "method_calls": []
+                },
+                {
+                    "name": "is_internal_function",
+                    "file_path": "main.py",
+                    "line_number": 28,
+                    "calls": [],
+                    "method_calls": [
+                        "file_path.endswith",
+                        "file_path.replace"
+                    ]
+                },
+                {
+                    "name": "analyze_high_usage_functions",
+                    "file_path": "main.py",
+                    "line_number": 40,
+                    "calls": [
+                        "analyze_global_risk",
+                        "is_internal_function",
+                        "print"
+                    ],
+                    "method_calls": []
+                },
+                {
+                    "name": "main",
+                    "file_path": "main.py",
+                    "line_number": 76,
+                    "calls": [
+                        "analyze_global_risk",
+                        "apply_safe_merge",
+                        "check_memory",
+                        "compare_functions",
+                        "extract_functions_from_files",
+                        "find_duplicates",
+                        "get_python_files",
+                        "input",
+                        "join",
+                        "len",
+                        "next",
+                        "print",
+                        "print_section",
+                        "store_decision",
+                        "store_rejection",
+                        "suggest_merge"
+                    ],
+                    "method_calls": [
+                        "approval.lower",
+                        "datetime.now",
+                        "duplicate.get",
+                        "memory_hit.get",
+                        "merge_plan.get"
+                    ]
+                }
+            ],
+            "classes": [],
+            "top_level_calls": [
+                "main",
+                "os.path.abspath"
+            ]
+        },
+        "main_v2.py": {
+            "file_path": "main_v2.py",
+            "imports": [
+                "os"
+            ],
+            "from_imports": [
+                "ai.ai_interface.AIInterface",
+                "memory.memory_store_v2.MemoryStoreV2",
+                "reporting.report_generator.ReportGenerator",
+                "validation.rollback_manager.RollbackManager",
+                "validation.syntax_validator.SyntaxValidator"
+            ],
+            "functions": [
+                {
+                    "name": "run_v2_demo",
+                    "file_path": "main_v2.py",
+                    "line_number": 31,
+                    "calls": [
+                        "AIInterface",
+                        "MemoryStoreV2",
+                        "open",
+                        "print",
+                        "str"
+                    ],
+                    "method_calls": [
+                        "ReportGenerator.generate_console_report",
+                        "RollbackManager.create_backup",
+                        "RollbackManager.restore_backup",
+                        "SyntaxValidator.validate_python_code",
+                        "ai_gateway.analyze_text",
+                        "file.read",
+                        "file.write",
+                        "memory.get_memory",
+                        "memory.store_approved_decision",
+                        "result.items",
+                        "validation_result.items"
+                    ]
+                }
+            ],
+            "classes": [],
+            "top_level_calls": [
+                "os.path.abspath",
+                "os.path.dirname",
+                "run_v2_demo"
+            ]
+        },
+        "orders.py": {
+            "file_path": "orders.py",
+            "imports": [],
+            "from_imports": [],
+            "functions": [
+                {
+                    "name": "generate_order_summary",
+                    "file_path": "orders.py",
+                    "line_number": 1,
+                    "calls": [],
+                    "method_calls": []
+                }
+            ],
+            "classes": [],
+            "top_level_calls": []
+        },
+        "reports.py": {
+            "file_path": "reports.py",
+            "imports": [],
+            "from_imports": [],
+            "functions": [
+                {
+                    "name": "generate_finance_report",
+                    "file_path": "reports.py",
+                    "line_number": 1,
+                    "calls": [],
+                    "method_calls": []
+                }
+            ],
+            "classes": [],
+            "top_level_calls": []
+        },
+        "sample_code.py": {
+            "file_path": "sample_code.py",
+            "imports": [],
+            "from_imports": [
+                "billing.calculate_invoice_total"
+            ],
+            "functions": [
+                {
+                    "name": "compute_bill_amount",
+                    "file_path": "sample_code.py",
+                    "line_number": 4,
+                    "calls": [],
+                    "method_calls": []
+                },
+                {
+                    "name": "calculate_invoice_total",
+                    "file_path": "sample_code.py",
+                    "line_number": 11,
+                    "calls": [],
+                    "method_calls": []
+                },
+                {
+                    "name": "factorial_number",
+                    "file_path": "sample_code.py",
+                    "line_number": 18,
+                    "calls": [
+                        "factorial_number"
+                    ],
+                    "method_calls": []
+                },
+                {
+                    "name": "compute_factorial",
+                    "file_path": "sample_code.py",
+                    "line_number": 24,
+                    "calls": [
+                        "compute_factorial"
+                    ],
+                    "method_calls": []
+                },
+                {
+                    "name": "apply_customer_discount",
+                    "file_path": "sample_code.py",
+                    "line_number": 30,
+                    "calls": [],
+                    "method_calls": []
+                },
+                {
+                    "name": "apply_supplier_discount",
+                    "file_path": "sample_code.py",
+                    "line_number": 38,
+                    "calls": [],
+                    "method_calls": []
+                }
+            ],
+            "classes": [],
+            "top_level_calls": [
+                "calculate_invoice_total",
+                "print"
+            ]
+        },
+        "utils.py": {
+            "file_path": "utils.py",
+            "imports": [],
+            "from_imports": [],
+            "functions": [
+                {
+                    "name": "format_name",
+                    "file_path": "utils.py",
+                    "line_number": 1,
+                    "calls": [
+                        "strip"
+                    ],
+                    "method_calls": []
+                }
+            ],
+            "classes": [],
+            "top_level_calls": []
+        },
+        "ai\\ai_interface.py": {
+            "file_path": "ai\\ai_interface.py",
+            "imports": [
+                "traceback"
+            ],
+            "from_imports": [
+                "dataclasses.asdict",
+                "dataclasses.dataclass",
+                "typing.Any",
+                "typing.Dict",
+                "typing.Optional"
+            ],
+            "functions": [],
+            "classes": [
+                {
+                    "name": "AIResponse",
+                    "file_path": "ai\\ai_interface.py",
+                    "line_number": 18,
+                    "bases": [],
+                    "methods": [
+                        "to_dict"
+                    ]
+                },
+                {
+                    "name": "AIInterface",
+                    "file_path": "ai\\ai_interface.py",
+                    "line_number": 30,
+                    "bases": [],
+                    "methods": [
+                        "__init__",
+                        "_fallback_response",
+                        "_simulate_ai_response",
+                        "analyze_text",
+                        "is_ai_available"
+                    ]
+                }
+            ],
+            "top_level_calls": []
+        },
+        "ai\\embedding_similarity.py": {
+            "file_path": "ai\\embedding_similarity.py",
+            "imports": [],
+            "from_imports": [
+                "sentence_transformers.SentenceTransformer",
+                "sentence_transformers.util",
+                "typing.Dict"
+            ],
+            "functions": [],
+            "classes": [
+                {
+                    "name": "EmbeddingSemanticEngine",
+                    "file_path": "ai\\embedding_similarity.py",
+                    "line_number": 14,
+                    "bases": [],
+                    "methods": [
+                        "__init__",
+                        "classify_risk",
+                        "generate_embedding",
+                        "normalize_text",
+                        "semantic_similarity_score"
+                    ]
+                }
+            ],
+            "top_level_calls": [
+                "EmbeddingSemanticEngine",
+                "engine.semantic_similarity_score",
+                "print"
+            ]
+        },
+        "ai\\lexical_prefilter.py": {
+            "file_path": "ai\\lexical_prefilter.py",
+            "imports": [
+                "re"
+            ],
+            "from_imports": [
+                "typing.Dict",
+                "typing.List",
+                "typing.Set"
+            ],
+            "functions": [],
+            "classes": [
+                {
+                    "name": "LexicalSemanticPrefilter",
+                    "file_path": "ai\\lexical_prefilter.py",
+                    "line_number": 13,
+                    "bases": [],
+                    "methods": [
+                        "__init__",
+                        "calculate_overlap_score",
+                        "classify_risk",
+                        "expand_tokens",
+                        "extract_actions",
+                        "lexical_similarity_score",
+                        "normalize_text",
+                        "tokenize"
+                    ]
+                }
+            ],
+            "top_level_calls": [
+                "LexicalSemanticPrefilter",
+                "engine.lexical_similarity_score",
+                "print"
+            ]
+        },
+        "ai\\purpose_analysis_engine.py": {
+            "file_path": "ai\\purpose_analysis_engine.py",
+            "imports": [
+                "ast",
+                "re"
+            ],
+            "from_imports": [
+                "typing.Dict",
+                "typing.List"
+            ],
+            "functions": [],
+            "classes": [
+                {
+                    "name": "PurposeAnalysisEngine",
+                    "file_path": "ai\\purpose_analysis_engine.py",
+                    "line_number": 20,
+                    "bases": [],
+                    "methods": [
+                        "__init__",
+                        "analyze_purpose",
+                        "detect_business_domain",
+                        "detect_primary_action",
+                        "detect_side_effects",
+                        "extract_function_calls",
+                        "normalize_text",
+                        "tokenize"
+                    ]
+                }
+            ],
+            "top_level_calls": [
+                "PurposeAnalysisEngine",
+                "engine.analyze_purpose",
+                "print"
+            ]
+        },
+        "ai\\repository_graph_engine.py": {
+            "file_path": "ai\\repository_graph_engine.py",
+            "imports": [
+                "ast",
+                "json"
+            ],
+            "from_imports": [
+                "__future__.annotations",
+                "dataclasses.asdict",
+                "dataclasses.dataclass",
+                "pathlib.Path",
+                "typing.Dict",
+                "typing.List",
+                "typing.Optional",
+                "typing.Set"
+            ],
+            "functions": [],
+            "classes": [
+                {
+                    "name": "FunctionNode",
+                    "file_path": "ai\\repository_graph_engine.py",
+                    "line_number": 18,
+                    "bases": [],
+                    "methods": []
+                },
+                {
+                    "name": "ClassNode",
+                    "file_path": "ai\\repository_graph_engine.py",
+                    "line_number": 27,
+                    "bases": [],
+                    "methods": []
+                },
+                {
+                    "name": "FileNode",
+                    "file_path": "ai\\repository_graph_engine.py",
+                    "line_number": 36,
+                    "bases": [],
+                    "methods": []
+                },
+                {
+                    "name": "RepositoryGraph",
+                    "file_path": "ai\\repository_graph_engine.py",
+                    "line_number": 46,
+                    "bases": [],
+                    "methods": []
+                },
+                {
+                    "name": "RepositoryGraphEngine",
+                    "file_path": "ai\\repository_graph_engine.py",
+                    "line_number": 55,
+                    "bases": [],
+                    "methods": [
+                        "__init__",
+                        "_analyze_file",
+                        "_build_class_index",
+                        "_build_dependency_map",
+                        "_build_function_index",
+                        "_extract_calls_from_node",
+                        "_extract_class",
+                        "_extract_from_imports",
+                        "_extract_function",
+                        "_extract_imports",
+                        "_find_python_files",
+                        "_find_unresolved_calls",
+                        "_get_call_name",
+                        "_get_name",
+                        "_match_import_to_file",
+                        "_relative",
+                        "_should_ignore",
+                        "build_graph",
+                        "export_graph_json",
+                        "print_summary"
+                    ]
+                }
+            ],
+            "top_level_calls": [
+                "Path.cwd",
+                "RepositoryGraphEngine",
+                "engine.export_graph_json",
+                "engine.print_summary",
+                "print",
+                "str"
+            ]
+        },
+        "ai\\semantic_decision_engine.py": {
+            "file_path": "ai\\semantic_decision_engine.py",
+            "imports": [],
+            "from_imports": [
+                "ai.embedding_similarity.EmbeddingSemanticEngine",
+                "ai.lexical_prefilter.LexicalSemanticPrefilter",
+                "ai.purpose_analysis_engine.PurposeAnalysisEngine",
+                "typing.Dict",
+                "typing.List"
+            ],
+            "functions": [],
+            "classes": [
+                {
+                    "name": "SemanticDecisionEngine",
+                    "file_path": "ai\\semantic_decision_engine.py",
+                    "line_number": 31,
+                    "bases": [],
+                    "methods": [
+                        "__init__",
+                        "analyze_change",
+                        "generate_decision"
+                    ]
+                }
+            ],
+            "top_level_calls": [
+                "SemanticDecisionEngine",
+                "engine.analyze_change",
+                "print"
+            ]
+        },
+        "ai\\__init__.py": {
+            "file_path": "ai\\__init__.py",
+            "imports": [],
+            "from_imports": [],
+            "functions": [],
+            "classes": [],
+            "top_level_calls": []
+        },
+        "core\\code_modifier.py": {
+            "file_path": "core\\code_modifier.py",
+            "imports": [
+                "os",
+                "re",
+                "shutil"
+            ],
+            "from_imports": [],
+            "functions": [
+                {
+                    "name": "create_backup",
+                    "file_path": "core\\code_modifier.py",
+                    "line_number": 6,
+                    "calls": [],
+                    "method_calls": [
+                        "shutil.copy"
+                    ]
+                },
+                {
+                    "name": "should_skip_path",
+                    "file_path": "core\\code_modifier.py",
+                    "line_number": 16,
+                    "calls": [
+                        "any"
+                    ],
+                    "method_calls": [
+                        "file_path.replace",
+                        "file_path.replace.lower"
+                    ]
+                },
+                {
+                    "name": "replace_function_calls",
+                    "file_path": "core\\code_modifier.py",
+                    "line_number": 33,
+                    "calls": [
+                        "open"
+                    ],
+                    "method_calls": [
+                        "file.read",
+                        "file.write",
+                        "re.escape",
+                        "re.sub"
+                    ]
+                },
+                {
+                    "name": "replace_import_references",
+                    "file_path": "core\\code_modifier.py",
+                    "line_number": 51,
+                    "calls": [
+                        "open"
+                    ],
+                    "method_calls": [
+                        "file.read",
+                        "file.write",
+                        "re.escape",
+                        "re.sub"
+                    ]
+                },
+                {
+                    "name": "replace_function_calls_across_project",
+                    "file_path": "core\\code_modifier.py",
+                    "line_number": 73,
+                    "calls": [
+                        "create_backup",
+                        "open",
+                        "should_skip_path"
+                    ],
+                    "method_calls": [
+                        "changed_files.append",
+                        "f.read",
+                        "f.write",
+                        "file.endswith",
+                        "os.path.join",
+                        "os.walk",
+                        "re.escape",
+                        "re.sub"
+                    ]
+                },
+                {
+                    "name": "remove_function_definition",
+                    "file_path": "core\\code_modifier.py",
+                    "line_number": 133,
+                    "calls": [
+                        "open"
+                    ],
+                    "method_calls": [
+                        "file.readlines",
+                        "file.writelines",
+                        "line.startswith",
+                        "new_lines.append"
+                    ]
+                },
+                {
+                    "name": "apply_safe_merge",
+                    "file_path": "core\\code_modifier.py",
+                    "line_number": 168,
+                    "calls": [
+                        "create_backup",
+                        "remove_function_definition",
+                        "replace_function_calls_across_project"
+                    ],
+                    "method_calls": []
+                }
+            ],
+            "classes": [],
+            "top_level_calls": []
+        },
+        "core\\dependency_tracker.py": {
+            "file_path": "core\\dependency_tracker.py",
+            "imports": [
+                "os",
+                "re"
+            ],
+            "from_imports": [],
+            "functions": [
+                {
+                    "name": "is_production_file",
+                    "file_path": "core\\dependency_tracker.py",
+                    "line_number": 5,
+                    "calls": [],
+                    "method_calls": [
+                        "file_path.replace",
+                        "file_path.replace.lower"
+                    ]
+                },
+                {
+                    "name": "find_function_usage_across_project",
+                    "file_path": "core\\dependency_tracker.py",
+                    "line_number": 43,
+                    "calls": [
+                        "is_production_file",
+                        "len",
+                        "open"
+                    ],
+                    "method_calls": [
+                        "f.read",
+                        "file.endswith",
+                        "os.path.join",
+                        "os.walk",
+                        "re.escape",
+                        "re.findall",
+                        "usage_locations.append"
+                    ]
+                },
+                {
+                    "name": "analyze_global_risk",
+                    "file_path": "core\\dependency_tracker.py",
+                    "line_number": 103,
+                    "calls": [
+                        "find_function_usage_across_project",
+                        "len",
+                        "sum"
+                    ],
+                    "method_calls": []
+                }
+            ],
+            "classes": [],
+            "top_level_calls": []
+        },
+        "core\\duplicate_detector.py": {
+            "file_path": "core\\duplicate_detector.py",
+            "imports": [
+                "ast",
+                "difflib",
+                "os",
+                "re"
+            ],
+            "from_imports": [],
+            "functions": [
+                {
+                    "name": "debug",
+                    "file_path": "core\\duplicate_detector.py",
+                    "line_number": 10,
+                    "calls": [
+                        "print"
+                    ],
+                    "method_calls": []
+                },
+                {
+                    "name": "detect_domain",
+                    "file_path": "core\\duplicate_detector.py",
+                    "line_number": 48,
+                    "calls": [
+                        "split_name"
+                    ],
+                    "method_calls": [
+                        "DOMAIN_KEYWORDS.items"
+                    ]
+                },
+                {
+                    "name": "split_name",
+                    "file_path": "core\\duplicate_detector.py",
+                    "line_number": 65,
+                    "calls": [],
+                    "method_calls": [
+                        "re.sub",
+                        "re.sub.lower",
+                        "words.split"
+                    ]
+                },
+                {
+                    "name": "get_name_intent",
+                    "file_path": "core\\duplicate_detector.py",
+                    "line_number": 70,
+                    "calls": [
+                        "split_name"
+                    ],
+                    "method_calls": []
+                },
+                {
+                    "name": "semantic_conflict",
+                    "file_path": "core\\duplicate_detector.py",
+                    "line_number": 84,
+                    "calls": [
+                        "detect_domain",
+                        "get_name_intent",
+                        "set"
+                    ],
+                    "method_calls": []
+                },
+                {
+                    "name": "detect_type_conflict",
+                    "file_path": "core\\duplicate_detector.py",
+                    "line_number": 114,
+                    "calls": [],
+                    "method_calls": [
+                        "name1.lower",
+                        "name2.lower"
+                    ]
+                },
+                {
+                    "name": "extract_constants",
+                    "file_path": "core\\duplicate_detector.py",
+                    "line_number": 130,
+                    "calls": [
+                        "isinstance"
+                    ],
+                    "method_calls": [
+                        "ast.parse",
+                        "ast.walk"
+                    ]
+                },
+                {
+                    "name": "constant_conflict",
+                    "file_path": "core\\duplicate_detector.py",
+                    "line_number": 135,
+                    "calls": [
+                        "extract_constants",
+                        "set"
+                    ],
+                    "method_calls": [
+                        "set.issubset"
+                    ]
+                },
+                {
+                    "name": "extract_operations",
+                    "file_path": "core\\duplicate_detector.py",
+                    "line_number": 157,
+                    "calls": [
+                        "isinstance",
+                        "type"
+                    ],
+                    "method_calls": [
+                        "ast.parse",
+                        "ast.walk"
+                    ]
+                },
+                {
+                    "name": "operation_conflict",
+                    "file_path": "core\\duplicate_detector.py",
+                    "line_number": 162,
+                    "calls": [
+                        "extract_operations"
+                    ],
+                    "method_calls": []
+                },
+                {
+                    "name": "detect_nested_function",
+                    "file_path": "core\\duplicate_detector.py",
+                    "line_number": 176,
+                    "calls": [
+                        "isinstance"
+                    ],
+                    "method_calls": [
+                        "ast.parse"
+                    ]
+                },
+                {
+                    "name": "nested_structure_conflict",
+                    "file_path": "core\\duplicate_detector.py",
+                    "line_number": 188,
+                    "calls": [
+                        "debug",
+                        "detect_nested_function"
+                    ],
+                    "method_calls": []
+                },
+                {
+                    "name": "detect_recursive_function",
+                    "file_path": "core\\duplicate_detector.py",
+                    "line_number": 203,
+                    "calls": [
+                        "isinstance"
+                    ],
+                    "method_calls": [
+                        "ast.parse",
+                        "ast.walk"
+                    ]
+                },
+                {
+                    "name": "recursive_structure_conflict",
+                    "file_path": "core\\duplicate_detector.py",
+                    "line_number": 215,
+                    "calls": [
+                        "debug",
+                        "detect_recursive_function"
+                    ],
+                    "method_calls": []
+                },
+                {
+                    "name": "normalize_function_code",
+                    "file_path": "core\\duplicate_detector.py",
+                    "line_number": 231,
+                    "calls": [
+                        "isinstance"
+                    ],
+                    "method_calls": [
+                        "ast.dump",
+                        "ast.parse",
+                        "ast.walk"
+                    ]
+                },
+                {
+                    "name": "calculate_similarity",
+                    "file_path": "core\\duplicate_detector.py",
+                    "line_number": 249,
+                    "calls": [
+                        "debug",
+                        "extract_operations",
+                        "normalize_function_code"
+                    ],
+                    "method_calls": [
+                        "difflib.SequenceMatcher",
+                        "difflib.SequenceMatcher.ratio"
+                    ]
+                },
+                {
+                    "name": "is_internal_function",
+                    "file_path": "core\\duplicate_detector.py",
+                    "line_number": 271,
+                    "calls": [],
+                    "method_calls": [
+                        "file_path.endswith",
+                        "file_path.replace",
+                        "file_path.startswith"
+                    ]
+                },
+                {
+                    "name": "is_inner_function",
+                    "file_path": "core\\duplicate_detector.py",
+                    "line_number": 281,
+                    "calls": [],
+                    "method_calls": [
+                        "func.splitlines",
+                        "line.startswith",
+                        "line.strip",
+                        "line.strip.startswith"
+                    ]
+                },
+                {
+                    "name": "is_project_file",
+                    "file_path": "core\\duplicate_detector.py",
+                    "line_number": 290,
+                    "calls": [],
+                    "method_calls": [
+                        "file_path.replace",
+                        "file_path.replace.lower",
+                        "file_path.startswith",
+                        "os.path.abspath",
+                        "root.replace",
+                        "root.replace.lower"
+                    ]
+                },
+                {
+                    "name": "is_empty_function",
+                    "file_path": "core\\duplicate_detector.py",
+                    "line_number": 303,
+                    "calls": [
+                        "isinstance",
+                        "len"
+                    ],
+                    "method_calls": [
+                        "ast.parse"
+                    ]
+                },
+                {
+                    "name": "find_duplicates",
+                    "file_path": "core\\duplicate_detector.py",
+                    "line_number": 318,
+                    "calls": [
+                        "calculate_similarity",
+                        "constant_conflict",
+                        "debug",
+                        "detect_domain",
+                        "detect_type_conflict",
+                        "extract_operations",
+                        "is_empty_function",
+                        "is_inner_function",
+                        "is_internal_function",
+                        "is_project_file",
+                        "len",
+                        "max",
+                        "min",
+                        "nested_structure_conflict",
+                        "operation_conflict",
+                        "range",
+                        "recursive_structure_conflict",
+                        "round",
+                        "semantic_conflict",
+                        "set",
+                        "sorted",
+                        "tuple"
+                    ],
+                    "method_calls": [
+                        "difflib.SequenceMatcher",
+                        "difflib.SequenceMatcher.ratio",
+                        "duplicates.append",
+                        "func1.replace",
+                        "func1.strip",
+                        "func2.replace",
+                        "func2.strip",
+                        "seen_pairs.add"
+                    ]
+                }
+            ],
+            "classes": [],
+            "top_level_calls": [
+                "os.path.abspath"
+            ]
+        },
+        "core\\memory_store.py": {
+            "file_path": "core\\memory_store.py",
+            "imports": [
+                "json",
+                "os"
+            ],
+            "from_imports": [],
+            "functions": [
+                {
+                    "name": "load_memory",
+                    "file_path": "core\\memory_store.py",
+                    "line_number": 7,
+                    "calls": [
+                        "open"
+                    ],
+                    "method_calls": [
+                        "json.load",
+                        "os.path.exists"
+                    ]
+                },
+                {
+                    "name": "save_memory",
+                    "file_path": "core\\memory_store.py",
+                    "line_number": 15,
+                    "calls": [
+                        "open"
+                    ],
+                    "method_calls": [
+                        "json.dump"
+                    ]
+                },
+                {
+                    "name": "store_decision",
+                    "file_path": "core\\memory_store.py",
+                    "line_number": 20,
+                    "calls": [
+                        "load_memory",
+                        "save_memory"
+                    ],
+                    "method_calls": [
+                        "existing.get",
+                        "memory.append"
+                    ]
+                },
+                {
+                    "name": "store_rejection",
+                    "file_path": "core\\memory_store.py",
+                    "line_number": 47,
+                    "calls": [
+                        "store_decision"
+                    ],
+                    "method_calls": []
+                },
+                {
+                    "name": "check_memory",
+                    "file_path": "core\\memory_store.py",
+                    "line_number": 57,
+                    "calls": [
+                        "load_memory"
+                    ],
+                    "method_calls": [
+                        "entry.get"
+                    ]
+                }
+            ],
+            "classes": [],
+            "top_level_calls": []
+        },
+        "core\\merge_advisor.py": {
+            "file_path": "core\\merge_advisor.py",
+            "imports": [],
+            "from_imports": [],
+            "functions": [
+                {
+                    "name": "suggest_merge",
+                    "file_path": "core\\merge_advisor.py",
+                    "line_number": 1,
+                    "calls": [],
+                    "method_calls": [
+                        "duplicate_info.get"
+                    ]
+                }
+            ],
+            "classes": [],
+            "top_level_calls": []
+        },
+        "core\\parser.py": {
+            "file_path": "core\\parser.py",
+            "imports": [
+                "ast"
+            ],
+            "from_imports": [],
+            "functions": [
+                {
+                    "name": "extract_functions",
+                    "file_path": "core\\parser.py",
+                    "line_number": 4,
+                    "calls": [
+                        "is_top_level",
+                        "isinstance",
+                        "open"
+                    ],
+                    "method_calls": [
+                        "ast.get_source_segment",
+                        "ast.parse",
+                        "ast.walk",
+                        "file.read",
+                        "functions.append"
+                    ]
+                },
+                {
+                    "name": "extract_functions_from_files",
+                    "file_path": "core\\parser.py",
+                    "line_number": 52,
+                    "calls": [
+                        "extract_functions"
+                    ],
+                    "method_calls": [
+                        "all_functions.extend"
+                    ]
+                }
+            ],
+            "classes": [],
+            "top_level_calls": []
+        },
+        "core\\project_scanner.py": {
+            "file_path": "core\\project_scanner.py",
+            "imports": [
+                "os"
+            ],
+            "from_imports": [],
+            "functions": [
+                {
+                    "name": "get_python_files",
+                    "file_path": "core\\project_scanner.py",
+                    "line_number": 20,
+                    "calls": [],
+                    "method_calls": [
+                        "d.startswith",
+                        "file.endswith",
+                        "os.path.join",
+                        "os.walk",
+                        "python_files.append"
+                    ]
+                }
+            ],
+            "classes": [],
+            "top_level_calls": []
+        },
+        "core\\quality_checker.py": {
+            "file_path": "core\\quality_checker.py",
+            "imports": [],
+            "from_imports": [],
+            "functions": [
+                {
+                    "name": "evaluate_function_quality",
+                    "file_path": "core\\quality_checker.py",
+                    "line_number": 1,
+                    "calls": [
+                        "len"
+                    ],
+                    "method_calls": [
+                        "function_code.count",
+                        "function_code.splitlines",
+                        "reasons.append"
+                    ]
+                },
+                {
+                    "name": "compare_functions",
+                    "file_path": "core\\quality_checker.py",
+                    "line_number": 37,
+                    "calls": [
+                        "evaluate_function_quality",
+                        "len"
+                    ],
+                    "method_calls": []
+                }
+            ],
+            "classes": [],
+            "top_level_calls": []
+        },
+        "core\\risk_analyzer.py": {
+            "file_path": "core\\risk_analyzer.py",
+            "imports": [
+                "os",
+                "re"
+            ],
+            "from_imports": [],
+            "functions": [
+                {
+                    "name": "find_function_usage",
+                    "file_path": "core\\risk_analyzer.py",
+                    "line_number": 28,
+                    "calls": [
+                        "len",
+                        "open"
+                    ],
+                    "method_calls": [
+                        "file.read",
+                        "re.findall"
+                    ]
+                },
+                {
+                    "name": "find_project_usage",
+                    "file_path": "core\\risk_analyzer.py",
+                    "line_number": 42,
+                    "calls": [
+                        "find_function_usage"
+                    ],
+                    "method_calls": [
+                        "file.endswith",
+                        "os.path.join",
+                        "os.walk"
+                    ]
+                },
+                {
+                    "name": "has_business_meaning",
+                    "file_path": "core\\risk_analyzer.py",
+                    "line_number": 76,
+                    "calls": [
+                        "any"
+                    ],
+                    "method_calls": [
+                        "function_name.lower"
+                    ]
+                },
+                {
+                    "name": "analyze_risk",
+                    "file_path": "core\\risk_analyzer.py",
+                    "line_number": 81,
+                    "calls": [
+                        "find_project_usage",
+                        "has_business_meaning",
+                        "join",
+                        "len"
+                    ],
+                    "method_calls": [
+                        "duplicate_info.get",
+                        "file_path.replace",
+                        "file_path.replace.split",
+                        "reasons.append"
+                    ]
+                }
+            ],
+            "classes": [],
+            "top_level_calls": []
+        },
+        "core\\__init__.py": {
+            "file_path": "core\\__init__.py",
+            "imports": [],
+            "from_imports": [],
+            "functions": [],
+            "classes": [],
+            "top_level_calls": []
+        },
+        "memory\\memory_store_v2.py": {
+            "file_path": "memory\\memory_store_v2.py",
+            "imports": [
+                "json",
+                "os",
+                "shutil",
+                "uuid"
+            ],
+            "from_imports": [
+                "datetime.datetime",
+                "json.JSONDecodeError",
+                "typing.Any",
+                "typing.Dict"
+            ],
+            "functions": [],
+            "classes": [
+                {
+                    "name": "MemoryStoreV2",
+                    "file_path": "memory\\memory_store_v2.py",
+                    "line_number": 16,
+                    "bases": [],
+                    "methods": [
+                        "__init__",
+                        "_approved_decision_exists",
+                        "_cleanup_memory",
+                        "_create_corrupted_backup",
+                        "_create_memory_archive",
+                        "_default_memory",
+                        "_ensure_memory_schema",
+                        "_initialize_memory",
+                        "_load_memory",
+                        "_prune_old_archives",
+                        "_recover_memory",
+                        "_save_memory",
+                        "enforce_cleanup",
+                        "get_memory",
+                        "store_approved_decision"
+                    ]
+                }
+            ],
+            "top_level_calls": []
+        },
+        "memory\\__init__.py": {
+            "file_path": "memory\\__init__.py",
+            "imports": [
+                "os"
+            ],
+            "from_imports": [],
+            "functions": [
+                {
+                    "name": "__init__",
+                    "file_path": "memory\\__init__.py",
+                    "line_number": 6,
+                    "calls": [],
+                    "method_calls": [
+                        "os.makedirs",
+                        "os.path.exists",
+                        "self._initialize_memory"
+                    ]
+                }
+            ],
+            "classes": [],
+            "top_level_calls": []
+        },
+        "reporting\\report_generator.py": {
+            "file_path": "reporting\\report_generator.py",
+            "imports": [
+                "json"
+            ],
+            "from_imports": [
+                "typing.Any",
+                "typing.Dict"
+            ],
+            "functions": [],
+            "classes": [
+                {
+                    "name": "ReportGenerator",
+                    "file_path": "reporting\\report_generator.py",
+                    "line_number": 10,
+                    "bases": [],
+                    "methods": [
+                        "generate_console_report"
+                    ]
+                }
+            ],
+            "top_level_calls": []
+        },
+        "reporting\\__init__.py": {
+            "file_path": "reporting\\__init__.py",
+            "imports": [],
+            "from_imports": [],
+            "functions": [],
+            "classes": [],
+            "top_level_calls": []
+        },
+        "tests\\manual_embedding_test.py": {
+            "file_path": "tests\\manual_embedding_test.py",
+            "imports": [
+                "os",
+                "sys"
+            ],
+            "from_imports": [
+                "ai.embedding_similarity.EmbeddingSemanticEngine"
+            ],
+            "functions": [],
+            "classes": [],
+            "top_level_calls": [
+                "EmbeddingSemanticEngine",
+                "engine.semantic_similarity_score",
+                "os.path.abspath",
+                "os.path.dirname",
+                "print",
+                "sys.path.append"
+            ]
+        },
+        "tests\\manual_purpose_test.py": {
+            "file_path": "tests\\manual_purpose_test.py",
+            "imports": [],
+            "from_imports": [
+                "ai.purpose_analysis_engine.PurposeAnalysisEngine"
+            ],
+            "functions": [],
+            "classes": [],
+            "top_level_calls": [
+                "PurposeAnalysisEngine",
+                "engine.analyze_purpose",
+                "print"
+            ]
+        },
+        "tests\\run_sit_v2.py": {
+            "file_path": "tests\\run_sit_v2.py",
+            "imports": [
+                "pytest",
+                "sys"
+            ],
+            "from_imports": [],
+            "functions": [
+                {
+                    "name": "run_all_sit_tests",
+                    "file_path": "tests\\run_sit_v2.py",
+                    "line_number": 10,
+                    "calls": [
+                        "print"
+                    ],
+                    "method_calls": [
+                        "pytest.main"
+                    ]
+                }
+            ],
+            "classes": [],
+            "top_level_calls": [
+                "run_all_sit_tests",
+                "sys.exit"
+            ]
+        },
+        "tests\\run_uat.py": {
+            "file_path": "tests\\run_uat.py",
+            "imports": [
+                "datetime",
+                "subprocess",
+                "sys"
+            ],
+            "from_imports": [],
+            "functions": [
+                {
+                    "name": "sep",
+                    "file_path": "tests\\run_uat.py",
+                    "line_number": 200,
+                    "calls": [],
+                    "method_calls": []
+                },
+                {
+                    "name": "run_main",
+                    "file_path": "tests\\run_uat.py",
+                    "line_number": 203,
+                    "calls": [
+                        "str"
+                    ],
+                    "method_calls": [
+                        "subprocess.run"
+                    ]
+                },
+                {
+                    "name": "format_tc_block",
+                    "file_path": "tests\\run_uat.py",
+                    "line_number": 221,
+                    "calls": [
+                        "join",
+                        "sep"
+                    ],
+                    "method_calls": [
+                        "data.replace",
+                        "data.split",
+                        "lines.append"
+                    ]
+                },
+                {
+                    "name": "main",
+                    "file_path": "tests\\run_uat.py",
+                    "line_number": 247,
+                    "calls": [
+                        "format_tc_block",
+                        "int",
+                        "open",
+                        "print",
+                        "range",
+                        "run_main",
+                        "sep"
+                    ],
+                    "method_calls": [
+                        "datetime.datetime.now",
+                        "datetime.datetime.now.strftime",
+                        "f.write",
+                        "results.items"
+                    ]
+                }
+            ],
+            "classes": [],
+            "top_level_calls": [
+                "main"
+            ]
+        },
+        "tests\\run_uat_per_case.py": {
+            "file_path": "tests\\run_uat_per_case.py",
+            "imports": [
+                "datetime",
+                "sys"
+            ],
+            "from_imports": [
+                "core.duplicate_detector.find_duplicates",
+                "core.parser.extract_functions",
+                "pathlib.Path"
+            ],
+            "functions": [
+                {
+                    "name": "sep",
+                    "file_path": "tests\\run_uat_per_case.py",
+                    "line_number": 485,
+                    "calls": [],
+                    "method_calls": []
+                },
+                {
+                    "name": "create_runtime_test_file",
+                    "file_path": "tests\\run_uat_per_case.py",
+                    "line_number": 490,
+                    "calls": [],
+                    "method_calls": [
+                        "RUNTIME_FILE.write_text"
+                    ]
+                },
+                {
+                    "name": "cleanup_runtime_file",
+                    "file_path": "tests\\run_uat_per_case.py",
+                    "line_number": 505,
+                    "calls": [],
+                    "method_calls": [
+                        "RUNTIME_FILE.exists",
+                        "RUNTIME_FILE.unlink"
+                    ]
+                },
+                {
+                    "name": "run_isolated_scan",
+                    "file_path": "tests\\run_uat_per_case.py",
+                    "line_number": 512,
+                    "calls": [
+                        "extract_functions",
+                        "find_duplicates",
+                        "str"
+                    ],
+                    "method_calls": []
+                },
+                {
+                    "name": "build_output",
+                    "file_path": "tests\\run_uat_per_case.py",
+                    "line_number": 531,
+                    "calls": [
+                        "join",
+                        "len",
+                        "sep"
+                    ],
+                    "method_calls": [
+                        "datetime.datetime.now",
+                        "dup.get",
+                        "lines.append"
+                    ]
+                },
+                {
+                    "name": "save_output",
+                    "file_path": "tests\\run_uat_per_case.py",
+                    "line_number": 643,
+                    "calls": [
+                        "open",
+                        "sep"
+                    ],
+                    "method_calls": [
+                        "data.strip",
+                        "datetime.datetime.now",
+                        "f.write"
+                    ]
+                },
+                {
+                    "name": "main",
+                    "file_path": "tests\\run_uat_per_case.py",
+                    "line_number": 696,
+                    "calls": [
+                        "build_output",
+                        "cleanup_runtime_file",
+                        "create_runtime_test_file",
+                        "len",
+                        "print",
+                        "run_isolated_scan",
+                        "save_output",
+                        "sep",
+                        "str"
+                    ],
+                    "method_calls": [
+                        "TC_DATA.items"
+                    ]
+                }
+            ],
+            "classes": [],
+            "top_level_calls": [
+                "OUTPUT_DIR.mkdir",
+                "Path",
+                "Path.resolve",
+                "main",
+                "str",
+                "sys.path.insert"
+            ]
+        },
+        "tests\\run_uat_v2.py": {
+            "file_path": "tests\\run_uat_v2.py",
+            "imports": [
+                "pytest",
+                "sys"
+            ],
+            "from_imports": [],
+            "functions": [
+                {
+                    "name": "run_all_uat_tests",
+                    "file_path": "tests\\run_uat_v2.py",
+                    "line_number": 10,
+                    "calls": [
+                        "print"
+                    ],
+                    "method_calls": [
+                        "pytest.main"
+                    ]
+                }
+            ],
+            "classes": [],
+            "top_level_calls": [
+                "run_all_uat_tests",
+                "sys.exit"
+            ]
+        },
+        "tests\\test_archive_retention.py": {
+            "file_path": "tests\\test_archive_retention.py",
+            "imports": [
+                "os",
+                "time"
+            ],
+            "from_imports": [
+                "memory.memory_store_v2.MemoryStoreV2"
+            ],
+            "functions": [
+                {
+                    "name": "cleanup_test_environment",
+                    "file_path": "tests\\test_archive_retention.py",
+                    "line_number": 15,
+                    "calls": [],
+                    "method_calls": [
+                        "os.path.exists",
+                        "os.remove"
+                    ]
+                },
+                {
+                    "name": "test_archive_retention_limit",
+                    "file_path": "tests\\test_archive_retention.py",
+                    "line_number": 21,
+                    "calls": [
+                        "MemoryStoreV2",
+                        "cleanup_test_environment",
+                        "len",
+                        "open",
+                        "range"
+                    ],
+                    "method_calls": [
+                        "archive_files.append",
+                        "file.write",
+                        "file_name.endswith",
+                        "file_name.startswith",
+                        "memory_store._prune_old_archives",
+                        "memory_store.get_memory",
+                        "os.listdir",
+                        "os.path.join",
+                        "time.sleep"
+                    ]
+                },
+                {
+                    "name": "test_archive_cleanup_event_logging",
+                    "file_path": "tests\\test_archive_retention.py",
+                    "line_number": 81,
+                    "calls": [
+                        "MemoryStoreV2",
+                        "cleanup_test_environment",
+                        "len",
+                        "open",
+                        "range"
+                    ],
+                    "method_calls": [
+                        "file.write",
+                        "memory_store._prune_old_archives",
+                        "memory_store.get_memory",
+                        "os.path.join",
+                        "time.sleep"
+                    ]
+                }
+            ],
+            "classes": [],
+            "top_level_calls": []
+        },
+        "tests\\test_embedding_similarity.py": {
+            "file_path": "tests\\test_embedding_similarity.py",
+            "imports": [],
+            "from_imports": [
+                "ai.embedding_similarity.EmbeddingSemanticEngine"
+            ],
+            "functions": [
+                {
+                    "name": "test_embedding_similarity_positive",
+                    "file_path": "tests\\test_embedding_similarity.py",
+                    "line_number": 15,
+                    "calls": [
+                        "EmbeddingSemanticEngine"
+                    ],
+                    "method_calls": [
+                        "engine.semantic_similarity_score"
+                    ]
+                },
+                {
+                    "name": "test_embedding_similarity_negative",
+                    "file_path": "tests\\test_embedding_similarity.py",
+                    "line_number": 37,
+                    "calls": [
+                        "EmbeddingSemanticEngine"
+                    ],
+                    "method_calls": [
+                        "engine.semantic_similarity_score"
+                    ]
+                },
+                {
+                    "name": "test_embedding_similarity_same_text",
+                    "file_path": "tests\\test_embedding_similarity.py",
+                    "line_number": 53,
+                    "calls": [
+                        "EmbeddingSemanticEngine"
+                    ],
+                    "method_calls": [
+                        "engine.semantic_similarity_score"
+                    ]
+                },
+                {
+                    "name": "test_embedding_similarity_contextual_match",
+                    "file_path": "tests\\test_embedding_similarity.py",
+                    "line_number": 71,
+                    "calls": [
+                        "EmbeddingSemanticEngine"
+                    ],
+                    "method_calls": [
+                        "engine.semantic_similarity_score"
+                    ]
+                },
+                {
+                    "name": "test_embedding_similarity_empty_input",
+                    "file_path": "tests\\test_embedding_similarity.py",
+                    "line_number": 87,
+                    "calls": [
+                        "EmbeddingSemanticEngine"
+                    ],
+                    "method_calls": [
+                        "engine.semantic_similarity_score"
+                    ]
+                },
+                {
+                    "name": "test_embedding_similarity_output_structure",
+                    "file_path": "tests\\test_embedding_similarity.py",
+                    "line_number": 105,
+                    "calls": [
+                        "EmbeddingSemanticEngine"
+                    ],
+                    "method_calls": [
+                        "engine.semantic_similarity_score"
+                    ]
+                },
+                {
+                    "name": "test_embedding_similarity_engine_type",
+                    "file_path": "tests\\test_embedding_similarity.py",
+                    "line_number": 132,
+                    "calls": [
+                        "EmbeddingSemanticEngine"
+                    ],
+                    "method_calls": [
+                        "engine.semantic_similarity_score"
+                    ]
+                },
+                {
+                    "name": "test_embedding_similarity_model_name",
+                    "file_path": "tests\\test_embedding_similarity.py",
+                    "line_number": 152,
+                    "calls": [
+                        "EmbeddingSemanticEngine"
+                    ],
+                    "method_calls": []
+                },
+                {
+                    "name": "test_embedding_generation",
+                    "file_path": "tests\\test_embedding_similarity.py",
+                    "line_number": 167,
+                    "calls": [
+                        "EmbeddingSemanticEngine"
+                    ],
+                    "method_calls": [
+                        "engine.generate_embedding"
+                    ]
+                },
+                {
+                    "name": "test_embedding_similarity_dynamic_text",
+                    "file_path": "tests\\test_embedding_similarity.py",
+                    "line_number": 182,
+                    "calls": [
+                        "EmbeddingSemanticEngine",
+                        "isinstance"
+                    ],
+                    "method_calls": [
+                        "engine.semantic_similarity_score"
+                    ]
+                },
+                {
+                    "name": "test_embedding_similarity_long_text",
+                    "file_path": "tests\\test_embedding_similarity.py",
+                    "line_number": 201,
+                    "calls": [
+                        "EmbeddingSemanticEngine"
+                    ],
+                    "method_calls": [
+                        "engine.semantic_similarity_score"
+                    ]
+                },
+                {
+                    "name": "test_embedding_similarity_special_characters",
+                    "file_path": "tests\\test_embedding_similarity.py",
+                    "line_number": 227,
+                    "calls": [
+                        "EmbeddingSemanticEngine"
+                    ],
+                    "method_calls": [
+                        "engine.semantic_similarity_score"
+                    ]
+                },
+                {
+                    "name": "test_embedding_similarity_case_insensitive",
+                    "file_path": "tests\\test_embedding_similarity.py",
+                    "line_number": 243,
+                    "calls": [
+                        "EmbeddingSemanticEngine"
+                    ],
+                    "method_calls": [
+                        "engine.semantic_similarity_score"
+                    ]
+                },
+                {
+                    "name": "test_embedding_similarity_random_input",
+                    "file_path": "tests\\test_embedding_similarity.py",
+                    "line_number": 259,
+                    "calls": [
+                        "EmbeddingSemanticEngine",
+                        "isinstance"
+                    ],
+                    "method_calls": [
+                        "engine.semantic_similarity_score"
+                    ]
+                },
+                {
+                    "name": "test_embedding_similarity_risk_classification",
+                    "file_path": "tests\\test_embedding_similarity.py",
+                    "line_number": 278,
+                    "calls": [
+                        "EmbeddingSemanticEngine"
+                    ],
+                    "method_calls": [
+                        "engine.classify_risk"
+                    ]
+                },
+                {
+                    "name": "test_embedding_similarity_normalization",
+                    "file_path": "tests\\test_embedding_similarity.py",
+                    "line_number": 295,
+                    "calls": [
+                        "EmbeddingSemanticEngine"
+                    ],
+                    "method_calls": [
+                        "engine.normalize_text"
+                    ]
+                }
+            ],
+            "classes": [],
+            "top_level_calls": []
+        },
+        "tests\\test_lexical_semantic_similarity.py": {
+            "file_path": "tests\\test_lexical_semantic_similarity.py",
+            "imports": [],
+            "from_imports": [
+                "ai.lexical_prefilter.LexicalSemanticPrefilter"
+            ],
+            "functions": [
+                {
+                    "name": "test_lexical_similarity_positive",
+                    "file_path": "tests\\test_lexical_semantic_similarity.py",
+                    "line_number": 15,
+                    "calls": [
+                        "LexicalSemanticPrefilter",
+                        "isinstance"
+                    ],
+                    "method_calls": [
+                        "engine.lexical_similarity_score"
+                    ]
+                },
+                {
+                    "name": "test_lexical_similarity_negative",
+                    "file_path": "tests\\test_lexical_semantic_similarity.py",
+                    "line_number": 47,
+                    "calls": [
+                        "LexicalSemanticPrefilter"
+                    ],
+                    "method_calls": [
+                        "engine.lexical_similarity_score"
+                    ]
+                },
+                {
+                    "name": "test_lexical_similarity_same_text",
+                    "file_path": "tests\\test_lexical_semantic_similarity.py",
+                    "line_number": 63,
+                    "calls": [
+                        "LexicalSemanticPrefilter"
+                    ],
+                    "method_calls": [
+                        "engine.lexical_similarity_score"
+                    ]
+                },
+                {
+                    "name": "test_lexical_similarity_synonym_detection",
+                    "file_path": "tests\\test_lexical_semantic_similarity.py",
+                    "line_number": 81,
+                    "calls": [
+                        "LexicalSemanticPrefilter",
+                        "len"
+                    ],
+                    "method_calls": [
+                        "engine.lexical_similarity_score"
+                    ]
+                },
+                {
+                    "name": "test_lexical_similarity_empty_input",
+                    "file_path": "tests\\test_lexical_semantic_similarity.py",
+                    "line_number": 102,
+                    "calls": [
+                        "LexicalSemanticPrefilter"
+                    ],
+                    "method_calls": [
+                        "engine.lexical_similarity_score"
+                    ]
+                },
+                {
+                    "name": "test_lexical_similarity_output_structure",
+                    "file_path": "tests\\test_lexical_semantic_similarity.py",
+                    "line_number": 120,
+                    "calls": [
+                        "LexicalSemanticPrefilter"
+                    ],
+                    "method_calls": [
+                        "engine.lexical_similarity_score"
+                    ]
+                },
+                {
+                    "name": "test_lexical_similarity_engine_type",
+                    "file_path": "tests\\test_lexical_semantic_similarity.py",
+                    "line_number": 148,
+                    "calls": [
+                        "LexicalSemanticPrefilter"
+                    ],
+                    "method_calls": [
+                        "engine.lexical_similarity_score"
+                    ]
+                },
+                {
+                    "name": "test_lexical_similarity_dynamic_text_support",
+                    "file_path": "tests\\test_lexical_semantic_similarity.py",
+                    "line_number": 168,
+                    "calls": [
+                        "LexicalSemanticPrefilter",
+                        "isinstance"
+                    ],
+                    "method_calls": [
+                        "engine.lexical_similarity_score"
+                    ]
+                },
+                {
+                    "name": "test_lexical_similarity_camelcase_support",
+                    "file_path": "tests\\test_lexical_semantic_similarity.py",
+                    "line_number": 189,
+                    "calls": [
+                        "LexicalSemanticPrefilter"
+                    ],
+                    "method_calls": [
+                        "engine.lexical_similarity_score"
+                    ]
+                },
+                {
+                    "name": "test_lexical_similarity_special_characters",
+                    "file_path": "tests\\test_lexical_semantic_similarity.py",
+                    "line_number": 205,
+                    "calls": [
+                        "LexicalSemanticPrefilter"
+                    ],
+                    "method_calls": [
+                        "engine.lexical_similarity_score"
+                    ]
+                },
+                {
+                    "name": "test_lexical_similarity_case_insensitive",
+                    "file_path": "tests\\test_lexical_semantic_similarity.py",
+                    "line_number": 221,
+                    "calls": [
+                        "LexicalSemanticPrefilter"
+                    ],
+                    "method_calls": [
+                        "engine.lexical_similarity_score"
+                    ]
+                },
+                {
+                    "name": "test_lexical_similarity_long_text",
+                    "file_path": "tests\\test_lexical_semantic_similarity.py",
+                    "line_number": 237,
+                    "calls": [
+                        "LexicalSemanticPrefilter"
+                    ],
+                    "method_calls": [
+                        "engine.lexical_similarity_score"
+                    ]
+                },
+                {
+                    "name": "test_lexical_similarity_random_input",
+                    "file_path": "tests\\test_lexical_semantic_similarity.py",
+                    "line_number": 263,
+                    "calls": [
+                        "LexicalSemanticPrefilter",
+                        "isinstance"
+                    ],
+                    "method_calls": [
+                        "engine.lexical_similarity_score"
+                    ]
+                },
+                {
+                    "name": "test_lexical_similarity_action_matching",
+                    "file_path": "tests\\test_lexical_semantic_similarity.py",
+                    "line_number": 282,
+                    "calls": [
+                        "LexicalSemanticPrefilter",
+                        "len"
+                    ],
+                    "method_calls": [
+                        "engine.lexical_similarity_score"
+                    ]
+                },
+                {
+                    "name": "test_lexical_similarity_multiple_token_overlap",
+                    "file_path": "tests\\test_lexical_semantic_similarity.py",
+                    "line_number": 301,
+                    "calls": [
+                        "LexicalSemanticPrefilter"
+                    ],
+                    "method_calls": [
+                        "engine.lexical_similarity_score"
+                    ]
+                },
+                {
+                    "name": "test_lexical_similarity_risk_classification",
+                    "file_path": "tests\\test_lexical_semantic_similarity.py",
+                    "line_number": 317,
+                    "calls": [
+                        "LexicalSemanticPrefilter"
+                    ],
+                    "method_calls": [
+                        "engine.classify_risk"
+                    ]
+                }
+            ],
+            "classes": [],
+            "top_level_calls": []
+        },
+        "tests\\test_memory_cleanup.py": {
+            "file_path": "tests\\test_memory_cleanup.py",
+            "imports": [
+                "os"
+            ],
+            "from_imports": [
+                "memory.memory_store_v2.MemoryStoreV2"
+            ],
+            "functions": [
+                {
+                    "name": "cleanup_test_files",
+                    "file_path": "tests\\test_memory_cleanup.py",
+                    "line_number": 14,
+                    "calls": [],
+                    "method_calls": [
+                        "os.path.exists",
+                        "os.remove"
+                    ]
+                },
+                {
+                    "name": "test_memory_cleanup_enforcement",
+                    "file_path": "tests\\test_memory_cleanup.py",
+                    "line_number": 20,
+                    "calls": [
+                        "MemoryStoreV2",
+                        "cleanup_test_files",
+                        "len",
+                        "range"
+                    ],
+                    "method_calls": [
+                        "memory_store.get_memory",
+                        "memory_store.store_approved_decision"
+                    ]
+                },
+                {
+                    "name": "test_manual_cleanup_execution",
+                    "file_path": "tests\\test_memory_cleanup.py",
+                    "line_number": 77,
+                    "calls": [
+                        "MemoryStoreV2",
+                        "cleanup_test_files"
+                    ],
+                    "method_calls": [
+                        "memory_store.enforce_cleanup"
+                    ]
+                }
+            ],
+            "classes": [],
+            "top_level_calls": []
+        },
+        "tests\\test_memory_recovery.py": {
+            "file_path": "tests\\test_memory_recovery.py",
+            "imports": [],
+            "from_imports": [],
+            "functions": [],
+            "classes": [],
+            "top_level_calls": []
+        },
+        "tests\\test_rollback.py": {
+            "file_path": "tests\\test_rollback.py",
+            "imports": [
+                "os",
+                "sys"
+            ],
+            "from_imports": [
+                "validation.rollback_manager.RollbackManager"
+            ],
+            "functions": [
+                {
+                    "name": "test_backup_creation",
+                    "file_path": "tests\\test_rollback.py",
+                    "line_number": 35,
+                    "calls": [],
+                    "method_calls": [
+                        "RollbackManager.create_backup",
+                        "os.path.exists"
+                    ]
+                },
+                {
+                    "name": "test_backup_restore",
+                    "file_path": "tests\\test_rollback.py",
+                    "line_number": 51,
+                    "calls": [
+                        "open"
+                    ],
+                    "method_calls": [
+                        "RollbackManager.create_backup",
+                        "RollbackManager.restore_backup",
+                        "file.read",
+                        "file.write"
+                    ]
+                },
+                {
+                    "name": "test_missing_backup_restore",
+                    "file_path": "tests\\test_rollback.py",
+                    "line_number": 82,
+                    "calls": [],
+                    "method_calls": [
+                        "RollbackManager.restore_backup"
+                    ]
+                },
+                {
+                    "name": "test_missing_target_backup",
+                    "file_path": "tests\\test_rollback.py",
+                    "line_number": 103,
+                    "calls": [],
+                    "method_calls": [
+                        "RollbackManager.create_backup"
+                    ]
+                }
+            ],
+            "classes": [],
+            "top_level_calls": [
+                "os.path.abspath",
+                "os.path.dirname",
+                "sys.path.append"
+            ]
+        },
+        "tests\\test_semantic_decision_engine.py": {
+            "file_path": "tests\\test_semantic_decision_engine.py",
+            "imports": [],
+            "from_imports": [
+                "ai.semantic_decision_engine.SemanticDecisionEngine"
+            ],
+            "functions": [
+                {
+                    "name": "test_semantic_decision_review",
+                    "file_path": "tests\\test_semantic_decision_engine.py",
+                    "line_number": 11,
+                    "calls": [
+                        "SemanticDecisionEngine",
+                        "isinstance"
+                    ],
+                    "method_calls": [
+                        "engine.analyze_change"
+                    ]
+                },
+                {
+                    "name": "test_semantic_decision_output_structure",
+                    "file_path": "tests\\test_semantic_decision_engine.py",
+                    "line_number": 54,
+                    "calls": [
+                        "SemanticDecisionEngine"
+                    ],
+                    "method_calls": [
+                        "engine.analyze_change"
+                    ]
+                },
+                {
+                    "name": "test_semantic_decision_engine_type",
+                    "file_path": "tests\\test_semantic_decision_engine.py",
+                    "line_number": 83,
+                    "calls": [
+                        "SemanticDecisionEngine"
+                    ],
+                    "method_calls": [
+                        "engine.analyze_change"
+                    ]
+                },
+                {
+                    "name": "test_semantic_decision_negative_case",
+                    "file_path": "tests\\test_semantic_decision_engine.py",
+                    "line_number": 99,
+                    "calls": [
+                        "SemanticDecisionEngine"
+                    ],
+                    "method_calls": [
+                        "engine.analyze_change"
+                    ]
+                },
+                {
+                    "name": "test_semantic_decision_reasoning_exists",
+                    "file_path": "tests\\test_semantic_decision_engine.py",
+                    "line_number": 111,
+                    "calls": [
+                        "SemanticDecisionEngine",
+                        "isinstance"
+                    ],
+                    "method_calls": [
+                        "engine.analyze_change"
+                    ]
+                }
+            ],
+            "classes": [],
+            "top_level_calls": []
+        },
+        "tests\\test_sit_failure_pipeline.py": {
+            "file_path": "tests\\test_sit_failure_pipeline.py",
+            "imports": [
+                "os",
+                "sys"
+            ],
+            "from_imports": [
+                "ai.ai_interface.AIInterface",
+                "memory.memory_store_v2.MemoryStoreV2",
+                "validation.syntax_validator.SyntaxValidator"
+            ],
+            "functions": [
+                {
+                    "name": "test_pipeline_survives_validation_failure",
+                    "file_path": "tests\\test_sit_failure_pipeline.py",
+                    "line_number": 24,
+                    "calls": [
+                        "AIInterface",
+                        "MemoryStoreV2"
+                    ],
+                    "method_calls": [
+                        "SyntaxValidator.validate_python_code",
+                        "ai_gateway.analyze_text",
+                        "memory.store_approved_decision"
+                    ]
+                }
+            ],
+            "classes": [],
+            "top_level_calls": [
+                "os.path.abspath",
+                "os.path.dirname",
+                "sys.path.append"
+            ]
+        },
+        "tests\\test_sit_pipeline.py": {
+            "file_path": "tests\\test_sit_pipeline.py",
+            "imports": [
+                "os",
+                "sys"
+            ],
+            "from_imports": [
+                "ai.ai_interface.AIInterface",
+                "memory.memory_store_v2.MemoryStoreV2",
+                "reporting.report_generator.ReportGenerator",
+                "validation.rollback_manager.RollbackManager",
+                "validation.syntax_validator.SyntaxValidator"
+            ],
+            "functions": [
+                {
+                    "name": "test_full_v2_pipeline",
+                    "file_path": "tests\\test_sit_pipeline.py",
+                    "line_number": 39,
+                    "calls": [
+                        "AIInterface",
+                        "MemoryStoreV2",
+                        "isinstance",
+                        "open"
+                    ],
+                    "method_calls": [
+                        "ReportGenerator.generate_console_report",
+                        "RollbackManager.create_backup",
+                        "RollbackManager.restore_backup",
+                        "SyntaxValidator.validate_python_code",
+                        "ai_gateway.analyze_text",
+                        "file.read",
+                        "file.write",
+                        "memory.get_memory",
+                        "memory.store_approved_decision"
+                    ]
+                }
+            ],
+            "classes": [],
+            "top_level_calls": [
+                "os.path.abspath",
+                "os.path.dirname",
+                "sys.path.append"
+            ]
+        },
+        "tests\\test_v1_regression.py": {
+            "file_path": "tests\\test_v1_regression.py",
+            "imports": [
+                "os",
+                "sys"
+            ],
+            "from_imports": [
+                "validation.rollback_manager.RollbackManager",
+                "validation.syntax_validator.SyntaxValidator"
+            ],
+            "functions": [
+                {
+                    "name": "test_v1_validation_still_works",
+                    "file_path": "tests\\test_v1_regression.py",
+                    "line_number": 36,
+                    "calls": [],
+                    "method_calls": [
+                        "SyntaxValidator.validate_python_code"
+                    ]
+                },
+                {
+                    "name": "test_v1_invalid_validation_still_works",
+                    "file_path": "tests\\test_v1_regression.py",
+                    "line_number": 54,
+                    "calls": [],
+                    "method_calls": [
+                        "SyntaxValidator.validate_python_code"
+                    ]
+                },
+                {
+                    "name": "test_v1_rollback_still_works",
+                    "file_path": "tests\\test_v1_regression.py",
+                    "line_number": 72,
+                    "calls": [],
+                    "method_calls": [
+                        "RollbackManager.create_backup",
+                        "os.path.exists"
+                    ]
+                }
+            ],
+            "classes": [],
+            "top_level_calls": [
+                "os.path.abspath",
+                "os.path.dirname",
+                "sys.path.append"
+            ]
+        },
+        "tests\\test_validation.py": {
+            "file_path": "tests\\test_validation.py",
+            "imports": [
+                "os",
+                "sys"
+            ],
+            "from_imports": [
+                "validation.syntax_validator.SyntaxValidator"
+            ],
+            "functions": [
+                {
+                    "name": "test_valid_python_code",
+                    "file_path": "tests\\test_validation.py",
+                    "line_number": 22,
+                    "calls": [],
+                    "method_calls": [
+                        "SyntaxValidator.validate_python_code"
+                    ]
+                },
+                {
+                    "name": "test_invalid_python_code",
+                    "file_path": "tests\\test_validation.py",
+                    "line_number": 42,
+                    "calls": [],
+                    "method_calls": [
+                        "SyntaxValidator.validate_python_code"
+                    ]
+                }
+            ],
+            "classes": [],
+            "top_level_calls": [
+                "os.path.abspath",
+                "os.path.dirname",
+                "sys.path.append"
+            ]
+        },
+        "tests\\uat_test_cases.py": {
+            "file_path": "tests\\uat_test_cases.py",
+            "imports": [],
+            "from_imports": [],
+            "functions": [
+                {
+                    "name": "add",
+                    "file_path": "tests\\uat_test_cases.py",
+                    "line_number": 17,
+                    "calls": [],
+                    "method_calls": []
+                },
+                {
+                    "name": "add_copy",
+                    "file_path": "tests\\uat_test_cases.py",
+                    "line_number": 20,
+                    "calls": [],
+                    "method_calls": []
+                },
+                {
+                    "name": "calculate_area",
+                    "file_path": "tests\\uat_test_cases.py",
+                    "line_number": 29,
+                    "calls": [],
+                    "method_calls": []
+                },
+                {
+                    "name": "get_area",
+                    "file_path": "tests\\uat_test_cases.py",
+                    "line_number": 32,
+                    "calls": [],
+                    "method_calls": []
+                },
+                {
+                    "name": "process_data",
+                    "file_path": "tests\\uat_test_cases.py",
+                    "line_number": 41,
+                    "calls": [],
+                    "method_calls": []
+                },
+                {
+                    "name": "process_data_v2",
+                    "file_path": "tests\\uat_test_cases.py",
+                    "line_number": 44,
+                    "calls": [],
+                    "method_calls": []
+                },
+                {
+                    "name": "calculate_tax",
+                    "file_path": "tests\\uat_test_cases.py",
+                    "line_number": 53,
+                    "calls": [],
+                    "method_calls": []
+                },
+                {
+                    "name": "compute_tax",
+                    "file_path": "tests\\uat_test_cases.py",
+                    "line_number": 56,
+                    "calls": [],
+                    "method_calls": []
+                },
+                {
+                    "name": "validate_email",
+                    "file_path": "tests\\uat_test_cases.py",
+                    "line_number": 65,
+                    "calls": [
+                        "len"
+                    ],
+                    "method_calls": []
+                },
+                {
+                    "name": "validate_username",
+                    "file_path": "tests\\uat_test_cases.py",
+                    "line_number": 68,
+                    "calls": [
+                        "len"
+                    ],
+                    "method_calls": []
+                },
+                {
+                    "name": "calculate_discount",
+                    "file_path": "tests\\uat_test_cases.py",
+                    "line_number": 78,
+                    "calls": [],
+                    "method_calls": []
+                },
+                {
+                    "name": "apply_discount",
+                    "file_path": "tests\\uat_test_cases.py",
+                    "line_number": 81,
+                    "calls": [],
+                    "method_calls": []
+                },
+                {
+                    "name": "outer_process",
+                    "file_path": "tests\\uat_test_cases.py",
+                    "line_number": 90,
+                    "calls": [
+                        "clean"
+                    ],
+                    "method_calls": [
+                        "x.strip",
+                        "x.strip.lower"
+                    ]
+                },
+                {
+                    "name": "normalize_text",
+                    "file_path": "tests\\uat_test_cases.py",
+                    "line_number": 95,
+                    "calls": [],
+                    "method_calls": [
+                        "x.strip",
+                        "x.strip.lower"
+                    ]
+                },
+                {
+                    "name": "sum_integers",
+                    "file_path": "tests\\uat_test_cases.py",
+                    "line_number": 104,
+                    "calls": [
+                        "sum"
+                    ],
+                    "method_calls": []
+                },
+                {
+                    "name": "sum_strings",
+                    "file_path": "tests\\uat_test_cases.py",
+                    "line_number": 107,
+                    "calls": [
+                        "sum"
+                    ],
+                    "method_calls": []
+                },
+                {
+                    "name": "calculate_perimeter",
+                    "file_path": "tests\\uat_test_cases.py",
+                    "line_number": 116,
+                    "calls": [],
+                    "method_calls": []
+                },
+                {
+                    "name": "calculate_volume",
+                    "file_path": "tests\\uat_test_cases.py",
+                    "line_number": 119,
+                    "calls": [],
+                    "method_calls": []
+                },
+                {
+                    "name": "add_two",
+                    "file_path": "tests\\uat_test_cases.py",
+                    "line_number": 129,
+                    "calls": [],
+                    "method_calls": []
+                },
+                {
+                    "name": "sum_two",
+                    "file_path": "tests\\uat_test_cases.py",
+                    "line_number": 132,
+                    "calls": [],
+                    "method_calls": []
+                },
+                {
+                    "name": "multiply",
+                    "file_path": "tests\\uat_test_cases.py",
+                    "line_number": 142,
+                    "calls": [],
+                    "method_calls": []
+                },
+                {
+                    "name": "multiply_copy",
+                    "file_path": "tests\\uat_test_cases.py",
+                    "line_number": 145,
+                    "calls": [],
+                    "method_calls": []
+                },
+                {
+                    "name": "factorial",
+                    "file_path": "tests\\uat_test_cases.py",
+                    "line_number": 154,
+                    "calls": [
+                        "factorial"
+                    ],
+                    "method_calls": []
+                },
+                {
+                    "name": "calc_factorial",
+                    "file_path": "tests\\uat_test_cases.py",
+                    "line_number": 159,
+                    "calls": [
+                        "calc_factorial"
+                    ],
+                    "method_calls": []
+                },
+                {
+                    "name": "placeholder_one",
+                    "file_path": "tests\\uat_test_cases.py",
+                    "line_number": 170,
+                    "calls": [],
+                    "method_calls": []
+                },
+                {
+                    "name": "placeholder_two",
+                    "file_path": "tests\\uat_test_cases.py",
+                    "line_number": 173,
+                    "calls": [],
+                    "method_calls": []
+                },
+                {
+                    "name": "get_evens",
+                    "file_path": "tests\\uat_test_cases.py",
+                    "line_number": 182,
+                    "calls": [],
+                    "method_calls": []
+                },
+                {
+                    "name": "filter_even_numbers",
+                    "file_path": "tests\\uat_test_cases.py",
+                    "line_number": 185,
+                    "calls": [],
+                    "method_calls": [
+                        "result.append"
+                    ]
+                },
+                {
+                    "name": "format_name",
+                    "file_path": "tests\\uat_test_cases.py",
+                    "line_number": 199,
+                    "calls": [
+                        "strip"
+                    ],
+                    "method_calls": []
+                },
+                {
+                    "name": "connect_db",
+                    "file_path": "tests\\uat_test_cases.py",
+                    "line_number": 208,
+                    "calls": [],
+                    "method_calls": []
+                },
+                {
+                    "name": "open_connection",
+                    "file_path": "tests\\uat_test_cases.py",
+                    "line_number": 211,
+                    "calls": [],
+                    "method_calls": []
+                },
+                {
+                    "name": "process_order",
+                    "file_path": "tests\\uat_test_cases.py",
+                    "line_number": 220,
+                    "calls": [
+                        "sum"
+                    ],
+                    "method_calls": []
+                },
+                {
+                    "name": "calculate_order",
+                    "file_path": "tests\\uat_test_cases.py",
+                    "line_number": 236,
+                    "calls": [
+                        "sum"
+                    ],
+                    "method_calls": []
+                },
+                {
+                    "name": "send_email",
+                    "file_path": "tests\\uat_test_cases.py",
+                    "line_number": 259,
+                    "calls": [],
+                    "method_calls": []
+                },
+                {
+                    "name": "dispatch_email",
+                    "file_path": "tests\\uat_test_cases.py",
+                    "line_number": 262,
+                    "calls": [],
+                    "method_calls": []
+                },
+                {
+                    "name": "square",
+                    "file_path": "tests\\uat_test_cases.py",
+                    "line_number": 281,
+                    "calls": [],
+                    "method_calls": []
+                },
+                {
+                    "name": "sq",
+                    "file_path": "tests\\uat_test_cases.py",
+                    "line_number": 284,
+                    "calls": [],
+                    "method_calls": []
+                },
+                {
+                    "name": "greet",
+                    "file_path": "tests\\uat_test_cases.py",
+                    "line_number": 287,
+                    "calls": [],
+                    "method_calls": []
+                },
+                {
+                    "name": "say_hello",
+                    "file_path": "tests\\uat_test_cases.py",
+                    "line_number": 290,
+                    "calls": [],
+                    "method_calls": []
+                },
+                {
+                    "name": "get_vat",
+                    "file_path": "tests\\uat_test_cases.py",
+                    "line_number": 293,
+                    "calls": [],
+                    "method_calls": []
+                },
+                {
+                    "name": "calc_vat",
+                    "file_path": "tests\\uat_test_cases.py",
+                    "line_number": 296,
+                    "calls": [],
+                    "method_calls": []
+                }
+            ],
+            "classes": [],
+            "top_level_calls": []
+        },
+        "tests\\__init__.py": {
+            "file_path": "tests\\__init__.py",
+            "imports": [],
+            "from_imports": [],
+            "functions": [],
+            "classes": [],
+            "top_level_calls": []
+        },
+        "validation\\rollback_manager.py": {
+            "file_path": "validation\\rollback_manager.py",
+            "imports": [
+                "os",
+                "shutil"
+            ],
+            "from_imports": [
+                "datetime.datetime"
+            ],
+            "functions": [],
+            "classes": [
+                {
+                    "name": "RollbackManager",
+                    "file_path": "validation\\rollback_manager.py",
+                    "line_number": 11,
+                    "bases": [],
+                    "methods": [
+                        "create_backup",
+                        "restore_backup"
+                    ]
+                }
+            ],
+            "top_level_calls": []
+        },
+        "validation\\syntax_validator.py": {
+            "file_path": "validation\\syntax_validator.py",
+            "imports": [
+                "ast"
+            ],
+            "from_imports": [
+                "typing.Any",
+                "typing.Dict"
+            ],
+            "functions": [],
+            "classes": [
+                {
+                    "name": "SyntaxValidator",
+                    "file_path": "validation\\syntax_validator.py",
+                    "line_number": 10,
+                    "bases": [],
+                    "methods": [
+                        "validate_python_code"
+                    ]
+                }
+            ],
+            "top_level_calls": []
+        },
+        "validation\\__init__.py": {
+            "file_path": "validation\\__init__.py",
+            "imports": [],
+            "from_imports": [],
+            "functions": [],
+            "classes": [],
+            "top_level_calls": []
+        }
+    },
+    "dependency_map": {
+        "billing.py": [],
+        "db_prod.py": [],
+        "db_test.py": [],
+        "helpers.py": [],
+        "inventory.py": [],
+        "main.py": [
+            "core\\code_modifier.py",
+            "core\\dependency_tracker.py",
+            "core\\duplicate_detector.py",
+            "core\\memory_store.py",
+            "core\\merge_advisor.py",
+            "core\\parser.py",
+            "core\\project_scanner.py",
+            "core\\quality_checker.py"
+        ],
+        "main_v2.py": [
+            "ai\\ai_interface.py",
+            "memory\\memory_store_v2.py",
+            "reporting\\report_generator.py",
+            "validation\\rollback_manager.py",
+            "validation\\syntax_validator.py"
+        ],
+        "orders.py": [],
+        "reports.py": [],
+        "sample_code.py": [
+            "billing.py"
+        ],
+        "utils.py": [],
+        "ai\\ai_interface.py": [],
+        "ai\\embedding_similarity.py": [],
+        "ai\\lexical_prefilter.py": [
+            "core\\memory_store.py"
+        ],
+        "ai\\purpose_analysis_engine.py": [
+            "core\\memory_store.py"
+        ],
+        "ai\\repository_graph_engine.py": [],
+        "ai\\semantic_decision_engine.py": [
+            "ai\\embedding_similarity.py",
+            "ai\\lexical_prefilter.py",
+            "ai\\purpose_analysis_engine.py"
+        ],
+        "ai\\__init__.py": [],
+        "core\\code_modifier.py": [
+            "core\\memory_store.py"
+        ],
+        "core\\dependency_tracker.py": [
+            "core\\memory_store.py"
+        ],
+        "core\\duplicate_detector.py": [
+            "core\\memory_store.py"
+        ],
+        "core\\memory_store.py": [],
+        "core\\merge_advisor.py": [],
+        "core\\parser.py": [],
+        "core\\project_scanner.py": [],
+        "core\\quality_checker.py": [],
+        "core\\risk_analyzer.py": [
+            "core\\memory_store.py"
+        ],
+        "core\\__init__.py": [],
+        "memory\\memory_store_v2.py": [],
+        "memory\\__init__.py": [],
+        "reporting\\report_generator.py": [],
+        "reporting\\__init__.py": [],
+        "tests\\manual_embedding_test.py": [
+            "ai\\embedding_similarity.py"
+        ],
+        "tests\\manual_purpose_test.py": [
+            "ai\\purpose_analysis_engine.py"
+        ],
+        "tests\\run_sit_v2.py": [],
+        "tests\\run_uat.py": [],
+        "tests\\run_uat_per_case.py": [
+            "core\\duplicate_detector.py",
+            "core\\parser.py"
+        ],
+        "tests\\run_uat_v2.py": [],
+        "tests\\test_archive_retention.py": [
+            "memory\\memory_store_v2.py"
+        ],
+        "tests\\test_embedding_similarity.py": [
+            "ai\\embedding_similarity.py"
+        ],
+        "tests\\test_lexical_semantic_similarity.py": [
+            "ai\\lexical_prefilter.py"
+        ],
+        "tests\\test_memory_cleanup.py": [
+            "memory\\memory_store_v2.py"
+        ],
+        "tests\\test_memory_recovery.py": [],
+        "tests\\test_rollback.py": [
+            "validation\\rollback_manager.py"
+        ],
+        "tests\\test_semantic_decision_engine.py": [
+            "ai\\semantic_decision_engine.py"
+        ],
+        "tests\\test_sit_failure_pipeline.py": [
+            "ai\\ai_interface.py",
+            "memory\\memory_store_v2.py",
+            "validation\\syntax_validator.py"
+        ],
+        "tests\\test_sit_pipeline.py": [
+            "ai\\ai_interface.py",
+            "memory\\memory_store_v2.py",
+            "reporting\\report_generator.py",
+            "validation\\rollback_manager.py",
+            "validation\\syntax_validator.py"
+        ],
+        "tests\\test_v1_regression.py": [
+            "validation\\rollback_manager.py",
+            "validation\\syntax_validator.py"
+        ],
+        "tests\\test_validation.py": [
+            "validation\\syntax_validator.py"
+        ],
+        "tests\\uat_test_cases.py": [],
+        "tests\\__init__.py": [],
+        "validation\\rollback_manager.py": [],
+        "validation\\syntax_validator.py": [],
+        "validation\\__init__.py": []
+    },
+    "function_index": {
+        "calculate_invoice_total": [
+            "billing.py",
+            "sample_code.py"
+        ],
+        "connect_database": [
+            "db_prod.py"
+        ],
+        "open_connection": [
+            "db_test.py",
+            "tests\\uat_test_cases.py"
+        ],
+        "format_name": [
+            "helpers.py",
+            "utils.py",
+            "tests\\uat_test_cases.py"
+        ],
+        "get_stock_value": [
+            "inventory.py"
+        ],
+        "format_currency": [
+            "inventory.py"
+        ],
+        "print_section": [
+            "main.py"
+        ],
+        "is_internal_function": [
+            "main.py",
+            "core\\duplicate_detector.py"
+        ],
+        "analyze_high_usage_functions": [
+            "main.py"
+        ],
+        "main": [
+            "main.py",
+            "tests\\run_uat.py",
+            "tests\\run_uat_per_case.py"
+        ],
+        "run_v2_demo": [
+            "main_v2.py"
+        ],
+        "generate_order_summary": [
+            "orders.py"
+        ],
+        "generate_finance_report": [
+            "reports.py"
+        ],
+        "compute_bill_amount": [
+            "sample_code.py"
+        ],
+        "factorial_number": [
+            "sample_code.py"
+        ],
+        "compute_factorial": [
+            "sample_code.py"
+        ],
+        "apply_customer_discount": [
+            "sample_code.py"
+        ],
+        "apply_supplier_discount": [
+            "sample_code.py"
+        ],
+        "to_dict": [
+            "ai\\ai_interface.py"
+        ],
+        "AIResponse.to_dict": [
+            "ai\\ai_interface.py"
+        ],
+        "__init__": [
+            "ai\\ai_interface.py",
+            "ai\\embedding_similarity.py",
+            "ai\\lexical_prefilter.py",
+            "ai\\purpose_analysis_engine.py",
+            "ai\\repository_graph_engine.py",
+            "ai\\semantic_decision_engine.py",
+            "memory\\memory_store_v2.py",
+            "memory\\__init__.py"
+        ],
+        "AIInterface.__init__": [
+            "ai\\ai_interface.py"
+        ],
+        "_fallback_response": [
+            "ai\\ai_interface.py"
+        ],
+        "AIInterface._fallback_response": [
+            "ai\\ai_interface.py"
+        ],
+        "_simulate_ai_response": [
+            "ai\\ai_interface.py"
+        ],
+        "AIInterface._simulate_ai_response": [
+            "ai\\ai_interface.py"
+        ],
+        "analyze_text": [
+            "ai\\ai_interface.py"
+        ],
+        "AIInterface.analyze_text": [
+            "ai\\ai_interface.py"
+        ],
+        "is_ai_available": [
+            "ai\\ai_interface.py"
+        ],
+        "AIInterface.is_ai_available": [
+            "ai\\ai_interface.py"
+        ],
+        "EmbeddingSemanticEngine.__init__": [
+            "ai\\embedding_similarity.py"
+        ],
+        "classify_risk": [
+            "ai\\embedding_similarity.py",
+            "ai\\lexical_prefilter.py"
+        ],
+        "EmbeddingSemanticEngine.classify_risk": [
+            "ai\\embedding_similarity.py"
+        ],
+        "generate_embedding": [
+            "ai\\embedding_similarity.py"
+        ],
+        "EmbeddingSemanticEngine.generate_embedding": [
+            "ai\\embedding_similarity.py"
+        ],
+        "normalize_text": [
+            "ai\\embedding_similarity.py",
+            "ai\\lexical_prefilter.py",
+            "ai\\purpose_analysis_engine.py",
+            "tests\\uat_test_cases.py"
+        ],
+        "EmbeddingSemanticEngine.normalize_text": [
+            "ai\\embedding_similarity.py"
+        ],
+        "semantic_similarity_score": [
+            "ai\\embedding_similarity.py"
+        ],
+        "EmbeddingSemanticEngine.semantic_similarity_score": [
+            "ai\\embedding_similarity.py"
+        ],
+        "LexicalSemanticPrefilter.__init__": [
+            "ai\\lexical_prefilter.py"
+        ],
+        "calculate_overlap_score": [
+            "ai\\lexical_prefilter.py"
+        ],
+        "LexicalSemanticPrefilter.calculate_overlap_score": [
+            "ai\\lexical_prefilter.py"
+        ],
+        "LexicalSemanticPrefilter.classify_risk": [
+            "ai\\lexical_prefilter.py"
+        ],
+        "expand_tokens": [
+            "ai\\lexical_prefilter.py"
+        ],
+        "LexicalSemanticPrefilter.expand_tokens": [
+            "ai\\lexical_prefilter.py"
+        ],
+        "extract_actions": [
+            "ai\\lexical_prefilter.py"
+        ],
+        "LexicalSemanticPrefilter.extract_actions": [
+            "ai\\lexical_prefilter.py"
+        ],
+        "lexical_similarity_score": [
+            "ai\\lexical_prefilter.py"
+        ],
+        "LexicalSemanticPrefilter.lexical_similarity_score": [
+            "ai\\lexical_prefilter.py"
+        ],
+        "LexicalSemanticPrefilter.normalize_text": [
+            "ai\\lexical_prefilter.py"
+        ],
+        "tokenize": [
+            "ai\\lexical_prefilter.py",
+            "ai\\purpose_analysis_engine.py"
+        ],
+        "LexicalSemanticPrefilter.tokenize": [
+            "ai\\lexical_prefilter.py"
+        ],
+        "PurposeAnalysisEngine.__init__": [
+            "ai\\purpose_analysis_engine.py"
+        ],
+        "analyze_purpose": [
+            "ai\\purpose_analysis_engine.py"
+        ],
+        "PurposeAnalysisEngine.analyze_purpose": [
+            "ai\\purpose_analysis_engine.py"
+        ],
+        "detect_business_domain": [
+            "ai\\purpose_analysis_engine.py"
+        ],
+        "PurposeAnalysisEngine.detect_business_domain": [
+            "ai\\purpose_analysis_engine.py"
+        ],
+        "detect_primary_action": [
+            "ai\\purpose_analysis_engine.py"
+        ],
+        "PurposeAnalysisEngine.detect_primary_action": [
+            "ai\\purpose_analysis_engine.py"
+        ],
+        "detect_side_effects": [
+            "ai\\purpose_analysis_engine.py"
+        ],
+        "PurposeAnalysisEngine.detect_side_effects": [
+            "ai\\purpose_analysis_engine.py"
+        ],
+        "extract_function_calls": [
+            "ai\\purpose_analysis_engine.py"
+        ],
+        "PurposeAnalysisEngine.extract_function_calls": [
+            "ai\\purpose_analysis_engine.py"
+        ],
+        "PurposeAnalysisEngine.normalize_text": [
+            "ai\\purpose_analysis_engine.py"
+        ],
+        "PurposeAnalysisEngine.tokenize": [
+            "ai\\purpose_analysis_engine.py"
+        ],
+        "RepositoryGraphEngine.__init__": [
+            "ai\\repository_graph_engine.py"
+        ],
+        "_analyze_file": [
+            "ai\\repository_graph_engine.py"
+        ],
+        "RepositoryGraphEngine._analyze_file": [
+            "ai\\repository_graph_engine.py"
+        ],
+        "_build_class_index": [
+            "ai\\repository_graph_engine.py"
+        ],
+        "RepositoryGraphEngine._build_class_index": [
+            "ai\\repository_graph_engine.py"
+        ],
+        "_build_dependency_map": [
+            "ai\\repository_graph_engine.py"
+        ],
+        "RepositoryGraphEngine._build_dependency_map": [
+            "ai\\repository_graph_engine.py"
+        ],
+        "_build_function_index": [
+            "ai\\repository_graph_engine.py"
+        ],
+        "RepositoryGraphEngine._build_function_index": [
+            "ai\\repository_graph_engine.py"
+        ],
+        "_extract_calls_from_node": [
+            "ai\\repository_graph_engine.py"
+        ],
+        "RepositoryGraphEngine._extract_calls_from_node": [
+            "ai\\repository_graph_engine.py"
+        ],
+        "_extract_class": [
+            "ai\\repository_graph_engine.py"
+        ],
+        "RepositoryGraphEngine._extract_class": [
+            "ai\\repository_graph_engine.py"
+        ],
+        "_extract_from_imports": [
+            "ai\\repository_graph_engine.py"
+        ],
+        "RepositoryGraphEngine._extract_from_imports": [
+            "ai\\repository_graph_engine.py"
+        ],
+        "_extract_function": [
+            "ai\\repository_graph_engine.py"
+        ],
+        "RepositoryGraphEngine._extract_function": [
+            "ai\\repository_graph_engine.py"
+        ],
+        "_extract_imports": [
+            "ai\\repository_graph_engine.py"
+        ],
+        "RepositoryGraphEngine._extract_imports": [
+            "ai\\repository_graph_engine.py"
+        ],
+        "_find_python_files": [
+            "ai\\repository_graph_engine.py"
+        ],
+        "RepositoryGraphEngine._find_python_files": [
+            "ai\\repository_graph_engine.py"
+        ],
+        "_find_unresolved_calls": [
+            "ai\\repository_graph_engine.py"
+        ],
+        "RepositoryGraphEngine._find_unresolved_calls": [
+            "ai\\repository_graph_engine.py"
+        ],
+        "_get_call_name": [
+            "ai\\repository_graph_engine.py"
+        ],
+        "RepositoryGraphEngine._get_call_name": [
+            "ai\\repository_graph_engine.py"
+        ],
+        "_get_name": [
+            "ai\\repository_graph_engine.py"
+        ],
+        "RepositoryGraphEngine._get_name": [
+            "ai\\repository_graph_engine.py"
+        ],
+        "_match_import_to_file": [
+            "ai\\repository_graph_engine.py"
+        ],
+        "RepositoryGraphEngine._match_import_to_file": [
+            "ai\\repository_graph_engine.py"
+        ],
+        "_relative": [
+            "ai\\repository_graph_engine.py"
+        ],
+        "RepositoryGraphEngine._relative": [
+            "ai\\repository_graph_engine.py"
+        ],
+        "_should_ignore": [
+            "ai\\repository_graph_engine.py"
+        ],
+        "RepositoryGraphEngine._should_ignore": [
+            "ai\\repository_graph_engine.py"
+        ],
+        "build_graph": [
+            "ai\\repository_graph_engine.py"
+        ],
+        "RepositoryGraphEngine.build_graph": [
+            "ai\\repository_graph_engine.py"
+        ],
+        "export_graph_json": [
+            "ai\\repository_graph_engine.py"
+        ],
+        "RepositoryGraphEngine.export_graph_json": [
+            "ai\\repository_graph_engine.py"
+        ],
+        "print_summary": [
+            "ai\\repository_graph_engine.py"
+        ],
+        "RepositoryGraphEngine.print_summary": [
+            "ai\\repository_graph_engine.py"
+        ],
+        "SemanticDecisionEngine.__init__": [
+            "ai\\semantic_decision_engine.py"
+        ],
+        "analyze_change": [
+            "ai\\semantic_decision_engine.py"
+        ],
+        "SemanticDecisionEngine.analyze_change": [
+            "ai\\semantic_decision_engine.py"
+        ],
+        "generate_decision": [
+            "ai\\semantic_decision_engine.py"
+        ],
+        "SemanticDecisionEngine.generate_decision": [
+            "ai\\semantic_decision_engine.py"
+        ],
+        "create_backup": [
+            "core\\code_modifier.py",
+            "validation\\rollback_manager.py"
+        ],
+        "should_skip_path": [
+            "core\\code_modifier.py"
+        ],
+        "replace_function_calls": [
+            "core\\code_modifier.py"
+        ],
+        "replace_import_references": [
+            "core\\code_modifier.py"
+        ],
+        "replace_function_calls_across_project": [
+            "core\\code_modifier.py"
+        ],
+        "remove_function_definition": [
+            "core\\code_modifier.py"
+        ],
+        "apply_safe_merge": [
+            "core\\code_modifier.py"
+        ],
+        "is_production_file": [
+            "core\\dependency_tracker.py"
+        ],
+        "find_function_usage_across_project": [
+            "core\\dependency_tracker.py"
+        ],
+        "analyze_global_risk": [
+            "core\\dependency_tracker.py"
+        ],
+        "debug": [
+            "core\\duplicate_detector.py"
+        ],
+        "detect_domain": [
+            "core\\duplicate_detector.py"
+        ],
+        "split_name": [
+            "core\\duplicate_detector.py"
+        ],
+        "get_name_intent": [
+            "core\\duplicate_detector.py"
+        ],
+        "semantic_conflict": [
+            "core\\duplicate_detector.py"
+        ],
+        "detect_type_conflict": [
+            "core\\duplicate_detector.py"
+        ],
+        "extract_constants": [
+            "core\\duplicate_detector.py"
+        ],
+        "constant_conflict": [
+            "core\\duplicate_detector.py"
+        ],
+        "extract_operations": [
+            "core\\duplicate_detector.py"
+        ],
+        "operation_conflict": [
+            "core\\duplicate_detector.py"
+        ],
+        "detect_nested_function": [
+            "core\\duplicate_detector.py"
+        ],
+        "nested_structure_conflict": [
+            "core\\duplicate_detector.py"
+        ],
+        "detect_recursive_function": [
+            "core\\duplicate_detector.py"
+        ],
+        "recursive_structure_conflict": [
+            "core\\duplicate_detector.py"
+        ],
+        "normalize_function_code": [
+            "core\\duplicate_detector.py"
+        ],
+        "calculate_similarity": [
+            "core\\duplicate_detector.py"
+        ],
+        "is_inner_function": [
+            "core\\duplicate_detector.py"
+        ],
+        "is_project_file": [
+            "core\\duplicate_detector.py"
+        ],
+        "is_empty_function": [
+            "core\\duplicate_detector.py"
+        ],
+        "find_duplicates": [
+            "core\\duplicate_detector.py"
+        ],
+        "load_memory": [
+            "core\\memory_store.py"
+        ],
+        "save_memory": [
+            "core\\memory_store.py"
+        ],
+        "store_decision": [
+            "core\\memory_store.py"
+        ],
+        "store_rejection": [
+            "core\\memory_store.py"
+        ],
+        "check_memory": [
+            "core\\memory_store.py"
+        ],
+        "suggest_merge": [
+            "core\\merge_advisor.py"
+        ],
+        "extract_functions": [
+            "core\\parser.py"
+        ],
+        "extract_functions_from_files": [
+            "core\\parser.py"
+        ],
+        "get_python_files": [
+            "core\\project_scanner.py"
+        ],
+        "evaluate_function_quality": [
+            "core\\quality_checker.py"
+        ],
+        "compare_functions": [
+            "core\\quality_checker.py"
+        ],
+        "find_function_usage": [
+            "core\\risk_analyzer.py"
+        ],
+        "find_project_usage": [
+            "core\\risk_analyzer.py"
+        ],
+        "has_business_meaning": [
+            "core\\risk_analyzer.py"
+        ],
+        "analyze_risk": [
+            "core\\risk_analyzer.py"
+        ],
+        "MemoryStoreV2.__init__": [
+            "memory\\memory_store_v2.py"
+        ],
+        "_approved_decision_exists": [
+            "memory\\memory_store_v2.py"
+        ],
+        "MemoryStoreV2._approved_decision_exists": [
+            "memory\\memory_store_v2.py"
+        ],
+        "_cleanup_memory": [
+            "memory\\memory_store_v2.py"
+        ],
+        "MemoryStoreV2._cleanup_memory": [
+            "memory\\memory_store_v2.py"
+        ],
+        "_create_corrupted_backup": [
+            "memory\\memory_store_v2.py"
+        ],
+        "MemoryStoreV2._create_corrupted_backup": [
+            "memory\\memory_store_v2.py"
+        ],
+        "_create_memory_archive": [
+            "memory\\memory_store_v2.py"
+        ],
+        "MemoryStoreV2._create_memory_archive": [
+            "memory\\memory_store_v2.py"
+        ],
+        "_default_memory": [
+            "memory\\memory_store_v2.py"
+        ],
+        "MemoryStoreV2._default_memory": [
+            "memory\\memory_store_v2.py"
+        ],
+        "_ensure_memory_schema": [
+            "memory\\memory_store_v2.py"
+        ],
+        "MemoryStoreV2._ensure_memory_schema": [
+            "memory\\memory_store_v2.py"
+        ],
+        "_initialize_memory": [
+            "memory\\memory_store_v2.py"
+        ],
+        "MemoryStoreV2._initialize_memory": [
+            "memory\\memory_store_v2.py"
+        ],
+        "_load_memory": [
+            "memory\\memory_store_v2.py"
+        ],
+        "MemoryStoreV2._load_memory": [
+            "memory\\memory_store_v2.py"
+        ],
+        "_prune_old_archives": [
+            "memory\\memory_store_v2.py"
+        ],
+        "MemoryStoreV2._prune_old_archives": [
+            "memory\\memory_store_v2.py"
+        ],
+        "_recover_memory": [
+            "memory\\memory_store_v2.py"
+        ],
+        "MemoryStoreV2._recover_memory": [
+            "memory\\memory_store_v2.py"
+        ],
+        "_save_memory": [
+            "memory\\memory_store_v2.py"
+        ],
+        "MemoryStoreV2._save_memory": [
+            "memory\\memory_store_v2.py"
+        ],
+        "enforce_cleanup": [
+            "memory\\memory_store_v2.py"
+        ],
+        "MemoryStoreV2.enforce_cleanup": [
+            "memory\\memory_store_v2.py"
+        ],
+        "get_memory": [
+            "memory\\memory_store_v2.py"
+        ],
+        "MemoryStoreV2.get_memory": [
+            "memory\\memory_store_v2.py"
+        ],
+        "store_approved_decision": [
+            "memory\\memory_store_v2.py"
+        ],
+        "MemoryStoreV2.store_approved_decision": [
+            "memory\\memory_store_v2.py"
+        ],
+        "generate_console_report": [
+            "reporting\\report_generator.py"
+        ],
+        "ReportGenerator.generate_console_report": [
+            "reporting\\report_generator.py"
+        ],
+        "run_all_sit_tests": [
+            "tests\\run_sit_v2.py"
+        ],
+        "sep": [
+            "tests\\run_uat.py",
+            "tests\\run_uat_per_case.py"
+        ],
+        "run_main": [
+            "tests\\run_uat.py"
+        ],
+        "format_tc_block": [
+            "tests\\run_uat.py"
+        ],
+        "create_runtime_test_file": [
+            "tests\\run_uat_per_case.py"
+        ],
+        "cleanup_runtime_file": [
+            "tests\\run_uat_per_case.py"
+        ],
+        "run_isolated_scan": [
+            "tests\\run_uat_per_case.py"
+        ],
+        "build_output": [
+            "tests\\run_uat_per_case.py"
+        ],
+        "save_output": [
+            "tests\\run_uat_per_case.py"
+        ],
+        "run_all_uat_tests": [
+            "tests\\run_uat_v2.py"
+        ],
+        "cleanup_test_environment": [
+            "tests\\test_archive_retention.py"
+        ],
+        "test_archive_retention_limit": [
+            "tests\\test_archive_retention.py"
+        ],
+        "test_archive_cleanup_event_logging": [
+            "tests\\test_archive_retention.py"
+        ],
+        "test_embedding_similarity_positive": [
+            "tests\\test_embedding_similarity.py"
+        ],
+        "test_embedding_similarity_negative": [
+            "tests\\test_embedding_similarity.py"
+        ],
+        "test_embedding_similarity_same_text": [
+            "tests\\test_embedding_similarity.py"
+        ],
+        "test_embedding_similarity_contextual_match": [
+            "tests\\test_embedding_similarity.py"
+        ],
+        "test_embedding_similarity_empty_input": [
+            "tests\\test_embedding_similarity.py"
+        ],
+        "test_embedding_similarity_output_structure": [
+            "tests\\test_embedding_similarity.py"
+        ],
+        "test_embedding_similarity_engine_type": [
+            "tests\\test_embedding_similarity.py"
+        ],
+        "test_embedding_similarity_model_name": [
+            "tests\\test_embedding_similarity.py"
+        ],
+        "test_embedding_generation": [
+            "tests\\test_embedding_similarity.py"
+        ],
+        "test_embedding_similarity_dynamic_text": [
+            "tests\\test_embedding_similarity.py"
+        ],
+        "test_embedding_similarity_long_text": [
+            "tests\\test_embedding_similarity.py"
+        ],
+        "test_embedding_similarity_special_characters": [
+            "tests\\test_embedding_similarity.py"
+        ],
+        "test_embedding_similarity_case_insensitive": [
+            "tests\\test_embedding_similarity.py"
+        ],
+        "test_embedding_similarity_random_input": [
+            "tests\\test_embedding_similarity.py"
+        ],
+        "test_embedding_similarity_risk_classification": [
+            "tests\\test_embedding_similarity.py"
+        ],
+        "test_embedding_similarity_normalization": [
+            "tests\\test_embedding_similarity.py"
+        ],
+        "test_lexical_similarity_positive": [
+            "tests\\test_lexical_semantic_similarity.py"
+        ],
+        "test_lexical_similarity_negative": [
+            "tests\\test_lexical_semantic_similarity.py"
+        ],
+        "test_lexical_similarity_same_text": [
+            "tests\\test_lexical_semantic_similarity.py"
+        ],
+        "test_lexical_similarity_synonym_detection": [
+            "tests\\test_lexical_semantic_similarity.py"
+        ],
+        "test_lexical_similarity_empty_input": [
+            "tests\\test_lexical_semantic_similarity.py"
+        ],
+        "test_lexical_similarity_output_structure": [
+            "tests\\test_lexical_semantic_similarity.py"
+        ],
+        "test_lexical_similarity_engine_type": [
+            "tests\\test_lexical_semantic_similarity.py"
+        ],
+        "test_lexical_similarity_dynamic_text_support": [
+            "tests\\test_lexical_semantic_similarity.py"
+        ],
+        "test_lexical_similarity_camelcase_support": [
+            "tests\\test_lexical_semantic_similarity.py"
+        ],
+        "test_lexical_similarity_special_characters": [
+            "tests\\test_lexical_semantic_similarity.py"
+        ],
+        "test_lexical_similarity_case_insensitive": [
+            "tests\\test_lexical_semantic_similarity.py"
+        ],
+        "test_lexical_similarity_long_text": [
+            "tests\\test_lexical_semantic_similarity.py"
+        ],
+        "test_lexical_similarity_random_input": [
+            "tests\\test_lexical_semantic_similarity.py"
+        ],
+        "test_lexical_similarity_action_matching": [
+            "tests\\test_lexical_semantic_similarity.py"
+        ],
+        "test_lexical_similarity_multiple_token_overlap": [
+            "tests\\test_lexical_semantic_similarity.py"
+        ],
+        "test_lexical_similarity_risk_classification": [
+            "tests\\test_lexical_semantic_similarity.py"
+        ],
+        "cleanup_test_files": [
+            "tests\\test_memory_cleanup.py"
+        ],
+        "test_memory_cleanup_enforcement": [
+            "tests\\test_memory_cleanup.py"
+        ],
+        "test_manual_cleanup_execution": [
+            "tests\\test_memory_cleanup.py"
+        ],
+        "test_backup_creation": [
+            "tests\\test_rollback.py"
+        ],
+        "test_backup_restore": [
+            "tests\\test_rollback.py"
+        ],
+        "test_missing_backup_restore": [
+            "tests\\test_rollback.py"
+        ],
+        "test_missing_target_backup": [
+            "tests\\test_rollback.py"
+        ],
+        "test_semantic_decision_review": [
+            "tests\\test_semantic_decision_engine.py"
+        ],
+        "test_semantic_decision_output_structure": [
+            "tests\\test_semantic_decision_engine.py"
+        ],
+        "test_semantic_decision_engine_type": [
+            "tests\\test_semantic_decision_engine.py"
+        ],
+        "test_semantic_decision_negative_case": [
+            "tests\\test_semantic_decision_engine.py"
+        ],
+        "test_semantic_decision_reasoning_exists": [
+            "tests\\test_semantic_decision_engine.py"
+        ],
+        "test_pipeline_survives_validation_failure": [
+            "tests\\test_sit_failure_pipeline.py"
+        ],
+        "test_full_v2_pipeline": [
+            "tests\\test_sit_pipeline.py"
+        ],
+        "test_v1_validation_still_works": [
+            "tests\\test_v1_regression.py"
+        ],
+        "test_v1_invalid_validation_still_works": [
+            "tests\\test_v1_regression.py"
+        ],
+        "test_v1_rollback_still_works": [
+            "tests\\test_v1_regression.py"
+        ],
+        "test_valid_python_code": [
+            "tests\\test_validation.py"
+        ],
+        "test_invalid_python_code": [
+            "tests\\test_validation.py"
+        ],
+        "add": [
+            "tests\\uat_test_cases.py"
+        ],
+        "add_copy": [
+            "tests\\uat_test_cases.py"
+        ],
+        "calculate_area": [
+            "tests\\uat_test_cases.py"
+        ],
+        "get_area": [
+            "tests\\uat_test_cases.py"
+        ],
+        "process_data": [
+            "tests\\uat_test_cases.py"
+        ],
+        "process_data_v2": [
+            "tests\\uat_test_cases.py"
+        ],
+        "calculate_tax": [
+            "tests\\uat_test_cases.py"
+        ],
+        "compute_tax": [
+            "tests\\uat_test_cases.py"
+        ],
+        "validate_email": [
+            "tests\\uat_test_cases.py"
+        ],
+        "validate_username": [
+            "tests\\uat_test_cases.py"
+        ],
+        "calculate_discount": [
+            "tests\\uat_test_cases.py"
+        ],
+        "apply_discount": [
+            "tests\\uat_test_cases.py"
+        ],
+        "outer_process": [
+            "tests\\uat_test_cases.py"
+        ],
+        "sum_integers": [
+            "tests\\uat_test_cases.py"
+        ],
+        "sum_strings": [
+            "tests\\uat_test_cases.py"
+        ],
+        "calculate_perimeter": [
+            "tests\\uat_test_cases.py"
+        ],
+        "calculate_volume": [
+            "tests\\uat_test_cases.py"
+        ],
+        "add_two": [
+            "tests\\uat_test_cases.py"
+        ],
+        "sum_two": [
+            "tests\\uat_test_cases.py"
+        ],
+        "multiply": [
+            "tests\\uat_test_cases.py"
+        ],
+        "multiply_copy": [
+            "tests\\uat_test_cases.py"
+        ],
+        "factorial": [
+            "tests\\uat_test_cases.py"
+        ],
+        "calc_factorial": [
+            "tests\\uat_test_cases.py"
+        ],
+        "placeholder_one": [
+            "tests\\uat_test_cases.py"
+        ],
+        "placeholder_two": [
+            "tests\\uat_test_cases.py"
+        ],
+        "get_evens": [
+            "tests\\uat_test_cases.py"
+        ],
+        "filter_even_numbers": [
+            "tests\\uat_test_cases.py"
+        ],
+        "connect_db": [
+            "tests\\uat_test_cases.py"
+        ],
+        "process_order": [
+            "tests\\uat_test_cases.py"
+        ],
+        "calculate_order": [
+            "tests\\uat_test_cases.py"
+        ],
+        "send_email": [
+            "tests\\uat_test_cases.py"
+        ],
+        "dispatch_email": [
+            "tests\\uat_test_cases.py"
+        ],
+        "square": [
+            "tests\\uat_test_cases.py"
+        ],
+        "sq": [
+            "tests\\uat_test_cases.py"
+        ],
+        "greet": [
+            "tests\\uat_test_cases.py"
+        ],
+        "say_hello": [
+            "tests\\uat_test_cases.py"
+        ],
+        "get_vat": [
+            "tests\\uat_test_cases.py"
+        ],
+        "calc_vat": [
+            "tests\\uat_test_cases.py"
+        ],
+        "RollbackManager.create_backup": [
+            "validation\\rollback_manager.py"
+        ],
+        "restore_backup": [
+            "validation\\rollback_manager.py"
+        ],
+        "RollbackManager.restore_backup": [
+            "validation\\rollback_manager.py"
+        ],
+        "validate_python_code": [
+            "validation\\syntax_validator.py"
+        ],
+        "SyntaxValidator.validate_python_code": [
+            "validation\\syntax_validator.py"
+        ]
+    },
+    "class_index": {
+        "AIResponse": [
+            "ai\\ai_interface.py"
+        ],
+        "AIInterface": [
+            "ai\\ai_interface.py"
+        ],
+        "EmbeddingSemanticEngine": [
+            "ai\\embedding_similarity.py"
+        ],
+        "LexicalSemanticPrefilter": [
+            "ai\\lexical_prefilter.py"
+        ],
+        "PurposeAnalysisEngine": [
+            "ai\\purpose_analysis_engine.py"
+        ],
+        "FunctionNode": [
+            "ai\\repository_graph_engine.py"
+        ],
+        "ClassNode": [
+            "ai\\repository_graph_engine.py"
+        ],
+        "FileNode": [
+            "ai\\repository_graph_engine.py"
+        ],
+        "RepositoryGraph": [
+            "ai\\repository_graph_engine.py"
+        ],
+        "RepositoryGraphEngine": [
+            "ai\\repository_graph_engine.py"
+        ],
+        "SemanticDecisionEngine": [
+            "ai\\semantic_decision_engine.py"
+        ],
+        "MemoryStoreV2": [
+            "memory\\memory_store_v2.py"
+        ],
+        "ReportGenerator": [
+            "reporting\\report_generator.py"
+        ],
+        "RollbackManager": [
+            "validation\\rollback_manager.py"
+        ],
+        "SyntaxValidator": [
+            "validation\\syntax_validator.py"
+        ]
+    },
+    "unresolved_calls": {
+        "billing.py": [],
+        "db_prod.py": [],
+        "db_test.py": [],
+        "helpers.py": [],
+        "inventory.py": [],
+        "main.py": [
+            "datetime.now",
+            "input"
+        ],
+        "main_v2.py": [
+            "AIInterface",
+            "MemoryStoreV2"
+        ],
+        "orders.py": [],
+        "reports.py": [],
+        "sample_code.py": [],
+        "utils.py": [],
+        "ai\\ai_interface.py": [],
+        "ai\\embedding_similarity.py": [],
+        "ai\\lexical_prefilter.py": [],
+        "ai\\purpose_analysis_engine.py": [],
+        "ai\\repository_graph_engine.py": [],
+        "ai\\semantic_decision_engine.py": [],
+        "ai\\__init__.py": [],
+        "core\\code_modifier.py": [
+            "re.escape",
+            "re.sub",
+            "shutil.copy"
+        ],
+        "core\\dependency_tracker.py": [
+            "re.escape",
+            "re.findall"
+        ],
+        "core\\duplicate_detector.py": [
+            "ast.dump",
+            "ast.parse",
+            "ast.walk",
+            "difflib.SequenceMatcher",
+            "difflib.SequenceMatcher.ratio",
+            "func.splitlines",
+            "os.path.abspath",
+            "re.sub",
+            "set.issubset"
+        ],
+        "core\\memory_store.py": [],
+        "core\\merge_advisor.py": [],
+        "core\\parser.py": [
+            "ast.get_source_segment",
+            "ast.parse",
+            "ast.walk",
+            "is_top_level"
+        ],
+        "core\\project_scanner.py": [],
+        "core\\quality_checker.py": [
+            "function_code.count",
+            "function_code.splitlines"
+        ],
+        "core\\risk_analyzer.py": [
+            "re.findall"
+        ],
+        "core\\__init__.py": [],
+        "memory\\memory_store_v2.py": [],
+        "memory\\__init__.py": [],
+        "reporting\\report_generator.py": [],
+        "reporting\\__init__.py": [],
+        "tests\\manual_embedding_test.py": [],
+        "tests\\manual_purpose_test.py": [],
+        "tests\\run_sit_v2.py": [],
+        "tests\\run_uat.py": [
+            "datetime.datetime.now",
+            "datetime.datetime.now.strftime",
+            "subprocess.run"
+        ],
+        "tests\\run_uat_per_case.py": [
+            "RUNTIME_FILE.exists",
+            "RUNTIME_FILE.unlink",
+            "RUNTIME_FILE.write_text",
+            "datetime.datetime.now"
+        ],
+        "tests\\run_uat_v2.py": [],
+        "tests\\test_archive_retention.py": [
+            "MemoryStoreV2",
+            "time.sleep"
+        ],
+        "tests\\test_embedding_similarity.py": [
+            "EmbeddingSemanticEngine"
+        ],
+        "tests\\test_lexical_semantic_similarity.py": [
+            "LexicalSemanticPrefilter"
+        ],
+        "tests\\test_memory_cleanup.py": [
+            "MemoryStoreV2"
+        ],
+        "tests\\test_memory_recovery.py": [],
+        "tests\\test_rollback.py": [],
+        "tests\\test_semantic_decision_engine.py": [
+            "SemanticDecisionEngine"
+        ],
+        "tests\\test_sit_failure_pipeline.py": [
+            "AIInterface",
+            "MemoryStoreV2"
+        ],
+        "tests\\test_sit_pipeline.py": [
+            "AIInterface",
+            "MemoryStoreV2"
+        ],
+        "tests\\test_v1_regression.py": [],
+        "tests\\test_validation.py": [],
+        "tests\\uat_test_cases.py": [
+            "clean"
+        ],
+        "tests\\__init__.py": [],
+        "validation\\rollback_manager.py": [],
+        "validation\\syntax_validator.py": [],
+        "validation\\__init__.py": []
+    }
+}

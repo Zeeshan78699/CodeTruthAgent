@@ -1,0 +1,29 @@
+{
+    "test_case": "TC_V2_011",
+    "title": "Context-Aware API Intelligence Validation",
+    "description": "Validates whether V2 can dynamically understand framework/API behavior meaning.",
+    "category": "Context-Aware Repository Cognition",
+    "api_calls": [
+        "requests.get",
+        "response.json",
+        "os.remove"
+    ],
+    "classifications": [
+        {
+            "api_call": "requests.get",
+            "classification": "NETWORK_OPERATION"
+        },
+        {
+            "api_call": "response.json",
+            "classification": "UNKNOWN_OPERATION"
+        },
+        {
+            "api_call": "os.remove",
+            "classification": "DELETE_OPERATION"
+        }
+    ],
+    "decision": "REVIEW",
+    "reason": "Risky repository API operation detected.",
+    "expected": "REVIEW",
+    "status": "PASS"
+}

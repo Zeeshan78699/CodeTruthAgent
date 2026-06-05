@@ -1,0 +1,7 @@
+[
+    {
+        "function_a": "refund_customer",
+        "function_b": "process_refund",
+        "decision": "REVIEW"
+    }
+]

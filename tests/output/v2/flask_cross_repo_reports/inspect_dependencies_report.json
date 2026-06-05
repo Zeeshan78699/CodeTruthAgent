@@ -1,0 +1,194 @@
+{
+    "test_case": "TC_V2_FINAL_002c_FLASK_CROSS_REPO",
+    "repository_root": "C:\\scratch\\flask\\examples\\tutorial",
+    "totals": {
+        "total_call_sites": 158,
+        "ignored": 16,
+        "considered": 142,
+        "resolved": 36,
+        "within_file": 5,
+        "cross_file": 31,
+        "unresolved": 106,
+        "recursive_self_calls": 0
+    },
+    "ratios": {
+        "ignored_fraction_of_total": 0.101,
+        "resolution_rate": 0.254,
+        "cross_file_of_resolved": 0.861,
+        "cross_file_of_considered": 0.218
+    },
+    "call_style_breakdown": {
+        "bare": 51,
+        "method": 91
+    },
+    "resolution_kind_breakdown": {
+        "function_exact": 22,
+        "function_suffix": 13,
+        "class_exact": 1
+    },
+    "coverage": {
+        "files_with_outgoing_calls": 9,
+        "total_files_scanned": 9
+    },
+    "thresholds": {
+        "min_resolution_rate": 0.65,
+        "min_cross_file_ratio": 0.1
+    },
+    "governance_decision": "FAIL",
+    "failure_reasons": [
+        "resolution_rate 0.254 below threshold 0.65"
+    ],
+    "cross_file_examples": [
+        {
+            "from_file": "flaskr\\auth.py",
+            "from_func": "load_logged_in_user",
+            "to_file": "flaskr\\db.py",
+            "to_func": "get_db",
+            "resolution_kind": "function_exact",
+            "call_style": "bare"
+        },
+        {
+            "from_file": "flaskr\\auth.py",
+            "from_func": "register",
+            "to_file": "flaskr\\db.py",
+            "to_func": "get_db",
+            "resolution_kind": "function_exact",
+            "call_style": "bare"
+        },
+        {
+            "from_file": "flaskr\\auth.py",
+            "from_func": "login",
+            "to_file": "flaskr\\db.py",
+            "to_func": "get_db",
+            "resolution_kind": "function_exact",
+            "call_style": "bare"
+        },
+        {
+            "from_file": "flaskr\\blog.py",
+            "from_func": "index",
+            "to_file": "flaskr\\db.py",
+            "to_func": "get_db",
+            "resolution_kind": "function_exact",
+            "call_style": "bare"
+        },
+        {
+            "from_file": "flaskr\\blog.py",
+            "from_func": "get_post",
+            "to_file": "flaskr\\db.py",
+            "to_func": "get_db",
+            "resolution_kind": "function_exact",
+            "call_style": "bare"
+        }
+    ],
+    "within_file_examples": [
+        {
+            "from_file": "flaskr\\blog.py",
+            "from_func": "update",
+            "to_file": "flaskr\\blog.py",
+            "to_func": "get_post",
+            "resolution_kind": "function_exact",
+            "call_style": "bare"
+        },
+        {
+            "from_file": "flaskr\\blog.py",
+            "from_func": "delete",
+            "to_file": "flaskr\\blog.py",
+            "to_func": "get_post",
+            "resolution_kind": "function_exact",
+            "call_style": "bare"
+        },
+        {
+            "from_file": "flaskr\\db.py",
+            "from_func": "init_db",
+            "to_file": "flaskr\\db.py",
+            "to_func": "get_db",
+            "resolution_kind": "function_exact",
+            "call_style": "bare"
+        },
+        {
+            "from_file": "flaskr\\db.py",
+            "from_func": "init_db_command",
+            "to_file": "flaskr\\db.py",
+            "to_func": "init_db",
+            "resolution_kind": "function_exact",
+            "call_style": "bare"
+        },
+        {
+            "from_file": "tests\\conftest.py",
+            "from_func": "auth",
+            "to_file": "tests\\conftest.py",
+            "to_func": "AuthActions",
+            "resolution_kind": "class_exact",
+            "call_style": "bare"
+        }
+    ],
+    "unresolved_examples": [
+        {
+            "from_file": "flaskr\\auth.py",
+            "from_func": "login_required",
+            "to_file": null,
+            "to_func": "redirect",
+            "resolution_kind": null,
+            "call_style": "bare"
+        },
+        {
+            "from_file": "flaskr\\auth.py",
+            "from_func": "login_required",
+            "to_file": null,
+            "to_func": "url_for",
+            "resolution_kind": null,
+            "call_style": "bare"
+        },
+        {
+            "from_file": "flaskr\\auth.py",
+            "from_func": "login_required",
+            "to_file": null,
+            "to_func": "view",
+            "resolution_kind": null,
+            "call_style": "bare"
+        },
+        {
+            "from_file": "flaskr\\auth.py",
+            "from_func": "login_required",
+            "to_file": null,
+            "to_func": "functools.wraps",
+            "resolution_kind": null,
+            "call_style": "method"
+        },
+        {
+            "from_file": "flaskr\\auth.py",
+            "from_func": "load_logged_in_user",
+            "to_file": null,
+            "to_func": "get_db.execute",
+            "resolution_kind": null,
+            "call_style": "method"
+        }
+    ],
+    "ignored_examples": [
+        {
+            "from_file": "flaskr\\auth.py",
+            "from_func": "load_logged_in_user",
+            "ignored_call": "session.get"
+        },
+        {
+            "from_file": "flaskr\\auth.py",
+            "from_func": "login",
+            "ignored_call": "session.clear"
+        },
+        {
+            "from_file": "flaskr\\auth.py",
+            "from_func": "logout",
+            "ignored_call": "session.clear"
+        },
+        {
+            "from_file": "flaskr\\db.py",
+            "from_func": "close_db",
+            "ignored_call": "g.pop"
+        },
+        {
+            "from_file": "flaskr\\db.py",
+            "from_func": "init_db",
+            "ignored_call": "f.read"
+        }
+    ]
+}

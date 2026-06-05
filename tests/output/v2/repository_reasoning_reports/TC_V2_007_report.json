@@ -1,0 +1,16 @@
+{
+    "test_case": "TC_V2_007",
+    "title": "Dynamic AST Dependency Discovery Validation",
+    "description": "Validates whether V2 can dynamically discover repository dependencies using AST parsing.",
+    "category": "Dynamic Repository Cognition",
+    "dependency_map": {
+        "calculate_discount": [],
+        "generate_invoice_total": [
+            "calculate_discount"
+        ]
+    },
+    "decision": "REVIEW",
+    "reason": "Dynamic repository dependencies discovered.",
+    "expected": "REVIEW",
+    "status": "PASS"
+}

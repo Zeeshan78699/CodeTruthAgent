@@ -1,0 +1,217 @@
+{
+    "incremental_detection": {
+        "changed_files": [
+            {
+                "file_path": "C:\\AI_Project\\CodeTruthAgent\\backups\\20260530_001036_tc_v2_018_execution_test.py",
+                "change_type": "MODIFIED_OR_NEW"
+            },
+            {
+                "file_path": "C:\\AI_Project\\CodeTruthAgent\\tests\\intelligence\\orchestration\\tc_v2_final_002b_cross_repo_scan.py",
+                "change_type": "MODIFIED_OR_NEW"
+            },
+            {
+                "file_path": "C:\\AI_Project\\CodeTruthAgent\\tests\\intelligence\\orchestration\\tc_v2_final_002c_flask_cross_repo.py",
+                "change_type": "MODIFIED_OR_NEW"
+            },
+            {
+                "file_path": "C:\\AI_Project\\CodeTruthAgent\\tests\\intelligence\\orchestration\\tc_v2_final_002d_governance_probe.py",
+                "change_type": "MODIFIED_OR_NEW"
+            },
+            {
+                "file_path": "C:\\AI_Project\\CodeTruthAgent\\tests\\intelligence\\orchestration\\tc_v2_final_002_real_multi_file_repository_scan.py",
+                "change_type": "MODIFIED_OR_NEW"
+            },
+            {
+                "file_path": "C:\\AI_Project\\CodeTruthAgent\\tests\\intelligence\\orchestration\\tc_v2_final_002_suffix_spot_check.py",
+                "change_type": "MODIFIED_OR_NEW"
+            },
+            {
+                "file_path": "C:\\AI_Project\\CodeTruthAgent\\tests\\intelligence\\orchestration\\tc_v2_final_003_governance_wiring.py",
+                "change_type": "MODIFIED_OR_NEW"
+            },
+            {
+                "file_path": "C:\\AI_Project\\CodeTruthAgent\\tests\\intelligence\\orchestration\\tc_v2_final_004_click_governance.py",
+                "change_type": "MODIFIED_OR_NEW"
+            },
+            {
+                "file_path": "C:\\AI_Project\\CodeTruthAgent\\tests\\intelligence\\orchestration\\tc_v2_final_005_httpx_governance.py",
+                "change_type": "MODIFIED_OR_NEW"
+            },
+            {
+                "file_path": "C:\\AI_Project\\CodeTruthAgent\\tests\\intelligence\\orchestration\\tc_v2_final_006_flask_full_governance.py",
+                "change_type": "MODIFIED_OR_NEW"
+            },
+            {
+                "file_path": "C:\\AI_Project\\CodeTruthAgent\\tests\\intelligence\\orchestration\\tc_v2_final_007_drf_governance.py",
+                "change_type": "MODIFIED_OR_NEW"
+            },
+            {
+                "file_path": "C:\\AI_Project\\CodeTruthAgent\\tests\\intelligence\\orchestration\\tc_v2_final_011_bandit_comparison.py",
+                "change_type": "MODIFIED_OR_NEW"
+            }
+        ],
+        "deleted_files": [],
+        "total_changed": 12,
+        "total_deleted": 0
+    },
+    "repository_graph": {
+        "files_scanned": 113,
+        "dependencies": 113,
+        "functions_indexed": 482,
+        "classes_indexed": 40
+    },
+    "governance": {
+        "repo_root": "C:\\AI_Project\\CodeTruthAgent",
+        "files_scanned": 113,
+        "files_with_findings": 5,
+        "total_findings": 5,
+        "findings_by_check": {
+            "dangerous_api_call": 5
+        },
+        "findings_by_severity": {
+            "REVIEW": 5
+        },
+        "per_file": {
+            "tests\\run_uat.py": {
+                "file_path": "tests\\run_uat.py",
+                "findings": [
+                    {
+                        "file_path": "tests\\run_uat.py",
+                        "function_name": "run_main",
+                        "line_number": 203,
+                        "check_name": "dangerous_api_call",
+                        "category": "PROCESS_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'run_main' calls 'subprocess.run', classified as PROCESS_OPERATION.",
+                        "evidence": "subprocess.run"
+                    }
+                ]
+            },
+            "tests\\test_archive_retention.py": {
+                "file_path": "tests\\test_archive_retention.py",
+                "findings": [
+                    {
+                        "file_path": "tests\\test_archive_retention.py",
+                        "function_name": "cleanup_test_environment",
+                        "line_number": 15,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'cleanup_test_environment' calls 'os.remove', classified as DELETE_OPERATION.",
+                        "evidence": "os.remove"
+                    }
+                ]
+            },
+            "tests\\test_memory_cleanup.py": {
+                "file_path": "tests\\test_memory_cleanup.py",
+                "findings": [
+                    {
+                        "file_path": "tests\\test_memory_cleanup.py",
+                        "function_name": "cleanup_test_files",
+                        "line_number": 14,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'cleanup_test_files' calls 'os.remove', classified as DELETE_OPERATION.",
+                        "evidence": "os.remove"
+                    }
+                ]
+            },
+            "tests\\intelligence\\orchestration\\tc_v2_final_011_bandit_comparison.py": {
+                "file_path": "tests\\intelligence\\orchestration\\tc_v2_final_011_bandit_comparison.py",
+                "findings": [
+                    {
+                        "file_path": "tests\\intelligence\\orchestration\\tc_v2_final_011_bandit_comparison.py",
+                        "function_name": "run_bandit",
+                        "line_number": 104,
+                        "check_name": "dangerous_api_call",
+                        "category": "PROCESS_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'run_bandit' calls 'subprocess.run', classified as PROCESS_OPERATION.",
+                        "evidence": "subprocess.run"
+                    }
+                ]
+            },
+            "tests\\intelligence\\orchestration\\tc_v2_final_012_bandit_django.py": {
+                "file_path": "tests\\intelligence\\orchestration\\tc_v2_final_012_bandit_django.py",
+                "findings": [
+                    {
+                        "file_path": "tests\\intelligence\\orchestration\\tc_v2_final_012_bandit_django.py",
+                        "function_name": "run_bandit",
+                        "line_number": 104,
+                        "check_name": "dangerous_api_call",
+                        "category": "PROCESS_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'run_bandit' calls 'subprocess.run', classified as PROCESS_OPERATION.",
+                        "evidence": "subprocess.run"
+                    }
+                ]
+            }
+        }
+    },
+    "hitl": {
+        "status": "PENDING_REVIEW",
+        "entry": {
+            "timestamp": "2026-05-29T20:11:02.119053",
+            "file_path": "demo.py",
+            "function_name": "dangerous_process",
+            "severity": "REVIEW",
+            "category": "PROCESS_OPERATION",
+            "decision": "PENDING_REVIEW",
+            "reviewer": "human_required",
+            "reason": "Human approval required."
+        }
+    },
+    "fallback": {
+        "fallback": true,
+        "status": "V1_FALLBACK_TRIGGERED",
+        "approval": {
+            "status": "PENDING_REVIEW",
+            "entry": {
+                "timestamp": "2026-05-29T20:11:02.119053",
+                "file_path": "demo.py",
+                "function_name": "fallback_case",
+                "severity": "REVIEW",
+                "category": "PROCESS_OPERATION",
+                "decision": "PENDING_REVIEW",
+                "reviewer": "human_required",
+                "reason": "Human approval required."
+            }
+        },
+        "v1_result": {
+            "v1_status": "SAFE_V1_EXECUTION"
+        }
+    },
+    "safe_execution": {
+        "execution_status": "EXECUTED_SUCCESSFULLY",
+        "rollback_created": "backups\\20260530_001102_tc_v2_018_execution_test.py",
+        "fallback": {
+            "fallback": true,
+            "status": "V1_FALLBACK_TRIGGERED",
+            "approval": {
+                "status": "APPROVED",
+                "entry": {
+                    "timestamp": "2026-05-29T20:11:02.154907",
+                    "file_path": "tc_v2_018_execution_test.py",
+                    "function_name": "generated_function",
+                    "severity": "SAFE",
+                    "category": "UTILITY",
+                    "decision": "APPROVED",
+                    "reviewer": "system",
+                    "reason": "SAFE severity automatically approved."
+                }
+            },
+            "v1_result": {
+                "v1_status": "SAFE_V1_EXECUTION"
+            }
+        },
+        "syntax_validation": "PASSED"
+    },
+    "rollback": {
+        "success": true,
+        "backup_path": "backups\\20260530_001102_tc_v2_018_execution_test.py",
+        "message": "Backup created successfully."
+    },
+    "execution_time_seconds": 1.25,
+    "validation_status": "PASSED"
+}

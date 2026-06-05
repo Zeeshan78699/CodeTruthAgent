@@ -1,0 +1,201 @@
+{
+    "repository_intelligence": {
+        "files_scanned": 57,
+        "functions_found": 179,
+        "classes_found": 17,
+        "dependency_links": 58
+    },
+    "behavioral_intelligence": [
+        {
+            "function": "MemoryStoreV2.__init__",
+            "risk": "MEDIUM",
+            "behaviors": [
+                "FILE_READ"
+            ],
+            "side_effects": [],
+            "object_creations": []
+        },
+        {
+            "function": "MemoryStoreV2._default_memory",
+            "risk": "LOW",
+            "behaviors": [],
+            "side_effects": [],
+            "object_creations": []
+        },
+        {
+            "function": "MemoryStoreV2._initialize_memory",
+            "risk": "LOW",
+            "behaviors": [],
+            "side_effects": [],
+            "object_creations": []
+        },
+        {
+            "function": "MemoryStoreV2._ensure_memory_schema",
+            "risk": "LOW",
+            "behaviors": [],
+            "side_effects": [],
+            "object_creations": []
+        },
+        {
+            "function": "MemoryStoreV2._create_corrupted_backup",
+            "risk": "MEDIUM",
+            "behaviors": [
+                "FILE_READ",
+                "FILE_WRITE",
+                "STATE_MUTATION"
+            ],
+            "side_effects": [
+                "PERSISTENT_STATE_CHANGE"
+            ],
+            "object_creations": []
+        },
+        {
+            "function": "MemoryStoreV2._create_memory_archive",
+            "risk": "MEDIUM",
+            "behaviors": [
+                "FILE_READ",
+                "FILE_WRITE",
+                "STATE_MUTATION"
+            ],
+            "side_effects": [
+                "PERSISTENT_STATE_CHANGE"
+            ],
+            "object_creations": []
+        },
+        {
+            "function": "MemoryStoreV2._recover_memory",
+            "risk": "MEDIUM",
+            "behaviors": [
+                "STATE_MUTATION"
+            ],
+            "side_effects": [],
+            "object_creations": []
+        },
+        {
+            "function": "MemoryStoreV2._load_memory",
+            "risk": "MEDIUM",
+            "behaviors": [
+                "FILE_READ"
+            ],
+            "side_effects": [],
+            "object_creations": []
+        },
+        {
+            "function": "MemoryStoreV2._save_memory",
+            "risk": "MEDIUM",
+            "behaviors": [
+                "FILE_READ",
+                "FILE_WRITE"
+            ],
+            "side_effects": [
+                "PERSISTENT_STATE_CHANGE"
+            ],
+            "object_creations": []
+        },
+        {
+            "function": "MemoryStoreV2._cleanup_memory",
+            "risk": "MEDIUM",
+            "behaviors": [
+                "STATE_MUTATION"
+            ],
+            "side_effects": [],
+            "object_creations": []
+        },
+        {
+            "function": "MemoryStoreV2.enforce_cleanup",
+            "risk": "LOW",
+            "behaviors": [],
+            "side_effects": [],
+            "object_creations": []
+        },
+        {
+            "function": "MemoryStoreV2._approved_decision_exists",
+            "risk": "LOW",
+            "behaviors": [],
+            "side_effects": [],
+            "object_creations": []
+        },
+        {
+            "function": "MemoryStoreV2.store_approved_decision",
+            "risk": "MEDIUM",
+            "behaviors": [
+                "MEMORY_OPERATION",
+                "STATE_MUTATION"
+            ],
+            "side_effects": [],
+            "object_creations": []
+        },
+        {
+            "function": "MemoryStoreV2._prune_old_archives",
+            "risk": "HIGH",
+            "behaviors": [
+                "DELETE_OPERATION",
+                "STATE_MUTATION"
+            ],
+            "side_effects": [
+                "DATA_REMOVAL"
+            ],
+            "object_creations": []
+        },
+        {
+            "function": "MemoryStoreV2.get_memory",
+            "risk": "MEDIUM",
+            "behaviors": [
+                "MEMORY_OPERATION"
+            ],
+            "side_effects": [],
+            "object_creations": []
+        }
+    ],
+    "semantic_decision": {
+        "function_a": "get_memory",
+        "function_b": "_load_memory",
+        "lexical_score": 0.17,
+        "embedding_score": 0.68,
+        "purpose_domain_match": true,
+        "side_effects_detected": false,
+        "decision": "REVIEW",
+        "confidence": 0.57,
+        "risk_level": "MEDIUM",
+        "reasoning": [
+            "Moderate semantic similarity detected",
+            "Shared business domain detected",
+            "No major side effects detected"
+        ],
+        "engine_type": "semantic_decision_engine"
+    },
+    "behavioral_semantic_fusion": {
+        "decision": "REVIEW",
+        "reason": [
+            "Moderate semantic similarity detected",
+            "Shared business domain detected",
+            "No major side effects detected"
+        ],
+        "risk_level": "MEDIUM"
+    },
+    "syntax_validation": {
+        "success": true,
+        "valid": true,
+        "error": null,
+        "message": "Python syntax is valid."
+    },
+    "rollback_safety": {
+        "success": true,
+        "backup_path": "backups\\20260523_105358_main_v2.py",
+        "message": "Backup created successfully."
+    },
+    "memory_governance": {
+        "success": false,
+        "stored": false,
+        "duplicate": true,
+        "message": "Duplicate approved decision detected. Memory write skipped."
+    },
+    "governance_summary": {
+        "final_decision": "REVIEW",
+        "semantic_decision": "REVIEW",
+        "semantic_confidence": 0.57,
+        "syntax_valid": true,
+        "rollback_ready": true,
+        "memory_recorded": false
+    }
+}

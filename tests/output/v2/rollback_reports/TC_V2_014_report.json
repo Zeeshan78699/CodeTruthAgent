@@ -1,0 +1,9 @@
+{
+    "test_case": "TC_V2_014",
+    "title": "Rollback Safety Validation",
+    "description": "Validates whether V2 can safely restore repository state.",
+    "category": "Rollback Governance",
+    "rollback_restored": true,
+    "status": "PASS",
+    "reason": "Repository state successfully restored."
+}

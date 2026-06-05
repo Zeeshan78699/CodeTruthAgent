@@ -1,0 +1,23 @@
+{
+    "test_case": "TC_V2_030",
+    "tests": {
+        "success_execution": {
+            "passed": true,
+            "success": true,
+            "execution_time": 0.06,
+            "errors": []
+        },
+        "failure_execution": {
+            "passed": true,
+            "success": false,
+            "execution_time": 0.05,
+            "errors": []
+        }
+    },
+    "summary": {
+        "total_tests": 2,
+        "passed_tests": 2,
+        "failed_tests": 0,
+        "status": "PASSED"
+    }
+}

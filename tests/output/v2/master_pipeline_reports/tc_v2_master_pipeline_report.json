@@ -1,0 +1,89 @@
+{
+    "test_case": "TC_V2_MASTER_PIPELINE",
+    "fixture_path": "C:\\AI_Project\\CodeTruthAgent\\tests\\output\\v2\\master_pipeline_reports\\mini_repo_fixture",
+    "working_copy": "C:\\Users\\Zeeshan\\AppData\\Local\\Temp\\tc_v2_master_88xr38qr\\mini_repo",
+    "stages": {
+        "incremental_detection": {
+            "total_changed": 6,
+            "total_deleted": 203,
+            "files_changed": [
+                "C:\\Users\\Zeeshan\\AppData\\Local\\Temp\\tc_v2_master_88xr38qr\\mini_repo\\cleanup.py",
+                "C:\\Users\\Zeeshan\\AppData\\Local\\Temp\\tc_v2_master_88xr38qr\\mini_repo\\dangerous_api.py",
+                "C:\\Users\\Zeeshan\\AppData\\Local\\Temp\\tc_v2_master_88xr38qr\\mini_repo\\duplicate_a.py",
+                "C:\\Users\\Zeeshan\\AppData\\Local\\Temp\\tc_v2_master_88xr38qr\\mini_repo\\duplicate_b.py",
+                "C:\\Users\\Zeeshan\\AppData\\Local\\Temp\\tc_v2_master_88xr38qr\\mini_repo\\safe_module.py",
+                "C:\\Users\\Zeeshan\\AppData\\Local\\Temp\\tc_v2_master_88xr38qr\\mini_repo\\test_suite.py"
+            ]
+        },
+        "governance": {
+            "total_findings": 2,
+            "findings_by_severity": {
+                "REVIEW": 1,
+                "BLOCK": 1
+            },
+            "findings_by_check": {
+                "dangerous_api_call": 2
+            }
+        },
+        "v1_adapter": {
+            "v1_findings_count": 0
+        }
+    },
+    "per_finding_results": [
+        {
+            "finding": {
+                "file_path": "cleanup.py",
+                "function_name": "remove_temp_file",
+                "severity": "REVIEW",
+                "category": "DELETE_OPERATION",
+                "source": "GOVERNANCE_WIRING"
+            },
+            "hitl_decision": "PENDING_REVIEW",
+            "fallback_triggered": true,
+            "patch_attempted": true,
+            "patch_generated": false,
+            "patch_validation_decision": null,
+            "patch_risk_level": null,
+            "backup_created": false,
+            "patch_applied": false,
+            "tests_executed": false,
+            "tests_passed": null,
+            "rollback_triggered": false,
+            "final_status": "HITL_PENDING_NO_PATCH",
+            "reason": "No patch generator for category DELETE_OPERATION"
+        },
+        {
+            "finding": {
+                "file_path": "dangerous_api.py",
+                "function_name": "run_user_code",
+                "severity": "BLOCK",
+                "category": "DYNAMIC_EXEC",
+                "source": "GOVERNANCE_WIRING"
+            },
+            "hitl_decision": "REJECTED",
+            "fallback_triggered": null,
+            "patch_attempted": false,
+            "patch_generated": false,
+            "patch_validation_decision": null,
+            "patch_risk_level": null,
+            "backup_created": false,
+            "patch_applied": false,
+            "tests_executed": false,
+            "tests_passed": null,
+            "rollback_triggered": false,
+            "final_status": "BLOCKED_BY_HITL",
+            "reason": "BLOCK severity auto-rejected"
+        }
+    ],
+    "summary": {
+        "total_findings": 2,
+        "governance_findings": 2,
+        "v1_findings": 0,
+        "status_breakdown": {
+            "HITL_PENDING_NO_PATCH": 1,
+            "BLOCKED_BY_HITL": 1
+        },
+        "pipeline_duration_seconds": 0.16,
+        "overall_status": "PASSED"
+    }
+}

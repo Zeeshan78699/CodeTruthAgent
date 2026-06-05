@@ -1,0 +1,99 @@
+{
+    "test_case": "TC_V2_042",
+    "category": "Semantic Intelligence Validation",
+    "tests_executed": 5,
+    "tests_passed": 3,
+    "overall_status": "FAIL",
+    "results": [
+        {
+            "function_a": "store_memory_record",
+            "function_b": "save_memory_entry",
+            "lexical_score": 0.67,
+            "embedding_score": 0.76,
+            "purpose_domain_match": true,
+            "side_effects_detected": false,
+            "decision": "REVIEW",
+            "confidence": 0.71,
+            "risk_level": "MEDIUM",
+            "reasoning": [
+                "High semantic similarity detected",
+                "Shared business domain detected",
+                "No major side effects detected"
+            ],
+            "expected": "REVIEW",
+            "status": "PASS"
+        },
+        {
+            "function_a": "rollback_transaction",
+            "function_b": "restore_backup",
+            "lexical_score": 0.65,
+            "embedding_score": 0.3,
+            "purpose_domain_match": false,
+            "side_effects_detected": false,
+            "decision": "BLOCK",
+            "confidence": 0.28,
+            "risk_level": "HIGH",
+            "reasoning": [
+                "Low semantic similarity detected",
+                "Business domains differ",
+                "No major side effects detected"
+            ],
+            "expected": "REVIEW",
+            "status": "FAIL"
+        },
+        {
+            "function_a": "send_email_alert",
+            "function_b": "calculate_invoice_total",
+            "lexical_score": 0.0,
+            "embedding_score": 0.05,
+            "purpose_domain_match": false,
+            "side_effects_detected": false,
+            "decision": "BLOCK",
+            "confidence": 0.03,
+            "risk_level": "HIGH",
+            "reasoning": [
+                "Low semantic similarity detected",
+                "Business domains differ",
+                "No major side effects detected"
+            ],
+            "expected": "BLOCK",
+            "status": "PASS"
+        },
+        {
+            "function_a": "validate_user_token",
+            "function_b": "authenticate_session",
+            "lexical_score": 0.0,
+            "embedding_score": 0.41,
+            "purpose_domain_match": true,
+            "side_effects_detected": false,
+            "decision": "BLOCK",
+            "confidence": 0.41,
+            "risk_level": "HIGH",
+            "reasoning": [
+                "Low semantic similarity detected",
+                "Shared business domain detected",
+                "No major side effects detected"
+            ],
+            "expected": "REVIEW",
+            "status": "FAIL"
+        },
+        {
+            "function_a": "archive_memory_records",
+            "function_b": "cleanup_old_memory",
+            "lexical_score": 0.14,
+            "embedding_score": 0.54,
+            "purpose_domain_match": true,
+            "side_effects_detected": false,
+            "decision": "REVIEW",
+            "confidence": 0.5,
+            "risk_level": "MEDIUM",
+            "reasoning": [
+                "Moderate semantic similarity detected",
+                "Shared business domain detected",
+                "No major side effects detected"
+            ],
+            "expected": "REVIEW",
+            "status": "PASS"
+        }
+    ]
+}

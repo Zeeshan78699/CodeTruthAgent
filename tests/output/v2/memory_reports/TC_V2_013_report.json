@@ -1,0 +1,13 @@
+{
+    "test_case": "TC_V2_013",
+    "title": "Memory Governance Validation",
+    "description": "Validates whether V2 can persist and retrieve governance decisions.",
+    "category": "Governance Memory Cognition",
+    "function_a": "refund_customer",
+    "function_b": "process_refund",
+    "duplicate_detected": true,
+    "decision": "REVIEW",
+    "reason": "Previous governance decision retrieved from memory.",
+    "expected": "REVIEW",
+    "status": "PASS"
+}

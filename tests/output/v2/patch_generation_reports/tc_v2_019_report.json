@@ -1,0 +1,45 @@
+{
+    "test_case": "TC_V2_019",
+    "tests": {
+        "unsafe_eval": {
+            "passed": true,
+            "confidence_score": 0.95,
+            "syntax_valid": true,
+            "generation_type": "CONTROLLED_PATCH",
+            "diff_lines": 10
+        },
+        "unsafe_exec": {
+            "passed": true,
+            "confidence_score": 0.95,
+            "syntax_valid": true,
+            "generation_type": "CONTROLLED_PATCH",
+            "diff_lines": 8
+        },
+        "print_to_logger": {
+            "passed": true,
+            "confidence_score": 0.9,
+            "syntax_valid": true,
+            "generation_type": "CONTROLLED_PATCH",
+            "diff_lines": 10
+        },
+        "missing_try_except": {
+            "passed": true,
+            "confidence_score": 0.6,
+            "syntax_valid": true,
+            "generation_type": "CONTROLLED_PATCH",
+            "diff_lines": 10
+        },
+        "unsupported_patch": {
+            "passed": true,
+            "confidence_score": 0.0,
+            "generation_type": "FAILED_PATCH",
+            "risk_level": "HIGH"
+        }
+    },
+    "summary": {
+        "total_tests": 5,
+        "passed_tests": 5,
+        "failed_tests": 0,
+        "status": "PASSED"
+    }
+}

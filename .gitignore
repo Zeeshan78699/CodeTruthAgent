@@ -1,31 +1,22 @@
-# ─────────────────────────────────────────────
-# CodeTruth Agent V1 — .gitignore
-# ─────────────────────────────────────────────
+﻿# ─────────────────────────────────────────
+# CodeTruth Agent V2 — .gitignore
+# ─────────────────────────────────────────
+ # Backup files created by CodeTruth Agent *.bak  # Runtime memory file (regenerated each run) memory.json  # Development notes â€” not for public release Error.txt Improvement.txt  # Python cache __pycache__/ *.pyc *.pyo *.pyd  # Virtual environment .venv/ venv/ env/  # VS Code settings .vscode/  # OS files .DS_Store Thumbs.db  # Secrets .env  # Runtime state files governance_memory.json memory_v2.json approval_audit_log.json repository_snapshot.json  # Backups folder backups/  # Python cache __pycache__/ *.pyc *.pyo  # Stale files requirements old.txt sample_test_file.txt 
 
-# Backup files created by CodeTruth Agent
-*.bak
+# Pytest cache
+.pytest_cache/
 
-# Runtime memory file (regenerated each run)
-memory.json
+# Runtime JSON state files
+memory_v2.json
+tests/output/approval_audit_log.json
+tests/output/governance_memory.json
+tests/output/repository_snapshot.json
 
-# Development notes — not for public release
-Error.txt
-Improvement.txt
+# Pycache
+core/__pycache__/
+tests/__pycache__/
 
-# Python cache
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
+# Backups
+backups/
 
-# Virtual environment
 .venv/
-venv/
-env/
-
-# VS Code settings
-.vscode/
-
-# OS files
-.DS_Store
-Thumbs.db

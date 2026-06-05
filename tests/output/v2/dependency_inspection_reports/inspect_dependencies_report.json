@@ -1,0 +1,192 @@
+{
+    "test_case": "TC_V2_FINAL_002_DEPENDENCY_INSPECTION_EXTENDED_V3",
+    "repository_root": "C:\\AI_Project\\CodeTruthAgent",
+    "totals": {
+        "total_call_sites": 770,
+        "ignored": 328,
+        "considered": 442,
+        "resolved": 331,
+        "within_file": 113,
+        "cross_file": 218,
+        "unresolved": 111,
+        "recursive_self_calls": 4
+    },
+    "ratios": {
+        "ignored_fraction_of_total": 0.426,
+        "resolution_rate": 0.749,
+        "cross_file_of_resolved": 0.659,
+        "cross_file_of_considered": 0.493
+    },
+    "call_style_breakdown": {
+        "bare": 218,
+        "method": 224
+    },
+    "resolution_kind_breakdown": {
+        "function_exact": 123,
+        "class_exact": 99,
+        "function_suffix": 109
+    },
+    "coverage": {
+        "files_with_outgoing_calls": 47,
+        "total_files_scanned": 78
+    },
+    "thresholds": {
+        "min_resolution_rate": 0.65,
+        "min_cross_file_ratio": 0.1
+    },
+    "governance_decision": "PASS",
+    "failure_reasons": [],
+    "cross_file_examples": [
+        {
+            "from_file": "main.py",
+            "from_func": "analyze_high_usage_functions",
+            "to_file": "core\\dependency_tracker.py",
+            "to_func": "analyze_global_risk",
+            "resolution_kind": "function_exact",
+            "call_style": "bare"
+        },
+        {
+            "from_file": "main.py",
+            "from_func": "main",
+            "to_file": "core\\dependency_tracker.py",
+            "to_func": "analyze_global_risk",
+            "resolution_kind": "function_exact",
+            "call_style": "bare"
+        },
+        {
+            "from_file": "main.py",
+            "from_func": "main",
+            "to_file": "core\\code_modifier.py",
+            "to_func": "apply_safe_merge",
+            "resolution_kind": "function_exact",
+            "call_style": "bare"
+        },
+        {
+            "from_file": "main.py",
+            "from_func": "main",
+            "to_file": "core\\memory_store.py",
+            "to_func": "check_memory",
+            "resolution_kind": "function_exact",
+            "call_style": "bare"
+        },
+        {
+            "from_file": "main.py",
+            "from_func": "main",
+            "to_file": "core\\quality_checker.py",
+            "to_func": "compare_functions",
+            "resolution_kind": "function_exact",
+            "call_style": "bare"
+        }
+    ],
+    "within_file_examples": [
+        {
+            "from_file": "main.py",
+            "from_func": "analyze_high_usage_functions",
+            "to_file": "main.py",
+            "to_func": "is_internal_function",
+            "resolution_kind": "function_exact",
+            "call_style": "bare"
+        },
+        {
+            "from_file": "main.py",
+            "from_func": "main",
+            "to_file": "main.py",
+            "to_func": "print_section",
+            "resolution_kind": "function_exact",
+            "call_style": "bare"
+        },
+        {
+            "from_file": "sample_code.py",
+            "from_func": "factorial_number",
+            "to_file": "sample_code.py",
+            "to_func": "factorial_number",
+            "resolution_kind": "function_exact",
+            "call_style": "bare"
+        },
+        {
+            "from_file": "sample_code.py",
+            "from_func": "compute_factorial",
+            "to_file": "sample_code.py",
+            "to_func": "compute_factorial",
+            "resolution_kind": "function_exact",
+            "call_style": "bare"
+        },
+        {
+            "from_file": "core\\code_modifier.py",
+            "from_func": "replace_function_calls_across_project",
+            "to_file": "core\\code_modifier.py",
+            "to_func": "create_backup",
+            "resolution_kind": "function_exact",
+            "call_style": "bare"
+        }
+    ],
+    "unresolved_examples": [
+        {
+            "from_file": "main.py",
+            "from_func": "main",
+            "to_file": null,
+            "to_func": "input",
+            "resolution_kind": null,
+            "call_style": "bare"
+        },
+        {
+            "from_file": "main.py",
+            "from_func": "main",
+            "to_file": null,
+            "to_func": "datetime.now",
+            "resolution_kind": null,
+            "call_style": "method"
+        },
+        {
+            "from_file": "core\\code_modifier.py",
+            "from_func": "create_backup",
+            "to_file": null,
+            "to_func": "shutil.copy",
+            "resolution_kind": null,
+            "call_style": "method"
+        },
+        {
+            "from_file": "core\\code_modifier.py",
+            "from_func": "replace_function_calls",
+            "to_file": null,
+            "to_func": "re.escape",
+            "resolution_kind": null,
+            "call_style": "method"
+        },
+        {
+            "from_file": "core\\code_modifier.py",
+            "from_func": "replace_function_calls",
+            "to_file": null,
+            "to_func": "re.sub",
+            "resolution_kind": null,
+            "call_style": "method"
+        }
+    ],
+    "ignored_examples": [
+        {
+            "from_file": "inventory.py",
+            "from_func": "get_stock_value",
+            "ignored_call": "sum"
+        },
+        {
+            "from_file": "main.py",
+            "from_func": "print_section",
+            "ignored_call": "print"
+        },
+        {
+            "from_file": "main.py",
+            "from_func": "is_internal_function",
+            "ignored_call": "file_path.endswith"
+        },
+        {
+            "from_file": "main.py",
+            "from_func": "is_internal_function",
+            "ignored_call": "file_path.replace"
+        },
+        {
+            "from_file": "main.py",
+            "from_func": "analyze_high_usage_functions",
+            "ignored_call": "print"
+        }
+    ]
+}

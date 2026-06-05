@@ -1,0 +1,13 @@
+{
+    "test_case": "TC_V2_004",
+    "category": "False Positive Reduction",
+    "function_a": "read_config",
+    "function_b": "send_email",
+    "behavior_a": "FILE_READ",
+    "behavior_b": "EMAIL_SEND",
+    "semantic_relation": "UNRELATED",
+    "confidence": 0.11,
+    "decision": "SAFE",
+    "reason": "No relationship or conflict detected",
+    "status": "PASS"
+}

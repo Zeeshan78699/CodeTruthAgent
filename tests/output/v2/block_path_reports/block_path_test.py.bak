@@ -1,0 +1,4 @@
+
+
+print("safe code")
+

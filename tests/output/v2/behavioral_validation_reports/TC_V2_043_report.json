@@ -1,0 +1,241 @@
+{
+    "test_case": "TC_V2_043",
+    "category": "Behavioral Intelligence Validation",
+    "tests_executed": 12,
+    "tests_passed": 12,
+    "tag_match_count": 12,
+    "risk_match_count": 12,
+    "tag_accuracy_percent": 100.0,
+    "risk_accuracy_percent": 100.0,
+    "overall_accuracy_percent": 100.0,
+    "overall_status": "PASS",
+    "results": [
+        {
+            "category": "FILE_WRITE",
+            "function": "save_user_data",
+            "expected_tag": "FILE_WRITE",
+            "expected_risk": "MEDIUM",
+            "detected_tags": [
+                "FILE_READ",
+                "FILE_WRITE",
+                "STATE_MUTATION"
+            ],
+            "detected_risk": "MEDIUM",
+            "side_effects": [
+                "PERSISTENT_STATE_CHANGE"
+            ],
+            "function_calls": [
+                "open"
+            ],
+            "method_calls": [
+                "f.write"
+            ],
+            "tag_match": true,
+            "risk_match": true,
+            "status": "PASS"
+        },
+        {
+            "category": "FILE_READ",
+            "function": "load_config_file",
+            "expected_tag": "FILE_READ",
+            "expected_risk": "MEDIUM",
+            "detected_tags": [
+                "FILE_READ"
+            ],
+            "detected_risk": "MEDIUM",
+            "side_effects": [],
+            "function_calls": [
+                "open"
+            ],
+            "method_calls": [
+                "f.read"
+            ],
+            "tag_match": true,
+            "risk_match": true,
+            "status": "PASS"
+        },
+        {
+            "category": "DELETE_OPERATION",
+            "function": "cleanup_temp_file",
+            "expected_tag": "DELETE_OPERATION",
+            "expected_risk": "HIGH",
+            "detected_tags": [
+                "DELETE_OPERATION"
+            ],
+            "detected_risk": "HIGH",
+            "side_effects": [
+                "DATA_REMOVAL"
+            ],
+            "function_calls": [],
+            "method_calls": [
+                "os.remove"
+            ],
+            "tag_match": true,
+            "risk_match": true,
+            "status": "PASS"
+        },
+        {
+            "category": "NETWORK_OPERATION",
+            "function": "fetch_user_profile",
+            "expected_tag": "NETWORK_OPERATION",
+            "expected_risk": "MEDIUM",
+            "detected_tags": [
+                "NETWORK_OPERATION"
+            ],
+            "detected_risk": "MEDIUM",
+            "side_effects": [],
+            "function_calls": [],
+            "method_calls": [
+                "requests.request",
+                "response.json"
+            ],
+            "tag_match": true,
+            "risk_match": true,
+            "status": "PASS"
+        },
+        {
+            "category": "DATABASE_OPERATION",
+            "function": "insert_user_record",
+            "expected_tag": "DATABASE_OPERATION",
+            "expected_risk": "HIGH",
+            "detected_tags": [
+                "DATABASE_OPERATION"
+            ],
+            "detected_risk": "HIGH",
+            "side_effects": [
+                "DATABASE_STATE_CHANGE"
+            ],
+            "function_calls": [],
+            "method_calls": [
+                "conn.commit",
+                "conn.cursor",
+                "cursor.execute"
+            ],
+            "tag_match": true,
+            "risk_match": true,
+            "status": "PASS"
+        },
+        {
+            "category": "AUTH_OPERATION",
+            "function": "login_user",
+            "expected_tag": "AUTH_OPERATION",
+            "expected_risk": "HIGH",
+            "detected_tags": [
+                "AUTH_OPERATION"
+            ],
+            "detected_risk": "HIGH",
+            "side_effects": [],
+            "function_calls": [
+                "authenticate"
+            ],
+            "method_calls": [],
+            "tag_match": true,
+            "risk_match": true,
+            "status": "PASS"
+        },
+        {
+            "category": "BACKUP_OPERATION",
+            "function": "archive_user_data",
+            "expected_tag": "BACKUP_OPERATION",
+            "expected_risk": "MEDIUM",
+            "detected_tags": [
+                "BACKUP_OPERATION"
+            ],
+            "detected_risk": "MEDIUM",
+            "side_effects": [],
+            "function_calls": [
+                "create_backup"
+            ],
+            "method_calls": [],
+            "tag_match": true,
+            "risk_match": true,
+            "status": "PASS"
+        },
+        {
+            "category": "RECOVERY_OPERATION",
+            "function": "restore_user_data",
+            "expected_tag": "RECOVERY_OPERATION",
+            "expected_risk": "HIGH",
+            "detected_tags": [
+                "RECOVERY_OPERATION"
+            ],
+            "detected_risk": "HIGH",
+            "side_effects": [],
+            "function_calls": [
+                "restore_backup"
+            ],
+            "method_calls": [],
+            "tag_match": true,
+            "risk_match": true,
+            "status": "PASS"
+        },
+        {
+            "category": "MEMORY_OPERATION",
+            "function": "persist_decision",
+            "expected_tag": "MEMORY_OPERATION",
+            "expected_risk": "MEDIUM",
+            "detected_tags": [
+                "MEMORY_OPERATION"
+            ],
+            "detected_risk": "MEDIUM",
+            "side_effects": [],
+            "function_calls": [
+                "store_memory"
+            ],
+            "method_calls": [],
+            "tag_match": true,
+            "risk_match": true,
+            "status": "PASS"
+        },
+        {
+            "category": "STATE_MUTATION",
+            "function": "add_event_to_log",
+            "expected_tag": "STATE_MUTATION",
+            "expected_risk": "MEDIUM",
+            "detected_tags": [
+                "STATE_MUTATION"
+            ],
+            "detected_risk": "MEDIUM",
+            "side_effects": [],
+            "function_calls": [],
+            "method_calls": [
+                "log_list.append"
+            ],
+            "tag_match": true,
+            "risk_match": true,
+            "status": "PASS"
+        },
+        {
+            "category": "OBJECT_CREATION",
+            "function": "create_user",
+            "expected_tag": "OBJECT_CREATION",
+            "expected_risk": "MEDIUM",
+            "detected_tags": [
+                "OBJECT_CREATION"
+            ],
+            "detected_risk": "MEDIUM",
+            "side_effects": [],
+            "function_calls": [
+                "UserRecord"
+            ],
+            "method_calls": [],
+            "tag_match": true,
+            "risk_match": true,
+            "status": "PASS"
+        },
+        {
+            "category": "CLEAN",
+            "function": "add_numbers",
+            "expected_tag": null,
+            "expected_risk": "LOW",
+            "detected_tags": [],
+            "detected_risk": "LOW",
+            "side_effects": [],
+            "function_calls": [],
+            "method_calls": [],
+            "tag_match": true,
+            "risk_match": true,
+            "status": "PASS"
+        }
+    ]
+}

@@ -1,0 +1,638 @@
+{
+    "test_case": "TC_V2_047",
+    "repository_name": "click",
+    "repository_path": "C:\\repos\\click",
+    "pair_cap": 25,
+    "v1_max_files": 25,
+    "repository_files": 63,
+    "governance_findings_total": 8,
+    "governance_safe": 0,
+    "governance_review": 7,
+    "governance_block": 1,
+    "governance_per_file": {
+        "tests\\test_imports.py": {
+            "file_path": "tests\\test_imports.py",
+            "findings": [
+                {
+                    "file_path": "tests\\test_imports.py",
+                    "function_name": "test_light_imports",
+                    "line_number": 69,
+                    "check_name": "dangerous_api_call",
+                    "category": "PROCESS_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'test_light_imports' calls 'subprocess.Popen', classified as PROCESS_OPERATION.",
+                    "evidence": "subprocess.Popen"
+                }
+            ]
+        },
+        "src\\click\\shell_completion.py": {
+            "file_path": "src\\click\\shell_completion.py",
+            "findings": [
+                {
+                    "file_path": "src\\click\\shell_completion.py",
+                    "function_name": "BashComplete._check_version",
+                    "line_number": 317,
+                    "check_name": "dangerous_api_call",
+                    "category": "PROCESS_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'BashComplete._check_version' calls 'subprocess.run', classified as PROCESS_OPERATION.",
+                    "evidence": "subprocess.run"
+                }
+            ]
+        },
+        "src\\click\\testing.py": {
+            "file_path": "src\\click\\testing.py",
+            "findings": [
+                {
+                    "file_path": "src\\click\\testing.py",
+                    "function_name": "CliRunner.isolated_filesystem",
+                    "line_number": 739,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "BLOCK",
+                    "detail": "Function 'CliRunner.isolated_filesystem' calls 'shutil.rmtree', classified as DELETE_OPERATION.",
+                    "evidence": "shutil.rmtree"
+                }
+            ]
+        },
+        "src\\click\\_termui_impl.py": {
+            "file_path": "src\\click\\_termui_impl.py",
+            "findings": [
+                {
+                    "file_path": "src\\click\\_termui_impl.py",
+                    "function_name": "_pipepager",
+                    "line_number": 455,
+                    "check_name": "dangerous_api_call",
+                    "category": "PROCESS_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function '_pipepager' calls 'subprocess.Popen', classified as PROCESS_OPERATION.",
+                    "evidence": "subprocess.Popen"
+                },
+                {
+                    "file_path": "src\\click\\_termui_impl.py",
+                    "function_name": "_tempfilepager",
+                    "line_number": 559,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function '_tempfilepager' calls 'os.unlink', classified as DELETE_OPERATION.",
+                    "evidence": "os.unlink"
+                },
+                {
+                    "file_path": "src\\click\\_termui_impl.py",
+                    "function_name": "Editor.edit_files",
+                    "line_number": 670,
+                    "check_name": "dangerous_api_call",
+                    "category": "PROCESS_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'Editor.edit_files' calls 'subprocess.Popen', classified as PROCESS_OPERATION.",
+                    "evidence": "subprocess.Popen"
+                },
+                {
+                    "file_path": "src\\click\\_termui_impl.py",
+                    "function_name": "Editor.edit",
+                    "line_number": 708,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'Editor.edit' calls 'os.unlink', classified as DELETE_OPERATION.",
+                    "evidence": "os.unlink"
+                },
+                {
+                    "file_path": "src\\click\\_termui_impl.py",
+                    "function_name": "open_url",
+                    "line_number": 756,
+                    "check_name": "dangerous_api_call",
+                    "category": "PROCESS_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'open_url' calls 'subprocess.Popen', classified as PROCESS_OPERATION.",
+                    "evidence": "subprocess.Popen"
+                }
+            ]
+        }
+    },
+    "decision_pipeline_candidate_source": "token-overlap-fallback",
+    "decision_pipeline_candidates": 25,
+    "decision_pipeline_analyzed": 25,
+    "decision_pipeline_safe": 2,
+    "decision_pipeline_review": 20,
+    "decision_pipeline_block": 3,
+    "decision_pipeline_opposing_detected": 0,
+    "decision_pipeline_errors": 0,
+    "decision_pipeline_results": [
+        {
+            "file_path": "C:\\repos\\click\\tests\\test_shell_completion.py",
+            "file_path_b": null,
+            "function_a": "_get_completions",
+            "function_b": "_get_words",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.31,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 40,
+            "fusion_risk_level": "MEDIUM",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\click\\tests\\test_termui.py",
+            "file_path_b": null,
+            "function_a": "_get_real_pager_command",
+            "function_b": "_run_get_pager_file_with_real_pager",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.87,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "SAFE",
+            "fusion_risk_score": 5,
+            "fusion_risk_level": "LOW",
+            "fusion_opposing_detected": false,
+            "governance_action": "AUTO_APPLY",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\click\\tests\\test_termui.py",
+            "file_path_b": null,
+            "function_a": "_get_real_pager_command",
+            "function_b": "_write_pager_from_multiple_sites",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.52,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [
+                "FILE_WRITE",
+                "STATE_MUTATION"
+            ],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "MEDIUM",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 49,
+            "fusion_risk_level": "MEDIUM",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\click\\tests\\test_termui.py",
+            "file_path_b": null,
+            "function_a": "_run_get_pager_file_with_real_pager",
+            "function_b": "_write_pager_from_multiple_sites",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.54,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [
+                "FILE_WRITE",
+                "STATE_MUTATION"
+            ],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "MEDIUM",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 70,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "INDIVIDUAL_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\click\\tests\\test_types.py",
+            "file_path_b": null,
+            "function_a": "_symlinks_supported",
+            "function_b": "_non_utf8_filenames_supported",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.32,
+            "behavioral_tags_a": [
+                "FILE_READ"
+            ],
+            "behavioral_tags_b": [
+                "FILE_READ"
+            ],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "MEDIUM",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 70,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "INDIVIDUAL_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\click\\examples\\completion\\completion.py",
+            "file_path_b": null,
+            "function_a": "get_env_vars",
+            "function_b": "show_env",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.66,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "SAFE",
+            "fusion_risk_score": 14,
+            "fusion_risk_level": "LOW",
+            "fusion_opposing_detected": false,
+            "governance_action": "AUTO_APPLY",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\click\\examples\\imagepipe\\imagepipe.py",
+            "file_path_b": null,
+            "function_a": "open_cmd",
+            "function_b": "save_cmd",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.66,
+            "behavioral_tags_a": [
+                "FILE_READ"
+            ],
+            "behavioral_tags_b": [
+                "FILE_WRITE",
+                "STATE_MUTATION"
+            ],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "MEDIUM",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 44,
+            "fusion_risk_level": "MEDIUM",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\click\\examples\\imagepipe\\imagepipe.py",
+            "file_path_b": null,
+            "function_a": "open_cmd",
+            "function_b": "display_cmd",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.74,
+            "behavioral_tags_a": [
+                "FILE_READ"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 40,
+            "fusion_risk_level": "MEDIUM",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\click\\examples\\imagepipe\\imagepipe.py",
+            "file_path_b": null,
+            "function_a": "open_cmd",
+            "function_b": "resize_cmd",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.56,
+            "behavioral_tags_a": [
+                "FILE_READ"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 47,
+            "fusion_risk_level": "MEDIUM",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\click\\examples\\imagepipe\\imagepipe.py",
+            "file_path_b": null,
+            "function_a": "open_cmd",
+            "function_b": "crop_cmd",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.45,
+            "behavioral_tags_a": [
+                "FILE_READ"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 52,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\click\\examples\\imagepipe\\imagepipe.py",
+            "file_path_b": null,
+            "function_a": "open_cmd",
+            "function_b": "transpose_cmd",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.35,
+            "behavioral_tags_a": [
+                "FILE_READ"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 56,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\click\\examples\\imagepipe\\imagepipe.py",
+            "file_path_b": null,
+            "function_a": "open_cmd",
+            "function_b": "blur_cmd",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.44,
+            "behavioral_tags_a": [
+                "FILE_READ"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 52,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\click\\examples\\imagepipe\\imagepipe.py",
+            "file_path_b": null,
+            "function_a": "open_cmd",
+            "function_b": "smoothen_cmd",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.52,
+            "behavioral_tags_a": [
+                "FILE_READ"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 49,
+            "fusion_risk_level": "MEDIUM",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\click\\examples\\imagepipe\\imagepipe.py",
+            "file_path_b": null,
+            "function_a": "open_cmd",
+            "function_b": "emboss_cmd",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.45,
+            "behavioral_tags_a": [
+                "FILE_READ"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 52,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\click\\examples\\imagepipe\\imagepipe.py",
+            "file_path_b": null,
+            "function_a": "open_cmd",
+            "function_b": "sharpen_cmd",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.43,
+            "behavioral_tags_a": [
+                "FILE_READ"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 53,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\click\\examples\\imagepipe\\imagepipe.py",
+            "file_path_b": null,
+            "function_a": "open_cmd",
+            "function_b": "paste_cmd",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.54,
+            "behavioral_tags_a": [
+                "FILE_READ"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 48,
+            "fusion_risk_level": "MEDIUM",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\click\\examples\\imagepipe\\imagepipe.py",
+            "file_path_b": null,
+            "function_a": "save_cmd",
+            "function_b": "display_cmd",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.66,
+            "behavioral_tags_a": [
+                "FILE_WRITE",
+                "STATE_MUTATION"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 44,
+            "fusion_risk_level": "MEDIUM",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\click\\examples\\imagepipe\\imagepipe.py",
+            "file_path_b": null,
+            "function_a": "save_cmd",
+            "function_b": "resize_cmd",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.53,
+            "behavioral_tags_a": [
+                "FILE_WRITE",
+                "STATE_MUTATION"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 49,
+            "fusion_risk_level": "MEDIUM",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\click\\examples\\imagepipe\\imagepipe.py",
+            "file_path_b": null,
+            "function_a": "save_cmd",
+            "function_b": "crop_cmd",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.47,
+            "behavioral_tags_a": [
+                "FILE_WRITE",
+                "STATE_MUTATION"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 51,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\click\\examples\\imagepipe\\imagepipe.py",
+            "file_path_b": null,
+            "function_a": "save_cmd",
+            "function_b": "transpose_cmd",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.33,
+            "behavioral_tags_a": [
+                "FILE_WRITE",
+                "STATE_MUTATION"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 70,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "INDIVIDUAL_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\click\\examples\\imagepipe\\imagepipe.py",
+            "file_path_b": null,
+            "function_a": "save_cmd",
+            "function_b": "blur_cmd",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.44,
+            "behavioral_tags_a": [
+                "FILE_WRITE",
+                "STATE_MUTATION"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 52,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\click\\examples\\imagepipe\\imagepipe.py",
+            "file_path_b": null,
+            "function_a": "save_cmd",
+            "function_b": "smoothen_cmd",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.44,
+            "behavioral_tags_a": [
+                "FILE_WRITE",
+                "STATE_MUTATION"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 52,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\click\\examples\\imagepipe\\imagepipe.py",
+            "file_path_b": null,
+            "function_a": "save_cmd",
+            "function_b": "emboss_cmd",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.39,
+            "behavioral_tags_a": [
+                "FILE_WRITE",
+                "STATE_MUTATION"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 54,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\click\\examples\\imagepipe\\imagepipe.py",
+            "file_path_b": null,
+            "function_a": "save_cmd",
+            "function_b": "sharpen_cmd",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.38,
+            "behavioral_tags_a": [
+                "FILE_WRITE",
+                "STATE_MUTATION"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 55,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\click\\examples\\imagepipe\\imagepipe.py",
+            "file_path_b": null,
+            "function_a": "save_cmd",
+            "function_b": "paste_cmd",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.64,
+            "behavioral_tags_a": [
+                "FILE_WRITE",
+                "STATE_MUTATION"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 44,
+            "fusion_risk_level": "MEDIUM",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        }
+    ],
+    "v1_findings_count": 0,
+    "v1_findings": [],
+    "total_runtime_seconds": 7.8,
+    "status": "PASSED"
+}

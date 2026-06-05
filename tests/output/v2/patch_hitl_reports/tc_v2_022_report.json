@@ -1,0 +1,26 @@
+{
+    "test_case": "TC_V2_022",
+    "flows": {
+        "approve_hitl": {
+            "passed": true,
+            "validation_decision": "APPROVE",
+            "hitl_decision": "AUTO_APPROVED"
+        },
+        "review_hitl": {
+            "passed": true,
+            "validation_decision": "REVIEW",
+            "hitl_decision": "PENDING_HUMAN_APPROVAL"
+        },
+        "reject_hitl": {
+            "passed": true,
+            "validation_decision": "REJECT",
+            "hitl_decision": "BLOCKED"
+        }
+    },
+    "summary": {
+        "total_flows": 3,
+        "passed_flows": 3,
+        "failed_flows": 0,
+        "status": "PASSED"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "test_case": "TC_V2_005",
+    "title": "Repository Dependency Impact Validation",
+    "description": "Validates whether V2 can detect cross-file or repository dependency impact when a changed function is used by another function.",
+    "category": "Repository Reasoning",
+    "changed_function": "calculate_discount",
+    "impacted_functions": [
+        "generate_invoice_total"
+    ],
+    "decision": "REVIEW",
+    "reason": "Repository dependency impact detected. Change may affect dependent functions.",
+    "expected": "REVIEW",
+    "status": "PASS"
+}

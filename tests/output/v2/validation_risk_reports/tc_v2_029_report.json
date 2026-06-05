@@ -1,0 +1,33 @@
+{
+    "test_case": "TC_V2_029",
+    "tests": {
+        "low_flow": {
+            "validation_decision": "APPROVE",
+            "risk_level": "LOW",
+            "action": "AUTO_APPLY",
+            "passed": true
+        },
+        "medium_flow": {
+            "validation_decision": "REVIEW",
+            "risk_level": "MEDIUM",
+            "action": "BATCH_APPROVAL",
+            "passed": true
+        },
+        "high_flow": {
+            "passed": true,
+            "risk_level": "HIGH",
+            "action": "INDIVIDUAL_APPROVAL"
+        },
+        "critical_flow": {
+            "passed": true,
+            "risk_level": "CRITICAL",
+            "action": "FREEZE_PATCH"
+        }
+    },
+    "summary": {
+        "total_tests": 4,
+        "passed_tests": 4,
+        "failed_tests": 0,
+        "status": "PASSED"
+    }
+}

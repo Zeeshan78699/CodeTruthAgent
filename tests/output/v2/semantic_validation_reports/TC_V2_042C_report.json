@@ -1,0 +1,186 @@
+{
+    "test_case": "TC_V2_042C",
+    "category": "Semantic Tuning Validation",
+    "total_tests": 9,
+    "passed": 6,
+    "failed": 3,
+    "accuracy": 66.67,
+    "authentication_accuracy": 33.33,
+    "recovery_accuracy": 66.67,
+    "block_accuracy": 100.0,
+    "semantic_gaps": [
+        {
+            "function_a": "validate_user_token",
+            "function_b": "authenticate_session",
+            "expected": "REVIEW",
+            "actual": "BLOCK"
+        },
+        {
+            "function_a": "validate_login",
+            "function_b": "authenticate_user",
+            "expected": "REVIEW",
+            "actual": "BLOCK"
+        },
+        {
+            "function_a": "rollback_transaction",
+            "function_b": "restore_backup",
+            "expected": "REVIEW",
+            "actual": "BLOCK"
+        }
+    ],
+    "results": [
+        {
+            "category": "AUTH_TUNING",
+            "function_a": "validate_user_token",
+            "function_b": "authenticate_session",
+            "expected": "REVIEW",
+            "actual": "BLOCK",
+            "status": "FAIL",
+            "lexical_score": 0.0,
+            "embedding_score": 0.41,
+            "confidence": 0.41,
+            "risk_level": "HIGH",
+            "reasoning": [
+                "Low semantic similarity detected",
+                "Shared business domain detected",
+                "No major side effects detected"
+            ]
+        },
+        {
+            "category": "AUTH_TUNING",
+            "function_a": "validate_login",
+            "function_b": "authenticate_user",
+            "expected": "REVIEW",
+            "actual": "BLOCK",
+            "status": "FAIL",
+            "lexical_score": 0.0,
+            "embedding_score": 0.65,
+            "confidence": 0.33,
+            "risk_level": "HIGH",
+            "reasoning": [
+                "Moderate semantic similarity detected",
+                "Business domains differ",
+                "No major side effects detected"
+            ]
+        },
+        {
+            "category": "AUTH_TUNING",
+            "function_a": "verify_credentials",
+            "function_b": "authenticate_account",
+            "expected": "REVIEW",
+            "actual": "REVIEW",
+            "status": "PASS",
+            "lexical_score": 0.0,
+            "embedding_score": 0.68,
+            "confidence": 0.54,
+            "risk_level": "MEDIUM",
+            "reasoning": [
+                "Moderate semantic similarity detected",
+                "Shared business domain detected",
+                "No major side effects detected"
+            ]
+        },
+        {
+            "category": "RECOVERY_TUNING",
+            "function_a": "rollback_transaction",
+            "function_b": "restore_backup",
+            "expected": "REVIEW",
+            "actual": "BLOCK",
+            "status": "FAIL",
+            "lexical_score": 0.65,
+            "embedding_score": 0.3,
+            "confidence": 0.28,
+            "risk_level": "HIGH",
+            "reasoning": [
+                "Low semantic similarity detected",
+                "Business domains differ",
+                "No major side effects detected"
+            ]
+        },
+        {
+            "category": "RECOVERY_TUNING",
+            "function_a": "rollback_database",
+            "function_b": "restore_database",
+            "expected": "REVIEW",
+            "actual": "REVIEW",
+            "status": "PASS",
+            "lexical_score": 0.82,
+            "embedding_score": 0.54,
+            "confidence": 0.63,
+            "risk_level": "MEDIUM",
+            "reasoning": [
+                "Moderate semantic similarity detected",
+                "Shared business domain detected",
+                "No major side effects detected"
+            ]
+        },
+        {
+            "category": "RECOVERY_TUNING",
+            "function_a": "recover_state",
+            "function_b": "rollback_state",
+            "expected": "REVIEW",
+            "actual": "REVIEW",
+            "status": "PASS",
+            "lexical_score": 0.65,
+            "embedding_score": 0.57,
+            "confidence": 0.61,
+            "risk_level": "MEDIUM",
+            "reasoning": [
+                "Moderate semantic similarity detected",
+                "Shared business domain detected",
+                "No major side effects detected"
+            ]
+        },
+        {
+            "category": "CONTROL_BLOCK",
+            "function_a": "send_email",
+            "function_b": "calculate_invoice",
+            "expected": "BLOCK",
+            "actual": "BLOCK",
+            "status": "PASS",
+            "lexical_score": 0.0,
+            "embedding_score": 0.13,
+            "confidence": 0.07,
+            "risk_level": "HIGH",
+            "reasoning": [
+                "Low semantic similarity detected",
+                "Business domains differ",
+                "No major side effects detected"
+            ]
+        },
+        {
+            "category": "CONTROL_BLOCK",
+            "function_a": "load_memory",
+            "function_b": "delete_database",
+            "expected": "BLOCK",
+            "actual": "BLOCK",
+            "status": "PASS",
+            "lexical_score": 0.0,
+            "embedding_score": 0.2,
+            "confidence": 0.1,
+            "risk_level": "HIGH",
+            "reasoning": [
+                "Low semantic similarity detected",
+                "Business domains differ",
+                "No major side effects detected"
+            ]
+        },
+        {
+            "category": "CONTROL_BLOCK",
+            "function_a": "generate_report",
+            "function_b": "rollback_transaction",
+            "expected": "BLOCK",
+            "actual": "BLOCK",
+            "status": "PASS",
+            "lexical_score": 0.0,
+            "embedding_score": 0.04,
+            "confidence": 0.02,
+            "risk_level": "HIGH",
+            "reasoning": [
+                "Low semantic similarity detected",
+                "Business domains differ",
+                "No major side effects detected"
+            ]
+        }
+    ]
+}

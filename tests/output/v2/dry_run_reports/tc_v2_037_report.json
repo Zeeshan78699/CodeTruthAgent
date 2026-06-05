@@ -1,0 +1,36 @@
+{
+    "test_case": "TC_V2_037",
+    "title": "Dry Run Safe Merge",
+    "finding": {
+        "function_1": "calculate_invoice_total",
+        "function_2": "compute_bill_amount",
+        "file_1": ".\\billing.py",
+        "file_2": ".\\sample_code.py",
+        "similarity": 100.0,
+        "duplicate_type": "SEMANTIC_REVIEW_REQUIRED",
+        "risk_level": "High",
+        "risk_reason": "Function used 1 times; Function name has business/domain meaning; Semantic conflict detected; manual review required",
+        "best_function": "calculate_invoice_total",
+        "merge_allowed": false,
+        "action": "Manual review required. Do not auto-replace."
+    },
+    "governance": {
+        "decision": "BLOCKED",
+        "reason": "V1 policy blocks merge."
+    },
+    "dry_run_plan": {
+        "keep_function": "calculate_invoice_total",
+        "remove_function": "compute_bill_amount",
+        "risk_level": "High",
+        "risk_reason": "Function used 1 times; Function name has business/domain meaning; Semantic conflict detected; manual review required",
+        "affected_files": [
+            ".\\billing.py",
+            ".\\sample_code.py"
+        ],
+        "backup_required": true,
+        "rollback_available": true,
+        "repository_modified": false,
+        "execution_mode": "DRY_RUN"
+    },
+    "status": "PASSED"
+}

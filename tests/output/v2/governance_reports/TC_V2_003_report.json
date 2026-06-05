@@ -1,0 +1,36 @@
+{
+    "test_case": "TC_V2_003",
+    "category": "Governance Decision Validation",
+    "total_scenarios": 3,
+    "passed": 3,
+    "overall_status": "PASS",
+    "results": [
+        {
+            "scenario": "SAFE Scenario",
+            "behavior_a": "FILE_READ",
+            "behavior_b": "REFUND_OPERATION",
+            "semantic_relation": "UNRELATED",
+            "decision": "SAFE",
+            "expected": "SAFE",
+            "status": "PASS"
+        },
+        {
+            "scenario": "REVIEW Scenario",
+            "behavior_a": "REFUND_OPERATION",
+            "behavior_b": "REFUND_OPERATION",
+            "semantic_relation": "RELATED",
+            "decision": "REVIEW",
+            "expected": "REVIEW",
+            "status": "PASS"
+        },
+        {
+            "scenario": "BLOCK Scenario",
+            "behavior_a": "BACKUP_OPERATION",
+            "behavior_b": "RECOVERY_OPERATION",
+            "semantic_relation": "RELATED",
+            "decision": "BLOCK",
+            "expected": "BLOCK",
+            "status": "PASS"
+        }
+    ]
+}

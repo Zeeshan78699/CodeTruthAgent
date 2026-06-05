@@ -1,0 +1,729 @@
+{
+    "test_case": "TC_V2_FINAL_011_BANDIT_COMPARISON_V2",
+    "target": "C:\\scratch\\click\\src\\click",
+    "match_method": "file basename + risk-pattern test_id family",
+    "totals": {
+        "codetruth_findings": 7,
+        "bandit_findings": 36,
+        "codetruth_findings_with_bandit_overlap": 4,
+        "bandit_findings_outside_codetruth_categories": 21
+    },
+    "category_to_bandit_tests_map": {
+        "PROCESS_OPERATION": [
+            "B404",
+            "B602",
+            "B603",
+            "B605",
+            "B606",
+            "B607"
+        ],
+        "NETWORK_OPERATION": [
+            "B113"
+        ],
+        "DELETE_OPERATION": [],
+        "DYNAMIC_EXEC": [
+            "B102",
+            "B307"
+        ],
+        "GLOBAL_MUTATION": []
+    },
+    "overlap_detail": [
+        {
+            "codetruth_finding": {
+                "file_basename": "shell_completion.py",
+                "file": "shell_completion.py",
+                "function": "BashComplete._check_version",
+                "line": 312,
+                "severity": "REVIEW",
+                "category": "PROCESS_OPERATION",
+                "evidence": "subprocess.run"
+            },
+            "bandit_match_count": 2,
+            "bandit_matches": [
+                {
+                    "file_basename": "shell_completion.py",
+                    "file": "C:\\scratch\\click\\src\\click\\shell_completion.py",
+                    "line": 314,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B404",
+                    "test_name": "blacklist",
+                    "issue_text": "Consider possible security implications associated with the subprocess module."
+                },
+                {
+                    "file_basename": "shell_completion.py",
+                    "file": "C:\\scratch\\click\\src\\click\\shell_completion.py",
+                    "line": 321,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B603",
+                    "test_name": "subprocess_without_shell_equals_true",
+                    "issue_text": "subprocess call - check for execution of untrusted input."
+                }
+            ],
+            "overlap": true
+        },
+        {
+            "codetruth_finding": {
+                "file_basename": "testing.py",
+                "file": "testing.py",
+                "function": "CliRunner.isolated_filesystem",
+                "line": 706,
+                "severity": "BLOCK",
+                "category": "DELETE_OPERATION",
+                "evidence": "shutil.rmtree"
+            },
+            "bandit_match_count": 0,
+            "bandit_matches": [],
+            "overlap": false
+        },
+        {
+            "codetruth_finding": {
+                "file_basename": "_termui_impl.py",
+                "file": "_termui_impl.py",
+                "function": "_pipepager",
+                "line": 455,
+                "severity": "REVIEW",
+                "category": "PROCESS_OPERATION",
+                "evidence": "subprocess.Popen"
+            },
+            "bandit_match_count": 13,
+            "bandit_matches": [
+                {
+                    "file_basename": "_termui_impl.py",
+                    "file": "C:\\scratch\\click\\src\\click\\_termui_impl.py",
+                    "line": 492,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B404",
+                    "test_name": "blacklist",
+                    "issue_text": "Consider possible security implications associated with the subprocess module."
+                },
+                {
+                    "file_basename": "_termui_impl.py",
+                    "file": "C:\\scratch\\click\\src\\click\\_termui_impl.py",
+                    "line": 512,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B603",
+                    "test_name": "subprocess_without_shell_equals_true",
+                    "issue_text": "subprocess call - check for execution of untrusted input."
+                },
+                {
+                    "file_basename": "_termui_impl.py",
+                    "file": "C:\\scratch\\click\\src\\click\\_termui_impl.py",
+                    "line": 576,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B404",
+                    "test_name": "blacklist",
+                    "issue_text": "Consider possible security implications associated with the subprocess module."
+                },
+                {
+                    "file_basename": "_termui_impl.py",
+                    "file": "C:\\scratch\\click\\src\\click\\_termui_impl.py",
+                    "line": 604,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B603",
+                    "test_name": "subprocess_without_shell_equals_true",
+                    "issue_text": "subprocess call - check for execution of untrusted input."
+                },
+                {
+                    "file_basename": "_termui_impl.py",
+                    "file": "C:\\scratch\\click\\src\\click\\_termui_impl.py",
+                    "line": 673,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B404",
+                    "test_name": "blacklist",
+                    "issue_text": "Consider possible security implications associated with the subprocess module."
+                },
+                {
+                    "file_basename": "_termui_impl.py",
+                    "file": "C:\\scratch\\click\\src\\click\\_termui_impl.py",
+                    "line": 686,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B603",
+                    "test_name": "subprocess_without_shell_equals_true",
+                    "issue_text": "subprocess call - check for execution of untrusted input."
+                },
+                {
+                    "file_basename": "_termui_impl.py",
+                    "file": "C:\\scratch\\click\\src\\click\\_termui_impl.py",
+                    "line": 757,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B404",
+                    "test_name": "blacklist",
+                    "issue_text": "Consider possible security implications associated with the subprocess module."
+                },
+                {
+                    "file_basename": "_termui_impl.py",
+                    "file": "C:\\scratch\\click\\src\\click\\_termui_impl.py",
+                    "line": 776,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B603",
+                    "test_name": "subprocess_without_shell_equals_true",
+                    "issue_text": "subprocess call - check for execution of untrusted input."
+                },
+                {
+                    "file_basename": "_termui_impl.py",
+                    "file": "C:\\scratch\\click\\src\\click\\_termui_impl.py",
+                    "line": 784,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B603",
+                    "test_name": "subprocess_without_shell_equals_true",
+                    "issue_text": "subprocess call - check for execution of untrusted input."
+                },
+                {
+                    "file_basename": "_termui_impl.py",
+                    "file": "C:\\scratch\\click\\src\\click\\_termui_impl.py",
+                    "line": 789,
+                    "severity": "LOW",
+                    "confidence": "MEDIUM",
+                    "test_id": "B606",
+                    "test_name": "start_process_with_no_shell",
+                    "issue_text": "Starting a process without a shell."
+                },
+                {
+                    "file_basename": "_termui_impl.py",
+                    "file": "C:\\scratch\\click\\src\\click\\_termui_impl.py",
+                    "line": 803,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B603",
+                    "test_name": "subprocess_without_shell_equals_true",
+                    "issue_text": "subprocess call - check for execution of untrusted input."
+                },
+                {
+                    "file_basename": "_termui_impl.py",
+                    "file": "C:\\scratch\\click\\src\\click\\_termui_impl.py",
+                    "line": 813,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B607",
+                    "test_name": "start_process_with_partial_path",
+                    "issue_text": "Starting a process with a partial executable path"
+                },
+                {
+                    "file_basename": "_termui_impl.py",
+                    "file": "C:\\scratch\\click\\src\\click\\_termui_impl.py",
+                    "line": 813,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B603",
+                    "test_name": "subprocess_without_shell_equals_true",
+                    "issue_text": "subprocess call - check for execution of untrusted input."
+                }
+            ],
+            "overlap": true
+        },
+        {
+            "codetruth_finding": {
+                "file_basename": "_termui_impl.py",
+                "file": "_termui_impl.py",
+                "function": "_tempfilepager",
+                "line": 559,
+                "severity": "REVIEW",
+                "category": "DELETE_OPERATION",
+                "evidence": "os.unlink"
+            },
+            "bandit_match_count": 0,
+            "bandit_matches": [],
+            "overlap": false
+        },
+        {
+            "codetruth_finding": {
+                "file_basename": "_termui_impl.py",
+                "file": "_termui_impl.py",
+                "function": "Editor.edit_files",
+                "line": 670,
+                "severity": "REVIEW",
+                "category": "PROCESS_OPERATION",
+                "evidence": "subprocess.Popen"
+            },
+            "bandit_match_count": 13,
+            "bandit_matches": [
+                {
+                    "file_basename": "_termui_impl.py",
+                    "file": "C:\\scratch\\click\\src\\click\\_termui_impl.py",
+                    "line": 492,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B404",
+                    "test_name": "blacklist",
+                    "issue_text": "Consider possible security implications associated with the subprocess module."
+                },
+                {
+                    "file_basename": "_termui_impl.py",
+                    "file": "C:\\scratch\\click\\src\\click\\_termui_impl.py",
+                    "line": 512,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B603",
+                    "test_name": "subprocess_without_shell_equals_true",
+                    "issue_text": "subprocess call - check for execution of untrusted input."
+                },
+                {
+                    "file_basename": "_termui_impl.py",
+                    "file": "C:\\scratch\\click\\src\\click\\_termui_impl.py",
+                    "line": 576,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B404",
+                    "test_name": "blacklist",
+                    "issue_text": "Consider possible security implications associated with the subprocess module."
+                },
+                {
+                    "file_basename": "_termui_impl.py",
+                    "file": "C:\\scratch\\click\\src\\click\\_termui_impl.py",
+                    "line": 604,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B603",
+                    "test_name": "subprocess_without_shell_equals_true",
+                    "issue_text": "subprocess call - check for execution of untrusted input."
+                },
+                {
+                    "file_basename": "_termui_impl.py",
+                    "file": "C:\\scratch\\click\\src\\click\\_termui_impl.py",
+                    "line": 673,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B404",
+                    "test_name": "blacklist",
+                    "issue_text": "Consider possible security implications associated with the subprocess module."
+                },
+                {
+                    "file_basename": "_termui_impl.py",
+                    "file": "C:\\scratch\\click\\src\\click\\_termui_impl.py",
+                    "line": 686,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B603",
+                    "test_name": "subprocess_without_shell_equals_true",
+                    "issue_text": "subprocess call - check for execution of untrusted input."
+                },
+                {
+                    "file_basename": "_termui_impl.py",
+                    "file": "C:\\scratch\\click\\src\\click\\_termui_impl.py",
+                    "line": 757,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B404",
+                    "test_name": "blacklist",
+                    "issue_text": "Consider possible security implications associated with the subprocess module."
+                },
+                {
+                    "file_basename": "_termui_impl.py",
+                    "file": "C:\\scratch\\click\\src\\click\\_termui_impl.py",
+                    "line": 776,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B603",
+                    "test_name": "subprocess_without_shell_equals_true",
+                    "issue_text": "subprocess call - check for execution of untrusted input."
+                },
+                {
+                    "file_basename": "_termui_impl.py",
+                    "file": "C:\\scratch\\click\\src\\click\\_termui_impl.py",
+                    "line": 784,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B603",
+                    "test_name": "subprocess_without_shell_equals_true",
+                    "issue_text": "subprocess call - check for execution of untrusted input."
+                },
+                {
+                    "file_basename": "_termui_impl.py",
+                    "file": "C:\\scratch\\click\\src\\click\\_termui_impl.py",
+                    "line": 789,
+                    "severity": "LOW",
+                    "confidence": "MEDIUM",
+                    "test_id": "B606",
+                    "test_name": "start_process_with_no_shell",
+                    "issue_text": "Starting a process without a shell."
+                },
+                {
+                    "file_basename": "_termui_impl.py",
+                    "file": "C:\\scratch\\click\\src\\click\\_termui_impl.py",
+                    "line": 803,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B603",
+                    "test_name": "subprocess_without_shell_equals_true",
+                    "issue_text": "subprocess call - check for execution of untrusted input."
+                },
+                {
+                    "file_basename": "_termui_impl.py",
+                    "file": "C:\\scratch\\click\\src\\click\\_termui_impl.py",
+                    "line": 813,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B607",
+                    "test_name": "start_process_with_partial_path",
+                    "issue_text": "Starting a process with a partial executable path"
+                },
+                {
+                    "file_basename": "_termui_impl.py",
+                    "file": "C:\\scratch\\click\\src\\click\\_termui_impl.py",
+                    "line": 813,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B603",
+                    "test_name": "subprocess_without_shell_equals_true",
+                    "issue_text": "subprocess call - check for execution of untrusted input."
+                }
+            ],
+            "overlap": true
+        },
+        {
+            "codetruth_finding": {
+                "file_basename": "_termui_impl.py",
+                "file": "_termui_impl.py",
+                "function": "Editor.edit",
+                "line": 708,
+                "severity": "REVIEW",
+                "category": "DELETE_OPERATION",
+                "evidence": "os.unlink"
+            },
+            "bandit_match_count": 0,
+            "bandit_matches": [],
+            "overlap": false
+        },
+        {
+            "codetruth_finding": {
+                "file_basename": "_termui_impl.py",
+                "file": "_termui_impl.py",
+                "function": "open_url",
+                "line": 756,
+                "severity": "REVIEW",
+                "category": "PROCESS_OPERATION",
+                "evidence": "subprocess.Popen"
+            },
+            "bandit_match_count": 13,
+            "bandit_matches": [
+                {
+                    "file_basename": "_termui_impl.py",
+                    "file": "C:\\scratch\\click\\src\\click\\_termui_impl.py",
+                    "line": 492,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B404",
+                    "test_name": "blacklist",
+                    "issue_text": "Consider possible security implications associated with the subprocess module."
+                },
+                {
+                    "file_basename": "_termui_impl.py",
+                    "file": "C:\\scratch\\click\\src\\click\\_termui_impl.py",
+                    "line": 512,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B603",
+                    "test_name": "subprocess_without_shell_equals_true",
+                    "issue_text": "subprocess call - check for execution of untrusted input."
+                },
+                {
+                    "file_basename": "_termui_impl.py",
+                    "file": "C:\\scratch\\click\\src\\click\\_termui_impl.py",
+                    "line": 576,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B404",
+                    "test_name": "blacklist",
+                    "issue_text": "Consider possible security implications associated with the subprocess module."
+                },
+                {
+                    "file_basename": "_termui_impl.py",
+                    "file": "C:\\scratch\\click\\src\\click\\_termui_impl.py",
+                    "line": 604,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B603",
+                    "test_name": "subprocess_without_shell_equals_true",
+                    "issue_text": "subprocess call - check for execution of untrusted input."
+                },
+                {
+                    "file_basename": "_termui_impl.py",
+                    "file": "C:\\scratch\\click\\src\\click\\_termui_impl.py",
+                    "line": 673,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B404",
+                    "test_name": "blacklist",
+                    "issue_text": "Consider possible security implications associated with the subprocess module."
+                },
+                {
+                    "file_basename": "_termui_impl.py",
+                    "file": "C:\\scratch\\click\\src\\click\\_termui_impl.py",
+                    "line": 686,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B603",
+                    "test_name": "subprocess_without_shell_equals_true",
+                    "issue_text": "subprocess call - check for execution of untrusted input."
+                },
+                {
+                    "file_basename": "_termui_impl.py",
+                    "file": "C:\\scratch\\click\\src\\click\\_termui_impl.py",
+                    "line": 757,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B404",
+                    "test_name": "blacklist",
+                    "issue_text": "Consider possible security implications associated with the subprocess module."
+                },
+                {
+                    "file_basename": "_termui_impl.py",
+                    "file": "C:\\scratch\\click\\src\\click\\_termui_impl.py",
+                    "line": 776,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B603",
+                    "test_name": "subprocess_without_shell_equals_true",
+                    "issue_text": "subprocess call - check for execution of untrusted input."
+                },
+                {
+                    "file_basename": "_termui_impl.py",
+                    "file": "C:\\scratch\\click\\src\\click\\_termui_impl.py",
+                    "line": 784,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B603",
+                    "test_name": "subprocess_without_shell_equals_true",
+                    "issue_text": "subprocess call - check for execution of untrusted input."
+                },
+                {
+                    "file_basename": "_termui_impl.py",
+                    "file": "C:\\scratch\\click\\src\\click\\_termui_impl.py",
+                    "line": 789,
+                    "severity": "LOW",
+                    "confidence": "MEDIUM",
+                    "test_id": "B606",
+                    "test_name": "start_process_with_no_shell",
+                    "issue_text": "Starting a process without a shell."
+                },
+                {
+                    "file_basename": "_termui_impl.py",
+                    "file": "C:\\scratch\\click\\src\\click\\_termui_impl.py",
+                    "line": 803,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B603",
+                    "test_name": "subprocess_without_shell_equals_true",
+                    "issue_text": "subprocess call - check for execution of untrusted input."
+                },
+                {
+                    "file_basename": "_termui_impl.py",
+                    "file": "C:\\scratch\\click\\src\\click\\_termui_impl.py",
+                    "line": 813,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B607",
+                    "test_name": "start_process_with_partial_path",
+                    "issue_text": "Starting a process with a partial executable path"
+                },
+                {
+                    "file_basename": "_termui_impl.py",
+                    "file": "C:\\scratch\\click\\src\\click\\_termui_impl.py",
+                    "line": 813,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B603",
+                    "test_name": "subprocess_without_shell_equals_true",
+                    "issue_text": "subprocess call - check for execution of untrusted input."
+                }
+            ],
+            "overlap": true
+        }
+    ],
+    "severity_pairs": [
+        {
+            "file": "shell_completion.py",
+            "function": "BashComplete._check_version",
+            "codetruth_severity": "REVIEW",
+            "bandit_severity_highest": "LOW",
+            "bandit_match_count": 2
+        },
+        {
+            "file": "_termui_impl.py",
+            "function": "_pipepager",
+            "codetruth_severity": "REVIEW",
+            "bandit_severity_highest": "LOW",
+            "bandit_match_count": 13
+        },
+        {
+            "file": "_termui_impl.py",
+            "function": "Editor.edit_files",
+            "codetruth_severity": "REVIEW",
+            "bandit_severity_highest": "LOW",
+            "bandit_match_count": 13
+        },
+        {
+            "file": "_termui_impl.py",
+            "function": "open_url",
+            "codetruth_severity": "REVIEW",
+            "bandit_severity_highest": "LOW",
+            "bandit_match_count": 13
+        }
+    ],
+    "bandit_unique_by_test_id": {
+        "B110": [
+            {
+                "file": "C:\\scratch\\click\\src\\click\\_compat.py",
+                "line": 74,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Try, Except, Pass detected."
+            },
+            {
+                "file": "C:\\scratch\\click\\src\\click\\_compat.py",
+                "line": 167,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Try, Except, Pass detected."
+            },
+            {
+                "file": "C:\\scratch\\click\\src\\click\\_compat.py",
+                "line": 565,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Try, Except, Pass detected."
+            },
+            {
+                "file": "C:\\scratch\\click\\src\\click\\_winconsole.py",
+                "line": 209,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Try, Except, Pass detected."
+            },
+            {
+                "file": "C:\\scratch\\click\\src\\click\\testing.py",
+                "line": 535,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Try, Except, Pass detected."
+            },
+            {
+                "file": "C:\\scratch\\click\\src\\click\\testing.py",
+                "line": 545,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Try, Except, Pass detected."
+            },
+            {
+                "file": "C:\\scratch\\click\\src\\click\\utils.py",
+                "line": 42,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Try, Except, Pass detected."
+            }
+        ],
+        "B311": [
+            {
+                "file": "C:\\scratch\\click\\src\\click\\_compat.py",
+                "line": 429,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes."
+            }
+        ],
+        "B101": [
+            {
+                "file": "C:\\scratch\\click\\src\\click\\_winconsole.py",
+                "line": 35,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\click\\src\\click\\core.py",
+                "line": 765,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\click\\src\\click\\core.py",
+                "line": 1701,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\click\\src\\click\\core.py",
+                "line": 1750,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\click\\src\\click\\core.py",
+                "line": 1907,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\click\\src\\click\\core.py",
+                "line": 1929,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\click\\src\\click\\core.py",
+                "line": 3249,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\click\\src\\click\\decorators.py",
+                "line": 211,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\click\\src\\click\\decorators.py",
+                "line": 212,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\click\\src\\click\\decorators.py",
+                "line": 236,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\click\\src\\click\\decorators.py",
+                "line": 237,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\click\\src\\click\\parser.py",
+                "line": 197,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\click\\src\\click\\testing.py",
+                "line": 94,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            }
+        ]
+    }
+}

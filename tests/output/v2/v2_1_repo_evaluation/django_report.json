@@ -1,0 +1,2856 @@
+{
+    "test_case": "TC_V2_047",
+    "repository_name": "django",
+    "repository_path": "C:\\repos\\django",
+    "pair_cap": 100,
+    "v1_max_files": 25,
+    "repository_files": 2917,
+    "governance_findings_total": 68,
+    "governance_safe": 0,
+    "governance_review": 52,
+    "governance_block": 16,
+    "governance_per_file": {
+        "scripts\\do_django_release.py": {
+            "file_path": "scripts\\do_django_release.py",
+            "findings": [
+                {
+                    "file_path": "scripts\\do_django_release.py",
+                    "function_name": "main",
+                    "line_number": 145,
+                    "check_name": "dangerous_api_call",
+                    "category": "PROCESS_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'main' calls 'subprocess.run', classified as PROCESS_OPERATION.",
+                    "evidence": "subprocess.run"
+                }
+            ]
+        },
+        "scripts\\manage_translations.py": {
+            "file_path": "scripts\\manage_translations.py",
+            "findings": [
+                {
+                    "file_path": "scripts\\manage_translations.py",
+                    "function_name": "run",
+                    "line_number": 45,
+                    "check_name": "dangerous_api_call",
+                    "category": "PROCESS_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'run' calls 'subprocess.run', classified as PROCESS_OPERATION.",
+                    "evidence": "subprocess.run"
+                },
+                {
+                    "file_path": "scripts\\manage_translations.py",
+                    "function_name": "get_api_response",
+                    "line_number": 63,
+                    "check_name": "dangerous_api_call",
+                    "category": "NETWORK_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'get_api_response' calls 'requests.get', classified as NETWORK_OPERATION.",
+                    "evidence": "requests.get"
+                }
+            ]
+        },
+        "scripts\\prepare_commit_msg.py": {
+            "file_path": "scripts\\prepare_commit_msg.py",
+            "findings": [
+                {
+                    "file_path": "scripts\\prepare_commit_msg.py",
+                    "function_name": "run",
+                    "line_number": 27,
+                    "check_name": "dangerous_api_call",
+                    "category": "PROCESS_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'run' calls 'subprocess.run', classified as PROCESS_OPERATION.",
+                    "evidence": "subprocess.run"
+                }
+            ]
+        },
+        "tests\\runtests.py": {
+            "file_path": "tests\\runtests.py",
+            "findings": [
+                {
+                    "file_path": "tests\\runtests.py",
+                    "function_name": "bisect_tests",
+                    "line_number": 444,
+                    "check_name": "dangerous_api_call",
+                    "category": "PROCESS_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'bisect_tests' calls 'subprocess.run', classified as PROCESS_OPERATION.",
+                    "evidence": "subprocess.run"
+                }
+            ]
+        },
+        "django\\utils\\autoreload.py": {
+            "file_path": "django\\utils\\autoreload.py",
+            "findings": [
+                {
+                    "file_path": "django\\utils\\autoreload.py",
+                    "function_name": "restart_with_reloader",
+                    "line_number": 273,
+                    "check_name": "dangerous_api_call",
+                    "category": "PROCESS_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'restart_with_reloader' calls 'subprocess.run', classified as PROCESS_OPERATION.",
+                    "evidence": "subprocess.run"
+                }
+            ]
+        },
+        "django\\utils\\version.py": {
+            "file_path": "django\\utils\\version.py",
+            "findings": [
+                {
+                    "file_path": "django\\utils\\version.py",
+                    "function_name": "get_git_changeset",
+                    "line_number": 78,
+                    "check_name": "dangerous_api_call",
+                    "category": "PROCESS_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'get_git_changeset' calls 'subprocess.run', classified as PROCESS_OPERATION.",
+                    "evidence": "subprocess.run"
+                }
+            ]
+        },
+        "django\\contrib\\sessions\\backends\\file.py": {
+            "file_path": "django\\contrib\\sessions\\backends\\file.py",
+            "findings": [
+                {
+                    "file_path": "django\\contrib\\sessions\\backends\\file.py",
+                    "function_name": "SessionStore.save",
+                    "line_number": 123,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'SessionStore.save' calls 'os.unlink', classified as DELETE_OPERATION.",
+                    "evidence": "os.unlink"
+                },
+                {
+                    "file_path": "django\\contrib\\sessions\\backends\\file.py",
+                    "function_name": "SessionStore.delete",
+                    "line_number": 195,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'SessionStore.delete' calls 'os.unlink', classified as DELETE_OPERATION.",
+                    "evidence": "os.unlink"
+                }
+            ]
+        },
+        "django\\contrib\\staticfiles\\management\\commands\\collectstatic.py": {
+            "file_path": "django\\contrib\\staticfiles\\management\\commands\\collectstatic.py",
+            "findings": [
+                {
+                    "file_path": "django\\contrib\\staticfiles\\management\\commands\\collectstatic.py",
+                    "function_name": "Command.clear_dir",
+                    "line_number": 269,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'Command.clear_dir' calls 'os.unlink', classified as DELETE_OPERATION.",
+                    "evidence": "os.unlink"
+                },
+                {
+                    "file_path": "django\\contrib\\staticfiles\\management\\commands\\collectstatic.py",
+                    "function_name": "Command.link_file",
+                    "line_number": 349,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'Command.link_file' calls 'os.unlink', classified as DELETE_OPERATION.",
+                    "evidence": "os.unlink"
+                }
+            ]
+        },
+        "django\\core\\files\\move.py": {
+            "file_path": "django\\core\\files\\move.py",
+            "findings": [
+                {
+                    "file_path": "django\\core\\files\\move.py",
+                    "function_name": "file_move_safe",
+                    "line_number": 16,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'file_move_safe' calls 'os.remove', classified as DELETE_OPERATION.",
+                    "evidence": "os.remove"
+                }
+            ]
+        },
+        "django\\core\\files\\uploadhandler.py": {
+            "file_path": "django\\core\\files\\uploadhandler.py",
+            "findings": [
+                {
+                    "file_path": "django\\core\\files\\uploadhandler.py",
+                    "function_name": "TemporaryFileUploadHandler.upload_interrupted",
+                    "line_number": 184,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'TemporaryFileUploadHandler.upload_interrupted' calls 'os.remove', classified as DELETE_OPERATION.",
+                    "evidence": "os.remove"
+                }
+            ]
+        },
+        "django\\core\\management\\templates.py": {
+            "file_path": "django\\core\\management\\templates.py",
+            "findings": [
+                {
+                    "file_path": "django\\core\\management\\templates.py",
+                    "function_name": "TemplateCommand.handle",
+                    "line_number": 88,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'TemplateCommand.handle' calls 'os.remove', classified as DELETE_OPERATION.",
+                    "evidence": "os.remove"
+                },
+                {
+                    "file_path": "django\\core\\management\\templates.py",
+                    "function_name": "TemplateCommand.handle",
+                    "line_number": 88,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "BLOCK",
+                    "detail": "Function 'TemplateCommand.handle' calls 'shutil.rmtree', classified as DELETE_OPERATION.",
+                    "evidence": "shutil.rmtree"
+                }
+            ]
+        },
+        "django\\core\\management\\utils.py": {
+            "file_path": "django\\core\\management\\utils.py",
+            "findings": [
+                {
+                    "file_path": "django\\core\\management\\utils.py",
+                    "function_name": "run_formatters",
+                    "line_number": 166,
+                    "check_name": "dangerous_api_call",
+                    "category": "PROCESS_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'run_formatters' calls 'subprocess.run', classified as PROCESS_OPERATION.",
+                    "evidence": "subprocess.run"
+                }
+            ]
+        },
+        "django\\core\\cache\\backends\\filebased.py": {
+            "file_path": "django\\core\\cache\\backends\\filebased.py",
+            "findings": [
+                {
+                    "file_path": "django\\core\\cache\\backends\\filebased.py",
+                    "function_name": "FileBasedCache.set",
+                    "line_number": 48,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'FileBasedCache.set' calls 'os.remove', classified as DELETE_OPERATION.",
+                    "evidence": "os.remove"
+                },
+                {
+                    "file_path": "django\\core\\cache\\backends\\filebased.py",
+                    "function_name": "FileBasedCache._delete",
+                    "line_number": 83,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'FileBasedCache._delete' calls 'os.remove', classified as DELETE_OPERATION.",
+                    "evidence": "os.remove"
+                }
+            ]
+        },
+        "django\\core\\files\\storage\\filesystem.py": {
+            "file_path": "django\\core\\files\\storage\\filesystem.py",
+            "findings": [
+                {
+                    "file_path": "django\\core\\files\\storage\\filesystem.py",
+                    "function_name": "FileSystemStorage.delete",
+                    "line_number": 156,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'FileSystemStorage.delete' calls 'os.remove', classified as DELETE_OPERATION.",
+                    "evidence": "os.remove"
+                }
+            ]
+        },
+        "django\\core\\files\\storage\\memory.py": {
+            "file_path": "django\\core\\files\\storage\\memory.py",
+            "findings": [
+                {
+                    "file_path": "django\\core\\files\\storage\\memory.py",
+                    "function_name": "InMemoryStorage._save",
+                    "line_number": 238,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'InMemoryStorage._save' calls 'os.remove', classified as DELETE_OPERATION.",
+                    "evidence": "os.remove"
+                }
+            ]
+        },
+        "django\\core\\management\\commands\\makemessages.py": {
+            "file_path": "django\\core\\management\\commands\\makemessages.py",
+            "findings": [
+                {
+                    "file_path": "django\\core\\management\\commands\\makemessages.py",
+                    "function_name": "BuildFile.cleanup",
+                    "line_number": 145,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'BuildFile.cleanup' calls 'os.unlink', classified as DELETE_OPERATION.",
+                    "evidence": "os.unlink"
+                },
+                {
+                    "file_path": "django\\core\\management\\commands\\makemessages.py",
+                    "function_name": "Command.remove_potfiles",
+                    "line_number": 524,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'Command.remove_potfiles' calls 'os.unlink', classified as DELETE_OPERATION.",
+                    "evidence": "os.unlink"
+                }
+            ]
+        },
+        "django\\core\\management\\commands\\makemigrations.py": {
+            "file_path": "django\\core\\management\\commands\\makemigrations.py",
+            "findings": [
+                {
+                    "file_path": "django\\core\\management\\commands\\makemigrations.py",
+                    "function_name": "Command.write_migration_files",
+                    "line_number": 337,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'Command.write_migration_files' calls 'os.remove', classified as DELETE_OPERATION.",
+                    "evidence": "os.remove"
+                }
+            ]
+        },
+        "django\\core\\management\\commands\\shell.py": {
+            "file_path": "django\\core\\management\\commands\\shell.py",
+            "findings": [
+                {
+                    "file_path": "django\\core\\management\\commands\\shell.py",
+                    "function_name": "Command.python",
+                    "line_number": 67,
+                    "check_name": "dangerous_api_call",
+                    "category": "DYNAMIC_EXEC",
+                    "severity": "BLOCK",
+                    "detail": "Function 'Command.python' calls 'exec', classified as DYNAMIC_EXEC.",
+                    "evidence": "exec"
+                },
+                {
+                    "file_path": "django\\core\\management\\commands\\shell.py",
+                    "function_name": "Command.handle",
+                    "line_number": 258,
+                    "check_name": "dangerous_api_call",
+                    "category": "DYNAMIC_EXEC",
+                    "severity": "BLOCK",
+                    "detail": "Function 'Command.handle' calls 'exec', classified as DYNAMIC_EXEC.",
+                    "evidence": "exec"
+                }
+            ]
+        },
+        "django\\db\\migrations\\questioner.py": {
+            "file_path": "django\\db\\migrations\\questioner.py",
+            "findings": [
+                {
+                    "file_path": "django\\db\\migrations\\questioner.py",
+                    "function_name": "InteractiveMigrationQuestioner._ask_default",
+                    "line_number": 128,
+                    "check_name": "dangerous_api_call",
+                    "category": "DYNAMIC_EXEC",
+                    "severity": "BLOCK",
+                    "detail": "Function 'InteractiveMigrationQuestioner._ask_default' calls 'eval', classified as DYNAMIC_EXEC.",
+                    "evidence": "eval"
+                }
+            ]
+        },
+        "django\\db\\backends\\base\\client.py": {
+            "file_path": "django\\db\\backends\\base\\client.py",
+            "findings": [
+                {
+                    "file_path": "django\\db\\backends\\base\\client.py",
+                    "function_name": "BaseDatabaseClient.runshell",
+                    "line_number": 26,
+                    "check_name": "dangerous_api_call",
+                    "category": "PROCESS_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'BaseDatabaseClient.runshell' calls 'subprocess.run', classified as PROCESS_OPERATION.",
+                    "evidence": "subprocess.run"
+                }
+            ]
+        },
+        "django\\db\\backends\\mysql\\creation.py": {
+            "file_path": "django\\db\\backends\\mysql\\creation.py",
+            "findings": [
+                {
+                    "file_path": "django\\db\\backends\\mysql\\creation.py",
+                    "function_name": "DatabaseCreation._clone_db",
+                    "line_number": 62,
+                    "check_name": "dangerous_api_call",
+                    "category": "PROCESS_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'DatabaseCreation._clone_db' calls 'subprocess.Popen', classified as PROCESS_OPERATION.",
+                    "evidence": "subprocess.Popen"
+                }
+            ]
+        },
+        "django\\db\\backends\\sqlite3\\creation.py": {
+            "file_path": "django\\db\\backends\\sqlite3\\creation.py",
+            "findings": [
+                {
+                    "file_path": "django\\db\\backends\\sqlite3\\creation.py",
+                    "function_name": "DatabaseCreation._create_test_db",
+                    "line_number": 25,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'DatabaseCreation._create_test_db' calls 'os.remove', classified as DELETE_OPERATION.",
+                    "evidence": "os.remove"
+                },
+                {
+                    "file_path": "django\\db\\backends\\sqlite3\\creation.py",
+                    "function_name": "DatabaseCreation._clone_test_db",
+                    "line_number": 74,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'DatabaseCreation._clone_test_db' calls 'os.remove', classified as DELETE_OPERATION.",
+                    "evidence": "os.remove"
+                },
+                {
+                    "file_path": "django\\db\\backends\\sqlite3\\creation.py",
+                    "function_name": "DatabaseCreation._destroy_test_db",
+                    "line_number": 109,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'DatabaseCreation._destroy_test_db' calls 'os.remove', classified as DELETE_OPERATION.",
+                    "evidence": "os.remove"
+                }
+            ]
+        },
+        "tests\\admin_scripts\\tests.py": {
+            "file_path": "tests\\admin_scripts\\tests.py",
+            "findings": [
+                {
+                    "file_path": "tests\\admin_scripts\\tests.py",
+                    "function_name": "AdminScriptTestCase.run_test",
+                    "line_number": 117,
+                    "check_name": "dangerous_api_call",
+                    "category": "PROCESS_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'AdminScriptTestCase.run_test' calls 'subprocess.run', classified as PROCESS_OPERATION.",
+                    "evidence": "subprocess.run"
+                }
+            ]
+        },
+        "tests\\cache\\tests.py": {
+            "file_path": "tests\\cache\\tests.py",
+            "findings": [
+                {
+                    "file_path": "tests\\cache\\tests.py",
+                    "function_name": "FileBasedCacheTests.tearDown",
+                    "line_number": 1807,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "BLOCK",
+                    "detail": "Function 'FileBasedCacheTests.tearDown' calls 'shutil.rmtree', classified as DELETE_OPERATION.",
+                    "evidence": "shutil.rmtree"
+                },
+                {
+                    "file_path": "tests\\cache\\tests.py",
+                    "function_name": "FileBasedCacheTests.test_ignores_non_cache_files",
+                    "line_number": 1815,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'FileBasedCacheTests.test_ignores_non_cache_files' calls 'os.remove', classified as DELETE_OPERATION.",
+                    "evidence": "os.remove"
+                },
+                {
+                    "file_path": "tests\\cache\\tests.py",
+                    "function_name": "FileBasedCacheTests.test_get_ignores_enoent",
+                    "line_number": 1836,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'FileBasedCacheTests.test_get_ignores_enoent' calls 'os.unlink', classified as DELETE_OPERATION.",
+                    "evidence": "os.unlink"
+                }
+            ]
+        },
+        "tests\\dbshell\\test_mysql.py": {
+            "file_path": "tests\\dbshell\\test_mysql.py",
+            "findings": [
+                {
+                    "file_path": "tests\\dbshell\\test_mysql.py",
+                    "function_name": "MySqlDbshellCommandTestCase.test_crash_password_does_not_leak",
+                    "line_number": 203,
+                    "check_name": "dangerous_api_call",
+                    "category": "PROCESS_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'MySqlDbshellCommandTestCase.test_crash_password_does_not_leak' calls 'subprocess.run', classified as PROCESS_OPERATION.",
+                    "evidence": "subprocess.run"
+                }
+            ]
+        },
+        "tests\\dbshell\\test_postgresql.py": {
+            "file_path": "tests\\dbshell\\test_postgresql.py",
+            "findings": [
+                {
+                    "file_path": "tests\\dbshell\\test_postgresql.py",
+                    "function_name": "PostgreSqlDbshellCommandTestCase.test_crash_password_does_not_leak",
+                    "line_number": 177,
+                    "check_name": "dangerous_api_call",
+                    "category": "PROCESS_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'PostgreSqlDbshellCommandTestCase.test_crash_password_does_not_leak' calls 'subprocess.run', classified as PROCESS_OPERATION.",
+                    "evidence": "subprocess.run"
+                }
+            ]
+        },
+        "tests\\deprecation\\test_warn_about_external_use.py": {
+            "file_path": "tests\\deprecation\\test_warn_about_external_use.py",
+            "findings": [
+                {
+                    "file_path": "tests\\deprecation\\test_warn_about_external_use.py",
+                    "function_name": "WarnAboutExternalUseTests.test_does_not_mistake_third_party_packages_for_django",
+                    "line_number": 118,
+                    "check_name": "dangerous_api_call",
+                    "category": "DYNAMIC_EXEC",
+                    "severity": "BLOCK",
+                    "detail": "Function 'WarnAboutExternalUseTests.test_does_not_mistake_third_party_packages_for_django' calls 'exec', classified as DYNAMIC_EXEC.",
+                    "evidence": "exec"
+                },
+                {
+                    "file_path": "tests\\deprecation\\test_warn_about_external_use.py",
+                    "function_name": "WarnAboutExternalUseTests.test_warns_if_effective_caller_has_no_filename",
+                    "line_number": 148,
+                    "check_name": "dangerous_api_call",
+                    "category": "DYNAMIC_EXEC",
+                    "severity": "BLOCK",
+                    "detail": "Function 'WarnAboutExternalUseTests.test_warns_if_effective_caller_has_no_filename' calls 'exec', classified as DYNAMIC_EXEC.",
+                    "evidence": "exec"
+                }
+            ]
+        },
+        "tests\\files\\tests.py": {
+            "file_path": "tests\\files\\tests.py",
+            "findings": [
+                {
+                    "file_path": "tests\\files\\tests.py",
+                    "function_name": "FileTests.test_open_reopens_closed_file_and_returns_context_manager",
+                    "line_number": 58,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'FileTests.test_open_reopens_closed_file_and_returns_context_manager' calls 'os.unlink', classified as DELETE_OPERATION.",
+                    "evidence": "os.unlink"
+                },
+                {
+                    "file_path": "tests\\files\\tests.py",
+                    "function_name": "FileMoveSafeTests.test_file_move_ensure_truncation",
+                    "line_number": 502,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'FileMoveSafeTests.test_file_move_ensure_truncation' calls 'os.remove', classified as DELETE_OPERATION.",
+                    "evidence": "os.remove"
+                }
+            ]
+        },
+        "tests\\file_storage\\tests.py": {
+            "file_path": "tests\\file_storage\\tests.py",
+            "findings": [
+                {
+                    "file_path": "tests\\file_storage\\tests.py",
+                    "function_name": "FileFieldStorageTests.tearDown",
+                    "line_number": 736,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "BLOCK",
+                    "detail": "Function 'FileFieldStorageTests.tearDown' calls 'shutil.rmtree', classified as DELETE_OPERATION.",
+                    "evidence": "shutil.rmtree"
+                }
+            ]
+        },
+        "tests\\fixtures\\tests.py": {
+            "file_path": "tests\\fixtures\\tests.py",
+            "findings": [
+                {
+                    "file_path": "tests\\fixtures\\tests.py",
+                    "function_name": "DumpDataAssertMixin._dumpdata_assert",
+                    "line_number": 77,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'DumpDataAssertMixin._dumpdata_assert' calls 'os.remove', classified as DELETE_OPERATION.",
+                    "evidence": "os.remove"
+                }
+            ]
+        },
+        "tests\\i18n\\utils.py": {
+            "file_path": "tests\\i18n\\utils.py",
+            "findings": [
+                {
+                    "file_path": "tests\\i18n\\utils.py",
+                    "function_name": "RunInTmpDirMixin._rmrf",
+                    "line_number": 58,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "BLOCK",
+                    "detail": "Function 'RunInTmpDirMixin._rmrf' calls 'shutil.rmtree', classified as DELETE_OPERATION.",
+                    "evidence": "shutil.rmtree"
+                }
+            ]
+        },
+        "tests\\mail\\test_backends.py": {
+            "file_path": "tests\\mail\\test_backends.py",
+            "findings": [
+                {
+                    "file_path": "tests\\mail\\test_backends.py",
+                    "function_name": "FileBackendTests.flush_mailbox",
+                    "line_number": 349,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'FileBackendTests.flush_mailbox' calls 'os.unlink', classified as DELETE_OPERATION.",
+                    "evidence": "os.unlink"
+                }
+            ]
+        },
+        "tests\\migrations\\test_commands.py": {
+            "file_path": "tests\\migrations\\test_commands.py",
+            "findings": [
+                {
+                    "file_path": "tests\\migrations\\test_commands.py",
+                    "function_name": "MigrateTests.test_prune_deleted_squashed_migrations_in_replaces",
+                    "line_number": 1514,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'MigrateTests.test_prune_deleted_squashed_migrations_in_replaces' calls 'os.remove', classified as DELETE_OPERATION.",
+                    "evidence": "os.remove"
+                },
+                {
+                    "file_path": "tests\\migrations\\test_commands.py",
+                    "function_name": "MakeMigrationsTests.test_makemigrations_no_init_ambiguous",
+                    "line_number": 1887,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'MakeMigrationsTests.test_makemigrations_no_init_ambiguous' calls 'os.remove', classified as DELETE_OPERATION.",
+                    "evidence": "os.remove"
+                }
+            ]
+        },
+        "tests\\migrations\\test_loader.py": {
+            "file_path": "tests\\migrations\\test_loader.py",
+            "findings": [
+                {
+                    "file_path": "tests\\migrations\\test_loader.py",
+                    "function_name": "LoaderTests.test_loading_order_does_not_create_circular_dependency",
+                    "line_number": 657,
+                    "check_name": "dangerous_api_call",
+                    "category": "PROCESS_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'LoaderTests.test_loading_order_does_not_create_circular_dependency' calls 'subprocess.run', classified as PROCESS_OPERATION.",
+                    "evidence": "subprocess.run"
+                },
+                {
+                    "file_path": "tests\\migrations\\test_loader.py",
+                    "function_name": "PycLoaderTests.test_valid",
+                    "line_number": 726,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'PycLoaderTests.test_valid' calls 'os.remove', classified as DELETE_OPERATION.",
+                    "evidence": "os.remove"
+                }
+            ]
+        },
+        "tests\\migrations\\test_writer.py": {
+            "file_path": "tests\\migrations\\test_writer.py",
+            "findings": [
+                {
+                    "file_path": "tests\\migrations\\test_writer.py",
+                    "function_name": "WriterTests.safe_exec",
+                    "line_number": 271,
+                    "check_name": "dangerous_api_call",
+                    "category": "DYNAMIC_EXEC",
+                    "severity": "BLOCK",
+                    "detail": "Function 'WriterTests.safe_exec' calls 'exec', classified as DYNAMIC_EXEC.",
+                    "evidence": "exec"
+                }
+            ]
+        },
+        "tests\\model_fields\\test_imagefield.py": {
+            "file_path": "tests\\model_fields\\test_imagefield.py",
+            "findings": [
+                {
+                    "file_path": "tests\\model_fields\\test_imagefield.py",
+                    "function_name": "ImageFieldTestMixin.setUp",
+                    "line_number": 49,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "BLOCK",
+                    "detail": "Function 'ImageFieldTestMixin.setUp' calls 'shutil.rmtree', classified as DELETE_OPERATION.",
+                    "evidence": "shutil.rmtree"
+                },
+                {
+                    "file_path": "tests\\model_fields\\test_imagefield.py",
+                    "function_name": "ImageFieldTests.test_delete_when_missing",
+                    "line_number": 144,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'ImageFieldTests.test_delete_when_missing' calls 'os.remove', classified as DELETE_OPERATION.",
+                    "evidence": "os.remove"
+                }
+            ]
+        },
+        "tests\\model_forms\\tests.py": {
+            "file_path": "tests\\model_forms\\tests.py",
+            "findings": [
+                {
+                    "file_path": "tests\\model_forms\\tests.py",
+                    "function_name": "FileAndImageFieldTests.setUp",
+                    "line_number": 2488,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "BLOCK",
+                    "detail": "Function 'FileAndImageFieldTests.setUp' calls 'shutil.rmtree', classified as DELETE_OPERATION.",
+                    "evidence": "shutil.rmtree"
+                }
+            ]
+        },
+        "tests\\postgres_tests\\test_integration.py": {
+            "file_path": "tests\\postgres_tests\\test_integration.py",
+            "findings": [
+                {
+                    "file_path": "tests\\postgres_tests\\test_integration.py",
+                    "function_name": "PostgresIntegrationTests.test_check",
+                    "line_number": 9,
+                    "check_name": "dangerous_api_call",
+                    "category": "PROCESS_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'PostgresIntegrationTests.test_check' calls 'subprocess.run', classified as PROCESS_OPERATION.",
+                    "evidence": "subprocess.run"
+                }
+            ]
+        },
+        "tests\\shell\\tests.py": {
+            "file_path": "tests\\shell\\tests.py",
+            "findings": [
+                {
+                    "file_path": "tests\\shell\\tests.py",
+                    "function_name": "ShellCommandTestCase.test_no_settings",
+                    "line_number": 52,
+                    "check_name": "dangerous_api_call",
+                    "category": "PROCESS_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'ShellCommandTestCase.test_no_settings' calls 'subprocess.run', classified as PROCESS_OPERATION.",
+                    "evidence": "subprocess.run"
+                }
+            ]
+        },
+        "tests\\staticfiles_tests\\storage.py": {
+            "file_path": "tests\\staticfiles_tests\\storage.py",
+            "findings": [
+                {
+                    "file_path": "tests\\staticfiles_tests\\storage.py",
+                    "function_name": "PathNotImplementedStorage.delete",
+                    "line_number": 49,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'PathNotImplementedStorage.delete' calls 'os.remove', classified as DELETE_OPERATION.",
+                    "evidence": "os.remove"
+                }
+            ]
+        },
+        "tests\\staticfiles_tests\\test_management.py": {
+            "file_path": "tests\\staticfiles_tests\\test_management.py",
+            "findings": [
+                {
+                    "file_path": "tests\\staticfiles_tests\\test_management.py",
+                    "function_name": "TestCollectionClear.test_dir_not_exists",
+                    "line_number": 305,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "BLOCK",
+                    "detail": "Function 'TestCollectionClear.test_dir_not_exists' calls 'shutil.rmtree', classified as DELETE_OPERATION.",
+                    "evidence": "shutil.rmtree"
+                },
+                {
+                    "file_path": "tests\\staticfiles_tests\\test_management.py",
+                    "function_name": "TestInteractiveMessages.test_no_warning_when_staticdir_does_not_exist",
+                    "line_number": 387,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "BLOCK",
+                    "detail": "Function 'TestInteractiveMessages.test_no_warning_when_staticdir_does_not_exist' calls 'shutil.rmtree', classified as DELETE_OPERATION.",
+                    "evidence": "shutil.rmtree"
+                },
+                {
+                    "file_path": "tests\\staticfiles_tests\\test_management.py",
+                    "function_name": "TestCollectionLinks.test_broken_symlink",
+                    "line_number": 686,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'TestCollectionLinks.test_broken_symlink' calls 'os.unlink', classified as DELETE_OPERATION.",
+                    "evidence": "os.unlink"
+                }
+            ]
+        },
+        "tests\\staticfiles_tests\\test_storage.py": {
+            "file_path": "tests\\staticfiles_tests\\test_storage.py",
+            "findings": [
+                {
+                    "file_path": "tests\\staticfiles_tests\\test_storage.py",
+                    "function_name": "TestCollectionManifestStorage.tearDown",
+                    "line_number": 462,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'TestCollectionManifestStorage.tearDown' calls 'os.unlink', classified as DELETE_OPERATION.",
+                    "evidence": "os.unlink"
+                },
+                {
+                    "file_path": "tests\\staticfiles_tests\\test_storage.py",
+                    "function_name": "TestCollectionManifestStorage.test_clear_empties_manifest",
+                    "line_number": 504,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'TestCollectionManifestStorage.test_clear_empties_manifest' calls 'os.unlink', classified as DELETE_OPERATION.",
+                    "evidence": "os.unlink"
+                },
+                {
+                    "file_path": "tests\\staticfiles_tests\\test_storage.py",
+                    "function_name": "TestCollectionManifestStorage.test_manifest_hash",
+                    "line_number": 573,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'TestCollectionManifestStorage.test_manifest_hash' calls 'os.unlink', classified as DELETE_OPERATION.",
+                    "evidence": "os.unlink"
+                },
+                {
+                    "file_path": "tests\\staticfiles_tests\\test_storage.py",
+                    "function_name": "TestCustomManifestStorage.test_read_manifest_nonexistent",
+                    "line_number": 810,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'TestCustomManifestStorage.test_read_manifest_nonexistent' calls 'os.remove', classified as DELETE_OPERATION.",
+                    "evidence": "os.remove"
+                },
+                {
+                    "file_path": "tests\\staticfiles_tests\\test_storage.py",
+                    "function_name": "TestCustomManifestStorage.test_save_manifest_create",
+                    "line_number": 822,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'TestCustomManifestStorage.test_save_manifest_create' calls 'os.remove', classified as DELETE_OPERATION.",
+                    "evidence": "os.remove"
+                }
+            ]
+        },
+        "tests\\gis_tests\\gdal_tests\\test_raster.py": {
+            "file_path": "tests\\gis_tests\\gdal_tests\\test_raster.py",
+            "findings": [
+                {
+                    "file_path": "tests\\gis_tests\\gdal_tests\\test_raster.py",
+                    "function_name": "GDALBandTests._remove_aux_file",
+                    "line_number": 822,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'GDALBandTests._remove_aux_file' calls 'os.remove', classified as DELETE_OPERATION.",
+                    "evidence": "os.remove"
+                }
+            ]
+        },
+        "tests\\view_tests\\tests\\test_debug.py": {
+            "file_path": "tests\\view_tests\\tests\\test_debug.py",
+            "findings": [
+                {
+                    "file_path": "tests\\view_tests\\tests\\test_debug.py",
+                    "function_name": "ExceptionReporterTests.test_eol_support",
+                    "line_number": 636,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'ExceptionReporterTests.test_eol_support' calls 'os.unlink', classified as DELETE_OPERATION.",
+                    "evidence": "os.unlink"
+                },
+                {
+                    "file_path": "tests\\view_tests\\tests\\test_debug.py",
+                    "function_name": "ExceptionReporterTests.test_reporting_frames_without_source",
+                    "line_number": 912,
+                    "check_name": "dangerous_api_call",
+                    "category": "DYNAMIC_EXEC",
+                    "severity": "BLOCK",
+                    "detail": "Function 'ExceptionReporterTests.test_reporting_frames_without_source' calls 'exec', classified as DYNAMIC_EXEC.",
+                    "evidence": "exec"
+                },
+                {
+                    "file_path": "tests\\view_tests\\tests\\test_debug.py",
+                    "function_name": "ExceptionReporterTests.test_reporting_frames_source_not_match",
+                    "line_number": 947,
+                    "check_name": "dangerous_api_call",
+                    "category": "DYNAMIC_EXEC",
+                    "severity": "BLOCK",
+                    "detail": "Function 'ExceptionReporterTests.test_reporting_frames_source_not_match' calls 'exec', classified as DYNAMIC_EXEC.",
+                    "evidence": "exec"
+                }
+            ]
+        }
+    },
+    "decision_pipeline_candidate_source": "token-overlap-fallback",
+    "decision_pipeline_candidates": 100,
+    "decision_pipeline_analyzed": 100,
+    "decision_pipeline_safe": 31,
+    "decision_pipeline_review": 14,
+    "decision_pipeline_block": 55,
+    "decision_pipeline_opposing_detected": 0,
+    "decision_pipeline_errors": 0,
+    "decision_pipeline_results": [
+        {
+            "file_path": "C:\\repos\\django\\django\\shortcuts.py",
+            "file_path_b": null,
+            "function_a": "_get_queryset",
+            "function_b": "get_object_or_404",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.33,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 40,
+            "fusion_risk_level": "MEDIUM",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\django\\shortcuts.py",
+            "file_path_b": null,
+            "function_a": "_get_queryset",
+            "function_b": "get_list_or_404",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.35,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 40,
+            "fusion_risk_level": "MEDIUM",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\django\\shortcuts.py",
+            "file_path_b": null,
+            "function_a": "get_object_or_404",
+            "function_b": "aget_object_or_404",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.57,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "SAFE",
+            "fusion_risk_score": 17,
+            "fusion_risk_level": "LOW",
+            "fusion_opposing_detected": false,
+            "governance_action": "AUTO_APPLY",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\django\\shortcuts.py",
+            "file_path_b": null,
+            "function_a": "get_object_or_404",
+            "function_b": "get_list_or_404",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.71,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "SAFE",
+            "fusion_risk_score": 12,
+            "fusion_risk_level": "LOW",
+            "fusion_opposing_detected": false,
+            "governance_action": "AUTO_APPLY",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\django\\shortcuts.py",
+            "file_path_b": null,
+            "function_a": "get_object_or_404",
+            "function_b": "aget_list_or_404",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.32,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 40,
+            "fusion_risk_level": "MEDIUM",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\django\\shortcuts.py",
+            "file_path_b": null,
+            "function_a": "aget_object_or_404",
+            "function_b": "get_list_or_404",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.42,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "SAFE",
+            "fusion_risk_score": 23,
+            "fusion_risk_level": "LOW",
+            "fusion_opposing_detected": false,
+            "governance_action": "AUTO_APPLY",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\django\\shortcuts.py",
+            "file_path_b": null,
+            "function_a": "aget_object_or_404",
+            "function_b": "aget_list_or_404",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.8,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "SAFE",
+            "fusion_risk_score": 8,
+            "fusion_risk_level": "LOW",
+            "fusion_opposing_detected": false,
+            "governance_action": "AUTO_APPLY",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\django\\shortcuts.py",
+            "file_path_b": null,
+            "function_a": "get_list_or_404",
+            "function_b": "aget_list_or_404",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.57,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "SAFE",
+            "fusion_risk_score": 17,
+            "fusion_risk_level": "LOW",
+            "fusion_opposing_detected": false,
+            "governance_action": "AUTO_APPLY",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\docs\\lint.py",
+            "file_path_b": null,
+            "function_a": "django_check_file",
+            "function_b": "check_line_too_long_django",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.63,
+            "behavioral_tags_a": [
+                "FILE_READ"
+            ],
+            "behavioral_tags_b": [
+                "STATE_MUTATION"
+            ],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "MEDIUM",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 45,
+            "fusion_risk_level": "MEDIUM",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\docs\\lint.py",
+            "file_path_b": null,
+            "function_a": "django_check_file",
+            "function_b": "check_python_domain_in_roles",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.34,
+            "behavioral_tags_a": [
+                "FILE_READ"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 70,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "INDIVIDUAL_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\docs\\lint.py",
+            "file_path_b": null,
+            "function_a": "django_check_file",
+            "function_b": "check_absolute_targets_doc_role",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.2,
+            "behavioral_tags_a": [
+                "FILE_READ"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 70,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "INDIVIDUAL_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\docs\\lint.py",
+            "file_path_b": null,
+            "function_a": "check_line_too_long_django",
+            "function_b": "check_python_domain_in_roles",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.27,
+            "behavioral_tags_a": [
+                "STATE_MUTATION"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 70,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "INDIVIDUAL_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\docs\\lint.py",
+            "file_path_b": null,
+            "function_a": "check_line_too_long_django",
+            "function_b": "check_absolute_targets_doc_role",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.07,
+            "behavioral_tags_a": [
+                "STATE_MUTATION"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 70,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "INDIVIDUAL_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\docs\\lint.py",
+            "file_path_b": null,
+            "function_a": "check_python_domain_in_roles",
+            "function_b": "check_absolute_targets_doc_role",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.41,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "SAFE",
+            "fusion_risk_score": 24,
+            "fusion_risk_level": "LOW",
+            "fusion_opposing_detected": false,
+            "governance_action": "AUTO_APPLY",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\scripts\\archive_eol_stable_branches.py",
+            "file_path_b": null,
+            "function_a": "get_remote_branches",
+            "function_b": "get_branch_info",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.69,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 40,
+            "fusion_risk_level": "MEDIUM",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\scripts\\archive_eol_stable_branches.py",
+            "file_path_b": null,
+            "function_a": "get_remote_branches",
+            "function_b": "delete_remote_and_local_branch",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.62,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 40,
+            "fusion_risk_level": "MEDIUM",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\scripts\\archive_eol_stable_branches.py",
+            "file_path_b": null,
+            "function_a": "get_branch_info",
+            "function_b": "delete_remote_and_local_branch",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.44,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "SAFE",
+            "fusion_risk_score": 22,
+            "fusion_risk_level": "LOW",
+            "fusion_opposing_detected": false,
+            "governance_action": "AUTO_APPLY",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\scripts\\do_django_release.py",
+            "file_path_b": null,
+            "function_a": "build_artifacts",
+            "function_b": "find_release_artifacts",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.57,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "SAFE",
+            "fusion_risk_score": 17,
+            "fusion_risk_level": "LOW",
+            "fusion_opposing_detected": false,
+            "governance_action": "AUTO_APPLY",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\scripts\\do_django_release.py",
+            "file_path_b": null,
+            "function_a": "do_checksum",
+            "function_b": "create_checksum_file",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.76,
+            "behavioral_tags_a": [
+                "FILE_READ"
+            ],
+            "behavioral_tags_b": [
+                "FILE_READ",
+                "FILE_WRITE",
+                "STATE_MUTATION"
+            ],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "MEDIUM",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 40,
+            "fusion_risk_level": "MEDIUM",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\scripts\\manage_translations.py",
+            "file_path_b": null,
+            "function_a": "get_api_token",
+            "function_b": "get_api_response",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.69,
+            "behavioral_tags_a": [
+                "FILE_READ"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 42,
+            "fusion_risk_level": "MEDIUM",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\scripts\\manage_translations.py",
+            "file_path_b": null,
+            "function_a": "get_api_token",
+            "function_b": "_get_locale_dirs",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.09,
+            "behavioral_tags_a": [
+                "FILE_READ"
+            ],
+            "behavioral_tags_b": [
+                "STATE_MUTATION"
+            ],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "MEDIUM",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 70,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "INDIVIDUAL_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\scripts\\manage_translations.py",
+            "file_path_b": null,
+            "function_a": "get_api_response",
+            "function_b": "_get_locale_dirs",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.08,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [
+                "STATE_MUTATION"
+            ],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "MEDIUM",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 70,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "INDIVIDUAL_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\scripts\\manage_translations.py",
+            "file_path_b": null,
+            "function_a": "_tx_resource_slug_for_name",
+            "function_b": "_tx_resource_for_name",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.79,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "SAFE",
+            "fusion_risk_score": 8,
+            "fusion_risk_level": "LOW",
+            "fusion_opposing_detected": false,
+            "governance_action": "AUTO_APPLY",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\tests\\runtests.py",
+            "file_path_b": null,
+            "function_a": "get_test_modules",
+            "function_b": "get_label_module",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.42,
+            "behavioral_tags_a": [
+                "FILE_READ",
+                "STATE_MUTATION"
+            ],
+            "behavioral_tags_b": [
+                "FILE_READ"
+            ],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "MEDIUM",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 70,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "INDIVIDUAL_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\tests\\runtests.py",
+            "file_path_b": null,
+            "function_a": "get_test_modules",
+            "function_b": "get_filtered_test_modules",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.83,
+            "behavioral_tags_a": [
+                "FILE_READ",
+                "STATE_MUTATION"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 37,
+            "fusion_risk_level": "MEDIUM",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\tests\\runtests.py",
+            "file_path_b": null,
+            "function_a": "get_test_modules",
+            "function_b": "get_installed",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.27,
+            "behavioral_tags_a": [
+                "FILE_READ",
+                "STATE_MUTATION"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 70,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "INDIVIDUAL_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\tests\\runtests.py",
+            "file_path_b": null,
+            "function_a": "get_test_modules",
+            "function_b": "get_apps_to_install",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.14,
+            "behavioral_tags_a": [
+                "FILE_READ",
+                "STATE_MUTATION"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 70,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "INDIVIDUAL_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\tests\\runtests.py",
+            "file_path_b": null,
+            "function_a": "get_test_modules",
+            "function_b": "collect_test_modules",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.85,
+            "behavioral_tags_a": [
+                "FILE_READ",
+                "STATE_MUTATION"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 36,
+            "fusion_risk_level": "MEDIUM",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\tests\\runtests.py",
+            "file_path_b": null,
+            "function_a": "get_test_modules",
+            "function_b": "get_subprocess_args",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.15,
+            "behavioral_tags_a": [
+                "FILE_READ",
+                "STATE_MUTATION"
+            ],
+            "behavioral_tags_b": [
+                "STATE_MUTATION"
+            ],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "MEDIUM",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 70,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "INDIVIDUAL_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\tests\\runtests.py",
+            "file_path_b": null,
+            "function_a": "get_label_module",
+            "function_b": "get_filtered_test_modules",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.39,
+            "behavioral_tags_a": [
+                "FILE_READ"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 70,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "INDIVIDUAL_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\tests\\runtests.py",
+            "file_path_b": null,
+            "function_a": "get_label_module",
+            "function_b": "get_installed",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.23,
+            "behavioral_tags_a": [
+                "FILE_READ"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 70,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "INDIVIDUAL_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\tests\\runtests.py",
+            "file_path_b": null,
+            "function_a": "get_label_module",
+            "function_b": "get_apps_to_install",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.05,
+            "behavioral_tags_a": [
+                "FILE_READ"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 70,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "INDIVIDUAL_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\tests\\runtests.py",
+            "file_path_b": null,
+            "function_a": "get_label_module",
+            "function_b": "get_subprocess_args",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.13,
+            "behavioral_tags_a": [
+                "FILE_READ"
+            ],
+            "behavioral_tags_b": [
+                "STATE_MUTATION"
+            ],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "MEDIUM",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 70,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "INDIVIDUAL_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\tests\\runtests.py",
+            "file_path_b": null,
+            "function_a": "get_filtered_test_modules",
+            "function_b": "get_installed",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.15,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 40,
+            "fusion_risk_level": "MEDIUM",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\tests\\runtests.py",
+            "file_path_b": null,
+            "function_a": "get_filtered_test_modules",
+            "function_b": "get_apps_to_install",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.05,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 40,
+            "fusion_risk_level": "MEDIUM",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\tests\\runtests.py",
+            "file_path_b": null,
+            "function_a": "get_filtered_test_modules",
+            "function_b": "collect_test_modules",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.73,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 40,
+            "fusion_risk_level": "MEDIUM",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\tests\\runtests.py",
+            "file_path_b": null,
+            "function_a": "get_filtered_test_modules",
+            "function_b": "get_subprocess_args",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.2,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [
+                "STATE_MUTATION"
+            ],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "MEDIUM",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 70,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "INDIVIDUAL_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\tests\\runtests.py",
+            "file_path_b": null,
+            "function_a": "setup_collect_tests",
+            "function_b": "teardown_collect_tests",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.61,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 40,
+            "fusion_risk_level": "MEDIUM",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\tests\\runtests.py",
+            "file_path_b": null,
+            "function_a": "setup_collect_tests",
+            "function_b": "setup_run_tests",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.66,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [
+                "STATE_MUTATION"
+            ],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "MEDIUM",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 70,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "INDIVIDUAL_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\tests\\runtests.py",
+            "file_path_b": null,
+            "function_a": "setup_collect_tests",
+            "function_b": "teardown_run_tests",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.42,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 40,
+            "fusion_risk_level": "MEDIUM",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\tests\\runtests.py",
+            "file_path_b": null,
+            "function_a": "setup_collect_tests",
+            "function_b": "django_tests",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.47,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "SAFE",
+            "fusion_risk_score": 21,
+            "fusion_risk_level": "LOW",
+            "fusion_opposing_detected": false,
+            "governance_action": "AUTO_APPLY",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\tests\\runtests.py",
+            "file_path_b": null,
+            "function_a": "setup_collect_tests",
+            "function_b": "collect_test_modules",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.78,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 40,
+            "fusion_risk_level": "MEDIUM",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\tests\\runtests.py",
+            "file_path_b": null,
+            "function_a": "setup_collect_tests",
+            "function_b": "bisect_tests",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.37,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [
+                "DELETE_OPERATION"
+            ],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "HIGH",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 100,
+            "fusion_risk_level": "CRITICAL",
+            "fusion_opposing_detected": false,
+            "governance_action": "FREEZE_PATCH",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\tests\\runtests.py",
+            "file_path_b": null,
+            "function_a": "setup_collect_tests",
+            "function_b": "paired_tests",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.41,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [
+                "DELETE_OPERATION"
+            ],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "HIGH",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 100,
+            "fusion_risk_level": "CRITICAL",
+            "fusion_opposing_detected": false,
+            "governance_action": "FREEZE_PATCH",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\tests\\runtests.py",
+            "file_path_b": null,
+            "function_a": "teardown_collect_tests",
+            "function_b": "setup_run_tests",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.42,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [
+                "STATE_MUTATION"
+            ],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "MEDIUM",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 70,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "INDIVIDUAL_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\tests\\runtests.py",
+            "file_path_b": null,
+            "function_a": "teardown_collect_tests",
+            "function_b": "teardown_run_tests",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.87,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "SAFE",
+            "fusion_risk_score": 5,
+            "fusion_risk_level": "LOW",
+            "fusion_opposing_detected": false,
+            "governance_action": "AUTO_APPLY",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\tests\\runtests.py",
+            "file_path_b": null,
+            "function_a": "teardown_collect_tests",
+            "function_b": "django_tests",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.38,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 40,
+            "fusion_risk_level": "MEDIUM",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\tests\\runtests.py",
+            "file_path_b": null,
+            "function_a": "teardown_collect_tests",
+            "function_b": "collect_test_modules",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.55,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 40,
+            "fusion_risk_level": "MEDIUM",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\tests\\runtests.py",
+            "file_path_b": null,
+            "function_a": "teardown_collect_tests",
+            "function_b": "bisect_tests",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.33,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [
+                "DELETE_OPERATION"
+            ],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "HIGH",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 100,
+            "fusion_risk_level": "CRITICAL",
+            "fusion_opposing_detected": false,
+            "governance_action": "FREEZE_PATCH",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\tests\\runtests.py",
+            "file_path_b": null,
+            "function_a": "teardown_collect_tests",
+            "function_b": "paired_tests",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.42,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [
+                "DELETE_OPERATION"
+            ],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "HIGH",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 100,
+            "fusion_risk_level": "CRITICAL",
+            "fusion_opposing_detected": false,
+            "governance_action": "FREEZE_PATCH",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\tests\\runtests.py",
+            "file_path_b": null,
+            "function_a": "get_installed",
+            "function_b": "get_apps_to_install",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.58,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "SAFE",
+            "fusion_risk_score": 17,
+            "fusion_risk_level": "LOW",
+            "fusion_opposing_detected": false,
+            "governance_action": "AUTO_APPLY",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\tests\\runtests.py",
+            "file_path_b": null,
+            "function_a": "get_installed",
+            "function_b": "get_subprocess_args",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.04,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [
+                "STATE_MUTATION"
+            ],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "MEDIUM",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 70,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "INDIVIDUAL_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\tests\\runtests.py",
+            "file_path_b": null,
+            "function_a": "get_apps_to_install",
+            "function_b": "get_subprocess_args",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.02,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [
+                "STATE_MUTATION"
+            ],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "MEDIUM",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 70,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "INDIVIDUAL_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\tests\\runtests.py",
+            "file_path_b": null,
+            "function_a": "setup_run_tests",
+            "function_b": "teardown_run_tests",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.6,
+            "behavioral_tags_a": [
+                "STATE_MUTATION"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 46,
+            "fusion_risk_level": "MEDIUM",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\tests\\runtests.py",
+            "file_path_b": null,
+            "function_a": "setup_run_tests",
+            "function_b": "django_tests",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.47,
+            "behavioral_tags_a": [
+                "STATE_MUTATION"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 70,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "INDIVIDUAL_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\tests\\runtests.py",
+            "file_path_b": null,
+            "function_a": "setup_run_tests",
+            "function_b": "bisect_tests",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.25,
+            "behavioral_tags_a": [
+                "STATE_MUTATION"
+            ],
+            "behavioral_tags_b": [
+                "DELETE_OPERATION"
+            ],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "HIGH",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 100,
+            "fusion_risk_level": "CRITICAL",
+            "fusion_opposing_detected": false,
+            "governance_action": "FREEZE_PATCH",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\tests\\runtests.py",
+            "file_path_b": null,
+            "function_a": "setup_run_tests",
+            "function_b": "paired_tests",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.39,
+            "behavioral_tags_a": [
+                "STATE_MUTATION"
+            ],
+            "behavioral_tags_b": [
+                "DELETE_OPERATION"
+            ],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "HIGH",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 84,
+            "fusion_risk_level": "CRITICAL",
+            "fusion_opposing_detected": false,
+            "governance_action": "FREEZE_PATCH",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\tests\\runtests.py",
+            "file_path_b": null,
+            "function_a": "teardown_run_tests",
+            "function_b": "django_tests",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.4,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 40,
+            "fusion_risk_level": "MEDIUM",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\tests\\runtests.py",
+            "file_path_b": null,
+            "function_a": "teardown_run_tests",
+            "function_b": "bisect_tests",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.27,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [
+                "DELETE_OPERATION"
+            ],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "HIGH",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 100,
+            "fusion_risk_level": "CRITICAL",
+            "fusion_opposing_detected": false,
+            "governance_action": "FREEZE_PATCH",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\tests\\runtests.py",
+            "file_path_b": null,
+            "function_a": "teardown_run_tests",
+            "function_b": "paired_tests",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.41,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [
+                "DELETE_OPERATION"
+            ],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "HIGH",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 84,
+            "fusion_risk_level": "CRITICAL",
+            "fusion_opposing_detected": false,
+            "governance_action": "FREEZE_PATCH",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\tests\\runtests.py",
+            "file_path_b": null,
+            "function_a": "django_tests",
+            "function_b": "bisect_tests",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.24,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [
+                "DELETE_OPERATION"
+            ],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "HIGH",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 100,
+            "fusion_risk_level": "CRITICAL",
+            "fusion_opposing_detected": false,
+            "governance_action": "FREEZE_PATCH",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\tests\\runtests.py",
+            "file_path_b": null,
+            "function_a": "django_tests",
+            "function_b": "paired_tests",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.38,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [
+                "DELETE_OPERATION"
+            ],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "HIGH",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 100,
+            "fusion_risk_level": "CRITICAL",
+            "fusion_opposing_detected": false,
+            "governance_action": "FREEZE_PATCH",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\tests\\runtests.py",
+            "file_path_b": null,
+            "function_a": "bisect_tests",
+            "function_b": "paired_tests",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.37,
+            "behavioral_tags_a": [
+                "DELETE_OPERATION"
+            ],
+            "behavioral_tags_b": [
+                "DELETE_OPERATION"
+            ],
+            "behavioral_risk_a": "HIGH",
+            "behavioral_risk_b": "HIGH",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 100,
+            "fusion_risk_level": "CRITICAL",
+            "fusion_opposing_detected": false,
+            "governance_action": "FREEZE_PATCH",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\django\\conf\\__init__.py",
+            "file_path_b": null,
+            "function_a": "_check_email_settings_conflicts",
+            "function_b": "_show_settings_deprecation_warning",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.41,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "SAFE",
+            "fusion_risk_score": 24,
+            "fusion_risk_level": "LOW",
+            "fusion_opposing_detected": false,
+            "governance_action": "AUTO_APPLY",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\django\\core\\signing.py",
+            "file_path_b": null,
+            "function_a": "b62_encode",
+            "function_b": "b62_decode",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.87,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "SAFE",
+            "fusion_risk_score": 5,
+            "fusion_risk_level": "LOW",
+            "fusion_opposing_detected": false,
+            "governance_action": "AUTO_APPLY",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\django\\core\\signing.py",
+            "file_path_b": null,
+            "function_a": "b62_encode",
+            "function_b": "b64_encode",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.85,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "SAFE",
+            "fusion_risk_score": 6,
+            "fusion_risk_level": "LOW",
+            "fusion_opposing_detected": false,
+            "governance_action": "AUTO_APPLY",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\django\\core\\signing.py",
+            "file_path_b": null,
+            "function_a": "b62_decode",
+            "function_b": "b64_decode",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.84,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "SAFE",
+            "fusion_risk_score": 6,
+            "fusion_risk_level": "LOW",
+            "fusion_opposing_detected": false,
+            "governance_action": "AUTO_APPLY",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\django\\core\\signing.py",
+            "file_path_b": null,
+            "function_a": "b64_encode",
+            "function_b": "b64_decode",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.88,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "SAFE",
+            "fusion_risk_score": 5,
+            "fusion_risk_level": "LOW",
+            "fusion_opposing_detected": false,
+            "governance_action": "AUTO_APPLY",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\django\\core\\signing.py",
+            "file_path_b": null,
+            "function_a": "_cookie_signer_key",
+            "function_b": "get_cookie_signer",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.84,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [
+                "OBJECT_CREATION"
+            ],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "MEDIUM",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 36,
+            "fusion_risk_level": "MEDIUM",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\django\\core\\validators.py",
+            "file_path_b": null,
+            "function_a": "validate_integer",
+            "function_b": "validate_ipv4_address",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.43,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "SAFE",
+            "fusion_risk_score": 23,
+            "fusion_risk_level": "LOW",
+            "fusion_opposing_detected": false,
+            "governance_action": "AUTO_APPLY",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\django\\core\\validators.py",
+            "file_path_b": null,
+            "function_a": "validate_integer",
+            "function_b": "validate_ipv6_address",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.41,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "SAFE",
+            "fusion_risk_score": 24,
+            "fusion_risk_level": "LOW",
+            "fusion_opposing_detected": false,
+            "governance_action": "AUTO_APPLY",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\django\\core\\validators.py",
+            "file_path_b": null,
+            "function_a": "validate_integer",
+            "function_b": "validate_ipv46_address",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.41,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "SAFE",
+            "fusion_risk_score": 24,
+            "fusion_risk_level": "LOW",
+            "fusion_opposing_detected": false,
+            "governance_action": "AUTO_APPLY",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\django\\core\\validators.py",
+            "file_path_b": null,
+            "function_a": "validate_integer",
+            "function_b": "validate_image_file_extension",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.35,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [
+                "OBJECT_CREATION"
+            ],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "MEDIUM",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 70,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "INDIVIDUAL_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\django\\core\\validators.py",
+            "file_path_b": null,
+            "function_a": "validate_ipv4_address",
+            "function_b": "validate_ipv6_address",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.8,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "SAFE",
+            "fusion_risk_score": 8,
+            "fusion_risk_level": "LOW",
+            "fusion_opposing_detected": false,
+            "governance_action": "AUTO_APPLY",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\django\\core\\validators.py",
+            "file_path_b": null,
+            "function_a": "validate_ipv4_address",
+            "function_b": "validate_ipv46_address",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.8,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "SAFE",
+            "fusion_risk_score": 8,
+            "fusion_risk_level": "LOW",
+            "fusion_opposing_detected": false,
+            "governance_action": "AUTO_APPLY",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\django\\core\\validators.py",
+            "file_path_b": null,
+            "function_a": "validate_ipv4_address",
+            "function_b": "ip_address_validators",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.78,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "SAFE",
+            "fusion_risk_score": 8,
+            "fusion_risk_level": "LOW",
+            "fusion_opposing_detected": false,
+            "governance_action": "AUTO_APPLY",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\django\\core\\validators.py",
+            "file_path_b": null,
+            "function_a": "validate_ipv4_address",
+            "function_b": "validate_image_file_extension",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.28,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [
+                "OBJECT_CREATION"
+            ],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "MEDIUM",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 70,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "INDIVIDUAL_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\django\\core\\validators.py",
+            "file_path_b": null,
+            "function_a": "validate_ipv6_address",
+            "function_b": "validate_ipv46_address",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.75,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "SAFE",
+            "fusion_risk_score": 10,
+            "fusion_risk_level": "LOW",
+            "fusion_opposing_detected": false,
+            "governance_action": "AUTO_APPLY",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\django\\core\\validators.py",
+            "file_path_b": null,
+            "function_a": "validate_ipv6_address",
+            "function_b": "ip_address_validators",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.68,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "SAFE",
+            "fusion_risk_score": 12,
+            "fusion_risk_level": "LOW",
+            "fusion_opposing_detected": false,
+            "governance_action": "AUTO_APPLY",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\django\\core\\validators.py",
+            "file_path_b": null,
+            "function_a": "validate_ipv6_address",
+            "function_b": "validate_image_file_extension",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.26,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [
+                "OBJECT_CREATION"
+            ],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "MEDIUM",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 70,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "INDIVIDUAL_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\django\\core\\validators.py",
+            "file_path_b": null,
+            "function_a": "validate_ipv46_address",
+            "function_b": "ip_address_validators",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.7,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "SAFE",
+            "fusion_risk_score": 12,
+            "fusion_risk_level": "LOW",
+            "fusion_opposing_detected": false,
+            "governance_action": "AUTO_APPLY",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\django\\core\\validators.py",
+            "file_path_b": null,
+            "function_a": "validate_ipv46_address",
+            "function_b": "validate_image_file_extension",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.23,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [
+                "OBJECT_CREATION"
+            ],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "MEDIUM",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 70,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "INDIVIDUAL_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\django\\core\\validators.py",
+            "file_path_b": null,
+            "function_a": "get_available_image_extensions",
+            "function_b": "validate_image_file_extension",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.65,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [
+                "OBJECT_CREATION"
+            ],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "MEDIUM",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 70,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "INDIVIDUAL_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\django\\db\\transaction.py",
+            "file_path_b": null,
+            "function_a": "get_connection",
+            "function_b": "get_autocommit",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.18,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 40,
+            "fusion_risk_level": "MEDIUM",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\django\\db\\transaction.py",
+            "file_path_b": null,
+            "function_a": "get_connection",
+            "function_b": "get_rollback",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.1,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 40,
+            "fusion_risk_level": "MEDIUM",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\django\\db\\transaction.py",
+            "file_path_b": null,
+            "function_a": "get_autocommit",
+            "function_b": "set_autocommit",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.91,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "SAFE",
+            "fusion_risk_score": 3,
+            "fusion_risk_level": "LOW",
+            "fusion_opposing_detected": false,
+            "governance_action": "AUTO_APPLY",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\django\\db\\transaction.py",
+            "file_path_b": null,
+            "function_a": "get_autocommit",
+            "function_b": "get_rollback",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.18,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 40,
+            "fusion_risk_level": "MEDIUM",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\django\\db\\transaction.py",
+            "file_path_b": null,
+            "function_a": "set_autocommit",
+            "function_b": "set_rollback",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.25,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 40,
+            "fusion_risk_level": "MEDIUM",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\django\\db\\transaction.py",
+            "file_path_b": null,
+            "function_a": "commit",
+            "function_b": "savepoint_commit",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.63,
+            "behavioral_tags_a": [
+                "DATABASE_OPERATION"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "HIGH",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 100,
+            "fusion_risk_level": "CRITICAL",
+            "fusion_opposing_detected": false,
+            "governance_action": "FREEZE_PATCH",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\django\\db\\transaction.py",
+            "file_path_b": null,
+            "function_a": "commit",
+            "function_b": "on_commit",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.86,
+            "behavioral_tags_a": [
+                "DATABASE_OPERATION"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "HIGH",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 66,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "INDIVIDUAL_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\django\\db\\transaction.py",
+            "file_path_b": null,
+            "function_a": "rollback",
+            "function_b": "savepoint_rollback",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.71,
+            "behavioral_tags_a": [
+                "DATABASE_OPERATION",
+                "RECOVERY_OPERATION"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "HIGH",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 72,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "INDIVIDUAL_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\django\\db\\transaction.py",
+            "file_path_b": null,
+            "function_a": "rollback",
+            "function_b": "get_rollback",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.95,
+            "behavioral_tags_a": [
+                "DATABASE_OPERATION",
+                "RECOVERY_OPERATION"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "HIGH",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 62,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "INDIVIDUAL_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\django\\db\\transaction.py",
+            "file_path_b": null,
+            "function_a": "rollback",
+            "function_b": "set_rollback",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.89,
+            "behavioral_tags_a": [
+                "DATABASE_OPERATION",
+                "RECOVERY_OPERATION"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "HIGH",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 64,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "INDIVIDUAL_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\django\\db\\transaction.py",
+            "file_path_b": null,
+            "function_a": "rollback",
+            "function_b": "mark_for_rollback_on_error",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.67,
+            "behavioral_tags_a": [
+                "DATABASE_OPERATION",
+                "RECOVERY_OPERATION"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "HIGH",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 73,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "INDIVIDUAL_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\django\\db\\transaction.py",
+            "file_path_b": null,
+            "function_a": "savepoint",
+            "function_b": "savepoint_create",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.88,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "SAFE",
+            "fusion_risk_score": 5,
+            "fusion_risk_level": "LOW",
+            "fusion_opposing_detected": false,
+            "governance_action": "AUTO_APPLY",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\django\\db\\transaction.py",
+            "file_path_b": null,
+            "function_a": "savepoint",
+            "function_b": "savepoint_rollback",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.7,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 40,
+            "fusion_risk_level": "MEDIUM",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\django\\db\\transaction.py",
+            "file_path_b": null,
+            "function_a": "savepoint",
+            "function_b": "savepoint_commit",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.79,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "SAFE",
+            "fusion_risk_score": 8,
+            "fusion_risk_level": "LOW",
+            "fusion_opposing_detected": false,
+            "governance_action": "AUTO_APPLY",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\django\\db\\transaction.py",
+            "file_path_b": null,
+            "function_a": "savepoint_create",
+            "function_b": "savepoint_rollback",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.63,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "SAFE",
+            "fusion_risk_score": 15,
+            "fusion_risk_level": "LOW",
+            "fusion_opposing_detected": false,
+            "governance_action": "AUTO_APPLY",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\django\\db\\transaction.py",
+            "file_path_b": null,
+            "function_a": "savepoint_create",
+            "function_b": "savepoint_commit",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.77,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "SAFE",
+            "fusion_risk_score": 9,
+            "fusion_risk_level": "LOW",
+            "fusion_opposing_detected": false,
+            "governance_action": "AUTO_APPLY",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\django\\django\\db\\transaction.py",
+            "file_path_b": null,
+            "function_a": "savepoint_rollback",
+            "function_b": "savepoint_commit",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.69,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 40,
+            "fusion_risk_level": "MEDIUM",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        }
+    ],
+    "v1_findings_count": 0,
+    "v1_findings": [],
+    "total_runtime_seconds": 126.5,
+    "status": "PASSED"
+}

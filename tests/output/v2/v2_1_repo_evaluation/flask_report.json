@@ -1,0 +1,588 @@
+{
+    "test_case": "TC_V2_047",
+    "repository_name": "flask",
+    "repository_path": "C:\\repos\\flask",
+    "pair_cap": 25,
+    "v1_max_files": 25,
+    "repository_files": 83,
+    "governance_findings_total": 4,
+    "governance_safe": 0,
+    "governance_review": 2,
+    "governance_block": 2,
+    "governance_per_file": {
+        "examples\\tutorial\\flaskr\\__init__.py": {
+            "file_path": "examples\\tutorial\\flaskr\\__init__.py",
+            "findings": [
+                {
+                    "file_path": "examples\\tutorial\\flaskr\\__init__.py",
+                    "function_name": "create_app",
+                    "line_number": 13,
+                    "check_name": "global_state_mutation",
+                    "category": "GLOBAL_MUTATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'create_app' mutates module-level name 'DATABASE'.",
+                    "evidence": "DATABASE=os.path.join(app.instance_path, \"flaskr.sqlite\"),"
+                }
+            ]
+        },
+        "examples\\tutorial\\tests\\conftest.py": {
+            "file_path": "examples\\tutorial\\tests\\conftest.py",
+            "findings": [
+                {
+                    "file_path": "examples\\tutorial\\tests\\conftest.py",
+                    "function_name": "app",
+                    "line_number": 16,
+                    "check_name": "dangerous_api_call",
+                    "category": "DELETE_OPERATION",
+                    "severity": "REVIEW",
+                    "detail": "Function 'app' calls 'os.unlink', classified as DELETE_OPERATION.",
+                    "evidence": "os.unlink"
+                }
+            ]
+        },
+        "src\\flask\\cli.py": {
+            "file_path": "src\\flask\\cli.py",
+            "findings": [
+                {
+                    "file_path": "src\\flask\\cli.py",
+                    "function_name": "shell_command",
+                    "line_number": 1001,
+                    "check_name": "dangerous_api_call",
+                    "category": "DYNAMIC_EXEC",
+                    "severity": "BLOCK",
+                    "detail": "Function 'shell_command' calls 'eval', classified as DYNAMIC_EXEC.",
+                    "evidence": "eval"
+                }
+            ]
+        },
+        "src\\flask\\config.py": {
+            "file_path": "src\\flask\\config.py",
+            "findings": [
+                {
+                    "file_path": "src\\flask\\config.py",
+                    "function_name": "Config.from_pyfile",
+                    "line_number": 187,
+                    "check_name": "dangerous_api_call",
+                    "category": "DYNAMIC_EXEC",
+                    "severity": "BLOCK",
+                    "detail": "Function 'Config.from_pyfile' calls 'exec', classified as DYNAMIC_EXEC.",
+                    "evidence": "exec"
+                }
+            ]
+        }
+    },
+    "decision_pipeline_candidate_source": "token-overlap-fallback",
+    "decision_pipeline_candidates": 25,
+    "decision_pipeline_analyzed": 25,
+    "decision_pipeline_safe": 6,
+    "decision_pipeline_review": 11,
+    "decision_pipeline_block": 8,
+    "decision_pipeline_opposing_detected": 0,
+    "decision_pipeline_errors": 0,
+    "decision_pipeline_results": [
+        {
+            "file_path": "C:\\repos\\flask\\tests\\conftest.py",
+            "file_path_b": null,
+            "function_a": "_standard_os_environ",
+            "function_b": "_reset_os_environ",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.63,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [
+                "STATE_MUTATION"
+            ],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "MEDIUM",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 70,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "INDIVIDUAL_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\flask\\tests\\conftest.py",
+            "file_path_b": null,
+            "function_a": "app",
+            "function_b": "app_ctx",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.66,
+            "behavioral_tags_a": [
+                "STATE_MUTATION"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 70,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "INDIVIDUAL_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\flask\\tests\\conftest.py",
+            "file_path_b": null,
+            "function_a": "app_ctx",
+            "function_b": "req_ctx",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.57,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "SAFE",
+            "fusion_risk_score": 17,
+            "fusion_risk_level": "LOW",
+            "fusion_opposing_detected": false,
+            "governance_action": "AUTO_APPLY",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\flask\\tests\\conftest.py",
+            "file_path_b": null,
+            "function_a": "modules_tmp_path",
+            "function_b": "modules_tmp_path_prefix",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.9,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "SAFE",
+            "fusion_risk_score": 4,
+            "fusion_risk_level": "LOW",
+            "fusion_opposing_detected": false,
+            "governance_action": "AUTO_APPLY",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\flask\\examples\\celery\\src\\task_app\\__init__.py",
+            "file_path_b": null,
+            "function_a": "create_app",
+            "function_b": "celery_init_app",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.33,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 40,
+            "fusion_risk_level": "MEDIUM",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\flask\\examples\\tutorial\\flaskr\\auth.py",
+            "file_path_b": null,
+            "function_a": "login_required",
+            "function_b": "login",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.83,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [
+                "AUTH_OPERATION",
+                "DATABASE_OPERATION"
+            ],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "HIGH",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 67,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "INDIVIDUAL_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\flask\\examples\\tutorial\\flaskr\\db.py",
+            "file_path_b": null,
+            "function_a": "init_db",
+            "function_b": "init_db_command",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.88,
+            "behavioral_tags_a": [
+                "FILE_READ"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 35,
+            "fusion_risk_level": "MEDIUM",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\flask\\examples\\tutorial\\flaskr\\db.py",
+            "file_path_b": null,
+            "function_a": "init_db",
+            "function_b": "init_app",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.68,
+            "behavioral_tags_a": [
+                "FILE_READ"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 42,
+            "fusion_risk_level": "MEDIUM",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\flask\\examples\\tutorial\\flaskr\\db.py",
+            "file_path_b": null,
+            "function_a": "init_db_command",
+            "function_b": "init_app",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.57,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "SAFE",
+            "fusion_risk_score": 17,
+            "fusion_risk_level": "LOW",
+            "fusion_opposing_detected": false,
+            "governance_action": "AUTO_APPLY",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\flask\\src\\flask\\app.py",
+            "file_path_b": null,
+            "function_a": "remove_ctx",
+            "function_b": "add_ctx",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.75,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "SAFE",
+            "fusion_risk_score": 10,
+            "fusion_risk_level": "LOW",
+            "fusion_opposing_detected": false,
+            "governance_action": "AUTO_APPLY",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\flask\\src\\flask\\cli.py",
+            "file_path_b": null,
+            "function_a": "find_best_app",
+            "function_b": "find_app_by_string",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.53,
+            "behavioral_tags_a": [
+                "OBJECT_CREATION"
+            ],
+            "behavioral_tags_b": [
+                "OBJECT_CREATION"
+            ],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "MEDIUM",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 70,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "INDIVIDUAL_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\flask\\src\\flask\\cli.py",
+            "file_path_b": null,
+            "function_a": "find_best_app",
+            "function_b": "locate_app",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.63,
+            "behavioral_tags_a": [
+                "OBJECT_CREATION"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 45,
+            "fusion_risk_level": "MEDIUM",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\flask\\src\\flask\\cli.py",
+            "file_path_b": null,
+            "function_a": "find_best_app",
+            "function_b": "_set_app",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.44,
+            "behavioral_tags_a": [
+                "OBJECT_CREATION"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 52,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\flask\\src\\flask\\cli.py",
+            "file_path_b": null,
+            "function_a": "_called_with_wrong_args",
+            "function_b": "with_appcontext",
+            "semantic_decision": "BLOCK",
+            "semantic_score": -0.01,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 40,
+            "fusion_risk_level": "MEDIUM",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\flask\\src\\flask\\cli.py",
+            "file_path_b": null,
+            "function_a": "find_app_by_string",
+            "function_b": "locate_app",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.66,
+            "behavioral_tags_a": [
+                "OBJECT_CREATION"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 70,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "INDIVIDUAL_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\flask\\src\\flask\\cli.py",
+            "file_path_b": null,
+            "function_a": "find_app_by_string",
+            "function_b": "_set_app",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.37,
+            "behavioral_tags_a": [
+                "OBJECT_CREATION"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 70,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "INDIVIDUAL_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\flask\\src\\flask\\cli.py",
+            "file_path_b": null,
+            "function_a": "locate_app",
+            "function_b": "_set_app",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.53,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "SAFE",
+            "fusion_risk_score": 19,
+            "fusion_risk_level": "LOW",
+            "fusion_opposing_detected": false,
+            "governance_action": "AUTO_APPLY",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\flask\\src\\flask\\cli.py",
+            "file_path_b": null,
+            "function_a": "_set_app",
+            "function_b": "_set_debug",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.39,
+            "behavioral_tags_a": [],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "LOW",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "SAFE",
+            "fusion_risk_score": 24,
+            "fusion_risk_level": "LOW",
+            "fusion_opposing_detected": false,
+            "governance_action": "AUTO_APPLY",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\flask\\src\\flask\\cli.py",
+            "file_path_b": null,
+            "function_a": "run_command",
+            "function_b": "shell_command",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.66,
+            "behavioral_tags_a": [
+                "OBJECT_CREATION"
+            ],
+            "behavioral_tags_b": [
+                "FILE_READ",
+                "STATE_MUTATION"
+            ],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "MEDIUM",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 44,
+            "fusion_risk_level": "MEDIUM",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\flask\\src\\flask\\cli.py",
+            "file_path_b": null,
+            "function_a": "run_command",
+            "function_b": "routes_command",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.39,
+            "behavioral_tags_a": [
+                "OBJECT_CREATION"
+            ],
+            "behavioral_tags_b": [
+                "STATE_MUTATION"
+            ],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "MEDIUM",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 54,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\flask\\src\\flask\\cli.py",
+            "file_path_b": null,
+            "function_a": "shell_command",
+            "function_b": "routes_command",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.34,
+            "behavioral_tags_a": [
+                "FILE_READ",
+                "STATE_MUTATION"
+            ],
+            "behavioral_tags_b": [
+                "STATE_MUTATION"
+            ],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "MEDIUM",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 70,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "INDIVIDUAL_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\flask\\src\\flask\\ctx.py",
+            "file_path_b": null,
+            "function_a": "after_this_request",
+            "function_b": "copy_current_request_context",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.31,
+            "behavioral_tags_a": [
+                "STATE_MUTATION"
+            ],
+            "behavioral_tags_b": [
+                "FILE_WRITE",
+                "STATE_MUTATION"
+            ],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "MEDIUM",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 70,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "INDIVIDUAL_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\flask\\src\\flask\\ctx.py",
+            "file_path_b": null,
+            "function_a": "after_this_request",
+            "function_b": "has_request_context",
+            "semantic_decision": "REVIEW",
+            "semantic_score": 0.46,
+            "behavioral_tags_a": [
+                "STATE_MUTATION"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "REVIEW",
+            "fusion_risk_score": 52,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "BATCH_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\flask\\src\\flask\\ctx.py",
+            "file_path_b": null,
+            "function_a": "copy_current_request_context",
+            "function_b": "has_request_context",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.56,
+            "behavioral_tags_a": [
+                "FILE_WRITE",
+                "STATE_MUTATION"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 70,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "INDIVIDUAL_APPROVAL",
+            "pipeline_complete": true
+        },
+        {
+            "file_path": "C:\\repos\\flask\\src\\flask\\ctx.py",
+            "file_path_b": null,
+            "function_a": "copy_current_request_context",
+            "function_b": "has_app_context",
+            "semantic_decision": "BLOCK",
+            "semantic_score": 0.33,
+            "behavioral_tags_a": [
+                "FILE_WRITE",
+                "STATE_MUTATION"
+            ],
+            "behavioral_tags_b": [],
+            "behavioral_risk_a": "MEDIUM",
+            "behavioral_risk_b": "LOW",
+            "fusion_decision": "BLOCK",
+            "fusion_risk_score": 70,
+            "fusion_risk_level": "HIGH",
+            "fusion_opposing_detected": false,
+            "governance_action": "INDIVIDUAL_APPROVAL",
+            "pipeline_complete": true
+        }
+    ],
+    "v1_findings_count": 0,
+    "v1_findings": [],
+    "total_runtime_seconds": 8.4,
+    "status": "PASSED"
+}

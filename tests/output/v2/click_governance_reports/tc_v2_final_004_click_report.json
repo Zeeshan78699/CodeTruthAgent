@@ -1,0 +1,231 @@
+{
+    "test_case": "TC_V2_FINAL_004_CLICK_GOVERNANCE",
+    "baseline": {
+        "repo_root": "C:\\scratch\\click\\src\\click",
+        "files_scanned": 17,
+        "files_with_findings": 3,
+        "total_findings": 7,
+        "findings_by_check": {
+            "dangerous_api_call": 7
+        },
+        "findings_by_severity": {
+            "REVIEW": 6,
+            "BLOCK": 1
+        },
+        "per_file": {
+            "shell_completion.py": {
+                "file_path": "shell_completion.py",
+                "findings": [
+                    {
+                        "file_path": "shell_completion.py",
+                        "function_name": "BashComplete._check_version",
+                        "line_number": 312,
+                        "check_name": "dangerous_api_call",
+                        "category": "PROCESS_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'BashComplete._check_version' calls 'subprocess.run', classified as PROCESS_OPERATION.",
+                        "evidence": "subprocess.run"
+                    }
+                ]
+            },
+            "testing.py": {
+                "file_path": "testing.py",
+                "findings": [
+                    {
+                        "file_path": "testing.py",
+                        "function_name": "CliRunner.isolated_filesystem",
+                        "line_number": 706,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "BLOCK",
+                        "detail": "Function 'CliRunner.isolated_filesystem' calls 'shutil.rmtree', classified as DELETE_OPERATION.",
+                        "evidence": "shutil.rmtree"
+                    }
+                ]
+            },
+            "_termui_impl.py": {
+                "file_path": "_termui_impl.py",
+                "findings": [
+                    {
+                        "file_path": "_termui_impl.py",
+                        "function_name": "_pipepager",
+                        "line_number": 455,
+                        "check_name": "dangerous_api_call",
+                        "category": "PROCESS_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function '_pipepager' calls 'subprocess.Popen', classified as PROCESS_OPERATION.",
+                        "evidence": "subprocess.Popen"
+                    },
+                    {
+                        "file_path": "_termui_impl.py",
+                        "function_name": "_tempfilepager",
+                        "line_number": 559,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function '_tempfilepager' calls 'os.unlink', classified as DELETE_OPERATION.",
+                        "evidence": "os.unlink"
+                    },
+                    {
+                        "file_path": "_termui_impl.py",
+                        "function_name": "Editor.edit_files",
+                        "line_number": 670,
+                        "check_name": "dangerous_api_call",
+                        "category": "PROCESS_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'Editor.edit_files' calls 'subprocess.Popen', classified as PROCESS_OPERATION.",
+                        "evidence": "subprocess.Popen"
+                    },
+                    {
+                        "file_path": "_termui_impl.py",
+                        "function_name": "Editor.edit",
+                        "line_number": 708,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'Editor.edit' calls 'os.unlink', classified as DELETE_OPERATION.",
+                        "evidence": "os.unlink"
+                    },
+                    {
+                        "file_path": "_termui_impl.py",
+                        "function_name": "open_url",
+                        "line_number": 756,
+                        "check_name": "dangerous_api_call",
+                        "category": "PROCESS_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'open_url' calls 'subprocess.Popen', classified as PROCESS_OPERATION.",
+                        "evidence": "subprocess.Popen"
+                    }
+                ]
+            }
+        }
+    },
+    "with_probe": {
+        "repo_root": "C:\\Users\\Zeeshan\\AppData\\Local\\Temp\\tmpkyb7p5z7\\click",
+        "files_scanned": 18,
+        "files_with_findings": 4,
+        "total_findings": 9,
+        "findings_by_check": {
+            "dangerous_api_call": 8,
+            "global_state_mutation": 1
+        },
+        "findings_by_severity": {
+            "REVIEW": 8,
+            "BLOCK": 1
+        },
+        "per_file": {
+            "shell_completion.py": {
+                "file_path": "shell_completion.py",
+                "findings": [
+                    {
+                        "file_path": "shell_completion.py",
+                        "function_name": "BashComplete._check_version",
+                        "line_number": 312,
+                        "check_name": "dangerous_api_call",
+                        "category": "PROCESS_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'BashComplete._check_version' calls 'subprocess.run', classified as PROCESS_OPERATION.",
+                        "evidence": "subprocess.run"
+                    }
+                ]
+            },
+            "testing.py": {
+                "file_path": "testing.py",
+                "findings": [
+                    {
+                        "file_path": "testing.py",
+                        "function_name": "CliRunner.isolated_filesystem",
+                        "line_number": 706,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "BLOCK",
+                        "detail": "Function 'CliRunner.isolated_filesystem' calls 'shutil.rmtree', classified as DELETE_OPERATION.",
+                        "evidence": "shutil.rmtree"
+                    }
+                ]
+            },
+            "_codetruth_probe.py": {
+                "file_path": "_codetruth_probe.py",
+                "findings": [
+                    {
+                        "file_path": "_codetruth_probe.py",
+                        "function_name": "mutate_global_database",
+                        "line_number": 15,
+                        "check_name": "global_state_mutation",
+                        "category": "GLOBAL_MUTATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'mutate_global_database' mutates module-level name 'DATABASE'.",
+                        "evidence": "DATABASE[user_id] = payload"
+                    },
+                    {
+                        "file_path": "_codetruth_probe.py",
+                        "function_name": "delete_file_unsafely",
+                        "line_number": 19,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'delete_file_unsafely' calls 'os.remove', classified as DELETE_OPERATION.",
+                        "evidence": "os.remove"
+                    }
+                ]
+            },
+            "_termui_impl.py": {
+                "file_path": "_termui_impl.py",
+                "findings": [
+                    {
+                        "file_path": "_termui_impl.py",
+                        "function_name": "_pipepager",
+                        "line_number": 455,
+                        "check_name": "dangerous_api_call",
+                        "category": "PROCESS_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function '_pipepager' calls 'subprocess.Popen', classified as PROCESS_OPERATION.",
+                        "evidence": "subprocess.Popen"
+                    },
+                    {
+                        "file_path": "_termui_impl.py",
+                        "function_name": "_tempfilepager",
+                        "line_number": 559,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function '_tempfilepager' calls 'os.unlink', classified as DELETE_OPERATION.",
+                        "evidence": "os.unlink"
+                    },
+                    {
+                        "file_path": "_termui_impl.py",
+                        "function_name": "Editor.edit_files",
+                        "line_number": 670,
+                        "check_name": "dangerous_api_call",
+                        "category": "PROCESS_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'Editor.edit_files' calls 'subprocess.Popen', classified as PROCESS_OPERATION.",
+                        "evidence": "subprocess.Popen"
+                    },
+                    {
+                        "file_path": "_termui_impl.py",
+                        "function_name": "Editor.edit",
+                        "line_number": 708,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'Editor.edit' calls 'os.unlink', classified as DELETE_OPERATION.",
+                        "evidence": "os.unlink"
+                    },
+                    {
+                        "file_path": "_termui_impl.py",
+                        "function_name": "open_url",
+                        "line_number": 756,
+                        "check_name": "dangerous_api_call",
+                        "category": "PROCESS_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'open_url' calls 'subprocess.Popen', classified as PROCESS_OPERATION.",
+                        "evidence": "subprocess.Popen"
+                    }
+                ]
+            }
+        }
+    },
+    "delta_findings": 2,
+    "verdict": "GOVERNANCE_WIRING_WORKS"
+}

@@ -1,0 +1,2557 @@
+{
+    "test_case": "TC_V2_FINAL_012_BANDIT_DJANGO_COMPARISON",
+    "target": "C:\\scratch\\django\\django",
+    "match_method": "file basename + risk-pattern test_id family",
+    "totals": {
+        "codetruth_findings": 26,
+        "bandit_findings": 281,
+        "codetruth_findings_with_bandit_overlap": 8,
+        "bandit_findings_outside_codetruth_categories": 263
+    },
+    "category_to_bandit_tests_map": {
+        "PROCESS_OPERATION": [
+            "B404",
+            "B602",
+            "B603",
+            "B605",
+            "B606",
+            "B607"
+        ],
+        "NETWORK_OPERATION": [
+            "B113"
+        ],
+        "DELETE_OPERATION": [],
+        "DYNAMIC_EXEC": [
+            "B102",
+            "B307"
+        ],
+        "GLOBAL_MUTATION": []
+    },
+    "overlap_detail": [
+        {
+            "codetruth_finding": {
+                "file_basename": "autoreload.py",
+                "file": "utils\\autoreload.py",
+                "function": "restart_with_reloader",
+                "line": 273,
+                "severity": "REVIEW",
+                "category": "PROCESS_OPERATION",
+                "evidence": "subprocess.run"
+            },
+            "bandit_match_count": 2,
+            "bandit_matches": [
+                {
+                    "file_basename": "autoreload.py",
+                    "file": "C:\\scratch\\django\\django\\utils\\autoreload.py",
+                    "line": 5,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B404",
+                    "test_name": "blacklist",
+                    "issue_text": "Consider possible security implications associated with the subprocess module."
+                },
+                {
+                    "file_basename": "autoreload.py",
+                    "file": "C:\\scratch\\django\\django\\utils\\autoreload.py",
+                    "line": 290,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B603",
+                    "test_name": "subprocess_without_shell_equals_true",
+                    "issue_text": "subprocess call - check for execution of untrusted input."
+                }
+            ],
+            "overlap": true
+        },
+        {
+            "codetruth_finding": {
+                "file_basename": "version.py",
+                "file": "utils\\version.py",
+                "function": "get_git_changeset",
+                "line": 78,
+                "severity": "REVIEW",
+                "category": "PROCESS_OPERATION",
+                "evidence": "subprocess.run"
+            },
+            "bandit_match_count": 3,
+            "bandit_matches": [
+                {
+                    "file_basename": "version.py",
+                    "file": "C:\\scratch\\django\\django\\utils\\version.py",
+                    "line": 4,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B404",
+                    "test_name": "blacklist",
+                    "issue_text": "Consider possible security implications associated with the subprocess module."
+                },
+                {
+                    "file_basename": "version.py",
+                    "file": "C:\\scratch\\django\\django\\utils\\version.py",
+                    "line": 90,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B607",
+                    "test_name": "start_process_with_partial_path",
+                    "issue_text": "Starting a process with a partial executable path"
+                },
+                {
+                    "file_basename": "version.py",
+                    "file": "C:\\scratch\\django\\django\\utils\\version.py",
+                    "line": 93,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B602",
+                    "test_name": "subprocess_popen_with_shell_equals_true",
+                    "issue_text": "subprocess call with shell=True seems safe, but may be changed in the future, consider rewriting without shell"
+                }
+            ],
+            "overlap": true
+        },
+        {
+            "codetruth_finding": {
+                "file_basename": "file.py",
+                "file": "contrib\\sessions\\backends\\file.py",
+                "function": "SessionStore.save",
+                "line": 123,
+                "severity": "REVIEW",
+                "category": "DELETE_OPERATION",
+                "evidence": "os.unlink"
+            },
+            "bandit_match_count": 0,
+            "bandit_matches": [],
+            "overlap": false
+        },
+        {
+            "codetruth_finding": {
+                "file_basename": "file.py",
+                "file": "contrib\\sessions\\backends\\file.py",
+                "function": "SessionStore.delete",
+                "line": 195,
+                "severity": "REVIEW",
+                "category": "DELETE_OPERATION",
+                "evidence": "os.unlink"
+            },
+            "bandit_match_count": 0,
+            "bandit_matches": [],
+            "overlap": false
+        },
+        {
+            "codetruth_finding": {
+                "file_basename": "collectstatic.py",
+                "file": "contrib\\staticfiles\\management\\commands\\collectstatic.py",
+                "function": "Command.clear_dir",
+                "line": 269,
+                "severity": "REVIEW",
+                "category": "DELETE_OPERATION",
+                "evidence": "os.unlink"
+            },
+            "bandit_match_count": 0,
+            "bandit_matches": [],
+            "overlap": false
+        },
+        {
+            "codetruth_finding": {
+                "file_basename": "collectstatic.py",
+                "file": "contrib\\staticfiles\\management\\commands\\collectstatic.py",
+                "function": "Command.link_file",
+                "line": 349,
+                "severity": "REVIEW",
+                "category": "DELETE_OPERATION",
+                "evidence": "os.unlink"
+            },
+            "bandit_match_count": 0,
+            "bandit_matches": [],
+            "overlap": false
+        },
+        {
+            "codetruth_finding": {
+                "file_basename": "move.py",
+                "file": "core\\files\\move.py",
+                "function": "file_move_safe",
+                "line": 16,
+                "severity": "REVIEW",
+                "category": "DELETE_OPERATION",
+                "evidence": "os.remove"
+            },
+            "bandit_match_count": 0,
+            "bandit_matches": [],
+            "overlap": false
+        },
+        {
+            "codetruth_finding": {
+                "file_basename": "uploadhandler.py",
+                "file": "core\\files\\uploadhandler.py",
+                "function": "TemporaryFileUploadHandler.upload_interrupted",
+                "line": 184,
+                "severity": "REVIEW",
+                "category": "DELETE_OPERATION",
+                "evidence": "os.remove"
+            },
+            "bandit_match_count": 0,
+            "bandit_matches": [],
+            "overlap": false
+        },
+        {
+            "codetruth_finding": {
+                "file_basename": "templates.py",
+                "file": "core\\management\\templates.py",
+                "function": "TemplateCommand.handle",
+                "line": 88,
+                "severity": "REVIEW",
+                "category": "DELETE_OPERATION",
+                "evidence": "os.remove"
+            },
+            "bandit_match_count": 0,
+            "bandit_matches": [],
+            "overlap": false
+        },
+        {
+            "codetruth_finding": {
+                "file_basename": "templates.py",
+                "file": "core\\management\\templates.py",
+                "function": "TemplateCommand.handle",
+                "line": 88,
+                "severity": "BLOCK",
+                "category": "DELETE_OPERATION",
+                "evidence": "shutil.rmtree"
+            },
+            "bandit_match_count": 0,
+            "bandit_matches": [],
+            "overlap": false
+        },
+        {
+            "codetruth_finding": {
+                "file_basename": "utils.py",
+                "file": "core\\management\\utils.py",
+                "function": "run_formatters",
+                "line": 166,
+                "severity": "REVIEW",
+                "category": "PROCESS_OPERATION",
+                "evidence": "subprocess.run"
+            },
+            "bandit_match_count": 4,
+            "bandit_matches": [
+                {
+                    "file_basename": "utils.py",
+                    "file": "C:\\scratch\\django\\django\\core\\management\\utils.py",
+                    "line": 4,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B404",
+                    "test_name": "blacklist",
+                    "issue_text": "Consider possible security implications associated with the subprocess module."
+                },
+                {
+                    "file_basename": "utils.py",
+                    "file": "C:\\scratch\\django\\django\\core\\management\\utils.py",
+                    "line": 8,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B404",
+                    "test_name": "blacklist",
+                    "issue_text": "Consider possible security implications associated with the subprocess module."
+                },
+                {
+                    "file_basename": "utils.py",
+                    "file": "C:\\scratch\\django\\django\\core\\management\\utils.py",
+                    "line": 24,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B603",
+                    "test_name": "subprocess_without_shell_equals_true",
+                    "issue_text": "subprocess call - check for execution of untrusted input."
+                },
+                {
+                    "file_basename": "utils.py",
+                    "file": "C:\\scratch\\django\\django\\core\\management\\utils.py",
+                    "line": 175,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B603",
+                    "test_name": "subprocess_without_shell_equals_true",
+                    "issue_text": "subprocess call - check for execution of untrusted input."
+                }
+            ],
+            "overlap": true
+        },
+        {
+            "codetruth_finding": {
+                "file_basename": "filebased.py",
+                "file": "core\\cache\\backends\\filebased.py",
+                "function": "FileBasedCache.set",
+                "line": 48,
+                "severity": "REVIEW",
+                "category": "DELETE_OPERATION",
+                "evidence": "os.remove"
+            },
+            "bandit_match_count": 0,
+            "bandit_matches": [],
+            "overlap": false
+        },
+        {
+            "codetruth_finding": {
+                "file_basename": "filebased.py",
+                "file": "core\\cache\\backends\\filebased.py",
+                "function": "FileBasedCache._delete",
+                "line": 83,
+                "severity": "REVIEW",
+                "category": "DELETE_OPERATION",
+                "evidence": "os.remove"
+            },
+            "bandit_match_count": 0,
+            "bandit_matches": [],
+            "overlap": false
+        },
+        {
+            "codetruth_finding": {
+                "file_basename": "filesystem.py",
+                "file": "core\\files\\storage\\filesystem.py",
+                "function": "FileSystemStorage.delete",
+                "line": 156,
+                "severity": "REVIEW",
+                "category": "DELETE_OPERATION",
+                "evidence": "os.remove"
+            },
+            "bandit_match_count": 0,
+            "bandit_matches": [],
+            "overlap": false
+        },
+        {
+            "codetruth_finding": {
+                "file_basename": "memory.py",
+                "file": "core\\files\\storage\\memory.py",
+                "function": "InMemoryStorage._save",
+                "line": 238,
+                "severity": "REVIEW",
+                "category": "DELETE_OPERATION",
+                "evidence": "os.remove"
+            },
+            "bandit_match_count": 0,
+            "bandit_matches": [],
+            "overlap": false
+        },
+        {
+            "codetruth_finding": {
+                "file_basename": "makemessages.py",
+                "file": "core\\management\\commands\\makemessages.py",
+                "function": "BuildFile.cleanup",
+                "line": 145,
+                "severity": "REVIEW",
+                "category": "DELETE_OPERATION",
+                "evidence": "os.unlink"
+            },
+            "bandit_match_count": 0,
+            "bandit_matches": [],
+            "overlap": false
+        },
+        {
+            "codetruth_finding": {
+                "file_basename": "makemessages.py",
+                "file": "core\\management\\commands\\makemessages.py",
+                "function": "Command.remove_potfiles",
+                "line": 524,
+                "severity": "REVIEW",
+                "category": "DELETE_OPERATION",
+                "evidence": "os.unlink"
+            },
+            "bandit_match_count": 0,
+            "bandit_matches": [],
+            "overlap": false
+        },
+        {
+            "codetruth_finding": {
+                "file_basename": "makemigrations.py",
+                "file": "core\\management\\commands\\makemigrations.py",
+                "function": "Command.write_migration_files",
+                "line": 337,
+                "severity": "REVIEW",
+                "category": "DELETE_OPERATION",
+                "evidence": "os.remove"
+            },
+            "bandit_match_count": 0,
+            "bandit_matches": [],
+            "overlap": false
+        },
+        {
+            "codetruth_finding": {
+                "file_basename": "shell.py",
+                "file": "core\\management\\commands\\shell.py",
+                "function": "Command.python",
+                "line": 67,
+                "severity": "BLOCK",
+                "category": "DYNAMIC_EXEC",
+                "evidence": "exec"
+            },
+            "bandit_match_count": 3,
+            "bandit_matches": [
+                {
+                    "file_basename": "shell.py",
+                    "file": "C:\\scratch\\django\\django\\core\\management\\commands\\shell.py",
+                    "line": 88,
+                    "severity": "MEDIUM",
+                    "confidence": "HIGH",
+                    "test_id": "B102",
+                    "test_name": "exec_used",
+                    "issue_text": "Use of exec detected."
+                },
+                {
+                    "file_basename": "shell.py",
+                    "file": "C:\\scratch\\django\\django\\core\\management\\commands\\shell.py",
+                    "line": 261,
+                    "severity": "MEDIUM",
+                    "confidence": "HIGH",
+                    "test_id": "B102",
+                    "test_name": "exec_used",
+                    "issue_text": "Use of exec detected."
+                },
+                {
+                    "file_basename": "shell.py",
+                    "file": "C:\\scratch\\django\\django\\core\\management\\commands\\shell.py",
+                    "line": 271,
+                    "severity": "MEDIUM",
+                    "confidence": "HIGH",
+                    "test_id": "B102",
+                    "test_name": "exec_used",
+                    "issue_text": "Use of exec detected."
+                }
+            ],
+            "overlap": true
+        },
+        {
+            "codetruth_finding": {
+                "file_basename": "shell.py",
+                "file": "core\\management\\commands\\shell.py",
+                "function": "Command.handle",
+                "line": 258,
+                "severity": "BLOCK",
+                "category": "DYNAMIC_EXEC",
+                "evidence": "exec"
+            },
+            "bandit_match_count": 3,
+            "bandit_matches": [
+                {
+                    "file_basename": "shell.py",
+                    "file": "C:\\scratch\\django\\django\\core\\management\\commands\\shell.py",
+                    "line": 88,
+                    "severity": "MEDIUM",
+                    "confidence": "HIGH",
+                    "test_id": "B102",
+                    "test_name": "exec_used",
+                    "issue_text": "Use of exec detected."
+                },
+                {
+                    "file_basename": "shell.py",
+                    "file": "C:\\scratch\\django\\django\\core\\management\\commands\\shell.py",
+                    "line": 261,
+                    "severity": "MEDIUM",
+                    "confidence": "HIGH",
+                    "test_id": "B102",
+                    "test_name": "exec_used",
+                    "issue_text": "Use of exec detected."
+                },
+                {
+                    "file_basename": "shell.py",
+                    "file": "C:\\scratch\\django\\django\\core\\management\\commands\\shell.py",
+                    "line": 271,
+                    "severity": "MEDIUM",
+                    "confidence": "HIGH",
+                    "test_id": "B102",
+                    "test_name": "exec_used",
+                    "issue_text": "Use of exec detected."
+                }
+            ],
+            "overlap": true
+        },
+        {
+            "codetruth_finding": {
+                "file_basename": "questioner.py",
+                "file": "db\\migrations\\questioner.py",
+                "function": "InteractiveMigrationQuestioner._ask_default",
+                "line": 128,
+                "severity": "BLOCK",
+                "category": "DYNAMIC_EXEC",
+                "evidence": "eval"
+            },
+            "bandit_match_count": 1,
+            "bandit_matches": [
+                {
+                    "file_basename": "questioner.py",
+                    "file": "C:\\scratch\\django\\django\\db\\migrations\\questioner.py",
+                    "line": 168,
+                    "severity": "MEDIUM",
+                    "confidence": "HIGH",
+                    "test_id": "B307",
+                    "test_name": "blacklist",
+                    "issue_text": "Use of possibly insecure function - consider using safer ast.literal_eval."
+                }
+            ],
+            "overlap": true
+        },
+        {
+            "codetruth_finding": {
+                "file_basename": "client.py",
+                "file": "db\\backends\\base\\client.py",
+                "function": "BaseDatabaseClient.runshell",
+                "line": 26,
+                "severity": "REVIEW",
+                "category": "PROCESS_OPERATION",
+                "evidence": "subprocess.run"
+            },
+            "bandit_match_count": 2,
+            "bandit_matches": [
+                {
+                    "file_basename": "client.py",
+                    "file": "C:\\scratch\\django\\django\\db\\backends\\base\\client.py",
+                    "line": 2,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B404",
+                    "test_name": "blacklist",
+                    "issue_text": "Consider possible security implications associated with the subprocess module."
+                },
+                {
+                    "file_basename": "client.py",
+                    "file": "C:\\scratch\\django\\django\\db\\backends\\base\\client.py",
+                    "line": 31,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B603",
+                    "test_name": "subprocess_without_shell_equals_true",
+                    "issue_text": "subprocess call - check for execution of untrusted input."
+                }
+            ],
+            "overlap": true
+        },
+        {
+            "codetruth_finding": {
+                "file_basename": "creation.py",
+                "file": "db\\backends\\mysql\\creation.py",
+                "function": "DatabaseCreation._clone_db",
+                "line": 62,
+                "severity": "REVIEW",
+                "category": "PROCESS_OPERATION",
+                "evidence": "subprocess.Popen"
+            },
+            "bandit_match_count": 3,
+            "bandit_matches": [
+                {
+                    "file_basename": "creation.py",
+                    "file": "C:\\scratch\\django\\django\\db\\backends\\mysql\\creation.py",
+                    "line": 2,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B404",
+                    "test_name": "blacklist",
+                    "issue_text": "Consider possible security implications associated with the subprocess module."
+                },
+                {
+                    "file_basename": "creation.py",
+                    "file": "C:\\scratch\\django\\django\\db\\backends\\mysql\\creation.py",
+                    "line": 78,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B603",
+                    "test_name": "subprocess_without_shell_equals_true",
+                    "issue_text": "subprocess call - check for execution of untrusted input."
+                },
+                {
+                    "file_basename": "creation.py",
+                    "file": "C:\\scratch\\django\\django\\db\\backends\\mysql\\creation.py",
+                    "line": 81,
+                    "severity": "LOW",
+                    "confidence": "HIGH",
+                    "test_id": "B603",
+                    "test_name": "subprocess_without_shell_equals_true",
+                    "issue_text": "subprocess call - check for execution of untrusted input."
+                }
+            ],
+            "overlap": true
+        },
+        {
+            "codetruth_finding": {
+                "file_basename": "creation.py",
+                "file": "db\\backends\\sqlite3\\creation.py",
+                "function": "DatabaseCreation._create_test_db",
+                "line": 25,
+                "severity": "REVIEW",
+                "category": "DELETE_OPERATION",
+                "evidence": "os.remove"
+            },
+            "bandit_match_count": 0,
+            "bandit_matches": [],
+            "overlap": false
+        },
+        {
+            "codetruth_finding": {
+                "file_basename": "creation.py",
+                "file": "db\\backends\\sqlite3\\creation.py",
+                "function": "DatabaseCreation._clone_test_db",
+                "line": 74,
+                "severity": "REVIEW",
+                "category": "DELETE_OPERATION",
+                "evidence": "os.remove"
+            },
+            "bandit_match_count": 0,
+            "bandit_matches": [],
+            "overlap": false
+        },
+        {
+            "codetruth_finding": {
+                "file_basename": "creation.py",
+                "file": "db\\backends\\sqlite3\\creation.py",
+                "function": "DatabaseCreation._destroy_test_db",
+                "line": 109,
+                "severity": "REVIEW",
+                "category": "DELETE_OPERATION",
+                "evidence": "os.remove"
+            },
+            "bandit_match_count": 0,
+            "bandit_matches": [],
+            "overlap": false
+        }
+    ],
+    "severity_pairs": [
+        {
+            "file": "autoreload.py",
+            "function": "restart_with_reloader",
+            "codetruth_severity": "REVIEW",
+            "bandit_severity_highest": "LOW",
+            "bandit_match_count": 2
+        },
+        {
+            "file": "version.py",
+            "function": "get_git_changeset",
+            "codetruth_severity": "REVIEW",
+            "bandit_severity_highest": "LOW",
+            "bandit_match_count": 3
+        },
+        {
+            "file": "utils.py",
+            "function": "run_formatters",
+            "codetruth_severity": "REVIEW",
+            "bandit_severity_highest": "LOW",
+            "bandit_match_count": 4
+        },
+        {
+            "file": "shell.py",
+            "function": "Command.python",
+            "codetruth_severity": "BLOCK",
+            "bandit_severity_highest": "MEDIUM",
+            "bandit_match_count": 3
+        },
+        {
+            "file": "shell.py",
+            "function": "Command.handle",
+            "codetruth_severity": "BLOCK",
+            "bandit_severity_highest": "MEDIUM",
+            "bandit_match_count": 3
+        },
+        {
+            "file": "questioner.py",
+            "function": "InteractiveMigrationQuestioner._ask_default",
+            "codetruth_severity": "BLOCK",
+            "bandit_severity_highest": "MEDIUM",
+            "bandit_match_count": 1
+        },
+        {
+            "file": "client.py",
+            "function": "BaseDatabaseClient.runshell",
+            "codetruth_severity": "REVIEW",
+            "bandit_severity_highest": "LOW",
+            "bandit_match_count": 2
+        },
+        {
+            "file": "creation.py",
+            "function": "DatabaseCreation._clone_db",
+            "codetruth_severity": "REVIEW",
+            "bandit_severity_highest": "LOW",
+            "bandit_match_count": 3
+        }
+    ],
+    "bandit_unique_by_test_id": {
+        "B110": [
+            {
+                "file": "C:\\scratch\\django\\django\\apps\\config.py",
+                "line": 112,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Try, Except, Pass detected."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\apps\\config.py",
+                "line": 163,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Try, Except, Pass detected."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\sessions\\backends\\base.py",
+                "line": 144,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Try, Except, Pass detected."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\http\\response.py",
+                "line": 339,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Try, Except, Pass detected."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\http\\response.py",
+                "line": 414,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Try, Except, Pass detected."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\utils\\http.py",
+                "line": 146,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Try, Except, Pass detected."
+            }
+        ],
+        "B105": [
+            {
+                "file": "C:\\scratch\\django\\django\\conf\\global_settings.py",
+                "line": 215,
+                "severity": "LOW",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible hardcoded password: ''"
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\conf\\global_settings.py",
+                "line": 279,
+                "severity": "LOW",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible hardcoded password: ''"
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\auth\\hashers.py",
+                "line": 25,
+                "severity": "LOW",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible hardcoded password: '!'"
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\auth\\management\\commands\\createsuperuser.py",
+                "line": 23,
+                "severity": "LOW",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible hardcoded password: 'password'"
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\auth\\views.py",
+                "line": 246,
+                "severity": "LOW",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible hardcoded password: '_password_reset_token'"
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\auth\\views.py",
+                "line": 262,
+                "severity": "LOW",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible hardcoded password: 'set-password'"
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\core\\checks\\security\\base.py",
+                "line": 22,
+                "severity": "LOW",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible hardcoded password: 'django-insecure-'"
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\backends\\oracle\\creation.py",
+                "line": 292,
+                "severity": "LOW",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible hardcoded password: 'ALTER USER %(user)s IDENTIFIED BY \"%(password)s\"'"
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\backends\\sqlite3\\introspection.py",
+                "line": 450,
+                "severity": "LOW",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible hardcoded password: 'COLLATE'"
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\middleware\\csrf.py",
+                "line": 33,
+                "severity": "LOW",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible hardcoded password: 'CSRF token missing.'"
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\middleware\\csrf.py",
+                "line": 343,
+                "severity": "LOW",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible hardcoded password: 'POST'"
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\middleware\\csrf.py",
+                "line": 365,
+                "severity": "LOW",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible hardcoded password: ''"
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\middleware\\csrf.py",
+                "line": 376,
+                "severity": "LOW",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible hardcoded password: ''"
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\middleware\\csrf.py",
+                "line": 389,
+                "severity": "LOW",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible hardcoded password: 'POST'"
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\defaulttags.py",
+                "line": 79,
+                "severity": "LOW",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible hardcoded password: 'NOTPROVIDED'"
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\smartif.py",
+                "line": 171,
+                "severity": "LOW",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible hardcoded password: 'is'"
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\smartif.py",
+                "line": 172,
+                "severity": "LOW",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible hardcoded password: 'is not'"
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\smartif.py",
+                "line": 174,
+                "severity": "LOW",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible hardcoded password: 'not'"
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\smartif.py",
+                "line": 175,
+                "severity": "LOW",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible hardcoded password: 'not in'"
+            }
+        ],
+        "B613": [
+            {
+                "file": "C:\\scratch\\django\\django\\conf\\locale\\ar\\formats.py",
+                "line": 10,
+                "severity": "HIGH",
+                "confidence": "MEDIUM",
+                "issue_text": "A Python source file contains bidirectional control characters ('\\u200f')."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\conf\\locale\\ckb\\formats.py",
+                "line": 11,
+                "severity": "HIGH",
+                "confidence": "MEDIUM",
+                "issue_text": "A Python source file contains bidirectional control characters ('\\u200f')."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\conf\\locale\\fa\\formats.py",
+                "line": 11,
+                "severity": "HIGH",
+                "confidence": "MEDIUM",
+                "issue_text": "A Python source file contains bidirectional control characters ('\\u200f')."
+            }
+        ],
+        "B703": [
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\admin\\helpers.py",
+                "line": 161,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\admin\\helpers.py",
+                "line": 193,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\admin\\helpers.py",
+                "line": 200,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\admin\\options.py",
+                "line": 426,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\admin\\options.py",
+                "line": 428,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\admin\\templatetags\\admin_filters.py",
+                "line": 79,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\admin\\templatetags\\admin_list.py",
+                "line": 106,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\admin\\templatetags\\admin_list.py",
+                "line": 257,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\admin\\templatetags\\admin_list.py",
+                "line": 308,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\admin\\templatetags\\admin_list.py",
+                "line": 339,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\admindocs\\utils.py",
+                "line": 92,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\admindocs\\utils.py",
+                "line": 268,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\flatpages\\views.py",
+                "line": 67,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\flatpages\\views.py",
+                "line": 68,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\humanize\\templatetags\\humanize.py",
+                "line": 69,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\messages\\storage\\cookie.py",
+                "line": 38,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\forms\\utils.py",
+                "line": 55,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\forms\\widgets.py",
+                "line": 186,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\forms\\widgets.py",
+                "line": 372,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\base.py",
+                "line": 824,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\base.py",
+                "line": 834,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\base.py",
+                "line": 922,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\base.py",
+                "line": 951,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\base.py",
+                "line": 1107,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\defaultfilters.py",
+                "line": 49,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\defaultfilters.py",
+                "line": 185,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\defaultfilters.py",
+                "line": 213,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\defaultfilters.py",
+                "line": 244,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\defaultfilters.py",
+                "line": 386,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\defaultfilters.py",
+                "line": 398,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\defaultfilters.py",
+                "line": 448,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\defaultfilters.py",
+                "line": 494,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\defaultfilters.py",
+                "line": 508,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\defaultfilters.py",
+                "line": 515,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\defaultfilters.py",
+                "line": 525,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\defaultfilters.py",
+                "line": 621,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\defaultfilters.py",
+                "line": 738,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\defaulttags.py",
+                "line": 61,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\defaulttags.py",
+                "line": 256,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\loader_tags.py",
+                "line": 82,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\templatetags\\i18n.py",
+                "line": 96,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\templatetags\\i18n.py",
+                "line": 201,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\utils\\html.py",
+                "line": 62,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\utils\\html.py",
+                "line": 90,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\utils\\html.py",
+                "line": 113,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\utils\\html.py",
+                "line": 116,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\utils\\html.py",
+                "line": 145,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\utils\\html.py",
+                "line": 162,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\utils\\html.py",
+                "line": 400,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\utils\\html.py",
+                "line": 403,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\utils\\html.py",
+                "line": 407,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\utils\\html.py",
+                "line": 532,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\utils\\numberformat.py",
+                "line": 29,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\utils\\numberformat.py",
+                "line": 37,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\utils\\translation\\trans_real.py",
+                "line": 392,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\utils\\translation\\trans_real.py",
+                "line": 404,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Potential XSS on mark_safe function."
+            }
+        ],
+        "B308": [
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\admin\\helpers.py",
+                "line": 161,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\admin\\helpers.py",
+                "line": 193,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\admin\\helpers.py",
+                "line": 200,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\admin\\options.py",
+                "line": 426,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\admin\\options.py",
+                "line": 428,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\admin\\templatetags\\admin_filters.py",
+                "line": 33,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\admin\\templatetags\\admin_filters.py",
+                "line": 79,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\admin\\templatetags\\admin_list.py",
+                "line": 308,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\admin\\templatetags\\admin_list.py",
+                "line": 339,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\admindocs\\utils.py",
+                "line": 92,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\admindocs\\utils.py",
+                "line": 268,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\flatpages\\views.py",
+                "line": 67,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\flatpages\\views.py",
+                "line": 68,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\humanize\\templatetags\\humanize.py",
+                "line": 69,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\messages\\storage\\cookie.py",
+                "line": 38,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\forms\\utils.py",
+                "line": 55,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\forms\\widgets.py",
+                "line": 186,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\forms\\widgets.py",
+                "line": 372,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\base.py",
+                "line": 824,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\base.py",
+                "line": 834,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\base.py",
+                "line": 922,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\base.py",
+                "line": 951,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\defaultfilters.py",
+                "line": 49,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\defaultfilters.py",
+                "line": 185,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\defaultfilters.py",
+                "line": 213,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\defaultfilters.py",
+                "line": 244,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\defaultfilters.py",
+                "line": 386,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\defaultfilters.py",
+                "line": 398,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\defaultfilters.py",
+                "line": 448,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\defaultfilters.py",
+                "line": 494,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\defaultfilters.py",
+                "line": 508,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\defaultfilters.py",
+                "line": 515,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\defaultfilters.py",
+                "line": 525,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\defaultfilters.py",
+                "line": 621,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\defaultfilters.py",
+                "line": 738,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\defaulttags.py",
+                "line": 61,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\defaulttags.py",
+                "line": 256,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\loader_tags.py",
+                "line": 82,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\templatetags\\i18n.py",
+                "line": 96,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\utils\\html.py",
+                "line": 90,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\utils\\html.py",
+                "line": 113,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\utils\\html.py",
+                "line": 116,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\utils\\html.py",
+                "line": 145,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\utils\\html.py",
+                "line": 162,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\utils\\html.py",
+                "line": 403,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\utils\\html.py",
+                "line": 407,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\utils\\html.py",
+                "line": 532,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\utils\\numberformat.py",
+                "line": 29,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\utils\\numberformat.py",
+                "line": 37,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\utils\\translation\\trans_real.py",
+                "line": 392,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\utils\\translation\\trans_real.py",
+                "line": 404,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed."
+            }
+        ],
+        "B107": [
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\auth\\forms.py",
+                "line": 123,
+                "severity": "LOW",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible hardcoded password: 'password2'"
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\auth\\forms.py",
+                "line": 131,
+                "severity": "LOW",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible hardcoded password: 'password1'"
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\auth\\forms.py",
+                "line": 166,
+                "severity": "LOW",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible hardcoded password: 'usable_password'"
+            }
+        ],
+        "B101": [
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\auth\\hashers.py",
+                "line": 341,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\auth\\hashers.py",
+                "line": 420,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\auth\\hashers.py",
+                "line": 441,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\auth\\hashers.py",
+                "line": 523,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\auth\\hashers.py",
+                "line": 534,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\auth\\hashers.py",
+                "line": 612,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\auth\\hashers.py",
+                "line": 674,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\staticfiles\\storage.py",
+                "line": 279,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\core\\handlers\\asgi.py",
+                "line": 226,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\core\\mail\\handler.py",
+                "line": 50,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\core\\mail\\handler.py",
+                "line": 67,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\migrations\\autodetector.py",
+                "line": 880,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\migrations\\autodetector.py",
+                "line": 1040,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\migrations\\graph.py",
+                "line": 92,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\migrations\\state.py",
+                "line": 108,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\migrations\\state.py",
+                "line": 479,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\models\\base.py",
+                "line": 960,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\models\\base.py",
+                "line": 961,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\models\\expressions.py",
+                "line": 213,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\models\\expressions.py",
+                "line": 1419,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\models\\fields\\__init__.py",
+                "line": 1444,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\models\\fields\\related.py",
+                "line": 1616,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\models\\fields\\related.py",
+                "line": 1767,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\models\\functions\\datetime.py",
+                "line": 80,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\models\\query.py",
+                "line": 890,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\models\\sql\\compiler.py",
+                "line": 261,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\models\\sql\\compiler.py",
+                "line": 1925,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\models\\sql\\query.py",
+                "line": 955,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\models\\sql\\query.py",
+                "line": 1011,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\models\\sql\\where.py",
+                "line": 200,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\models\\utils.py",
+                "line": 19,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\http\\multipartparser.py",
+                "line": 461,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\middleware\\csrf.py",
+                "line": 156,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\base.py",
+                "line": 462,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\test\\client.py",
+                "line": 92,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\test\\client.py",
+                "line": 105,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\test\\runner.py",
+                "line": 943,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\test\\utils.py",
+                "line": 577,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\test\\utils.py",
+                "line": 580,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\utils\\regex_helper.py",
+                "line": 351,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\utils\\version.py",
+                "line": 63,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\utils\\version.py",
+                "line": 64,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+            }
+        ],
+        "B324": [
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\auth\\hashers.py",
+                "line": 669,
+                "severity": "HIGH",
+                "confidence": "HIGH",
+                "issue_text": "Use of weak MD5 hash for security. Consider usedforsecurity=False"
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\backends\\sqlite3\\_functions.py",
+                "line": 414,
+                "severity": "HIGH",
+                "confidence": "HIGH",
+                "issue_text": "Use of weak MD5 hash for security. Consider usedforsecurity=False"
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\backends\\sqlite3\\_functions.py",
+                "line": 460,
+                "severity": "HIGH",
+                "confidence": "HIGH",
+                "issue_text": "Use of weak SHA1 hash for security. Consider usedforsecurity=False"
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\loaders\\cached.py",
+                "line": 96,
+                "severity": "HIGH",
+                "confidence": "HIGH",
+                "issue_text": "Use of weak SHA1 hash for security. Consider usedforsecurity=False"
+            }
+        ],
+        "B608": [
+            {
+                "file": "C:\\scratch\\django\\django\\contrib\\gis\\db\\backends\\postgis\\operations.py",
+                "line": 212,
+                "severity": "MEDIUM",
+                "confidence": "LOW",
+                "issue_text": "Possible SQL injection vector through string-based query construction."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\core\\cache\\backends\\db.py",
+                "line": 70,
+                "severity": "MEDIUM",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible SQL injection vector through string-based query construction."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\core\\cache\\backends\\db.py",
+                "line": 121,
+                "severity": "MEDIUM",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible SQL injection vector through string-based query construction."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\core\\cache\\backends\\db.py",
+                "line": 144,
+                "severity": "MEDIUM",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible SQL injection vector through string-based query construction."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\core\\cache\\backends\\db.py",
+                "line": 170,
+                "severity": "MEDIUM",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible SQL injection vector through string-based query construction."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\core\\cache\\backends\\db.py",
+                "line": 178,
+                "severity": "MEDIUM",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible SQL injection vector through string-based query construction."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\core\\cache\\backends\\db.py",
+                "line": 189,
+                "severity": "MEDIUM",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible SQL injection vector through string-based query construction."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\core\\cache\\backends\\db.py",
+                "line": 226,
+                "severity": "MEDIUM",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible SQL injection vector through string-based query construction."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\core\\cache\\backends\\db.py",
+                "line": 247,
+                "severity": "MEDIUM",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible SQL injection vector through string-based query construction."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\core\\cache\\backends\\db.py",
+                "line": 265,
+                "severity": "MEDIUM",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible SQL injection vector through string-based query construction."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\core\\cache\\backends\\db.py",
+                "line": 282,
+                "severity": "MEDIUM",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible SQL injection vector through string-based query construction."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\core\\cache\\backends\\db.py",
+                "line": 295,
+                "severity": "MEDIUM",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible SQL injection vector through string-based query construction."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\backends\\base\\operations.py",
+                "line": 110,
+                "severity": "MEDIUM",
+                "confidence": "LOW",
+                "issue_text": "Possible SQL injection vector through string-based query construction."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\backends\\mysql\\base.py",
+                "line": 340,
+                "severity": "MEDIUM",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible SQL injection vector through string-based query construction."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\backends\\mysql\\introspection.py",
+                "line": 160,
+                "severity": "MEDIUM",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible SQL injection vector through string-based query construction."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\backends\\mysql\\schema.py",
+                "line": 94,
+                "severity": "MEDIUM",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible SQL injection vector through string-based query construction."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\backends\\oracle\\base.py",
+                "line": 338,
+                "severity": "MEDIUM",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible SQL injection vector through string-based query construction."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\backends\\oracle\\introspection.py",
+                "line": 179,
+                "severity": "MEDIUM",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible SQL injection vector through string-based query construction."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\backends\\oracle\\operations.py",
+                "line": 80,
+                "severity": "MEDIUM",
+                "confidence": "LOW",
+                "issue_text": "Possible SQL injection vector through string-based query construction."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\backends\\oracle\\operations.py",
+                "line": 695,
+                "severity": "MEDIUM",
+                "confidence": "LOW",
+                "issue_text": "Possible SQL injection vector through string-based query construction."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\backends\\oracle\\schema.py",
+                "line": 55,
+                "severity": "MEDIUM",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible SQL injection vector through string-based query construction."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\backends\\oracle\\schema.py",
+                "line": 146,
+                "severity": "MEDIUM",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible SQL injection vector through string-based query construction."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\backends\\postgresql\\introspection.py",
+                "line": 120,
+                "severity": "MEDIUM",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible SQL injection vector through string-based query construction."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\backends\\postgresql\\operations.py",
+                "line": 155,
+                "severity": "MEDIUM",
+                "confidence": "LOW",
+                "issue_text": "Possible SQL injection vector through string-based query construction."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\backends\\postgresql\\operations.py",
+                "line": 381,
+                "severity": "MEDIUM",
+                "confidence": "LOW",
+                "issue_text": "Possible SQL injection vector through string-based query construction."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\backends\\sqlite3\\base.py",
+                "line": 295,
+                "severity": "MEDIUM",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible SQL injection vector through string-based query construction."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\backends\\sqlite3\\operations.py",
+                "line": 391,
+                "severity": "MEDIUM",
+                "confidence": "LOW",
+                "issue_text": "Possible SQL injection vector through string-based query construction."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\backends\\sqlite3\\schema.py",
+                "line": 257,
+                "severity": "MEDIUM",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible SQL injection vector through string-based query construction."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\backends\\sqlite3\\schema.py",
+                "line": 456,
+                "severity": "MEDIUM",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible SQL injection vector through string-based query construction."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\models\\functions\\text.py",
+                "line": 272,
+                "severity": "MEDIUM",
+                "confidence": "LOW",
+                "issue_text": "Possible SQL injection vector through string-based query construction."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\models\\sql\\compiler.py",
+                "line": 648,
+                "severity": "MEDIUM",
+                "confidence": "LOW",
+                "issue_text": "Possible SQL injection vector through string-based query construction."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\models\\sql\\compiler.py",
+                "line": 973,
+                "severity": "MEDIUM",
+                "confidence": "LOW",
+                "issue_text": "Possible SQL injection vector through string-based query construction."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\models\\sql\\compiler.py",
+                "line": 2000,
+                "severity": "MEDIUM",
+                "confidence": "LOW",
+                "issue_text": "Possible SQL injection vector through string-based query construction."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\models\\sql\\compiler.py",
+                "line": 2027,
+                "severity": "MEDIUM",
+                "confidence": "LOW",
+                "issue_text": "Possible SQL injection vector through string-based query construction."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\models\\sql\\compiler.py",
+                "line": 2252,
+                "severity": "MEDIUM",
+                "confidence": "LOW",
+                "issue_text": "Possible SQL injection vector through string-based query construction."
+            }
+        ],
+        "B403": [
+            {
+                "file": "C:\\scratch\\django\\django\\core\\cache\\backends\\db.py",
+                "line": 4,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Consider possible security implications associated with pickle module."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\core\\cache\\backends\\filebased.py",
+                "line": 5,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Consider possible security implications associated with pickle module."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\core\\cache\\backends\\locmem.py",
+                "line": 3,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Consider possible security implications associated with pickle module."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\core\\cache\\backends\\redis.py",
+                "line": 3,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Consider possible security implications associated with pickle module."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\test\\runner.py",
+                "line": 11,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Consider possible security implications associated with pickle module."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\test\\testcases.py",
+                "line": 4,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Consider possible security implications associated with pickle module."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\urls\\resolvers.py",
+                "line": 14,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Consider possible security implications associated with PicklingError module."
+            }
+        ],
+        "B301": [
+            {
+                "file": "C:\\scratch\\django\\django\\core\\cache\\backends\\db.py",
+                "line": 96,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\core\\cache\\backends\\filebased.py",
+                "line": 38,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\core\\cache\\backends\\filebased.py",
+                "line": 71,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\core\\cache\\backends\\filebased.py",
+                "line": 152,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\core\\cache\\backends\\locmem.py",
+                "line": 43,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\core\\cache\\backends\\locmem.py",
+                "line": 73,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\core\\cache\\backends\\redis.py",
+                "line": 29,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\test\\runner.py",
+                "line": 207,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\test\\testcases.py",
+                "line": 88,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue."
+            }
+        ],
+        "B311": [
+            {
+                "file": "C:\\scratch\\django\\django\\core\\cache\\backends\\filebased.py",
+                "line": 114,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\core\\cache\\backends\\redis.py",
+                "line": 82,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\template\\defaultfilters.py",
+                "line": 646,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\test\\runner.py",
+                "line": 661,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\utils\\lorem_ipsum.py",
+                "line": 235,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\utils\\lorem_ipsum.py",
+                "line": 235,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\utils\\lorem_ipsum.py",
+                "line": 236,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\utils\\lorem_ipsum.py",
+                "line": 240,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\utils\\lorem_ipsum.py",
+                "line": 249,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\utils\\lorem_ipsum.py",
+                "line": 283,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes."
+            }
+        ],
+        "B404": [
+            {
+                "file": "C:\\scratch\\django\\django\\core\\management\\commands\\dbshell.py",
+                "line": 1,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Consider possible security implications associated with the subprocess module."
+            }
+        ],
+        "B104": [
+            {
+                "file": "C:\\scratch\\django\\django\\core\\management\\commands\\runserver.py",
+                "line": 178,
+                "severity": "MEDIUM",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible binding to all interfaces."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\test\\selenium.py",
+                "line": 46,
+                "severity": "MEDIUM",
+                "confidence": "MEDIUM",
+                "issue_text": "Possible binding to all interfaces."
+            }
+        ],
+        "B409": [
+            {
+                "file": "C:\\scratch\\django\\django\\core\\serializers\\xml_serializer.py",
+                "line": 6,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Using pulldom to parse untrusted XML data is known to be vulnerable to XML attacks. Replace pulldom with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called."
+            }
+        ],
+        "B406": [
+            {
+                "file": "C:\\scratch\\django\\django\\core\\serializers\\xml_serializer.py",
+                "line": 7,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Using handler to parse untrusted XML data is known to be vulnerable to XML attacks. Replace handler with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\core\\serializers\\xml_serializer.py",
+                "line": 8,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Using ExpatParser to parse untrusted XML data is known to be vulnerable to XML attacks. Replace ExpatParser with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\utils\\xmlutils.py",
+                "line": 6,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Using XMLGenerator to parse untrusted XML data is known to be vulnerable to XML attacks. Replace XMLGenerator with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called."
+            }
+        ],
+        "B319": [
+            {
+                "file": "C:\\scratch\\django\\django\\core\\serializers\\xml_serializer.py",
+                "line": 239,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Using xml.dom.pulldom.parse to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.dom.pulldom.parse with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called"
+            }
+        ],
+        "B610": [
+            {
+                "file": "C:\\scratch\\django\\django\\db\\models\\fields\\related_descriptors.py",
+                "line": 1229,
+                "severity": "MEDIUM",
+                "confidence": "MEDIUM",
+                "issue_text": "Use of extra potential SQL attack vector."
+            }
+        ],
+        "B611": [
+            {
+                "file": "C:\\scratch\\django\\django\\db\\models\\sql\\compiler.py",
+                "line": 274,
+                "severity": "MEDIUM",
+                "confidence": "MEDIUM",
+                "issue_text": "Use of RawSQL potential SQL attack vector."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\models\\sql\\compiler.py",
+                "line": 444,
+                "severity": "MEDIUM",
+                "confidence": "MEDIUM",
+                "issue_text": "Use of RawSQL potential SQL attack vector."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\models\\sql\\compiler.py",
+                "line": 455,
+                "severity": "MEDIUM",
+                "confidence": "MEDIUM",
+                "issue_text": "Use of RawSQL potential SQL attack vector."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\models\\sql\\compiler.py",
+                "line": 462,
+                "severity": "MEDIUM",
+                "confidence": "MEDIUM",
+                "issue_text": "Use of RawSQL potential SQL attack vector."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\models\\sql\\compiler.py",
+                "line": 2027,
+                "severity": "MEDIUM",
+                "confidence": "MEDIUM",
+                "issue_text": "Use of RawSQL potential SQL attack vector."
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\db\\models\\sql\\query.py",
+                "line": 2609,
+                "severity": "MEDIUM",
+                "confidence": "MEDIUM",
+                "issue_text": "Use of RawSQL potential SQL attack vector."
+            }
+        ],
+        "B408": [
+            {
+                "file": "C:\\scratch\\django\\django\\test\\utils.py",
+                "line": 16,
+                "severity": "LOW",
+                "confidence": "HIGH",
+                "issue_text": "Using Node to parse untrusted XML data is known to be vulnerable to XML attacks. Replace Node with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called."
+            }
+        ],
+        "B318": [
+            {
+                "file": "C:\\scratch\\django\\django\\test\\utils.py",
+                "line": 713,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Using xml.dom.minidom.parseString to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.dom.minidom.parseString with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called"
+            },
+            {
+                "file": "C:\\scratch\\django\\django\\test\\utils.py",
+                "line": 714,
+                "severity": "MEDIUM",
+                "confidence": "HIGH",
+                "issue_text": "Using xml.dom.minidom.parseString to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.dom.minidom.parseString with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called"
+            }
+        ]
+    }
+}

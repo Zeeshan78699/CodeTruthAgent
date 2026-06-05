@@ -1,0 +1,28 @@
+{
+    "test_case": "TC_V2_FINAL_002d_GOVERNANCE_PROBE",
+    "target_repo": "C:\\scratch\\flask\\examples\\tutorial",
+    "baseline": {
+        "label": "baseline",
+        "files_scanned": 9,
+        "functions_discovered": 37,
+        "classes_discovered": 1,
+        "total_unresolved_calls": 63,
+        "probe_file_present": false
+    },
+    "with_probe": {
+        "label": "with_probe",
+        "files_scanned": 10,
+        "functions_discovered": 40,
+        "classes_discovered": 1,
+        "total_unresolved_calls": 64,
+        "probe_file_present": true
+    },
+    "deltas": {
+        "files": 1,
+        "functions": 3,
+        "classes": 0,
+        "unresolved_calls": 1
+    },
+    "verdict": "SCANNER_AWARE_GOVERNANCE_NOT_WIRED",
+    "notes": "This test measures whether the governance layer reacts to scanned code contents. At V2's current stage, only scanner perception is wired in; governance classification of scanned code is the next layer."
+}

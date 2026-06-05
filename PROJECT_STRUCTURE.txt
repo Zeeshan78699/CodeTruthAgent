@@ -1,0 +1,533 @@
+📂 CodeTruthAgent
+│   📄 .env
+│   📄 .gitignore
+│   📄 approval_audit_log.json
+│   📄 billing.py
+│   📄 db_prod.py
+│   📄 db_test.py
+│   📄 FAQ.md
+│   📄 generate_structure.py
+│   📄 governance_memory.json
+│   📄 helpers.py
+│   📄 inventory.py
+│   📄 LICENSE
+│   📄 main.py
+│   📄 main_v2.py
+│   📄 memory_template.json
+│   📄 memory_v2.json
+│   📄 orders.py
+│   📄 PROJECT_STRUCTURE.txt
+│   📄 QUICKSTART.md
+│   📄 README.md
+│   📄 README_V2.md
+│   📄 reports.py
+│   📄 repository_snapshot.json
+│   📄 requirements old.txt
+│   📄 requirements.txt
+│   📄 sample_code.py
+│   📄 sample_test_file.txt
+│   📄 Status_Error_msg.txt
+│   📄 tc_v2_018_execution_test.py
+│   📄 temp_embedding_test.py
+│   📄 temp_v2_execution_test.py
+│   📄 temp_v2_resilience_test.py
+│   📄 temp_v2_stress_test.py
+│   📄 Test_Result_Summary.md
+│   📄 utils.py
+│   📄 V2_BLOCK_PRECISION_AUDIT.md
+│   📄 v2_execution_test.py
+│   📂 ai
+│   │   📄 ai_interface.py
+│   │   📄 behavioral_signature_engine.py
+│   │   📄 code_generation_engine.py
+│   │   📄 decision_orchestrator.py
+│   │   📄 embedding_similarity.py
+│   │   📄 fallback_orchestrator.py
+│   │   📄 fusion_engine.py
+│   │   📄 governance_wiring.py
+│   │   📄 incremental_change_engine.py
+│   │   📄 lexical_prefilter.py
+│   │   📄 llm_adapter.py
+│   │   📄 patch_generation_engine.py
+│   │   📄 patch_validation_engine.py
+│   │   📄 prompt_library.py
+│   │   📄 purpose_analysis_engine.py
+│   │   📄 repository_graph_engine.py
+│   │   📄 risk_classification_engine.py
+│   │   📄 semantic_decision_engine.py
+│   │   📄 test_execution_engine.py
+│   │   📄 v1_adapter.py
+│   │   📄 v2_orchestrator.py
+│   │   📄 __init__.py
+│   📂 backups
+│   │   📄 20260521_100501_sample_test_file.txt
+│   │   📄 20260521_100711_sample_test_file.txt
+│   │   📄 20260521_102529_sample_test_file.txt
+│   │   📄 20260521_103401_sample_test_file.txt
+│   │   📄 20260521_104423_sample_test_file.txt
+│   │   📄 20260521_104939_sample_test_file.txt
+│   │   📄 20260521_105320_sample_test_file.txt
+│   │   📄 20260521_105927_sample_test_file.txt
+│   │   📄 20260521_111321_sample_test_file.txt
+│   │   📄 20260521_111322_sample_test_file.txt
+│   │   📄 20260521_111817_sample_test_file.txt
+│   │   📄 20260521_115617_sample_test_file.txt
+│   │   📄 20260521_125140_sample_test_file.txt
+│   │   📄 20260521_130802_sample_test_file.txt
+│   │   📄 20260521_130820_sample_test_file.txt
+│   │   📄 20260521_132619_sample_test_file.txt
+│   │   📄 20260521_132622_sample_test_file.txt
+│   │   📄 20260521_134649_sample_test_file.txt
+│   │   📄 20260521_134653_sample_test_file.txt
+│   │   📄 20260521_135347_sample_test_file.txt
+│   │   📄 20260521_135353_sample_test_file.txt
+│   │   📄 20260521_135354_sample_test_file.txt
+│   │   📄 20260521_144440_sample_test_file.txt
+│   │   📄 20260521_144441_sample_test_file.txt
+│   │   📄 20260521_144447_sample_test_file.txt
+│   │   📄 20260521_144449_sample_test_file.txt
+│   │   📄 20260522_173948_main_v2.py
+│   │   📄 20260522_181211_main_v2.py
+│   │   📄 20260522_182344_main_v2.py
+│   │   📄 20260522_183650_main_v2.py
+│   │   📄 20260523_104409_main_v2.py
+│   │   📄 20260523_105358_main_v2.py
+│   │   📄 20260527_132452_temp_v2_execution_test.py
+│   │   📄 20260527_134556_temp_v2_stress_test.py
+│   │   📄 20260527_134941_temp_v2_resilience_test.py
+│   │   📄 20260527_134942_temp_v2_resilience_test.py
+│   │   📄 20260527_140150_sample_test_file.txt
+│   │   📄 20260527_141013_sample_test_file.txt
+│   │   📄 20260527_142540_sample_test_file.txt
+│   │   📄 20260527_143031_sample_test_file.txt
+│   │   📄 20260527_143340_sample_test_file.txt
+│   │   📄 20260527_143910_sample_test_file.txt
+│   │   📄 20260527_143912_v2_execution_test.py
+│   │   📄 20260529_233128_tc_v2_018_execution_test.py
+│   │   📄 20260529_235152_tc_v2_018_execution_test.py
+│   │   📄 20260529_235225_tc_v2_018_execution_test.py
+│   │   📄 20260529_235452_tc_v2_018_execution_test.py
+│   │   📄 20260530_000108_tc_v2_018_execution_test.py
+│   │   📄 20260530_000345_tc_v2_018_execution_test.py
+│   │   📄 20260530_000408_tc_v2_018_execution_test.py
+│   │   📄 20260530_000546_tc_v2_018_execution_test.py
+│   │   📄 20260530_000748_tc_v2_018_execution_test.py
+│   │   📄 20260530_001036_tc_v2_018_execution_test.py
+│   │   📄 20260530_001102_tc_v2_018_execution_test.py
+│   │   📄 20260530_002116_tc_v2_018_execution_test.py
+│   │   📄 20260530_044149_tc_v2_031_test_file.py
+│   │   📄 20260530_044755_orchestrator_test_file.py
+│   │   📄 20260530_050905_orchestrator_test_file.py
+│   │   📄 20260530_050905_tc_v2_031_test_file.py
+│   │   📄 20260530_051332_orchestrator_test_file.py
+│   │   📄 20260530_051332_tc_v2_031_test_file.py
+│   │   📄 20260530_051442_sample_test_file.txt
+│   │   📄 20260530_051444_v2_execution_test.py
+│   │   📄 20260530_051640_sample_test_file.txt
+│   │   📄 20260530_051707_sample_test_file.txt
+│   │   📄 20260530_054239_sample_test_file.txt
+│   │   📄 20260530_054242_v2_execution_test.py
+│   │   📄 20260530_054433_sample_test_file.txt
+│   │   📄 20260530_054459_sample_test_file.txt
+│   │   📄 20260530_055132_sample_test_file.txt
+│   │   📄 20260530_055135_v2_execution_test.py
+│   │   📄 20260530_055312_sample_test_file.txt
+│   │   📄 20260530_055314_v2_execution_test.py
+│   │   📄 20260530_055503_sample_test_file.txt
+│   │   📄 20260530_055528_sample_test_file.txt
+│   │   📄 20260530_234439_duplicate_module.py
+│   │   📄 20260531_000844_sample_test_file.txt
+│   │   📄 20260531_000846_v2_execution_test.py
+│   │   📄 20260531_001036_sample_test_file.txt
+│   │   📄 20260531_001102_sample_test_file.txt
+│   │   📂 code_history
+│   │   │   📄 governance_wiring_old.py
+│   │   │   📄 governance_wiring_v2_with_check3.py.bak.py
+│   │   │   📄 intelligence_orchestrator - Copy.py
+│   │   │   📄 intelligence_orchestrator_old.py
+│   │   │   📄 repository_graph_engine_pre_class_methods.py.bak.py
+│   │   │   📄 v2_orchestrator_old.py
+│   │   📂 memory_archives
+│   │   │   📄 memory_archive_approved_decisions_limit_20260531_001036.json
+│   │   │   📄 memory_archive_cleanup_10.json
+│   │   │   📄 memory_archive_cleanup_11.json
+│   │   │   📄 memory_archive_cleanup_12.json
+│   │   │   📄 memory_archive_cleanup_13.json
+│   │   │   📄 memory_archive_cleanup_14.json
+│   │   │   📄 memory_archive_cleanup_15.json
+│   │   │   📄 memory_archive_cleanup_16.json
+│   │   │   📄 memory_archive_cleanup_17.json
+│   │   │   📄 memory_archive_cleanup_18.json
+│   │   │   📄 memory_archive_cleanup_19.json
+│   │   │   📄 memory_archive_cleanup_20.json
+│   │   │   📄 memory_archive_cleanup_21.json
+│   │   │   📄 memory_archive_cleanup_22.json
+│   │   │   📄 memory_archive_cleanup_23.json
+│   │   │   📄 memory_archive_cleanup_24.json
+│   │   │   📄 memory_archive_cleanup_25.json
+│   │   │   📄 memory_archive_cleanup_26.json
+│   │   │   📄 memory_archive_cleanup_27.json
+│   │   │   📄 memory_archive_cleanup_28.json
+│   │   │   📄 memory_archive_cleanup_29.json
+│   │   │   📄 memory_archive_cleanup_6.json
+│   │   │   📄 memory_archive_cleanup_7.json
+│   │   │   📄 memory_archive_cleanup_8.json
+│   │   │   📄 memory_archive_cleanup_9.json
+│   📂 core
+│   │   📄 code_modifier.py
+│   │   📄 dependency_tracker.py
+│   │   📄 duplicate_detector.py
+│   │   📄 memory_store.py
+│   │   📄 merge_advisor.py
+│   │   📄 parser.py
+│   │   📄 project_scanner.py
+│   │   📄 quality_checker.py
+│   │   📄 risk_analyzer.py
+│   │   📄 __init__.py
+│   📂 docs
+│   │   📄 CodeTruth_V1_Final_Project_Overview.docx
+│   │   📄 CodeTruth_V2_Final_Project_Overview.docx
+│   📂 memory
+│   │   📄 governance_memory_engine.py
+│   │   📄 memory_store_v2.py
+│   │   📄 __init__.py
+│   📂 real_world
+│   │   📄 utils.py
+│   📂 reporting
+│   │   📄 report_generator.py
+│   │   📄 __init__.py
+│   📂 reports
+│   │   📄 repository_graph.json
+│   │   📄 tc_v2_018_report.json
+│   │   📄 v2_orchestrator_report.json
+│   📂 tests
+│   │   📄 manual_embedding_test.py
+│   │   📄 manual_purpose_test.py
+│   │   📄 run_sit_v2.py
+│   │   📄 run_uat.py
+│   │   📄 run_uat_per_case.py
+│   │   📄 run_uat_v2.py
+│   │   📄 run_uat_v2_final.py
+│   │   📄 test_archive_retention.py
+│   │   📄 test_embedding_similarity.py
+│   │   📄 test_lexical_semantic_similarity.py
+│   │   📄 test_memory_cleanup.py
+│   │   📄 test_memory_recovery.py
+│   │   📄 test_rollback.py
+│   │   📄 test_semantic_decision_engine.py
+│   │   📄 test_sit_failure_pipeline.py
+│   │   📄 test_sit_pipeline.py
+│   │   📄 test_v1_regression.py
+│   │   📄 test_validation.py
+│   │   📄 uat_test_cases.py
+│   │   📄 v2_orchestrator_test.py
+│   │   📄 __init__.py
+│   │   📂 archive
+│   │   │   📂 v2_legacy
+│   │   │   │   📄 tc_v2_final_001_full_repository_intelligence_orchestration.py
+│   │   │   │   📄 TC_V2_FINAL_001_report.json
+│   │   │   │   📄 tc_v2_final_002_dependency_inspection_extended - Copy.py
+│   │   📂 intelligence
+│   │   │   📄 __init__.py
+│   │   │   📂 behavioral_tests
+│   │   │   │   📄 tc_v2_001_behavioral_contradiction.py
+│   │   │   │   📄 tc_v2_043_behavioral_validation.py
+│   │   │   📂 false_positive_tests
+│   │   │   │   📄 tc_v2_004_false_positive_reduction.py
+│   │   │   📂 fusion_tests
+│   │   │   │   📄 tc_v2_044_fusion_validation.py
+│   │   │   │   📄 tc_v2_045_real_engine_integration.py
+│   │   │   │   📄 tc_v2_047_repo_evaluation.py
+│   │   │   📂 governance_tests
+│   │   │   │   📄 tc_v2_003_governance_decision_validation.py
+│   │   │   📂 memory_tests
+│   │   │   │   📄 tc_v2_013_memory_governance_validation.py
+│   │   │   📂 orchestration
+│   │   │   │   📄 diagnostic_django_exec_eval.py
+│   │   │   │   📄 tc_v2_015_full_governance_execution_pipeline.py
+│   │   │   │   📄 TC_V2_016_stress_execution_validation.py
+│   │   │   │   📄 TC_V2_017_orchestration_resilience_validation.py
+│   │   │   │   📄 tc_v2_018_real_repository_governance_validation.py
+│   │   │   │   📄 tc_v2_019_patch_generation_validation.py
+│   │   │   │   📄 tc_v2_020_patch_validation_engine.py
+│   │   │   │   📄 tc_v2_021_patch_governance_integration.py
+│   │   │   │   📄 tc_v2_022_patch_hitl_integration.py
+│   │   │   │   📄 tc_v2_023_patch_rollback_integration.py
+│   │   │   │   📄 tc_v2_024_real_controlled_file_modification.py
+│   │   │   │   📄 tc_v2_025_review_rejection_path.py
+│   │   │   │   📄 tc_v2_026_block_path.py
+│   │   │   │   📄 tc_v2_027_risk_classification_engine.py
+│   │   │   │   📄 tc_v2_028_risk_engine_integration.py
+│   │   │   │   📄 tc_v2_029_patch_validation_risk_integration.py
+│   │   │   │   📄 tc_v2_030_test_execution_engine.py
+│   │   │   │   📄 tc_v2_031_patch_test_rollback_integration.py
+│   │   │   │   📄 tc_v2_032_real_patch_workflow_orchestrator.py
+│   │   │   │   📄 tc_v2_033_real_hitl_workflow.py
+│   │   │   │   📄 tc_v2_034_v1_binding_validation.py
+│   │   │   │   📄 tc_v2_035_governance_enforced_real_v1_fallback.py
+│   │   │   │   📄 tc_v2_036_governance_policy_enforcement.py
+│   │   │   │   📄 tc_v2_037a_dependency_aware_dry_run.py
+│   │   │   │   📄 tc_v2_037_dry_run_safe_merge.py
+│   │   │   │   📄 tc_v2_038_real_safe_modification.py
+│   │   │   │   📄 tc_v2_039_governed_real_safe_modification.py
+│   │   │   │   📄 tc_v2_040_review_severity_workflow.py
+│   │   │   │   📄 tc_v2_041_block_severity_workflow.py
+│   │   │   │   📄 tc_v2_046_production_intelligence_integration.py
+│   │   │   │   📄 tc_v2_final_001_v2_orchestrator_validation.py
+│   │   │   │   📄 tc_v2_final_002b_cross_repo_scan.py
+│   │   │   │   📄 tc_v2_final_002c_flask_cross_repo.py
+│   │   │   │   📄 tc_v2_final_002d_governance_probe.py
+│   │   │   │   📄 tc_v2_final_002_dependency_inspection.py
+│   │   │   │   📄 tc_v2_final_002_real_multi_file_repository_scan.py
+│   │   │   │   📄 tc_v2_final_002_suffix_spot_check.py
+│   │   │   │   📄 tc_v2_final_003_governance_wiring.py
+│   │   │   │   📄 tc_v2_final_004_click_governance.py
+│   │   │   │   📄 tc_v2_final_005_httpx_governance.py
+│   │   │   │   📄 tc_v2_final_006_flask_full_governance.py
+│   │   │   │   📄 tc_v2_final_007_drf_governance.py
+│   │   │   │   📄 tc_v2_final_008_rich_governance.py
+│   │   │   │   📄 tc_v2_final_009_django_governance.py
+│   │   │   │   📄 tc_v2_final_010_transformers_governance.py
+│   │   │   │   📄 tc_v2_final_011_bandit_comparison.py
+│   │   │   │   📄 tc_v2_final_012_bandit_django.py
+│   │   │   │   📄 tc_v2_master_pipeline.py
+│   │   │   │   📄 test_approval_fallback.py
+│   │   │   │   📄 test_incremental_change_engine.py
+│   │   │   │   📄 __init__.py
+│   │   │   📂 regression_tests
+│   │   │   │   📄 tc_v2_006_semantic_regression_detection.py
+│   │   │   │   📄 tc_v2_008_dynamic_semantic_condition_extraction.py
+│   │   │   📂 repository_reasoning_tests
+│   │   │   │   📄 tc_v2_005_repository_dependency_impact.py
+│   │   │   │   📄 tc_v2_007_dynamic_ast_dependency_discovery.py
+│   │   │   │   📄 tc_v2_009_cross_file_propagation_reasoning.py
+│   │   │   │   📄 tc_v2_010_nested_side_effect_tracing.py
+│   │   │   │   📄 tc_v2_011_context_aware_api_intelligence.py
+│   │   │   │   📄 tc_v2_012_repository_execution_flow_cognition.py
+│   │   │   📂 rollback_tests
+│   │   │   │   📄 tc_v2_014_rollback_safety_validation.py
+│   │   │   📂 semantic_tests
+│   │   │   │   📄 tc_v2_002_semantic_similarity.py
+│   │   │   │   📄 tc_v2_042b_semantic_calibration.py
+│   │   │   │   📄 tc_v2_042c_semantic_tuning_validation.py
+│   │   │   │   📄 tc_v2_042d_real_function_semantic_validation.py
+│   │   │   │   📄 tc_v2_042_semantic_validation.py
+│   │   📂 output
+│   │   │   📄 TC01_output.txt
+│   │   │   📄 TC02_output.txt
+│   │   │   📄 TC03_output.txt
+│   │   │   📄 TC04_output.txt
+│   │   │   📄 TC05_output.txt
+│   │   │   📄 TC06_output.txt
+│   │   │   📄 TC07_output.txt
+│   │   │   📄 TC08_output.txt
+│   │   │   📄 TC09_output.txt
+│   │   │   📄 TC10_output.txt
+│   │   │   📄 TC11_output.txt
+│   │   │   📄 TC12_output.txt
+│   │   │   📄 TC13_output.txt
+│   │   │   📄 TC14_output.txt
+│   │   │   📄 TC15_output.txt
+│   │   │   📄 TC16_output.txt
+│   │   │   📄 TC17_output.txt
+│   │   │   📄 TC18_output.txt
+│   │   │   📄 TC19_output.txt
+│   │   │   📄 TC20_output.txt
+│   │   │   📄 TC21_output.txt
+│   │   │   📄 TC22_output.txt
+│   │   │   📄 Test_Cases_Full_Report.txt
+│   │   │   📂 v2
+│   │   │   │   📄 tc_v2_046_report.json
+│   │   │   │   📄 v2_orchestrator_report.json
+│   │   │   │   📂 bandit_comparison_reports
+│   │   │   │   │   📄 bandit_raw_click.json
+│   │   │   │   │   📄 tc_v2_final_011_report.json
+│   │   │   │   📂 bandit_django_comparison_reports
+│   │   │   │   │   📄 bandit_raw_django.json
+│   │   │   │   │   📄 tc_v2_final_012_report.json
+│   │   │   │   📂 behavioral_reports
+│   │   │   │   │   📄 TC_V2_001_report.json
+│   │   │   │   📂 behavioral_validation_reports
+│   │   │   │   │   📄 TC_V2_043_report.json
+│   │   │   │   │   📂 fixtures
+│   │   │   │   │   │   📄 auth_fixture.py
+│   │   │   │   │   │   📄 backup_fixture.py
+│   │   │   │   │   │   📄 clean_fixture.py
+│   │   │   │   │   │   📄 database_fixture.py
+│   │   │   │   │   │   📄 delete_fixture.py
+│   │   │   │   │   │   📄 file_read_fixture.py
+│   │   │   │   │   │   📄 file_write_fixture.py
+│   │   │   │   │   │   📄 memory_fixture.py
+│   │   │   │   │   │   📄 network_fixture.py
+│   │   │   │   │   │   📄 object_creation_fixture.py
+│   │   │   │   │   │   📄 recovery_fixture.py
+│   │   │   │   │   │   📄 state_mutation_fixture.py
+│   │   │   │   📂 block_path_reports
+│   │   │   │   │   📄 block_path_test.py
+│   │   │   │   │   📄 block_path_test.py.bak
+│   │   │   │   │   📄 tc_v2_026_report.json
+│   │   │   │   📂 block_workflow_reports
+│   │   │   │   │   📄 tc_v2_041_report.json
+│   │   │   │   │   📂 controlled_repo
+│   │   │   │   │   │   📄 approval_audit_log.json
+│   │   │   │   │   │   📄 consumer.py
+│   │   │   │   │   │   📄 duplicate_module.py
+│   │   │   │   📂 click_governance_reports
+│   │   │   │   │   📄 tc_v2_final_004_click_report.json
+│   │   │   │   📂 dependency_inspection_reports
+│   │   │   │   │   📄 inspect_dependencies_output.txt
+│   │   │   │   │   📄 inspect_dependencies_report.json
+│   │   │   │   │   📄 suffix_resolution_spot_check.json
+│   │   │   │   📂 django_governance_reports
+│   │   │   │   │   📄 tc_v2_final_009_report.json
+│   │   │   │   📂 drf_governance_reports
+│   │   │   │   │   📄 tc_v2_final_007_report.json
+│   │   │   │   📂 dry_run_reports
+│   │   │   │   │   📄 tc_v2_037a_report.json
+│   │   │   │   │   📄 tc_v2_037_report.json
+│   │   │   │   📂 fallback_reports
+│   │   │   │   │   📄 tc_v2_034_report.json
+│   │   │   │   📂 false_positive_reports
+│   │   │   │   │   📄 TC_V2_004_report.json
+│   │   │   │   📂 final_orchestration_reports
+│   │   │   │   │   📄 tc_v2_final_001_report.json
+│   │   │   │   │   📄 TC_V2_FINAL_002_output.txt
+│   │   │   │   │   📄 TC_V2_FINAL_002_report.json
+│   │   │   │   📂 flask_cross_repo_reports
+│   │   │   │   │   📄 inspect_dependencies_output.txt
+│   │   │   │   │   📄 inspect_dependencies_report.json
+│   │   │   │   📂 flask_full_governance_reports
+│   │   │   │   │   📄 tc_v2_final_006_report.json
+│   │   │   │   📂 fusion_validation_reports
+│   │   │   │   │   📄 TC_V2_044_report.json
+│   │   │   │   📂 governance_probe_reports
+│   │   │   │   │   📄 governance_probe_report.json
+│   │   │   │   📂 governance_reports
+│   │   │   │   │   📄 TC_V2_003_report.json
+│   │   │   │   │   📄 tc_v2_035_report.json
+│   │   │   │   │   📄 tc_v2_036_report.json
+│   │   │   │   📂 governance_wiring_reports
+│   │   │   │   │   📄 tc_v2_final_003_report.json
+│   │   │   │   📂 governed_modification_reports
+│   │   │   │   │   📄 tc_v2_039_report.json
+│   │   │   │   │   📂 controlled_repo
+│   │   │   │   │   │   📄 approval_audit_log.json
+│   │   │   │   │   │   📄 consumer.py
+│   │   │   │   │   │   📄 consumer.py.bak
+│   │   │   │   │   │   📄 duplicate_module.py
+│   │   │   │   │   │   📄 duplicate_module.py.bak
+│   │   │   │   │   │   📂 backups
+│   │   │   │   │   │   │   📄 20260530_234639_duplicate_module.py
+│   │   │   │   │   │   │   📄 20260530_234639_duplicate_module.py.bak
+│   │   │   │   📂 httpx_governance_reports
+│   │   │   │   │   📄 tc_v2_final_005_report.json
+│   │   │   │   📂 integration_validation_reports
+│   │   │   │   │   📄 TC_V2_045_report.json
+│   │   │   │   │   📂 fixtures
+│   │   │   │   │   │   📄 tc_v2_045_integration_fixture.py
+│   │   │   │   📂 master_pipeline_reports
+│   │   │   │   │   📄 tc_v2_master_pipeline_report.json
+│   │   │   │   │   📂 mini_repo_fixture
+│   │   │   │   │   │   📄 cleanup.py
+│   │   │   │   │   │   📄 dangerous_api.py
+│   │   │   │   │   │   📄 duplicate_a.py
+│   │   │   │   │   │   📄 duplicate_b.py
+│   │   │   │   │   │   📄 safe_module.py
+│   │   │   │   │   │   📄 test_suite.py
+│   │   │   │   📂 memory_reports
+│   │   │   │   │   📄 governance_memory.json
+│   │   │   │   │   📄 TC_V2_013_report.json
+│   │   │   │   📂 patch_generation_reports
+│   │   │   │   │   📄 tc_v2_019_report.json
+│   │   │   │   📂 patch_governance_reports
+│   │   │   │   │   📄 tc_v2_021_report.json
+│   │   │   │   📂 patch_hitl_reports
+│   │   │   │   │   📄 tc_v2_022_report.json
+│   │   │   │   │   📄 tc_v2_033_report.json
+│   │   │   │   📂 patch_rollback_reports
+│   │   │   │   │   📄 rollback_test.py
+│   │   │   │   │   📄 rollback_test.py.bak
+│   │   │   │   │   📄 tc_v2_023_report.json
+│   │   │   │   📂 patch_test_rollback_reports
+│   │   │   │   │   📄 tc_v2_031_report.json
+│   │   │   │   │   📄 tc_v2_031_test_file.py
+│   │   │   │   📂 patch_validation_reports
+│   │   │   │   │   📄 tc_v2_020_report.json
+│   │   │   │   📂 real_modification_reports
+│   │   │   │   │   📄 controlled_modification_test.py
+│   │   │   │   │   📄 controlled_modification_test.py.bak
+│   │   │   │   │   📄 tc_v2_024_report.json
+│   │   │   │   │   📄 tc_v2_038_report.json
+│   │   │   │   │   📂 controlled_merge_repo
+│   │   │   │   │   │   📄 consumer.py
+│   │   │   │   │   │   📄 consumer.py.bak
+│   │   │   │   │   │   📄 duplicate_module.py
+│   │   │   │   │   │   📄 duplicate_module.py.bak
+│   │   │   │   📂 real_repository_validation_reports
+│   │   │   │   │   📄 tc_v2_018_report.json
+│   │   │   │   📂 regression_reports
+│   │   │   │   │   📄 TC_V2_006_report.json
+│   │   │   │   │   📄 TC_V2_008_report.json
+│   │   │   │   📂 repository_reasoning_reports
+│   │   │   │   │   📄 TC_V2_005_report.json
+│   │   │   │   │   📄 TC_V2_007_report.json
+│   │   │   │   │   📄 TC_V2_009_report.json
+│   │   │   │   │   📄 TC_V2_010_report.json
+│   │   │   │   │   📄 TC_V2_011_report.json
+│   │   │   │   │   📄 TC_V2_012_report.json
+│   │   │   │   📂 review_rejection_reports
+│   │   │   │   │   📄 review_rejection_test.py
+│   │   │   │   │   📄 review_rejection_test.py.bak
+│   │   │   │   │   📄 tc_v2_025_report.json
+│   │   │   │   📂 review_workflow_reports
+│   │   │   │   │   📄 tc_v2_040_report.json
+│   │   │   │   │   📂 controlled_repo
+│   │   │   │   │   │   📄 approval_audit_log.json
+│   │   │   │   │   │   📄 consumer.py
+│   │   │   │   │   │   📄 consumer.py.bak
+│   │   │   │   │   │   📄 duplicate_module.py
+│   │   │   │   │   │   📄 duplicate_module.py.bak
+│   │   │   │   │   │   📂 backups
+│   │   │   │   │   │   │   📄 20260530_234837_duplicate_module.py
+│   │   │   │   │   │   │   📄 20260530_234837_duplicate_module.py.bak
+│   │   │   │   📂 rich_governance_reports
+│   │   │   │   │   📄 tc_v2_final_008_report.json
+│   │   │   │   📂 risk_classification_reports
+│   │   │   │   │   📄 tc_v2_027_report.json
+│   │   │   │   📂 risk_engine_integration_reports
+│   │   │   │   │   📄 tc_v2_028_report.json
+│   │   │   │   📂 rollback_reports
+│   │   │   │   │   📄 sample_module.py
+│   │   │   │   │   📄 sample_module_backup.py
+│   │   │   │   │   📄 TC_V2_014_report.json
+│   │   │   │   📂 semantic_reports
+│   │   │   │   │   📄 TC_V2_002_report.json
+│   │   │   │   📂 semantic_validation_reports
+│   │   │   │   │   📄 TC_V2_042B_report.json
+│   │   │   │   │   📄 TC_V2_042C_report.json
+│   │   │   │   │   📄 TC_V2_042D_report.json
+│   │   │   │   │   📄 TC_V2_042_report.json
+│   │   │   │   📂 test_execution_reports
+│   │   │   │   │   📄 tc_v2_030_report.json
+│   │   │   │   📂 transformers_governance_reports
+│   │   │   │   │   📄 tc_v2_final_010_report.json
+│   │   │   │   📂 v2_1_repo_evaluation
+│   │   │   │   │   📄 click_report.json
+│   │   │   │   │   📄 django_report.json
+│   │   │   │   │   📄 drf_report.json
+│   │   │   │   │   📄 flask_report.json
+│   │   │   │   │   📄 httpx_report.json
+│   │   │   │   │   📄 rich_report.json
+│   │   │   │   │   📄 transformers_report.json
+│   │   │   │   │   📄 tutorial_report.json
+│   │   │   │   📂 validation_risk_reports
+│   │   │   │   │   📄 tc_v2_029_report.json
+│   │   │   │   📂 workflow_orchestrator_reports
+│   │   │   │   │   📄 orchestrator_test_file.py
+│   │   │   │   │   📄 tc_v2_032_report.json
+│   📂 validation
+│   │   📄 approval_engine.py
+│   │   📄 rollback_manager.py
+│   │   📄 safe_execution_engine.py
+│   │   📄 syntax_validator.py
+│   │   📄 __init__.py

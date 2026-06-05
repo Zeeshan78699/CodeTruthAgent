@@ -1,0 +1,105 @@
+{
+    "test_case": "TC_V2_042D",
+    "category": "Real Function Semantic Validation",
+    "total_tests": 5,
+    "passed": 5,
+    "failed": 0,
+    "accuracy": 100.0,
+    "results": [
+        {
+            "category": "MEMORY",
+            "function_a": "save_memory_record",
+            "function_b": "store_memory_record",
+            "expected": "REVIEW",
+            "actual": "REVIEW",
+            "status": "PASS",
+            "lexical_score": 0.78,
+            "embedding_score": 0.9,
+            "purpose_domain_match": true,
+            "side_effects_detected": true,
+            "confidence": 0.91,
+            "risk_level": "MEDIUM",
+            "reasoning": [
+                "High semantic similarity detected",
+                "Shared business domain detected",
+                "Behavioral side effects detected"
+            ]
+        },
+        {
+            "category": "RECOVERY",
+            "function_a": "rollback_transaction",
+            "function_b": "restore_backup",
+            "expected": "REVIEW",
+            "actual": "REVIEW",
+            "status": "PASS",
+            "lexical_score": 0.72,
+            "embedding_score": 0.3,
+            "purpose_domain_match": true,
+            "side_effects_detected": true,
+            "confidence": 0.59,
+            "risk_level": "MEDIUM",
+            "reasoning": [
+                "Low semantic similarity detected",
+                "Shared business domain detected",
+                "Behavioral side effects detected"
+            ]
+        },
+        {
+            "category": "AUTH",
+            "function_a": "validate_login",
+            "function_b": "authenticate_user",
+            "expected": "REVIEW",
+            "actual": "REVIEW",
+            "status": "PASS",
+            "lexical_score": 0.62,
+            "embedding_score": 0.65,
+            "purpose_domain_match": true,
+            "side_effects_detected": false,
+            "confidence": 0.65,
+            "risk_level": "MEDIUM",
+            "reasoning": [
+                "Moderate semantic similarity detected",
+                "Shared business domain detected",
+                "No major side effects detected"
+            ]
+        },
+        {
+            "category": "UNRELATED",
+            "function_a": "send_email",
+            "function_b": "calculate_invoice",
+            "expected": "BLOCK",
+            "actual": "BLOCK",
+            "status": "PASS",
+            "lexical_score": 0.0,
+            "embedding_score": 0.13,
+            "purpose_domain_match": false,
+            "side_effects_detected": true,
+            "confidence": 0.17,
+            "risk_level": "HIGH",
+            "reasoning": [
+                "Low semantic similarity detected",
+                "Business domains differ",
+                "Behavioral side effects detected"
+            ]
+        },
+        {
+            "category": "RECOVERY",
+            "function_a": "restore_database",
+            "function_b": "rollback_database",
+            "expected": "REVIEW",
+            "actual": "REVIEW",
+            "status": "PASS",
+            "lexical_score": 0.86,
+            "embedding_score": 0.54,
+            "purpose_domain_match": false,
+            "side_effects_detected": true,
+            "confidence": 0.54,
+            "risk_level": "MEDIUM",
+            "reasoning": [
+                "Moderate semantic similarity detected",
+                "Business domains differ",
+                "Behavioral side effects detected"
+            ]
+        }
+    ]
+}

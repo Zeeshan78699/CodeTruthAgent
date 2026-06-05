@@ -1,0 +1,37 @@
+{
+    "test_case": "TC_V2_020",
+    "tests": {
+        "approve": {
+            "passed": true,
+            "decision": "APPROVE",
+            "risk": "LOW"
+        },
+        "review": {
+            "passed": true,
+            "decision": "REVIEW",
+            "risk": "MEDIUM"
+        },
+        "reject_low_confidence": {
+            "passed": true,
+            "decision": "REJECT"
+        },
+        "reject_governance": {
+            "passed": true,
+            "decision": "REJECT",
+            "reasons": [
+                "High risk pattern detected: exec("
+            ]
+        },
+        "reject_syntax": {
+            "passed": true,
+            "decision": "REJECT",
+            "syntax_valid": false
+        }
+    },
+    "summary": {
+        "total_tests": 5,
+        "passed_tests": 5,
+        "failed_tests": 0,
+        "status": "PASSED"
+    }
+}

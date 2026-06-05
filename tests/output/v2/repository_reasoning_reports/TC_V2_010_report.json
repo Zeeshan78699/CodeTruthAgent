@@ -1,0 +1,22 @@
+{
+    "test_case": "TC_V2_010",
+    "title": "Nested Side-Effect Tracing Validation",
+    "description": "Validates whether V2 can detect hidden repository mutations through nested function calls.",
+    "category": "Side-Effect Cognition",
+    "dependency_map": {
+        "update_balance": [],
+        "process_payment": [
+            "update_balance"
+        ]
+    },
+    "side_effect_functions": [
+        "update_balance"
+    ],
+    "impacted_functions": [
+        "process_payment"
+    ],
+    "decision": "REVIEW",
+    "reason": "Nested repository side-effects detected.",
+    "expected": "REVIEW",
+    "status": "PASS"
+}

@@ -1,0 +1,2045 @@
+{
+    "test_case": "TC_V2_FINAL_002_SUFFIX_RESOLUTION_SPOT_CHECK",
+    "repository_root": "C:\\AI_Project\\CodeTruthAgent",
+    "total_suffix_resolved": 125,
+    "flagged_count": 28,
+    "clean_count": 97,
+    "flagged_edges": [
+        {
+            "from_file": "tests\\run_sit_v2.py",
+            "from_func": "run_all_sit_tests",
+            "called_name": "pytest.main",
+            "qualifier": "pytest",
+            "suffix": "main",
+            "resolved_to": "main.py",
+            "name_collision_count": 20,
+            "all_candidates": [
+                "main.py",
+                "tests\\run_uat.py",
+                "tests\\run_uat_per_case.py",
+                "tests\\intelligence\\orchestration\\diagnostic_django_exec_eval.py",
+                "tests\\intelligence\\orchestration\\tc_v2_final_002b_cross_repo_scan.py",
+                "tests\\intelligence\\orchestration\\tc_v2_final_002c_flask_cross_repo.py",
+                "tests\\intelligence\\orchestration\\tc_v2_final_002d_governance_probe.py",
+                "tests\\intelligence\\orchestration\\tc_v2_final_002_dependency_inspection.py",
+                "tests\\intelligence\\orchestration\\tc_v2_final_002_dependency_inspection_extended - Copy.py",
+                "tests\\intelligence\\orchestration\\tc_v2_final_002_suffix_spot_check.py",
+                "tests\\intelligence\\orchestration\\tc_v2_final_003_governance_wiring.py",
+                "tests\\intelligence\\orchestration\\tc_v2_final_004_click_governance.py",
+                "tests\\intelligence\\orchestration\\tc_v2_final_005_httpx_governance.py",
+                "tests\\intelligence\\orchestration\\tc_v2_final_006_flask_full_governance.py",
+                "tests\\intelligence\\orchestration\\tc_v2_final_007_drf_governance.py",
+                "tests\\intelligence\\orchestration\\tc_v2_final_008_rich_governance.py",
+                "tests\\intelligence\\orchestration\\tc_v2_final_009_django_governance.py",
+                "tests\\intelligence\\orchestration\\tc_v2_final_010_transformers_governance.py",
+                "tests\\intelligence\\orchestration\\tc_v2_final_011_bandit_comparison.py",
+                "tests\\intelligence\\orchestration\\tc_v2_final_012_bandit_django.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": [
+                "name_collision"
+            ]
+        },
+        {
+            "from_file": "tests\\run_uat_v2.py",
+            "from_func": "run_all_uat_tests",
+            "called_name": "pytest.main",
+            "qualifier": "pytest",
+            "suffix": "main",
+            "resolved_to": "main.py",
+            "name_collision_count": 20,
+            "all_candidates": [
+                "main.py",
+                "tests\\run_uat.py",
+                "tests\\run_uat_per_case.py",
+                "tests\\intelligence\\orchestration\\diagnostic_django_exec_eval.py",
+                "tests\\intelligence\\orchestration\\tc_v2_final_002b_cross_repo_scan.py",
+                "tests\\intelligence\\orchestration\\tc_v2_final_002c_flask_cross_repo.py",
+                "tests\\intelligence\\orchestration\\tc_v2_final_002d_governance_probe.py",
+                "tests\\intelligence\\orchestration\\tc_v2_final_002_dependency_inspection.py",
+                "tests\\intelligence\\orchestration\\tc_v2_final_002_dependency_inspection_extended - Copy.py",
+                "tests\\intelligence\\orchestration\\tc_v2_final_002_suffix_spot_check.py",
+                "tests\\intelligence\\orchestration\\tc_v2_final_003_governance_wiring.py",
+                "tests\\intelligence\\orchestration\\tc_v2_final_004_click_governance.py",
+                "tests\\intelligence\\orchestration\\tc_v2_final_005_httpx_governance.py",
+                "tests\\intelligence\\orchestration\\tc_v2_final_006_flask_full_governance.py",
+                "tests\\intelligence\\orchestration\\tc_v2_final_007_drf_governance.py",
+                "tests\\intelligence\\orchestration\\tc_v2_final_008_rich_governance.py",
+                "tests\\intelligence\\orchestration\\tc_v2_final_009_django_governance.py",
+                "tests\\intelligence\\orchestration\\tc_v2_final_010_transformers_governance.py",
+                "tests\\intelligence\\orchestration\\tc_v2_final_011_bandit_comparison.py",
+                "tests\\intelligence\\orchestration\\tc_v2_final_012_bandit_django.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": [
+                "name_collision"
+            ]
+        },
+        {
+            "from_file": "tests\\test_embedding_similarity.py",
+            "from_func": "test_embedding_similarity_risk_classification",
+            "called_name": "engine.classify_risk",
+            "qualifier": "engine",
+            "suffix": "classify_risk",
+            "resolved_to": "ai\\embedding_similarity.py",
+            "name_collision_count": 2,
+            "all_candidates": [
+                "ai\\embedding_similarity.py",
+                "ai\\lexical_prefilter.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": [
+                "name_collision"
+            ]
+        },
+        {
+            "from_file": "tests\\test_embedding_similarity.py",
+            "from_func": "test_embedding_similarity_normalization",
+            "called_name": "engine.normalize_text",
+            "qualifier": "engine",
+            "suffix": "normalize_text",
+            "resolved_to": "ai\\embedding_similarity.py",
+            "name_collision_count": 4,
+            "all_candidates": [
+                "ai\\embedding_similarity.py",
+                "ai\\lexical_prefilter.py",
+                "ai\\purpose_analysis_engine.py",
+                "tests\\uat_test_cases.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": [
+                "name_collision"
+            ]
+        },
+        {
+            "from_file": "tests\\test_lexical_semantic_similarity.py",
+            "from_func": "test_lexical_similarity_risk_classification",
+            "called_name": "engine.classify_risk",
+            "qualifier": "engine",
+            "suffix": "classify_risk",
+            "resolved_to": "ai\\embedding_similarity.py",
+            "name_collision_count": 2,
+            "all_candidates": [
+                "ai\\embedding_similarity.py",
+                "ai\\lexical_prefilter.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": [
+                "name_collision"
+            ]
+        },
+        {
+            "from_file": "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+            "from_func": "run_test",
+            "called_name": "behavioral_engine.analyze",
+            "qualifier": "behavioral_engine",
+            "suffix": "analyze",
+            "resolved_to": "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+            "name_collision_count": 4,
+            "all_candidates": [
+                "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+                "tests\\intelligence\\false_positive_tests\\tc_v2_004_false_positive_reduction.py",
+                "tests\\intelligence\\governance_tests\\tc_v2_003_governance_decision_validation.py",
+                "tests\\intelligence\\semantic_tests\\tc_v2_002_semantic_similarity.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": [
+                "name_collision"
+            ]
+        },
+        {
+            "from_file": "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+            "from_func": "run_test",
+            "called_name": "fusion_engine.decide",
+            "qualifier": "fusion_engine",
+            "suffix": "decide",
+            "resolved_to": "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+            "name_collision_count": 13,
+            "all_candidates": [
+                "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+                "tests\\intelligence\\false_positive_tests\\tc_v2_004_false_positive_reduction.py",
+                "tests\\intelligence\\governance_tests\\tc_v2_003_governance_decision_validation.py",
+                "tests\\intelligence\\memory_tests\\tc_v2_013_memory_governance_validation.py",
+                "tests\\intelligence\\regression_tests\\tc_v2_006_semantic_regression_detection.py",
+                "tests\\intelligence\\regression_tests\\tc_v2_008_dynamic_semantic_condition_extraction.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_005_repository_dependency_impact.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_007_dynamic_ast_dependency_discovery.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_009_cross_file_propagation_reasoning.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_010_nested_side_effect_tracing.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_011_context_aware_api_intelligence.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_012_repository_execution_flow_cognition.py",
+                "tests\\intelligence\\semantic_tests\\tc_v2_002_semantic_similarity.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": [
+                "name_collision"
+            ]
+        },
+        {
+            "from_file": "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+            "from_func": "run_test",
+            "called_name": "semantic_engine.compare",
+            "qualifier": "semantic_engine",
+            "suffix": "compare",
+            "resolved_to": "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+            "name_collision_count": 4,
+            "all_candidates": [
+                "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+                "tests\\intelligence\\false_positive_tests\\tc_v2_004_false_positive_reduction.py",
+                "tests\\intelligence\\governance_tests\\tc_v2_003_governance_decision_validation.py",
+                "tests\\intelligence\\semantic_tests\\tc_v2_002_semantic_similarity.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": [
+                "name_collision"
+            ]
+        },
+        {
+            "from_file": "tests\\intelligence\\false_positive_tests\\tc_v2_004_false_positive_reduction.py",
+            "from_func": "run_test",
+            "called_name": "behavioral_engine.analyze",
+            "qualifier": "behavioral_engine",
+            "suffix": "analyze",
+            "resolved_to": "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+            "name_collision_count": 4,
+            "all_candidates": [
+                "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+                "tests\\intelligence\\false_positive_tests\\tc_v2_004_false_positive_reduction.py",
+                "tests\\intelligence\\governance_tests\\tc_v2_003_governance_decision_validation.py",
+                "tests\\intelligence\\semantic_tests\\tc_v2_002_semantic_similarity.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": [
+                "name_collision"
+            ]
+        },
+        {
+            "from_file": "tests\\intelligence\\false_positive_tests\\tc_v2_004_false_positive_reduction.py",
+            "from_func": "run_test",
+            "called_name": "governance_engine.decide",
+            "qualifier": "governance_engine",
+            "suffix": "decide",
+            "resolved_to": "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+            "name_collision_count": 13,
+            "all_candidates": [
+                "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+                "tests\\intelligence\\false_positive_tests\\tc_v2_004_false_positive_reduction.py",
+                "tests\\intelligence\\governance_tests\\tc_v2_003_governance_decision_validation.py",
+                "tests\\intelligence\\memory_tests\\tc_v2_013_memory_governance_validation.py",
+                "tests\\intelligence\\regression_tests\\tc_v2_006_semantic_regression_detection.py",
+                "tests\\intelligence\\regression_tests\\tc_v2_008_dynamic_semantic_condition_extraction.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_005_repository_dependency_impact.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_007_dynamic_ast_dependency_discovery.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_009_cross_file_propagation_reasoning.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_010_nested_side_effect_tracing.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_011_context_aware_api_intelligence.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_012_repository_execution_flow_cognition.py",
+                "tests\\intelligence\\semantic_tests\\tc_v2_002_semantic_similarity.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": [
+                "name_collision"
+            ]
+        },
+        {
+            "from_file": "tests\\intelligence\\false_positive_tests\\tc_v2_004_false_positive_reduction.py",
+            "from_func": "run_test",
+            "called_name": "semantic_engine.compare",
+            "qualifier": "semantic_engine",
+            "suffix": "compare",
+            "resolved_to": "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+            "name_collision_count": 4,
+            "all_candidates": [
+                "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+                "tests\\intelligence\\false_positive_tests\\tc_v2_004_false_positive_reduction.py",
+                "tests\\intelligence\\governance_tests\\tc_v2_003_governance_decision_validation.py",
+                "tests\\intelligence\\semantic_tests\\tc_v2_002_semantic_similarity.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": [
+                "name_collision"
+            ]
+        },
+        {
+            "from_file": "tests\\intelligence\\governance_tests\\tc_v2_003_governance_decision_validation.py",
+            "from_func": "run_scenario",
+            "called_name": "behavioral_engine.analyze",
+            "qualifier": "behavioral_engine",
+            "suffix": "analyze",
+            "resolved_to": "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+            "name_collision_count": 4,
+            "all_candidates": [
+                "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+                "tests\\intelligence\\false_positive_tests\\tc_v2_004_false_positive_reduction.py",
+                "tests\\intelligence\\governance_tests\\tc_v2_003_governance_decision_validation.py",
+                "tests\\intelligence\\semantic_tests\\tc_v2_002_semantic_similarity.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": [
+                "name_collision"
+            ]
+        },
+        {
+            "from_file": "tests\\intelligence\\governance_tests\\tc_v2_003_governance_decision_validation.py",
+            "from_func": "run_scenario",
+            "called_name": "governance_engine.decide",
+            "qualifier": "governance_engine",
+            "suffix": "decide",
+            "resolved_to": "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+            "name_collision_count": 13,
+            "all_candidates": [
+                "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+                "tests\\intelligence\\false_positive_tests\\tc_v2_004_false_positive_reduction.py",
+                "tests\\intelligence\\governance_tests\\tc_v2_003_governance_decision_validation.py",
+                "tests\\intelligence\\memory_tests\\tc_v2_013_memory_governance_validation.py",
+                "tests\\intelligence\\regression_tests\\tc_v2_006_semantic_regression_detection.py",
+                "tests\\intelligence\\regression_tests\\tc_v2_008_dynamic_semantic_condition_extraction.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_005_repository_dependency_impact.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_007_dynamic_ast_dependency_discovery.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_009_cross_file_propagation_reasoning.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_010_nested_side_effect_tracing.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_011_context_aware_api_intelligence.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_012_repository_execution_flow_cognition.py",
+                "tests\\intelligence\\semantic_tests\\tc_v2_002_semantic_similarity.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": [
+                "name_collision"
+            ]
+        },
+        {
+            "from_file": "tests\\intelligence\\governance_tests\\tc_v2_003_governance_decision_validation.py",
+            "from_func": "run_scenario",
+            "called_name": "semantic_engine.compare",
+            "qualifier": "semantic_engine",
+            "suffix": "compare",
+            "resolved_to": "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+            "name_collision_count": 4,
+            "all_candidates": [
+                "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+                "tests\\intelligence\\false_positive_tests\\tc_v2_004_false_positive_reduction.py",
+                "tests\\intelligence\\governance_tests\\tc_v2_003_governance_decision_validation.py",
+                "tests\\intelligence\\semantic_tests\\tc_v2_002_semantic_similarity.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": [
+                "name_collision"
+            ]
+        },
+        {
+            "from_file": "tests\\intelligence\\memory_tests\\tc_v2_013_memory_governance_validation.py",
+            "from_func": "run_test",
+            "called_name": "governance_engine.decide",
+            "qualifier": "governance_engine",
+            "suffix": "decide",
+            "resolved_to": "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+            "name_collision_count": 13,
+            "all_candidates": [
+                "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+                "tests\\intelligence\\false_positive_tests\\tc_v2_004_false_positive_reduction.py",
+                "tests\\intelligence\\governance_tests\\tc_v2_003_governance_decision_validation.py",
+                "tests\\intelligence\\memory_tests\\tc_v2_013_memory_governance_validation.py",
+                "tests\\intelligence\\regression_tests\\tc_v2_006_semantic_regression_detection.py",
+                "tests\\intelligence\\regression_tests\\tc_v2_008_dynamic_semantic_condition_extraction.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_005_repository_dependency_impact.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_007_dynamic_ast_dependency_discovery.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_009_cross_file_propagation_reasoning.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_010_nested_side_effect_tracing.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_011_context_aware_api_intelligence.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_012_repository_execution_flow_cognition.py",
+                "tests\\intelligence\\semantic_tests\\tc_v2_002_semantic_similarity.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": [
+                "name_collision"
+            ]
+        },
+        {
+            "from_file": "tests\\intelligence\\memory_tests\\tc_v2_013_memory_governance_validation.py",
+            "from_func": "run_test",
+            "called_name": "memory_engine.store_decision",
+            "qualifier": "memory_engine",
+            "suffix": "store_decision",
+            "resolved_to": "core\\memory_store.py",
+            "name_collision_count": 2,
+            "all_candidates": [
+                "core\\memory_store.py",
+                "tests\\intelligence\\memory_tests\\tc_v2_013_memory_governance_validation.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": [
+                "name_collision"
+            ]
+        },
+        {
+            "from_file": "tests\\intelligence\\regression_tests\\tc_v2_006_semantic_regression_detection.py",
+            "from_func": "run_test",
+            "called_name": "governance_engine.decide",
+            "qualifier": "governance_engine",
+            "suffix": "decide",
+            "resolved_to": "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+            "name_collision_count": 13,
+            "all_candidates": [
+                "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+                "tests\\intelligence\\false_positive_tests\\tc_v2_004_false_positive_reduction.py",
+                "tests\\intelligence\\governance_tests\\tc_v2_003_governance_decision_validation.py",
+                "tests\\intelligence\\memory_tests\\tc_v2_013_memory_governance_validation.py",
+                "tests\\intelligence\\regression_tests\\tc_v2_006_semantic_regression_detection.py",
+                "tests\\intelligence\\regression_tests\\tc_v2_008_dynamic_semantic_condition_extraction.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_005_repository_dependency_impact.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_007_dynamic_ast_dependency_discovery.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_009_cross_file_propagation_reasoning.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_010_nested_side_effect_tracing.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_011_context_aware_api_intelligence.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_012_repository_execution_flow_cognition.py",
+                "tests\\intelligence\\semantic_tests\\tc_v2_002_semantic_similarity.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": [
+                "name_collision"
+            ]
+        },
+        {
+            "from_file": "tests\\intelligence\\regression_tests\\tc_v2_008_dynamic_semantic_condition_extraction.py",
+            "from_func": "run_test",
+            "called_name": "governance_engine.decide",
+            "qualifier": "governance_engine",
+            "suffix": "decide",
+            "resolved_to": "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+            "name_collision_count": 13,
+            "all_candidates": [
+                "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+                "tests\\intelligence\\false_positive_tests\\tc_v2_004_false_positive_reduction.py",
+                "tests\\intelligence\\governance_tests\\tc_v2_003_governance_decision_validation.py",
+                "tests\\intelligence\\memory_tests\\tc_v2_013_memory_governance_validation.py",
+                "tests\\intelligence\\regression_tests\\tc_v2_006_semantic_regression_detection.py",
+                "tests\\intelligence\\regression_tests\\tc_v2_008_dynamic_semantic_condition_extraction.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_005_repository_dependency_impact.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_007_dynamic_ast_dependency_discovery.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_009_cross_file_propagation_reasoning.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_010_nested_side_effect_tracing.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_011_context_aware_api_intelligence.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_012_repository_execution_flow_cognition.py",
+                "tests\\intelligence\\semantic_tests\\tc_v2_002_semantic_similarity.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": [
+                "name_collision"
+            ]
+        },
+        {
+            "from_file": "tests\\intelligence\\repository_reasoning_tests\\tc_v2_005_repository_dependency_impact.py",
+            "from_func": "run_test",
+            "called_name": "decision_engine.decide",
+            "qualifier": "decision_engine",
+            "suffix": "decide",
+            "resolved_to": "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+            "name_collision_count": 13,
+            "all_candidates": [
+                "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+                "tests\\intelligence\\false_positive_tests\\tc_v2_004_false_positive_reduction.py",
+                "tests\\intelligence\\governance_tests\\tc_v2_003_governance_decision_validation.py",
+                "tests\\intelligence\\memory_tests\\tc_v2_013_memory_governance_validation.py",
+                "tests\\intelligence\\regression_tests\\tc_v2_006_semantic_regression_detection.py",
+                "tests\\intelligence\\regression_tests\\tc_v2_008_dynamic_semantic_condition_extraction.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_005_repository_dependency_impact.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_007_dynamic_ast_dependency_discovery.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_009_cross_file_propagation_reasoning.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_010_nested_side_effect_tracing.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_011_context_aware_api_intelligence.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_012_repository_execution_flow_cognition.py",
+                "tests\\intelligence\\semantic_tests\\tc_v2_002_semantic_similarity.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": [
+                "name_collision"
+            ]
+        },
+        {
+            "from_file": "tests\\intelligence\\repository_reasoning_tests\\tc_v2_007_dynamic_ast_dependency_discovery.py",
+            "from_func": "run_test",
+            "called_name": "governance_engine.decide",
+            "qualifier": "governance_engine",
+            "suffix": "decide",
+            "resolved_to": "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+            "name_collision_count": 13,
+            "all_candidates": [
+                "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+                "tests\\intelligence\\false_positive_tests\\tc_v2_004_false_positive_reduction.py",
+                "tests\\intelligence\\governance_tests\\tc_v2_003_governance_decision_validation.py",
+                "tests\\intelligence\\memory_tests\\tc_v2_013_memory_governance_validation.py",
+                "tests\\intelligence\\regression_tests\\tc_v2_006_semantic_regression_detection.py",
+                "tests\\intelligence\\regression_tests\\tc_v2_008_dynamic_semantic_condition_extraction.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_005_repository_dependency_impact.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_007_dynamic_ast_dependency_discovery.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_009_cross_file_propagation_reasoning.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_010_nested_side_effect_tracing.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_011_context_aware_api_intelligence.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_012_repository_execution_flow_cognition.py",
+                "tests\\intelligence\\semantic_tests\\tc_v2_002_semantic_similarity.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": [
+                "name_collision"
+            ]
+        },
+        {
+            "from_file": "tests\\intelligence\\repository_reasoning_tests\\tc_v2_009_cross_file_propagation_reasoning.py",
+            "from_func": "run_test",
+            "called_name": "governance_engine.decide",
+            "qualifier": "governance_engine",
+            "suffix": "decide",
+            "resolved_to": "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+            "name_collision_count": 13,
+            "all_candidates": [
+                "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+                "tests\\intelligence\\false_positive_tests\\tc_v2_004_false_positive_reduction.py",
+                "tests\\intelligence\\governance_tests\\tc_v2_003_governance_decision_validation.py",
+                "tests\\intelligence\\memory_tests\\tc_v2_013_memory_governance_validation.py",
+                "tests\\intelligence\\regression_tests\\tc_v2_006_semantic_regression_detection.py",
+                "tests\\intelligence\\regression_tests\\tc_v2_008_dynamic_semantic_condition_extraction.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_005_repository_dependency_impact.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_007_dynamic_ast_dependency_discovery.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_009_cross_file_propagation_reasoning.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_010_nested_side_effect_tracing.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_011_context_aware_api_intelligence.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_012_repository_execution_flow_cognition.py",
+                "tests\\intelligence\\semantic_tests\\tc_v2_002_semantic_similarity.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": [
+                "name_collision"
+            ]
+        },
+        {
+            "from_file": "tests\\intelligence\\repository_reasoning_tests\\tc_v2_010_nested_side_effect_tracing.py",
+            "from_func": "run_test",
+            "called_name": "governance_engine.decide",
+            "qualifier": "governance_engine",
+            "suffix": "decide",
+            "resolved_to": "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+            "name_collision_count": 13,
+            "all_candidates": [
+                "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+                "tests\\intelligence\\false_positive_tests\\tc_v2_004_false_positive_reduction.py",
+                "tests\\intelligence\\governance_tests\\tc_v2_003_governance_decision_validation.py",
+                "tests\\intelligence\\memory_tests\\tc_v2_013_memory_governance_validation.py",
+                "tests\\intelligence\\regression_tests\\tc_v2_006_semantic_regression_detection.py",
+                "tests\\intelligence\\regression_tests\\tc_v2_008_dynamic_semantic_condition_extraction.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_005_repository_dependency_impact.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_007_dynamic_ast_dependency_discovery.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_009_cross_file_propagation_reasoning.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_010_nested_side_effect_tracing.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_011_context_aware_api_intelligence.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_012_repository_execution_flow_cognition.py",
+                "tests\\intelligence\\semantic_tests\\tc_v2_002_semantic_similarity.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": [
+                "name_collision"
+            ]
+        },
+        {
+            "from_file": "tests\\intelligence\\repository_reasoning_tests\\tc_v2_011_context_aware_api_intelligence.py",
+            "from_func": "run_test",
+            "called_name": "governance_engine.decide",
+            "qualifier": "governance_engine",
+            "suffix": "decide",
+            "resolved_to": "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+            "name_collision_count": 13,
+            "all_candidates": [
+                "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+                "tests\\intelligence\\false_positive_tests\\tc_v2_004_false_positive_reduction.py",
+                "tests\\intelligence\\governance_tests\\tc_v2_003_governance_decision_validation.py",
+                "tests\\intelligence\\memory_tests\\tc_v2_013_memory_governance_validation.py",
+                "tests\\intelligence\\regression_tests\\tc_v2_006_semantic_regression_detection.py",
+                "tests\\intelligence\\regression_tests\\tc_v2_008_dynamic_semantic_condition_extraction.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_005_repository_dependency_impact.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_007_dynamic_ast_dependency_discovery.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_009_cross_file_propagation_reasoning.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_010_nested_side_effect_tracing.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_011_context_aware_api_intelligence.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_012_repository_execution_flow_cognition.py",
+                "tests\\intelligence\\semantic_tests\\tc_v2_002_semantic_similarity.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": [
+                "name_collision"
+            ]
+        },
+        {
+            "from_file": "tests\\intelligence\\repository_reasoning_tests\\tc_v2_012_repository_execution_flow_cognition.py",
+            "from_func": "run_test",
+            "called_name": "governance_engine.decide",
+            "qualifier": "governance_engine",
+            "suffix": "decide",
+            "resolved_to": "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+            "name_collision_count": 13,
+            "all_candidates": [
+                "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+                "tests\\intelligence\\false_positive_tests\\tc_v2_004_false_positive_reduction.py",
+                "tests\\intelligence\\governance_tests\\tc_v2_003_governance_decision_validation.py",
+                "tests\\intelligence\\memory_tests\\tc_v2_013_memory_governance_validation.py",
+                "tests\\intelligence\\regression_tests\\tc_v2_006_semantic_regression_detection.py",
+                "tests\\intelligence\\regression_tests\\tc_v2_008_dynamic_semantic_condition_extraction.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_005_repository_dependency_impact.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_007_dynamic_ast_dependency_discovery.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_009_cross_file_propagation_reasoning.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_010_nested_side_effect_tracing.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_011_context_aware_api_intelligence.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_012_repository_execution_flow_cognition.py",
+                "tests\\intelligence\\semantic_tests\\tc_v2_002_semantic_similarity.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": [
+                "name_collision"
+            ]
+        },
+        {
+            "from_file": "tests\\intelligence\\rollback_tests\\tc_v2_014_rollback_safety_validation.py",
+            "from_func": "run_test",
+            "called_name": "rollback_engine.create_backup",
+            "qualifier": "rollback_engine",
+            "suffix": "create_backup",
+            "resolved_to": "core\\code_modifier.py",
+            "name_collision_count": 5,
+            "all_candidates": [
+                "core\\code_modifier.py",
+                "validation\\rollback_manager.py",
+                "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+                "tests\\intelligence\\governance_tests\\tc_v2_003_governance_decision_validation.py",
+                "tests\\intelligence\\rollback_tests\\tc_v2_014_rollback_safety_validation.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": [
+                "name_collision"
+            ]
+        },
+        {
+            "from_file": "tests\\intelligence\\semantic_tests\\tc_v2_002_semantic_similarity.py",
+            "from_func": "run_test",
+            "called_name": "behavioral_engine.analyze",
+            "qualifier": "behavioral_engine",
+            "suffix": "analyze",
+            "resolved_to": "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+            "name_collision_count": 4,
+            "all_candidates": [
+                "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+                "tests\\intelligence\\false_positive_tests\\tc_v2_004_false_positive_reduction.py",
+                "tests\\intelligence\\governance_tests\\tc_v2_003_governance_decision_validation.py",
+                "tests\\intelligence\\semantic_tests\\tc_v2_002_semantic_similarity.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": [
+                "name_collision"
+            ]
+        },
+        {
+            "from_file": "tests\\intelligence\\semantic_tests\\tc_v2_002_semantic_similarity.py",
+            "from_func": "run_test",
+            "called_name": "fusion_engine.decide",
+            "qualifier": "fusion_engine",
+            "suffix": "decide",
+            "resolved_to": "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+            "name_collision_count": 13,
+            "all_candidates": [
+                "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+                "tests\\intelligence\\false_positive_tests\\tc_v2_004_false_positive_reduction.py",
+                "tests\\intelligence\\governance_tests\\tc_v2_003_governance_decision_validation.py",
+                "tests\\intelligence\\memory_tests\\tc_v2_013_memory_governance_validation.py",
+                "tests\\intelligence\\regression_tests\\tc_v2_006_semantic_regression_detection.py",
+                "tests\\intelligence\\regression_tests\\tc_v2_008_dynamic_semantic_condition_extraction.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_005_repository_dependency_impact.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_007_dynamic_ast_dependency_discovery.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_009_cross_file_propagation_reasoning.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_010_nested_side_effect_tracing.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_011_context_aware_api_intelligence.py",
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_012_repository_execution_flow_cognition.py",
+                "tests\\intelligence\\semantic_tests\\tc_v2_002_semantic_similarity.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": [
+                "name_collision"
+            ]
+        },
+        {
+            "from_file": "tests\\intelligence\\semantic_tests\\tc_v2_002_semantic_similarity.py",
+            "from_func": "run_test",
+            "called_name": "semantic_engine.compare",
+            "qualifier": "semantic_engine",
+            "suffix": "compare",
+            "resolved_to": "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+            "name_collision_count": 4,
+            "all_candidates": [
+                "tests\\intelligence\\behavioral_tests\\tc_v2_001_behavioral_contradiction.py",
+                "tests\\intelligence\\false_positive_tests\\tc_v2_004_false_positive_reduction.py",
+                "tests\\intelligence\\governance_tests\\tc_v2_003_governance_decision_validation.py",
+                "tests\\intelligence\\semantic_tests\\tc_v2_002_semantic_similarity.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": [
+                "name_collision"
+            ]
+        }
+    ],
+    "clean_edges": [
+        {
+            "from_file": "main_v2.py",
+            "from_func": "run_v2_demo",
+            "called_name": "ai_gateway.analyze_text",
+            "qualifier": "ai_gateway",
+            "suffix": "analyze_text",
+            "resolved_to": "ai\\ai_interface.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\ai_interface.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "main_v2.py",
+            "from_func": "run_v2_demo",
+            "called_name": "memory.get_memory",
+            "qualifier": "memory",
+            "suffix": "get_memory",
+            "resolved_to": "memory\\memory_store_v2.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "memory\\memory_store_v2.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "main_v2.py",
+            "from_func": "run_v2_demo",
+            "called_name": "memory.store_approved_decision",
+            "qualifier": "memory",
+            "suffix": "store_approved_decision",
+            "resolved_to": "memory\\memory_store_v2.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "memory\\memory_store_v2.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "ai\\governance_wiring.py",
+            "from_func": "_build_imported_names_for_file",
+            "called_name": "imported.add",
+            "qualifier": "imported",
+            "suffix": "add",
+            "resolved_to": "tests\\uat_test_cases.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "tests\\uat_test_cases.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "ai\\governance_wiring_old.py",
+            "from_func": "_build_imported_names_for_file",
+            "called_name": "imported.add",
+            "qualifier": "imported",
+            "suffix": "add",
+            "resolved_to": "tests\\uat_test_cases.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "tests\\uat_test_cases.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "ai\\governance_wiring_v2_with_check3.py.bak.py",
+            "from_func": "_build_imported_names_for_file",
+            "called_name": "imported.add",
+            "qualifier": "imported",
+            "suffix": "add",
+            "resolved_to": "tests\\uat_test_cases.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "tests\\uat_test_cases.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "core\\duplicate_detector.py",
+            "from_func": "find_duplicates",
+            "called_name": "seen_pairs.add",
+            "qualifier": "seen_pairs",
+            "suffix": "add",
+            "resolved_to": "tests\\uat_test_cases.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "tests\\uat_test_cases.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "memory\\__init__.py",
+            "from_func": "__init__",
+            "called_name": "self._initialize_memory",
+            "qualifier": "self",
+            "suffix": "_initialize_memory",
+            "resolved_to": "memory\\memory_store_v2.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "memory\\memory_store_v2.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_archive_retention.py",
+            "from_func": "test_archive_retention_limit",
+            "called_name": "memory_store._prune_old_archives",
+            "qualifier": "memory_store",
+            "suffix": "_prune_old_archives",
+            "resolved_to": "memory\\memory_store_v2.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "memory\\memory_store_v2.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_archive_retention.py",
+            "from_func": "test_archive_retention_limit",
+            "called_name": "memory_store.get_memory",
+            "qualifier": "memory_store",
+            "suffix": "get_memory",
+            "resolved_to": "memory\\memory_store_v2.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "memory\\memory_store_v2.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_archive_retention.py",
+            "from_func": "test_archive_cleanup_event_logging",
+            "called_name": "memory_store._prune_old_archives",
+            "qualifier": "memory_store",
+            "suffix": "_prune_old_archives",
+            "resolved_to": "memory\\memory_store_v2.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "memory\\memory_store_v2.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_archive_retention.py",
+            "from_func": "test_archive_cleanup_event_logging",
+            "called_name": "memory_store.get_memory",
+            "qualifier": "memory_store",
+            "suffix": "get_memory",
+            "resolved_to": "memory\\memory_store_v2.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "memory\\memory_store_v2.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_embedding_similarity.py",
+            "from_func": "test_embedding_similarity_positive",
+            "called_name": "engine.semantic_similarity_score",
+            "qualifier": "engine",
+            "suffix": "semantic_similarity_score",
+            "resolved_to": "ai\\embedding_similarity.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\embedding_similarity.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_embedding_similarity.py",
+            "from_func": "test_embedding_similarity_negative",
+            "called_name": "engine.semantic_similarity_score",
+            "qualifier": "engine",
+            "suffix": "semantic_similarity_score",
+            "resolved_to": "ai\\embedding_similarity.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\embedding_similarity.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_embedding_similarity.py",
+            "from_func": "test_embedding_similarity_same_text",
+            "called_name": "engine.semantic_similarity_score",
+            "qualifier": "engine",
+            "suffix": "semantic_similarity_score",
+            "resolved_to": "ai\\embedding_similarity.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\embedding_similarity.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_embedding_similarity.py",
+            "from_func": "test_embedding_similarity_contextual_match",
+            "called_name": "engine.semantic_similarity_score",
+            "qualifier": "engine",
+            "suffix": "semantic_similarity_score",
+            "resolved_to": "ai\\embedding_similarity.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\embedding_similarity.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_embedding_similarity.py",
+            "from_func": "test_embedding_similarity_empty_input",
+            "called_name": "engine.semantic_similarity_score",
+            "qualifier": "engine",
+            "suffix": "semantic_similarity_score",
+            "resolved_to": "ai\\embedding_similarity.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\embedding_similarity.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_embedding_similarity.py",
+            "from_func": "test_embedding_similarity_output_structure",
+            "called_name": "engine.semantic_similarity_score",
+            "qualifier": "engine",
+            "suffix": "semantic_similarity_score",
+            "resolved_to": "ai\\embedding_similarity.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\embedding_similarity.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_embedding_similarity.py",
+            "from_func": "test_embedding_similarity_engine_type",
+            "called_name": "engine.semantic_similarity_score",
+            "qualifier": "engine",
+            "suffix": "semantic_similarity_score",
+            "resolved_to": "ai\\embedding_similarity.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\embedding_similarity.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_embedding_similarity.py",
+            "from_func": "test_embedding_generation",
+            "called_name": "engine.generate_embedding",
+            "qualifier": "engine",
+            "suffix": "generate_embedding",
+            "resolved_to": "ai\\embedding_similarity.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\embedding_similarity.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_embedding_similarity.py",
+            "from_func": "test_embedding_similarity_dynamic_text",
+            "called_name": "engine.semantic_similarity_score",
+            "qualifier": "engine",
+            "suffix": "semantic_similarity_score",
+            "resolved_to": "ai\\embedding_similarity.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\embedding_similarity.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_embedding_similarity.py",
+            "from_func": "test_embedding_similarity_long_text",
+            "called_name": "engine.semantic_similarity_score",
+            "qualifier": "engine",
+            "suffix": "semantic_similarity_score",
+            "resolved_to": "ai\\embedding_similarity.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\embedding_similarity.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_embedding_similarity.py",
+            "from_func": "test_embedding_similarity_special_characters",
+            "called_name": "engine.semantic_similarity_score",
+            "qualifier": "engine",
+            "suffix": "semantic_similarity_score",
+            "resolved_to": "ai\\embedding_similarity.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\embedding_similarity.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_embedding_similarity.py",
+            "from_func": "test_embedding_similarity_case_insensitive",
+            "called_name": "engine.semantic_similarity_score",
+            "qualifier": "engine",
+            "suffix": "semantic_similarity_score",
+            "resolved_to": "ai\\embedding_similarity.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\embedding_similarity.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_embedding_similarity.py",
+            "from_func": "test_embedding_similarity_random_input",
+            "called_name": "engine.semantic_similarity_score",
+            "qualifier": "engine",
+            "suffix": "semantic_similarity_score",
+            "resolved_to": "ai\\embedding_similarity.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\embedding_similarity.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_lexical_semantic_similarity.py",
+            "from_func": "test_lexical_similarity_positive",
+            "called_name": "engine.lexical_similarity_score",
+            "qualifier": "engine",
+            "suffix": "lexical_similarity_score",
+            "resolved_to": "ai\\lexical_prefilter.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\lexical_prefilter.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_lexical_semantic_similarity.py",
+            "from_func": "test_lexical_similarity_negative",
+            "called_name": "engine.lexical_similarity_score",
+            "qualifier": "engine",
+            "suffix": "lexical_similarity_score",
+            "resolved_to": "ai\\lexical_prefilter.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\lexical_prefilter.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_lexical_semantic_similarity.py",
+            "from_func": "test_lexical_similarity_same_text",
+            "called_name": "engine.lexical_similarity_score",
+            "qualifier": "engine",
+            "suffix": "lexical_similarity_score",
+            "resolved_to": "ai\\lexical_prefilter.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\lexical_prefilter.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_lexical_semantic_similarity.py",
+            "from_func": "test_lexical_similarity_synonym_detection",
+            "called_name": "engine.lexical_similarity_score",
+            "qualifier": "engine",
+            "suffix": "lexical_similarity_score",
+            "resolved_to": "ai\\lexical_prefilter.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\lexical_prefilter.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_lexical_semantic_similarity.py",
+            "from_func": "test_lexical_similarity_empty_input",
+            "called_name": "engine.lexical_similarity_score",
+            "qualifier": "engine",
+            "suffix": "lexical_similarity_score",
+            "resolved_to": "ai\\lexical_prefilter.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\lexical_prefilter.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_lexical_semantic_similarity.py",
+            "from_func": "test_lexical_similarity_output_structure",
+            "called_name": "engine.lexical_similarity_score",
+            "qualifier": "engine",
+            "suffix": "lexical_similarity_score",
+            "resolved_to": "ai\\lexical_prefilter.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\lexical_prefilter.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_lexical_semantic_similarity.py",
+            "from_func": "test_lexical_similarity_engine_type",
+            "called_name": "engine.lexical_similarity_score",
+            "qualifier": "engine",
+            "suffix": "lexical_similarity_score",
+            "resolved_to": "ai\\lexical_prefilter.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\lexical_prefilter.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_lexical_semantic_similarity.py",
+            "from_func": "test_lexical_similarity_dynamic_text_support",
+            "called_name": "engine.lexical_similarity_score",
+            "qualifier": "engine",
+            "suffix": "lexical_similarity_score",
+            "resolved_to": "ai\\lexical_prefilter.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\lexical_prefilter.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_lexical_semantic_similarity.py",
+            "from_func": "test_lexical_similarity_camelcase_support",
+            "called_name": "engine.lexical_similarity_score",
+            "qualifier": "engine",
+            "suffix": "lexical_similarity_score",
+            "resolved_to": "ai\\lexical_prefilter.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\lexical_prefilter.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_lexical_semantic_similarity.py",
+            "from_func": "test_lexical_similarity_special_characters",
+            "called_name": "engine.lexical_similarity_score",
+            "qualifier": "engine",
+            "suffix": "lexical_similarity_score",
+            "resolved_to": "ai\\lexical_prefilter.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\lexical_prefilter.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_lexical_semantic_similarity.py",
+            "from_func": "test_lexical_similarity_case_insensitive",
+            "called_name": "engine.lexical_similarity_score",
+            "qualifier": "engine",
+            "suffix": "lexical_similarity_score",
+            "resolved_to": "ai\\lexical_prefilter.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\lexical_prefilter.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_lexical_semantic_similarity.py",
+            "from_func": "test_lexical_similarity_long_text",
+            "called_name": "engine.lexical_similarity_score",
+            "qualifier": "engine",
+            "suffix": "lexical_similarity_score",
+            "resolved_to": "ai\\lexical_prefilter.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\lexical_prefilter.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_lexical_semantic_similarity.py",
+            "from_func": "test_lexical_similarity_random_input",
+            "called_name": "engine.lexical_similarity_score",
+            "qualifier": "engine",
+            "suffix": "lexical_similarity_score",
+            "resolved_to": "ai\\lexical_prefilter.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\lexical_prefilter.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_lexical_semantic_similarity.py",
+            "from_func": "test_lexical_similarity_action_matching",
+            "called_name": "engine.lexical_similarity_score",
+            "qualifier": "engine",
+            "suffix": "lexical_similarity_score",
+            "resolved_to": "ai\\lexical_prefilter.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\lexical_prefilter.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_lexical_semantic_similarity.py",
+            "from_func": "test_lexical_similarity_multiple_token_overlap",
+            "called_name": "engine.lexical_similarity_score",
+            "qualifier": "engine",
+            "suffix": "lexical_similarity_score",
+            "resolved_to": "ai\\lexical_prefilter.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\lexical_prefilter.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_memory_cleanup.py",
+            "from_func": "test_memory_cleanup_enforcement",
+            "called_name": "memory_store.get_memory",
+            "qualifier": "memory_store",
+            "suffix": "get_memory",
+            "resolved_to": "memory\\memory_store_v2.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "memory\\memory_store_v2.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_memory_cleanup.py",
+            "from_func": "test_memory_cleanup_enforcement",
+            "called_name": "memory_store.store_approved_decision",
+            "qualifier": "memory_store",
+            "suffix": "store_approved_decision",
+            "resolved_to": "memory\\memory_store_v2.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "memory\\memory_store_v2.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_memory_cleanup.py",
+            "from_func": "test_manual_cleanup_execution",
+            "called_name": "memory_store.enforce_cleanup",
+            "qualifier": "memory_store",
+            "suffix": "enforce_cleanup",
+            "resolved_to": "memory\\memory_store_v2.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "memory\\memory_store_v2.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_semantic_decision_engine.py",
+            "from_func": "test_semantic_decision_review",
+            "called_name": "engine.analyze_change",
+            "qualifier": "engine",
+            "suffix": "analyze_change",
+            "resolved_to": "ai\\semantic_decision_engine.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\semantic_decision_engine.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_semantic_decision_engine.py",
+            "from_func": "test_semantic_decision_output_structure",
+            "called_name": "engine.analyze_change",
+            "qualifier": "engine",
+            "suffix": "analyze_change",
+            "resolved_to": "ai\\semantic_decision_engine.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\semantic_decision_engine.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_semantic_decision_engine.py",
+            "from_func": "test_semantic_decision_engine_type",
+            "called_name": "engine.analyze_change",
+            "qualifier": "engine",
+            "suffix": "analyze_change",
+            "resolved_to": "ai\\semantic_decision_engine.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\semantic_decision_engine.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_semantic_decision_engine.py",
+            "from_func": "test_semantic_decision_negative_case",
+            "called_name": "engine.analyze_change",
+            "qualifier": "engine",
+            "suffix": "analyze_change",
+            "resolved_to": "ai\\semantic_decision_engine.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\semantic_decision_engine.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_semantic_decision_engine.py",
+            "from_func": "test_semantic_decision_reasoning_exists",
+            "called_name": "engine.analyze_change",
+            "qualifier": "engine",
+            "suffix": "analyze_change",
+            "resolved_to": "ai\\semantic_decision_engine.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\semantic_decision_engine.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_sit_failure_pipeline.py",
+            "from_func": "test_pipeline_survives_validation_failure",
+            "called_name": "ai_gateway.analyze_text",
+            "qualifier": "ai_gateway",
+            "suffix": "analyze_text",
+            "resolved_to": "ai\\ai_interface.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\ai_interface.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_sit_failure_pipeline.py",
+            "from_func": "test_pipeline_survives_validation_failure",
+            "called_name": "memory.store_approved_decision",
+            "qualifier": "memory",
+            "suffix": "store_approved_decision",
+            "resolved_to": "memory\\memory_store_v2.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "memory\\memory_store_v2.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_sit_pipeline.py",
+            "from_func": "test_full_v2_pipeline",
+            "called_name": "ai_gateway.analyze_text",
+            "qualifier": "ai_gateway",
+            "suffix": "analyze_text",
+            "resolved_to": "ai\\ai_interface.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\ai_interface.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_sit_pipeline.py",
+            "from_func": "test_full_v2_pipeline",
+            "called_name": "memory.get_memory",
+            "qualifier": "memory",
+            "suffix": "get_memory",
+            "resolved_to": "memory\\memory_store_v2.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "memory\\memory_store_v2.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\test_sit_pipeline.py",
+            "from_func": "test_full_v2_pipeline",
+            "called_name": "memory.store_approved_decision",
+            "qualifier": "memory",
+            "suffix": "store_approved_decision",
+            "resolved_to": "memory\\memory_store_v2.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "memory\\memory_store_v2.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\v2_orchestrator_test - Copy.py",
+            "from_func": "run_v2_orchestrator",
+            "called_name": "behavioral_engine.analyze_file",
+            "qualifier": "behavioral_engine",
+            "suffix": "analyze_file",
+            "resolved_to": "ai\\behavioral_signature_engine.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\behavioral_signature_engine.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\v2_orchestrator_test - Copy.py",
+            "from_func": "run_v2_orchestrator",
+            "called_name": "memory.store_approved_decision",
+            "qualifier": "memory",
+            "suffix": "store_approved_decision",
+            "resolved_to": "memory\\memory_store_v2.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "memory\\memory_store_v2.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\v2_orchestrator_test - Copy.py",
+            "from_func": "run_v2_orchestrator",
+            "called_name": "repository_engine.build_graph",
+            "qualifier": "repository_engine",
+            "suffix": "build_graph",
+            "resolved_to": "ai\\repository_graph_engine.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\repository_graph_engine.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\v2_orchestrator_test - Copy.py",
+            "from_func": "run_v2_orchestrator",
+            "called_name": "semantic_engine.analyze_change",
+            "qualifier": "semantic_engine",
+            "suffix": "analyze_change",
+            "resolved_to": "ai\\semantic_decision_engine.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\semantic_decision_engine.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\v2_orchestrator_test.py",
+            "from_func": "run_v2_orchestrator",
+            "called_name": "behavioral_engine.analyze_file",
+            "qualifier": "behavioral_engine",
+            "suffix": "analyze_file",
+            "resolved_to": "ai\\behavioral_signature_engine.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\behavioral_signature_engine.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\v2_orchestrator_test.py",
+            "from_func": "run_v2_orchestrator",
+            "called_name": "memory.store_approved_decision",
+            "qualifier": "memory",
+            "suffix": "store_approved_decision",
+            "resolved_to": "memory\\memory_store_v2.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "memory\\memory_store_v2.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\v2_orchestrator_test.py",
+            "from_func": "run_v2_orchestrator",
+            "called_name": "repository_engine.build_graph",
+            "qualifier": "repository_engine",
+            "suffix": "build_graph",
+            "resolved_to": "ai\\repository_graph_engine.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\repository_graph_engine.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\v2_orchestrator_test.py",
+            "from_func": "run_v2_orchestrator",
+            "called_name": "semantic_engine.analyze_change",
+            "qualifier": "semantic_engine",
+            "suffix": "analyze_change",
+            "resolved_to": "ai\\semantic_decision_engine.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\semantic_decision_engine.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\intelligence\\memory_tests\\tc_v2_013_memory_governance_validation.py",
+            "from_func": "run_test",
+            "called_name": "memory_engine.decision_exists",
+            "qualifier": "memory_engine",
+            "suffix": "decision_exists",
+            "resolved_to": "tests\\intelligence\\memory_tests\\tc_v2_013_memory_governance_validation.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "tests\\intelligence\\memory_tests\\tc_v2_013_memory_governance_validation.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\intelligence\\orchestration\\tc_v2_final_001_full_repository_intelligence_orchestration.py",
+            "from_func": "run_test",
+            "called_name": "governance_engine.validate",
+            "qualifier": "governance_engine",
+            "suffix": "validate",
+            "resolved_to": "tests\\intelligence\\orchestration\\tc_v2_final_001_full_repository_intelligence_orchestration.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "tests\\intelligence\\orchestration\\tc_v2_final_001_full_repository_intelligence_orchestration.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\intelligence\\orchestration\\tc_v2_final_001_full_repository_intelligence_orchestration.py",
+            "from_func": "run_test",
+            "called_name": "orchestrator.run_block_scenario",
+            "qualifier": "orchestrator",
+            "suffix": "run_block_scenario",
+            "resolved_to": "tests\\intelligence\\orchestration\\tc_v2_final_001_full_repository_intelligence_orchestration.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "tests\\intelligence\\orchestration\\tc_v2_final_001_full_repository_intelligence_orchestration.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\intelligence\\orchestration\\tc_v2_final_001_full_repository_intelligence_orchestration.py",
+            "from_func": "run_test",
+            "called_name": "orchestrator.run_review_scenario",
+            "qualifier": "orchestrator",
+            "suffix": "run_review_scenario",
+            "resolved_to": "tests\\intelligence\\orchestration\\tc_v2_final_001_full_repository_intelligence_orchestration.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "tests\\intelligence\\orchestration\\tc_v2_final_001_full_repository_intelligence_orchestration.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\intelligence\\orchestration\\tc_v2_final_001_full_repository_intelligence_orchestration.py",
+            "from_func": "run_test",
+            "called_name": "orchestrator.run_safe_scenario",
+            "qualifier": "orchestrator",
+            "suffix": "run_safe_scenario",
+            "resolved_to": "tests\\intelligence\\orchestration\\tc_v2_final_001_full_repository_intelligence_orchestration.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "tests\\intelligence\\orchestration\\tc_v2_final_001_full_repository_intelligence_orchestration.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\intelligence\\orchestration\\tc_v2_final_002b_cross_repo_scan.py",
+            "from_func": "scan_and_summarize",
+            "called_name": "engine.build_graph",
+            "qualifier": "engine",
+            "suffix": "build_graph",
+            "resolved_to": "ai\\repository_graph_engine.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\repository_graph_engine.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\intelligence\\orchestration\\tc_v2_final_002c_flask_cross_repo.py",
+            "from_func": "main",
+            "called_name": "engine.build_graph",
+            "qualifier": "engine",
+            "suffix": "build_graph",
+            "resolved_to": "ai\\repository_graph_engine.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\repository_graph_engine.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\intelligence\\orchestration\\tc_v2_final_002d_governance_probe.py",
+            "from_func": "scan_summary",
+            "called_name": "engine.build_graph",
+            "qualifier": "engine",
+            "suffix": "build_graph",
+            "resolved_to": "ai\\repository_graph_engine.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\repository_graph_engine.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\intelligence\\orchestration\\tc_v2_final_002_dependency_inspection.py",
+            "from_func": "main",
+            "called_name": "graph_engine.build_graph",
+            "qualifier": "graph_engine",
+            "suffix": "build_graph",
+            "resolved_to": "ai\\repository_graph_engine.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\repository_graph_engine.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\intelligence\\orchestration\\tc_v2_final_002_dependency_inspection_extended - Copy.py",
+            "from_func": "main",
+            "called_name": "engine.build_graph",
+            "qualifier": "engine",
+            "suffix": "build_graph",
+            "resolved_to": "ai\\repository_graph_engine.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\repository_graph_engine.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\intelligence\\orchestration\\tc_v2_final_002_real_multi_file_repository_scan.py",
+            "from_func": "run_test",
+            "called_name": "governance_engine.validate_repository",
+            "qualifier": "governance_engine",
+            "suffix": "validate_repository",
+            "resolved_to": "tests\\intelligence\\orchestration\\tc_v2_final_002_real_multi_file_repository_scan.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "tests\\intelligence\\orchestration\\tc_v2_final_002_real_multi_file_repository_scan.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\intelligence\\orchestration\\tc_v2_final_002_real_multi_file_repository_scan.py",
+            "from_func": "run_test",
+            "called_name": "graph_engine.build_graph",
+            "qualifier": "graph_engine",
+            "suffix": "build_graph",
+            "resolved_to": "ai\\repository_graph_engine.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\repository_graph_engine.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\intelligence\\orchestration\\tc_v2_final_002_real_multi_file_repository_scan.py",
+            "from_func": "run_test",
+            "called_name": "report_engine.save_json_report",
+            "qualifier": "report_engine",
+            "suffix": "save_json_report",
+            "resolved_to": "tests\\intelligence\\orchestration\\tc_v2_final_002_real_multi_file_repository_scan.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "tests\\intelligence\\orchestration\\tc_v2_final_002_real_multi_file_repository_scan.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\intelligence\\orchestration\\tc_v2_final_002_real_multi_file_repository_scan.py",
+            "from_func": "run_test",
+            "called_name": "report_engine.save_text_report",
+            "qualifier": "report_engine",
+            "suffix": "save_text_report",
+            "resolved_to": "tests\\intelligence\\orchestration\\tc_v2_final_002_real_multi_file_repository_scan.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "tests\\intelligence\\orchestration\\tc_v2_final_002_real_multi_file_repository_scan.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\intelligence\\orchestration\\tc_v2_final_002_suffix_spot_check.py",
+            "from_func": "main",
+            "called_name": "engine.build_graph",
+            "qualifier": "engine",
+            "suffix": "build_graph",
+            "resolved_to": "ai\\repository_graph_engine.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\repository_graph_engine.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\intelligence\\orchestration\\tc_v2_final_003_governance_wiring.py",
+            "from_func": "_scan_and_govern",
+            "called_name": "engine.build_graph",
+            "qualifier": "engine",
+            "suffix": "build_graph",
+            "resolved_to": "ai\\repository_graph_engine.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\repository_graph_engine.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\intelligence\\orchestration\\tc_v2_final_004_click_governance.py",
+            "from_func": "_scan_and_govern",
+            "called_name": "engine.build_graph",
+            "qualifier": "engine",
+            "suffix": "build_graph",
+            "resolved_to": "ai\\repository_graph_engine.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\repository_graph_engine.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\intelligence\\orchestration\\tc_v2_final_005_httpx_governance.py",
+            "from_func": "_scan_and_govern",
+            "called_name": "engine.build_graph",
+            "qualifier": "engine",
+            "suffix": "build_graph",
+            "resolved_to": "ai\\repository_graph_engine.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\repository_graph_engine.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\intelligence\\orchestration\\tc_v2_final_006_flask_full_governance.py",
+            "from_func": "_scan_and_govern",
+            "called_name": "engine.build_graph",
+            "qualifier": "engine",
+            "suffix": "build_graph",
+            "resolved_to": "ai\\repository_graph_engine.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\repository_graph_engine.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\intelligence\\orchestration\\tc_v2_final_007_drf_governance.py",
+            "from_func": "_scan_and_govern",
+            "called_name": "engine.build_graph",
+            "qualifier": "engine",
+            "suffix": "build_graph",
+            "resolved_to": "ai\\repository_graph_engine.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\repository_graph_engine.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\intelligence\\orchestration\\tc_v2_final_008_rich_governance.py",
+            "from_func": "_scan_and_govern",
+            "called_name": "engine.build_graph",
+            "qualifier": "engine",
+            "suffix": "build_graph",
+            "resolved_to": "ai\\repository_graph_engine.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\repository_graph_engine.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\intelligence\\orchestration\\tc_v2_final_009_django_governance.py",
+            "from_func": "_scan_and_govern",
+            "called_name": "engine.build_graph",
+            "qualifier": "engine",
+            "suffix": "build_graph",
+            "resolved_to": "ai\\repository_graph_engine.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\repository_graph_engine.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\intelligence\\orchestration\\tc_v2_final_010_transformers_governance.py",
+            "from_func": "_scan_and_govern",
+            "called_name": "engine.build_graph",
+            "qualifier": "engine",
+            "suffix": "build_graph",
+            "resolved_to": "ai\\repository_graph_engine.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "ai\\repository_graph_engine.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\intelligence\\orchestration\\tc_v2_final_011_bandit_comparison.py",
+            "from_func": "collect_bandit_unique",
+            "called_name": "matched_keys.add",
+            "qualifier": "matched_keys",
+            "suffix": "add",
+            "resolved_to": "tests\\uat_test_cases.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "tests\\uat_test_cases.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\intelligence\\orchestration\\tc_v2_final_012_bandit_django.py",
+            "from_func": "collect_bandit_unique",
+            "called_name": "matched_keys.add",
+            "qualifier": "matched_keys",
+            "suffix": "add",
+            "resolved_to": "tests\\uat_test_cases.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "tests\\uat_test_cases.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\intelligence\\regression_tests\\tc_v2_006_semantic_regression_detection.py",
+            "from_func": "run_test",
+            "called_name": "regression_engine.compare_rules",
+            "qualifier": "regression_engine",
+            "suffix": "compare_rules",
+            "resolved_to": "tests\\intelligence\\regression_tests\\tc_v2_006_semantic_regression_detection.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "tests\\intelligence\\regression_tests\\tc_v2_006_semantic_regression_detection.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\intelligence\\regression_tests\\tc_v2_008_dynamic_semantic_condition_extraction.py",
+            "from_func": "run_test",
+            "called_name": "regression_engine.compare_conditions",
+            "qualifier": "regression_engine",
+            "suffix": "compare_conditions",
+            "resolved_to": "tests\\intelligence\\regression_tests\\tc_v2_008_dynamic_semantic_condition_extraction.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "tests\\intelligence\\regression_tests\\tc_v2_008_dynamic_semantic_condition_extraction.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\intelligence\\repository_reasoning_tests\\tc_v2_005_repository_dependency_impact.py",
+            "from_func": "run_test",
+            "called_name": "dependency_engine.find_impacted_functions",
+            "qualifier": "dependency_engine",
+            "suffix": "find_impacted_functions",
+            "resolved_to": "tests\\intelligence\\repository_reasoning_tests\\tc_v2_005_repository_dependency_impact.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_005_repository_dependency_impact.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\intelligence\\repository_reasoning_tests\\tc_v2_009_cross_file_propagation_reasoning.py",
+            "from_func": "run_test",
+            "called_name": "propagation_engine.find_propagation_chain",
+            "qualifier": "propagation_engine",
+            "suffix": "find_propagation_chain",
+            "resolved_to": "tests\\intelligence\\repository_reasoning_tests\\tc_v2_009_cross_file_propagation_reasoning.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_009_cross_file_propagation_reasoning.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\intelligence\\repository_reasoning_tests\\tc_v2_010_nested_side_effect_tracing.py",
+            "from_func": "run_test",
+            "called_name": "propagation_engine.trace_side_effects",
+            "qualifier": "propagation_engine",
+            "suffix": "trace_side_effects",
+            "resolved_to": "tests\\intelligence\\repository_reasoning_tests\\tc_v2_010_nested_side_effect_tracing.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_010_nested_side_effect_tracing.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\intelligence\\repository_reasoning_tests\\tc_v2_012_repository_execution_flow_cognition.py",
+            "from_func": "run_test",
+            "called_name": "flow_engine.reconstruct_flow",
+            "qualifier": "flow_engine",
+            "suffix": "reconstruct_flow",
+            "resolved_to": "tests\\intelligence\\repository_reasoning_tests\\tc_v2_012_repository_execution_flow_cognition.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "tests\\intelligence\\repository_reasoning_tests\\tc_v2_012_repository_execution_flow_cognition.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\intelligence\\rollback_tests\\tc_v2_014_rollback_safety_validation.py",
+            "from_func": "run_test",
+            "called_name": "governance_engine.validate_integrity",
+            "qualifier": "governance_engine",
+            "suffix": "validate_integrity",
+            "resolved_to": "tests\\intelligence\\rollback_tests\\tc_v2_014_rollback_safety_validation.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "tests\\intelligence\\rollback_tests\\tc_v2_014_rollback_safety_validation.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\intelligence\\rollback_tests\\tc_v2_014_rollback_safety_validation.py",
+            "from_func": "run_test",
+            "called_name": "rollback_engine.apply_broken_change",
+            "qualifier": "rollback_engine",
+            "suffix": "apply_broken_change",
+            "resolved_to": "tests\\intelligence\\rollback_tests\\tc_v2_014_rollback_safety_validation.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "tests\\intelligence\\rollback_tests\\tc_v2_014_rollback_safety_validation.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\intelligence\\rollback_tests\\tc_v2_014_rollback_safety_validation.py",
+            "from_func": "run_test",
+            "called_name": "rollback_engine.create_original_file",
+            "qualifier": "rollback_engine",
+            "suffix": "create_original_file",
+            "resolved_to": "tests\\intelligence\\rollback_tests\\tc_v2_014_rollback_safety_validation.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "tests\\intelligence\\rollback_tests\\tc_v2_014_rollback_safety_validation.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\intelligence\\rollback_tests\\tc_v2_014_rollback_safety_validation.py",
+            "from_func": "run_test",
+            "called_name": "rollback_engine.read_current_content",
+            "qualifier": "rollback_engine",
+            "suffix": "read_current_content",
+            "resolved_to": "tests\\intelligence\\rollback_tests\\tc_v2_014_rollback_safety_validation.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "tests\\intelligence\\rollback_tests\\tc_v2_014_rollback_safety_validation.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        },
+        {
+            "from_file": "tests\\intelligence\\rollback_tests\\tc_v2_014_rollback_safety_validation.py",
+            "from_func": "run_test",
+            "called_name": "rollback_engine.rollback_restore",
+            "qualifier": "rollback_engine",
+            "suffix": "rollback_restore",
+            "resolved_to": "tests\\intelligence\\rollback_tests\\tc_v2_014_rollback_safety_validation.py",
+            "name_collision_count": 1,
+            "all_candidates": [
+                "tests\\intelligence\\rollback_tests\\tc_v2_014_rollback_safety_validation.py"
+            ],
+            "qualifier_appears_in_from_file": true,
+            "warning_flags": []
+        }
+    ]
+}

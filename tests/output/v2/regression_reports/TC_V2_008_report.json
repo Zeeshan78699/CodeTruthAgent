@@ -1,0 +1,18 @@
+{
+    "test_case": "TC_V2_008",
+    "title": "Dynamic Semantic Condition Extraction Validation",
+    "description": "Validates whether V2 can dynamically extract and compare authorization conditions from AST parsing.",
+    "category": "Dynamic Semantic Cognition",
+    "old_conditions": [
+        "user.is_admin"
+    ],
+    "new_conditions": [
+        "user.is_active"
+    ],
+    "regression_detected": true,
+    "severity": "CRITICAL",
+    "decision": "BLOCK",
+    "reason": "Authorization condition changed from 'user.is_admin' to 'user.is_active'.",
+    "expected": "BLOCK",
+    "status": "PASS"
+}

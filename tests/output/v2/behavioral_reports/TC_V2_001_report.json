@@ -1,0 +1,12 @@
+{
+    "test_case": "TC_V2_001",
+    "category": "Behavioral Contradiction",
+    "function_a": "create_backup",
+    "function_b": "restore_backup",
+    "behavior_a": "BACKUP_OPERATION",
+    "behavior_b": "RECOVERY_OPERATION",
+    "semantic_relation": "RELATED",
+    "decision": "BLOCK",
+    "reason": "Opposing repository behaviors detected",
+    "status": "PASS"
+}

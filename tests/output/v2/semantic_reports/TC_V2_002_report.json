@@ -1,0 +1,13 @@
+{
+    "test_case": "TC_V2_002",
+    "category": "Semantic Similarity",
+    "function_a": "refund_customer",
+    "function_b": "process_refund",
+    "behavior_a": "REFUND_OPERATION",
+    "behavior_b": "REFUND_OPERATION",
+    "semantic_relation": "RELATED",
+    "confidence": 0.91,
+    "decision": "REVIEW",
+    "reason": "Semantic similarity detected",
+    "status": "PASS"
+}

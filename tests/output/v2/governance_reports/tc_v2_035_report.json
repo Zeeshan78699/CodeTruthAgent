@@ -1,0 +1,20 @@
+{
+    "test_case": "TC_V2_035",
+    "title": "Governance-Enforced Real V1 Fallback",
+    "finding": {
+        "function_1": "calculate_invoice_total",
+        "function_2": "compute_bill_amount",
+        "file_1": ".\\billing.py",
+        "file_2": ".\\sample_code.py",
+        "similarity": 100.0,
+        "duplicate_type": "SEMANTIC_REVIEW_REQUIRED",
+        "risk_level": "High",
+        "risk_reason": "Function used 1 times; Function name has business/domain meaning; Semantic conflict detected; manual review required",
+        "best_function": "calculate_invoice_total",
+        "merge_allowed": false,
+        "action": "Manual review required. Do not auto-replace."
+    },
+    "decision": "APPROVED",
+    "execution_result": "V1 Recommendation Allowed",
+    "status": "PASSED"
+}

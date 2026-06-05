@@ -1,0 +1,14 @@
+{
+    "test_case": "TC_V2_025",
+    "result": {
+        "passed": true,
+        "validation_decision": "REVIEW",
+        "hitl_decision": "PENDING_HUMAN_APPROVAL",
+        "human_decision": "REJECTED",
+        "file_modified": false,
+        "file_unchanged": true
+    },
+    "summary": {
+        "status": "PASSED"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "test_case": "TC_V2_006",
+    "title": "Semantic Regression Detection Validation",
+    "description": "Validates whether V2 can detect hidden semantic or business-rule regression when authorization logic changes from admin-only access to active-user access.",
+    "category": "Semantic Regression",
+    "old_condition": "user.is_admin",
+    "new_condition": "user.is_active",
+    "old_business_rule": "ADMIN_PERMISSION_REQUIRED",
+    "new_business_rule": "ACTIVE_USER_ALLOWED",
+    "risk_area": "AUTHORIZATION",
+    "regression_detected": true,
+    "severity": "CRITICAL",
+    "decision": "BLOCK",
+    "reason": "Business rule changed inside the same risk area. Authorization meaning changed from admin-only access to active-user access.",
+    "expected": "BLOCK",
+    "status": "PASS"
+}

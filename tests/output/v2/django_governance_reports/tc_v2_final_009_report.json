@@ -1,0 +1,761 @@
+{
+    "test_case": "TC_V2_FINAL_009_DJANGO_GOVERNANCE",
+    "baseline": {
+        "repo_root": "C:\\scratch\\django\\django",
+        "files_scanned": 905,
+        "files_with_findings": 18,
+        "total_findings": 26,
+        "findings_by_check": {
+            "dangerous_api_call": 26
+        },
+        "findings_by_severity": {
+            "REVIEW": 22,
+            "BLOCK": 4
+        },
+        "per_file": {
+            "utils\\autoreload.py": {
+                "file_path": "utils\\autoreload.py",
+                "findings": [
+                    {
+                        "file_path": "utils\\autoreload.py",
+                        "function_name": "restart_with_reloader",
+                        "line_number": 273,
+                        "check_name": "dangerous_api_call",
+                        "category": "PROCESS_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'restart_with_reloader' calls 'subprocess.run', classified as PROCESS_OPERATION.",
+                        "evidence": "subprocess.run"
+                    }
+                ]
+            },
+            "utils\\version.py": {
+                "file_path": "utils\\version.py",
+                "findings": [
+                    {
+                        "file_path": "utils\\version.py",
+                        "function_name": "get_git_changeset",
+                        "line_number": 78,
+                        "check_name": "dangerous_api_call",
+                        "category": "PROCESS_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'get_git_changeset' calls 'subprocess.run', classified as PROCESS_OPERATION.",
+                        "evidence": "subprocess.run"
+                    }
+                ]
+            },
+            "contrib\\sessions\\backends\\file.py": {
+                "file_path": "contrib\\sessions\\backends\\file.py",
+                "findings": [
+                    {
+                        "file_path": "contrib\\sessions\\backends\\file.py",
+                        "function_name": "SessionStore.save",
+                        "line_number": 123,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'SessionStore.save' calls 'os.unlink', classified as DELETE_OPERATION.",
+                        "evidence": "os.unlink"
+                    },
+                    {
+                        "file_path": "contrib\\sessions\\backends\\file.py",
+                        "function_name": "SessionStore.delete",
+                        "line_number": 195,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'SessionStore.delete' calls 'os.unlink', classified as DELETE_OPERATION.",
+                        "evidence": "os.unlink"
+                    }
+                ]
+            },
+            "contrib\\staticfiles\\management\\commands\\collectstatic.py": {
+                "file_path": "contrib\\staticfiles\\management\\commands\\collectstatic.py",
+                "findings": [
+                    {
+                        "file_path": "contrib\\staticfiles\\management\\commands\\collectstatic.py",
+                        "function_name": "Command.clear_dir",
+                        "line_number": 269,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'Command.clear_dir' calls 'os.unlink', classified as DELETE_OPERATION.",
+                        "evidence": "os.unlink"
+                    },
+                    {
+                        "file_path": "contrib\\staticfiles\\management\\commands\\collectstatic.py",
+                        "function_name": "Command.link_file",
+                        "line_number": 349,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'Command.link_file' calls 'os.unlink', classified as DELETE_OPERATION.",
+                        "evidence": "os.unlink"
+                    }
+                ]
+            },
+            "core\\files\\move.py": {
+                "file_path": "core\\files\\move.py",
+                "findings": [
+                    {
+                        "file_path": "core\\files\\move.py",
+                        "function_name": "file_move_safe",
+                        "line_number": 16,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'file_move_safe' calls 'os.remove', classified as DELETE_OPERATION.",
+                        "evidence": "os.remove"
+                    }
+                ]
+            },
+            "core\\files\\uploadhandler.py": {
+                "file_path": "core\\files\\uploadhandler.py",
+                "findings": [
+                    {
+                        "file_path": "core\\files\\uploadhandler.py",
+                        "function_name": "TemporaryFileUploadHandler.upload_interrupted",
+                        "line_number": 184,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'TemporaryFileUploadHandler.upload_interrupted' calls 'os.remove', classified as DELETE_OPERATION.",
+                        "evidence": "os.remove"
+                    }
+                ]
+            },
+            "core\\management\\templates.py": {
+                "file_path": "core\\management\\templates.py",
+                "findings": [
+                    {
+                        "file_path": "core\\management\\templates.py",
+                        "function_name": "TemplateCommand.handle",
+                        "line_number": 88,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'TemplateCommand.handle' calls 'os.remove', classified as DELETE_OPERATION.",
+                        "evidence": "os.remove"
+                    },
+                    {
+                        "file_path": "core\\management\\templates.py",
+                        "function_name": "TemplateCommand.handle",
+                        "line_number": 88,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "BLOCK",
+                        "detail": "Function 'TemplateCommand.handle' calls 'shutil.rmtree', classified as DELETE_OPERATION.",
+                        "evidence": "shutil.rmtree"
+                    }
+                ]
+            },
+            "core\\management\\utils.py": {
+                "file_path": "core\\management\\utils.py",
+                "findings": [
+                    {
+                        "file_path": "core\\management\\utils.py",
+                        "function_name": "run_formatters",
+                        "line_number": 166,
+                        "check_name": "dangerous_api_call",
+                        "category": "PROCESS_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'run_formatters' calls 'subprocess.run', classified as PROCESS_OPERATION.",
+                        "evidence": "subprocess.run"
+                    }
+                ]
+            },
+            "core\\cache\\backends\\filebased.py": {
+                "file_path": "core\\cache\\backends\\filebased.py",
+                "findings": [
+                    {
+                        "file_path": "core\\cache\\backends\\filebased.py",
+                        "function_name": "FileBasedCache.set",
+                        "line_number": 48,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'FileBasedCache.set' calls 'os.remove', classified as DELETE_OPERATION.",
+                        "evidence": "os.remove"
+                    },
+                    {
+                        "file_path": "core\\cache\\backends\\filebased.py",
+                        "function_name": "FileBasedCache._delete",
+                        "line_number": 83,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'FileBasedCache._delete' calls 'os.remove', classified as DELETE_OPERATION.",
+                        "evidence": "os.remove"
+                    }
+                ]
+            },
+            "core\\files\\storage\\filesystem.py": {
+                "file_path": "core\\files\\storage\\filesystem.py",
+                "findings": [
+                    {
+                        "file_path": "core\\files\\storage\\filesystem.py",
+                        "function_name": "FileSystemStorage.delete",
+                        "line_number": 156,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'FileSystemStorage.delete' calls 'os.remove', classified as DELETE_OPERATION.",
+                        "evidence": "os.remove"
+                    }
+                ]
+            },
+            "core\\files\\storage\\memory.py": {
+                "file_path": "core\\files\\storage\\memory.py",
+                "findings": [
+                    {
+                        "file_path": "core\\files\\storage\\memory.py",
+                        "function_name": "InMemoryStorage._save",
+                        "line_number": 238,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'InMemoryStorage._save' calls 'os.remove', classified as DELETE_OPERATION.",
+                        "evidence": "os.remove"
+                    }
+                ]
+            },
+            "core\\management\\commands\\makemessages.py": {
+                "file_path": "core\\management\\commands\\makemessages.py",
+                "findings": [
+                    {
+                        "file_path": "core\\management\\commands\\makemessages.py",
+                        "function_name": "BuildFile.cleanup",
+                        "line_number": 145,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'BuildFile.cleanup' calls 'os.unlink', classified as DELETE_OPERATION.",
+                        "evidence": "os.unlink"
+                    },
+                    {
+                        "file_path": "core\\management\\commands\\makemessages.py",
+                        "function_name": "Command.remove_potfiles",
+                        "line_number": 524,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'Command.remove_potfiles' calls 'os.unlink', classified as DELETE_OPERATION.",
+                        "evidence": "os.unlink"
+                    }
+                ]
+            },
+            "core\\management\\commands\\makemigrations.py": {
+                "file_path": "core\\management\\commands\\makemigrations.py",
+                "findings": [
+                    {
+                        "file_path": "core\\management\\commands\\makemigrations.py",
+                        "function_name": "Command.write_migration_files",
+                        "line_number": 337,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'Command.write_migration_files' calls 'os.remove', classified as DELETE_OPERATION.",
+                        "evidence": "os.remove"
+                    }
+                ]
+            },
+            "core\\management\\commands\\shell.py": {
+                "file_path": "core\\management\\commands\\shell.py",
+                "findings": [
+                    {
+                        "file_path": "core\\management\\commands\\shell.py",
+                        "function_name": "Command.python",
+                        "line_number": 67,
+                        "check_name": "dangerous_api_call",
+                        "category": "DYNAMIC_EXEC",
+                        "severity": "BLOCK",
+                        "detail": "Function 'Command.python' calls 'exec', classified as DYNAMIC_EXEC.",
+                        "evidence": "exec"
+                    },
+                    {
+                        "file_path": "core\\management\\commands\\shell.py",
+                        "function_name": "Command.handle",
+                        "line_number": 258,
+                        "check_name": "dangerous_api_call",
+                        "category": "DYNAMIC_EXEC",
+                        "severity": "BLOCK",
+                        "detail": "Function 'Command.handle' calls 'exec', classified as DYNAMIC_EXEC.",
+                        "evidence": "exec"
+                    }
+                ]
+            },
+            "db\\migrations\\questioner.py": {
+                "file_path": "db\\migrations\\questioner.py",
+                "findings": [
+                    {
+                        "file_path": "db\\migrations\\questioner.py",
+                        "function_name": "InteractiveMigrationQuestioner._ask_default",
+                        "line_number": 128,
+                        "check_name": "dangerous_api_call",
+                        "category": "DYNAMIC_EXEC",
+                        "severity": "BLOCK",
+                        "detail": "Function 'InteractiveMigrationQuestioner._ask_default' calls 'eval', classified as DYNAMIC_EXEC.",
+                        "evidence": "eval"
+                    }
+                ]
+            },
+            "db\\backends\\base\\client.py": {
+                "file_path": "db\\backends\\base\\client.py",
+                "findings": [
+                    {
+                        "file_path": "db\\backends\\base\\client.py",
+                        "function_name": "BaseDatabaseClient.runshell",
+                        "line_number": 26,
+                        "check_name": "dangerous_api_call",
+                        "category": "PROCESS_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'BaseDatabaseClient.runshell' calls 'subprocess.run', classified as PROCESS_OPERATION.",
+                        "evidence": "subprocess.run"
+                    }
+                ]
+            },
+            "db\\backends\\mysql\\creation.py": {
+                "file_path": "db\\backends\\mysql\\creation.py",
+                "findings": [
+                    {
+                        "file_path": "db\\backends\\mysql\\creation.py",
+                        "function_name": "DatabaseCreation._clone_db",
+                        "line_number": 62,
+                        "check_name": "dangerous_api_call",
+                        "category": "PROCESS_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'DatabaseCreation._clone_db' calls 'subprocess.Popen', classified as PROCESS_OPERATION.",
+                        "evidence": "subprocess.Popen"
+                    }
+                ]
+            },
+            "db\\backends\\sqlite3\\creation.py": {
+                "file_path": "db\\backends\\sqlite3\\creation.py",
+                "findings": [
+                    {
+                        "file_path": "db\\backends\\sqlite3\\creation.py",
+                        "function_name": "DatabaseCreation._create_test_db",
+                        "line_number": 25,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'DatabaseCreation._create_test_db' calls 'os.remove', classified as DELETE_OPERATION.",
+                        "evidence": "os.remove"
+                    },
+                    {
+                        "file_path": "db\\backends\\sqlite3\\creation.py",
+                        "function_name": "DatabaseCreation._clone_test_db",
+                        "line_number": 74,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'DatabaseCreation._clone_test_db' calls 'os.remove', classified as DELETE_OPERATION.",
+                        "evidence": "os.remove"
+                    },
+                    {
+                        "file_path": "db\\backends\\sqlite3\\creation.py",
+                        "function_name": "DatabaseCreation._destroy_test_db",
+                        "line_number": 109,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'DatabaseCreation._destroy_test_db' calls 'os.remove', classified as DELETE_OPERATION.",
+                        "evidence": "os.remove"
+                    }
+                ]
+            }
+        }
+    },
+    "with_probe": {
+        "repo_root": "C:\\Users\\Zeeshan\\AppData\\Local\\Temp\\tmpfkyxzpk4\\django",
+        "files_scanned": 906,
+        "files_with_findings": 19,
+        "total_findings": 28,
+        "findings_by_check": {
+            "global_state_mutation": 1,
+            "dangerous_api_call": 27
+        },
+        "findings_by_severity": {
+            "REVIEW": 24,
+            "BLOCK": 4
+        },
+        "per_file": {
+            "_codetruth_probe.py": {
+                "file_path": "_codetruth_probe.py",
+                "findings": [
+                    {
+                        "file_path": "_codetruth_probe.py",
+                        "function_name": "mutate_global_database",
+                        "line_number": 15,
+                        "check_name": "global_state_mutation",
+                        "category": "GLOBAL_MUTATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'mutate_global_database' mutates module-level name 'DATABASE'.",
+                        "evidence": "DATABASE[user_id] = payload"
+                    },
+                    {
+                        "file_path": "_codetruth_probe.py",
+                        "function_name": "delete_file_unsafely",
+                        "line_number": 19,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'delete_file_unsafely' calls 'os.remove', classified as DELETE_OPERATION.",
+                        "evidence": "os.remove"
+                    }
+                ]
+            },
+            "utils\\autoreload.py": {
+                "file_path": "utils\\autoreload.py",
+                "findings": [
+                    {
+                        "file_path": "utils\\autoreload.py",
+                        "function_name": "restart_with_reloader",
+                        "line_number": 273,
+                        "check_name": "dangerous_api_call",
+                        "category": "PROCESS_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'restart_with_reloader' calls 'subprocess.run', classified as PROCESS_OPERATION.",
+                        "evidence": "subprocess.run"
+                    }
+                ]
+            },
+            "utils\\version.py": {
+                "file_path": "utils\\version.py",
+                "findings": [
+                    {
+                        "file_path": "utils\\version.py",
+                        "function_name": "get_git_changeset",
+                        "line_number": 78,
+                        "check_name": "dangerous_api_call",
+                        "category": "PROCESS_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'get_git_changeset' calls 'subprocess.run', classified as PROCESS_OPERATION.",
+                        "evidence": "subprocess.run"
+                    }
+                ]
+            },
+            "contrib\\sessions\\backends\\file.py": {
+                "file_path": "contrib\\sessions\\backends\\file.py",
+                "findings": [
+                    {
+                        "file_path": "contrib\\sessions\\backends\\file.py",
+                        "function_name": "SessionStore.save",
+                        "line_number": 123,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'SessionStore.save' calls 'os.unlink', classified as DELETE_OPERATION.",
+                        "evidence": "os.unlink"
+                    },
+                    {
+                        "file_path": "contrib\\sessions\\backends\\file.py",
+                        "function_name": "SessionStore.delete",
+                        "line_number": 195,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'SessionStore.delete' calls 'os.unlink', classified as DELETE_OPERATION.",
+                        "evidence": "os.unlink"
+                    }
+                ]
+            },
+            "contrib\\staticfiles\\management\\commands\\collectstatic.py": {
+                "file_path": "contrib\\staticfiles\\management\\commands\\collectstatic.py",
+                "findings": [
+                    {
+                        "file_path": "contrib\\staticfiles\\management\\commands\\collectstatic.py",
+                        "function_name": "Command.clear_dir",
+                        "line_number": 269,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'Command.clear_dir' calls 'os.unlink', classified as DELETE_OPERATION.",
+                        "evidence": "os.unlink"
+                    },
+                    {
+                        "file_path": "contrib\\staticfiles\\management\\commands\\collectstatic.py",
+                        "function_name": "Command.link_file",
+                        "line_number": 349,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'Command.link_file' calls 'os.unlink', classified as DELETE_OPERATION.",
+                        "evidence": "os.unlink"
+                    }
+                ]
+            },
+            "core\\files\\move.py": {
+                "file_path": "core\\files\\move.py",
+                "findings": [
+                    {
+                        "file_path": "core\\files\\move.py",
+                        "function_name": "file_move_safe",
+                        "line_number": 16,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'file_move_safe' calls 'os.remove', classified as DELETE_OPERATION.",
+                        "evidence": "os.remove"
+                    }
+                ]
+            },
+            "core\\files\\uploadhandler.py": {
+                "file_path": "core\\files\\uploadhandler.py",
+                "findings": [
+                    {
+                        "file_path": "core\\files\\uploadhandler.py",
+                        "function_name": "TemporaryFileUploadHandler.upload_interrupted",
+                        "line_number": 184,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'TemporaryFileUploadHandler.upload_interrupted' calls 'os.remove', classified as DELETE_OPERATION.",
+                        "evidence": "os.remove"
+                    }
+                ]
+            },
+            "core\\management\\templates.py": {
+                "file_path": "core\\management\\templates.py",
+                "findings": [
+                    {
+                        "file_path": "core\\management\\templates.py",
+                        "function_name": "TemplateCommand.handle",
+                        "line_number": 88,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'TemplateCommand.handle' calls 'os.remove', classified as DELETE_OPERATION.",
+                        "evidence": "os.remove"
+                    },
+                    {
+                        "file_path": "core\\management\\templates.py",
+                        "function_name": "TemplateCommand.handle",
+                        "line_number": 88,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "BLOCK",
+                        "detail": "Function 'TemplateCommand.handle' calls 'shutil.rmtree', classified as DELETE_OPERATION.",
+                        "evidence": "shutil.rmtree"
+                    }
+                ]
+            },
+            "core\\management\\utils.py": {
+                "file_path": "core\\management\\utils.py",
+                "findings": [
+                    {
+                        "file_path": "core\\management\\utils.py",
+                        "function_name": "run_formatters",
+                        "line_number": 166,
+                        "check_name": "dangerous_api_call",
+                        "category": "PROCESS_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'run_formatters' calls 'subprocess.run', classified as PROCESS_OPERATION.",
+                        "evidence": "subprocess.run"
+                    }
+                ]
+            },
+            "core\\cache\\backends\\filebased.py": {
+                "file_path": "core\\cache\\backends\\filebased.py",
+                "findings": [
+                    {
+                        "file_path": "core\\cache\\backends\\filebased.py",
+                        "function_name": "FileBasedCache.set",
+                        "line_number": 48,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'FileBasedCache.set' calls 'os.remove', classified as DELETE_OPERATION.",
+                        "evidence": "os.remove"
+                    },
+                    {
+                        "file_path": "core\\cache\\backends\\filebased.py",
+                        "function_name": "FileBasedCache._delete",
+                        "line_number": 83,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'FileBasedCache._delete' calls 'os.remove', classified as DELETE_OPERATION.",
+                        "evidence": "os.remove"
+                    }
+                ]
+            },
+            "core\\files\\storage\\filesystem.py": {
+                "file_path": "core\\files\\storage\\filesystem.py",
+                "findings": [
+                    {
+                        "file_path": "core\\files\\storage\\filesystem.py",
+                        "function_name": "FileSystemStorage.delete",
+                        "line_number": 156,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'FileSystemStorage.delete' calls 'os.remove', classified as DELETE_OPERATION.",
+                        "evidence": "os.remove"
+                    }
+                ]
+            },
+            "core\\files\\storage\\memory.py": {
+                "file_path": "core\\files\\storage\\memory.py",
+                "findings": [
+                    {
+                        "file_path": "core\\files\\storage\\memory.py",
+                        "function_name": "InMemoryStorage._save",
+                        "line_number": 238,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'InMemoryStorage._save' calls 'os.remove', classified as DELETE_OPERATION.",
+                        "evidence": "os.remove"
+                    }
+                ]
+            },
+            "core\\management\\commands\\makemessages.py": {
+                "file_path": "core\\management\\commands\\makemessages.py",
+                "findings": [
+                    {
+                        "file_path": "core\\management\\commands\\makemessages.py",
+                        "function_name": "BuildFile.cleanup",
+                        "line_number": 145,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'BuildFile.cleanup' calls 'os.unlink', classified as DELETE_OPERATION.",
+                        "evidence": "os.unlink"
+                    },
+                    {
+                        "file_path": "core\\management\\commands\\makemessages.py",
+                        "function_name": "Command.remove_potfiles",
+                        "line_number": 524,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'Command.remove_potfiles' calls 'os.unlink', classified as DELETE_OPERATION.",
+                        "evidence": "os.unlink"
+                    }
+                ]
+            },
+            "core\\management\\commands\\makemigrations.py": {
+                "file_path": "core\\management\\commands\\makemigrations.py",
+                "findings": [
+                    {
+                        "file_path": "core\\management\\commands\\makemigrations.py",
+                        "function_name": "Command.write_migration_files",
+                        "line_number": 337,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'Command.write_migration_files' calls 'os.remove', classified as DELETE_OPERATION.",
+                        "evidence": "os.remove"
+                    }
+                ]
+            },
+            "core\\management\\commands\\shell.py": {
+                "file_path": "core\\management\\commands\\shell.py",
+                "findings": [
+                    {
+                        "file_path": "core\\management\\commands\\shell.py",
+                        "function_name": "Command.python",
+                        "line_number": 67,
+                        "check_name": "dangerous_api_call",
+                        "category": "DYNAMIC_EXEC",
+                        "severity": "BLOCK",
+                        "detail": "Function 'Command.python' calls 'exec', classified as DYNAMIC_EXEC.",
+                        "evidence": "exec"
+                    },
+                    {
+                        "file_path": "core\\management\\commands\\shell.py",
+                        "function_name": "Command.handle",
+                        "line_number": 258,
+                        "check_name": "dangerous_api_call",
+                        "category": "DYNAMIC_EXEC",
+                        "severity": "BLOCK",
+                        "detail": "Function 'Command.handle' calls 'exec', classified as DYNAMIC_EXEC.",
+                        "evidence": "exec"
+                    }
+                ]
+            },
+            "db\\migrations\\questioner.py": {
+                "file_path": "db\\migrations\\questioner.py",
+                "findings": [
+                    {
+                        "file_path": "db\\migrations\\questioner.py",
+                        "function_name": "InteractiveMigrationQuestioner._ask_default",
+                        "line_number": 128,
+                        "check_name": "dangerous_api_call",
+                        "category": "DYNAMIC_EXEC",
+                        "severity": "BLOCK",
+                        "detail": "Function 'InteractiveMigrationQuestioner._ask_default' calls 'eval', classified as DYNAMIC_EXEC.",
+                        "evidence": "eval"
+                    }
+                ]
+            },
+            "db\\backends\\base\\client.py": {
+                "file_path": "db\\backends\\base\\client.py",
+                "findings": [
+                    {
+                        "file_path": "db\\backends\\base\\client.py",
+                        "function_name": "BaseDatabaseClient.runshell",
+                        "line_number": 26,
+                        "check_name": "dangerous_api_call",
+                        "category": "PROCESS_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'BaseDatabaseClient.runshell' calls 'subprocess.run', classified as PROCESS_OPERATION.",
+                        "evidence": "subprocess.run"
+                    }
+                ]
+            },
+            "db\\backends\\mysql\\creation.py": {
+                "file_path": "db\\backends\\mysql\\creation.py",
+                "findings": [
+                    {
+                        "file_path": "db\\backends\\mysql\\creation.py",
+                        "function_name": "DatabaseCreation._clone_db",
+                        "line_number": 62,
+                        "check_name": "dangerous_api_call",
+                        "category": "PROCESS_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'DatabaseCreation._clone_db' calls 'subprocess.Popen', classified as PROCESS_OPERATION.",
+                        "evidence": "subprocess.Popen"
+                    }
+                ]
+            },
+            "db\\backends\\sqlite3\\creation.py": {
+                "file_path": "db\\backends\\sqlite3\\creation.py",
+                "findings": [
+                    {
+                        "file_path": "db\\backends\\sqlite3\\creation.py",
+                        "function_name": "DatabaseCreation._create_test_db",
+                        "line_number": 25,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'DatabaseCreation._create_test_db' calls 'os.remove', classified as DELETE_OPERATION.",
+                        "evidence": "os.remove"
+                    },
+                    {
+                        "file_path": "db\\backends\\sqlite3\\creation.py",
+                        "function_name": "DatabaseCreation._clone_test_db",
+                        "line_number": 74,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'DatabaseCreation._clone_test_db' calls 'os.remove', classified as DELETE_OPERATION.",
+                        "evidence": "os.remove"
+                    },
+                    {
+                        "file_path": "db\\backends\\sqlite3\\creation.py",
+                        "function_name": "DatabaseCreation._destroy_test_db",
+                        "line_number": 109,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'DatabaseCreation._destroy_test_db' calls 'os.remove', classified as DELETE_OPERATION.",
+                        "evidence": "os.remove"
+                    }
+                ]
+            }
+        }
+    },
+    "delta_findings": 2,
+    "verdict": "GOVERNANCE_WIRING_WORKS"
+}

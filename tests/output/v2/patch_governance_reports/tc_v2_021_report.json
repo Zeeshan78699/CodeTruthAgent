@@ -1,0 +1,31 @@
+{
+    "test_case": "TC_V2_021",
+    "flows": {
+        "approve_flow": {
+            "passed": true,
+            "decision": "APPROVE",
+            "risk_level": "LOW",
+            "confidence_score": 0.95
+        },
+        "review_flow": {
+            "passed": true,
+            "decision": "REVIEW",
+            "risk_level": "MEDIUM",
+            "confidence_score": 0.6
+        },
+        "reject_flow": {
+            "passed": true,
+            "decision": "REJECT",
+            "risk_level": "HIGH",
+            "reasons": [
+                "High risk pattern detected: exec("
+            ]
+        }
+    },
+    "summary": {
+        "total_flows": 3,
+        "passed_flows": 3,
+        "failed_flows": 0,
+        "status": "PASSED"
+    }
+}

@@ -1,0 +1,951 @@
+{
+    "test_case": "TC_V2_FINAL_010_TRANSFORMERS_GOVERNANCE",
+    "baseline": {
+        "repo_root": "C:\\scratch\\transformers\\src\\transformers",
+        "files_scanned": 2723,
+        "files_with_findings": 25,
+        "total_findings": 32,
+        "findings_by_check": {
+            "dangerous_api_call": 32
+        },
+        "findings_by_severity": {
+            "REVIEW": 17,
+            "BLOCK": 15
+        },
+        "per_file": {
+            "convert_slow_tokenizers_checkpoints_to_fast.py": {
+                "file_path": "convert_slow_tokenizers_checkpoints_to_fast.py",
+                "findings": [
+                    {
+                        "file_path": "convert_slow_tokenizers_checkpoints_to_fast.py",
+                        "function_name": "convert_slow_checkpoint_to_fast",
+                        "line_number": 48,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'convert_slow_checkpoint_to_fast' calls 'os.remove', classified as DELETE_OPERATION.",
+                        "evidence": "os.remove"
+                    }
+                ]
+            },
+            "modeling_utils.py": {
+                "file_path": "modeling_utils.py",
+                "findings": [
+                    {
+                        "file_path": "modeling_utils.py",
+                        "function_name": "PreTrainedModel.save_pretrained",
+                        "line_number": 3317,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'PreTrainedModel.save_pretrained' calls 'os.remove', classified as DELETE_OPERATION.",
+                        "evidence": "os.remove"
+                    }
+                ]
+            },
+            "testing_utils.py": {
+                "file_path": "testing_utils.py",
+                "findings": [
+                    {
+                        "file_path": "testing_utils.py",
+                        "function_name": "TestCasePlus.get_auto_remove_tmp_dir",
+                        "line_number": 2158,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "BLOCK",
+                        "detail": "Function 'TestCasePlus.get_auto_remove_tmp_dir' calls 'shutil.rmtree', classified as DELETE_OPERATION.",
+                        "evidence": "shutil.rmtree"
+                    },
+                    {
+                        "file_path": "testing_utils.py",
+                        "function_name": "TestCasePlus.tearDown",
+                        "line_number": 2261,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "BLOCK",
+                        "detail": "Function 'TestCasePlus.tearDown' calls 'shutil.rmtree', classified as DELETE_OPERATION.",
+                        "evidence": "shutil.rmtree"
+                    },
+                    {
+                        "file_path": "testing_utils.py",
+                        "function_name": "run_test_using_subprocess",
+                        "line_number": 2843,
+                        "check_name": "dangerous_api_call",
+                        "category": "PROCESS_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'run_test_using_subprocess' calls 'subprocess.run', classified as PROCESS_OPERATION.",
+                        "evidence": "subprocess.run"
+                    },
+                    {
+                        "file_path": "testing_utils.py",
+                        "function_name": "torchrun",
+                        "line_number": 3889,
+                        "check_name": "dangerous_api_call",
+                        "category": "PROCESS_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'torchrun' calls 'subprocess.run', classified as PROCESS_OPERATION.",
+                        "evidence": "subprocess.run"
+                    },
+                    {
+                        "file_path": "testing_utils.py",
+                        "function_name": "convert_all_safetensors_to_bins",
+                        "line_number": 4496,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'convert_all_safetensors_to_bins' calls 'os.remove', classified as DELETE_OPERATION.",
+                        "evidence": "os.remove"
+                    }
+                ]
+            },
+            "trainer.py": {
+                "file_path": "trainer.py",
+                "findings": [
+                    {
+                        "file_path": "trainer.py",
+                        "function_name": "Trainer._finalize_training",
+                        "line_number": 1818,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "BLOCK",
+                        "detail": "Function 'Trainer._finalize_training' calls 'shutil.rmtree', classified as DELETE_OPERATION.",
+                        "evidence": "shutil.rmtree"
+                    }
+                ]
+            },
+            "trainer_jit_checkpoint.py": {
+                "file_path": "trainer_jit_checkpoint.py",
+                "findings": [
+                    {
+                        "file_path": "trainer_jit_checkpoint.py",
+                        "function_name": "CheckpointManager.execute_jit_checkpoint",
+                        "line_number": 42,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'CheckpointManager.execute_jit_checkpoint' calls 'os.remove', classified as DELETE_OPERATION.",
+                        "evidence": "os.remove"
+                    }
+                ]
+            },
+            "trainer_pt_utils.py": {
+                "file_path": "trainer_pt_utils.py",
+                "findings": [
+                    {
+                        "file_path": "trainer_pt_utils.py",
+                        "function_name": "remove_dummy_checkpoint",
+                        "line_number": 1070,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'remove_dummy_checkpoint' calls 'os.remove', classified as DELETE_OPERATION.",
+                        "evidence": "os.remove"
+                    }
+                ]
+            },
+            "trainer_utils.py": {
+                "file_path": "trainer_utils.py",
+                "findings": [
+                    {
+                        "file_path": "trainer_utils.py",
+                        "function_name": "rotate_checkpoints",
+                        "line_number": 342,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "BLOCK",
+                        "detail": "Function 'rotate_checkpoints' calls 'shutil.rmtree', classified as DELETE_OPERATION.",
+                        "evidence": "shutil.rmtree"
+                    }
+                ]
+            },
+            "cli\\add_new_model_like.py": {
+                "file_path": "cli\\add_new_model_like.py",
+                "findings": [
+                    {
+                        "file_path": "cli\\add_new_model_like.py",
+                        "function_name": "_add_new_model_like_internal",
+                        "line_number": 543,
+                        "check_name": "dangerous_api_call",
+                        "category": "PROCESS_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function '_add_new_model_like_internal' calls 'subprocess.run', classified as PROCESS_OPERATION.",
+                        "evidence": "subprocess.run"
+                    }
+                ]
+            },
+            "cli\\chat.py": {
+                "file_path": "cli\\chat.py",
+                "findings": [
+                    {
+                        "file_path": "cli\\chat.py",
+                        "function_name": "RichInterface.print_model_load",
+                        "line_number": 211,
+                        "check_name": "dangerous_api_call",
+                        "category": "NETWORK_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'RichInterface.print_model_load' calls 'requests.post', classified as NETWORK_OPERATION.",
+                        "evidence": "requests.post"
+                    }
+                ]
+            },
+            "integrations\\integration_utils.py": {
+                "file_path": "integrations\\integration_utils.py",
+                "findings": [
+                    {
+                        "file_path": "integrations\\integration_utils.py",
+                        "function_name": "NeptuneCallback.__del__",
+                        "line_number": 1763,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "BLOCK",
+                        "detail": "Function 'NeptuneCallback.__del__' calls 'shutil.rmtree', classified as DELETE_OPERATION.",
+                        "evidence": "shutil.rmtree"
+                    }
+                ]
+            },
+            "pipelines\\audio_classification.py": {
+                "file_path": "pipelines\\audio_classification.py",
+                "findings": [
+                    {
+                        "file_path": "pipelines\\audio_classification.py",
+                        "function_name": "ffmpeg_read",
+                        "line_number": 30,
+                        "check_name": "dangerous_api_call",
+                        "category": "PROCESS_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'ffmpeg_read' calls 'subprocess.Popen', classified as PROCESS_OPERATION.",
+                        "evidence": "subprocess.Popen"
+                    }
+                ]
+            },
+            "pipelines\\audio_utils.py": {
+                "file_path": "pipelines\\audio_utils.py",
+                "findings": [
+                    {
+                        "file_path": "pipelines\\audio_utils.py",
+                        "function_name": "ffmpeg_read",
+                        "line_number": 9,
+                        "check_name": "dangerous_api_call",
+                        "category": "PROCESS_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'ffmpeg_read' calls 'subprocess.Popen', classified as PROCESS_OPERATION.",
+                        "evidence": "subprocess.Popen"
+                    },
+                    {
+                        "file_path": "pipelines\\audio_utils.py",
+                        "function_name": "_ffmpeg_stream",
+                        "line_number": 262,
+                        "check_name": "dangerous_api_call",
+                        "category": "PROCESS_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function '_ffmpeg_stream' calls 'subprocess.Popen', classified as PROCESS_OPERATION.",
+                        "evidence": "subprocess.Popen"
+                    },
+                    {
+                        "file_path": "pipelines\\audio_utils.py",
+                        "function_name": "_get_microphone_name",
+                        "line_number": 278,
+                        "check_name": "dangerous_api_call",
+                        "category": "PROCESS_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function '_get_microphone_name' calls 'subprocess.run', classified as PROCESS_OPERATION.",
+                        "evidence": "subprocess.run"
+                    }
+                ]
+            },
+            "utils\\network_logging.py": {
+                "file_path": "utils\\network_logging.py",
+                "findings": [
+                    {
+                        "file_path": "utils\\network_logging.py",
+                        "function_name": "_NetworkDebugProfiler.cleanup_shared_dir",
+                        "line_number": 190,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "BLOCK",
+                        "detail": "Function '_NetworkDebugProfiler.cleanup_shared_dir' calls 'shutil.rmtree', classified as DELETE_OPERATION.",
+                        "evidence": "shutil.rmtree"
+                    }
+                ]
+            },
+            "models\\eomt_dinov3\\convert_eomt_dinov3_to_hf.py": {
+                "file_path": "models\\eomt_dinov3\\convert_eomt_dinov3_to_hf.py",
+                "findings": [
+                    {
+                        "file_path": "models\\eomt_dinov3\\convert_eomt_dinov3_to_hf.py",
+                        "function_name": "_prepare_image",
+                        "line_number": 376,
+                        "check_name": "dangerous_api_call",
+                        "category": "NETWORK_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function '_prepare_image' calls 'requests.get', classified as NETWORK_OPERATION.",
+                        "evidence": "requests.get"
+                    }
+                ]
+            },
+            "models\\hubert\\convert_distilhubert_original_s3prl_checkpoint_to_pytorch.py": {
+                "file_path": "models\\hubert\\convert_distilhubert_original_s3prl_checkpoint_to_pytorch.py",
+                "findings": [
+                    {
+                        "file_path": "models\\hubert\\convert_distilhubert_original_s3prl_checkpoint_to_pytorch.py",
+                        "function_name": "convert_config",
+                        "line_number": 153,
+                        "check_name": "dangerous_api_call",
+                        "category": "DYNAMIC_EXEC",
+                        "severity": "BLOCK",
+                        "detail": "Function 'convert_config' calls 'eval', classified as DYNAMIC_EXEC.",
+                        "evidence": "eval"
+                    }
+                ]
+            },
+            "models\\marian\\convert_marian_to_pytorch.py": {
+                "file_path": "models\\marian\\convert_marian_to_pytorch.py",
+                "findings": [
+                    {
+                        "file_path": "models\\marian\\convert_marian_to_pytorch.py",
+                        "function_name": "fetch_test_set",
+                        "line_number": 321,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'fetch_test_set' calls 'os.remove', classified as DELETE_OPERATION.",
+                        "evidence": "os.remove"
+                    },
+                    {
+                        "file_path": "models\\marian\\convert_marian_to_pytorch.py",
+                        "function_name": "download_and_unzip",
+                        "line_number": 651,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'download_and_unzip' calls 'os.remove', classified as DELETE_OPERATION.",
+                        "evidence": "os.remove"
+                    }
+                ]
+            },
+            "models\\olmo\\convert_olmo_weights_to_hf.py": {
+                "file_path": "models\\olmo\\convert_olmo_weights_to_hf.py",
+                "findings": [
+                    {
+                        "file_path": "models\\olmo\\convert_olmo_weights_to_hf.py",
+                        "function_name": "write_model",
+                        "line_number": 65,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "BLOCK",
+                        "detail": "Function 'write_model' calls 'shutil.rmtree', classified as DELETE_OPERATION.",
+                        "evidence": "shutil.rmtree"
+                    }
+                ]
+            },
+            "models\\olmo2\\convert_olmo2_weights_to_hf.py": {
+                "file_path": "models\\olmo2\\convert_olmo2_weights_to_hf.py",
+                "findings": [
+                    {
+                        "file_path": "models\\olmo2\\convert_olmo2_weights_to_hf.py",
+                        "function_name": "write_model",
+                        "line_number": 68,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "BLOCK",
+                        "detail": "Function 'write_model' calls 'shutil.rmtree', classified as DELETE_OPERATION.",
+                        "evidence": "shutil.rmtree"
+                    }
+                ]
+            },
+            "models\\olmo3\\convert_olmo3_weights_to_hf.py": {
+                "file_path": "models\\olmo3\\convert_olmo3_weights_to_hf.py",
+                "findings": [
+                    {
+                        "file_path": "models\\olmo3\\convert_olmo3_weights_to_hf.py",
+                        "function_name": "write_model",
+                        "line_number": 288,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "BLOCK",
+                        "detail": "Function 'write_model' calls 'shutil.rmtree', classified as DELETE_OPERATION.",
+                        "evidence": "shutil.rmtree"
+                    }
+                ]
+            },
+            "models\\olmoe\\convert_olmoe_weights_to_hf.py": {
+                "file_path": "models\\olmoe\\convert_olmoe_weights_to_hf.py",
+                "findings": [
+                    {
+                        "file_path": "models\\olmoe\\convert_olmoe_weights_to_hf.py",
+                        "function_name": "write_model",
+                        "line_number": 91,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "BLOCK",
+                        "detail": "Function 'write_model' calls 'shutil.rmtree', classified as DELETE_OPERATION.",
+                        "evidence": "shutil.rmtree"
+                    }
+                ]
+            },
+            "models\\sew\\convert_sew_original_pytorch_checkpoint_to_pytorch.py": {
+                "file_path": "models\\sew\\convert_sew_original_pytorch_checkpoint_to_pytorch.py",
+                "findings": [
+                    {
+                        "file_path": "models\\sew\\convert_sew_original_pytorch_checkpoint_to_pytorch.py",
+                        "function_name": "convert_config",
+                        "line_number": 172,
+                        "check_name": "dangerous_api_call",
+                        "category": "DYNAMIC_EXEC",
+                        "severity": "BLOCK",
+                        "detail": "Function 'convert_config' calls 'eval', classified as DYNAMIC_EXEC.",
+                        "evidence": "eval"
+                    }
+                ]
+            },
+            "models\\sew_d\\convert_sew_d_original_pytorch_checkpoint_to_pytorch.py": {
+                "file_path": "models\\sew_d\\convert_sew_d_original_pytorch_checkpoint_to_pytorch.py",
+                "findings": [
+                    {
+                        "file_path": "models\\sew_d\\convert_sew_d_original_pytorch_checkpoint_to_pytorch.py",
+                        "function_name": "convert_config",
+                        "line_number": 176,
+                        "check_name": "dangerous_api_call",
+                        "category": "DYNAMIC_EXEC",
+                        "severity": "BLOCK",
+                        "detail": "Function 'convert_config' calls 'eval', classified as DYNAMIC_EXEC.",
+                        "evidence": "eval"
+                    }
+                ]
+            },
+            "models\\timesfm\\convert_timesfm_orignal_to_hf.py": {
+                "file_path": "models\\timesfm\\convert_timesfm_orignal_to_hf.py",
+                "findings": [
+                    {
+                        "file_path": "models\\timesfm\\convert_timesfm_orignal_to_hf.py",
+                        "function_name": "write_model",
+                        "line_number": 36,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "BLOCK",
+                        "detail": "Function 'write_model' calls 'shutil.rmtree', classified as DELETE_OPERATION.",
+                        "evidence": "shutil.rmtree"
+                    }
+                ]
+            },
+            "models\\timesfm2_5\\convert_timesfm2_5_original_to_hf.py": {
+                "file_path": "models\\timesfm2_5\\convert_timesfm2_5_original_to_hf.py",
+                "findings": [
+                    {
+                        "file_path": "models\\timesfm2_5\\convert_timesfm2_5_original_to_hf.py",
+                        "function_name": "write_model",
+                        "line_number": 63,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "BLOCK",
+                        "detail": "Function 'write_model' calls 'shutil.rmtree', classified as DELETE_OPERATION.",
+                        "evidence": "shutil.rmtree"
+                    }
+                ]
+            },
+            "models\\videomt\\convert_videomt_to_hf.py": {
+                "file_path": "models\\videomt\\convert_videomt_to_hf.py",
+                "findings": [
+                    {
+                        "file_path": "models\\videomt\\convert_videomt_to_hf.py",
+                        "function_name": "verify_conversion_against_github_reference",
+                        "line_number": 467,
+                        "check_name": "dangerous_api_call",
+                        "category": "PROCESS_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'verify_conversion_against_github_reference' calls 'subprocess.run', classified as PROCESS_OPERATION.",
+                        "evidence": "subprocess.run"
+                    }
+                ]
+            }
+        }
+    },
+    "with_probe": {
+        "repo_root": "C:\\Users\\Zeeshan\\AppData\\Local\\Temp\\tmp3xmzxxy5\\transformers",
+        "files_scanned": 2724,
+        "files_with_findings": 26,
+        "total_findings": 34,
+        "findings_by_check": {
+            "dangerous_api_call": 33,
+            "global_state_mutation": 1
+        },
+        "findings_by_severity": {
+            "REVIEW": 19,
+            "BLOCK": 15
+        },
+        "per_file": {
+            "convert_slow_tokenizers_checkpoints_to_fast.py": {
+                "file_path": "convert_slow_tokenizers_checkpoints_to_fast.py",
+                "findings": [
+                    {
+                        "file_path": "convert_slow_tokenizers_checkpoints_to_fast.py",
+                        "function_name": "convert_slow_checkpoint_to_fast",
+                        "line_number": 48,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'convert_slow_checkpoint_to_fast' calls 'os.remove', classified as DELETE_OPERATION.",
+                        "evidence": "os.remove"
+                    }
+                ]
+            },
+            "modeling_utils.py": {
+                "file_path": "modeling_utils.py",
+                "findings": [
+                    {
+                        "file_path": "modeling_utils.py",
+                        "function_name": "PreTrainedModel.save_pretrained",
+                        "line_number": 3317,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'PreTrainedModel.save_pretrained' calls 'os.remove', classified as DELETE_OPERATION.",
+                        "evidence": "os.remove"
+                    }
+                ]
+            },
+            "testing_utils.py": {
+                "file_path": "testing_utils.py",
+                "findings": [
+                    {
+                        "file_path": "testing_utils.py",
+                        "function_name": "TestCasePlus.get_auto_remove_tmp_dir",
+                        "line_number": 2158,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "BLOCK",
+                        "detail": "Function 'TestCasePlus.get_auto_remove_tmp_dir' calls 'shutil.rmtree', classified as DELETE_OPERATION.",
+                        "evidence": "shutil.rmtree"
+                    },
+                    {
+                        "file_path": "testing_utils.py",
+                        "function_name": "TestCasePlus.tearDown",
+                        "line_number": 2261,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "BLOCK",
+                        "detail": "Function 'TestCasePlus.tearDown' calls 'shutil.rmtree', classified as DELETE_OPERATION.",
+                        "evidence": "shutil.rmtree"
+                    },
+                    {
+                        "file_path": "testing_utils.py",
+                        "function_name": "run_test_using_subprocess",
+                        "line_number": 2843,
+                        "check_name": "dangerous_api_call",
+                        "category": "PROCESS_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'run_test_using_subprocess' calls 'subprocess.run', classified as PROCESS_OPERATION.",
+                        "evidence": "subprocess.run"
+                    },
+                    {
+                        "file_path": "testing_utils.py",
+                        "function_name": "torchrun",
+                        "line_number": 3889,
+                        "check_name": "dangerous_api_call",
+                        "category": "PROCESS_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'torchrun' calls 'subprocess.run', classified as PROCESS_OPERATION.",
+                        "evidence": "subprocess.run"
+                    },
+                    {
+                        "file_path": "testing_utils.py",
+                        "function_name": "convert_all_safetensors_to_bins",
+                        "line_number": 4496,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'convert_all_safetensors_to_bins' calls 'os.remove', classified as DELETE_OPERATION.",
+                        "evidence": "os.remove"
+                    }
+                ]
+            },
+            "trainer.py": {
+                "file_path": "trainer.py",
+                "findings": [
+                    {
+                        "file_path": "trainer.py",
+                        "function_name": "Trainer._finalize_training",
+                        "line_number": 1818,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "BLOCK",
+                        "detail": "Function 'Trainer._finalize_training' calls 'shutil.rmtree', classified as DELETE_OPERATION.",
+                        "evidence": "shutil.rmtree"
+                    }
+                ]
+            },
+            "trainer_jit_checkpoint.py": {
+                "file_path": "trainer_jit_checkpoint.py",
+                "findings": [
+                    {
+                        "file_path": "trainer_jit_checkpoint.py",
+                        "function_name": "CheckpointManager.execute_jit_checkpoint",
+                        "line_number": 42,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'CheckpointManager.execute_jit_checkpoint' calls 'os.remove', classified as DELETE_OPERATION.",
+                        "evidence": "os.remove"
+                    }
+                ]
+            },
+            "trainer_pt_utils.py": {
+                "file_path": "trainer_pt_utils.py",
+                "findings": [
+                    {
+                        "file_path": "trainer_pt_utils.py",
+                        "function_name": "remove_dummy_checkpoint",
+                        "line_number": 1070,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'remove_dummy_checkpoint' calls 'os.remove', classified as DELETE_OPERATION.",
+                        "evidence": "os.remove"
+                    }
+                ]
+            },
+            "trainer_utils.py": {
+                "file_path": "trainer_utils.py",
+                "findings": [
+                    {
+                        "file_path": "trainer_utils.py",
+                        "function_name": "rotate_checkpoints",
+                        "line_number": 342,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "BLOCK",
+                        "detail": "Function 'rotate_checkpoints' calls 'shutil.rmtree', classified as DELETE_OPERATION.",
+                        "evidence": "shutil.rmtree"
+                    }
+                ]
+            },
+            "_codetruth_probe.py": {
+                "file_path": "_codetruth_probe.py",
+                "findings": [
+                    {
+                        "file_path": "_codetruth_probe.py",
+                        "function_name": "mutate_global_database",
+                        "line_number": 15,
+                        "check_name": "global_state_mutation",
+                        "category": "GLOBAL_MUTATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'mutate_global_database' mutates module-level name 'DATABASE'.",
+                        "evidence": "DATABASE[user_id] = payload"
+                    },
+                    {
+                        "file_path": "_codetruth_probe.py",
+                        "function_name": "delete_file_unsafely",
+                        "line_number": 19,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'delete_file_unsafely' calls 'os.remove', classified as DELETE_OPERATION.",
+                        "evidence": "os.remove"
+                    }
+                ]
+            },
+            "cli\\add_new_model_like.py": {
+                "file_path": "cli\\add_new_model_like.py",
+                "findings": [
+                    {
+                        "file_path": "cli\\add_new_model_like.py",
+                        "function_name": "_add_new_model_like_internal",
+                        "line_number": 543,
+                        "check_name": "dangerous_api_call",
+                        "category": "PROCESS_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function '_add_new_model_like_internal' calls 'subprocess.run', classified as PROCESS_OPERATION.",
+                        "evidence": "subprocess.run"
+                    }
+                ]
+            },
+            "cli\\chat.py": {
+                "file_path": "cli\\chat.py",
+                "findings": [
+                    {
+                        "file_path": "cli\\chat.py",
+                        "function_name": "RichInterface.print_model_load",
+                        "line_number": 211,
+                        "check_name": "dangerous_api_call",
+                        "category": "NETWORK_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'RichInterface.print_model_load' calls 'requests.post', classified as NETWORK_OPERATION.",
+                        "evidence": "requests.post"
+                    }
+                ]
+            },
+            "integrations\\integration_utils.py": {
+                "file_path": "integrations\\integration_utils.py",
+                "findings": [
+                    {
+                        "file_path": "integrations\\integration_utils.py",
+                        "function_name": "NeptuneCallback.__del__",
+                        "line_number": 1763,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "BLOCK",
+                        "detail": "Function 'NeptuneCallback.__del__' calls 'shutil.rmtree', classified as DELETE_OPERATION.",
+                        "evidence": "shutil.rmtree"
+                    }
+                ]
+            },
+            "pipelines\\audio_classification.py": {
+                "file_path": "pipelines\\audio_classification.py",
+                "findings": [
+                    {
+                        "file_path": "pipelines\\audio_classification.py",
+                        "function_name": "ffmpeg_read",
+                        "line_number": 30,
+                        "check_name": "dangerous_api_call",
+                        "category": "PROCESS_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'ffmpeg_read' calls 'subprocess.Popen', classified as PROCESS_OPERATION.",
+                        "evidence": "subprocess.Popen"
+                    }
+                ]
+            },
+            "pipelines\\audio_utils.py": {
+                "file_path": "pipelines\\audio_utils.py",
+                "findings": [
+                    {
+                        "file_path": "pipelines\\audio_utils.py",
+                        "function_name": "ffmpeg_read",
+                        "line_number": 9,
+                        "check_name": "dangerous_api_call",
+                        "category": "PROCESS_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'ffmpeg_read' calls 'subprocess.Popen', classified as PROCESS_OPERATION.",
+                        "evidence": "subprocess.Popen"
+                    },
+                    {
+                        "file_path": "pipelines\\audio_utils.py",
+                        "function_name": "_ffmpeg_stream",
+                        "line_number": 262,
+                        "check_name": "dangerous_api_call",
+                        "category": "PROCESS_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function '_ffmpeg_stream' calls 'subprocess.Popen', classified as PROCESS_OPERATION.",
+                        "evidence": "subprocess.Popen"
+                    },
+                    {
+                        "file_path": "pipelines\\audio_utils.py",
+                        "function_name": "_get_microphone_name",
+                        "line_number": 278,
+                        "check_name": "dangerous_api_call",
+                        "category": "PROCESS_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function '_get_microphone_name' calls 'subprocess.run', classified as PROCESS_OPERATION.",
+                        "evidence": "subprocess.run"
+                    }
+                ]
+            },
+            "utils\\network_logging.py": {
+                "file_path": "utils\\network_logging.py",
+                "findings": [
+                    {
+                        "file_path": "utils\\network_logging.py",
+                        "function_name": "_NetworkDebugProfiler.cleanup_shared_dir",
+                        "line_number": 190,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "BLOCK",
+                        "detail": "Function '_NetworkDebugProfiler.cleanup_shared_dir' calls 'shutil.rmtree', classified as DELETE_OPERATION.",
+                        "evidence": "shutil.rmtree"
+                    }
+                ]
+            },
+            "models\\eomt_dinov3\\convert_eomt_dinov3_to_hf.py": {
+                "file_path": "models\\eomt_dinov3\\convert_eomt_dinov3_to_hf.py",
+                "findings": [
+                    {
+                        "file_path": "models\\eomt_dinov3\\convert_eomt_dinov3_to_hf.py",
+                        "function_name": "_prepare_image",
+                        "line_number": 376,
+                        "check_name": "dangerous_api_call",
+                        "category": "NETWORK_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function '_prepare_image' calls 'requests.get', classified as NETWORK_OPERATION.",
+                        "evidence": "requests.get"
+                    }
+                ]
+            },
+            "models\\hubert\\convert_distilhubert_original_s3prl_checkpoint_to_pytorch.py": {
+                "file_path": "models\\hubert\\convert_distilhubert_original_s3prl_checkpoint_to_pytorch.py",
+                "findings": [
+                    {
+                        "file_path": "models\\hubert\\convert_distilhubert_original_s3prl_checkpoint_to_pytorch.py",
+                        "function_name": "convert_config",
+                        "line_number": 153,
+                        "check_name": "dangerous_api_call",
+                        "category": "DYNAMIC_EXEC",
+                        "severity": "BLOCK",
+                        "detail": "Function 'convert_config' calls 'eval', classified as DYNAMIC_EXEC.",
+                        "evidence": "eval"
+                    }
+                ]
+            },
+            "models\\marian\\convert_marian_to_pytorch.py": {
+                "file_path": "models\\marian\\convert_marian_to_pytorch.py",
+                "findings": [
+                    {
+                        "file_path": "models\\marian\\convert_marian_to_pytorch.py",
+                        "function_name": "fetch_test_set",
+                        "line_number": 321,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'fetch_test_set' calls 'os.remove', classified as DELETE_OPERATION.",
+                        "evidence": "os.remove"
+                    },
+                    {
+                        "file_path": "models\\marian\\convert_marian_to_pytorch.py",
+                        "function_name": "download_and_unzip",
+                        "line_number": 651,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'download_and_unzip' calls 'os.remove', classified as DELETE_OPERATION.",
+                        "evidence": "os.remove"
+                    }
+                ]
+            },
+            "models\\olmo\\convert_olmo_weights_to_hf.py": {
+                "file_path": "models\\olmo\\convert_olmo_weights_to_hf.py",
+                "findings": [
+                    {
+                        "file_path": "models\\olmo\\convert_olmo_weights_to_hf.py",
+                        "function_name": "write_model",
+                        "line_number": 65,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "BLOCK",
+                        "detail": "Function 'write_model' calls 'shutil.rmtree', classified as DELETE_OPERATION.",
+                        "evidence": "shutil.rmtree"
+                    }
+                ]
+            },
+            "models\\olmo2\\convert_olmo2_weights_to_hf.py": {
+                "file_path": "models\\olmo2\\convert_olmo2_weights_to_hf.py",
+                "findings": [
+                    {
+                        "file_path": "models\\olmo2\\convert_olmo2_weights_to_hf.py",
+                        "function_name": "write_model",
+                        "line_number": 68,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "BLOCK",
+                        "detail": "Function 'write_model' calls 'shutil.rmtree', classified as DELETE_OPERATION.",
+                        "evidence": "shutil.rmtree"
+                    }
+                ]
+            },
+            "models\\olmo3\\convert_olmo3_weights_to_hf.py": {
+                "file_path": "models\\olmo3\\convert_olmo3_weights_to_hf.py",
+                "findings": [
+                    {
+                        "file_path": "models\\olmo3\\convert_olmo3_weights_to_hf.py",
+                        "function_name": "write_model",
+                        "line_number": 288,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "BLOCK",
+                        "detail": "Function 'write_model' calls 'shutil.rmtree', classified as DELETE_OPERATION.",
+                        "evidence": "shutil.rmtree"
+                    }
+                ]
+            },
+            "models\\olmoe\\convert_olmoe_weights_to_hf.py": {
+                "file_path": "models\\olmoe\\convert_olmoe_weights_to_hf.py",
+                "findings": [
+                    {
+                        "file_path": "models\\olmoe\\convert_olmoe_weights_to_hf.py",
+                        "function_name": "write_model",
+                        "line_number": 91,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "BLOCK",
+                        "detail": "Function 'write_model' calls 'shutil.rmtree', classified as DELETE_OPERATION.",
+                        "evidence": "shutil.rmtree"
+                    }
+                ]
+            },
+            "models\\sew\\convert_sew_original_pytorch_checkpoint_to_pytorch.py": {
+                "file_path": "models\\sew\\convert_sew_original_pytorch_checkpoint_to_pytorch.py",
+                "findings": [
+                    {
+                        "file_path": "models\\sew\\convert_sew_original_pytorch_checkpoint_to_pytorch.py",
+                        "function_name": "convert_config",
+                        "line_number": 172,
+                        "check_name": "dangerous_api_call",
+                        "category": "DYNAMIC_EXEC",
+                        "severity": "BLOCK",
+                        "detail": "Function 'convert_config' calls 'eval', classified as DYNAMIC_EXEC.",
+                        "evidence": "eval"
+                    }
+                ]
+            },
+            "models\\sew_d\\convert_sew_d_original_pytorch_checkpoint_to_pytorch.py": {
+                "file_path": "models\\sew_d\\convert_sew_d_original_pytorch_checkpoint_to_pytorch.py",
+                "findings": [
+                    {
+                        "file_path": "models\\sew_d\\convert_sew_d_original_pytorch_checkpoint_to_pytorch.py",
+                        "function_name": "convert_config",
+                        "line_number": 176,
+                        "check_name": "dangerous_api_call",
+                        "category": "DYNAMIC_EXEC",
+                        "severity": "BLOCK",
+                        "detail": "Function 'convert_config' calls 'eval', classified as DYNAMIC_EXEC.",
+                        "evidence": "eval"
+                    }
+                ]
+            },
+            "models\\timesfm\\convert_timesfm_orignal_to_hf.py": {
+                "file_path": "models\\timesfm\\convert_timesfm_orignal_to_hf.py",
+                "findings": [
+                    {
+                        "file_path": "models\\timesfm\\convert_timesfm_orignal_to_hf.py",
+                        "function_name": "write_model",
+                        "line_number": 36,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "BLOCK",
+                        "detail": "Function 'write_model' calls 'shutil.rmtree', classified as DELETE_OPERATION.",
+                        "evidence": "shutil.rmtree"
+                    }
+                ]
+            },
+            "models\\timesfm2_5\\convert_timesfm2_5_original_to_hf.py": {
+                "file_path": "models\\timesfm2_5\\convert_timesfm2_5_original_to_hf.py",
+                "findings": [
+                    {
+                        "file_path": "models\\timesfm2_5\\convert_timesfm2_5_original_to_hf.py",
+                        "function_name": "write_model",
+                        "line_number": 63,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "BLOCK",
+                        "detail": "Function 'write_model' calls 'shutil.rmtree', classified as DELETE_OPERATION.",
+                        "evidence": "shutil.rmtree"
+                    }
+                ]
+            },
+            "models\\videomt\\convert_videomt_to_hf.py": {
+                "file_path": "models\\videomt\\convert_videomt_to_hf.py",
+                "findings": [
+                    {
+                        "file_path": "models\\videomt\\convert_videomt_to_hf.py",
+                        "function_name": "verify_conversion_against_github_reference",
+                        "line_number": 467,
+                        "check_name": "dangerous_api_call",
+                        "category": "PROCESS_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'verify_conversion_against_github_reference' calls 'subprocess.run', classified as PROCESS_OPERATION.",
+                        "evidence": "subprocess.run"
+                    }
+                ]
+            }
+        }
+    },
+    "delta_findings": 2,
+    "verdict": "GOVERNANCE_WIRING_WORKS"
+}

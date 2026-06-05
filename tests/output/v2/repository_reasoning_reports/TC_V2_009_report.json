@@ -1,0 +1,24 @@
+{
+    "test_case": "TC_V2_009",
+    "title": "Cross-File Propagation Reasoning Validation",
+    "description": "Validates whether V2 can detect multi-hop repository propagation chains.",
+    "category": "Repository-Wide Propagation Cognition",
+    "dependency_map": {
+        "calculate_tax": [],
+        "generate_invoice": [
+            "calculate_tax"
+        ],
+        "send_invoice_email": [
+            "generate_invoice"
+        ]
+    },
+    "changed_function": "calculate_tax",
+    "impacted_chain": [
+        "send_invoice_email",
+        "generate_invoice"
+    ],
+    "decision": "REVIEW",
+    "reason": "Multi-hop repository impact chain detected.",
+    "expected": "REVIEW",
+    "status": "PASS"
+}

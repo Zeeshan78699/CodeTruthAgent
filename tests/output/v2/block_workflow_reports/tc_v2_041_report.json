@@ -1,0 +1,11 @@
+{
+    "test_case": "TC_V2_041",
+    "severity": "BLOCK",
+    "approval_status": "REJECTED",
+    "execution_status": "BLOCKED",
+    "backup_created": false,
+    "module_unchanged": true,
+    "consumer_unchanged": true,
+    "repository_modified": false,
+    "status": "PASSED"
+}

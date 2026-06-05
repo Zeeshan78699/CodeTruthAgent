@@ -1,0 +1,10 @@
+{
+    "test_case": "TC_V2_040",
+    "severity": "REVIEW",
+    "initial_status": "PENDING_REVIEW",
+    "human_approval": "APPROVED",
+    "execution_status": "EXECUTED_SUCCESSFULLY",
+    "merge_executed": true,
+    "consumer_updated": true,
+    "status": "PASSED"
+}

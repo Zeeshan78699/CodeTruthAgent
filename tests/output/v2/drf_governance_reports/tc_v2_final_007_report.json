@@ -1,0 +1,54 @@
+{
+    "test_case": "TC_V2_FINAL_007_DRF_GOVERNANCE",
+    "baseline": {
+        "repo_root": "C:\\scratch\\django-rest-framework\\rest_framework",
+        "files_scanned": 72,
+        "files_with_findings": 0,
+        "total_findings": 0,
+        "findings_by_check": {},
+        "findings_by_severity": {},
+        "per_file": {}
+    },
+    "with_probe": {
+        "repo_root": "C:\\Users\\Zeeshan\\AppData\\Local\\Temp\\tmp1t7omndx\\rest_framework",
+        "files_scanned": 73,
+        "files_with_findings": 1,
+        "total_findings": 2,
+        "findings_by_check": {
+            "global_state_mutation": 1,
+            "dangerous_api_call": 1
+        },
+        "findings_by_severity": {
+            "REVIEW": 2
+        },
+        "per_file": {
+            "_codetruth_probe.py": {
+                "file_path": "_codetruth_probe.py",
+                "findings": [
+                    {
+                        "file_path": "_codetruth_probe.py",
+                        "function_name": "mutate_global_database",
+                        "line_number": 15,
+                        "check_name": "global_state_mutation",
+                        "category": "GLOBAL_MUTATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'mutate_global_database' mutates module-level name 'DATABASE'.",
+                        "evidence": "DATABASE[user_id] = payload"
+                    },
+                    {
+                        "file_path": "_codetruth_probe.py",
+                        "function_name": "delete_file_unsafely",
+                        "line_number": 19,
+                        "check_name": "dangerous_api_call",
+                        "category": "DELETE_OPERATION",
+                        "severity": "REVIEW",
+                        "detail": "Function 'delete_file_unsafely' calls 'os.remove', classified as DELETE_OPERATION.",
+                        "evidence": "os.remove"
+                    }
+                ]
+            }
+        }
+    },
+    "delta_findings": 2,
+    "verdict": "GOVERNANCE_WIRING_WORKS"
+}

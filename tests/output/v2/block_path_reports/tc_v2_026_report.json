@@ -1,0 +1,14 @@
+{
+    "test_case": "TC_V2_026",
+    "result": {
+        "passed": true,
+        "validation_decision": "REJECT",
+        "hitl_decision": "BLOCKED",
+        "execution_blocked": true,
+        "file_modified": false,
+        "file_unchanged": true
+    },
+    "summary": {
+        "status": "PASSED"
+    }
+}

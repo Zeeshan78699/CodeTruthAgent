@@ -53,7 +53,7 @@ While many traditional tools primarily stop at identifying potential code duplic
 | Architecture          | Rule-Based Intelligent Reasoning |
 | Language              | Python 3.x                       |
 | Test Cases Status     | ✅ PASSED                       |
-| Test Cases            | 22 / 22 PASSED                   |
+| Test Cases            | 20 / 22 PASSED — 2 by-design exclusions (TC07, TC14) |
 | Real-World Validation | ✅ Completed                     |
 | Prototype release ready| ✅ Cleared                      |
 

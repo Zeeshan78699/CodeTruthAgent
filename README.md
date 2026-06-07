@@ -150,7 +150,7 @@ similar names + different behavior = governance review required
 
 ---
 
-# ⚙️ V2 Pipeline (5 layers, 14 components)
+# ⚙️ V2 Pipeline (5 layers)
 
 ```text
 Layer 1 - Scanner

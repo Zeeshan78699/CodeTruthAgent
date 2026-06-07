@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20569647.svg)](https://doi.org/10.5281/zenodo.20569647)
+
 # CodeTruth Agent V2
 
 ## Deterministic Pre-Modification Governance Layer for Python Code Changes

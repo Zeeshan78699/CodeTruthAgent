@@ -1,0 +1,88 @@
+════════════════════════════════════════════════════════════
+  CODETRUTH AGENT V3 — REPOSITORY SCAN REPORT
+  Module 1 — Universal Repository Discovery Engine
+════════════════════════════════════════════════════════════
+
+────────────────────────────────────────────────────────────
+  REPOSITORY IDENTITY
+────────────────────────────────────────────────────────────
+  Name:                  astropy
+  Path:                  C:\repos\v3\astropy
+  Scanned At:            2026-06-12 11:20:27 UTC
+  Scan Status:           COMPLETE
+  Purpose:               astropy — Space System (Astropy) — 995 Python files
+
+────────────────────────────────────────────────────────────
+  CLASSIFICATION
+────────────────────────────────────────────────────────────
+  Application Type:      Space System
+  Primary Framework:     Astropy
+  Secondary:             RQ, Pytest, Requests
+  Discovery Score:       100%
+  Classification:        100%
+
+────────────────────────────────────────────────────────────
+  REPOSITORY SCALE
+────────────────────────────────────────────────────────────
+  Total Files:           2002
+  Python Files:          995
+  Test Suites:           astropy\config\tests, astropy\constants\tests, astropy\convolution\tests, astropy\coordinates\tests, astropy\cosmology\_src\tests, astropy\cosmology\tests, astropy\io\ascii\tests, astropy\io\fits\hdu\compressed\tests, astropy\io\fits\tests, astropy\io\misc\pyarrow\tests, astropy\io\misc\tests, astropy\io\registry\tests, astropy\io\tests, astropy\io\votable\tests, astropy\modeling\tests, astropy\nddata\mixins\tests, astropy\nddata\tests, astropy\samp\tests, astropy\stats\tests, astropy\table\mixins\tests, astropy\table\tests, astropy\tests, astropy\tests\tests, astropy\time\tests, astropy\timeseries\io\tests, astropy\timeseries\periodograms\bls\tests, astropy\timeseries\periodograms\lombscargle\implementations\tests, astropy\timeseries\periodograms\lombscargle\tests, astropy\timeseries\periodograms\lombscargle_multiband\tests, astropy\timeseries\tests, astropy\uncertainty\tests, astropy\units\tests, astropy\utils\iers\tests, astropy\utils\masked\tests, astropy\utils\metadata\tests, astropy\utils\tests, astropy\utils\xml\tests, astropy\visualization\scripts\tests, astropy\visualization\tests, astropy\visualization\wcsaxes\tests, astropy\wcs\tests, astropy\wcs\wcsapi\tests, astropy\wcs\wcsapi\wrappers\tests, docs\changes\tests
+
+────────────────────────────────────────────────────────────
+  DISCOVERED ASSETS
+────────────────────────────────────────────────────────────
+  Languages (Code):      C  ·  CSS  ·  Cython  ·  FITS Astronomy  ·  HTML  ·  Python  ·  Shell  ·  TOML  ·  XML  ·  YAML
+  File Types (Docs):     Configuration File  ·  JSON  ·  LaTeX  ·  M4 Macro  ·  Markdown  ·  PDF Document  ·  ReStructuredText  ·  Text  ·  Windows Batch Script
+  ML Models:             None
+
+────────────────────────────────────────────────────────────
+  BUILD SYSTEMS
+────────────────────────────────────────────────────────────
+  Python Build  ·  Setuptools  ·  Make
+
+────────────────────────────────────────────────────────────
+  TECHNOLOGY STACK
+────────────────────────────────────────────────────────────
+  Python
+
+────────────────────────────────────────────────────────────
+  ENTRY POINTS  (3 found)
+────────────────────────────────────────────────────────────
+    astropy\io\votable\validator\main.py
+    astropy\timeseries\periodograms\lombscargle\implementations\main.py
+    astropy\timeseries\periodograms\lombscargle_multiband\implementations\main.py
+
+────────────────────────────────────────────────────────────
+  CONFIGURATION FILES  (5 found)
+────────────────────────────────────────────────────────────
+    .\pyproject.toml
+    .\setup.py
+    astropy\constants\config.py
+    astropy\io\fits\hdu\compressed\settings.py
+    docs\Makefile
+
+────────────────────────────────────────────────────────────
+  DOCUMENTATION  (11 found)
+────────────────────────────────────────────────────────────
+  CONTRIBUTING.md  ·  README.rst  ·  README.rst  ·  README.rst  ·  README.rst  ·  AUTHORS  ·  README.md  ·  README  ·  README  ·  README.rst  ·  README.rst
+
+────────────────────────────────────────────────────────────
+  WARNINGS & DIAGNOSTICS
+────────────────────────────────────────────────────────────
+  [1] 29 file extension(s) not in language registry: .00, .01, .02, .ac, .cff. These files were counted but language not identified. Add to LANGUAGE_EXTENSIONS in framework_signatures.py.
+
+  UNKNOWN EXTENSIONS (29 found — not yet in registry):
+  .00  .01  .02  .ac  .cff  .csv  .dat  .data  .dbout  .dtd  .ecsv  .eopc04_iau2000  .guess  .hdf5  .hdr  .in  .inc  .l  .lesser  .list
+  → Add to LANGUAGE_EXTENSIONS in framework_signatures.py
+
+────────────────────────────────────────────────────────────
+  GOVERNANCE GATE — V3-003
+────────────────────────────────────────────────────────────
+  Status   : APPROVED
+  Decision : Pipeline may proceed to Module 2
+  Rule     : Repository understanding is complete
+
+════════════════════════════════════════════════════════════
+  Generated by CodeTruth Agent V3 — Module 1
+  github.com/Zeeshan78699/CodeTruthAgent
+════════════════════════════════════════════════════════════

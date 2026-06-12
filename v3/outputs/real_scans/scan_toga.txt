@@ -1,0 +1,161 @@
+════════════════════════════════════════════════════════════
+  CODETRUTH AGENT V3 — REPOSITORY SCAN REPORT
+  Module 1 — Universal Repository Discovery Engine
+════════════════════════════════════════════════════════════
+
+────────────────────────────────────────────────────────────
+  REPOSITORY IDENTITY
+────────────────────────────────────────────────────────────
+  Name:                  toga
+  Path:                  C:\repos\v3\toga
+  Scanned At:            2026-06-12 11:20:41 UTC
+  Scan Status:           COMPLETE
+  Purpose:               toga — Mobile Application (BeeWare/Toga) — 1138 Python files
+
+────────────────────────────────────────────────────────────
+  CLASSIFICATION
+────────────────────────────────────────────────────────────
+  Application Type:      Mobile Application
+  Primary Framework:     BeeWare/Toga
+  Secondary:             Pytest, HTTPX
+  Discovery Score:       100%
+  Classification:        100%
+
+────────────────────────────────────────────────────────────
+  REPOSITORY SCALE
+────────────────────────────────────────────────────────────
+  Total Files:           2060
+  Python Files:          1138
+  Test Suites:           core\tests, testbed\tests, travertino\tests
+
+────────────────────────────────────────────────────────────
+  DISCOVERED ASSETS
+────────────────────────────────────────────────────────────
+  Languages (Code):      CSS  ·  HTML  ·  Python  ·  TOML  ·  YAML
+  File Types (Docs):     Configuration File  ·  JSON  ·  Markdown  ·  ReStructuredText  ·  Text
+  ML Models:             None
+
+────────────────────────────────────────────────────────────
+  BUILD SYSTEMS
+────────────────────────────────────────────────────────────
+  Python Build
+
+────────────────────────────────────────────────────────────
+  TECHNOLOGY STACK
+────────────────────────────────────────────────────────────
+  Python  ·  SQLite
+
+────────────────────────────────────────────────────────────
+  ENTRY POINTS  (131 found)
+────────────────────────────────────────────────────────────
+    android\src\toga_android\app.py
+    android\tests_backend\app.py
+    cocoa\src\toga_cocoa\app.py
+    cocoa\tests_backend\app.py
+    core\src\toga\app.py
+    demo\toga_demo\__main__.py
+    demo\toga_demo\app.py
+    docs\main.py
+    dummy\src\toga_dummy\app.py
+    examples\activityindicator\activityindicator\__main__.py
+    ... and 121 more
+
+────────────────────────────────────────────────────────────
+  CONFIGURATION FILES  (70 found)
+────────────────────────────────────────────────────────────
+    .\pyproject.toml
+    android\pyproject.toml
+    cocoa\pyproject.toml
+    core\pyproject.toml
+    demo\pyproject.toml
+    docs\config.yml
+    dummy\pyproject.toml
+    examples\activityindicator\pyproject.toml
+    examples\beeliza\pyproject.toml
+    examples\box\pyproject.toml
+    examples\button\pyproject.toml
+    examples\canvas\pyproject.toml
+    examples\colors\pyproject.toml
+    examples\command\pyproject.toml
+    examples\customwidget\pyproject.toml
+    examples\customwidget\helloworld\pyproject.toml
+    examples\date_and_time\pyproject.toml
+    examples\detailedlist\pyproject.toml
+    examples\dialogs\pyproject.toml
+    examples\divider\pyproject.toml
+    examples\documentapp\pyproject.toml
+    examples\examples_overview\pyproject.toml
+    examples\focus\pyproject.toml
+    examples\font\pyproject.toml
+    examples\font_size\pyproject.toml
+    examples\handlers\pyproject.toml
+    examples\hardware\pyproject.toml
+    examples\imageview\pyproject.toml
+    examples\layout\pyproject.toml
+    examples\mapview\pyproject.toml
+    examples\multilinetextinput\pyproject.toml
+    examples\numberinput\pyproject.toml
+    examples\optioncontainer\pyproject.toml
+    examples\passwordinput\pyproject.toml
+    examples\positron-django\pyproject.toml
+    examples\positron-django\src\positron\settings.py
+    examples\positron-static\pyproject.toml
+    examples\progressbar\pyproject.toml
+    examples\resize\pyproject.toml
+    examples\screenshot\pyproject.toml
+    examples\scrollcontainer\pyproject.toml
+    examples\selection\pyproject.toml
+    examples\simpleapp\pyproject.toml
+    examples\slider\pyproject.toml
+    examples\splitcontainer\pyproject.toml
+    examples\statusiconapp\pyproject.toml
+    examples\switch_demo\pyproject.toml
+    examples\table\pyproject.toml
+    examples\table_columns\pyproject.toml
+    examples\table_source\pyproject.toml
+    examples\textinput\pyproject.toml
+    examples\tree\pyproject.toml
+    examples\tree_source\pyproject.toml
+    examples\tutorial0\pyproject.toml
+    examples\tutorial1\pyproject.toml
+    examples\tutorial2\pyproject.toml
+    examples\tutorial3\pyproject.toml
+    examples\tutorial4\pyproject.toml
+    examples\webview\pyproject.toml
+    examples\window\pyproject.toml
+    gtk\pyproject.toml
+    iOS\pyproject.toml
+    positron\pyproject.toml
+    qt\pyproject.toml
+    testbed\pyproject.toml
+    textual\pyproject.toml
+    toga\pyproject.toml
+    travertino\pyproject.toml
+    web\pyproject.toml
+    winforms\pyproject.toml
+
+────────────────────────────────────────────────────────────
+  DOCUMENTATION  (169 found)
+────────────────────────────────────────────────────────────
+  CONTRIBUTING.md  ·  LICENSE  ·  README.md  ·  CONTRIBUTING.md  ·  LICENSE  ·  README.md  ·  CONTRIBUTING.md  ·  LICENSE  ·  README.md  ·  CONTRIBUTING.md  ·  LICENSE  ·  README.md  ·  LICENSE  ·  README.md  ·  CONTRIBUTING.md  ·  LICENSE  ·  README.md  ·  README.md  ·  LICENSE  ·  README.md  ·  README  ·  LICENSE  ·  README.md  ·  LICENSE  ·  README.md  ·  LICENSE  ·  README.md  ·  LICENSE  ·  README.md  ·  README  ·  LICENSE  ·  README.md  ·  README  ·  LICENSE  ·  README.md  ·  LICENSE  ·  README.md  ·  LICENSE  ·  README.md  ·  LICENSE  ·  README.md  ·  LICENSE  ·  README.md  ·  README  ·  LICENSE  ·  README.md  ·  LICENSE  ·  README.md  ·  README  ·  LICENSE  ·  README.md  ·  README  ·  LICENSE  ·  README.md  ·  LICENSE  ·  README.md  ·  README  ·  LICENSE  ·  README.md  ·  LICENSE  ·  README.md  ·  README  ·  README.md  ·  LICENSE  ·  README.md  ·  LICENSE  ·  README.md  ·  README  ·  LICENSE  ·  README.md  ·  README  ·  LICENSE  ·  README.md  ·  README  ·  LICENSE  ·  README.md  ·  README  ·  LICENSE  ·  README.md  ·  README  ·  LICENSE  ·  README.md  ·  README  ·  LICENSE  ·  README.md  ·  LICENSE  ·  README.md  ·  LICENSE  ·  README.md  ·  LICENSE  ·  README.md  ·  LICENSE  ·  README.md  ·  README  ·  LICENSE  ·  README.md  ·  README  ·  LICENSE  ·  README.md  ·  LICENSE  ·  README.md  ·  LICENSE  ·  README.md  ·  LICENSE  ·  README.md  ·  LICENSE  ·  README.md  ·  README  ·  LICENSE  ·  README.md  ·  README  ·  LICENSE  ·  README.md  ·  LICENSE  ·  README.rst  ·  README  ·  LICENSE  ·  README.md  ·  LICENSE  ·  README.md  ·  README  ·  LICENSE  ·  README.md  ·  LICENSE  ·  README.md  ·  LICENSE  ·  README.md  ·  LICENSE  ·  README.md  ·  LICENSE  ·  README.md  ·  LICENSE  ·  README.md  ·  LICENSE  ·  README.md  ·  LICENSE  ·  README.md  ·  LICENSE  ·  README.md  ·  README  ·  CONTRIBUTING.md  ·  LICENSE  ·  README.md  ·  CONTRIBUTING.md  ·  LICENSE  ·  README.md  ·  CONTRIBUTING.md  ·  README.md  ·  CONTRIBUTING.md  ·  LICENSE  ·  README.md  ·  LICENSE  ·  CONTRIBUTING.md  ·  README.md  ·  CONTRIBUTING.md  ·  LICENSE  ·  README.md  ·  AUTHORS  ·  CHANGELOG.md  ·  CONTRIBUTING.md  ·  LICENSE  ·  README.md  ·  CONTRIBUTING.md  ·  LICENSE  ·  README.md  ·  CONTRIBUTING.md  ·  LICENSE  ·  README.md  ·  README.md
+
+────────────────────────────────────────────────────────────
+  WARNINGS & DIAGNOSTICS
+────────────────────────────────────────────────────────────
+  [1] 12 file extension(s) not in language registry: .bmp, .exampledoc, .html~head, .icns, .manifest. These files were counted but language not identified. Add to LANGUAGE_EXTENSIONS in framework_signatures.py.
+
+  UNKNOWN EXTENSIONS (12 found — not yet in registry):
+  .bmp  .exampledoc  .html~head  .icns  .manifest  .pyi  .qml  .testbed  .tmpl  .typed  .webp  .webview2
+  → Add to LANGUAGE_EXTENSIONS in framework_signatures.py
+
+────────────────────────────────────────────────────────────
+  GOVERNANCE GATE — V3-003
+────────────────────────────────────────────────────────────
+  Status   : APPROVED
+  Decision : Pipeline may proceed to Module 2
+  Rule     : Repository understanding is complete
+
+════════════════════════════════════════════════════════════
+  Generated by CodeTruth Agent V3 — Module 1
+  github.com/Zeeshan78699/CodeTruthAgent
+════════════════════════════════════════════════════════════

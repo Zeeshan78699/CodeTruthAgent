@@ -1,0 +1,119 @@
+════════════════════════════════════════════════════════════
+  CODETRUTH AGENT V3 — REPOSITORY SCAN REPORT
+  Module 1 — Universal Repository Discovery Engine
+════════════════════════════════════════════════════════════
+
+────────────────────────────────────────────────────────────
+  REPOSITORY IDENTITY
+────────────────────────────────────────────────────────────
+  Name:                  ultralytics
+  Path:                  C:\repos\v3\ultralytics
+  Scanned At:            2026-06-12 11:20:30 UTC
+  Scan Status:           COMPLETE
+  Purpose:               ultralytics — Computer Vision (Ultralytics/YOLO) — 247 Python files
+
+────────────────────────────────────────────────────────────
+  CLASSIFICATION
+────────────────────────────────────────────────────────────
+  Application Type:      Computer Vision
+  Primary Framework:     Ultralytics/YOLO
+  Secondary:             Pytest, Requests
+  Discovery Score:       100%
+  Classification:        100%
+
+────────────────────────────────────────────────────────────
+  REPOSITORY SCALE
+────────────────────────────────────────────────────────────
+  Total Files:           941
+  Python Files:          247
+  Test Suites:           tests
+
+────────────────────────────────────────────────────────────
+  DISCOVERED ASSETS
+────────────────────────────────────────────────────────────
+  Languages (Code):      C  ·  C++  ·  CSS  ·  Docker  ·  HTML  ·  JavaScript  ·  Jupyter Notebook  ·  Python  ·  Rust  ·  Shell  ·  TOML  ·  YAML
+  File Types (Docs):     Markdown  ·  Text
+  ML Models:             None
+
+────────────────────────────────────────────────────────────
+  BUILD SYSTEMS
+────────────────────────────────────────────────────────────
+  Python Build  ·  Cargo  ·  CMake
+
+────────────────────────────────────────────────────────────
+  TECHNOLOGY STACK
+────────────────────────────────────────────────────────────
+  Python  ·  Docker
+
+────────────────────────────────────────────────────────────
+  ENTRY POINTS  (18 found)
+────────────────────────────────────────────────────────────
+    docs\build_docs.py
+    docs\build_reference.py
+    docs\model_data.py
+    examples\RTDETR-ONNXRuntime-Python\main.py
+    examples\YOLO-Axelera-Python\yolo11-seg.py
+    examples\YOLO-Axelera-Python\yolo26-pose-tracker.py
+    examples\YOLOv8-Action-Recognition\action_recognition.py
+    examples\YOLOv8-ONNXRuntime\main.py
+    examples\YOLOv8-OpenCV-ONNX-Python\main.py
+    examples\YOLOv8-Region-Counter\yolov8_region_counter.py
+    ... and 8 more
+
+────────────────────────────────────────────────────────────
+  CONFIGURATION FILES  (28 found)
+────────────────────────────────────────────────────────────
+    .\pyproject.toml
+    docker\Dockerfile
+    docker\Dockerfile-arm64
+    docker\Dockerfile-conda
+    docker\Dockerfile-cpu
+    docker\Dockerfile-export
+    docker\Dockerfile-jetson-jetpack4
+    docker\Dockerfile-jetson-jetpack5
+    docker\Dockerfile-jetson-jetpack6
+    docker\Dockerfile-jupyter
+    docker\Dockerfile-nvidia-arm64
+    docker\Dockerfile-python
+    docker\Dockerfile-python-export
+    docker\Dockerfile-runner
+    docker\Dockerfile-runner-cpu
+    examples\RTDETR-ONNXRuntime-Python\requirements.txt
+    examples\YOLO-Series-ONNXRuntime-Rust\Cargo.toml
+    examples\YOLO11-Triton-CPP\CMakeLists.txt
+    examples\YOLOv8-Action-Recognition\requirements.txt
+    examples\YOLOv8-CPP-Inference\CMakeLists.txt
+    examples\YOLOv8-LibTorch-CPP-Inference\CMakeLists.txt
+    examples\YOLOv8-MNN-CPP\CMakeLists.txt
+    examples\YOLOv8-ONNXRuntime\requirements.txt
+    examples\YOLOv8-ONNXRuntime-CPP\CMakeLists.txt
+    examples\YOLOv8-ONNXRuntime-Rust\Cargo.toml
+    examples\YOLOv8-OpenCV-ONNX-Python\requirements.txt
+    examples\YOLOv8-OpenVINO-CPP-Inference\CMakeLists.txt
+    ultralytics\solutions\config.py
+
+────────────────────────────────────────────────────────────
+  DOCUMENTATION  (25 found)
+────────────────────────────────────────────────────────────
+  CONTRIBUTING.md  ·  LICENSE  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md
+
+────────────────────────────────────────────────────────────
+  WARNINGS & DIAGNOSTICS
+────────────────────────────────────────────────────────────
+  [1] 2 file extension(s) not in language registry: .cff, .typed. These files were counted but language not identified. Add to LANGUAGE_EXTENSIONS in framework_signatures.py.
+
+  UNKNOWN EXTENSIONS (2 found — not yet in registry):
+  .cff  .typed
+  → Add to LANGUAGE_EXTENSIONS in framework_signatures.py
+
+────────────────────────────────────────────────────────────
+  GOVERNANCE GATE — V3-003
+────────────────────────────────────────────────────────────
+  Status   : APPROVED
+  Decision : Pipeline may proceed to Module 2
+  Rule     : Repository understanding is complete
+
+════════════════════════════════════════════════════════════
+  Generated by CodeTruth Agent V3 — Module 1
+  github.com/Zeeshan78699/CodeTruthAgent
+════════════════════════════════════════════════════════════

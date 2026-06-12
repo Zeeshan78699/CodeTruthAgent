@@ -1,0 +1,126 @@
+════════════════════════════════════════════════════════════
+  CODETRUTH AGENT V3 — REPOSITORY SCAN REPORT
+  Module 1 — Universal Repository Discovery Engine
+════════════════════════════════════════════════════════════
+
+────────────────────────────────────────────────────────────
+  REPOSITORY IDENTITY
+────────────────────────────────────────────────────────────
+  Name:                  transformers
+  Path:                  C:\repos\v3\transformers
+  Scanned At:            2026-06-12 11:20:00 UTC
+  Scan Status:           COMPLETE
+  Purpose:               transformers — Ml Pipeline (Transformers) — 4466 Python files
+
+────────────────────────────────────────────────────────────
+  CLASSIFICATION
+────────────────────────────────────────────────────────────
+  Application Type:      Ml Pipeline
+  Primary Framework:     Transformers
+  Secondary:             Pytest, Requests, Pydantic
+  Discovery Score:       100%
+  Classification:        100%
+
+────────────────────────────────────────────────────────────
+  REPOSITORY SCALE
+────────────────────────────────────────────────────────────
+  Total Files:           5988
+  Python Files:          4466
+  Test Suites:           tests
+
+────────────────────────────────────────────────────────────
+  DISCOVERED ASSETS
+────────────────────────────────────────────────────────────
+  Languages (Code):      Docker  ·  Python  ·  SQL  ·  Shell  ·  TOML  ·  YAML
+  File Types (Docs):     JSON  ·  Markdown  ·  TSV  ·  Text
+  ML Models:             None
+
+────────────────────────────────────────────────────────────
+  BUILD SYSTEMS
+────────────────────────────────────────────────────────────
+  Make  ·  Python Build  ·  Setuptools
+
+────────────────────────────────────────────────────────────
+  TECHNOLOGY STACK
+────────────────────────────────────────────────────────────
+  Python  ·  Docker
+
+────────────────────────────────────────────────────────────
+  ENTRY POINTS  (40 found)
+────────────────────────────────────────────────────────────
+    .\setup.py
+    benchmark\benchmark.py
+    benchmark\benchmarks_entrypoint.py
+    benchmark\optimum_benchmark_wrapper.py
+    benchmark_v2\benchmark_scripts\continuous_batching_overall.py
+    benchmark_v2\run_benchmarks.py
+    examples\3D_parallel.py
+    examples\pytorch\3d_parallel_checks.py
+    examples\pytorch\audio-classification\run_audio_classification.py
+    examples\pytorch\continuous_batching.py
+    ... and 30 more
+
+────────────────────────────────────────────────────────────
+  CONFIGURATION FILES  (35 found)
+────────────────────────────────────────────────────────────
+    .\Makefile
+    .\pyproject.toml
+    .\setup.py
+    benchmark\requirements.txt
+    benchmark_v2\requirements.txt
+    docker\transformers-all-latest-gpu\Dockerfile
+    docker\transformers-doc-builder\Dockerfile
+    docker\transformers-gpu\Dockerfile
+    docker\transformers-intel-cpu\Dockerfile
+    docker\transformers-pytorch-amd-gpu\Dockerfile
+    docker\transformers-pytorch-deepspeed-amd-gpu\Dockerfile
+    docker\transformers-pytorch-deepspeed-latest-gpu\Dockerfile
+    docker\transformers-pytorch-deepspeed-nightly-gpu\Dockerfile
+    docker\transformers-pytorch-gpu\Dockerfile
+    docker\transformers-pytorch-tpu\Dockerfile
+    docker\transformers-pytorch-xpu\Dockerfile
+    docker\transformers-quantization-latest-gpu\Dockerfile
+    examples\pytorch\audio-classification\requirements.txt
+    examples\pytorch\contrastive-image-text\requirements.txt
+    examples\pytorch\image-classification\requirements.txt
+    examples\pytorch\image-pretraining\requirements.txt
+    examples\pytorch\instance-segmentation\requirements.txt
+    examples\pytorch\language-modeling\requirements.txt
+    examples\pytorch\multiple-choice\requirements.txt
+    examples\pytorch\object-detection\requirements.txt
+    examples\pytorch\question-answering\requirements.txt
+    examples\pytorch\semantic-segmentation\requirements.txt
+    examples\pytorch\speech-pretraining\requirements.txt
+    examples\pytorch\speech-recognition\requirements.txt
+    examples\pytorch\summarization\requirements.txt
+    examples\pytorch\text-classification\requirements.txt
+    examples\pytorch\text-generation\requirements.txt
+    examples\pytorch\token-classification\requirements.txt
+    examples\pytorch\translation\requirements.txt
+    tests\sagemaker\scripts\pytorch\requirements.txt
+
+────────────────────────────────────────────────────────────
+  DOCUMENTATION  (32 found)
+────────────────────────────────────────────────────────────
+  CONTRIBUTING.md  ·  LICENSE  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md
+
+────────────────────────────────────────────────────────────
+  WARNINGS & DIAGNOSTICS
+────────────────────────────────────────────────────────────
+  [1] 6 file extension(s) not in language registry: .cff, .csv, .dockerfile, .jsonnet, .model. These files were counted but language not identified. Add to LANGUAGE_EXTENSIONS in framework_signatures.py.
+
+  UNKNOWN EXTENSIONS (6 found — not yet in registry):
+  .cff  .csv  .dockerfile  .jsonnet  .model  .typed
+  → Add to LANGUAGE_EXTENSIONS in framework_signatures.py
+
+────────────────────────────────────────────────────────────
+  GOVERNANCE GATE — V3-003
+────────────────────────────────────────────────────────────
+  Status   : APPROVED
+  Decision : Pipeline may proceed to Module 2
+  Rule     : Repository understanding is complete
+
+════════════════════════════════════════════════════════════
+  Generated by CodeTruth Agent V3 — Module 1
+  github.com/Zeeshan78699/CodeTruthAgent
+════════════════════════════════════════════════════════════

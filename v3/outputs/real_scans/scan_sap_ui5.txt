@@ -1,0 +1,131 @@
+════════════════════════════════════════════════════════════
+  CODETRUTH AGENT V3 — REPOSITORY SCAN REPORT
+  Module 1 — Universal Repository Discovery Engine
+════════════════════════════════════════════════════════════
+
+────────────────────────────────────────────────────────────
+  REPOSITORY IDENTITY
+────────────────────────────────────────────────────────────
+  Name:                  ui5-webcomponents
+  Path:                  C:\repos\v3\ui5-webcomponents
+  Scanned At:            2026-06-12 11:20:21 UTC
+  Scan Status:           COMPLETE
+  Purpose:               ui5-webcomponents — Frontend Application (React) — CSS, HTML, JavaScript repository
+
+────────────────────────────────────────────────────────────
+  CLASSIFICATION
+────────────────────────────────────────────────────────────
+  Application Type:      Frontend Application
+  Primary Framework:     React
+  Discovery Score:       100%
+  Classification:        100%
+
+────────────────────────────────────────────────────────────
+  REPOSITORY SCALE
+────────────────────────────────────────────────────────────
+  Total Files:           6038
+  Python Files:          0
+  Test Suites:           packages\ai\cypress\specs, packages\ai\test, packages\base\cypress\specs, packages\base\test, packages\compat\cypress\specs, packages\compat\test, packages\create-package\template\test, packages\fiori\cypress\specs, packages\fiori\test, packages\main\cypress\specs, packages\main\test
+
+────────────────────────────────────────────────────────────
+  DISCOVERED ASSETS
+────────────────────────────────────────────────────────────
+  Languages (Code):      CSS  ·  HTML  ·  JavaScript  ·  TOML  ·  TypeScript  ·  YAML
+  File Types (Docs):     Handlebars Template  ·  JSON  ·  MDX  ·  Markdown  ·  Properties File  ·  Text
+  ML Models:             None
+
+────────────────────────────────────────────────────────────
+  BUILD SYSTEMS
+────────────────────────────────────────────────────────────
+  NPM  ·  Yarn
+
+────────────────────────────────────────────────────────────
+  TECHNOLOGY STACK
+────────────────────────────────────────────────────────────
+  AWS
+
+────────────────────────────────────────────────────────────
+  ENTRY POINTS  (0 found)
+────────────────────────────────────────────────────────────
+  None detected
+
+────────────────────────────────────────────────────────────
+  CONFIGURATION FILES  (51 found)
+────────────────────────────────────────────────────────────
+    .\.env.development
+    .\package.json
+    .\tsconfig.json
+    .\yarn.lock
+    packages\ai\.env.production
+    packages\ai\.env.testing
+    packages\ai\package.json
+    packages\ai\tsconfig.json
+    packages\ai\cypress\tsconfig.json
+    packages\base\package.json
+    packages\base\tsconfig.json
+    packages\base\cypress\tsconfig.json
+    packages\base\test\tsconfig.json
+    packages\compat\.env.production
+    packages\compat\.env.testing
+    packages\compat\package.json
+    packages\compat\tsconfig.json
+    packages\compat\cypress\tsconfig.json
+    packages\create-package\package.json
+    packages\create-package\template\package.json
+    packages\cypress-ct-ui5-webc\package.json
+    packages\cypress-internal\package.json
+    packages\cypress-internal\tsconfig.json
+    packages\fiori\.env.production
+    packages\fiori\.env.testing
+    packages\fiori\package.json
+    packages\fiori\tsconfig.json
+    packages\fiori\cypress\tsconfig.json
+    packages\icons\package.json
+    packages\icons\tsconfig.json
+    packages\icons-business-suite\package.json
+    packages\icons-business-suite\tsconfig.json
+    packages\icons-tnt\package.json
+    packages\icons-tnt\tsconfig.json
+    packages\localization\package.json
+    packages\localization\tsconfig.json
+    packages\main\.env.production
+    packages\main\.env.testing
+    packages\main\package.json
+    packages\main\tsconfig.json
+    packages\main\cypress\tsconfig.json
+    packages\theming\package.json
+    packages\theming\tsconfig.json
+    packages\tools\package.json
+    packages\tools\tsconfig.json
+    packages\tools\lib\cem\patch\@custom-elements-manifest\analyzer\package.json
+    packages\website\.env
+    packages\website\.env.latest
+    packages\website\package.json
+    packages\website\tsconfig.json
+    packages\website\docs\_samples\tsconfig.json
+
+────────────────────────────────────────────────────────────
+  DOCUMENTATION  (39 found)
+────────────────────────────────────────────────────────────
+  CHANGELOG.md  ·  CONTRIBUTING.md  ·  LICENSE.txt  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  CHANGELOG.md  ·  README.md  ·  CHANGELOG.md  ·  README.md  ·  CHANGELOG.md  ·  README.md  ·  CHANGELOG.md  ·  README.md  ·  README.md  ·  README.md  ·  CHANGELOG.md  ·  README.md  ·  CHANGELOG.md  ·  README.md  ·  CHANGELOG.md  ·  README.md  ·  CHANGELOG.md  ·  README.md  ·  CHANGELOG.md  ·  README.md  ·  CHANGELOG.md  ·  README.md  ·  CHANGELOG.md  ·  README.md  ·  CHANGELOG.md  ·  README.md  ·  CHANGELOG.md  ·  README.md
+
+────────────────────────────────────────────────────────────
+  WARNINGS & DIAGNOSTICS
+────────────────────────────────────────────────────────────
+  [1] 4 file extension(s) not in language registry: .development, .latest, .production, .testing. These files were counted but language not identified. Add to LANGUAGE_EXTENSIONS in framework_signatures.py.
+
+  UNKNOWN EXTENSIONS (4 found — not yet in registry):
+  .development  .latest  .production  .testing
+  → Add to LANGUAGE_EXTENSIONS in framework_signatures.py
+
+────────────────────────────────────────────────────────────
+  GOVERNANCE GATE — V3-003
+────────────────────────────────────────────────────────────
+  Status   : APPROVED
+  Decision : Pipeline may proceed to Module 2
+  Rule     : Repository understanding is complete
+
+════════════════════════════════════════════════════════════
+  Generated by CodeTruth Agent V3 — Module 1
+  github.com/Zeeshan78699/CodeTruthAgent
+════════════════════════════════════════════════════════════

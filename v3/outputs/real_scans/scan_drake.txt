@@ -1,0 +1,103 @@
+════════════════════════════════════════════════════════════
+  CODETRUTH AGENT V3 — REPOSITORY SCAN REPORT
+  Module 1 — Universal Repository Discovery Engine
+════════════════════════════════════════════════════════════
+
+────────────────────────────────────────────────────────────
+  REPOSITORY IDENTITY
+────────────────────────────────────────────────────────────
+  Name:                  drake
+  Path:                  C:\repos\v3\drake
+  Scanned At:            2026-06-12 11:20:27 UTC
+  Scan Status:           COMPLETE
+  Purpose:               drake — Robotics System (Drake) — 399 Python files
+
+────────────────────────────────────────────────────────────
+  CLASSIFICATION
+────────────────────────────────────────────────────────────
+  Application Type:      Robotics System
+  Primary Framework:     Drake
+  Secondary:             HTTPX
+  Discovery Score:       100%
+  Classification:        100%
+
+────────────────────────────────────────────────────────────
+  REPOSITORY SCALE
+────────────────────────────────────────────────────────────
+  Total Files:           5536
+  Python Files:          399
+  Test Suites:           bindings\generated_docstrings\test, bindings\pydrake\autodiffutils\test, bindings\pydrake\common\test, bindings\pydrake\common\test_utilities\scipy_stub\test, bindings\pydrake\common\test_utilities\test, bindings\pydrake\examples\test, bindings\pydrake\geometry\test, bindings\pydrake\gym\test, bindings\pydrake\manipulation\test, bindings\pydrake\math\test, bindings\pydrake\multibody\test, bindings\pydrake\planning\test, bindings\pydrake\solvers\test, bindings\pydrake\symbolic\test, bindings\pydrake\systems\test, bindings\pydrake\test, bindings\pydrake\visualization\test, common\ad\test, common\proto\test, common\schema\test, common\symbolic\expression\test, common\symbolic\test, common\test, common\test_utilities\test, common\trajectories\test, common\yaml\test, doc\doxygen_cxx\test, examples\acrobot\test, examples\allegro_hand\joint_control\test, examples\allegro_hand\test, examples\bouncing_ball\test, examples\compass_gait\test, examples\fibonacci\test, examples\hardware_sim\test, examples\kuka_iiwa_arm\test, examples\mass_spring_cloth\test, examples\multibody\cart_pole\test, examples\multibody\cylinder_with_multicontact\test, examples\multibody\deformable\test, examples\multibody\strandbeest\test, examples\pendulum\test, examples\planar_gripper\test, examples\quadrotor\test, examples\rimless_wheel\test, examples\rod2d\test, examples\van_der_pol\test, geometry\optimization\dev\test, geometry\optimization\test, geometry\proximity\test, geometry\query_results\test, geometry\render\test, geometry\render_gl\test, geometry\render_gltf_client\test, geometry\render_vtk\test, geometry\test, lcm\test, lcmtypes\test, manipulation\franka_panda\test, manipulation\kinova_jaco\test, manipulation\kuka_iiwa\test, manipulation\schunk_wsg\test, manipulation\util\test, math\test, multibody\benchmarks\chaotic_babyboot\MG\test, multibody\benchmarks\free_body\test, multibody\benchmarks\kuka_iiwa_robot\MG\test, multibody\benchmarks\kuka_iiwa_robot\test, multibody\benchmarks\mass_damper_spring\test, multibody\cenic\test, multibody\contact_solvers\icf\test, multibody\contact_solvers\sap\test, multibody\contact_solvers\test, multibody\fem\test, multibody\hydroelastics\test, multibody\inverse_kinematics\test, multibody\math\test, multibody\meshcat\test, multibody\mpm\test, multibody\optimization\test, multibody\parsing\test, multibody\plant\images\test, multibody\plant\test, multibody\rational\test, multibody\topology\test, multibody\tree\test, multibody\triangle_quadrature\test, perception\test, planning\experimental\test, planning\graph_algorithms\test, planning\iris\test, planning\locomotion\test, planning\test, planning\trajectory_optimization\test, setup\test, solvers\test, systems\analysis\test, systems\analysis\test_utilities\test, systems\controllers\test, systems\estimators\test, systems\estimators\test_utilities\test, systems\framework\test, systems\framework\test_utilities\test, systems\lcm\test, systems\optimization\test, systems\primitives\test, systems\rendering\test, systems\sensors\test, tools\clion\test, tools\install\libdrake\test, tools\install\test, tools\jupyter\test, tools\lcm_gen\test, tools\lint\test, tools\skylark\test, tools\wheel\test, tools\wheel\test\tests, tools\workspace\bazelisk_internal\test, tools\workspace\ccd_internal\test, tools\workspace\clarabel_cpp_internal\test, tools\workspace\drake_models\test, tools\workspace\ipopt_internal\test, tools\workspace\mkdoc_internal\test, tools\workspace\nlopt_internal\test, tools\workspace\ros_xacro_internal\test, tools\workspace\stable_baselines3_internal\test, tools\workspace\vtk_internal\test, tutorials\test, visualization\test
+
+────────────────────────────────────────────────────────────
+  DISCOVERED ASSETS
+────────────────────────────────────────────────────────────
+  Languages (Code):      C  ·  C++  ·  CSS  ·  Docker  ·  HTML  ·  JavaScript  ·  Jupyter Notebook  ·  NetSuite SDF  ·  OBJ 3D Model  ·  Python  ·  ROS Macro  ·  Robot Description  ·  STL 3D Model  ·  Shell  ·  TOML  ·  VTK Visualization  ·  XML  ·  YAML
+  File Types (Docs):     Configuration File  ·  JSON  ·  LaTeX  ·  Markdown  ·  PDF Document  ·  ReStructuredText  ·  Text
+  ML Models:             OpenVINO Weights
+  Total Model Files:     7
+
+────────────────────────────────────────────────────────────
+  BUILD SYSTEMS
+────────────────────────────────────────────────────────────
+  CMake  ·  Python Build  ·  Setuptools
+
+────────────────────────────────────────────────────────────
+  TECHNOLOGY STACK
+────────────────────────────────────────────────────────────
+  Python  ·  Docker  ·  SQLite  ·  Redis
+
+────────────────────────────────────────────────────────────
+  ENTRY POINTS  (8 found)
+────────────────────────────────────────────────────────────
+    bindings\pydrake\examples\gym\play_cart_pole.py
+    bindings\pydrake\examples\gym\train_cart_pole.py
+    bindings\pydrake\examples\multibody\cart_pole_passive_simulation.py
+    bindings\pydrake\examples\multibody\pendulum_lqr_monte_carlo_analysis.py
+    bindings\pydrake\examples\multibody\run_planar_scenegraph_visualizer.py
+    bindings\pydrake\stubgen.py
+    bindings\pydrake\tutorials.py
+    tools\wheel\wheel_builder\main.py
+
+────────────────────────────────────────────────────────────
+  CONFIGURATION FILES  (14 found)
+────────────────────────────────────────────────────────────
+    .\CMakeLists.txt
+    .\CTestConfig.cmake
+    cmake\modules\FindBazel.cmake
+    cmake\modules\FindGurobi.cmake
+    setup\python\pyproject.toml
+    setup\python\requirements.txt
+    setup\python\mypy\requirements.txt
+    tools\install\libdrake\generate_version.cmake
+    tools\wheel\Dockerfile
+    tools\wheel\image\setup.py
+    tools\wheel\test\Dockerfile
+    tools\workspace\doxygen_internal\Dockerfile
+    tools\workspace\pybind11\pybind11-config-version.cmake
+    tools\workspace\pybind11\pybind11-config.cmake
+
+────────────────────────────────────────────────────────────
+  DOCUMENTATION  (77 found)
+────────────────────────────────────────────────────────────
+  CONTRIBUTING.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  LICENSE.txt  ·  README.md  ·  LICENSE.txt  ·  README.md  ·  LICENSE.txt  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  LICENSE  ·  LICENSE  ·  LICENSE  ·  LICENSE  ·  README.md  ·  LICENSE  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.rst  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  LICENSE  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md
+
+────────────────────────────────────────────────────────────
+  WARNINGS & DIAGNOSTICS
+────────────────────────────────────────────────────────────
+  [1] 25 file extension(s) not in language registry: .base64, .bazel, .blacklist, .build, .bzl. These files were counted but language not identified. Add to LANGUAGE_EXTENSIONS in framework_signatures.py.
+
+  UNKNOWN EXTENSIONS (25 found — not yet in registry):
+  .base64  .bazel  .blacklist  .build  .bzl  .cmake  .config  .dot  .expected  .gltf  .hdr  .in  .j2  .ktx2  .lcm  .license  .mtl  .patch  .rc  .supp
+  → Add to LANGUAGE_EXTENSIONS in framework_signatures.py
+
+────────────────────────────────────────────────────────────
+  GOVERNANCE GATE — V3-003
+────────────────────────────────────────────────────────────
+  Status   : APPROVED
+  Decision : Pipeline may proceed to Module 2
+  Rule     : Repository understanding is complete
+
+════════════════════════════════════════════════════════════
+  Generated by CodeTruth Agent V3 — Module 1
+  github.com/Zeeshan78699/CodeTruthAgent
+════════════════════════════════════════════════════════════

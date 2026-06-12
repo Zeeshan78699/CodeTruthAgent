@@ -1,0 +1,275 @@
+════════════════════════════════════════════════════════════
+  CODETRUTH AGENT V3 — REPOSITORY SCAN REPORT
+  Module 1 — Universal Repository Discovery Engine
+════════════════════════════════════════════════════════════
+
+────────────────────────────────────────────────────────────
+  REPOSITORY IDENTITY
+────────────────────────────────────────────────────────────
+  Name:                  micropython
+  Path:                  C:\repos\v3\micropython
+  Scanned At:            2026-06-12 11:20:32 UTC
+  Scan Status:           COMPLETE
+  Purpose:               micropython — Embedded System (MicroPython) — 1937 Python files
+
+────────────────────────────────────────────────────────────
+  CLASSIFICATION
+────────────────────────────────────────────────────────────
+  Application Type:      Embedded System
+  Primary Framework:     MicroPython
+  Discovery Score:       100%
+  Classification:        100%
+
+────────────────────────────────────────────────────────────
+  REPOSITORY SCALE
+────────────────────────────────────────────────────────────
+  Total Files:           6495
+  Python Files:          1937
+  Test Suites:           tests, tools\mpremote\tests
+
+────────────────────────────────────────────────────────────
+  DISCOVERED ASSETS
+────────────────────────────────────────────────────────────
+  Languages (Code):      Assembly  ·  AutoCAD Exchange  ·  C  ·  C++  ·  CSS  ·  Docker  ·  Embedded Binary  ·  HTML  ·  JavaScript  ·  Protobuf  ·  Python  ·  Shell  ·  TOML  ·  XML  ·  YAML
+  File Types (Docs):     Configuration File  ·  JSON  ·  Markdown  ·  ReStructuredText  ·  Text  ·  Windows Batch Script
+  ML Models:             OpenVINO Weights
+  Total Model Files:     8
+
+────────────────────────────────────────────────────────────
+  BUILD SYSTEMS
+────────────────────────────────────────────────────────────
+  Python Build  ·  Make  ·  CMake
+
+────────────────────────────────────────────────────────────
+  TECHNOLOGY STACK
+────────────────────────────────────────────────────────────
+  Python  ·  Docker
+
+────────────────────────────────────────────────────────────
+  ENTRY POINTS  (17 found)
+────────────────────────────────────────────────────────────
+    examples\bluetooth\ble_advertising.py
+    examples\bluetooth\ble_bonding_peripheral.py
+    examples\bluetooth\ble_simple_central.py
+    examples\bluetooth\ble_simple_peripheral.py
+    examples\bluetooth\ble_temperature.py
+    examples\bluetooth\ble_temperature_central.py
+    examples\bluetooth\ble_uart_peripheral.py
+    examples\switch.py
+    examples\usb\usb_simple_host_pyusb.py
+    mpy-cross\mpy_cross\__main__.py
+    ... and 7 more
+
+────────────────────────────────────────────────────────────
+  CONFIGURATION FILES  (184 found)
+────────────────────────────────────────────────────────────
+    .\pyproject.toml
+    docs\Makefile
+    docs\requirements.txt
+    examples\embedding\Makefile
+    examples\natmod\btree\Makefile
+    examples\natmod\deflate\Makefile
+    examples\natmod\features0\Makefile
+    examples\natmod\features1\Makefile
+    examples\natmod\features2\Makefile
+    examples\natmod\features3\Makefile
+    examples\natmod\features4\Makefile
+    examples\natmod\framebuf\Makefile
+    examples\natmod\heapq\Makefile
+    examples\natmod\random\Makefile
+    examples\natmod\re\Makefile
+    examples\usercmodule\micropython.cmake
+    examples\usercmodule\cexample\micropython.cmake
+    examples\usercmodule\cppexample\micropython.cmake
+    examples\usercmodule\subpackage\micropython.cmake
+    extmod\extmod.cmake
+    extmod\btstack\btstack.cmake
+    extmod\nimble\nimble.cmake
+    mpy-cross\Makefile
+    ports\alif\Makefile
+    ports\bare-arm\Makefile
+    ports\cc3200\Makefile
+    ports\esp32\CMakeLists.txt
+    ports\esp32\esp32_common.cmake
+    ports\esp32\Makefile
+    ports\esp32\boards\mpconfigboard_esp32c2_common.cmake
+    ports\esp32\boards\mpconfigboard_esp32c3_common.cmake
+    ports\esp32\boards\mpconfigboard_esp32c5_common.cmake
+    ports\esp32\boards\mpconfigboard_esp32c6_common.cmake
+    ports\esp32\boards\mpconfigboard_esp32p4_common.cmake
+    ports\esp32\boards\mpconfigboard_esp32s2_common.cmake
+    ports\esp32\boards\mpconfigboard_esp32s3_common.cmake
+    ports\esp32\boards\mpconfigboard_esp32_common.cmake
+    ports\esp32\boards\ARDUINO_NANO_ESP32\mpconfigboard.cmake
+    ports\esp32\boards\ESP32_GENERIC\mpconfigboard.cmake
+    ports\esp32\boards\ESP32_GENERIC\mpconfigvariant_D2WD.cmake
+    ports\esp32\boards\ESP32_GENERIC\mpconfigvariant_OTA.cmake
+    ports\esp32\boards\ESP32_GENERIC\mpconfigvariant_SPIRAM.cmake
+    ports\esp32\boards\ESP32_GENERIC\mpconfigvariant_UNICORE.cmake
+    ports\esp32\boards\ESP32_GENERIC_C2\mpconfigboard.cmake
+    ports\esp32\boards\ESP32_GENERIC_C2\mpconfigvariant_FLASH_2M.cmake
+    ports\esp32\boards\ESP32_GENERIC_C3\mpconfigboard.cmake
+    ports\esp32\boards\ESP32_GENERIC_C5\mpconfigboard.cmake
+    ports\esp32\boards\ESP32_GENERIC_C6\mpconfigboard.cmake
+    ports\esp32\boards\ESP32_GENERIC_P4\mpconfigboard.cmake
+    ports\esp32\boards\ESP32_GENERIC_P4\mpconfigvariant_C5_WIFI.cmake
+    ports\esp32\boards\ESP32_GENERIC_P4\mpconfigvariant_C6_WIFI.cmake
+    ports\esp32\boards\ESP32_GENERIC_S2\mpconfigboard.cmake
+    ports\esp32\boards\ESP32_GENERIC_S3\mpconfigboard.cmake
+    ports\esp32\boards\ESP32_GENERIC_S3\mpconfigvariant_SPIRAM_OCT.cmake
+    ports\esp32\boards\GARATRONIC_PYBSTICK26_ESP32C3\mpconfigboard.cmake
+    ports\esp32\boards\LILYGO_T3_S3\mpconfigboard.cmake
+    ports\esp32\boards\LILYGO_TTGO_LORA32\mpconfigboard.cmake
+    ports\esp32\boards\LOLIN_C3_MINI\mpconfigboard.cmake
+    ports\esp32\boards\LOLIN_S2_MINI\mpconfigboard.cmake
+    ports\esp32\boards\LOLIN_S2_PICO\mpconfigboard.cmake
+    ports\esp32\boards\M5STACK_ATOM\mpconfigboard.cmake
+    ports\esp32\boards\M5STACK_ATOMS3_LITE\mpconfigboard.cmake
+    ports\esp32\boards\M5STACK_NANOC6\mpconfigboard.cmake
+    ports\esp32\boards\OLIMEX_ESP32_EVB\mpconfigboard.cmake
+    ports\esp32\boards\OLIMEX_ESP32_POE\mpconfigboard.cmake
+    ports\esp32\boards\SEEED_XIAO_ESP32C6\mpconfigboard.cmake
+    ports\esp32\boards\SIL_MANT1S\mpconfigboard.cmake
+    ports\esp32\boards\SIL_WESP32\mpconfigboard.cmake
+    ports\esp32\boards\SOLDERED_NULA_MINI\mpconfigboard.cmake
+    ports\esp32\boards\SPARKFUN_IOT_REDBOARD_ESP32\mpconfigboard.cmake
+    ports\esp32\boards\SPARKFUN_THINGPLUS_ESP32C5\mpconfigboard.cmake
+    ports\esp32\boards\UM_FEATHERS2\mpconfigboard.cmake
+    ports\esp32\boards\UM_FEATHERS2NEO\mpconfigboard.cmake
+    ports\esp32\boards\UM_FEATHERS3\mpconfigboard.cmake
+    ports\esp32\boards\UM_FEATHERS3NEO\mpconfigboard.cmake
+    ports\esp32\boards\UM_NANOS3\mpconfigboard.cmake
+    ports\esp32\boards\UM_OMGS3\mpconfigboard.cmake
+    ports\esp32\boards\UM_PROS3\mpconfigboard.cmake
+    ports\esp32\boards\UM_RGBTOUCH_MINI\mpconfigboard.cmake
+    ports\esp32\boards\UM_TINYC6\mpconfigboard.cmake
+    ports\esp32\boards\UM_TINYPICO\mpconfigboard.cmake
+    ports\esp32\boards\UM_TINYS2\mpconfigboard.cmake
+    ports\esp32\boards\UM_TINYS3\mpconfigboard.cmake
+    ports\esp32\boards\UM_TINYWATCHS3\mpconfigboard.cmake
+    ports\esp32\main\CMakeLists.txt
+    ports\esp8266\Makefile
+    ports\mimxrt\Makefile
+    ports\minimal\Makefile
+    ports\nrf\Makefile
+    ports\pic16bit\Makefile
+    ports\powerpc\Makefile
+    ports\qemu\Dockerfile.riscv
+    ports\qemu\Makefile
+    ports\renesas-ra\Makefile
+    ports\rp2\CMakeLists.txt
+    ports\rp2\Makefile
+    ports\rp2\boards\ADAFRUIT_FEATHER_RP2040\mpconfigboard.cmake
+    ports\rp2\boards\ADAFRUIT_FEATHER_RP2350\mpconfigboard.cmake
+    ports\rp2\boards\ADAFRUIT_FEATHER_RP2350\mpconfigvariant.cmake
+    ports\rp2\boards\ADAFRUIT_FEATHER_RP2350\mpconfigvariant_RISCV.cmake
+    ports\rp2\boards\ADAFRUIT_ITSYBITSY_RP2040\mpconfigboard.cmake
+    ports\rp2\boards\ADAFRUIT_QTPY_RP2040\mpconfigboard.cmake
+    ports\rp2\boards\ARDUINO_NANO_RP2040_CONNECT\mpconfigboard.cmake
+    ports\rp2\boards\CYTRON_MOTION_2350_PRO\mpconfigboard.cmake
+    ports\rp2\boards\CYTRON_MOTION_2350_PRO\mpconfigvariant.cmake
+    ports\rp2\boards\CYTRON_MOTION_2350_PRO\mpconfigvariant_RISCV.cmake
+    ports\rp2\boards\CYTRON_NANOXRP_CONTROLLER\mpconfigboard.cmake
+    ports\rp2\boards\GARATRONIC_PYBSTICK26_RP2040\mpconfigboard.cmake
+    ports\rp2\boards\MACHDYNE_WERKZEUG\mpconfigboard.cmake
+    ports\rp2\boards\NULLBITS_BIT_C_PRO\mpconfigboard.cmake
+    ports\rp2\boards\PIMORONI_PICOLIPO\mpconfigboard.cmake
+    ports\rp2\boards\PIMORONI_PICOLIPO\mpconfigvariant.cmake
+    ports\rp2\boards\PIMORONI_PICOLIPO\mpconfigvariant_FLASH_16M.cmake
+    ports\rp2\boards\PIMORONI_TINY2040\mpconfigboard.cmake
+    ports\rp2\boards\PIMORONI_TINY2040\mpconfigvariant.cmake
+    ports\rp2\boards\PIMORONI_TINY2040\mpconfigvariant_FLASH_8M.cmake
+    ports\rp2\boards\POLOLU_3PI_2040_ROBOT\mpconfigboard.cmake
+    ports\rp2\boards\POLOLU_ZUMO_2040_ROBOT\mpconfigboard.cmake
+    ports\rp2\boards\RPI_PICO\mpconfigboard.cmake
+    ports\rp2\boards\RPI_PICO2\mpconfigboard.cmake
+    ports\rp2\boards\RPI_PICO2\mpconfigvariant.cmake
+    ports\rp2\boards\RPI_PICO2\mpconfigvariant_RISCV.cmake
+    ports\rp2\boards\RPI_PICO2_W\mpconfigboard.cmake
+    ports\rp2\boards\RPI_PICO2_W\mpconfigvariant.cmake
+    ports\rp2\boards\RPI_PICO2_W\mpconfigvariant_RISCV.cmake
+    ports\rp2\boards\RPI_PICO_W\mpconfigboard.cmake
+    ports\rp2\boards\SEEED_XIAO_RP2040\mpconfigboard.cmake
+    ports\rp2\boards\SEEED_XIAO_RP2350\mpconfigboard.cmake
+    ports\rp2\boards\SEEED_XIAO_RP2350\mpconfigvariant.cmake
+    ports\rp2\boards\SEEED_XIAO_RP2350\mpconfigvariant_RISCV.cmake
+    ports\rp2\boards\SIL_RP2040_SHIM\mpconfigboard.cmake
+    ports\rp2\boards\SOLDERED_NULA_MAX_RP2350\mpconfigboard.cmake
+    ports\rp2\boards\SOLDERED_NULA_MAX_RP2350\mpconfigvariant.cmake
+    ports\rp2\boards\SOLDERED_NULA_MAX_RP2350\mpconfigvariant_RISCV.cmake
+    ports\rp2\boards\SPARKFUN_IOTNODE_LORAWAN_RP2350\mpconfigboard.cmake
+    ports\rp2\boards\SPARKFUN_IOTNODE_LORAWAN_RP2350\mpconfigvariant.cmake
+    ports\rp2\boards\SPARKFUN_IOTNODE_LORAWAN_RP2350\mpconfigvariant_RISCV.cmake
+    ports\rp2\boards\SPARKFUN_IOTREDBOARD_RP2350\mpconfigboard.cmake
+    ports\rp2\boards\SPARKFUN_IOTREDBOARD_RP2350\mpconfigvariant.cmake
+    ports\rp2\boards\SPARKFUN_IOTREDBOARD_RP2350\mpconfigvariant_RISCV.cmake
+    ports\rp2\boards\SPARKFUN_PROMICRO\mpconfigboard.cmake
+    ports\rp2\boards\SPARKFUN_PROMICRO_RP2350\mpconfigboard.cmake
+    ports\rp2\boards\SPARKFUN_PROMICRO_RP2350\mpconfigvariant.cmake
+    ports\rp2\boards\SPARKFUN_PROMICRO_RP2350\mpconfigvariant_RISCV.cmake
+    ports\rp2\boards\SPARKFUN_THINGPLUS\mpconfigboard.cmake
+    ports\rp2\boards\SPARKFUN_THINGPLUS_RP2350\mpconfigboard.cmake
+    ports\rp2\boards\SPARKFUN_THINGPLUS_RP2350\mpconfigvariant.cmake
+    ports\rp2\boards\SPARKFUN_THINGPLUS_RP2350\mpconfigvariant_RISCV.cmake
+    ports\rp2\boards\SPARKFUN_XRP_CONTROLLER\mpconfigboard.cmake
+    ports\rp2\boards\SPARKFUN_XRP_CONTROLLER\mpconfigvariant.cmake
+    ports\rp2\boards\SPARKFUN_XRP_CONTROLLER\mpconfigvariant_RISCV.cmake
+    ports\rp2\boards\SPARKFUN_XRP_CONTROLLER_BETA\mpconfigboard.cmake
+    ports\rp2\boards\W5100S_EVB_PICO\mpconfigboard.cmake
+    ports\rp2\boards\W5500_EVB_PICO\mpconfigboard.cmake
+    ports\rp2\boards\WAVESHARE_RP2040_LCD_0_96\mpconfigboard.cmake
+    ports\rp2\boards\WAVESHARE_RP2040_PLUS\mpconfigboard.cmake
+    ports\rp2\boards\WAVESHARE_RP2040_PLUS\mpconfigvariant.cmake
+    ports\rp2\boards\WAVESHARE_RP2040_PLUS\mpconfigvariant_FLASH_16M.cmake
+    ports\rp2\boards\WAVESHARE_RP2040_ZERO\mpconfigboard.cmake
+    ports\rp2\boards\WAVESHARE_RP2350B_CORE\mpconfigboard.cmake
+    ports\rp2\boards\WAVESHARE_RP2350B_CORE\mpconfigvariant.cmake
+    ports\rp2\boards\WAVESHARE_RP2350B_CORE\mpconfigvariant_RISCV.cmake
+    ports\rp2\boards\WEACTSTUDIO\mpconfigboard.cmake
+    ports\rp2\boards\WEACTSTUDIO\mpconfigvariant.cmake
+    ports\rp2\boards\WEACTSTUDIO\mpconfigvariant_FLASH_2M.cmake
+    ports\rp2\boards\WEACTSTUDIO\mpconfigvariant_FLASH_4M.cmake
+    ports\rp2\boards\WEACTSTUDIO\mpconfigvariant_FLASH_8M.cmake
+    ports\rp2\boards\WEACTSTUDIO_RP2350B_CORE\mpconfigboard.cmake
+    ports\rp2\boards\WEACTSTUDIO_RP2350B_CORE\mpconfigvariant.cmake
+    ports\rp2\boards\WEACTSTUDIO_RP2350B_CORE\mpconfigvariant_RISCV.cmake
+    ports\samd\Makefile
+    ports\stm32\Makefile
+    ports\stm32\mboot\Makefile
+    ports\unix\Makefile
+    ports\webassembly\Makefile
+    ports\windows\Makefile
+    ports\zephyr\CMakeLists.txt
+    py\mkrules.cmake
+    py\py.cmake
+    py\usermod.cmake
+    tests\assets\Makefile
+    tests\micropython\import_mpy_native_gc_module\Makefile
+    tools\mpremote\pyproject.toml
+    tools\mpremote\requirements.txt
+
+────────────────────────────────────────────────────────────
+  DOCUMENTATION  (63 found)
+────────────────────────────────────────────────────────────
+  CONTRIBUTING.md  ·  LICENSE  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  AUTHORS  ·  LICENSE  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  LICENSE  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README  ·  README  ·  README  ·  README  ·  README.md  ·  README.md  ·  LICENSE  ·  README.md  ·  README.md
+
+────────────────────────────────────────────────────────────
+  WARNINGS & DIAGNOSTICS
+────────────────────────────────────────────────────────────
+  [1] 48 file extension(s) not in language registry: .240mhz, .base, .ble, .board, .c2. These files were counted but language not identified. Add to LANGUAGE_EXTENSIONS in framework_signatures.py.
+
+  UNKNOWN EXTENSIONS (48 found — not yet in registry):
+  .240mhz  .base  .ble  .board  .c2  .c3  .c6  .cmake  .csv  .d2wd  .der  .diff  .esp32  .esp32c2  .esp32c3  .esp32c5  .esp32c6  .esp32p4  .esp32s2  .esp32s3
+  → Add to LANGUAGE_EXTENSIONS in framework_signatures.py
+
+────────────────────────────────────────────────────────────
+  GOVERNANCE GATE — V3-003
+────────────────────────────────────────────────────────────
+  Status   : APPROVED
+  Decision : Pipeline may proceed to Module 2
+  Rule     : Repository understanding is complete
+
+════════════════════════════════════════════════════════════
+  Generated by CodeTruth Agent V3 — Module 1
+  github.com/Zeeshan78699/CodeTruthAgent
+════════════════════════════════════════════════════════════

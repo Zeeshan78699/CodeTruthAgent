@@ -1,0 +1,120 @@
+════════════════════════════════════════════════════════════
+  CODETRUTH AGENT V3 — REPOSITORY SCAN REPORT
+  Module 1 — Universal Repository Discovery Engine
+════════════════════════════════════════════════════════════
+
+────────────────────────────────────────────────────────────
+  REPOSITORY IDENTITY
+────────────────────────────────────────────────────────────
+  Name:                  ardupilot
+  Path:                  C:\repos\v3\ardupilot
+  Scanned At:            2026-06-12 11:20:51 UTC
+  Scan Status:           COMPLETE
+  Purpose:               ardupilot — Drone Uav (ArduPilot) — 277 Python files
+
+────────────────────────────────────────────────────────────
+  CLASSIFICATION
+────────────────────────────────────────────────────────────
+  Application Type:      Drone Uav
+  Primary Framework:     ArduPilot
+  Secondary:             Pytest
+  Discovery Score:       100%
+  Classification:        100%
+
+────────────────────────────────────────────────────────────
+  REPOSITORY SCALE
+────────────────────────────────────────────────────────────
+  Total Files:           7680
+  Python Files:          277
+  Test Suites:           Tools\ros2\ardupilot_dds_tests\test, libraries\AP_ADSB\tests, libraries\AP_Baro\tests, libraries\AP_BattMonitor\tests, libraries\AP_CSVReader\tests, libraries\AP_Common\tests, libraries\AP_DDS\tests, libraries\AP_Declination\tests, libraries\AP_ExternalAHRS\tests, libraries\AP_GPS\tests, libraries\AP_GSOF\tests, libraries\AP_GyroFFT\tests, libraries\AP_HAL\tests, libraries\AP_HAL\utility\tests, libraries\AP_HAL_Linux\tests, libraries\AP_JSButton\tests, libraries\AP_Math\tests, libraries\AP_MultiHeap\tests, libraries\AP_NavEKF\tests, libraries\AP_OLC\tests, libraries\AP_Param\tests, libraries\AP_RCProtocol\tests, libraries\AP_Scripting\tests, libraries\AP_Scripting\tests\modules\test, libraries\Filter\tests, libraries\SITL\tests, tests
+
+────────────────────────────────────────────────────────────
+  DISCOVERED ASSETS
+────────────────────────────────────────────────────────────
+  Languages (Code):      3DS Max Model  ·  Arduino Sketch  ·  Assembly  ·  C  ·  C++  ·  CSS  ·  Device Tree Source  ·  Docker  ·  Drone Parameter File  ·  Drone Waypoints  ·  Emacs Lisp  ·  Embedded Binary  ·  Embedded ELF  ·  HTML  ·  IDL  ·  JavaScript  ·  Jupyter Notebook  ·  Kotlin  ·  Lua  ·  MATLAB  ·  Nastran Input  ·  Objective-C  ·  PowerShell  ·  Protobuf  ·  Python  ·  Robot Description  ·  STL 3D Model  ·  Shell  ·  SketchUp Model  ·  TOML  ·  XML  ·  YAML
+  File Types (Docs):     Configuration File  ·  Excel Spreadsheet  ·  JSON  ·  Markdown  ·  PDF Document  ·  Text  ·  Windows Batch Script
+  ML Models:             OpenVINO Weights
+  Total Model Files:     417
+
+────────────────────────────────────────────────────────────
+  BUILD SYSTEMS
+────────────────────────────────────────────────────────────
+  Make  ·  Python Build  ·  CMake  ·  Setuptools
+
+────────────────────────────────────────────────────────────
+  TECHNOLOGY STACK
+────────────────────────────────────────────────────────────
+  Python  ·  Docker  ·  Vagrant
+
+────────────────────────────────────────────────────────────
+  ENTRY POINTS  (18 found)
+────────────────────────────────────────────────────────────
+    Tools\ardupilotwaf\embed.py
+    libraries\APM_Control\examples\AP_FW_Controller_test\plot_results.py
+    libraries\AP_Camera\examples\gst_rtsp_server.py
+    libraries\AP_Camera\examples\gst_rtsp_to_wx.py
+    libraries\AP_Camera\examples\gst_udp_to_rtsp.py
+    libraries\AP_Camera\examples\gst_udp_to_wx.py
+    libraries\AP_Generator\scripts\test-loweheiser.py
+    libraries\AP_HAL_ChibiOS\hwdef\scripts\STM32F745xx.py
+    libraries\AP_HAL_ChibiOS\hwdef\scripts\chibios_hwdef.py
+    libraries\AP_HAL_ChibiOS\hwdef\scripts\dma_resolver.py
+    ... and 8 more
+
+────────────────────────────────────────────────────────────
+  CONFIGURATION FILES  (28 found)
+────────────────────────────────────────────────────────────
+    .\Dockerfile
+    .\Makefile
+    .\pyproject.toml
+    .\Vagrantfile
+    libraries\AP_HAL_ESP32\targets\esp32\esp-idf\CMakeLists.txt
+    libraries\AP_HAL_ESP32\targets\esp32s3\esp-idf\CMakeLists.txt
+    libraries\AP_HAL_Linux\examples\BusTest\Makefile
+    libraries\AP_Scripting\lua\Makefile
+    libraries\AP_Scripting\lua\src\Makefile
+    libraries\SITL\examples\JSON\C++\CMakeLists.txt
+    libraries\SITL\examples\Webots\controllers\ardupilot_SITL_QUAD\Makefile
+    libraries\SITL\examples\Webots\controllers\ardupilot_SITL_ROVER\Makefile
+    libraries\SITL\examples\Webots\controllers\ardupilot_SITL_TRICOPTER\Makefile
+    libraries\SITL\examples\Webots\plugins\physics\sitl_physics_env\Makefile
+    Tools\cameras_gimbals\xacti-config\Makefile
+    Tools\CPUInfo\Makefile
+    Tools\Hello\Makefile
+    Tools\Linux_HAL_Essentials\devicetree\pxf\Makefile
+    Tools\Linux_HAL_Essentials\pru\aiopru\Makefile
+    Tools\Linux_HAL_Essentials\pru\pwmpru\Makefile
+    Tools\Linux_HAL_Essentials\pru\rangefinderpru\Makefile
+    Tools\Linux_HAL_Essentials\pru\rcinpru\Makefile
+    Tools\Replay\Makefile
+    Tools\ros2\ardupilot_dds_tests\setup.cfg
+    Tools\ros2\ardupilot_dds_tests\setup.py
+    Tools\ros2\ardupilot_msgs\CMakeLists.txt
+    Tools\ros2\ardupilot_sitl\CMakeLists.txt
+    Tools\UDP_Proxy\Makefile
+
+────────────────────────────────────────────────────────────
+  DOCUMENTATION  (260 found)
+────────────────────────────────────────────────────────────
+  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README  ·  README  ·  README.md  ·  README.md  ·  README  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README  ·  README.md  ·  LICENSE  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  LICENSE.txt  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md
+
+────────────────────────────────────────────────────────────
+  WARNINGS & DIAGNOSTICS
+────────────────────────────────────────────────────────────
+  [1] 44 file extension(s) not in language registry: .1, .ac, .cmd, .csv, .dae. These files were counted but language not identified. Add to LANGUAGE_EXTENSIONS in framework_signatures.py.
+
+  UNKNOWN EXTENSIONS (44 found — not yet in registry):
+  .1  .ac  .cmd  .csv  .dae  .dat  .defaults  .desc  .dtbo  .dump  .fig  .gnu  .in  .inc  .init  .inoflag  .ioc  .j2  .jsonc  .launch
+  → Add to LANGUAGE_EXTENSIONS in framework_signatures.py
+
+────────────────────────────────────────────────────────────
+  GOVERNANCE GATE — V3-003
+────────────────────────────────────────────────────────────
+  Status   : APPROVED
+  Decision : Pipeline may proceed to Module 2
+  Rule     : Repository understanding is complete
+
+════════════════════════════════════════════════════════════
+  Generated by CodeTruth Agent V3 — Module 1
+  github.com/Zeeshan78699/CodeTruthAgent
+════════════════════════════════════════════════════════════

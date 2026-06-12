@@ -1,0 +1,9 @@
+# CodeTruth Agent V3 — Module 1 (Repository Cognition Engine)
+#
+# No external dependencies — Module 1 uses only the Python standard
+# library (ast, os, re, pathlib, collections, dataclasses, typing,
+# datetime, json).
+#
+# Requires: Python 3.10+ (uses `dict[str, ...]` / `tuple[str, ...]`
+# style type hints and `match`-free structural patterns compatible
+# with 3.10+).

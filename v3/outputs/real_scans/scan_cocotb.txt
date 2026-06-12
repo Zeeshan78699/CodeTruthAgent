@@ -1,0 +1,173 @@
+════════════════════════════════════════════════════════════
+  CODETRUTH AGENT V3 — REPOSITORY SCAN REPORT
+  Module 1 — Universal Repository Discovery Engine
+════════════════════════════════════════════════════════════
+
+────────────────────────────────────────────────────────────
+  REPOSITORY IDENTITY
+────────────────────────────────────────────────────────────
+  Name:                  cocotb
+  Path:                  C:\repos\v3\cocotb
+  Scanned At:            2026-06-12 11:20:33 UTC
+  Scan Status:           COMPLETE
+  Purpose:               cocotb — Fpga Hardware (cocotb) — 216 Python files
+
+────────────────────────────────────────────────────────────
+  CLASSIFICATION
+────────────────────────────────────────────────────────────
+  Application Type:      Fpga Hardware
+  Primary Framework:     cocotb
+  Secondary:             RQ, Pytest
+  Discovery Score:       100%
+  Classification:        100%
+
+────────────────────────────────────────────────────────────
+  REPOSITORY SCALE
+────────────────────────────────────────────────────────────
+  Total Files:           655
+  Python Files:          216
+  Test Suites:           examples\adder\tests, examples\matrix_multiplier\tests, examples\mixed_language\tests, examples\mixed_signal\tests, tests
+
+────────────────────────────────────────────────────────────
+  DISCOVERED ASSETS
+────────────────────────────────────────────────────────────
+  Languages (Code):      C  ·  C++  ·  CSS  ·  JavaScript  ·  PowerShell  ·  Python  ·  SystemVerilog  ·  TOML  ·  VHDL  ·  Verilog  ·  XML  ·  YAML
+  File Types (Docs):     JSON  ·  Log File  ·  Markdown  ·  ReStructuredText  ·  Text
+  ML Models:             None
+
+────────────────────────────────────────────────────────────
+  BUILD SYSTEMS
+────────────────────────────────────────────────────────────
+  Make  ·  Python Build  ·  Setuptools
+
+────────────────────────────────────────────────────────────
+  TECHNOLOGY STACK
+────────────────────────────────────────────────────────────
+  Python
+
+────────────────────────────────────────────────────────────
+  ENTRY POINTS  (4 found)
+────────────────────────────────────────────────────────────
+    examples\simple_dff\test_dff.py
+    src\cocotb_tools\check_results.py
+    src\cocotb_tools\combine_results.py
+    src\cocotb_tools\config.py
+
+────────────────────────────────────────────────────────────
+  CONFIGURATION FILES  (89 found)
+────────────────────────────────────────────────────────────
+    .\Makefile
+    .\pyproject.toml
+    .\setup.py
+    examples\Makefile
+    examples\adder\tests\Makefile
+    examples\analog_model\Makefile
+    examples\first_steps\Makefile
+    examples\matrix_multiplier\tests\Makefile
+    examples\mixed_language\tests\Makefile
+    examples\mixed_signal\tests\Makefile
+    examples\simple_dff\Makefile
+    src\pyproject.toml
+    src\cocotb_tools\config.py
+    tests\Makefile
+    tests\designs\array_module\Makefile
+    tests\designs\basic_hierarchy_module\Makefile
+    tests\designs\multi_dimension_array\Makefile
+    tests\designs\plusargs_module\Makefile
+    tests\designs\sample_module\Makefile
+    tests\designs\uart2bus\Makefile
+    tests\designs\verilator_timing\Makefile
+    tests\designs\vhdl_configurations\Makefile
+    tests\designs\viterbi_decoder_axi4s\Makefile
+    tests\test_cases\test_array\Makefile
+    tests\test_cases\test_array_simple\Makefile
+    tests\test_cases\test_async_bridge\Makefile
+    tests\test_cases\test_cocotb\Makefile
+    tests\test_cases\test_compare\Makefile
+    tests\test_cases\test_configuration\Makefile
+    tests\test_cases\test_custom_entry\Makefile
+    tests\test_cases\test_deadlock\Makefile
+    tests\test_cases\test_defaultless_parameter\Makefile
+    tests\test_cases\test_discovery\Makefile
+    tests\test_cases\test_dumpfile_verilator\Makefile
+    tests\test_cases\test_exit_error\Makefile
+    tests\test_cases\test_failure\Makefile
+    tests\test_cases\test_fatal\Makefile
+    tests\test_cases\test_first_on_coincident_triggers\Makefile
+    tests\test_cases\test_force_release\Makefile
+    tests\test_cases\test_forked_exception\Makefile
+    tests\test_cases\test_gpi_extra_bad_lib\Makefile
+    tests\test_cases\test_gpi_users_bad_lib\Makefile
+    tests\test_cases\test_gpi_users_notset\Makefile
+    tests\test_cases\test_indexing_warning\Makefile
+    tests\test_cases\test_inertial_writes\Makefile
+    tests\test_cases\test_integers\Makefile
+    tests\test_cases\test_iteration_mixedlang\Makefile
+    tests\test_cases\test_iteration_verilog\Makefile
+    tests\test_cases\test_iteration_vhdl\Makefile
+    tests\test_cases\test_kill_sim\Makefile
+    tests\test_cases\test_listing\Makefile
+    tests\test_cases\test_logic_array_indexing\Makefile
+    tests\test_cases\test_log_prefix\Makefile
+    tests\test_cases\test_long_log_msg\Makefile
+    tests\test_cases\test_max_failures\Makefile
+    tests\test_cases\test_module_var_empty\Makefile
+    tests\test_cases\test_module_var_messy\Makefile
+    tests\test_cases\test_module_without_tests\Makefile
+    tests\test_cases\test_multi_dimension_array\Makefile
+    tests\test_cases\test_multi_level_module_path\Makefile
+    tests\test_cases\test_null_ranges\Makefile
+    tests\test_cases\test_one_empty_test\Makefile
+    tests\test_cases\test_package\Makefile
+    tests\test_cases\test_packed_union\Makefile
+    tests\test_cases\test_plusargs\Makefile
+    tests\test_cases\test_random_test_order\Makefile
+    tests\test_cases\test_seed\Makefile
+    tests\test_cases\test_select_testcase\Makefile
+    tests\test_cases\test_select_testcase_error\Makefile
+    tests\test_cases\test_similar_scope_name\Makefile
+    tests\test_cases\test_skip\Makefile
+    tests\test_cases\test_skipped_explicitly_run\Makefile
+    tests\test_cases\test_struct\Makefile
+    tests\test_cases\test_sv_interface\Makefile
+    tests\test_cases\test_test_filter\Makefile
+    tests\test_cases\test_toplevel_architecture_same_as_entity\Makefile
+    tests\test_cases\test_toplevel_library\Makefile
+    tests\test_cases\test_trigger_memory_leak\Makefile
+    tests\test_cases\test_verilator_timing_a\Makefile
+    tests\test_cases\test_verilator_timing_b\Makefile
+    tests\test_cases\test_verilator_timing_c\Makefile
+    tests\test_cases\test_verilator_timing_d\Makefile
+    tests\test_cases\test_verilog_access\Makefile
+    tests\test_cases\test_verilog_include_dirs\Makefile
+    tests\test_cases\test_vhdl_access\Makefile
+    tests\test_cases\test_vhdl_integer\Makefile
+    tests\test_cases\test_vhdl_libraries\Makefile
+    tests\test_cases\test_vhdl_libraries_multiple\Makefile
+    tests\test_cases\test_xfail\Makefile
+
+────────────────────────────────────────────────────────────
+  DOCUMENTATION  (11 found)
+────────────────────────────────────────────────────────────
+  CONTRIBUTING.md  ·  LICENSE  ·  README.md  ·  README.md  ·  README.md  ·  README.rst  ·  README.md  ·  README.md  ·  README.md  ·  README  ·  README.md
+
+────────────────────────────────────────────────────────────
+  WARNINGS & DIAGNOSTICS
+────────────────────────────────────────────────────────────
+  [1] 28 file extension(s) not in language registry: .activehdl, .cvc, .def, .deprecations, .drawio. These files were counted but language not identified. Add to LANGUAGE_EXTENSIONS in framework_signatures.py.
+
+  UNKNOWN EXTENSIONS (28 found — not yet in registry):
+  .activehdl  .cvc  .def  .deprecations  .drawio  .dsim  .ghdl  .icarus  .in  .inc  .init  .ius  .modelsim  .nvc  .pyi  .questa  .questa-compat  .questa-qisqrun  .riviera  .scs
+  → Add to LANGUAGE_EXTENSIONS in framework_signatures.py
+
+────────────────────────────────────────────────────────────
+  GOVERNANCE GATE — V3-003
+────────────────────────────────────────────────────────────
+  Status   : APPROVED
+  Decision : Pipeline may proceed to Module 2
+  Rule     : Repository understanding is complete
+
+════════════════════════════════════════════════════════════
+  Generated by CodeTruth Agent V3 — Module 1
+  github.com/Zeeshan78699/CodeTruthAgent
+════════════════════════════════════════════════════════════

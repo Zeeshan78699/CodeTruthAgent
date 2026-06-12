@@ -1,0 +1,164 @@
+════════════════════════════════════════════════════════════
+  CODETRUTH AGENT V3 — REPOSITORY SCAN REPORT
+  Module 1 — Universal Repository Discovery Engine
+════════════════════════════════════════════════════════════
+
+────────────────────────────────────────────────────────────
+  REPOSITORY IDENTITY
+────────────────────────────────────────────────────────────
+  Name:                  ccxt
+  Path:                  C:\repos\v3\ccxt
+  Scanned At:            2026-06-12 11:20:26 UTC
+  Scan Status:           COMPLETE
+  Purpose:               ccxt — Finance System (CCXT) — 1329 Python files
+
+────────────────────────────────────────────────────────────
+  CLASSIFICATION
+────────────────────────────────────────────────────────────
+  Application Type:      Finance System
+  Primary Framework:     CCXT
+  Secondary:             Requests
+  Discovery Score:       100%
+  Classification:        100%
+
+────────────────────────────────────────────────────────────
+  REPOSITORY SCALE
+────────────────────────────────────────────────────────────
+  Total Files:           9277
+  Python Files:          1329
+  Test Suites:           cs\tests, go\tests, java\lib\src\test, java\tests, java\tests\src\main\java\tests, js\src\pro\test, js\src\test, php\pro\test, php\test, python\ccxt\pro\test, python\ccxt\test, ts\src\pro\test, ts\src\test
+
+────────────────────────────────────────────────────────────
+  DISCOVERED ASSETS
+────────────────────────────────────────────────────────────
+  Languages (Code):      AMPL Model  ·  C  ·  C#  ·  CSS  ·  Cython  ·  Docker  ·  Go  ·  HTML  ·  Java  ·  JavaScript  ·  Jupyter Notebook  ·  Kotlin  ·  PHP  ·  Python  ·  Shell  ·  TOML  ·  TypeScript  ·  YAML
+  File Types (Docs):     Configuration File  ·  Handlebars Template  ·  JSON  ·  Markdown  ·  Properties File  ·  ReStructuredText  ·  Text  ·  Windows Batch Script
+  ML Models:             None
+
+────────────────────────────────────────────────────────────
+  BUILD SYSTEMS
+────────────────────────────────────────────────────────────
+  Composer  ·  NPM  ·  Python Build  ·  Setuptools  ·  Make  ·  Go Modules  ·  Gradle
+
+────────────────────────────────────────────────────────────
+  TECHNOLOGY STACK
+────────────────────────────────────────────────────────────
+  Python  ·  Docker  ·  AWS  ·  GCP
+
+────────────────────────────────────────────────────────────
+  ENTRY POINTS  (13 found)
+────────────────────────────────────────────────────────────
+    examples\py\asciichart.py
+    examples\py\async-basic-callchain.py
+    examples\py\async-basic.py
+    examples\py\async-fetch-balance.py
+    examples\py\async-multiple-accounts.py
+    examples\py\async-orderbooks-from-multiple-exchanges-at-once.py
+    examples\py\async-orderbooks.py
+    examples\py\async-ticker.py
+    examples\py\async-tickers-from-many-exchanges-at-once.py
+    examples\py\async.py
+    ... and 3 more
+
+────────────────────────────────────────────────────────────
+  CONFIGURATION FILES  (73 found)
+────────────────────────────────────────────────────────────
+    .\composer.json
+    .\composer.lock
+    .\docker-compose.yml
+    .\Dockerfile
+    .\package-lock.json
+    .\package.json
+    .\pyproject.toml
+    .\setup.cfg
+    .\tsconfig.json
+    .\webpack.config.js
+    cli\package-lock.json
+    cli\package.json
+    cli\tsconfig.json
+    cs\ccxt.sln
+    cs\ccxt\ccxt.csproj
+    cs\ccxt\static\Cryptography.ECDSA\Cryptography.ECDSA.csproj
+    cs\ccxt\static\MiniMessagePack\MiniMessagePack.sln
+    cs\ccxt\static\MiniMessagePack\MiniMessagePack\MiniMessagePack.csproj
+    cs\ccxt\static\Nethereum\Nethereum.Signer.EIP712\Nethereum.Signer.EIP712.csproj
+    cs\ccxt\static\Portable.BouncyCastle\BouncyCastle.Crypto.csproj
+    cs\cli\cli.csproj
+    cs\tests\tests.csproj
+    doc\Makefile
+    doc\requirements.txt
+    examples\tsconfig.json
+    examples\cs\c#.csproj
+    examples\cs\Examples.sln
+    examples\ts\fetch-futures\package-lock.json
+    examples\ts\fetch-futures\package.json
+    examples\ts\fetch-futures\tsconfig.json
+    examples\ts\fetch-tickers\package-lock.json
+    examples\ts\fetch-tickers\package.json
+    examples\ts\fetch-tickers\tsconfig.json
+    examples\ts\nextjs-page-router\.eslintrc.json
+    examples\ts\nextjs-page-router\next.config.js
+    examples\ts\nextjs-page-router\package-lock.json
+    examples\ts\nextjs-page-router\package.json
+    examples\ts\nextjs-page-router\tsconfig.json
+    go\cli\go.mod
+    go\cli\go.sum
+    go\tests\go.mod
+    go\tests\base\go.mod
+    go\tests\profile\go.mod
+    go\tests\profile\go.sum
+    go\tests\types\go.mod
+    go\tests\types\go.sum
+    go\v4\go.mod
+    go\v4\go.sum
+    go\v4\pro\go.sum
+    java\build.gradle.kts
+    java\cli\build.gradle.kts
+    java\examples\build.gradle.kts
+    java\lib\build.gradle.kts
+    java\tests\build.gradle.kts
+    php\static_dependencies\elliptic-php\composer.json
+    playground\.env.example
+    playground\docker-compose.yml
+    playground\Dockerfile
+    playground\package-lock.json
+    playground\package.json
+    playground\tsconfig.json
+    playground\proxy\Dockerfile
+    python\package.json
+    python\setup.cfg
+    python\setup.py
+    utils\mock_ws_server\go.mod
+    utils\mock_ws_server\go.sum
+    utils\package-test\package.json
+    utils\package-test\tsconfig.json
+    website\Dockerfile
+    website\package-lock.json
+    website\package.json
+    website\tsconfig.json
+
+────────────────────────────────────────────────────────────
+  DOCUMENTATION  (48 found)
+────────────────────────────────────────────────────────────
+  CHANGELOG.md  ·  CONTRIBUTING.md  ·  LICENSE.txt  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README  ·  LICENSE  ·  README.md  ·  LICENSE.md  ·  README.md  ·  LICENSE.txt  ·  README.md  ·  README.rst  ·  README.md  ·  README.md  ·  LICENSE.txt  ·  LICENSE.txt  ·  LICENSE.txt  ·  README.md  ·  LICENSE.txt  ·  README.md  ·  README.md  ·  README.md  ·  LICENSE  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  CHANGELOG.md  ·  LICENSE  ·  README.md  ·  README.md  ·  CHANGELOG.md  ·  CONTRIBUTING.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md
+
+────────────────────────────────────────────────────────────
+  WARNINGS & DIAGNOSTICS
+────────────────────────────────────────────────────────────
+  [1] 17 file extension(s) not in language registry: .csproj, .csprojme, .csprojrem, .csprojrm, .cts. These files were counted but language not identified. Add to LANGUAGE_EXTENSIONS in framework_signatures.py.
+
+  UNKNOWN EXTENSIONS (17 found — not yet in registry):
+  .csproj  .csprojme  .csprojrem  .csprojrm  .cts  .dylib  .example  .in  .lark  .map  .mts  .sln  .snk  .sum  .typed  .wasm  .work
+  → Add to LANGUAGE_EXTENSIONS in framework_signatures.py
+
+────────────────────────────────────────────────────────────
+  GOVERNANCE GATE — V3-003
+────────────────────────────────────────────────────────────
+  Status   : APPROVED
+  Decision : Pipeline may proceed to Module 2
+  Rule     : Repository understanding is complete
+
+════════════════════════════════════════════════════════════
+  Generated by CodeTruth Agent V3 — Module 1
+  github.com/Zeeshan78699/CodeTruthAgent
+════════════════════════════════════════════════════════════

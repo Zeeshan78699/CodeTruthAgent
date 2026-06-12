@@ -1,0 +1,121 @@
+════════════════════════════════════════════════════════════
+  CODETRUTH AGENT V3 — REPOSITORY SCAN REPORT
+  Module 1 — Universal Repository Discovery Engine
+════════════════════════════════════════════════════════════
+
+────────────────────────────────────────────────────────────
+  REPOSITORY IDENTITY
+────────────────────────────────────────────────────────────
+  Name:                  circuitpython
+  Path:                  C:\repos\v3\circuitpython
+  Scanned At:            2026-06-12 11:20:33 UTC
+  Scan Status:           COMPLETE
+  Purpose:               circuitpython — Embedded System (CircuitPython) — 1641 Python files
+
+────────────────────────────────────────────────────────────
+  CLASSIFICATION
+────────────────────────────────────────────────────────────
+  Application Type:      Embedded System
+  Primary Framework:     CircuitPython
+  Secondary:             Pytest, Requests
+  Discovery Score:       100%
+  Classification:        100%
+
+────────────────────────────────────────────────────────────
+  REPOSITORY SCALE
+────────────────────────────────────────────────────────────
+  Total Files:           8645
+  Python Files:          1641
+  Test Suites:           lib\sdmmc\test, ports\stm\boards\swan_r5\tests, ports\zephyr-cp\cptools\tests, ports\zephyr-cp\tests, tests
+
+────────────────────────────────────────────────────────────
+  DISCOVERED ASSETS
+────────────────────────────────────────────────────────────
+  Languages (Code):      Assembly  ·  Audio File  ·  C  ·  C#  ·  C++  ·  CSS  ·  Embedded Binary  ·  HTML  ·  JavaScript  ·  Nastran Bulk Data  ·  Python  ·  Shell  ·  TOML  ·  YAML
+  File Types (Docs):     Configuration File  ·  Gettext Translation  ·  JSON  ·  Markdown  ·  PDF Document  ·  ReStructuredText  ·  Text
+  ML Models:             None
+
+────────────────────────────────────────────────────────────
+  BUILD SYSTEMS
+────────────────────────────────────────────────────────────
+  Make  ·  Python Build  ·  CMake
+
+────────────────────────────────────────────────────────────
+  TECHNOLOGY STACK
+────────────────────────────────────────────────────────────
+  Python  ·  Redis
+
+────────────────────────────────────────────────────────────
+  ENTRY POINTS  (14 found)
+────────────────────────────────────────────────────────────
+    docs\shared_bindings_matrix.py
+    mpy-cross\mpy_cross\__main__.py
+    ports\cxd56\tools\flash_writer.py
+    ports\espressif\tools\check-sdkconfig.py
+    ports\espressif\tools\update_sdkconfig.py
+    ports\raspberrypi\gen_stage2.py
+    ports\silabs\tools\make_pins.py
+    ports\zephyr-cp\cptools\build_all_boards.py
+    ports\zephyr-cp\cptools\get_west_shield_args.py
+    ports\zephyr-cp\cptools\update_board_info.py
+    ... and 4 more
+
+────────────────────────────────────────────────────────────
+  CONFIGURATION FILES  (30 found)
+────────────────────────────────────────────────────────────
+    .\Makefile
+    .\pyproject.toml
+    .\requirements-dev.txt
+    lib\sdmmc\CMakeLists.txt
+    lib\sdmmc\test\CMakeLists.txt
+    mpy-cross\Makefile
+    ports\analog\Makefile
+    ports\atmel-samd\Makefile
+    ports\broadcom\Makefile
+    ports\cxd56\Makefile
+    ports\cxd56\mkspk\Makefile
+    ports\cxd56\tools\requirements.txt
+    ports\espressif\CMakeLists.txt
+    ports\espressif\Makefile
+    ports\litex\Makefile
+    ports\mimxrt10xx\Makefile
+    ports\nordic\Makefile
+    ports\raspberrypi\Makefile
+    ports\raspberrypi\pioasm\CMakeLists.txt
+    ports\renode\Makefile
+    ports\silabs\Makefile
+    ports\stm\Makefile
+    ports\unix\Makefile
+    ports\zephyr-cp\CMakeLists.txt
+    ports\zephyr-cp\Makefile
+    ports\zephyr-cp\sysbuild.cmake
+    ports\zephyr-cp\boards\board_aliases.cmake
+    py\mkrules.cmake
+    py\py.cmake
+    py\usermod.cmake
+
+────────────────────────────────────────────────────────────
+  DOCUMENTATION  (53 found)
+────────────────────────────────────────────────────────────
+  CONTRIBUTING.md  ·  LICENSE  ·  README.rst  ·  LICENSE.md  ·  README.md  ·  README.md  ·  README.md  ·  README  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.rst  ·  README.rst  ·  README.md  ·  README.rst  ·  README.md  ·  README.rst  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.rst  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README  ·  README.md  ·  README
+
+────────────────────────────────────────────────────────────
+  WARNINGS & DIAGNOSTICS
+────────────────────────────────────────────────────────────
+  [1] 42 file extension(s) not in language registry: .bmp, .cmake, .csv, .defaults, .diff. These files were counted but language not identified. Add to LANGUAGE_EXTENSIONS in framework_signatures.py.
+
+  UNKNOWN EXTENSIONS (42 found — not yet in registry):
+  .bmp  .cmake  .csv  .defaults  .diff  .dox  .exp  .ext  .fmt  .fuzz  .gdb  .in-stubs  .inc  .jinja  .jlink  .ld  .license  .m1  .midi  .mk
+  → Add to LANGUAGE_EXTENSIONS in framework_signatures.py
+
+────────────────────────────────────────────────────────────
+  GOVERNANCE GATE — V3-003
+────────────────────────────────────────────────────────────
+  Status   : APPROVED
+  Decision : Pipeline may proceed to Module 2
+  Rule     : Repository understanding is complete
+
+════════════════════════════════════════════════════════════
+  Generated by CodeTruth Agent V3 — Module 1
+  github.com/Zeeshan78699/CodeTruthAgent
+════════════════════════════════════════════════════════════

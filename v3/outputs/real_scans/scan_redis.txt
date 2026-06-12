@@ -1,0 +1,116 @@
+════════════════════════════════════════════════════════════
+  CODETRUTH AGENT V3 — REPOSITORY SCAN REPORT
+  Module 1 — Universal Repository Discovery Engine
+════════════════════════════════════════════════════════════
+
+────────────────────────────────────────────────────────────
+  REPOSITORY IDENTITY
+────────────────────────────────────────────────────────────
+  Name:                  redis
+  Path:                  C:\repos\v3\redis
+  Scanned At:            2026-06-12 11:20:01 UTC
+  Scan Status:           COMPLETE
+  Purpose:               redis — Database System — 46 Python files
+
+────────────────────────────────────────────────────────────
+  CLASSIFICATION
+────────────────────────────────────────────────────────────
+  Application Type:      Database System
+  Primary Framework:     No Framework Detected
+  Secondary:             Redis
+  Discovery Score:       100%
+  Classification:        75%
+
+────────────────────────────────────────────────────────────
+  REPOSITORY SCALE
+────────────────────────────────────────────────────────────
+  Total Files:           1789
+  Python Files:          46
+  Test Suites:           deps\jemalloc\test, deps\jemalloc\test\include\test, deps\lua\test, deps\tre\tests, modules\vector-sets\tests, tests, tests\cluster\tests, tests\sentinel\tests
+
+────────────────────────────────────────────────────────────
+  DISCOVERED ASSETS
+────────────────────────────────────────────────────────────
+  Languages (Code):      C  ·  C++  ·  CSS  ·  HTML  ·  JavaScript  ·  Lua  ·  Python  ·  Ruby  ·  Shell  ·  Tcl  ·  YAML
+  File Types (Docs):     Configuration File  ·  JSON  ·  M4 Macro  ·  Markdown  ·  Text  ·  Windows Batch Script
+  ML Models:             None
+
+────────────────────────────────────────────────────────────
+  BUILD SYSTEMS
+────────────────────────────────────────────────────────────
+  Make  ·  CMake
+
+────────────────────────────────────────────────────────────
+  TECHNOLOGY STACK
+────────────────────────────────────────────────────────────
+  Python  ·  Travis CI  ·  Redis
+
+────────────────────────────────────────────────────────────
+  ENTRY POINTS  (9 found)
+────────────────────────────────────────────────────────────
+    deps\jemalloc\scripts\gen_travis.py
+    modules\vector-sets\examples\cli-tool\cli.py
+    modules\vector-sets\examples\glove-100\insert.py
+    modules\vector-sets\examples\glove-100\recall.py
+    modules\vector-sets\examples\movies\insert.py
+    modules\vector-sets\test.py
+    tools\array-bench.py
+    utils\generate-commands-json.py
+    utils\req-res-log-validator.py
+
+────────────────────────────────────────────────────────────
+  CONFIGURATION FILES  (27 found)
+────────────────────────────────────────────────────────────
+    .\Makefile
+    deps\Makefile
+    deps\fpconv\Makefile
+    deps\hdr_histogram\Makefile
+    deps\hiredis\.travis.yml
+    deps\hiredis\CMakeLists.txt
+    deps\hiredis\Makefile
+    deps\hiredis\examples\CMakeLists.txt
+    deps\jemalloc\.travis.yml
+    deps\jemalloc\msvc\jemalloc_vc2015.sln
+    deps\jemalloc\msvc\jemalloc_vc2017.sln
+    deps\linenoise\Makefile
+    deps\lua\Makefile
+    deps\lua\etc\Makefile
+    deps\lua\src\Makefile
+    deps\tre\Makefile
+    deps\xxhash\Makefile
+    modules\Makefile
+    modules\redisbloom\Makefile
+    modules\redisearch\Makefile
+    modules\redisjson\Makefile
+    modules\redistimeseries\Makefile
+    modules\vector-sets\Makefile
+    src\Makefile
+    src\modules\Makefile
+    tests\modules\Makefile
+    utils\req-res-validator\requirements.txt
+
+────────────────────────────────────────────────────────────
+  DOCUMENTATION  (27 found)
+────────────────────────────────────────────────────────────
+  CONTRIBUTING.md  ·  LICENSE.txt  ·  README.md  ·  README.md  ·  LICENSE.txt  ·  README.md  ·  LICENSE.txt  ·  README.md  ·  CHANGELOG.md  ·  README.md  ·  README  ·  README  ·  README  ·  README  ·  LICENSE  ·  README.md  ·  LICENSE  ·  README.md  ·  README.md  ·  README  ·  README  ·  README.md  ·  README.md  ·  README  ·  README.md  ·  README  ·  README.md
+
+────────────────────────────────────────────────────────────
+  WARNINGS & DIAGNOSTICS
+────────────────────────────────────────────────────────────
+  [1] 20 file extension(s) not in language registry: .1, .ac, .acl, .aof, .def. These files were counted but language not identified. Add to LANGUAGE_EXTENSIONS in framework_signatures.py.
+
+  UNKNOWN EXTENSIONS (20 found — not yet in registry):
+  .1  .ac  .acl  .aof  .def  .filters  .guess  .in  .markdown  .mk  .pc  .rdb  .service  .sln  .sub  .sup  .targets  .tpl  .vcxproj  .xsl
+  → Add to LANGUAGE_EXTENSIONS in framework_signatures.py
+
+────────────────────────────────────────────────────────────
+  GOVERNANCE GATE — V3-003
+────────────────────────────────────────────────────────────
+  Status   : APPROVED
+  Decision : Pipeline may proceed to Module 2
+  Rule     : Repository understanding is complete
+
+════════════════════════════════════════════════════════════
+  Generated by CodeTruth Agent V3 — Module 1
+  github.com/Zeeshan78699/CodeTruthAgent
+════════════════════════════════════════════════════════════

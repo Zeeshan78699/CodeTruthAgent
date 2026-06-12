@@ -1,0 +1,126 @@
+════════════════════════════════════════════════════════════
+  CODETRUTH AGENT V3 — REPOSITORY SCAN REPORT
+  Module 1 — Universal Repository Discovery Engine
+════════════════════════════════════════════════════════════
+
+────────────────────────────────────────────────────────────
+  REPOSITORY IDENTITY
+────────────────────────────────────────────────────────────
+  Name:                  go
+  Path:                  C:\repos\v3\go
+  Scanned At:            2026-06-12 11:20:18 UTC
+  Scan Status:           COMPLETE
+  Purpose:               go — Compiler Toolchain — 2 Python files
+
+────────────────────────────────────────────────────────────
+  CLASSIFICATION
+────────────────────────────────────────────────────────────
+  Application Type:      Compiler Toolchain
+  Primary Framework:     No Framework Detected
+  Discovery Score:       100%
+  Classification:        75%
+
+────────────────────────────────────────────────────────────
+  REPOSITORY SCALE
+────────────────────────────────────────────────────────────
+  Total Files:           14258
+  Python Files:          2
+  Test Suites:           src\cmd\cgo\internal\test, src\cmd\compile\internal\test, src\cmd\go\internal\imports\testdata\test, src\cmd\go\internal\test, src\internal\coverage\test, src\internal\trace\testdata\tests, src\internal\types\testdata\spec, src\testing, test
+
+────────────────────────────────────────────────────────────
+  DISCOVERED ASSETS
+────────────────────────────────────────────────────────────
+  Languages (Code):      AMPL Model  ·  Assembly  ·  C  ·  C++  ·  CSS  ·  Docker  ·  Embedded ELF  ·  Fortran  ·  Go  ·  HTML  ·  JavaScript  ·  OBJ 3D Model  ·  Objective-C  ·  Perl  ·  Python  ·  Shell  ·  YAML
+  File Types (Docs):     Configuration File  ·  JSON  ·  Log File  ·  Markdown  ·  Output File  ·  Text  ·  Windows Batch Script
+  ML Models:             OpenVINO Weights
+  Total Model Files:     3
+
+────────────────────────────────────────────────────────────
+  BUILD SYSTEMS
+────────────────────────────────────────────────────────────
+  Make  ·  Go Modules
+
+────────────────────────────────────────────────────────────
+  TECHNOLOGY STACK
+────────────────────────────────────────────────────────────
+  Python  ·  Docker
+
+────────────────────────────────────────────────────────────
+  ENTRY POINTS  (0 found)
+────────────────────────────────────────────────────────────
+  None detected
+
+────────────────────────────────────────────────────────────
+  CONFIGURATION FILES  (45 found)
+────────────────────────────────────────────────────────────
+    lib\fips140\Makefile
+    misc\go.mod
+    src\go.mod
+    src\go.sum
+    src\cmd\go.mod
+    src\cmd\go.sum
+    src\cmd\compile\internal\ssa\_gen\go.mod
+    src\cmd\compile\internal\ssa\_gen\go.sum
+    src\cmd\objdump\testdata\testfilenum\go.mod
+    src\cmd\vet\testdata\rangeloop\go.mod
+    src\cmd\vet\testdata\stdversion\go.mod
+    src\crypto\internal\boring\Dockerfile
+    src\crypto\internal\cryptotest\wycheproof\_schema\go.mod
+    src\crypto\internal\cryptotest\wycheproof\_schema\go.sum
+    src\crypto\internal\fips140\aes\gcm\_asm\gcm\go.mod
+    src\crypto\internal\fips140\aes\gcm\_asm\gcm\go.sum
+    src\crypto\internal\fips140\aes\_asm\ctr\go.mod
+    src\crypto\internal\fips140\aes\_asm\ctr\go.sum
+    src\crypto\internal\fips140\aes\_asm\standard\go.mod
+    src\crypto\internal\fips140\aes\_asm\standard\go.sum
+    src\crypto\internal\fips140\bigmod\_asm\go.mod
+    src\crypto\internal\fips140\bigmod\_asm\go.sum
+    src\crypto\internal\fips140\edwards25519\field\_asm\go.mod
+    src\crypto\internal\fips140\edwards25519\field\_asm\go.sum
+    src\crypto\internal\fips140\nistec\fiat\Dockerfile
+    src\crypto\internal\fips140\nistec\_asm\go.mod
+    src\crypto\internal\fips140\nistec\_asm\go.sum
+    src\crypto\internal\fips140\sha256\_asm\go.mod
+    src\crypto\internal\fips140\sha256\_asm\go.sum
+    src\crypto\internal\fips140\sha3\_asm\go.mod
+    src\crypto\internal\fips140\sha3\_asm\go.sum
+    src\crypto\internal\fips140\sha512\_asm\go.mod
+    src\crypto\internal\fips140\sha512\_asm\go.sum
+    src\crypto\md5\_asm\go.mod
+    src\crypto\md5\_asm\go.sum
+    src\crypto\sha1\_asm\go.mod
+    src\crypto\sha1\_asm\go.sum
+    src\debug\buildinfo\testdata\go117\go.mod
+    src\go\doc\Makefile
+    src\runtime\Makefile
+    src\runtime\_mkmalloc\go.mod
+    src\runtime\_mkmalloc\go.sum
+    src\simd\archsimd\_gen\go.mod
+    src\simd\archsimd\_gen\go.sum
+    src\simd\testdata\ip\go.mod
+
+────────────────────────────────────────────────────────────
+  DOCUMENTATION  (51 found)
+────────────────────────────────────────────────────────────
+  CONTRIBUTING.md  ·  LICENSE  ·  README.md  ·  README  ·  README.md  ·  README  ·  README.md  ·  README  ·  README.txt  ·  README  ·  README  ·  README  ·  README.md  ·  README.txt  ·  README.md  ·  README.md  ·  README  ·  README  ·  README.md  ·  README  ·  README  ·  README  ·  README  ·  README  ·  README  ·  README.md  ·  README  ·  README  ·  README  ·  LICENSE  ·  README.md  ·  README  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README.md  ·  README  ·  README  ·  README.md  ·  README.md  ·  README  ·  README  ·  README  ·  README  ·  LICENSE  ·  README.md  ·  README.md  ·  README  ·  README
+
+────────────────────────────────────────────────────────────
+  WARNINGS & DIAGNOSTICS
+────────────────────────────────────────────────────────────
+  [1] 47 file extension(s) not in language registry: .0-20200325131415-0123456789ab, .0-47-generic, .awk, .base64, .cov. These files were counted but language not identified. Add to LANGUAGE_EXTENSIONS in framework_signatures.py.
+
+  UNKNOWN EXTENSIONS (47 found — not yet in registry):
+  .0-20200325131415-0123456789ab  .0-47-generic  .awk  .base64  .cov  .crt  .csv  .dat  .dist  .elf4  .elf5  .env  .expect  .expect-noinput  .globs2  .go2  .golden  .gox  .in  .input
+  → Add to LANGUAGE_EXTENSIONS in framework_signatures.py
+
+────────────────────────────────────────────────────────────
+  GOVERNANCE GATE — V3-003
+────────────────────────────────────────────────────────────
+  Status   : APPROVED
+  Decision : Pipeline may proceed to Module 2
+  Rule     : Repository understanding is complete
+
+════════════════════════════════════════════════════════════
+  Generated by CodeTruth Agent V3 — Module 1
+  github.com/Zeeshan78699/CodeTruthAgent
+════════════════════════════════════════════════════════════

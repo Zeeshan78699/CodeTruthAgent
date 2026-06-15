@@ -1,0 +1,3378 @@
+{
+  "repo_root": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_cognition",
+  "files_scanned": 5,
+  "modules_parsed": 4,
+  "function_graph": {
+    "cognition_engine": [
+      {
+        "id": "cognition_engine.RepositoryCognitionEngine.__init__",
+        "name": "__init__",
+        "lineno": 58,
+        "scope": "RepositoryCognitionEngine",
+        "is_async": false
+      },
+      {
+        "id": "cognition_engine.RepositoryCognitionEngine.scan",
+        "name": "scan",
+        "lineno": 66,
+        "scope": "RepositoryCognitionEngine",
+        "is_async": false
+      },
+      {
+        "id": "cognition_engine.RepositoryCognitionEngine._run_scan",
+        "name": "_run_scan",
+        "lineno": 79,
+        "scope": "RepositoryCognitionEngine",
+        "is_async": false
+      },
+      {
+        "id": "cognition_engine.RepositoryCognitionEngine._inventory_files",
+        "name": "_inventory_files",
+        "lineno": 208,
+        "scope": "RepositoryCognitionEngine",
+        "is_async": false
+      },
+      {
+        "id": "cognition_engine.RepositoryCognitionEngine._detect_build_systems",
+        "name": "_detect_build_systems",
+        "lineno": 337,
+        "scope": "RepositoryCognitionEngine",
+        "is_async": false
+      },
+      {
+        "id": "cognition_engine.RepositoryCognitionEngine._detect_from_dependency_files",
+        "name": "_detect_from_dependency_files",
+        "lineno": 368,
+        "scope": "RepositoryCognitionEngine",
+        "is_async": false
+      },
+      {
+        "id": "cognition_engine.RepositoryCognitionEngine._parse_requirements_txt",
+        "name": "_parse_requirements_txt",
+        "lineno": 391,
+        "scope": "RepositoryCognitionEngine",
+        "is_async": false
+      },
+      {
+        "id": "cognition_engine.RepositoryCognitionEngine._parse_pyproject_toml",
+        "name": "_parse_pyproject_toml",
+        "lineno": 412,
+        "scope": "RepositoryCognitionEngine",
+        "is_async": false
+      },
+      {
+        "id": "cognition_engine.RepositoryCognitionEngine._parse_setup_file",
+        "name": "_parse_setup_file",
+        "lineno": 433,
+        "scope": "RepositoryCognitionEngine",
+        "is_async": false
+      },
+      {
+        "id": "cognition_engine.RepositoryCognitionEngine._parse_java_build_file",
+        "name": "_parse_java_build_file",
+        "lineno": 436,
+        "scope": "RepositoryCognitionEngine",
+        "is_async": false
+      },
+      {
+        "id": "cognition_engine.RepositoryCognitionEngine._parse_package_json",
+        "name": "_parse_package_json",
+        "lineno": 457,
+        "scope": "RepositoryCognitionEngine",
+        "is_async": false
+      },
+      {
+        "id": "cognition_engine.RepositoryCognitionEngine._detect_from_internal_patterns",
+        "name": "_detect_from_internal_patterns",
+        "lineno": 480,
+        "scope": "RepositoryCognitionEngine",
+        "is_async": false
+      },
+      {
+        "id": "cognition_engine.RepositoryCognitionEngine._detect_from_imports",
+        "name": "_detect_from_imports",
+        "lineno": 527,
+        "scope": "RepositoryCognitionEngine",
+        "is_async": false
+      },
+      {
+        "id": "cognition_engine.RepositoryCognitionEngine._extract_import_signals",
+        "name": "_extract_import_signals",
+        "lineno": 540,
+        "scope": "RepositoryCognitionEngine",
+        "is_async": false
+      },
+      {
+        "id": "cognition_engine.RepositoryCognitionEngine._resolve_frameworks",
+        "name": "_resolve_frameworks",
+        "lineno": 564,
+        "scope": "RepositoryCognitionEngine",
+        "is_async": false
+      },
+      {
+        "id": "cognition_engine.RepositoryCognitionEngine._infer_framework_name",
+        "name": "_infer_framework_name",
+        "lineno": 584,
+        "scope": "RepositoryCognitionEngine",
+        "is_async": false
+      },
+      {
+        "id": "cognition_engine.RepositoryCognitionEngine._infer_framework_name._matches",
+        "name": "_matches",
+        "lineno": 900,
+        "scope": "RepositoryCognitionEngine._infer_framework_name",
+        "is_async": false
+      },
+      {
+        "id": "cognition_engine.RepositoryCognitionEngine._infer_secondary_frameworks",
+        "name": "_infer_secondary_frameworks",
+        "lineno": 979,
+        "scope": "RepositoryCognitionEngine",
+        "is_async": false
+      },
+      {
+        "id": "cognition_engine.RepositoryCognitionEngine._build_technology_stack",
+        "name": "_build_technology_stack",
+        "lineno": 1000,
+        "scope": "RepositoryCognitionEngine",
+        "is_async": false
+      },
+      {
+        "id": "cognition_engine.RepositoryCognitionEngine._determine_application_type",
+        "name": "_determine_application_type",
+        "lineno": 1065,
+        "scope": "RepositoryCognitionEngine",
+        "is_async": false
+      },
+      {
+        "id": "cognition_engine.RepositoryCognitionEngine._detect_entry_points",
+        "name": "_detect_entry_points",
+        "lineno": 1155,
+        "scope": "RepositoryCognitionEngine",
+        "is_async": false
+      },
+      {
+        "id": "cognition_engine.RepositoryCognitionEngine._score_discovery",
+        "name": "_score_discovery",
+        "lineno": 1183,
+        "scope": "RepositoryCognitionEngine",
+        "is_async": false
+      },
+      {
+        "id": "cognition_engine.RepositoryCognitionEngine._score_classification",
+        "name": "_score_classification",
+        "lineno": 1229,
+        "scope": "RepositoryCognitionEngine",
+        "is_async": false
+      },
+      {
+        "id": "cognition_engine.RepositoryCognitionEngine._generate_diagnostic_warnings",
+        "name": "_generate_diagnostic_warnings",
+        "lineno": 1267,
+        "scope": "RepositoryCognitionEngine",
+        "is_async": false
+      },
+      {
+        "id": "cognition_engine.RepositoryCognitionEngine._build_purpose_string",
+        "name": "_build_purpose_string",
+        "lineno": 1341,
+        "scope": "RepositoryCognitionEngine",
+        "is_async": false
+      },
+      {
+        "id": "cognition_engine.RepositoryCognitionEngine.save_report",
+        "name": "save_report",
+        "lineno": 1363,
+        "scope": "RepositoryCognitionEngine",
+        "is_async": false
+      }
+    ],
+    "cognition_report": [
+      {
+        "id": "cognition_report.RepositoryCognitionReport.to_dict",
+        "name": "to_dict",
+        "lineno": 124,
+        "scope": "RepositoryCognitionReport",
+        "is_async": false
+      },
+      {
+        "id": "cognition_report.RepositoryCognitionReport.failed",
+        "name": "failed",
+        "lineno": 154,
+        "scope": "RepositoryCognitionReport",
+        "is_async": false
+      }
+    ],
+    "framework_signatures": [],
+    "report_writer": [
+      {
+        "id": "report_writer.ReportWriter.__init__",
+        "name": "__init__",
+        "lineno": 30,
+        "scope": "ReportWriter",
+        "is_async": false
+      },
+      {
+        "id": "report_writer.ReportWriter.print_console",
+        "name": "print_console",
+        "lineno": 37,
+        "scope": "ReportWriter",
+        "is_async": false
+      },
+      {
+        "id": "report_writer.ReportWriter.save_txt",
+        "name": "save_txt",
+        "lineno": 44,
+        "scope": "ReportWriter",
+        "is_async": false
+      },
+      {
+        "id": "report_writer.ReportWriter.save_markdown",
+        "name": "save_markdown",
+        "lineno": 48,
+        "scope": "ReportWriter",
+        "is_async": false
+      },
+      {
+        "id": "report_writer.ReportWriter._build_text",
+        "name": "_build_text",
+        "lineno": 56,
+        "scope": "ReportWriter",
+        "is_async": false
+      },
+      {
+        "id": "report_writer.ReportWriter._build_text.div",
+        "name": "div",
+        "lineno": 61,
+        "scope": "ReportWriter._build_text",
+        "is_async": false
+      },
+      {
+        "id": "report_writer.ReportWriter._build_text.hdiv",
+        "name": "hdiv",
+        "lineno": 62,
+        "scope": "ReportWriter._build_text",
+        "is_async": false
+      },
+      {
+        "id": "report_writer.ReportWriter._build_text.section",
+        "name": "section",
+        "lineno": 63,
+        "scope": "ReportWriter._build_text",
+        "is_async": false
+      },
+      {
+        "id": "report_writer.ReportWriter._build_text.field",
+        "name": "field",
+        "lineno": 64,
+        "scope": "ReportWriter._build_text",
+        "is_async": false
+      },
+      {
+        "id": "report_writer.ReportWriter._build_text.blank",
+        "name": "blank",
+        "lineno": 65,
+        "scope": "ReportWriter._build_text",
+        "is_async": false
+      },
+      {
+        "id": "report_writer.ReportWriter._build_markdown",
+        "name": "_build_markdown",
+        "lineno": 209,
+        "scope": "ReportWriter",
+        "is_async": false
+      }
+    ]
+  },
+  "class_graph": {
+    "cognition_engine": [
+      {
+        "id": "cognition_engine.RepositoryCognitionEngine",
+        "name": "RepositoryCognitionEngine",
+        "lineno": 47,
+        "bases": [],
+        "scope": null
+      }
+    ],
+    "cognition_report": [
+      {
+        "id": "cognition_report.RepositoryCognitionReport",
+        "name": "RepositoryCognitionReport",
+        "lineno": 74,
+        "bases": [],
+        "scope": null
+      }
+    ],
+    "framework_signatures": [],
+    "report_writer": [
+      {
+        "id": "report_writer.ReportWriter",
+        "name": "ReportWriter",
+        "lineno": 19,
+        "bases": [],
+        "scope": null
+      }
+    ]
+  },
+  "module_graph": {
+    "cognition_engine": {
+      "path": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_cognition\\cognition_engine.py",
+      "parent": null,
+      "is_package": false
+    },
+    "cognition_report": {
+      "path": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_cognition\\cognition_report.py",
+      "parent": null,
+      "is_package": false
+    },
+    "framework_signatures": {
+      "path": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_cognition\\framework_signatures.py",
+      "parent": null,
+      "is_package": false
+    },
+    "report_writer": {
+      "path": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_cognition\\report_writer.py",
+      "parent": null,
+      "is_package": false
+    }
+  },
+  "import_graph": {
+    "cognition_engine": [
+      {
+        "from_module": "cognition_engine",
+        "imports": "cognition_report.ApplicationType",
+        "type": "from_import",
+        "relative_level": 1,
+        "lineno": 19
+      },
+      {
+        "from_module": "cognition_engine",
+        "imports": "cognition_report.RepositoryCognitionReport",
+        "type": "from_import",
+        "relative_level": 1,
+        "lineno": 19
+      },
+      {
+        "from_module": "cognition_engine",
+        "imports": "framework_signatures.BUILD_SYSTEM_EXTENSIONS",
+        "type": "from_import",
+        "relative_level": 1,
+        "lineno": 20
+      },
+      {
+        "from_module": "cognition_engine",
+        "imports": "framework_signatures.BUILD_SYSTEM_FILE_NAMES",
+        "type": "from_import",
+        "relative_level": 1,
+        "lineno": 20
+      },
+      {
+        "from_module": "cognition_engine",
+        "imports": "framework_signatures.CONTENT_PATTERN_SIGNATURES",
+        "type": "from_import",
+        "relative_level": 1,
+        "lineno": 20
+      },
+      {
+        "from_module": "cognition_engine",
+        "imports": "framework_signatures.CONFIG_FILE_EXTENSIONS",
+        "type": "from_import",
+        "relative_level": 1,
+        "lineno": 20
+      },
+      {
+        "from_module": "cognition_engine",
+        "imports": "framework_signatures.CONFIG_FILE_LANGUAGE_MAP",
+        "type": "from_import",
+        "relative_level": 1,
+        "lineno": 20
+      },
+      {
+        "from_module": "cognition_engine",
+        "imports": "framework_signatures.CONFIG_FILE_NAMES",
+        "type": "from_import",
+        "relative_level": 1,
+        "lineno": 20
+      },
+      {
+        "from_module": "cognition_engine",
+        "imports": "framework_signatures.DEPENDENCY_FILES",
+        "type": "from_import",
+        "relative_level": 1,
+        "lineno": 20
+      },
+      {
+        "from_module": "cognition_engine",
+        "imports": "framework_signatures.DOCKERFILE_PREFIXES",
+        "type": "from_import",
+        "relative_level": 1,
+        "lineno": 20
+      },
+      {
+        "from_module": "cognition_engine",
+        "imports": "framework_signatures.DOCUMENT_FILE_EXTENSIONS",
+        "type": "from_import",
+        "relative_level": 1,
+        "lineno": 20
+      },
+      {
+        "from_module": "cognition_engine",
+        "imports": "framework_signatures.DOCUMENTATION_FILE_NAMES",
+        "type": "from_import",
+        "relative_level": 1,
+        "lineno": 20
+      },
+      {
+        "from_module": "cognition_engine",
+        "imports": "framework_signatures.ENTRY_POINT_NAMES",
+        "type": "from_import",
+        "relative_level": 1,
+        "lineno": 20
+      },
+      {
+        "from_module": "cognition_engine",
+        "imports": "framework_signatures.ENTRY_POINT_NOISE_DIRS",
+        "type": "from_import",
+        "relative_level": 1,
+        "lineno": 20
+      },
+      {
+        "from_module": "cognition_engine",
+        "imports": "framework_signatures.ENV_FILE_PREFIXES",
+        "type": "from_import",
+        "relative_level": 1,
+        "lineno": 20
+      },
+      {
+        "from_module": "cognition_engine",
+        "imports": "framework_signatures.ERP_LANGUAGE_EXTENSIONS",
+        "type": "from_import",
+        "relative_level": 1,
+        "lineno": 20
+      },
+      {
+        "from_module": "cognition_engine",
+        "imports": "framework_signatures.ERP_PACKAGE_SIGNATURES",
+        "type": "from_import",
+        "relative_level": 1,
+        "lineno": 20
+      },
+      {
+        "from_module": "cognition_engine",
+        "imports": "framework_signatures.IMPORT_SIGNATURES",
+        "type": "from_import",
+        "relative_level": 1,
+        "lineno": 20
+      },
+      {
+        "from_module": "cognition_engine",
+        "imports": "framework_signatures.LANGUAGE_EXTENSIONS",
+        "type": "from_import",
+        "relative_level": 1,
+        "lineno": 20
+      },
+      {
+        "from_module": "cognition_engine",
+        "imports": "framework_signatures.MODEL_FILE_EXTENSIONS",
+        "type": "from_import",
+        "relative_level": 1,
+        "lineno": 20
+      },
+      {
+        "from_module": "cognition_engine",
+        "imports": "framework_signatures.PACKAGE_SIGNATURES",
+        "type": "from_import",
+        "relative_level": 1,
+        "lineno": 20
+      },
+      {
+        "from_module": "cognition_engine",
+        "imports": "framework_signatures.SKIP_DIRECTORIES",
+        "type": "from_import",
+        "relative_level": 1,
+        "lineno": 20
+      },
+      {
+        "from_module": "cognition_engine",
+        "imports": "framework_signatures.TEST_DIR_NAMES",
+        "type": "from_import",
+        "relative_level": 1,
+        "lineno": 20
+      }
+    ],
+    "cognition_report": [],
+    "framework_signatures": [],
+    "report_writer": [
+      {
+        "from_module": "report_writer",
+        "imports": "cognition_report.RepositoryCognitionReport",
+        "type": "from_import",
+        "relative_level": 1,
+        "lineno": 16
+      }
+    ]
+  },
+  "dependency_graph": {
+    "ast": {
+      "used_by": [
+        "cognition_engine"
+      ],
+      "import_count": 1
+    },
+    "json": {
+      "used_by": [
+        "cognition_engine"
+      ],
+      "import_count": 1
+    },
+    "os": {
+      "used_by": [
+        "cognition_engine",
+        "report_writer"
+      ],
+      "import_count": 2
+    },
+    "re": {
+      "used_by": [
+        "cognition_engine"
+      ],
+      "import_count": 1
+    },
+    "collections": {
+      "used_by": [
+        "cognition_engine"
+      ],
+      "import_count": 1
+    },
+    "datetime": {
+      "used_by": [
+        "cognition_engine",
+        "cognition_report",
+        "report_writer"
+      ],
+      "import_count": 5
+    },
+    "pathlib": {
+      "used_by": [
+        "cognition_engine",
+        "report_writer"
+      ],
+      "import_count": 2
+    },
+    "dataclasses": {
+      "used_by": [
+        "cognition_report"
+      ],
+      "import_count": 1
+    },
+    "typing": {
+      "used_by": [
+        "cognition_report"
+      ],
+      "import_count": 1
+    }
+  },
+  "declared_dependencies": {},
+  "call_graph": {
+    "cognition_engine": [
+      {
+        "caller": "cognition_engine.RepositoryCognitionEngine.scan",
+        "callee": "cognition_engine.RepositoryCognitionEngine._run_scan",
+        "lineno": 68,
+        "resolution": "self_method_call"
+      },
+      {
+        "caller": "cognition_engine.RepositoryCognitionEngine._run_scan",
+        "callee": "cognition_engine.RepositoryCognitionEngine._inventory_files",
+        "lineno": 83,
+        "resolution": "self_method_call"
+      },
+      {
+        "caller": "cognition_engine.RepositoryCognitionEngine._run_scan",
+        "callee": "cognition_engine.RepositoryCognitionEngine._detect_build_systems",
+        "lineno": 86,
+        "resolution": "self_method_call"
+      },
+      {
+        "caller": "cognition_engine.RepositoryCognitionEngine._run_scan",
+        "callee": "cognition_engine.RepositoryCognitionEngine._detect_from_dependency_files",
+        "lineno": 91,
+        "resolution": "self_method_call"
+      },
+      {
+        "caller": "cognition_engine.RepositoryCognitionEngine._run_scan",
+        "callee": "cognition_engine.RepositoryCognitionEngine._detect_from_imports",
+        "lineno": 94,
+        "resolution": "self_method_call"
+      },
+      {
+        "caller": "cognition_engine.RepositoryCognitionEngine._run_scan",
+        "callee": "cognition_engine.RepositoryCognitionEngine._detect_from_internal_patterns",
+        "lineno": 97,
+        "resolution": "self_method_call"
+      },
+      {
+        "caller": "cognition_engine.RepositoryCognitionEngine._run_scan",
+        "callee": "cognition_engine.RepositoryCognitionEngine._determine_application_type",
+        "lineno": 132,
+        "resolution": "self_method_call"
+      },
+      {
+        "caller": "cognition_engine.RepositoryCognitionEngine._run_scan",
+        "callee": "cognition_engine.RepositoryCognitionEngine._resolve_frameworks",
+        "lineno": 136,
+        "resolution": "self_method_call"
+      },
+      {
+        "caller": "cognition_engine.RepositoryCognitionEngine._run_scan",
+        "callee": "cognition_engine.RepositoryCognitionEngine._detect_entry_points",
+        "lineno": 142,
+        "resolution": "self_method_call"
+      },
+      {
+        "caller": "cognition_engine.RepositoryCognitionEngine._run_scan",
+        "callee": "cognition_engine.RepositoryCognitionEngine._score_discovery",
+        "lineno": 147,
+        "resolution": "self_method_call"
+      },
+      {
+        "caller": "cognition_engine.RepositoryCognitionEngine._run_scan",
+        "callee": "cognition_engine.RepositoryCognitionEngine._score_classification",
+        "lineno": 148,
+        "resolution": "self_method_call"
+      },
+      {
+        "caller": "cognition_engine.RepositoryCognitionEngine._run_scan",
+        "callee": "cognition_engine.RepositoryCognitionEngine._generate_diagnostic_warnings",
+        "lineno": 151,
+        "resolution": "self_method_call"
+      },
+      {
+        "caller": "cognition_engine.RepositoryCognitionEngine._run_scan",
+        "callee": "cognition_engine.RepositoryCognitionEngine._build_purpose_string",
+        "lineno": 166,
+        "resolution": "self_method_call"
+      },
+      {
+        "caller": "cognition_engine.RepositoryCognitionEngine._run_scan",
+        "callee": "cognition_report.RepositoryCognitionReport.<class>",
+        "lineno": 174,
+        "resolution": "imported_call"
+      },
+      {
+        "caller": "cognition_engine.RepositoryCognitionEngine._inventory_files",
+        "callee": "<external>.pathlib.Path",
+        "lineno": 286,
+        "resolution": "external_constructor_call"
+      },
+      {
+        "caller": "cognition_engine.RepositoryCognitionEngine._detect_from_dependency_files",
+        "callee": "<external>.pathlib.Path",
+        "lineno": 373,
+        "resolution": "external_constructor_call"
+      },
+      {
+        "caller": "cognition_engine.RepositoryCognitionEngine._detect_from_dependency_files",
+        "callee": "cognition_engine.RepositoryCognitionEngine._parse_package_json",
+        "lineno": 378,
+        "resolution": "self_method_call"
+      },
+      {
+        "caller": "cognition_engine.RepositoryCognitionEngine._detect_from_dependency_files",
+        "callee": "cognition_engine.RepositoryCognitionEngine._parse_requirements_txt",
+        "lineno": 380,
+        "resolution": "self_method_call"
+      },
+      {
+        "caller": "cognition_engine.RepositoryCognitionEngine._detect_from_dependency_files",
+        "callee": "cognition_engine.RepositoryCognitionEngine._parse_pyproject_toml",
+        "lineno": 382,
+        "resolution": "self_method_call"
+      },
+      {
+        "caller": "cognition_engine.RepositoryCognitionEngine._detect_from_dependency_files",
+        "callee": "cognition_engine.RepositoryCognitionEngine._parse_setup_file",
+        "lineno": 384,
+        "resolution": "self_method_call"
+      },
+      {
+        "caller": "cognition_engine.RepositoryCognitionEngine._detect_from_dependency_files",
+        "callee": "cognition_engine.RepositoryCognitionEngine._parse_java_build_file",
+        "lineno": 386,
+        "resolution": "self_method_call"
+      },
+      {
+        "caller": "cognition_engine.RepositoryCognitionEngine._detect_from_dependency_files",
+        "callee": "cognition_engine.RepositoryCognitionEngine._parse_package_json",
+        "lineno": 388,
+        "resolution": "self_method_call"
+      },
+      {
+        "caller": "cognition_engine.RepositoryCognitionEngine._parse_setup_file",
+        "callee": "cognition_engine.RepositoryCognitionEngine._parse_requirements_txt",
+        "lineno": 434,
+        "resolution": "self_method_call"
+      },
+      {
+        "caller": "cognition_engine.RepositoryCognitionEngine._detect_from_internal_patterns",
+        "callee": "<external>.pathlib.Path",
+        "lineno": 507,
+        "resolution": "external_constructor_call"
+      },
+      {
+        "caller": "cognition_engine.RepositoryCognitionEngine._detect_from_imports",
+        "callee": "cognition_engine.RepositoryCognitionEngine._extract_import_signals",
+        "lineno": 535,
+        "resolution": "self_method_call"
+      },
+      {
+        "caller": "cognition_engine.RepositoryCognitionEngine._extract_import_signals",
+        "callee": "<external>.pathlib.Path",
+        "lineno": 543,
+        "resolution": "external_constructor_call"
+      },
+      {
+        "caller": "cognition_engine.RepositoryCognitionEngine._resolve_frameworks",
+        "callee": "<external>.collections.defaultdict",
+        "lineno": 572,
+        "resolution": "external_constructor_call"
+      },
+      {
+        "caller": "cognition_engine.RepositoryCognitionEngine._resolve_frameworks",
+        "callee": "cognition_engine.RepositoryCognitionEngine._build_technology_stack",
+        "lineno": 576,
+        "resolution": "self_method_call"
+      },
+      {
+        "caller": "cognition_engine.RepositoryCognitionEngine._resolve_frameworks",
+        "callee": "cognition_engine.RepositoryCognitionEngine._infer_framework_name",
+        "lineno": 579,
+        "resolution": "self_method_call"
+      },
+      {
+        "caller": "cognition_engine.RepositoryCognitionEngine._resolve_frameworks",
+        "callee": "cognition_engine.RepositoryCognitionEngine._infer_secondary_frameworks",
+        "lineno": 580,
+        "resolution": "self_method_call"
+      },
+      {
+        "caller": "cognition_engine.RepositoryCognitionEngine._resolve_frameworks",
+        "callee": "cognition_engine.RepositoryCognitionEngine._build_technology_stack",
+        "lineno": 581,
+        "resolution": "self_method_call"
+      },
+      {
+        "caller": "cognition_engine.RepositoryCognitionEngine._infer_framework_name",
+        "callee": "<external>.pathlib.Path",
+        "lineno": 925,
+        "resolution": "external_constructor_call"
+      },
+      {
+        "caller": "cognition_engine.RepositoryCognitionEngine._infer_framework_name",
+        "callee": "cognition_engine.RepositoryCognitionEngine._infer_framework_name._matches",
+        "lineno": 941,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "cognition_engine.RepositoryCognitionEngine._infer_secondary_frameworks",
+        "callee": "<external>.pathlib.Path",
+        "lineno": 990,
+        "resolution": "external_constructor_call"
+      },
+      {
+        "caller": "cognition_engine.RepositoryCognitionEngine._build_technology_stack",
+        "callee": "<external>.pathlib.Path",
+        "lineno": 1051,
+        "resolution": "external_constructor_call"
+      },
+      {
+        "caller": "cognition_engine.RepositoryCognitionEngine._determine_application_type",
+        "callee": "<external>.collections.defaultdict",
+        "lineno": 1068,
+        "resolution": "external_constructor_call"
+      },
+      {
+        "caller": "cognition_engine.RepositoryCognitionEngine._detect_entry_points",
+        "callee": "<external>.pathlib.Path",
+        "lineno": 1162,
+        "resolution": "external_constructor_call"
+      },
+      {
+        "caller": "cognition_engine.RepositoryCognitionEngine._detect_entry_points",
+        "callee": "<external>.pathlib.Path",
+        "lineno": 1167,
+        "resolution": "external_constructor_call"
+      },
+      {
+        "caller": "cognition_engine.RepositoryCognitionEngine._score_classification",
+        "callee": "<external>.collections.defaultdict",
+        "lineno": 1240,
+        "resolution": "external_constructor_call"
+      },
+      {
+        "caller": "cognition_engine.RepositoryCognitionEngine._generate_diagnostic_warnings",
+        "callee": "<external>.collections.defaultdict",
+        "lineno": 1297,
+        "resolution": "external_constructor_call"
+      },
+      {
+        "caller": "cognition_engine.RepositoryCognitionEngine.save_report",
+        "callee": "<external>.pathlib.Path",
+        "lineno": 1364,
+        "resolution": "external_constructor_call"
+      }
+    ],
+    "cognition_report": [
+      {
+        "caller": "cognition_report.RepositoryCognitionReport.failed",
+        "callee": "cognition_report.RepositoryCognitionReport.<class>",
+        "lineno": 156,
+        "resolution": "same_module_class_call"
+      },
+      {
+        "caller": "cognition_report.<module>",
+        "callee": "<external>.dataclasses.dataclass",
+        "lineno": 73,
+        "resolution": "external_constructor_call"
+      }
+    ],
+    "framework_signatures": [],
+    "report_writer": [
+      {
+        "caller": "report_writer.ReportWriter.print_console",
+        "callee": "report_writer.ReportWriter._build_text",
+        "lineno": 38,
+        "resolution": "self_method_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter.save_txt",
+        "callee": "<external>.pathlib.Path",
+        "lineno": 45,
+        "resolution": "external_constructor_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter.save_txt",
+        "callee": "<external>.pathlib.Path",
+        "lineno": 46,
+        "resolution": "external_constructor_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter.save_txt",
+        "callee": "report_writer.ReportWriter._build_text",
+        "lineno": 46,
+        "resolution": "self_method_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter.save_markdown",
+        "callee": "<external>.pathlib.Path",
+        "lineno": 49,
+        "resolution": "external_constructor_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter.save_markdown",
+        "callee": "<external>.pathlib.Path",
+        "lineno": 50,
+        "resolution": "external_constructor_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter.save_markdown",
+        "callee": "report_writer.ReportWriter._build_markdown",
+        "lineno": 50,
+        "resolution": "self_method_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text.section",
+        "callee": "report_writer.ReportWriter._build_text.div",
+        "lineno": 63,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text.section",
+        "callee": "report_writer.ReportWriter._build_text.div",
+        "lineno": 63,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text",
+        "callee": "report_writer.ReportWriter._build_text.hdiv",
+        "lineno": 68,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text",
+        "callee": "report_writer.ReportWriter._build_text.hdiv",
+        "lineno": 71,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text",
+        "callee": "report_writer.ReportWriter._build_text.blank",
+        "lineno": 72,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text",
+        "callee": "report_writer.ReportWriter._build_text.section",
+        "lineno": 75,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text",
+        "callee": "report_writer.ReportWriter._build_text.field",
+        "lineno": 76,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text",
+        "callee": "report_writer.ReportWriter._build_text.field",
+        "lineno": 77,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text",
+        "callee": "report_writer.ReportWriter._build_text.field",
+        "lineno": 78,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text",
+        "callee": "report_writer.ReportWriter._build_text.field",
+        "lineno": 79,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text",
+        "callee": "report_writer.ReportWriter._build_text.field",
+        "lineno": 80,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text",
+        "callee": "report_writer.ReportWriter._build_text.blank",
+        "lineno": 81,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text",
+        "callee": "report_writer.ReportWriter._build_text.section",
+        "lineno": 84,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text",
+        "callee": "report_writer.ReportWriter._build_text.field",
+        "lineno": 85,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text",
+        "callee": "report_writer.ReportWriter._build_text.field",
+        "lineno": 86,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text",
+        "callee": "report_writer.ReportWriter._build_text.field",
+        "lineno": 89,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text",
+        "callee": "report_writer.ReportWriter._build_text.field",
+        "lineno": 90,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text",
+        "callee": "report_writer.ReportWriter._build_text.field",
+        "lineno": 91,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text",
+        "callee": "report_writer.ReportWriter._build_text.blank",
+        "lineno": 92,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text",
+        "callee": "report_writer.ReportWriter._build_text.section",
+        "lineno": 95,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text",
+        "callee": "report_writer.ReportWriter._build_text.field",
+        "lineno": 96,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text",
+        "callee": "report_writer.ReportWriter._build_text.field",
+        "lineno": 97,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text",
+        "callee": "report_writer.ReportWriter._build_text.field",
+        "lineno": 98,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text",
+        "callee": "report_writer.ReportWriter._build_text.blank",
+        "lineno": 99,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text",
+        "callee": "report_writer.ReportWriter._build_text.section",
+        "lineno": 102,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text",
+        "callee": "report_writer.ReportWriter._build_text.blank",
+        "lineno": 114,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text",
+        "callee": "report_writer.ReportWriter._build_text.section",
+        "lineno": 117,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text",
+        "callee": "report_writer.ReportWriter._build_text.blank",
+        "lineno": 122,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text",
+        "callee": "report_writer.ReportWriter._build_text.section",
+        "lineno": 125,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text",
+        "callee": "report_writer.ReportWriter._build_text.blank",
+        "lineno": 130,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text",
+        "callee": "report_writer.ReportWriter._build_text.section",
+        "lineno": 133,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text",
+        "callee": "report_writer.ReportWriter._build_text.blank",
+        "lineno": 141,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text",
+        "callee": "report_writer.ReportWriter._build_text.section",
+        "lineno": 144,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text",
+        "callee": "report_writer.ReportWriter._build_text.blank",
+        "lineno": 150,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text",
+        "callee": "report_writer.ReportWriter._build_text.section",
+        "lineno": 153,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text",
+        "callee": "report_writer.ReportWriter._build_text.blank",
+        "lineno": 160,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text",
+        "callee": "report_writer.ReportWriter._build_text.section",
+        "lineno": 163,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text",
+        "callee": "report_writer.ReportWriter._build_text.blank",
+        "lineno": 170,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text",
+        "callee": "report_writer.ReportWriter._build_text.blank",
+        "lineno": 174,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text",
+        "callee": "report_writer.ReportWriter._build_text.section",
+        "lineno": 177,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text",
+        "callee": "report_writer.ReportWriter._build_text.blank",
+        "lineno": 190,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text",
+        "callee": "report_writer.ReportWriter._build_text.section",
+        "lineno": 194,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text",
+        "callee": "report_writer.ReportWriter._build_text.blank",
+        "lineno": 196,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text",
+        "callee": "report_writer.ReportWriter._build_text.hdiv",
+        "lineno": 198,
+        "resolution": "same_class_name_call"
+      },
+      {
+        "caller": "report_writer.ReportWriter._build_text",
+        "callee": "report_writer.ReportWriter._build_text.hdiv",
+        "lineno": 201,
+        "resolution": "same_class_name_call"
+      }
+    ]
+  },
+  "unresolved": [
+    {
+      "module": "cognition_engine",
+      "lineno": 59,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .abspath(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 70,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .failed(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 80,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .isoformat(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 80,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .now(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 124,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .update(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 124,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .get(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 199,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .get(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 222,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .walk(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 225,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .lower(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 226,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .startswith(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 229,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .relpath(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 230,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .basename(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 231,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .lower(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 232,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .add(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 236,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .join(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 237,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .lower(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 237,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .splitext(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 238,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .lower(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 241,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .startswith(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 244,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .startswith(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 246,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .startswith(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 251,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .add(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 256,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .add(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 260,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .add(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 264,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .add(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 274,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .add(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 278,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .add(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 281,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .add(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 284,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .endswith(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 285,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 289,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 294,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 296,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .add(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 309,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 311,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 316,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 343,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .fromkeys(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 345,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .basename(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 346,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .lower(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 346,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .splitext(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 352,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 353,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .add(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 359,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 360,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .add(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 371,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .join(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 373,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .lower(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 373,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .read_text(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 376,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .lower(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 376,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .basename(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 378,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .extend(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 379,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .startswith(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 380,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .extend(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 382,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .extend(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 384,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .extend(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 386,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .extend(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 388,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .extend(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 393,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .splitlines(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 394,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .strip(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 395,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .startswith(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 397,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .startswith(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 397,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .startswith(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 398,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .startswith(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 398,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .startswith(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 399,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .startswith(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 399,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .startswith(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 401,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .replace(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 401,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .lower(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 401,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .strip(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 401,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .split(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 402,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .lower(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 402,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .strip(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 402,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .split(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 405,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 408,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 415,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .finditer(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 416,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .replace(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 416,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .replace(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 416,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .lower(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 416,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .group(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 417,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .lower(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 417,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .group(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 418,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .replace(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 420,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 421,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .add(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 423,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .finditer(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 424,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .replace(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 424,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .lower(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 424,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .group(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 425,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .lower(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 425,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .group(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 426,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .replace(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 428,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 429,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .add(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 452,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .items(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 454,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 470,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .items(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 472,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 496,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .get(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 500,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .join(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 501,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .exists(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 504,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 507,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .read_text(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 513,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 530,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .basename(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 531,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .basename(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 535,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .extend(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 536,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .join(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 543,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .read_text(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 544,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .parse(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 547,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .walk(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 550,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .lower(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 550,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .split(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 552,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 555,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .lower(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 555,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .split(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 557,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 896,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .items(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 897,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .replace(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 897,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .lower(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 898,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .setdefault(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 903,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .escape(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 904,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .search(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 923,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .join(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 925,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .lower(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 925,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .read_text(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 932,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .items(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 934,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .add(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 936,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .items(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 939,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .replace(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 939,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .lower(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 942,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 951,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .replace(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 951,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .lower(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 951,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .basename(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 951,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .rstrip(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 956,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .endswith(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 957,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .add(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 958,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .startswith(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 959,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .add(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 961,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .replace(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 961,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .lower(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 969,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .replace(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 969,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .lower(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 970,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .get(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 975,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .keys(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 976,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .sort(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 976,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .get(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 988,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .join(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 990,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .lower(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 990,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .read_text(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 995,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .items(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 997,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1016,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .fromkeys(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1018,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .lower(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1018,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .basename(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1019,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .startswith(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1021,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1022,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .startswith(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1024,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1025,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .lower(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1025,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .replace(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1028,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1032,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1049,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .join(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1051,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .lower(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1051,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .read_text(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1056,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .items(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1058,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1075,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .items(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1125,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .keys(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1125,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .get(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1130,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .pop(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1140,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .items(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1142,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .values(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1165,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .join(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1167,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .read_text(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1172,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1176,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1245,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .values(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1282,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1289,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1300,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .keys(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1301,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1302,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .join(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1308,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .get(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1311,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1313,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .join(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1322,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1323,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .join(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1331,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1348,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .basename(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1350,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .title(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1350,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .replace(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1354,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .join(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1364,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .mkdir(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1366,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .dump(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_engine",
+      "lineno": 1366,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .to_dict(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_report",
+      "lineno": 158,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .isoformat(...) - target object type not statically resolved."
+    },
+    {
+      "module": "cognition_report",
+      "lineno": 158,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .now(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 45,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .mkdir(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 46,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .write_text(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 49,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .mkdir(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 50,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .write_text(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 58,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .basename(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 61,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 62,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 63,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 64,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 65,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 69,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 70,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 78,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .replace(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 85,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .title(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 85,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .replace(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 89,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .join(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 98,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .join(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 103,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 104,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .join(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 106,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 107,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .join(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 109,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 110,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .join(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 113,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 119,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 119,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .join(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 121,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 127,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 127,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .join(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 129,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 136,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 138,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 140,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 147,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 149,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 155,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 155,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .join(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 156,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .basename(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 159,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 166,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 168,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 171,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 172,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 172,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .join(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 173,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 179,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 180,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 181,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 183,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 184,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 185,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 187,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 188,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 189,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 195,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 199,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 200,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 203,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .join(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 211,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .basename(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 214,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 215,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 216,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 217,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 217,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .replace(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 218,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 219,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 221,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 222,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 223,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 224,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 225,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 226,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 227,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 228,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 229,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 230,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 230,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .title(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 230,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .replace(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 232,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 234,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 234,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .join(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 235,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 237,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 238,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 239,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 240,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 241,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 242,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 243,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 244,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 246,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 247,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 248,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 249,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 250,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 251,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 252,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 253,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 254,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 255,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 256,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 258,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 259,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 260,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 261,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 264,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 266,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 267,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 268,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 269,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 272,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 274,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 275,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 276,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 277,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 280,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 281,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 282,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 284,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 285,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 287,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 288,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 291,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 293,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 294,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 296,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 297,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 300,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 302,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 303,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 305,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 306,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 309,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 311,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 313,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 314,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 316,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 317,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 320,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 322,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 323,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 325,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 326,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 329,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 331,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 332,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 334,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 335,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 338,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 340,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 341,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 343,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 344,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 347,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 349,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 351,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 352,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 354,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 355,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 357,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 358,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 360,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 362,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 364,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 365,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 367,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 368,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 369,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 370,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 371,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .append(...) - target object type not statically resolved."
+    },
+    {
+      "module": "report_writer",
+      "lineno": 373,
+      "pattern": "attribute_call",
+      "note": "Call via attribute access .join(...) - target object type not statically resolved."
+    }
+  ],
+  "governance_gate": "APPROVED"
+}

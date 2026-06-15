@@ -1,0 +1,238 @@
+[
+  {
+    "repo": "repository_cognition",
+    "files_scanned": 5,
+    "modules_parsed": 4,
+    "functions": 39,
+    "classes": 3,
+    "external_deps": 9,
+    "resolved_calls": 95,
+    "unresolved": 370,
+    "unresolved_breakdown": {
+      "attribute_call": 370
+    },
+    "call_resolution_breakdown": {
+      "self_method_call": 28,
+      "imported_call": 1,
+      "external_constructor_call": 19,
+      "same_class_name_call": 46,
+      "same_module_class_call": 1
+    },
+    "resolved_pct": 20.4,
+    "governance_gate": "APPROVED",
+    "interesting_unresolved": []
+  },
+  {
+    "repo": "repository_graph",
+    "files_scanned": 12,
+    "modules_parsed": 11,
+    "functions": 53,
+    "classes": 7,
+    "external_deps": 7,
+    "resolved_calls": 54,
+    "unresolved": 203,
+    "unresolved_breakdown": {
+      "attribute_call": 203
+    },
+    "call_resolution_breakdown": {
+      "external_inherited_call": 14,
+      "self_method_call": 8,
+      "direct_name_call": 11,
+      "same_module_class_call": 7,
+      "imported_call": 10,
+      "external_constructor_call": 4
+    },
+    "resolved_pct": 21.0,
+    "governance_gate": "APPROVED",
+    "interesting_unresolved": []
+  },
+  {
+    "repo": "core",
+    "files_scanned": 10,
+    "modules_parsed": 9,
+    "functions": 47,
+    "classes": 0,
+    "external_deps": 6,
+    "resolved_calls": 77,
+    "unresolved": 135,
+    "unresolved_breakdown": {
+      "attribute_call": 134,
+      "name_call_unresolved": 1
+    },
+    "call_resolution_breakdown": {
+      "direct_name_call": 77
+    },
+    "resolved_pct": 36.3,
+    "governance_gate": "APPROVED",
+    "interesting_unresolved": [
+      {
+        "module": "parser",
+        "lineno": 22,
+        "pattern": "name_call_unresolved",
+        "note": "Call to 'is_top_level(...)' not found in local, imported, or builtin symbols."
+      }
+    ]
+  },
+  {
+    "repo": "ai",
+    "files_scanned": 22,
+    "modules_parsed": 21,
+    "functions": 141,
+    "classes": 30,
+    "external_deps": 22,
+    "resolved_calls": 177,
+    "unresolved": 374,
+    "unresolved_breakdown": {
+      "attribute_call": 351,
+      "name_call_unresolved": 23
+    },
+    "call_resolution_breakdown": {
+      "external_constructor_call": 47,
+      "self_method_call": 98,
+      "same_module_class_call": 16,
+      "direct_name_call": 16
+    },
+    "resolved_pct": 32.1,
+    "governance_gate": "APPROVED",
+    "interesting_unresolved": [
+      {
+        "module": "behavioral_signature_engine",
+        "lineno": 310,
+        "pattern": "name_call_unresolved",
+        "note": "Call to 'BehavioralSignature(...)' not found in local, imported, or builtin symbols."
+      },
+      {
+        "module": "decision_orchestrator",
+        "lineno": 285,
+        "pattern": "name_call_unresolved",
+        "note": "Call to 'PipelineResult(...)' not found in local, imported, or builtin symbols."
+      },
+      {
+        "module": "decision_orchestrator",
+        "lineno": 367,
+        "pattern": "name_call_unresolved",
+        "note": "Call to 'PipelineResult(...)' not found in local, imported, or builtin symbols."
+      },
+      {
+        "module": "fallback_orchestrator",
+        "lineno": 53,
+        "pattern": "name_call_unresolved",
+        "note": "Call to 'v1_handler(...)' not found in local, imported, or builtin symbols."
+      },
+      {
+        "module": "fusion_engine",
+        "lineno": 225,
+        "pattern": "name_call_unresolved",
+        "note": "Call to 'FusionDecision(...)' not found in local, imported, or builtin symbols."
+      },
+      {
+        "module": "governance_wiring",
+        "lineno": 202,
+        "pattern": "name_call_unresolved",
+        "note": "Call to 'GovernanceFinding(...)' not found in local, imported, or builtin symbols."
+      },
+      {
+        "module": "governance_wiring",
+        "lineno": 245,
+        "pattern": "name_call_unresolved",
+        "note": "Call to 'GovernanceFinding(...)' not found in local, imported, or builtin symbols."
+      },
+      {
+        "module": "governance_wiring",
+        "lineno": 328,
+        "pattern": "name_call_unresolved",
+        "note": "Call to 'GovernanceFinding(...)' not found in local, imported, or builtin symbols."
+      },
+      {
+        "module": "governance_wiring",
+        "lineno": 407,
+        "pattern": "name_call_unresolved",
+        "note": "Call to 'FileFindings(...)' not found in local, imported, or builtin symbols."
+      },
+      {
+        "module": "governance_wiring",
+        "lineno": 428,
+        "pattern": "name_call_unresolved",
+        "note": "Call to 'GovernanceReport(...)' not found in local, imported, or builtin symbols."
+      },
+      {
+        "module": "patch_generation_engine",
+        "lineno": 131,
+        "pattern": "name_call_unresolved",
+        "note": "Call to 'generator(...)' not found in local, imported, or builtin symbols."
+      },
+      {
+        "module": "patch_generation_engine",
+        "lineno": 145,
+        "pattern": "name_call_unresolved",
+        "note": "Call to 'PatchCandidate(...)' not found in local, imported, or builtin symbols."
+      },
+      {
+        "module": "patch_generation_engine",
+        "lineno": 455,
+        "pattern": "name_call_unresolved",
+        "note": "Call to 'PatchCandidate(...)' not found in local, imported, or builtin symbols."
+      },
+      {
+        "module": "patch_validation_engine",
+        "lineno": 159,
+        "pattern": "name_call_unresolved",
+        "note": "Call to 'PatchValidationResult(...)' not found in local, imported, or builtin symbols."
+      },
+      {
+        "module": "repository_graph_engine",
+        "lineno": 108,
+        "pattern": "name_call_unresolved",
+        "note": "Call to 'RepositoryGraph(...)' not found in local, imported, or builtin symbols."
+      },
+      {
+        "module": "repository_graph_engine",
+        "lineno": 243,
+        "pattern": "name_call_unresolved",
+        "note": "Call to 'FileNode(...)' not found in local, imported, or builtin symbols."
+      },
+      {
+        "module": "repository_graph_engine",
+        "lineno": 272,
+        "pattern": "name_call_unresolved",
+        "note": "Call to 'FunctionNode(...)' not found in local, imported, or builtin symbols."
+      },
+      {
+        "module": "repository_graph_engine",
+        "lineno": 301,
+        "pattern": "name_call_unresolved",
+        "note": "Call to 'ClassNode(...)' not found in local, imported, or builtin symbols."
+      },
+      {
+        "module": "repository_graph_engine",
+        "lineno": 330,
+        "pattern": "name_call_unresolved",
+        "note": "Call to 'FunctionNode(...)' not found in local, imported, or builtin symbols."
+      },
+      {
+        "module": "risk_classification_engine",
+        "lineno": 120,
+        "pattern": "name_call_unresolved",
+        "note": "Call to 'RiskDecision(...)' not found in local, imported, or builtin symbols."
+      },
+      {
+        "module": "risk_classification_engine",
+        "lineno": 131,
+        "pattern": "name_call_unresolved",
+        "note": "Call to 'RiskDecision(...)' not found in local, imported, or builtin symbols."
+      },
+      {
+        "module": "test_execution_engine",
+        "lineno": 131,
+        "pattern": "name_call_unresolved",
+        "note": "Call to 'TestExecutionResult(...)' not found in local, imported, or builtin symbols."
+      },
+      {
+        "module": "test_execution_engine",
+        "lineno": 167,
+        "pattern": "name_call_unresolved",
+        "note": "Call to 'TestExecutionResult(...)' not found in local, imported, or builtin symbols."
+      }
+    ]
+  }
+]

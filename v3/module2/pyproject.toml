@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+# NOTE: this file describes Module 2's package metadata (name, version,
+# dependencies, license) as of the v3.0.0-module2 release. The actual
+# source (v3/repository_graph/) sits one level up from this file
+# (v3/module2/), as a sibling - this is intentional, matching the
+# precedent set by v3/module1/pyproject.toml. To build/install, run from
+# the v3/ directory (where repository_graph/ and repository_cognition/
+# are both present as top-level packages).
+
+[project]
+name = "codetruth-agent-v3-module2"
+version = "1.0.0"
+description = "CodeTruth Agent V3 — Module 2: Repository Graph Engine (deterministic function/class/module/import/dependency/call graph extraction)"
+readme = "README.md"
+license = { text = "GPL-3.0-or-later" }
+authors = [
+    { name = "Zeeshan Saud" }
+]
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+# Optional multi-language extension scaffold (v3/repository_graph/languages/).
+# Not required for the Python core (V3-004 through V3-009).
+languages = [
+    "javalang",
+    "tree-sitter==0.21.3",
+    "tree-sitter-languages",
+]
+
+[project.urls]
+Homepage = "https://github.com/Zeeshan78699/CodeTruthAgent"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["repository_graph*"]

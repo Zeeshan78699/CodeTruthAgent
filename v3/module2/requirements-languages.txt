@@ -1,0 +1,7 @@
+# CodeTruth Agent V3 — Module 2 — Optional multi-language extension
+# (v3/repository_graph/languages/) - early validated baseline, not part
+# of the frozen Python core. See requirements.txt for details.
+
+javalang
+tree-sitter==0.21.3
+tree-sitter-languages

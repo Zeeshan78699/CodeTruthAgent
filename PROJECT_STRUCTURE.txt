@@ -1,13 +1,10 @@
 📂 CodeTruthAgent
-│   📄 .env
 │   📄 .gitignore
-│   📄 approval_audit_log.json
 │   📄 billing.py
 │   📄 db_prod.py
 │   📄 db_test.py
 │   📄 FAQ.md
 │   📄 generate_structure.py
-│   📄 governance_memory.json
 │   📄 helpers.py
 │   📄 inventory.py
 │   📄 LICENSE
@@ -19,23 +16,13 @@
 │   📄 PROJECT_STRUCTURE.txt
 │   📄 QUICKSTART.md
 │   📄 README.md
-│   📄 README_V2.md
+│   📄 README_V1.md
 │   📄 reports.py
-│   📄 repository_snapshot.json
-│   📄 requirements old.txt
 │   📄 requirements.txt
 │   📄 sample_code.py
-│   📄 sample_test_file.txt
-│   📄 Status_Error_msg.txt
-│   📄 tc_v2_018_execution_test.py
-│   📄 temp_embedding_test.py
-│   📄 temp_v2_execution_test.py
-│   📄 temp_v2_resilience_test.py
-│   📄 temp_v2_stress_test.py
 │   📄 Test_Result_Summary.md
 │   📄 utils.py
 │   📄 V2_BLOCK_PRECISION_AUDIT.md
-│   📄 v2_execution_test.py
 │   📂 ai
 │   │   📄 ai_interface.py
 │   │   📄 behavioral_signature_engine.py
@@ -313,6 +300,9 @@
 │   │   │   │   📄 tc_v2_042d_real_function_semantic_validation.py
 │   │   │   │   📄 tc_v2_042_semantic_validation.py
 │   │   📂 output
+│   │   │   📄 approval_audit_log.json
+│   │   │   📄 governance_memory.json
+│   │   │   📄 repository_snapshot.json
 │   │   │   📄 TC01_output.txt
 │   │   │   📄 TC02_output.txt
 │   │   │   📄 TC03_output.txt
@@ -525,6 +515,322 @@
 │   │   │   │   📂 workflow_orchestrator_reports
 │   │   │   │   │   📄 orchestrator_test_file.py
 │   │   │   │   │   📄 tc_v2_032_report.json
+│   📂 v3
+│   │   📄 README.md
+│   │   📄 __init__.py
+│   │   📂 docs
+│   │   │   📄 PROJECT_RECORD_v3.0.0-module2.docx
+│   │   │   📄 PROJECT_RECORD_v3.0.0-module2.md
+│   │   │   📂 module1
+│   │   │   │   📄 MODULE1_CAPABILITY_PROOF.md
+│   │   │   │   📄 MODULE1_COMPONENTS_AND_CAPABILITIES.md
+│   │   │   │   📄 MODULE1_DOCUMENTATION.md
+│   │   │   │   📄 MODULE1_EXTENSION_GUIDE.md
+│   │   │   │   📄 MODULE1_QUESTION_AND_ANSWER.md
+│   │   │   │   📄 MODULE1_REAL_WORLD_PROBLEM.md
+│   │   │   │   📄 MODULE1_TEST_REGISTER.md
+│   │   │   │   📄 QUICKSTART_MODULE1.md
+│   │   │   │   📄 RELEASE_NOTES_v3.0.0-module1.md
+│   │   │   📂 module2
+│   │   │   │   📄 MODULE2_CAPABILITY_PROOF.docx
+│   │   │   │   📄 MODULE2_CAPABILITY_PROOF.md
+│   │   │   │   📄 MODULE2_COMPONENTS_AND_CAPABILITIES.docx
+│   │   │   │   📄 MODULE2_COMPONENTS_AND_CAPABILITIES.md
+│   │   │   │   📄 MODULE2_DECISIONS.docx
+│   │   │   │   📄 MODULE2_DECISIONS.md
+│   │   │   │   📄 MODULE2_DOCUMENTATION.docx
+│   │   │   │   📄 MODULE2_DOCUMENTATION.md
+│   │   │   │   📄 MODULE2_EXTENSION_GUIDE.docx
+│   │   │   │   📄 MODULE2_EXTENSION_GUIDE.md
+│   │   │   │   📄 MODULE2_GAPS_AND_ROADMAP.docx
+│   │   │   │   📄 MODULE2_GAPS_AND_ROADMAP.md
+│   │   │   │   📄 MODULE2_POC_DETAILS.docx
+│   │   │   │   📄 MODULE2_POC_DETAILS.md
+│   │   │   │   📄 MODULE2_QUESTION_AND_ANSWER.docx
+│   │   │   │   📄 MODULE2_QUESTION_AND_ANSWER.md
+│   │   │   │   📄 MODULE2_REAL_WORLD_PROBLEM.docx
+│   │   │   │   📄 MODULE2_REAL_WORLD_PROBLEM.md
+│   │   │   │   📄 MODULE2_TEST_REGISTER.docx
+│   │   │   │   📄 MODULE2_TEST_REGISTER.md
+│   │   │   │   📄 MODULE2_VALIDATION_SUMMARY.docx
+│   │   │   │   📄 MODULE2_VALIDATION_SUMMARY.md
+│   │   │   │   📄 QUICKSTART_MODULE2.docx
+│   │   │   │   📄 QUICKSTART_MODULE2.md
+│   │   │   │   📄 RELEASE_NOTES_v3.0.0-module2.docx
+│   │   │   │   📄 RELEASE_NOTES_v3.0.0-module2.md
+│   │   📂 module1
+│   │   │   📄 pyproject.toml
+│   │   │   📄 README.md
+│   │   │   📄 requirements.txt
+│   │   📂 module2
+│   │   │   📄 pyproject.toml
+│   │   │   📄 README.md
+│   │   │   📄 requirements-languages.txt
+│   │   │   📄 requirements.txt
+│   │   📂 outputs
+│   │   │   📂 module2_graphs
+│   │   │   │   📄 graph_amaranth.json
+│   │   │   │   📄 graph_ardupilot.json
+│   │   │   │   📄 graph_astropy.json
+│   │   │   │   📄 graph_biopython.json
+│   │   │   │   📄 graph_ccxt.json
+│   │   │   │   📄 graph_circuitpython.json
+│   │   │   │   📄 graph_cocotb.json
+│   │   │   │   📄 graph_cvxpy.json
+│   │   │   │   📄 graph_django.json
+│   │   │   │   📄 graph_drake.json
+│   │   │   │   📄 graph_dronekit-python.json
+│   │   │   │   📄 graph_elasticsearch.json
+│   │   │   │   📄 graph_fastapi.json
+│   │   │   │   📄 graph_ffmpeg-python.json
+│   │   │   │   📄 graph_flask.json
+│   │   │   │   📄 graph_FreeCAD.json
+│   │   │   │   📄 graph_geopandas.json
+│   │   │   │   📄 graph_gnuradio.json
+│   │   │   │   📄 graph_go.json
+│   │   │   │   📄 graph_gst-python.json
+│   │   │   │   📄 graph_hl7apy.json
+│   │   │   │   📄 graph_kivy.json
+│   │   │   │   📄 graph_kubernetes-python.json
+│   │   │   │   📄 graph_LibreCAD.json
+│   │   │   │   📄 graph_librosa.json
+│   │   │   │   📄 graph_MetPy.json
+│   │   │   │   📄 graph_micropython.json
+│   │   │   │   📄 graph_napalm.json
+│   │   │   │   📄 graph_netmiko.json
+│   │   │   │   📄 graph_networkx.json
+│   │   │   │   📄 graph_nginx.json
+│   │   │   │   📄 graph_nltk.json
+│   │   │   │   📄 graph_odoo.json
+│   │   │   │   📄 graph_opencv-python.json
+│   │   │   │   📄 graph_OpenMDAO.json
+│   │   │   │   📄 graph_pandapower.json
+│   │   │   │   📄 graph_pennylane.json
+│   │   │   │   📄 graph_poliastro.json
+│   │   │   │   📄 graph_pulp.json
+│   │   │   │   📄 graph_pulumi.json
+│   │   │   │   📄 graph_pwntools.json
+│   │   │   │   📄 graph_py-evm.json
+│   │   │   │   📄 graph_pydicom.json
+│   │   │   │   📄 graph_pyNastran.json
+│   │   │   │   📄 graph_PyPSA.json
+│   │   │   │   📄 graph_python-igraph.json
+│   │   │   │   📄 graph_python-jenkins.json
+│   │   │   │   📄 graph_python-sgp4.json
+│   │   │   │   📄 graph_python.json
+│   │   │   │   📄 graph_qiskit.json
+│   │   │   │   📄 graph_rclpy.json
+│   │   │   │   📄 graph_react.json
+│   │   │   │   📄 graph_redis.json
+│   │   │   │   📄 graph_rust.json
+│   │   │   │   📄 graph_scapy.json
+│   │   │   │   📄 graph_shapely.json
+│   │   │   │   📄 graph_solana-py.json
+│   │   │   │   📄 graph_spaCy.json
+│   │   │   │   📄 graph_spring-boot.json
+│   │   │   │   📄 graph_toga.json
+│   │   │   │   📄 graph_transformers.json
+│   │   │   │   📄 graph_u-boot.json
+│   │   │   │   📄 graph_ui5-webcomponents.json
+│   │   │   │   📄 graph_ultralytics.json
+│   │   │   │   📄 graph_vscode.json
+│   │   │   │   📄 graph_whisper.json
+│   │   │   │   📄 graph_xarray.json
+│   │   │   │   📄 graph_zephyr.json
+│   │   │   │   📄 graph_zipline.json
+│   │   │   │   📄 LANGUAGE_ADAPTERS_SUMMARY.csv
+│   │   │   │   📄 LANGUAGE_ADAPTERS_SUMMARY.json
+│   │   │   │   📄 LANGUAGE_ADAPTERS_SUMMARY.md
+│   │   │   │   📄 MODULE2_FULL_SUMMARY.csv
+│   │   │   │   📄 MODULE2_FULL_SUMMARY.json
+│   │   │   │   📄 MODULE2_FULL_SUMMARY.md
+│   │   │   📂 real_scans
+│   │   │   │   📄 FULL_DOMAIN_SUMMARY.csv
+│   │   │   │   📄 FULL_DOMAIN_SUMMARY.json
+│   │   │   │   📄 FULL_DOMAIN_SUMMARY.md
+│   │   │   │   📄 scan_amaranth.md
+│   │   │   │   📄 scan_amaranth.txt
+│   │   │   │   📄 scan_ardupilot.md
+│   │   │   │   📄 scan_ardupilot.txt
+│   │   │   │   📄 scan_astropy.md
+│   │   │   │   📄 scan_astropy.txt
+│   │   │   │   📄 scan_biopython.md
+│   │   │   │   📄 scan_biopython.txt
+│   │   │   │   📄 scan_ccxt.md
+│   │   │   │   📄 scan_ccxt.txt
+│   │   │   │   📄 scan_circuitpython.md
+│   │   │   │   📄 scan_circuitpython.txt
+│   │   │   │   📄 scan_cocotb.md
+│   │   │   │   📄 scan_cocotb.txt
+│   │   │   │   📄 scan_codetruthagent.md
+│   │   │   │   📄 scan_codetruthagent.txt
+│   │   │   │   📄 scan_cvxpy.md
+│   │   │   │   📄 scan_cvxpy.txt
+│   │   │   │   📄 scan_django.md
+│   │   │   │   📄 scan_django.txt
+│   │   │   │   📄 scan_drake.md
+│   │   │   │   📄 scan_drake.txt
+│   │   │   │   📄 scan_dronekit_python.md
+│   │   │   │   📄 scan_dronekit_python.txt
+│   │   │   │   📄 scan_elasticsearch.md
+│   │   │   │   📄 scan_elasticsearch.txt
+│   │   │   │   📄 scan_fastapi.md
+│   │   │   │   📄 scan_fastapi.txt
+│   │   │   │   📄 scan_ffmpeg_python.md
+│   │   │   │   📄 scan_ffmpeg_python.txt
+│   │   │   │   📄 scan_flask.md
+│   │   │   │   📄 scan_flask.txt
+│   │   │   │   📄 scan_freecad.md
+│   │   │   │   📄 scan_freecad.txt
+│   │   │   │   📄 scan_geopandas.md
+│   │   │   │   📄 scan_geopandas.txt
+│   │   │   │   📄 scan_gnuradio.md
+│   │   │   │   📄 scan_gnuradio.txt
+│   │   │   │   📄 scan_go.md
+│   │   │   │   📄 scan_go.txt
+│   │   │   │   📄 scan_gst_python.md
+│   │   │   │   📄 scan_gst_python.txt
+│   │   │   │   📄 scan_hl7apy.md
+│   │   │   │   📄 scan_hl7apy.txt
+│   │   │   │   📄 scan_kivy.md
+│   │   │   │   📄 scan_kivy.txt
+│   │   │   │   📄 scan_kubernetes_python.md
+│   │   │   │   📄 scan_kubernetes_python.txt
+│   │   │   │   📄 scan_librecad.md
+│   │   │   │   📄 scan_librecad.txt
+│   │   │   │   📄 scan_librosa.md
+│   │   │   │   📄 scan_librosa.txt
+│   │   │   │   📄 scan_metpy.md
+│   │   │   │   📄 scan_metpy.txt
+│   │   │   │   📄 scan_micropython.md
+│   │   │   │   📄 scan_micropython.txt
+│   │   │   │   📄 scan_napalm.md
+│   │   │   │   📄 scan_napalm.txt
+│   │   │   │   📄 scan_netmiko.md
+│   │   │   │   📄 scan_netmiko.txt
+│   │   │   │   📄 scan_networkx.md
+│   │   │   │   📄 scan_networkx.txt
+│   │   │   │   📄 scan_nginx.md
+│   │   │   │   📄 scan_nginx.txt
+│   │   │   │   📄 scan_nltk.md
+│   │   │   │   📄 scan_nltk.txt
+│   │   │   │   📄 scan_odoo.md
+│   │   │   │   📄 scan_odoo.txt
+│   │   │   │   📄 scan_opencv_python.md
+│   │   │   │   📄 scan_opencv_python.txt
+│   │   │   │   📄 scan_openmdao.md
+│   │   │   │   📄 scan_openmdao.txt
+│   │   │   │   📄 scan_pandapower.md
+│   │   │   │   📄 scan_pandapower.txt
+│   │   │   │   📄 scan_pennylane.md
+│   │   │   │   📄 scan_pennylane.txt
+│   │   │   │   📄 scan_poliastro.md
+│   │   │   │   📄 scan_poliastro.txt
+│   │   │   │   📄 scan_pulp.md
+│   │   │   │   📄 scan_pulp.txt
+│   │   │   │   📄 scan_pulumi.md
+│   │   │   │   📄 scan_pulumi.txt
+│   │   │   │   📄 scan_pwntools.md
+│   │   │   │   📄 scan_pwntools.txt
+│   │   │   │   📄 scan_pydicom.md
+│   │   │   │   📄 scan_pydicom.txt
+│   │   │   │   📄 scan_pynastran.md
+│   │   │   │   📄 scan_pynastran.txt
+│   │   │   │   📄 scan_pypsa.md
+│   │   │   │   📄 scan_pypsa.txt
+│   │   │   │   📄 scan_python_igraph.md
+│   │   │   │   📄 scan_python_igraph.txt
+│   │   │   │   📄 scan_python_jenkins.md
+│   │   │   │   📄 scan_python_jenkins.txt
+│   │   │   │   📄 scan_python_sgp4.md
+│   │   │   │   📄 scan_python_sgp4.txt
+│   │   │   │   📄 scan_py_evm.md
+│   │   │   │   📄 scan_py_evm.txt
+│   │   │   │   📄 scan_qiskit.md
+│   │   │   │   📄 scan_qiskit.txt
+│   │   │   │   📄 scan_rclpy.md
+│   │   │   │   📄 scan_rclpy.txt
+│   │   │   │   📄 scan_react.md
+│   │   │   │   📄 scan_react.txt
+│   │   │   │   📄 scan_redis.md
+│   │   │   │   📄 scan_redis.txt
+│   │   │   │   📄 scan_rust.md
+│   │   │   │   📄 scan_rust.txt
+│   │   │   │   📄 scan_sap_ui5.md
+│   │   │   │   📄 scan_sap_ui5.txt
+│   │   │   │   📄 scan_scapy.md
+│   │   │   │   📄 scan_scapy.txt
+│   │   │   │   📄 scan_shapely.md
+│   │   │   │   📄 scan_shapely.txt
+│   │   │   │   📄 scan_solana_py.md
+│   │   │   │   📄 scan_solana_py.txt
+│   │   │   │   📄 scan_spacy.md
+│   │   │   │   📄 scan_spacy.txt
+│   │   │   │   📄 scan_springboot.md
+│   │   │   │   📄 scan_springboot.txt
+│   │   │   │   📄 scan_toga.md
+│   │   │   │   📄 scan_toga.txt
+│   │   │   │   📄 scan_transformers.md
+│   │   │   │   📄 scan_transformers.txt
+│   │   │   │   📄 scan_ultralytics.md
+│   │   │   │   📄 scan_ultralytics.txt
+│   │   │   │   📄 scan_u_boot.md
+│   │   │   │   📄 scan_u_boot.txt
+│   │   │   │   📄 scan_vscode.md
+│   │   │   │   📄 scan_vscode.txt
+│   │   │   │   📄 scan_whisper.md
+│   │   │   │   📄 scan_whisper.txt
+│   │   │   │   📄 scan_xarray.md
+│   │   │   │   📄 scan_xarray.txt
+│   │   │   │   📄 scan_zephyr.md
+│   │   │   │   📄 scan_zephyr.txt
+│   │   │   │   📄 scan_zipline.md
+│   │   │   │   📄 scan_zipline.txt
+│   │   📂 repository_cognition
+│   │   │   📄 cognition_engine.py
+│   │   │   📄 cognition_report.py
+│   │   │   📄 framework_signatures.py
+│   │   │   📄 report_writer.py
+│   │   │   📄 __init__.py
+│   │   📂 repository_graph
+│   │   │   📄 call_graph.py
+│   │   │   📄 class_graph.py
+│   │   │   📄 dependency_graph.py
+│   │   │   📄 function_graph.py
+│   │   │   📄 graph_engine.py
+│   │   │   📄 import_graph.py
+│   │   │   📄 module_graph.py
+│   │   │   📄 topology.py
+│   │   │   📄 verify_pipeline_integrity.py
+│   │   │   📄 __init__.py
+│   │   │   📂 languages
+│   │   │   │   📄 base_adapter.py
+│   │   │   │   📄 c_cpp_adapter.py
+│   │   │   │   📄 go_adapter.py
+│   │   │   │   📄 javascript_adapter.py
+│   │   │   │   📄 java_adapter.py
+│   │   │   │   📄 python_adapter.py
+│   │   │   │   📄 registry.py
+│   │   │   │   📄 rust_adapter.py
+│   │   │   │   📄 __init__.py
+│   │   │   📂 poc
+│   │   │   │   📄 graph_engine_poc.py
+│   │   │   📂 tests
+│   │   │   │   📄 module2_multi_repo_results.json
+│   │   │   │   📄 module2_test_output.json
+│   │   │   │   📄 scan_all_repos_languages.py
+│   │   │   │   📄 scan_all_repos_module2.py
+│   │   │   │   📄 test_java_js_adapters.py
+│   │   │   │   📄 test_language_composition.py
+│   │   │   │   📄 test_lang_adapters_real_repo.py
+│   │   │   │   📄 test_module2_graph_poc.py
+│   │   │   │   📄 test_module2_multi_repo.py
+│   │   │   │   📄 test_module2_repository_graph.py
+│   │   📂 tests
+│   │   │   📄 clone_repos.ps1
+│   │   │   📄 scan_all_repos_v3.py
+│   │   │   📄 test_module1_cognition.py
+│   │   │   📄 __init__.py
 │   📂 validation
 │   │   📄 approval_engine.py
 │   │   📄 rollback_manager.py

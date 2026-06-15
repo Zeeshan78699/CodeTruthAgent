@@ -6,6 +6,9 @@ Get V2 running on a real codebase in 5 minutes.
 
 ## Prerequisites
 
+**Note:** First run requires a one-time internet connection (~90MB download). 
+Subsequent runs work fully offline.
+
 - Python 3.11 or newer
 - Git
 - ~500MB free disk space (for the embedding model cache + sample repos)

@@ -1,0 +1,22 @@
+# CodeTruth Agent V3 — Module 2 (Repository Graph Engine)
+#
+# Python core (V3-004 through V3-009): NO external dependencies —
+# uses only the Python standard library (ast, os).
+#
+# Requires: Python 3.10+
+#
+# ---------------------------------------------------------------------
+# OPTIONAL — multi-language extension scaffold
+# (v3/repository_graph/languages/), early validated baseline, NOT part
+# of the frozen Python core. Only needed if you want to scan Java,
+# JavaScript/TypeScript, or C/C++ files in addition to Python.
+#
+#   pip install -r requirements-languages.txt
+#
+# javalang             (MIT)        - Java AST parsing
+# tree-sitter==0.21.3  (MIT)        - pinned: avoids API mismatch with
+#                                      newer tree-sitter releases
+# tree-sitter-languages (Apache 2.0) - prebuilt JS/TS/TSX/C/C++ grammars
+#
+# C/C++ adapter uses a regex heuristic (no extra dependency).
+# Go and Rust adapters are registered stubs (file-counted, not parsed).

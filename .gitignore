@@ -20,3 +20,9 @@ tests/__pycache__/
 backups/
 
 .venv/
+
+__pycache__/
+*.pyc
+
+v3/outputs/module2_graphs/graph_transformers.json
+v3/outputs/module2_graphs/graph_odoo.json

@@ -1,121 +1,51 @@
-# CodeTruth Agent V3 — Module 1: Repository Cognition Engine
+# CodeTruth Agent V3
 
-Independent AI research project. GPLv3.
+**Engineering Intelligence Operating System** — an independent AI research
+project. GPLv3.
 
-## What it does
+V3 is built as a series of independent, frozen modules, each adding a
+layer of deterministic, AI-model-free understanding of a software
+repository. No network access, no modification of scanned repositories,
+and every "I don't know" is logged explicitly rather than guessed.
 
-Module 1 scans a software repository and answers a basic but
-foundational question: **"What kind of repository is this?"**
+## Modules
 
-Given a path to a repository, it produces:
+### [Module 1 — Repository Cognition Engine](module1/README.md)
+Answers: **"What kind of repository is this?"**
+Application type, primary framework, technology stack, entry points, and a
+governance gate (APPROVED/BLOCKED) — validated across 69 real repositories,
+100% discovery score, 0 crashes.
 
-- **Application type** (one of 46 supported types — web app, ML
-  pipeline, firmware, quantum computing, ERP system, drone/UAV, etc.)
-- **Primary framework** (e.g. Django, Qiskit, Odoo — or "No Framework
-  Detected" when none exists, which is itself a meaningful, correct
-  result for C/C++ system software)
-- **Technology stack, languages, build systems**
-- **Entry points, configuration files, documentation, test
-  directories**
-- **Discovery score** and **classification score**
-- A **governance gate decision (V3-003)** — APPROVED / BLOCKED
+Source: `repository_cognition/` · Docs: [`docs/module1/`](docs/module1/)
 
-It performs no network access and makes no modifications to the
-scanned repository.
+### [Module 2 — Repository Graph Engine](module2/README.md)
+Answers: **"How is the code inside it wired together?"**
+Six structural graphs — functions, classes, modules, imports, dependencies,
+and resolved call relationships — plus an honest unresolved-call log.
+Validated across the same 69 repositories: 1,005,321 resolved calls,
+0 crashes, 31/31 unit tests pass. Includes an early multi-language
+extension scaffold (Java, JavaScript/TypeScript, C/C++).
 
-## Example
+Source: `repository_graph/` · Docs: [`docs/module2/`](docs/module2/)
 
-```bash
-python -c "
-from v3.repository_cognition import RepositoryCognitionEngine, ReportWriter
-report = RepositoryCognitionEngine('/path/to/repo').scan()
-ReportWriter(report).print_console()
-"
-```
+## Project-Level Documentation
 
-Output (abridged):
-
-```
-CLASSIFICATION
-  Application Type:      Web Application
-  Primary Framework:     Django
-  Discovery Score:       100%
-  Classification:        100%
-
-GOVERNANCE GATE — V3-003
-  Status   : APPROVED
-  Decision : Pipeline may proceed to Module 2
-```
-
-## Validation
-
-Run against 69 real, cloned, open-source repositories spanning 39
-application types, from 35 files (python-sgp4) to 61,850 files
-(Zephyr RTOS):
-
-```
-69/69 = 100% discovery score
-69/69 = correct application type
-69/69 = correct primary framework (or correctly "No Framework Detected")
-69/69 = governance gate APPROVED
- 0/69 = crashes
-35/35 = unit tests pass
-441,660 total files scanned
-```
-
-Full results: [`v3/docs/module1/MODULE1_CAPABILITY_PROOF.md`](v3/docs/module1/MODULE1_CAPABILITY_PROOF.md)
-
-## How it works (brief)
-
-Classification combines three signal sources:
-
-1. **Package/dependency signals** — from `requirements.txt`,
-   `pyproject.toml`, `setup.py`, etc.
-2. **Import signals** — `import` statements parsed via `ast` from a
-   sample of source files.
-3. **Content pattern signals** — for non-Python-package repositories
-   (C/C++ firmware, hardware bindings), specific identifying files are
-   checked directly.
-
-Primary framework resolution then runs a three-pass process
-(self-name match → type match → priority fallback), with generic
-utility packages (Click, Requests, Pytest, etc.) excluded from
-ever being selected as the *primary* framework.
-
-Full details: [`v3/docs/module1/MODULE1_DOCUMENTATION.md`](v3/docs/module1/MODULE1_DOCUMENTATION.md)
-
-## Documentation
-
-- [`MODULE1_REAL_WORLD_PROBLEM.md`](v3/docs/module1/MODULE1_REAL_WORLD_PROBLEM.md) — the problem this solves, and how
-- [`MODULE1_DOCUMENTATION.md`](v3/docs/module1/MODULE1_DOCUMENTATION.md) — architecture and scoring
-- [`MODULE1_CAPABILITY_PROOF.md`](v3/docs/module1/MODULE1_CAPABILITY_PROOF.md) — full 69-repo validation table
-- [`MODULE1_TEST_REGISTER.md`](v3/docs/module1/MODULE1_TEST_REGISTER.md) — test suite + issues found/fixed
-- [`MODULE1_EXTENSION_GUIDE.md`](v3/docs/module1/MODULE1_EXTENSION_GUIDE.md) — how to add new types/frameworks
-
-## Project Structure
-
-```
-v3/
-├── repository_cognition/   # Module 1 source
-│   ├── cognition_engine.py
-│   ├── cognition_report.py
-│   ├── report_writer.py
-│   └── framework_signatures.py
-├── tests/
-│   ├── test_module1_cognition.py   # 35 unit tests
-│   └── scan_all_repos_v3.py        # 69-repo validation script
-├── outputs/real_scans/              # per-repo reports + summary
-└── docs/module1/                    # documentation (this README links here)
-```
+- [`docs/PROJECT_RECORD_v3.0.0-module2.md`](docs/PROJECT_RECORD_v3.0.0-module2.md) —
+  full consolidated record: both modules' architecture, decisions,
+  validation numbers, capability comparison, and documentation index.
 
 ## Status
 
-Module 1 is complete and frozen as of `v3.0.0-module1`.
-Module 2 (Repository Graph Engine) is next.
+| Module | Status |
+|---|---|
+| Module 1 — Repository Cognition | Complete, frozen (`v3.0.0-module1`) |
+| Module 2 — Repository Graph (Python core) | Complete, frozen (`v3.0.0-module2`) |
+| Module 2 — Multi-language scaffold | Validated baseline, not frozen |
+| Module 3 | Planned next |
 
 ## License
 
-GPLv3 — see `LICENSE`.
+GPLv3 — see repository root `LICENSE`.
 
 ## Author
 

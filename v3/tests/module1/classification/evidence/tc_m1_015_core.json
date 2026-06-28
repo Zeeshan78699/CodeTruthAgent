@@ -1,0 +1,87 @@
+{
+  "repository_root": "C:\\repos\\v3\\pymodbus",
+  "scan_timestamp": "2026-06-25T18:41:01.141697+00:00",
+  "total_files_scanned": 198,
+  "total_python_files": 128,
+  "total_model_files": 0,
+  "project_purpose": "pymodbus \u2014 Embedded System \u2014 128 Python files",
+  "application_type": "EMBEDDED_SYSTEM",
+  "primary_framework": "None",
+  "secondary_frameworks": [
+    "RQ",
+    "Pytest"
+  ],
+  "detected_languages": [
+    "CSS",
+    "HTML",
+    "Python",
+    "Shell",
+    "TOML",
+    "YAML"
+  ],
+  "detected_file_types": [
+    "JSON",
+    "ReStructuredText"
+  ],
+  "detected_model_files": [],
+  "technology_stack": [
+    "Python"
+  ],
+  "build_systems": [
+    "Python Build",
+    "Make"
+  ],
+  "entry_points": [
+    "examples\\client_async.py",
+    "examples\\client_async_calls.py",
+    "examples\\client_calls.py",
+    "examples\\client_sync.py",
+    "examples\\contrib\\drainage_sim.py",
+    "examples\\contrib\\solar.py",
+    "examples\\contrib\\test_datastores.py",
+    "examples\\custom_msg.py",
+    "examples\\datastore_simulator_share.py",
+    "examples\\heatpump.py",
+    "examples\\message_parser.py",
+    "examples\\package_test_tool.py",
+    "examples\\server_async.py",
+    "examples\\server_datamodel.py",
+    "examples\\server_hook.py",
+    "examples\\server_sync.py",
+    "examples\\server_updating.py",
+    "examples\\simple_async_client.py",
+    "examples\\simple_sync_client.py",
+    "examples\\simulator.py",
+    "pymodbus\\server\\server.py",
+    "pymodbus\\server\\simulator\\main.py"
+  ],
+  "configuration_files": [
+    ".\\pyproject.toml",
+    "doc\\Makefile"
+  ],
+  "documentation_files": [
+    ".\\CHANGELOG.rst",
+    ".\\CONTRIBUTING.rst",
+    ".\\LICENSE",
+    ".\\README.rst",
+    "examples\\contrib\\README.rst"
+  ],
+  "test_directories": [
+    "test"
+  ],
+  "discovery_score": 1.0,
+  "classification_score": 0.75,
+  "confidence_score": 0.875,
+  "cognition_status": "COMPLETE",
+  "warnings": [
+    "5 file extension(s) not in language registry: .crt, .in, .key, .tgz, .typed. These files were counted but language not identified. Add to LANGUAGE_EXTENSIONS in framework_signatures.py."
+  ],
+  "unknown_file_extensions": [
+    ".crt",
+    ".in",
+    ".key",
+    ".tgz",
+    ".typed"
+  ],
+  "error_message": ""
+}

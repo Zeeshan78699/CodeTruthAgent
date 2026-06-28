@@ -1,0 +1,70 @@
+{
+  "repository_root": "C:\\repos\\v3\\poliastro",
+  "scan_timestamp": "2026-06-24T19:40:43.006159+00:00",
+  "total_files_scanned": 320,
+  "total_python_files": 189,
+  "total_model_files": 0,
+  "project_purpose": "poliastro \u2014 Space System (poliastro) \u2014 189 Python files",
+  "application_type": "SPACE_SYSTEM",
+  "primary_framework": "poliastro",
+  "secondary_frameworks": [
+    "Pytest",
+    "HTTPX"
+  ],
+  "detected_languages": [
+    "CSS",
+    "HTML",
+    "Jupyter Notebook",
+    "Python",
+    "TOML",
+    "YAML"
+  ],
+  "detected_file_types": [
+    "Configuration File",
+    "JSON",
+    "Markdown"
+  ],
+  "detected_model_files": [],
+  "technology_stack": [
+    "Python"
+  ],
+  "build_systems": [
+    "Make",
+    "Python Build",
+    "Conda"
+  ],
+  "entry_points": [
+    "contrib\\relative.py",
+    "contrib\\rv2tle.py"
+  ],
+  "configuration_files": [
+    ".\\Makefile",
+    ".\\pyproject.toml",
+    "binder\\environment.yml",
+    "docs\\Makefile"
+  ],
+  "documentation_files": [
+    ".\\AUTHORS.md",
+    ".\\CONTRIBUTING.md",
+    ".\\README.md",
+    "contrib\\CR3BP\\README.md",
+    "contrib\\README.md",
+    "contrib\\cr3bp_DhruvJ\\README.md"
+  ],
+  "test_directories": [
+    "tests"
+  ],
+  "discovery_score": 1.0,
+  "classification_score": 1.0,
+  "confidence_score": 1.0,
+  "cognition_status": "COMPLETE",
+  "warnings": [
+    "3 file extension(s) not in language registry: .cff, .dat, .in. These files were counted but language not identified. Add to LANGUAGE_EXTENSIONS in framework_signatures.py."
+  ],
+  "unknown_file_extensions": [
+    ".cff",
+    ".dat",
+    ".in"
+  ],
+  "error_message": ""
+}

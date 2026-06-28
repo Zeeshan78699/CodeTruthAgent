@@ -6,6 +6,12 @@ Runs the Module 2 graph engine against the SAME 69 repos used for Module 1's
 validation, and stores results separately as proof - mirroring Module 1's
 outputs/real_scans/ convention (per-repo files + FULL_DOMAIN_SUMMARY).
 
+Routed through python_adapter.py (not graph_engine.build_repository_graph
+directly) so the D-008 package-root fix and the attribute_call return-type
+fix are both applied - see package_root.py / type_inference.py. The frozen
+graph_engine.py, module_graph.py, and call_graph.py are unchanged; this
+script just calls the wrapper instead of the frozen function.
+
 Output location: v3/outputs/module2_graphs/
     - graph_<repo_name>.json       (full graph report per repo)
     - MODULE2_FULL_SUMMARY.csv
@@ -23,12 +29,28 @@ import sys
 import os
 import json
 import csv
+import warnings
 from collections import Counter
+
+# Suppresses SyntaxWarning noise from source files with invalid escape
+# sequences (e.g. FreeCAD's "\K", "\."). This only affects what gets
+# printed to console - it does NOT change how ast.parse() parses files,
+# so parse_error counts and every other result are unaffected either way.
+warnings.filterwarnings("ignore", category=SyntaxWarning)
 
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
 sys.path.insert(0, PROJECT_ROOT)
 
-from v3.repository_graph.graph_engine import build_repository_graph
+from v3.repository_graph.languages.python_adapter import PythonAdapter
+
+_adapter = PythonAdapter()
+
+
+def build_repository_graph(repo_path):
+    """Routes through the Module 3 gap-fix wrapper (D-008 + attribute_call)
+    instead of calling the frozen graph_engine function directly. Same
+    call signature as before, so nothing below this needs to change."""
+    return _adapter.scan(repo_path, [])
 
 
 # ---- EDIT THIS ----
@@ -88,6 +110,9 @@ def scan_one(repo_path):
         "attribute_call": unresolved_counts.get("attribute_call", 0),
         "name_call_unresolved": unresolved_counts.get("name_call_unresolved", 0),
         "self_method_not_found": unresolved_counts.get("self_method_not_found", 0),
+        # Module 3 gap-fix tracking (new):
+        "package_root_corrected": report.get("package_root_corrected", False),
+        "return_type_table_size": report.get("return_type_table_size", 0),
     }
     return summary, report
 
@@ -102,6 +127,7 @@ def write_markdown_summary(results, output_path):
     total_crashes = len(crash_results)
     total_parse_errors = sum(r["parse_errors"] for r in ok_results)
     approved_count = sum(1 for r in ok_results if r["governance_gate"] == "APPROVED")
+    corrected_count = sum(1 for r in ok_results if r.get("package_root_corrected"))
 
     lines = []
     lines.append("# Module 2 — Full Repository Validation Summary")
@@ -109,7 +135,10 @@ def write_markdown_summary(results, output_path):
     lines.append("**CodeTruth Agent V3 — Module 2 — Repository Graph Engine**")
     lines.append("")
     lines.append("This validation runs the SAME repo set used for Module 1's "
-                  "69-repo validation, to provide a comparable proof point.")
+                  "69-repo validation, to provide a comparable proof point. "
+                  "Routed through python_adapter.py, so results include the "
+                  "D-008 package-root fix and the attribute_call return-type "
+                  "fix - see Module 3 gap-fix notes below.")
     lines.append("")
     lines.append("## Overview")
     lines.append("")
@@ -123,6 +152,7 @@ def write_markdown_summary(results, output_path):
     lines.append(f"| Total functions found (V3-004) | {total_functions} |")
     lines.append(f"| Total classes found (V3-005) | {total_classes} |")
     lines.append(f"| Total parse errors (syntax) | {total_parse_errors} |")
+    lines.append(f"| Repos where D-008 package-root fix fired | {corrected_count} / {len(ok_results)} |")
     lines.append("")
 
     if crash_results:
@@ -137,13 +167,14 @@ def write_markdown_summary(results, output_path):
     lines.append("## Per-Repo Results")
     lines.append("")
     lines.append("| Repo | Files | Functions | Classes | Ext Deps | "
-                  "Resolved Calls | Unresolved | Resolved % | Gate |")
-    lines.append("|---|---|---|---|---|---|---|---|---|")
+                  "Resolved Calls | Unresolved | Resolved % | Gate | Root Corrected |")
+    lines.append("|---|---|---|---|---|---|---|---|---|---|")
     for r in ok_results:
         lines.append(
             f"| {r['repo']} | {r['files_scanned']} | {r['functions']} | "
             f"{r['classes']} | {r['external_deps']} | {r['resolved_calls']} | "
-            f"{r['unresolved_total']} | {r['resolved_pct']}% | {r['governance_gate']} |"
+            f"{r['unresolved_total']} | {r['resolved_pct']}% | {r['governance_gate']} | "
+            f"{'Yes' if r.get('package_root_corrected') else 'No'} |"
         )
     lines.append("")
 
@@ -152,7 +183,10 @@ def write_markdown_summary(results, output_path):
     lines.append("- **\"Unresolved\" is dominated by `attribute_call`** — method "
                   "calls on local variables whose type isn't statically tracked "
                   "(e.g. `lines.append(x)`). This is a documented limitation "
-                  "(see MODULE2_DOCUMENTATION.md section 8), not a defect.")
+                  "(see MODULE2_DOCUMENTATION.md section 8), not a defect. The "
+                  "Module 3 attribute_call fix (type_inference.py) resolves the "
+                  "subset where the variable's type comes from a function's "
+                  "return value with an unambiguous, single return type.")
     lines.append("- **\"Resolved %\" is expected to be in the 15-40% range** "
                   "across most repos due to the above. The meaningful proof "
                   "point is: 0 crashes, governance APPROVED, and 0 unresolved "
@@ -162,6 +196,12 @@ def write_markdown_summary(results, output_path):
     lines.append("- **Parse errors** indicate files with genuine Python syntax "
                   "errors (e.g. Python 2 syntax in a Python 3 scan) - these are "
                   "logged and skipped, not crashes.")
+    lines.append("- **\"Root Corrected\" = Yes** means this repo's importable "
+                  "package root was a subdirectory of the clone (e.g. "
+                  "ccxt/python/ccxt/) and the D-008 fix detected and corrected "
+                  "it. A repo whose package already sits at the clone root "
+                  "(the common case) will correctly show No - that is not a "
+                  "missed fix, it means no fix was needed.")
     lines.append("")
     lines.append("---")
     lines.append("")
@@ -194,9 +234,10 @@ if __name__ == "__main__":
         results.append(summary)
 
         if summary["status"] == "OK":
+            corrected_tag = " [root-corrected]" if summary.get("package_root_corrected") else ""
             print(f"OK ({summary['files_scanned']} files, "
                   f"{summary['unresolved_total']} unresolved, "
-                  f"{summary['governance_gate']})")
+                  f"{summary['governance_gate']}){corrected_tag}")
             # Save full per-repo report
             out_file = os.path.join(OUTPUT_DIR, f"graph_{repo_name}.json")
             with open(out_file, "w", encoding="utf-8") as f:
@@ -211,7 +252,8 @@ if __name__ == "__main__":
             "repo", "status", "files_scanned", "modules_parsed", "functions",
             "classes", "external_deps", "resolved_calls", "unresolved_total",
             "resolved_pct", "governance_gate", "parse_errors", "attribute_call",
-            "name_call_unresolved", "self_method_not_found", "error",
+            "name_call_unresolved", "self_method_not_found",
+            "package_root_corrected", "return_type_table_size", "error",
         ])
         writer.writeheader()
         for r in results:
@@ -229,6 +271,7 @@ if __name__ == "__main__":
     ok = [r for r in results if r["status"] == "OK"]
     crashed = [r for r in results if r["status"] != "OK"]
     approved = [r for r in ok if r["governance_gate"] == "APPROVED"]
+    corrected = [r for r in ok if r.get("package_root_corrected")]
 
     print()
     print("=" * 60)
@@ -236,6 +279,7 @@ if __name__ == "__main__":
     print(f"  OK (no crash): {len(ok)}")
     print(f"  CRASHED: {len(crashed)}")
     print(f"  Governance APPROVED: {len(approved)} / {len(ok)}")
+    print(f"  D-008 package-root fix fired on: {len(corrected)} / {len(ok)}")
     print(f"  Total files scanned: {sum(r['files_scanned'] for r in ok)}")
     print(f"  Total functions found: {sum(r['functions'] for r in ok)}")
     print(f"  Total classes found: {sum(r['classes'] for r in ok)}")

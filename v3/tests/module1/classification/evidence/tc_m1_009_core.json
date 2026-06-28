@@ -1,0 +1,30 @@
+{
+  "repository_root": "C:\\repos\\v3\\click",
+  "scan_timestamp": "2026-06-25T18:39:52.040338+00:00",
+  "total_files_scanned": 0,
+  "total_python_files": 0,
+  "total_model_files": 0,
+  "project_purpose": "click \u2014 Unknown \u2014 unknown scale",
+  "application_type": "UNKNOWN",
+  "primary_framework": "None",
+  "secondary_frameworks": [],
+  "detected_languages": [],
+  "detected_file_types": [],
+  "detected_model_files": [],
+  "technology_stack": [],
+  "build_systems": [],
+  "entry_points": [],
+  "configuration_files": [],
+  "documentation_files": [],
+  "test_directories": [],
+  "discovery_score": 0.0,
+  "classification_score": 0.0,
+  "confidence_score": 0.0,
+  "cognition_status": "FAILED",
+  "warnings": [
+    "No dependency files or configuration files found. Classification based on file extensions only.",
+    "Classification confidence low (0%). application_type could not be determined. Discovery scan is complete \u2014 structure, languages, and files are accurate."
+  ],
+  "unknown_file_extensions": [],
+  "error_message": ""
+}

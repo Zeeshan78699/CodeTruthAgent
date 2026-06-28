@@ -1,0 +1,82 @@
+{
+  "repository_root": "C:\\repos\\v3\\pydicom",
+  "scan_timestamp": "2026-06-25T18:38:39.132528+00:00",
+  "total_files_scanned": 527,
+  "total_python_files": 169,
+  "total_model_files": 0,
+  "project_purpose": "pydicom \u2014 Medical System (PyDICOM) \u2014 169 Python files",
+  "application_type": "MEDICAL_SYSTEM",
+  "primary_framework": "PyDICOM",
+  "secondary_frameworks": [
+    "Pytest",
+    "Requests"
+  ],
+  "detected_languages": [
+    "CSS",
+    "DICOM Medical Image",
+    "JavaScript",
+    "Python",
+    "Shell",
+    "TOML",
+    "YAML"
+  ],
+  "detected_file_types": [
+    "JSON",
+    "Markdown",
+    "ReStructuredText",
+    "Text",
+    "Windows Batch Script"
+  ],
+  "detected_model_files": [],
+  "technology_stack": [
+    "Python"
+  ],
+  "build_systems": [
+    "Make",
+    "Python Build"
+  ],
+  "entry_points": [
+    "examples\\dicomtree.py",
+    "examples\\memory_dataset.py",
+    "src\\pydicom\\cli\\main.py",
+    "src\\pydicom\\env_info.py",
+    "src\\pydicom\\util\\codify.py",
+    "src\\pydicom\\util\\dump.py"
+  ],
+  "configuration_files": [
+    ".\\Makefile",
+    ".\\pyproject.toml",
+    "doc\\Makefile",
+    "src\\pydicom\\config.py"
+  ],
+  "documentation_files": [
+    ".\\CONTRIBUTING.md",
+    ".\\LICENSE",
+    ".\\README.md",
+    "doc\\README.md",
+    "examples\\README.txt",
+    "examples\\image_processing\\README.txt",
+    "examples\\input_output\\README.txt",
+    "examples\\metadata_processing\\README.txt",
+    "src\\pydicom\\data\\palettes\\README.md",
+    "src\\pydicom\\data\\test_files\\README.txt",
+    "src\\pydicom\\data\\test_files\\dicomdirtests\\README.txt",
+    "src\\pydicom\\data\\test_files\\dicomdirtests\\TINY_ALPHA\\README"
+  ],
+  "test_directories": [
+    "tests"
+  ],
+  "discovery_score": 1.0,
+  "classification_score": 1.0,
+  "confidence_score": 1.0,
+  "cognition_status": "COMPLETE",
+  "warnings": [
+    "3 file extension(s) not in language registry: .dump, .icc, .typed. These files were counted but language not identified. Add to LANGUAGE_EXTENSIONS in framework_signatures.py."
+  ],
+  "unknown_file_extensions": [
+    ".dump",
+    ".icc",
+    ".typed"
+  ],
+  "error_message": ""
+}

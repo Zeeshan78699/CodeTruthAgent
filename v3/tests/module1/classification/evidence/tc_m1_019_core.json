@@ -1,0 +1,64 @@
+{
+  "repository_root": "C:\\repos\\v3\\PyPSA",
+  "scan_timestamp": "2026-06-25T18:42:15.928655+00:00",
+  "total_files_scanned": 777,
+  "total_python_files": 170,
+  "total_model_files": 0,
+  "project_purpose": "PyPSA \u2014 Energy System (PyPSA) \u2014 170 Python files",
+  "application_type": "ENERGY_SYSTEM",
+  "primary_framework": "PyPSA",
+  "secondary_frameworks": [
+    "Pytest",
+    "Requests"
+  ],
+  "detected_languages": [
+    "CSS",
+    "HTML",
+    "JavaScript",
+    "Jupyter Notebook",
+    "NetCDF Scientific",
+    "Python",
+    "TOML",
+    "YAML"
+  ],
+  "detected_file_types": [
+    "JSON",
+    "Markdown",
+    "Text"
+  ],
+  "detected_model_files": [],
+  "technology_stack": [
+    "Python"
+  ],
+  "build_systems": [
+    "Python Build"
+  ],
+  "entry_points": [],
+  "configuration_files": [
+    ".\\pyproject.toml",
+    "docs\\requirements.txt"
+  ],
+  "documentation_files": [
+    ".\\CONTRIBUTING.md",
+    ".\\LICENSE",
+    ".\\README.md"
+  ],
+  "test_directories": [
+    "test"
+  ],
+  "discovery_score": 1.0,
+  "classification_score": 1.0,
+  "confidence_score": 1.0,
+  "cognition_status": "COMPLETE",
+  "warnings": [
+    "5 file extension(s) not in language registry: .cff, .csv, .ignore, .in, .typed. These files were counted but language not identified. Add to LANGUAGE_EXTENSIONS in framework_signatures.py."
+  ],
+  "unknown_file_extensions": [
+    ".cff",
+    ".csv",
+    ".ignore",
+    ".in",
+    ".typed"
+  ],
+  "error_message": ""
+}

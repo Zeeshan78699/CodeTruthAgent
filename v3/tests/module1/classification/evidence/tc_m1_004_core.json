@@ -1,0 +1,109 @@
+{
+  "repository_root": "C:\\repos\\v3\\MetPy",
+  "scan_timestamp": "2026-06-25T18:38:58.522532+00:00",
+  "total_files_scanned": 751,
+  "total_python_files": 180,
+  "total_model_files": 19,
+  "project_purpose": "MetPy \u2014 Climate Science (MetPy) \u2014 180 Python files",
+  "application_type": "CLIMATE_SCIENCE",
+  "primary_framework": "MetPy",
+  "secondary_frameworks": [
+    "Pytest"
+  ],
+  "detected_languages": [
+    "CSS",
+    "Docker",
+    "HTML",
+    "JavaScript",
+    "Jupyter Notebook",
+    "NetCDF Scientific",
+    "Python",
+    "Ruby",
+    "Shapefile",
+    "Shell",
+    "TOML",
+    "YAML"
+  ],
+  "detected_file_types": [
+    "Configuration File",
+    "JSON",
+    "Markdown",
+    "PDF Document",
+    "ReStructuredText",
+    "Text",
+    "Windows Batch Script"
+  ],
+  "detected_model_files": [
+    "NumPy Archive"
+  ],
+  "technology_stack": [
+    "Python",
+    "Docker",
+    "Jenkins"
+  ],
+  "build_systems": [
+    "Python Build",
+    "Setuptools",
+    "Make"
+  ],
+  "entry_points": [
+    "ci\\download_cartopy_maps.py",
+    "ci\\filter_links.py"
+  ],
+  "configuration_files": [
+    ".\\pyproject.toml",
+    ".\\setup.cfg",
+    "benchmarks\\Dockerfile",
+    "benchmarks\\Jenkinsfile",
+    "ci\\requirements.txt",
+    "docs\\Makefile",
+    "tools\\metar_parser\\Makefile"
+  ],
+  "documentation_files": [
+    ".\\CONTRIBUTING.md",
+    ".\\LICENSE",
+    ".\\README.md",
+    "docs\\devel\\CONTRIBUTING.md",
+    "examples\\README.txt",
+    "examples\\calculations\\README.txt",
+    "examples\\formats\\README.txt",
+    "examples\\gridding\\README.txt",
+    "examples\\plots\\README.txt",
+    "examples\\remote\\README.txt",
+    "tools\\README.md",
+    "tutorials\\README.md"
+  ],
+  "test_directories": [
+    "tests"
+  ],
+  "discovery_score": 1.0,
+  "classification_score": 1.0,
+  "confidence_score": 1.0,
+  "cognition_status": "COMPLETE",
+  "warnings": [
+    "20 file extension(s) not in language registry: .ar2v, .cff, .cpg, .csv, .dbf. These files were counted but language not identified. Add to LANGUAGE_EXTENSIONS in framework_signatures.py."
+  ],
+  "unknown_file_extensions": [
+    ".ar2v",
+    ".cff",
+    ".cpg",
+    ".csv",
+    ".dbf",
+    ".gem",
+    ".geojson",
+    ".gini",
+    ".grd",
+    ".in",
+    ".last",
+    ".nids",
+    ".peg",
+    ".prj",
+    ".sfc",
+    ".shx",
+    ".snd",
+    ".spec",
+    ".tbl",
+    ".wmo"
+  ],
+  "error_message": ""
+}

@@ -1,0 +1,4289 @@
+{
+  "core_report": {
+    "repository_root": "C:\\repos\\v3\\welleng",
+    "scan_timestamp": "2026-06-25T18:41:18.773303+00:00",
+    "total_files_scanned": 269,
+    "total_python_files": 65,
+    "total_model_files": 1,
+    "project_purpose": "welleng \u2014 Graph Analytics (NetworkX) \u2014 65 Python files",
+    "application_type": "GRAPH_ANALYTICS",
+    "primary_framework": "NetworkX",
+    "secondary_frameworks": [
+      "Pytest"
+    ],
+    "detected_languages": [
+      "HTML",
+      "Python",
+      "TOML",
+      "YAML"
+    ],
+    "detected_file_types": [
+      "Configuration File",
+      "Excel Spreadsheet",
+      "JSON",
+      "Markdown",
+      "ReStructuredText",
+      "Text",
+      "Windows Batch Script",
+      "Word Document"
+    ],
+    "detected_model_files": [
+      "Pickle Model"
+    ],
+    "technology_stack": [
+      "Python"
+    ],
+    "build_systems": [
+      "Python Build",
+      "Setuptools",
+      "Make"
+    ],
+    "entry_points": [
+      "examples\\extract_torque_drag.py",
+      "examples\\using_error_models.py",
+      "examples\\visualise_clc_edge_cases.py",
+      "reference\\make_standard_paths.py",
+      "welleng\\errors\\conformance.py",
+      "welleng\\errors\\copsegrove_validate.py",
+      "welleng\\errors\\extract_iscwsa_codes.py",
+      "welleng\\errors\\extract_owsg_codes_generic.py",
+      "welleng\\errors\\iscwsa_validate.py",
+      "welleng\\errors\\tools\\owsg_to_json.py",
+      "welleng\\exchange\\edm.py",
+      "welleng\\fluid.py",
+      "welleng\\io.py"
+    ],
+    "configuration_files": [
+      ".\\pyproject.toml",
+      ".\\requirements.txt",
+      ".\\setup.cfg",
+      ".\\setup.py",
+      "docs\\Makefile"
+    ],
+    "documentation_files": [
+      ".\\LICENSE",
+      ".\\README.md",
+      "data\\iscwsa\\toolgroups\\README.md"
+    ],
+    "test_directories": [
+      "tests"
+    ],
+    "discovery_score": 1.0,
+    "classification_score": 1.0,
+    "confidence_score": 1.0,
+    "cognition_status": "COMPLETE",
+    "warnings": [
+      "2 file extension(s) not in language registry: .archived, .in. These files were counted but language not identified. Add to LANGUAGE_EXTENSIONS in framework_signatures.py."
+    ],
+    "unknown_file_extensions": [
+      ".archived",
+      ".in"
+    ],
+    "error_message": ""
+  },
+  "identity": {
+    "repository_name": "welleng",
+    "application_type": "DRILLING_SYSTEM",
+    "domain": "DRILLING_SYSTEM",
+    "primary_framework": "NetworkX",
+    "project_purpose": "welleng \u2014 Graph Analytics (NetworkX) \u2014 65 Python files",
+    "classification_source": "COGNITION_ENGINE",
+    "confidence": 1.0,
+    "is_known": true
+  },
+  "architecture": {
+    "pattern": "LIBRARY",
+    "confidence": "HIGH",
+    "evidence": [
+      "setup.py",
+      "pyproject.toml",
+      "setup.cfg",
+      "__init__.py"
+    ],
+    "all_scores": {
+      "MVC": 0,
+      "LAYERED": 0,
+      "MICROSERVICES": 0,
+      "EVENT_DRIVEN": 0,
+      "PIPELINE": 0,
+      "LIBRARY": 4,
+      "MONOLITH": 0
+    }
+  },
+  "boundary": {
+    "boundary_detected": true,
+    "root_path": "C:\\repos\\v3\\welleng",
+    "is_monorepo": false,
+    "sub_projects": [],
+    "total_files": 302,
+    "total_dirs": 38,
+    "scan_complete": true,
+    "notes": []
+  },
+  "signals": {
+    "package_signals": {
+      "Finance": [],
+      "ML": [],
+      "ComputerVision": [],
+      "NLP": [],
+      "Robotics": [],
+      "Scientific": [],
+      "Medical": [],
+      "Web": [],
+      "Data": [],
+      "DevOps": []
+    },
+    "import_signals": {
+      "Finance": [
+        "pandas"
+      ],
+      "ML": [],
+      "ComputerVision": [],
+      "NLP": [],
+      "Robotics": [],
+      "Scientific": [
+        "numpy",
+        "scipy"
+      ],
+      "Medical": [],
+      "Web": [],
+      "Data": [],
+      "DevOps": []
+    },
+    "content_signals": {
+      "Finance": [
+        "erp",
+        "exchange"
+      ],
+      "Medical": [],
+      "Aerospace": [],
+      "ML": [
+        "model"
+      ],
+      "Robotics": [],
+      "Energy": [],
+      "Web": [
+        "template"
+      ]
+    },
+    "domain_scores": {
+      "NLP": 0,
+      "Medical": 0,
+      "Scientific": 2,
+      "Data": 0,
+      "ComputerVision": 0,
+      "ML": 1,
+      "Robotics": 0,
+      "Web": 1,
+      "Finance": 3,
+      "Energy": 0,
+      "Aerospace": 0,
+      "DevOps": 0
+    },
+    "top_domain": "Finance",
+    "top_score": 3
+  },
+  "classification_reason": {
+    "domain": "DRILLING_SYSTEM",
+    "winning_reason": "Insufficient evidence to classify repository domain.",
+    "signal_summary": {
+      "NLP": 0,
+      "Medical": 0,
+      "Scientific": 2,
+      "Data": 0,
+      "ComputerVision": 0,
+      "ML": 1,
+      "Robotics": 0,
+      "Web": 1,
+      "Finance": 3,
+      "Energy": 0,
+      "Aerospace": 0,
+      "DevOps": 0
+    },
+    "top_signals": [],
+    "evidence_strength": "NONE",
+    "notes": [
+      "No domain signals found. Human review required before Module 2 proceeds."
+    ]
+  },
+  "gate": {
+    "gate_passed": true,
+    "gate_decision": "APPROVED",
+    "checks": [
+      {
+        "check_name": "Cognition Status",
+        "passed": true,
+        "detail": "cognition_status = COMPLETE"
+      },
+      {
+        "check_name": "Domain Classification",
+        "passed": true,
+        "detail": "domain = DRILLING_SYSTEM, is_known = True"
+      },
+      {
+        "check_name": "Repository Boundary",
+        "passed": true,
+        "detail": "boundary_detected = True"
+      },
+      {
+        "check_name": "Repository Not Empty",
+        "passed": true,
+        "detail": "total_files = 302"
+      },
+      {
+        "check_name": "Confidence Score Present",
+        "passed": true,
+        "detail": "confidence_score = 1.0"
+      }
+    ],
+    "approved_for": "MODULE_2",
+    "blocking_reason": null
+  },
+  "knowledge_index": {
+    "readme_files": [
+      {
+        "doc_type": "README",
+        "path": "README.md",
+        "filename": "README.md",
+        "extension": ".md"
+      },
+      {
+        "doc_type": "README",
+        "path": "data\\iscwsa\\toolgroups\\README.md",
+        "filename": "README.md",
+        "extension": ".md"
+      }
+    ],
+    "business_rule_docs": [
+      {
+        "doc_type": "BUSINESS_RULE",
+        "path": "reference\\standard-set-of-wellpaths-for-evaluating-clearance-scenarios-r4-17-may-2017.docx",
+        "filename": "standard-set-of-wellpaths-for-evaluating-clearance-scenarios-r4-17-may-2017.docx",
+        "extension": ".docx"
+      },
+      {
+        "doc_type": "BUSINESS_RULE",
+        "path": "reference\\standard-set-of-wellpaths-for-evaluating-clearance-scenarios-r4-17-may-2017.xlsx",
+        "filename": "standard-set-of-wellpaths-for-evaluating-clearance-scenarios-r4-17-may-2017.xlsx",
+        "extension": ".xlsx"
+      }
+    ],
+    "architecture_docs": [],
+    "functional_specs": [
+      {
+        "doc_type": "SPEC",
+        "path": "requirements.txt",
+        "filename": "requirements.txt",
+        "extension": ".txt"
+      }
+    ],
+    "total_docs_found": 5,
+    "notes": [
+      "SCOPE NOTE: This module reports document locations only. Content extraction and rule interpretation require V3-108 governance."
+    ]
+  },
+  "assumptions": {
+    "assumptions": [
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_bug_fixes.py",
+        "source_line": 41,
+        "raw_match": "assert node is not None"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_bug_fixes.py",
+        "source_line": 42,
+        "raw_match": "assert node.unit == 'feet', f\"Expected unit 'feet', got '{node.unit}'\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_bug_fixes.py",
+        "source_line": 43,
+        "raw_match": "assert abs(node.md - 50.0) < 1e-6, f\"Expected md=50, got {node.md}\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_bug_fixes.py",
+        "source_line": 54,
+        "raw_match": "assert node is not None"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_bug_fixes.py",
+        "source_line": 55,
+        "raw_match": "assert node.unit == 'meters'"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_bug_fixes.py",
+        "source_line": 56,
+        "raw_match": "assert abs(node.md - 150.0) < 1e-6"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_bug_fixes.py",
+        "source_line": 80,
+        "raw_match": "assert mesh.vertices is not None"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_bug_fixes.py",
+        "source_line": 81,
+        "raw_match": "assert mesh.vertices.shape[-1] == 3"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_bug_fixes.py",
+        "source_line": 100,
+        "raw_match": "assert idx is not None, \"Need a station with off-diagonal HL covariance\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_bug_fixes.py",
+        "source_line": 108,
+        "raw_match": "assert not np.isclose(sigma_major_eigen, sigma_major_diag), ("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_clearance_iscwsa.py",
+        "source_line": 74,
+        "raw_match": "assert np.allclose("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_clearance_iscwsa.py",
+        "source_line": 90,
+        "raw_match": "assert np.allclose("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_clearance_iscwsa.py",
+        "source_line": 113,
+        "raw_match": "assert np.allclose("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_connector.py",
+        "source_line": 15,
+        "raw_match": "assert ("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_connector.py",
+        "source_line": 20,
+        "raw_match": "assert c.method == 'hold', \"Unexpected method\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_connector.py",
+        "source_line": 22,
+        "raw_match": "assert isinstance(from_connections(c), Survey)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_connector.py",
+        "source_line": 31,
+        "raw_match": "assert c.method == 'min_curve'"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_connector.py",
+        "source_line": 39,
+        "raw_match": "assert c.md_target > c.pos1[2], \"Failed c3\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_connector.py",
+        "source_line": 47,
+        "raw_match": "assert c.method == 'min_curve_to_target'"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_connector.py",
+        "source_line": 59,
+        "raw_match": "assert c.method == 'curve_hold_curve'"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_connector.py",
+        "source_line": 62,
+        "raw_match": "assert isinstance(from_connections(c, step=30), Survey)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_connector.py",
+        "source_line": 73,
+        "raw_match": "assert c.method == 'curve_hold_curve'"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_connector.py",
+        "source_line": 84,
+        "raw_match": "assert c.radius_design2 < c.radius_design"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_connector_batch.py",
+        "source_line": 60,
+        "raw_match": "assert c.method == 'min_dist_to_target', ("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_connector_batch.py",
+        "source_line": 96,
+        "raw_match": "assert out['pos2'].shape == (3,)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_connector_batch.py",
+        "source_line": 97,
+        "raw_match": "assert out['vec_target'].shape == (3,)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_connector_batch.py",
+        "source_line": 101,
+        "raw_match": "assert np.ndim(out['tangent_length']) == 0"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_connector_batch.py",
+        "source_line": 102,
+        "raw_match": "assert np.ndim(out['dogleg']) == 0"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_connector_batch.py",
+        "source_line": 103,
+        "raw_match": "assert np.ndim(out['dist_curve']) == 0"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_connector_batch.py",
+        "source_line": 104,
+        "raw_match": "assert np.ndim(out['md']) == 0"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_connector_batch.py",
+        "source_line": 126,
+        "raw_match": "assert out.shape == (3,)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_connector_batch.py",
+        "source_line": 152,
+        "raw_match": "assert out.shape == (n, 3)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_connector_batch.py",
+        "source_line": 180,
+        "raw_match": "assert out[\"dogleg\"] >= 0.0, f\"dogleg not wrapped: {out['dogleg']}\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_fluid.py",
+        "source_line": 26,
+        "raw_match": "assert round(density_profile[-1], 2) == 9.85"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_gyro_survey.py",
+        "source_line": 53,
+        "raw_match": "assert cov.shape == (3, 3)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_gyro_survey.py",
+        "source_line": 54,
+        "raw_match": "assert np.all(np.isfinite(cov))"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_gyro_survey.py",
+        "source_line": 57,
+        "raw_match": "assert 0.1 < sN < 100.0"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_gyro_survey.py",
+        "source_line": 58,
+        "raw_match": "assert 0.1 < sE < 100.0"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_gyro_survey.py",
+        "source_line": 59,
+        "raw_match": "assert 0.0 < sV < 100.0"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_gyro_survey.py",
+        "source_line": 79,
+        "raw_match": "assert s_ns < s_ns_ct, ("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_iscwsa_ingest.py",
+        "source_line": 39,
+        "raw_match": "assert h.short_name  # populated"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_iscwsa_ingest.py",
+        "source_line": 40,
+        "raw_match": "assert float(h.revision_no) in (pytest.approx(5.0), pytest.approx(5.1))"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_iscwsa_ingest.py",
+        "source_line": 46,
+        "raw_match": "assert example.revision == \"Revision 5.11\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_iscwsa_ingest.py",
+        "source_line": 50,
+        "raw_match": "assert len(example.terms) == 35"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_iscwsa_ingest.py",
+        "source_line": 53,
+        "raw_match": "assert {\"XCLA\", \"XCLH\", \"SAGE\", \"XYM3E\", \"XYM4E\"} <= codes"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_iscwsa_ingest.py",
+        "source_line": 56,
+        "raw_match": "assert t.code and t.wt_fn"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_iscwsa_ingest.py",
+        "source_line": 57,
+        "raw_match": "assert np.isfinite(t.magnitude)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_iscwsa_ingest.py",
+        "source_line": 58,
+        "raw_match": "assert t.propagation in {\"R\", \"S\", \"G\", \"W\"}"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_iscwsa_ingest.py",
+        "source_line": 64,
+        "raw_match": "assert n_w == n_t"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_iscwsa_ingest.py",
+        "source_line": 65,
+        "raw_match": "assert np.array_equal(example.wellpath.stations[:, 0], example.totals.md)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_iscwsa_json_conformance.py",
+        "source_line": 74,
+        "raw_match": "assert len(results) == exp_total, f\"expected {exp_total} terms, got {len(results)}\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_iscwsa_json_conformance.py",
+        "source_line": 75,
+        "raw_match": "assert counts.get(\"MATCH\", 0) == exp_match, ("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_iscwsa_json_conformance.py",
+        "source_line": 78,
+        "raw_match": "assert counts.get(\"DIFFER\", 0) == exp_differ, ("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_iscwsa_json_conformance.py",
+        "source_line": 81,
+        "raw_match": "assert counts.get(\"INTERP_FAILED\", 0) == exp_interp_fail, ("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_iscwsa_json_conformance.py",
+        "source_line": 84,
+        "raw_match": "assert counts.get(\"NO_LEGACY\", 0) == exp_no_legacy, ("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_iscwsa_json_conformance.py",
+        "source_line": 110,
+        "raw_match": "assert not r.interp_available, ("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_iscwsa_json_conformance.py",
+        "source_line": 130,
+        "raw_match": "assert len(matched) >= 25, ("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_iscwsa_json_conformance.py",
+        "source_line": 134,
+        "raw_match": "assert r.max_abs_diff <= 1e-12, ("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_iscwsa_mwd_error.py",
+        "source_line": 135,
+        "raw_match": "assert em.drdp.shape == (len(s.md), 18), f\"{model}: unexpected shape\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_iscwsa_mwd_error.py",
+        "source_line": 136,
+        "raw_match": "assert np.allclose(em.drdp, expected, atol=1e-14), ("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_iscwsa_validate.py",
+        "source_line": 3,
+        "raw_match": "assert pass/fail for any given error source \u2014 they lock in the"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_iscwsa_validate.py",
+        "source_line": 35,
+        "raw_match": "assert report.per_source, \"expected at least one comparison row\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_iscwsa_validate.py",
+        "source_line": 37,
+        "raw_match": "assert report.totals, \"expected TOTALS comparisons\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_iscwsa_validate.py",
+        "source_line": 40,
+        "raw_match": "assert np.all(np.isfinite(c.welleng))"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_iscwsa_validate.py",
+        "source_line": 43,
+        "raw_match": "assert path.name in s"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_iscwsa_validate.py",
+        "source_line": 44,
+        "raw_match": "assert \"PASS\" in s or \"FAIL\" in s"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_iscwsa_validate.py",
+        "source_line": 63,
+        "raw_match": "assert passing >= 30, f\"only {passing}/{len(pf)} sources pass on Example #1\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_minimal.py",
+        "source_line": 20,
+        "raw_match": "assert isinstance(survey, we.survey.Survey)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_survey_interpolate.py",
+        "source_line": 14,
+        "raw_match": "assert isinstance(survey_interp, we.survey.Survey)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_survey_interpolate.py",
+        "source_line": 17,
+        "raw_match": "assert isinstance(survey_interp, we.survey.Survey)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_survey_interpolate.py",
+        "source_line": 25,
+        "raw_match": "assert isinstance(survey_interp_tvd, we.survey.Survey)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_survey_interpolate.py",
+        "source_line": 28,
+        "raw_match": "assert isinstance(survey_interp_tvd, we.survey.Survey)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_survey_interpolate.py",
+        "source_line": 33,
+        "raw_match": "assert isinstance(node, we.node.Node)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_survey_interpolate.py",
+        "source_line": 38,
+        "raw_match": "assert isinstance(node, we.node.Node)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_survey_parameters.py",
+        "source_line": 24,
+        "raw_match": "assert round(v, 3) == round(REFERENCE.get(k), 3)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_survey_parameters.py",
+        "source_line": 26,
+        "raw_match": "assert v == REFERENCE.get(k)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_survey_parameters.py",
+        "source_line": 34,
+        "raw_match": "assert np.allclose("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_survey_parameters.py",
+        "source_line": 43,
+        "raw_match": "assert np.allclose("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_survey_parameters.py",
+        "source_line": 52,
+        "raw_match": "assert np.allclose("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_survey_parameters.py",
+        "source_line": 61,
+        "raw_match": "assert np.allclose("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_survey_parameters.py",
+        "source_line": 71,
+        "raw_match": "assert np.allclose("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_survey_parameters.py",
+        "source_line": 81,
+        "raw_match": "assert np.allclose("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_utils.py",
+        "source_line": 53,
+        "raw_match": "assert np.allclose("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_utils.py",
+        "source_line": 63,
+        "raw_match": "assert n % 2 == 0, \"n must be an even int\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_utils.py",
+        "source_line": 111,
+        "raw_match": "assert av.m == expected"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_utils.py",
+        "source_line": 112,
+        "raw_match": "assert str(av.u) == \"meter ** 3\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_utils.py",
+        "source_line": 119,
+        "raw_match": "assert (degrees, minutes, round(seconds, 4), direction) == LAT"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_utils.py",
+        "source_line": 122,
+        "raw_match": "assert np.all(np.equal(dms, np.array((np.array(LAT[:3])))))"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_utils.py",
+        "source_line": 133,
+        "raw_match": "assert np.all(np.equal(dms, np.array((np.array(LAT[:3]), np.array(LON[:3])))))"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_utils.py",
+        "source_line": 144,
+        "raw_match": "assert np.all(np.equal(dms, np.array((np.array(LAT[:3]), np.array(LON[:3])))))"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_utils.py",
+        "source_line": 155,
+        "raw_match": "assert np.all("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_utils.py",
+        "source_line": 166,
+        "raw_match": "assert np.all("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\architecture.py",
+        "source_line": 33,
+        "raw_match": "assert method in {\"top_down\", \"bottom_up\"}, \"Unrecognized method\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\architecture.py",
+        "source_line": 37,
+        "raw_match": "assert self.top < md <= self.bottom, \"Depth out of range\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\architecture.py",
+        "source_line": 62,
+        "raw_match": "assert param in kwargs.keys(), f\"Missing parameter {param}\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\architecture.py",
+        "source_line": 109,
+        "raw_match": "assert v['top'] == self.top"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\architecture.py",
+        "source_line": 111,
+        "raw_match": "assert v['top'] == temp[k - 1]['bottom']"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\architecture.py",
+        "source_line": 112,
+        "raw_match": "assert v['bottom'] <= self.bottom"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\architecture.py",
+        "source_line": 176,
+        "raw_match": "assert v['bottom'] == self.bottom"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\architecture.py",
+        "source_line": 178,
+        "raw_match": "assert v['bottom'] == temp[k + 1]['top']"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\architecture.py",
+        "source_line": 179,
+        "raw_match": "assert v['top'] >= self.top"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\clearance.py",
+        "source_line": 880,
+        "raw_match": "assert MESH_MODE, \"ImportError: try pip install welleng[all]\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\connector.py",
+        "source_line": 239,
+        "raw_match": "assert vec1 is not None or (inc1 is not None and azi1 is not None), ("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\connector.py",
+        "source_line": 243,
+        "raw_match": "assert inc1 is None and azi1 is None, ("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\connector.py",
+        "source_line": 247,
+        "raw_match": "assert vec1 is None, \"Either vec1 or (inc1 and azi1)\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\connector.py",
+        "source_line": 249,
+        "raw_match": "assert ("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\connector.py",
+        "source_line": 258,
+        "raw_match": "assert not (inc2 or azi2), \"Either vec2 or (inc2 and azi2)\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\connector.py",
+        "source_line": 260,
+        "raw_match": "assert vec2 is None, \"Either vec2 or (inc2 and azi2)\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\connector.py",
+        "source_line": 262,
+        "raw_match": "assert pos2 is None, \"Either md2 or pos2\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\connector.py",
+        "source_line": 263,
+        "raw_match": "assert md2 >= md1, \"md2 must be larger than md1\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\connector.py",
+        "source_line": 266,
+        "raw_match": "assert dls_design > 0, \"dls_design must be greater than zero\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\connector.py",
+        "source_line": 267,
+        "raw_match": "assert min_error < 1, \"min_error must be less than 1.0\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\error.py",
+        "source_line": 177,
+        "raw_match": "assert error_model in ERROR_MODELS, \"Unrecognized error model\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\fluid.py",
+        "source_line": 88,
+        "raw_match": "assert weighting_material.lower() in WEIGHTING_MATERIAL_DENSITY.keys()"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\fluid.py",
+        "source_line": 300,
+        "raw_match": "assert round(density_profile[-1], 2) == 9.85"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\io.py",
+        "source_line": 15,
+        "raw_match": "assert OPENPYXL, \"ImportError: try pip install welleng[easy]\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\mesh.py",
+        "source_line": 88,
+        "raw_match": "assert method in [\"ellipse\", \"pedal_curve\", \"circle\"], \\"
+      },
+      {
+        "assumption_type": "Validation boundary",
+        "description": "Possible assumption: Validation boundary",
+        "confidence": "LOW",
+        "source_file": "welleng\\mesh.py",
+        "source_line": 263,
+        "raw_match": "raise ValueError("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\mesh.py",
+        "source_line": 341,
+        "raw_match": "assert TRIMESH, \"ImportError: try pip install welleng[easy]\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\mesh.py",
+        "source_line": 365,
+        "raw_match": "assert TRIMESH, \"ImportError: try pip install welleng[easy]\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\mesh.py",
+        "source_line": 399,
+        "raw_match": "assert TRIMESH, \"ImportError: try pip install welleng[easy]\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\mesh.py",
+        "source_line": 470,
+        "raw_match": "assert stop <= l, f\"Out of range, {stop} > {l}\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\mesh.py",
+        "source_line": 520,
+        "raw_match": "assert TRIMESH, \"ImportError: try pip install welleng[easy]\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\node.py",
+        "source_line": 103,
+        "raw_match": "assert inc is not None and azi is not None, ("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\survey.py",
+        "source_line": 373,
+        "raw_match": "assert 90 >= latitude >= -90, \"latitude out of bounds\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\survey.py",
+        "source_line": 375,
+        "raw_match": "assert 180 >= longitude >= -180, \"longitude out of bounds\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\survey.py",
+        "source_line": 376,
+        "raw_match": "assert azi_reference in AZI_REF"
+      },
+      {
+        "assumption_type": "Validation boundary",
+        "description": "Possible assumption: Validation boundary",
+        "confidence": "LOW",
+        "source_file": "welleng\\survey.py",
+        "source_line": 475,
+        "raw_match": "raise ValueError("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\survey.py",
+        "source_line": 695,
+        "raw_match": "assert isinstance(header, SurveyHeader)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\survey.py",
+        "source_line": 697,
+        "raw_match": "assert unit == self.header.depth_unit, ("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\survey.py",
+        "source_line": 751,
+        "raw_match": "assert error_model in error_models, \"Unrecognized error model\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\survey.py",
+        "source_line": 844,
+        "raw_match": "assert len(radius) == len(self.md), \"Check radius\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\survey.py",
+        "source_line": 934,
+        "raw_match": "assert error_model in ERROR_MODELS, \"Undefined error model\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\survey.py",
+        "source_line": 1857,
+        "raw_match": "assert index < len(survey.md) - 1, \"Index is out of range\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\target.py",
+        "source_line": 93,
+        "raw_match": "assert VEDO, \"ImportError: try pip install welleng[easy]\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\target.py",
+        "source_line": 108,
+        "raw_match": "assert shape in SHAPES, \"shape not in SHAPES\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\target.py",
+        "source_line": 109,
+        "raw_match": "assert set(geometry.keys()) == set(GEOMETRY[shape]), 'wrong geometry'"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\torque_drag.py",
+        "source_line": 80,
+        "raw_match": "assert wellbore.complete, \"Wellbore not complete\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\torque_drag.py",
+        "source_line": 81,
+        "raw_match": "assert string.complete, \"String not complete\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\torque_drag.py",
+        "source_line": 242,
+        "raw_match": "assert tob, \"Can't have WOB without TOB\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\torque_drag.py",
+        "source_line": 243,
+        "raw_match": "assert wob, \"Can't have TOB wihtouh WOB\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\torque_drag.py",
+        "source_line": 550,
+        "raw_match": "assert PLOTLY, \"Please install plotly\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\torque_drag.py",
+        "source_line": 622,
+        "raw_match": "assert PLOTLY, \"Please install plotly\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\utils.py",
+        "source_line": 111,
+        "raw_match": "assert unit == \"meters\" or unit == \"feet\", ("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\utils.py",
+        "source_line": 117,
+        "raw_match": "assert survey_length > 1, \"Survey must have at least two rows\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\utils.py",
+        "source_line": 374,
+        "raw_match": "assert cov.shape[-2:] == (3, 3), \"Cov is the wrong shape\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\visual.py",
+        "source_line": 320,
+        "raw_match": "assert VEDO, \"ImportError: try pip install welleng[easy]\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\visual.py",
+        "source_line": 354,
+        "raw_match": "assert VEDO, \"ImportError: try pip install welleng[easy]\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\visual.py",
+        "source_line": 380,
+        "raw_match": "assert PLOTLY, \"ImportError: try pip install plotly\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\errors\\extract_iscwsa_codes.py",
+        "source_line": 35,
+        "raw_match": "assert OPENPYXL, \"ImportError: try pip install welleng[easy]\""
+      },
+      {
+        "assumption_type": "Validation boundary",
+        "description": "Possible assumption: Validation boundary",
+        "confidence": "LOW",
+        "source_file": "welleng\\errors\\interpreter.py",
+        "source_line": 87,
+        "raw_match": "raise ValueError("
+      },
+      {
+        "assumption_type": "Validation boundary",
+        "description": "Possible assumption: Validation boundary",
+        "confidence": "LOW",
+        "source_file": "welleng\\errors\\interpreter.py",
+        "source_line": 92,
+        "raw_match": "raise ValueError("
+      },
+      {
+        "assumption_type": "Validation boundary",
+        "description": "Possible assumption: Validation boundary",
+        "confidence": "LOW",
+        "source_file": "welleng\\errors\\interpreter.py",
+        "source_line": 94,
+        "raw_match": "raise ValueError("
+      },
+      {
+        "assumption_type": "Validation boundary",
+        "description": "Possible assumption: Validation boundary",
+        "confidence": "LOW",
+        "source_file": "welleng\\errors\\interpreter.py",
+        "source_line": 96,
+        "raw_match": "raise ValueError("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\errors\\iscwsa_mwd.py",
+        "source_line": 52,
+        "raw_match": "assert self.tortuosity is not None, ("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\errors\\iscwsa_mwd.py",
+        "source_line": 93,
+        "raw_match": "assert func in self.func_dict, f\"no function for function {func}\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\errors\\tool_errors.py",
+        "source_line": 220,
+        "raw_match": "assert np.amax(self.e.survey.inc_rad) < value, ("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\errors\\tool_errors.py",
+        "source_line": 285,
+        "raw_match": "assert func in self.func_dict, f\"no function for function {func}\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\exchange\\edm.py",
+        "source_line": 49,
+        "raw_match": "assert logic in ['AND', 'OR'], \"logic must be 'AND' or 'OR'\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\exchange\\edm.py",
+        "source_line": 131,
+        "raw_match": "assert NX, \"ImportError: try pip install welleng[all]\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\exchange\\wbp.py",
+        "source_line": 188,
+        "raw_match": "assert self.survey is None, \"Either wbp_data or survey\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\exchange\\wbp.py",
+        "source_line": 193,
+        "raw_match": "assert isinstance("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\exchange\\wbp.py",
+        "source_line": 196,
+        "raw_match": "assert self.wbp_data is None, \"Either wbp_data or survey\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\exchange\\wbp.py",
+        "source_line": 197,
+        "raw_match": "assert plan_name is not None, \"Must provide plan_name\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\exchange\\wbp.py",
+        "source_line": 198,
+        "raw_match": "assert location_type is not None, \"Must provide a location type\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\exchange\\wbp.py",
+        "source_line": 389,
+        "raw_match": "assert filename[-4:] == '.wbp', 'Wrong format'"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\exchange\\wbp.py",
+        "source_line": 421,
+        "raw_match": "assert filename[-4:] == '.wbp', 'Wrong format'"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\exchange\\wbp.py",
+        "source_line": 603,
+        "raw_match": "assert isinstance("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\exchange\\wbp.py",
+        "source_line": 663,
+        "raw_match": "assert UTM, \"Missing utm library, try pip install welleng[easy]\""
+      }
+    ],
+    "high_risk": [],
+    "total_found": 169,
+    "files_scanned": 65,
+    "overall_risk": "MEDIUM",
+    "notes": [
+      "All findings are POSSIBLE_ASSUMPTION \u2014 code evidence only. Confirm with domain experts before treating as verified business rules."
+    ]
+  },
+  "constraints": {
+    "constraints": [
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "setup.py",
+        "source_line": 34,
+        "raw_match": "required for"
+      },
+      {
+        "constraint_type": "Regulatory reference",
+        "category": "COMPLIANCE",
+        "confidence": "HIGH",
+        "source_file": "setup.py",
+        "source_line": 88,
+        "raw_match": "vat"
+      },
+      {
+        "constraint_type": "Minimum limit",
+        "category": "TECHNICAL",
+        "confidence": "HIGH",
+        "source_file": "examples\\calibrate_iscwsa_error_example_1.py",
+        "source_line": 56,
+        "raw_match": "min_row=3"
+      },
+      {
+        "constraint_type": "Minimum limit",
+        "category": "TECHNICAL",
+        "confidence": "HIGH",
+        "source_file": "examples\\calibrate_iscwsa_error_example_1.py",
+        "source_line": 58,
+        "raw_match": "min_col=5"
+      },
+      {
+        "constraint_type": "Regulatory reference",
+        "category": "COMPLIANCE",
+        "confidence": "HIGH",
+        "source_file": "examples\\connect_two_random_points.py",
+        "source_line": 5,
+        "raw_match": "vat"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "examples\\connect_two_random_points.py",
+        "source_line": 6,
+        "raw_match": "required to"
+      },
+      {
+        "constraint_type": "Minimum limit",
+        "category": "TECHNICAL",
+        "confidence": "HIGH",
+        "source_file": "examples\\connect_two_random_points.py",
+        "source_line": 110,
+        "raw_match": "min_tangent=0"
+      },
+      {
+        "constraint_type": "Maximum limit",
+        "category": "TECHNICAL",
+        "confidence": "HIGH",
+        "source_file": "examples\\connect_two_random_points.py",
+        "source_line": 113,
+        "raw_match": "max_iterations=1"
+      },
+      {
+        "constraint_type": "Regulatory reference",
+        "category": "COMPLIANCE",
+        "confidence": "HIGH",
+        "source_file": "examples\\interpolate_sparse_survey.py",
+        "source_line": 10,
+        "raw_match": "vat"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "examples\\project_ahead_example.py",
+        "source_line": 11,
+        "raw_match": "required to"
+      },
+      {
+        "constraint_type": "Null-safety constraint",
+        "category": "SAFETY",
+        "confidence": "LOW",
+        "source_file": "tests\\test_bug_fixes.py",
+        "source_line": 41,
+        "raw_match": "assert node is not None"
+      },
+      {
+        "constraint_type": "Null-safety constraint",
+        "category": "SAFETY",
+        "confidence": "LOW",
+        "source_file": "tests\\test_bug_fixes.py",
+        "source_line": 54,
+        "raw_match": "assert node is not None"
+      },
+      {
+        "constraint_type": "Null-safety constraint",
+        "category": "SAFETY",
+        "confidence": "LOW",
+        "source_file": "tests\\test_bug_fixes.py",
+        "source_line": 100,
+        "raw_match": "assert idx is not None"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_bug_fixes.py",
+        "source_line": 151,
+        "raw_match": "must complete"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_bug_fixes.py",
+        "source_line": 164,
+        "raw_match": "must each"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_bug_fixes.py",
+        "source_line": 181,
+        "raw_match": "must map"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_bug_fixes.py",
+        "source_line": 184,
+        "raw_match": "must map"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_bug_fixes.py",
+        "source_line": 189,
+        "raw_match": "must be"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_connector.py",
+        "source_line": 176,
+        "raw_match": "must find"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_connector.py",
+        "source_line": 194,
+        "raw_match": "must not"
+      },
+      {
+        "constraint_type": "Regulatory reference",
+        "category": "COMPLIANCE",
+        "confidence": "HIGH",
+        "source_file": "tests\\test_connector.py",
+        "source_line": 196,
+        "raw_match": "vat"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_connector_batch.py",
+        "source_line": 89,
+        "raw_match": "must still"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_connector_batch.py",
+        "source_line": 119,
+        "raw_match": "must not"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_connector_batch.py",
+        "source_line": 164,
+        "raw_match": "must be"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_gyro_survey.py",
+        "source_line": 64,
+        "raw_match": "must sit"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_iscwsa_json_conformance.py",
+        "source_line": 118,
+        "raw_match": "must agree"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_iscwsa_mwd_error.py",
+        "source_line": 116,
+        "raw_match": "must produce"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_utils.py",
+        "source_line": 63,
+        "raw_match": "must be"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_utils.py",
+        "source_line": 298,
+        "raw_match": "must agree"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_utils.py",
+        "source_line": 352,
+        "raw_match": "must reproduce"
+      },
+      {
+        "constraint_type": "Regulatory reference",
+        "category": "COMPLIANCE",
+        "confidence": "HIGH",
+        "source_file": "welleng\\clearance.py",
+        "source_line": 39,
+        "raw_match": "vat"
+      },
+      {
+        "constraint_type": "Minimum limit",
+        "category": "TECHNICAL",
+        "confidence": "HIGH",
+        "source_file": "welleng\\connector.py",
+        "source_line": 138,
+        "raw_match": "min_error=1"
+      },
+      {
+        "constraint_type": "Minimum limit",
+        "category": "TECHNICAL",
+        "confidence": "HIGH",
+        "source_file": "welleng\\connector.py",
+        "source_line": 140,
+        "raw_match": "min_tangent=0"
+      },
+      {
+        "constraint_type": "Maximum limit",
+        "category": "TECHNICAL",
+        "confidence": "HIGH",
+        "source_file": "welleng\\connector.py",
+        "source_line": 141,
+        "raw_match": "max_iterations=1"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\connector.py",
+        "source_line": 190,
+        "raw_match": "Must be"
+      },
+      {
+        "constraint_type": "Regulatory reference",
+        "category": "COMPLIANCE",
+        "confidence": "HIGH",
+        "source_file": "welleng\\connector.py",
+        "source_line": 201,
+        "raw_match": "vat"
+      },
+      {
+        "constraint_type": "Null-safety constraint",
+        "category": "SAFETY",
+        "confidence": "LOW",
+        "source_file": "welleng\\connector.py",
+        "source_line": 239,
+        "raw_match": "assert vec1 is not None"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\connector.py",
+        "source_line": 263,
+        "raw_match": "must be"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\connector.py",
+        "source_line": 266,
+        "raw_match": "must be"
+      },
+      {
+        "constraint_type": "Regulatory reference",
+        "category": "COMPLIANCE",
+        "confidence": "HIGH",
+        "source_file": "welleng\\error.py",
+        "source_line": 299,
+        "raw_match": "vat"
+      },
+      {
+        "constraint_type": "Regulatory reference",
+        "category": "COMPLIANCE",
+        "confidence": "HIGH",
+        "source_file": "welleng\\error.py",
+        "source_line": 302,
+        "raw_match": "vat"
+      },
+      {
+        "constraint_type": "Regulatory reference",
+        "category": "COMPLIANCE",
+        "confidence": "HIGH",
+        "source_file": "welleng\\error.py",
+        "source_line": 313,
+        "raw_match": "vat"
+      },
+      {
+        "constraint_type": "Regulatory reference",
+        "category": "COMPLIANCE",
+        "confidence": "HIGH",
+        "source_file": "welleng\\error.py",
+        "source_line": 328,
+        "raw_match": "vat"
+      },
+      {
+        "constraint_type": "Regulatory reference",
+        "category": "COMPLIANCE",
+        "confidence": "HIGH",
+        "source_file": "welleng\\error.py",
+        "source_line": 338,
+        "raw_match": "vat"
+      },
+      {
+        "constraint_type": "Regulatory reference",
+        "category": "COMPLIANCE",
+        "confidence": "HIGH",
+        "source_file": "welleng\\error.py",
+        "source_line": 359,
+        "raw_match": "vat"
+      },
+      {
+        "constraint_type": "Regulatory reference",
+        "category": "COMPLIANCE",
+        "confidence": "HIGH",
+        "source_file": "welleng\\error.py",
+        "source_line": 369,
+        "raw_match": "vat"
+      },
+      {
+        "constraint_type": "Regulatory reference",
+        "category": "COMPLIANCE",
+        "confidence": "HIGH",
+        "source_file": "welleng\\error.py",
+        "source_line": 387,
+        "raw_match": "vat"
+      },
+      {
+        "constraint_type": "Minimum limit",
+        "category": "TECHNICAL",
+        "confidence": "HIGH",
+        "source_file": "welleng\\io.py",
+        "source_line": 54,
+        "raw_match": "min_row=17"
+      },
+      {
+        "constraint_type": "Minimum limit",
+        "category": "TECHNICAL",
+        "confidence": "HIGH",
+        "source_file": "welleng\\io.py",
+        "source_line": 56,
+        "raw_match": "min_col=2"
+      },
+      {
+        "constraint_type": "Maximum limit",
+        "category": "TECHNICAL",
+        "confidence": "HIGH",
+        "source_file": "welleng\\io.py",
+        "source_line": 57,
+        "raw_match": "max_col=10"
+      },
+      {
+        "constraint_type": "Minimum limit",
+        "category": "TECHNICAL",
+        "confidence": "HIGH",
+        "source_file": "welleng\\io.py",
+        "source_line": 100,
+        "raw_match": "min_row=5"
+      },
+      {
+        "constraint_type": "Minimum limit",
+        "category": "TECHNICAL",
+        "confidence": "HIGH",
+        "source_file": "welleng\\io.py",
+        "source_line": 102,
+        "raw_match": "min_col=15"
+      },
+      {
+        "constraint_type": "Maximum limit",
+        "category": "TECHNICAL",
+        "confidence": "HIGH",
+        "source_file": "welleng\\io.py",
+        "source_line": 103,
+        "raw_match": "max_col=16"
+      },
+      {
+        "constraint_type": "Regulatory reference",
+        "category": "COMPLIANCE",
+        "confidence": "HIGH",
+        "source_file": "welleng\\mesh.py",
+        "source_line": 72,
+        "raw_match": "vat"
+      },
+      {
+        "constraint_type": "Regulatory reference",
+        "category": "COMPLIANCE",
+        "confidence": "HIGH",
+        "source_file": "welleng\\mesh.py",
+        "source_line": 453,
+        "raw_match": "vat"
+      },
+      {
+        "constraint_type": "Null-safety constraint",
+        "category": "SAFETY",
+        "confidence": "LOW",
+        "source_file": "welleng\\node.py",
+        "source_line": 103,
+        "raw_match": "assert inc is not None"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\node.py",
+        "source_line": 104,
+        "raw_match": "must not"
+      },
+      {
+        "constraint_type": "Regulatory reference",
+        "category": "COMPLIANCE",
+        "confidence": "HIGH",
+        "source_file": "welleng\\survey.py",
+        "source_line": 6,
+        "raw_match": "vat"
+      },
+      {
+        "constraint_type": "Regulatory reference",
+        "category": "COMPLIANCE",
+        "confidence": "HIGH",
+        "source_file": "welleng\\survey.py",
+        "source_line": 481,
+        "raw_match": "vat"
+      },
+      {
+        "constraint_type": "Regulatory reference",
+        "category": "COMPLIANCE",
+        "confidence": "HIGH",
+        "source_file": "welleng\\survey.py",
+        "source_line": 534,
+        "raw_match": "vat"
+      },
+      {
+        "constraint_type": "Regulatory reference",
+        "category": "COMPLIANCE",
+        "confidence": "HIGH",
+        "source_file": "welleng\\survey.py",
+        "source_line": 542,
+        "raw_match": "vat"
+      },
+      {
+        "constraint_type": "Regulatory reference",
+        "category": "COMPLIANCE",
+        "confidence": "HIGH",
+        "source_file": "welleng\\survey.py",
+        "source_line": 584,
+        "raw_match": "vat"
+      },
+      {
+        "constraint_type": "Regulatory reference",
+        "category": "COMPLIANCE",
+        "confidence": "HIGH",
+        "source_file": "welleng\\survey.py",
+        "source_line": 585,
+        "raw_match": "vat"
+      },
+      {
+        "constraint_type": "Regulatory reference",
+        "category": "COMPLIANCE",
+        "confidence": "HIGH",
+        "source_file": "welleng\\survey.py",
+        "source_line": 646,
+        "raw_match": "vat"
+      },
+      {
+        "constraint_type": "Regulatory reference",
+        "category": "COMPLIANCE",
+        "confidence": "HIGH",
+        "source_file": "welleng\\survey.py",
+        "source_line": 851,
+        "raw_match": "vat"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\torque_drag.py",
+        "source_line": 235,
+        "raw_match": "Must be"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\torque_drag.py",
+        "source_line": 237,
+        "raw_match": "Must be"
+      },
+      {
+        "constraint_type": "Regulatory reference",
+        "category": "COMPLIANCE",
+        "confidence": "HIGH",
+        "source_file": "welleng\\utils.py",
+        "source_line": 33,
+        "raw_match": "vat"
+      },
+      {
+        "constraint_type": "Regulatory reference",
+        "category": "COMPLIANCE",
+        "confidence": "HIGH",
+        "source_file": "welleng\\utils.py",
+        "source_line": 53,
+        "raw_match": "vat"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\utils.py",
+        "source_line": 117,
+        "raw_match": "must have"
+      },
+      {
+        "constraint_type": "Regulatory reference",
+        "category": "COMPLIANCE",
+        "confidence": "HIGH",
+        "source_file": "welleng\\utils.py",
+        "source_line": 234,
+        "raw_match": "vat"
+      },
+      {
+        "constraint_type": "Encryption requirement",
+        "category": "COMPLIANCE",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\utils.py",
+        "source_line": 779,
+        "raw_match": "sign("
+      },
+      {
+        "constraint_type": "Encryption requirement",
+        "category": "COMPLIANCE",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\utils.py",
+        "source_line": 784,
+        "raw_match": "sign("
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\utils.py",
+        "source_line": 943,
+        "raw_match": "must have"
+      },
+      {
+        "constraint_type": "Minimum limit",
+        "category": "TECHNICAL",
+        "confidence": "HIGH",
+        "source_file": "tests\\test_data\\extract_iscwsa_error_data.py",
+        "source_line": 39,
+        "raw_match": "min_row=3"
+      },
+      {
+        "constraint_type": "Minimum limit",
+        "category": "TECHNICAL",
+        "confidence": "HIGH",
+        "source_file": "tests\\test_data\\extract_iscwsa_error_data.py",
+        "source_line": 41,
+        "raw_match": "min_col=0"
+      },
+      {
+        "constraint_type": "Maximum limit",
+        "category": "TECHNICAL",
+        "confidence": "HIGH",
+        "source_file": "tests\\test_data\\extract_iscwsa_error_data.py",
+        "source_line": 42,
+        "raw_match": "max_col=8"
+      },
+      {
+        "constraint_type": "Minimum limit",
+        "category": "TECHNICAL",
+        "confidence": "HIGH",
+        "source_file": "tests\\test_data\\extract_iscwsa_error_data.py",
+        "source_line": 92,
+        "raw_match": "min_row=3"
+      },
+      {
+        "constraint_type": "Minimum limit",
+        "category": "TECHNICAL",
+        "confidence": "HIGH",
+        "source_file": "tests\\test_data\\extract_iscwsa_error_data.py",
+        "source_line": 94,
+        "raw_match": "min_col=5"
+      },
+      {
+        "constraint_type": "Maximum limit",
+        "category": "TECHNICAL",
+        "confidence": "HIGH",
+        "source_file": "tests\\test_data\\extract_iscwsa_error_data.py",
+        "source_line": 95,
+        "raw_match": "max_col=9"
+      },
+      {
+        "constraint_type": "Minimum limit",
+        "category": "TECHNICAL",
+        "confidence": "HIGH",
+        "source_file": "welleng\\errors\\extract_iscwsa_codes.py",
+        "source_line": 58,
+        "raw_match": "min_row=0"
+      },
+      {
+        "constraint_type": "Minimum limit",
+        "category": "TECHNICAL",
+        "confidence": "HIGH",
+        "source_file": "welleng\\errors\\extract_iscwsa_codes.py",
+        "source_line": 60,
+        "raw_match": "min_col=0"
+      },
+      {
+        "constraint_type": "Maximum limit",
+        "category": "TECHNICAL",
+        "confidence": "HIGH",
+        "source_file": "welleng\\errors\\extract_iscwsa_codes.py",
+        "source_line": 61,
+        "raw_match": "max_col=2"
+      },
+      {
+        "constraint_type": "Minimum limit",
+        "category": "TECHNICAL",
+        "confidence": "HIGH",
+        "source_file": "welleng\\errors\\extract_iscwsa_codes.py",
+        "source_line": 81,
+        "raw_match": "min_row=4"
+      },
+      {
+        "constraint_type": "Minimum limit",
+        "category": "TECHNICAL",
+        "confidence": "HIGH",
+        "source_file": "welleng\\errors\\extract_iscwsa_codes.py",
+        "source_line": 83,
+        "raw_match": "min_col=4"
+      },
+      {
+        "constraint_type": "Minimum limit",
+        "category": "TECHNICAL",
+        "confidence": "HIGH",
+        "source_file": "welleng\\errors\\extract_owsg_codes_generic.py",
+        "source_line": 61,
+        "raw_match": "min_row=0"
+      },
+      {
+        "constraint_type": "Minimum limit",
+        "category": "TECHNICAL",
+        "confidence": "HIGH",
+        "source_file": "welleng\\errors\\extract_owsg_codes_generic.py",
+        "source_line": 63,
+        "raw_match": "min_col=0"
+      },
+      {
+        "constraint_type": "Maximum limit",
+        "category": "TECHNICAL",
+        "confidence": "HIGH",
+        "source_file": "welleng\\errors\\extract_owsg_codes_generic.py",
+        "source_line": 64,
+        "raw_match": "max_col=2"
+      },
+      {
+        "constraint_type": "Minimum limit",
+        "category": "TECHNICAL",
+        "confidence": "HIGH",
+        "source_file": "welleng\\errors\\extract_owsg_codes_generic.py",
+        "source_line": 100,
+        "raw_match": "min_row=4"
+      },
+      {
+        "constraint_type": "Minimum limit",
+        "category": "TECHNICAL",
+        "confidence": "HIGH",
+        "source_file": "welleng\\errors\\extract_owsg_codes_generic.py",
+        "source_line": 102,
+        "raw_match": "min_col=4"
+      },
+      {
+        "constraint_type": "Regulatory reference",
+        "category": "COMPLIANCE",
+        "confidence": "HIGH",
+        "source_file": "welleng\\errors\\interpreter.py",
+        "source_line": 54,
+        "raw_match": "vat"
+      },
+      {
+        "constraint_type": "Maximum limit",
+        "category": "TECHNICAL",
+        "confidence": "HIGH",
+        "source_file": "welleng\\errors\\iscwsa_ingest.py",
+        "source_line": 37,
+        "raw_match": "max_col=1"
+      },
+      {
+        "constraint_type": "Minimum limit",
+        "category": "TECHNICAL",
+        "confidence": "HIGH",
+        "source_file": "welleng\\errors\\iscwsa_ingest.py",
+        "source_line": 37,
+        "raw_match": "min_col=1"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\errors\\iscwsa_ingest.py",
+        "source_line": 187,
+        "raw_match": "required for"
+      },
+      {
+        "constraint_type": "Maximum limit",
+        "category": "TECHNICAL",
+        "confidence": "HIGH",
+        "source_file": "welleng\\errors\\iscwsa_ingest.py",
+        "source_line": 306,
+        "raw_match": "max_row=12"
+      },
+      {
+        "constraint_type": "Minimum limit",
+        "category": "TECHNICAL",
+        "confidence": "HIGH",
+        "source_file": "welleng\\errors\\iscwsa_ingest.py",
+        "source_line": 328,
+        "raw_match": "min_row=3"
+      },
+      {
+        "constraint_type": "Uniqueness constraint",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\exchange\\edm.py",
+        "source_line": 41,
+        "raw_match": "only one needs"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\exchange\\edm.py",
+        "source_line": 49,
+        "raw_match": "must be"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\exchange\\edm.py",
+        "source_line": 511,
+        "raw_match": "required data"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\exchange\\wbp.py",
+        "source_line": 117,
+        "raw_match": "required by"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\exchange\\wbp.py",
+        "source_line": 197,
+        "raw_match": "Must provide"
+      },
+      {
+        "constraint_type": "Null-safety constraint",
+        "category": "SAFETY",
+        "confidence": "LOW",
+        "source_file": "welleng\\exchange\\wbp.py",
+        "source_line": 197,
+        "raw_match": "assert plan_name is not None"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "welleng\\exchange\\wbp.py",
+        "source_line": 198,
+        "raw_match": "Must provide"
+      },
+      {
+        "constraint_type": "Null-safety constraint",
+        "category": "SAFETY",
+        "confidence": "LOW",
+        "source_file": "welleng\\exchange\\wbp.py",
+        "source_line": 198,
+        "raw_match": "assert location_type is not None"
+      }
+    ],
+    "by_category": {
+      "BUSINESS": [
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "setup.py",
+          "source_line": 34,
+          "raw_match": "required for"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "examples\\connect_two_random_points.py",
+          "source_line": 6,
+          "raw_match": "required to"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "examples\\project_ahead_example.py",
+          "source_line": 11,
+          "raw_match": "required to"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "tests\\test_bug_fixes.py",
+          "source_line": 151,
+          "raw_match": "must complete"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "tests\\test_bug_fixes.py",
+          "source_line": 164,
+          "raw_match": "must each"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "tests\\test_bug_fixes.py",
+          "source_line": 181,
+          "raw_match": "must map"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "tests\\test_bug_fixes.py",
+          "source_line": 184,
+          "raw_match": "must map"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "tests\\test_bug_fixes.py",
+          "source_line": 189,
+          "raw_match": "must be"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "tests\\test_connector.py",
+          "source_line": 176,
+          "raw_match": "must find"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "tests\\test_connector.py",
+          "source_line": 194,
+          "raw_match": "must not"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "tests\\test_connector_batch.py",
+          "source_line": 89,
+          "raw_match": "must still"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "tests\\test_connector_batch.py",
+          "source_line": 119,
+          "raw_match": "must not"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "tests\\test_connector_batch.py",
+          "source_line": 164,
+          "raw_match": "must be"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "tests\\test_gyro_survey.py",
+          "source_line": 64,
+          "raw_match": "must sit"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "tests\\test_iscwsa_json_conformance.py",
+          "source_line": 118,
+          "raw_match": "must agree"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "tests\\test_iscwsa_mwd_error.py",
+          "source_line": 116,
+          "raw_match": "must produce"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "tests\\test_utils.py",
+          "source_line": 63,
+          "raw_match": "must be"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "tests\\test_utils.py",
+          "source_line": 298,
+          "raw_match": "must agree"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "tests\\test_utils.py",
+          "source_line": 352,
+          "raw_match": "must reproduce"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "welleng\\connector.py",
+          "source_line": 190,
+          "raw_match": "Must be"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "welleng\\connector.py",
+          "source_line": 263,
+          "raw_match": "must be"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "welleng\\connector.py",
+          "source_line": 266,
+          "raw_match": "must be"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "welleng\\node.py",
+          "source_line": 104,
+          "raw_match": "must not"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "welleng\\torque_drag.py",
+          "source_line": 235,
+          "raw_match": "Must be"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "welleng\\torque_drag.py",
+          "source_line": 237,
+          "raw_match": "Must be"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "welleng\\utils.py",
+          "source_line": 117,
+          "raw_match": "must have"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "welleng\\utils.py",
+          "source_line": 943,
+          "raw_match": "must have"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "welleng\\errors\\iscwsa_ingest.py",
+          "source_line": 187,
+          "raw_match": "required for"
+        },
+        {
+          "constraint_type": "Uniqueness constraint",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "welleng\\exchange\\edm.py",
+          "source_line": 41,
+          "raw_match": "only one needs"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "welleng\\exchange\\edm.py",
+          "source_line": 49,
+          "raw_match": "must be"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "welleng\\exchange\\edm.py",
+          "source_line": 511,
+          "raw_match": "required data"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "welleng\\exchange\\wbp.py",
+          "source_line": 117,
+          "raw_match": "required by"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "welleng\\exchange\\wbp.py",
+          "source_line": 197,
+          "raw_match": "Must provide"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "welleng\\exchange\\wbp.py",
+          "source_line": 198,
+          "raw_match": "Must provide"
+        }
+      ],
+      "TECHNICAL": [
+        {
+          "constraint_type": "Minimum limit",
+          "category": "TECHNICAL",
+          "confidence": "HIGH",
+          "source_file": "examples\\calibrate_iscwsa_error_example_1.py",
+          "source_line": 56,
+          "raw_match": "min_row=3"
+        },
+        {
+          "constraint_type": "Minimum limit",
+          "category": "TECHNICAL",
+          "confidence": "HIGH",
+          "source_file": "examples\\calibrate_iscwsa_error_example_1.py",
+          "source_line": 58,
+          "raw_match": "min_col=5"
+        },
+        {
+          "constraint_type": "Minimum limit",
+          "category": "TECHNICAL",
+          "confidence": "HIGH",
+          "source_file": "examples\\connect_two_random_points.py",
+          "source_line": 110,
+          "raw_match": "min_tangent=0"
+        },
+        {
+          "constraint_type": "Maximum limit",
+          "category": "TECHNICAL",
+          "confidence": "HIGH",
+          "source_file": "examples\\connect_two_random_points.py",
+          "source_line": 113,
+          "raw_match": "max_iterations=1"
+        },
+        {
+          "constraint_type": "Minimum limit",
+          "category": "TECHNICAL",
+          "confidence": "HIGH",
+          "source_file": "welleng\\connector.py",
+          "source_line": 138,
+          "raw_match": "min_error=1"
+        },
+        {
+          "constraint_type": "Minimum limit",
+          "category": "TECHNICAL",
+          "confidence": "HIGH",
+          "source_file": "welleng\\connector.py",
+          "source_line": 140,
+          "raw_match": "min_tangent=0"
+        },
+        {
+          "constraint_type": "Maximum limit",
+          "category": "TECHNICAL",
+          "confidence": "HIGH",
+          "source_file": "welleng\\connector.py",
+          "source_line": 141,
+          "raw_match": "max_iterations=1"
+        },
+        {
+          "constraint_type": "Minimum limit",
+          "category": "TECHNICAL",
+          "confidence": "HIGH",
+          "source_file": "welleng\\io.py",
+          "source_line": 54,
+          "raw_match": "min_row=17"
+        },
+        {
+          "constraint_type": "Minimum limit",
+          "category": "TECHNICAL",
+          "confidence": "HIGH",
+          "source_file": "welleng\\io.py",
+          "source_line": 56,
+          "raw_match": "min_col=2"
+        },
+        {
+          "constraint_type": "Maximum limit",
+          "category": "TECHNICAL",
+          "confidence": "HIGH",
+          "source_file": "welleng\\io.py",
+          "source_line": 57,
+          "raw_match": "max_col=10"
+        },
+        {
+          "constraint_type": "Minimum limit",
+          "category": "TECHNICAL",
+          "confidence": "HIGH",
+          "source_file": "welleng\\io.py",
+          "source_line": 100,
+          "raw_match": "min_row=5"
+        },
+        {
+          "constraint_type": "Minimum limit",
+          "category": "TECHNICAL",
+          "confidence": "HIGH",
+          "source_file": "welleng\\io.py",
+          "source_line": 102,
+          "raw_match": "min_col=15"
+        },
+        {
+          "constraint_type": "Maximum limit",
+          "category": "TECHNICAL",
+          "confidence": "HIGH",
+          "source_file": "welleng\\io.py",
+          "source_line": 103,
+          "raw_match": "max_col=16"
+        },
+        {
+          "constraint_type": "Minimum limit",
+          "category": "TECHNICAL",
+          "confidence": "HIGH",
+          "source_file": "tests\\test_data\\extract_iscwsa_error_data.py",
+          "source_line": 39,
+          "raw_match": "min_row=3"
+        },
+        {
+          "constraint_type": "Minimum limit",
+          "category": "TECHNICAL",
+          "confidence": "HIGH",
+          "source_file": "tests\\test_data\\extract_iscwsa_error_data.py",
+          "source_line": 41,
+          "raw_match": "min_col=0"
+        },
+        {
+          "constraint_type": "Maximum limit",
+          "category": "TECHNICAL",
+          "confidence": "HIGH",
+          "source_file": "tests\\test_data\\extract_iscwsa_error_data.py",
+          "source_line": 42,
+          "raw_match": "max_col=8"
+        },
+        {
+          "constraint_type": "Minimum limit",
+          "category": "TECHNICAL",
+          "confidence": "HIGH",
+          "source_file": "tests\\test_data\\extract_iscwsa_error_data.py",
+          "source_line": 92,
+          "raw_match": "min_row=3"
+        },
+        {
+          "constraint_type": "Minimum limit",
+          "category": "TECHNICAL",
+          "confidence": "HIGH",
+          "source_file": "tests\\test_data\\extract_iscwsa_error_data.py",
+          "source_line": 94,
+          "raw_match": "min_col=5"
+        },
+        {
+          "constraint_type": "Maximum limit",
+          "category": "TECHNICAL",
+          "confidence": "HIGH",
+          "source_file": "tests\\test_data\\extract_iscwsa_error_data.py",
+          "source_line": 95,
+          "raw_match": "max_col=9"
+        },
+        {
+          "constraint_type": "Minimum limit",
+          "category": "TECHNICAL",
+          "confidence": "HIGH",
+          "source_file": "welleng\\errors\\extract_iscwsa_codes.py",
+          "source_line": 58,
+          "raw_match": "min_row=0"
+        },
+        {
+          "constraint_type": "Minimum limit",
+          "category": "TECHNICAL",
+          "confidence": "HIGH",
+          "source_file": "welleng\\errors\\extract_iscwsa_codes.py",
+          "source_line": 60,
+          "raw_match": "min_col=0"
+        },
+        {
+          "constraint_type": "Maximum limit",
+          "category": "TECHNICAL",
+          "confidence": "HIGH",
+          "source_file": "welleng\\errors\\extract_iscwsa_codes.py",
+          "source_line": 61,
+          "raw_match": "max_col=2"
+        },
+        {
+          "constraint_type": "Minimum limit",
+          "category": "TECHNICAL",
+          "confidence": "HIGH",
+          "source_file": "welleng\\errors\\extract_iscwsa_codes.py",
+          "source_line": 81,
+          "raw_match": "min_row=4"
+        },
+        {
+          "constraint_type": "Minimum limit",
+          "category": "TECHNICAL",
+          "confidence": "HIGH",
+          "source_file": "welleng\\errors\\extract_iscwsa_codes.py",
+          "source_line": 83,
+          "raw_match": "min_col=4"
+        },
+        {
+          "constraint_type": "Minimum limit",
+          "category": "TECHNICAL",
+          "confidence": "HIGH",
+          "source_file": "welleng\\errors\\extract_owsg_codes_generic.py",
+          "source_line": 61,
+          "raw_match": "min_row=0"
+        },
+        {
+          "constraint_type": "Minimum limit",
+          "category": "TECHNICAL",
+          "confidence": "HIGH",
+          "source_file": "welleng\\errors\\extract_owsg_codes_generic.py",
+          "source_line": 63,
+          "raw_match": "min_col=0"
+        },
+        {
+          "constraint_type": "Maximum limit",
+          "category": "TECHNICAL",
+          "confidence": "HIGH",
+          "source_file": "welleng\\errors\\extract_owsg_codes_generic.py",
+          "source_line": 64,
+          "raw_match": "max_col=2"
+        },
+        {
+          "constraint_type": "Minimum limit",
+          "category": "TECHNICAL",
+          "confidence": "HIGH",
+          "source_file": "welleng\\errors\\extract_owsg_codes_generic.py",
+          "source_line": 100,
+          "raw_match": "min_row=4"
+        },
+        {
+          "constraint_type": "Minimum limit",
+          "category": "TECHNICAL",
+          "confidence": "HIGH",
+          "source_file": "welleng\\errors\\extract_owsg_codes_generic.py",
+          "source_line": 102,
+          "raw_match": "min_col=4"
+        },
+        {
+          "constraint_type": "Maximum limit",
+          "category": "TECHNICAL",
+          "confidence": "HIGH",
+          "source_file": "welleng\\errors\\iscwsa_ingest.py",
+          "source_line": 37,
+          "raw_match": "max_col=1"
+        },
+        {
+          "constraint_type": "Minimum limit",
+          "category": "TECHNICAL",
+          "confidence": "HIGH",
+          "source_file": "welleng\\errors\\iscwsa_ingest.py",
+          "source_line": 37,
+          "raw_match": "min_col=1"
+        },
+        {
+          "constraint_type": "Maximum limit",
+          "category": "TECHNICAL",
+          "confidence": "HIGH",
+          "source_file": "welleng\\errors\\iscwsa_ingest.py",
+          "source_line": 306,
+          "raw_match": "max_row=12"
+        },
+        {
+          "constraint_type": "Minimum limit",
+          "category": "TECHNICAL",
+          "confidence": "HIGH",
+          "source_file": "welleng\\errors\\iscwsa_ingest.py",
+          "source_line": 328,
+          "raw_match": "min_row=3"
+        }
+      ],
+      "COMPLIANCE": [
+        {
+          "constraint_type": "Regulatory reference",
+          "category": "COMPLIANCE",
+          "confidence": "HIGH",
+          "source_file": "setup.py",
+          "source_line": 88,
+          "raw_match": "vat"
+        },
+        {
+          "constraint_type": "Regulatory reference",
+          "category": "COMPLIANCE",
+          "confidence": "HIGH",
+          "source_file": "examples\\connect_two_random_points.py",
+          "source_line": 5,
+          "raw_match": "vat"
+        },
+        {
+          "constraint_type": "Regulatory reference",
+          "category": "COMPLIANCE",
+          "confidence": "HIGH",
+          "source_file": "examples\\interpolate_sparse_survey.py",
+          "source_line": 10,
+          "raw_match": "vat"
+        },
+        {
+          "constraint_type": "Regulatory reference",
+          "category": "COMPLIANCE",
+          "confidence": "HIGH",
+          "source_file": "tests\\test_connector.py",
+          "source_line": 196,
+          "raw_match": "vat"
+        },
+        {
+          "constraint_type": "Regulatory reference",
+          "category": "COMPLIANCE",
+          "confidence": "HIGH",
+          "source_file": "welleng\\clearance.py",
+          "source_line": 39,
+          "raw_match": "vat"
+        },
+        {
+          "constraint_type": "Regulatory reference",
+          "category": "COMPLIANCE",
+          "confidence": "HIGH",
+          "source_file": "welleng\\connector.py",
+          "source_line": 201,
+          "raw_match": "vat"
+        },
+        {
+          "constraint_type": "Regulatory reference",
+          "category": "COMPLIANCE",
+          "confidence": "HIGH",
+          "source_file": "welleng\\error.py",
+          "source_line": 299,
+          "raw_match": "vat"
+        },
+        {
+          "constraint_type": "Regulatory reference",
+          "category": "COMPLIANCE",
+          "confidence": "HIGH",
+          "source_file": "welleng\\error.py",
+          "source_line": 302,
+          "raw_match": "vat"
+        },
+        {
+          "constraint_type": "Regulatory reference",
+          "category": "COMPLIANCE",
+          "confidence": "HIGH",
+          "source_file": "welleng\\error.py",
+          "source_line": 313,
+          "raw_match": "vat"
+        },
+        {
+          "constraint_type": "Regulatory reference",
+          "category": "COMPLIANCE",
+          "confidence": "HIGH",
+          "source_file": "welleng\\error.py",
+          "source_line": 328,
+          "raw_match": "vat"
+        },
+        {
+          "constraint_type": "Regulatory reference",
+          "category": "COMPLIANCE",
+          "confidence": "HIGH",
+          "source_file": "welleng\\error.py",
+          "source_line": 338,
+          "raw_match": "vat"
+        },
+        {
+          "constraint_type": "Regulatory reference",
+          "category": "COMPLIANCE",
+          "confidence": "HIGH",
+          "source_file": "welleng\\error.py",
+          "source_line": 359,
+          "raw_match": "vat"
+        },
+        {
+          "constraint_type": "Regulatory reference",
+          "category": "COMPLIANCE",
+          "confidence": "HIGH",
+          "source_file": "welleng\\error.py",
+          "source_line": 369,
+          "raw_match": "vat"
+        },
+        {
+          "constraint_type": "Regulatory reference",
+          "category": "COMPLIANCE",
+          "confidence": "HIGH",
+          "source_file": "welleng\\error.py",
+          "source_line": 387,
+          "raw_match": "vat"
+        },
+        {
+          "constraint_type": "Regulatory reference",
+          "category": "COMPLIANCE",
+          "confidence": "HIGH",
+          "source_file": "welleng\\mesh.py",
+          "source_line": 72,
+          "raw_match": "vat"
+        },
+        {
+          "constraint_type": "Regulatory reference",
+          "category": "COMPLIANCE",
+          "confidence": "HIGH",
+          "source_file": "welleng\\mesh.py",
+          "source_line": 453,
+          "raw_match": "vat"
+        },
+        {
+          "constraint_type": "Regulatory reference",
+          "category": "COMPLIANCE",
+          "confidence": "HIGH",
+          "source_file": "welleng\\survey.py",
+          "source_line": 6,
+          "raw_match": "vat"
+        },
+        {
+          "constraint_type": "Regulatory reference",
+          "category": "COMPLIANCE",
+          "confidence": "HIGH",
+          "source_file": "welleng\\survey.py",
+          "source_line": 481,
+          "raw_match": "vat"
+        },
+        {
+          "constraint_type": "Regulatory reference",
+          "category": "COMPLIANCE",
+          "confidence": "HIGH",
+          "source_file": "welleng\\survey.py",
+          "source_line": 534,
+          "raw_match": "vat"
+        },
+        {
+          "constraint_type": "Regulatory reference",
+          "category": "COMPLIANCE",
+          "confidence": "HIGH",
+          "source_file": "welleng\\survey.py",
+          "source_line": 542,
+          "raw_match": "vat"
+        },
+        {
+          "constraint_type": "Regulatory reference",
+          "category": "COMPLIANCE",
+          "confidence": "HIGH",
+          "source_file": "welleng\\survey.py",
+          "source_line": 584,
+          "raw_match": "vat"
+        },
+        {
+          "constraint_type": "Regulatory reference",
+          "category": "COMPLIANCE",
+          "confidence": "HIGH",
+          "source_file": "welleng\\survey.py",
+          "source_line": 585,
+          "raw_match": "vat"
+        },
+        {
+          "constraint_type": "Regulatory reference",
+          "category": "COMPLIANCE",
+          "confidence": "HIGH",
+          "source_file": "welleng\\survey.py",
+          "source_line": 646,
+          "raw_match": "vat"
+        },
+        {
+          "constraint_type": "Regulatory reference",
+          "category": "COMPLIANCE",
+          "confidence": "HIGH",
+          "source_file": "welleng\\survey.py",
+          "source_line": 851,
+          "raw_match": "vat"
+        },
+        {
+          "constraint_type": "Regulatory reference",
+          "category": "COMPLIANCE",
+          "confidence": "HIGH",
+          "source_file": "welleng\\utils.py",
+          "source_line": 33,
+          "raw_match": "vat"
+        },
+        {
+          "constraint_type": "Regulatory reference",
+          "category": "COMPLIANCE",
+          "confidence": "HIGH",
+          "source_file": "welleng\\utils.py",
+          "source_line": 53,
+          "raw_match": "vat"
+        },
+        {
+          "constraint_type": "Regulatory reference",
+          "category": "COMPLIANCE",
+          "confidence": "HIGH",
+          "source_file": "welleng\\utils.py",
+          "source_line": 234,
+          "raw_match": "vat"
+        },
+        {
+          "constraint_type": "Encryption requirement",
+          "category": "COMPLIANCE",
+          "confidence": "MEDIUM",
+          "source_file": "welleng\\utils.py",
+          "source_line": 779,
+          "raw_match": "sign("
+        },
+        {
+          "constraint_type": "Encryption requirement",
+          "category": "COMPLIANCE",
+          "confidence": "MEDIUM",
+          "source_file": "welleng\\utils.py",
+          "source_line": 784,
+          "raw_match": "sign("
+        },
+        {
+          "constraint_type": "Regulatory reference",
+          "category": "COMPLIANCE",
+          "confidence": "HIGH",
+          "source_file": "welleng\\errors\\interpreter.py",
+          "source_line": 54,
+          "raw_match": "vat"
+        }
+      ],
+      "SAFETY": [
+        {
+          "constraint_type": "Null-safety constraint",
+          "category": "SAFETY",
+          "confidence": "LOW",
+          "source_file": "tests\\test_bug_fixes.py",
+          "source_line": 41,
+          "raw_match": "assert node is not None"
+        },
+        {
+          "constraint_type": "Null-safety constraint",
+          "category": "SAFETY",
+          "confidence": "LOW",
+          "source_file": "tests\\test_bug_fixes.py",
+          "source_line": 54,
+          "raw_match": "assert node is not None"
+        },
+        {
+          "constraint_type": "Null-safety constraint",
+          "category": "SAFETY",
+          "confidence": "LOW",
+          "source_file": "tests\\test_bug_fixes.py",
+          "source_line": 100,
+          "raw_match": "assert idx is not None"
+        },
+        {
+          "constraint_type": "Null-safety constraint",
+          "category": "SAFETY",
+          "confidence": "LOW",
+          "source_file": "welleng\\connector.py",
+          "source_line": 239,
+          "raw_match": "assert vec1 is not None"
+        },
+        {
+          "constraint_type": "Null-safety constraint",
+          "category": "SAFETY",
+          "confidence": "LOW",
+          "source_file": "welleng\\node.py",
+          "source_line": 103,
+          "raw_match": "assert inc is not None"
+        },
+        {
+          "constraint_type": "Null-safety constraint",
+          "category": "SAFETY",
+          "confidence": "LOW",
+          "source_file": "welleng\\exchange\\wbp.py",
+          "source_line": 197,
+          "raw_match": "assert plan_name is not None"
+        },
+        {
+          "constraint_type": "Null-safety constraint",
+          "category": "SAFETY",
+          "confidence": "LOW",
+          "source_file": "welleng\\exchange\\wbp.py",
+          "source_line": 198,
+          "raw_match": "assert location_type is not None"
+        }
+      ]
+    },
+    "total_found": 104,
+    "files_scanned": 65,
+    "notes": [
+      "Constraints are INFERRED from code patterns. Verify with domain experts and policy documents."
+    ]
+  },
+  "decisions": {
+    "decisions": [
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# TODO: probably better to load this in from a yaml file",
+        "evidence": "# TODO: probably better to load this in from a yaml file",
+        "source_file": "welleng\\connector.py",
+        "source_line": 536
+      },
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# TODO: there's likely an issue with TVD versus TVDSS that",
+        "evidence": "# TODO: there's likely an issue with TVD versus TVDSS that",
+        "source_file": "welleng\\error.py",
+        "source_line": 26
+      },
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# TODO: set this up for multiprocessing",
+        "evidence": "# TODO: set this up for multiprocessing",
+        "source_file": "welleng\\mesh.py",
+        "source_line": 474
+      },
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# TODO: log when no internet connection prvents updating the result var",
+        "evidence": "# TODO: log when no internet connection prvents updating the result var",
+        "source_file": "welleng\\survey.py",
+        "source_line": 437
+      },
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# TODO: read this from a yaml file in errors",
+        "evidence": "# TODO: read this from a yaml file in errors",
+        "source_file": "welleng\\survey.py",
+        "source_line": 748
+      },
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# TODO: update so its the same length as the survey - need to cascade",
+        "evidence": "# TODO: update so its the same length as the survey - need to cascade",
+        "source_file": "welleng\\survey.py",
+        "source_line": 1041
+      },
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# TODO: need to recalculate the dogleg",
+        "evidence": "# TODO: need to recalculate the dogleg",
+        "source_file": "welleng\\survey.py",
+        "source_line": 1994
+      },
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# TODO: add target data to sections",
+        "evidence": "# TODO: add target data to sections",
+        "source_file": "welleng\\survey.py",
+        "source_line": 2166
+      },
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# TODO: add target data to sections",
+        "evidence": "# TODO: add target data to sections",
+        "source_file": "welleng\\survey.py",
+        "source_line": 2230
+      },
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# TODO: should sum this line by line to avoid issues with long",
+        "evidence": "# TODO: should sum this line by line to avoid issues with long",
+        "source_file": "welleng\\survey.py",
+        "source_line": 2321
+      },
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# TODO: should sum this line by line to avoid issues with long",
+        "evidence": "# TODO: should sum this line by line to avoid issues with long",
+        "source_file": "welleng\\survey.py",
+        "source_line": 2328
+      },
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# TODO import custom units from file instead of defining here",
+        "evidence": "# TODO import custom units from file instead of defining here",
+        "source_file": "welleng\\units.py",
+        "source_line": 6
+      },
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# TODO use pint to handle this string inputs",
+        "evidence": "# TODO use pint to handle this string inputs",
+        "source_file": "welleng\\errors\\tool_errors.py",
+        "source_line": 205
+      },
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# TODO could probably do this is a single loop?",
+        "evidence": "# TODO could probably do this is a single loop?",
+        "source_file": "welleng\\exchange\\edm.py",
+        "source_line": 303
+      },
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# TODO: need to relocate the class Target to target.py",
+        "evidence": "# TODO: need to relocate the class Target to target.py",
+        "source_file": "welleng\\exchange\\wbp.py",
+        "source_line": 27
+      },
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# TODO: finish coding the rest of the target inputs",
+        "evidence": "# TODO: finish coding the rest of the target inputs",
+        "source_file": "welleng\\exchange\\wbp.py",
+        "source_line": 240
+      },
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# TODO: update so that filename can also be data",
+        "evidence": "# TODO: update so that filename can also be data",
+        "source_file": "welleng\\exchange\\wbp.py",
+        "source_line": 406
+      },
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# TODO: update the connector code so that None can be passed for",
+        "evidence": "# TODO: update the connector code so that None can be passed for",
+        "source_file": "welleng\\exchange\\wbp.py",
+        "source_line": 687
+      }
+    ],
+    "adr_files": [],
+    "framework_decisions": [],
+    "total_found": 18,
+    "notes": [
+      "Decisions are INFERRED from structural evidence (ADR files, dependency choices, decision comments). Original decision rationale may require document review."
+    ]
+  },
+  "knowledge_loss": {
+    "risks": [
+      {
+        "risk_type": "UNDOCUMENTED_LOGIC",
+        "severity": "LOW",
+        "source_file": "tests\\test_survey_interpolate.py",
+        "description": "4 functions with no docstrings. Business logic may be implicit knowledge only.",
+        "evidence": "function_count=4, docstrings=0"
+      },
+      {
+        "risk_type": "UNDOCUMENTED_LOGIC",
+        "severity": "MEDIUM",
+        "source_file": "welleng\\io.py",
+        "description": "6 functions with no docstrings. Business logic may be implicit knowledge only.",
+        "evidence": "function_count=6, docstrings=0"
+      },
+      {
+        "risk_type": "UNDOCUMENTED_LOGIC",
+        "severity": "MEDIUM",
+        "source_file": "tests\\test_data\\extract_iscwsa_error_data.py",
+        "description": "6 functions with no docstrings. Business logic may be implicit knowledge only.",
+        "evidence": "function_count=6, docstrings=0"
+      }
+    ],
+    "high_severity": [],
+    "spof_files": [],
+    "undocumented": [
+      "tests\\test_survey_interpolate.py",
+      "welleng\\io.py",
+      "tests\\test_data\\extract_iscwsa_error_data.py"
+    ],
+    "total_risks": 3,
+    "overall_severity": "LOW",
+    "notes": [
+      "Knowledge risk is structural \u2014 based on import frequency and absence of tests/documentation. Business criticality requires domain expert confirmation."
+    ]
+  },
+  "traceability": {
+    "document_code_links": [
+      {
+        "document_name": ".rst",
+        "source_file": "docs\\conf.py",
+        "source_line": 70,
+        "reference_text": "'.rst': 'restructuredtext',"
+      },
+      {
+        "document_name": ".txt",
+        "source_file": "docs\\conf.py",
+        "source_line": 71,
+        "reference_text": "'.txt': 'markdown',"
+      },
+      {
+        "document_name": ".md",
+        "source_file": "docs\\conf.py",
+        "source_line": 72,
+        "reference_text": "'.md': 'markdown',"
+      },
+      {
+        "document_name": "examples/data/error-model-example-mwdrev4-iscwsa-1.xlsx",
+        "source_file": "examples\\calibrate_iscwsa_error_example_1.py",
+        "source_line": 22,
+        "reference_text": "filename=\"examples/data/error-model-example-mwdrev4-iscwsa-1.xlsx\","
+      },
+      {
+        "document_name": "-for-evaluating-clearance-scenarios-r4-17-may-2017.xlsx",
+        "source_file": "examples\\evaluating_clearance.py",
+        "source_line": 32,
+        "reference_text": "\"-for-evaluating-clearance-scenarios-r4-17-may-2017.xlsx\""
+      },
+      {
+        "document_name": "-for-evaluating-clearance-scenarios-r4-17-may-2017.xlsx",
+        "source_file": "examples\\evaluating_clearance.py",
+        "source_line": 39,
+        "reference_text": "#     \"-for-evaluating-clearance-scenarios-r4-17-may-2017.xlsx\""
+      },
+      {
+        "document_name": "data/output/output.xlsx",
+        "source_file": "examples\\evaluating_clearance.py",
+        "source_line": 250,
+        "reference_text": "save_as = f'data/output/output.xlsx'"
+      },
+      {
+        "document_name": "data/output/output.xlsx",
+        "source_file": "examples\\evaluating_clearance.py",
+        "source_line": 252,
+        "reference_text": "with pd.ExcelWriter(f'data/output/output.xlsx') as writer:"
+      },
+      {
+        "document_name": "README.md",
+        "source_file": "setup.py",
+        "source_line": 18,
+        "reference_text": "with open(\"README.md\", \"r\") as f:"
+      },
+      {
+        "document_name": "requirements.txt",
+        "source_file": "setup.py",
+        "source_line": 21,
+        "reference_text": "# with open(\"requirements.txt\") as f:"
+      },
+      {
+        "document_name": "{COPSEGROVE_DIR}/ISCWSA1_OWSG_GYRO-NS.txt",
+        "source_file": "welleng\\errors\\copsegrove_validate.py",
+        "source_line": 209,
+        "reference_text": "(JSON_DIR / \"GYRO-NS.json\",     f\"{COPSEGROVE_DIR}/ISCWSA1_OWSG_GYRO-NS.txt\"),"
+      },
+      {
+        "document_name": "{COPSEGROVE_DIR}/ISCWSA1_OWSG_GYRO-MWD.txt",
+        "source_file": "welleng\\errors\\copsegrove_validate.py",
+        "source_line": 210,
+        "reference_text": "(JSON_DIR / \"GYRO-MWD.json\",    f\"{COPSEGROVE_DIR}/ISCWSA1_OWSG_GYRO-MWD.txt\"),"
+      },
+      {
+        "document_name": "reference/error-model-example-mwdrev4-iscwsa-1.xlsx",
+        "source_file": "welleng\\errors\\extract_iscwsa_codes.py",
+        "source_line": 169,
+        "reference_text": "\"reference/error-model-example-mwdrev4-iscwsa-1.xlsx\""
+      },
+      {
+        "document_name": "reference/error-model-example-mwdrev5-iscwsa-1.xlsx",
+        "source_file": "welleng\\errors\\extract_iscwsa_codes.py",
+        "source_line": 188,
+        "reference_text": "\"reference/error-model-example-mwdrev5-iscwsa-1.xlsx\""
+      },
+      {
+        "document_name": "toolgroup-owsg-a-rev-5-1-08-oct-2020-produced-22-oct-2020.xlsx",
+        "source_file": "welleng\\errors\\extract_owsg_codes_generic.py",
+        "source_line": 214,
+        "reference_text": "f'toolgroup-owsg-a-rev-5-1-08-oct-2020-produced-22-oct-2020.xlsx'"
+      },
+      {
+        "document_name": "reference/toolgroup-owsg-a-rev-5-1-08-oct-2020-produced-22-oct-2020.xlsx",
+        "source_file": "welleng\\errors\\extract_owsg_codes_generic.py",
+        "source_line": 266,
+        "reference_text": "#     'reference/toolgroup-owsg-a-rev-5-1-08-oct-2020-produced-22-oct-2020.xlsx'"
+      },
+      {
+        "document_name": "toolgroup-owsg-a-rev-5-1-08-oct-2020-produced-22-oct-2020.xlsx",
+        "source_file": "welleng\\errors\\extract_owsg_codes_generic.py",
+        "source_line": 272,
+        "reference_text": "#     \"toolgroup-owsg-a-rev-5-1-08-oct-2020-produced-22-oct-2020.xlsx\""
+      },
+      {
+        "document_name": "reference/error-model-example-mwdrev5-iscwsa-1.xlsx",
+        "source_file": "welleng\\errors\\extract_owsg_codes_generic.py",
+        "source_line": 276,
+        "reference_text": "#     \"reference/error-model-example-mwdrev5-iscwsa-1.xlsx\""
+      },
+      {
+        "document_name": "toolgroup-owsg-a-rev-5-1-08-oct-2020-produced-23-sep-2022.xlsx",
+        "source_file": "welleng\\errors\\tools\\owsg_to_json.py",
+        "source_line": 347,
+        "reference_text": "_TOOLGROUPS_DIR / \"toolgroup-owsg-a-rev-5-1-08-oct-2020-produced-23-sep-2022.xlsx\""
+      },
+      {
+        "document_name": "toolgroup-owsg-b-rev-5-1-08-oct-2020-produced-23-sep-2022.xlsx",
+        "source_file": "welleng\\errors\\tools\\owsg_to_json.py",
+        "source_line": 350,
+        "reference_text": "_TOOLGROUPS_DIR / \"toolgroup-owsg-b-rev-5-1-08-oct-2020-produced-23-sep-2022.xlsx\""
+      }
+    ],
+    "code_test_links": [
+      {
+        "source_file": "welleng\\connector.py",
+        "test_file": "tests\\test_connector.py",
+        "link_type": "NAMING_CONVENTION"
+      },
+      {
+        "source_file": "welleng\\errors\\iscwsa_ingest.py",
+        "test_file": "tests\\test_iscwsa_ingest.py",
+        "link_type": "NAMING_CONVENTION"
+      },
+      {
+        "source_file": "welleng\\errors\\iscwsa_validate.py",
+        "test_file": "tests\\test_iscwsa_validate.py",
+        "link_type": "NAMING_CONVENTION"
+      },
+      {
+        "source_file": "welleng\\fluid.py",
+        "test_file": "tests\\test_fluid.py",
+        "link_type": "NAMING_CONVENTION"
+      },
+      {
+        "source_file": "welleng\\utils.py",
+        "test_file": "tests\\test_utils.py",
+        "link_type": "NAMING_CONVENTION"
+      }
+    ],
+    "untraced_source": [
+      "docs\\conf.py",
+      "examples\\build_a_well_from_sections.py",
+      "examples\\calibrate_iscwsa_error_example_1.py",
+      "examples\\connect_cartesian_points.py",
+      "examples\\connect_two_random_points.py",
+      "examples\\evaluating_clearance.py",
+      "examples\\extract_torque_drag.py",
+      "examples\\gyro_survey_example.py",
+      "examples\\interpolate_sparse_survey.py",
+      "examples\\project_ahead_example.py",
+      "examples\\simple_example.py",
+      "examples\\using_error_models.py",
+      "examples\\visualise_clc_edge_cases.py",
+      "examples\\volve_wells.py",
+      "reference\\make_standard_paths.py",
+      "setup.py",
+      "welleng\\__init__.py",
+      "welleng\\architecture.py",
+      "welleng\\clearance.py",
+      "welleng\\error.py",
+      "welleng\\errors\\__init__.py",
+      "welleng\\errors\\conformance.py",
+      "welleng\\errors\\copsegrove.py",
+      "welleng\\errors\\copsegrove_validate.py",
+      "welleng\\errors\\extract_iscwsa_codes.py",
+      "welleng\\errors\\extract_owsg_codes_generic.py",
+      "welleng\\errors\\interpreter.py",
+      "welleng\\errors\\iscwsa_mwd.py",
+      "welleng\\errors\\tool_errors.py",
+      "welleng\\errors\\tools\\__init__.py",
+      "welleng\\errors\\tools\\owsg_to_json.py",
+      "welleng\\exchange\\__init__.py",
+      "welleng\\exchange\\csv.py",
+      "welleng\\exchange\\edm.py",
+      "welleng\\exchange\\wbp.py",
+      "welleng\\io.py",
+      "welleng\\mesh.py",
+      "welleng\\node.py",
+      "welleng\\survey.py",
+      "welleng\\target.py",
+      "welleng\\torque_drag.py",
+      "welleng\\units.py",
+      "welleng\\version.py",
+      "welleng\\visual.py"
+    ],
+    "total_doc_links": 20,
+    "total_test_links": 5,
+    "coverage_note": "10.2% (CENTRALIZED_TEST_HARNESS_DETECTED)",
+    "notes": [
+      "CENTRALIZED_TEST_HARNESS_DETECTED: Coverage is 10.2% (below the 30.0% floor) but physical harness evidence was found. Hybrid test architecture suspected.",
+      "SCOPE NOTE: Requirement->Code mapping is Module 9 (V3-106). This module traces document references and test structure only."
+    ]
+  },
+  "risk": {
+    "critical_components": [
+      {
+        "source_file": "welleng\\clearance.py",
+        "risk_level": "MEDIUM",
+        "risk_reasons": [
+          "Large file: 27 functions",
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 27,
+        "has_tests": false,
+        "risk_score": 4
+      },
+      {
+        "source_file": "welleng\\error.py",
+        "risk_level": "MEDIUM",
+        "risk_reasons": [
+          "Large file: 18 functions",
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 18,
+        "has_tests": false,
+        "risk_score": 4
+      },
+      {
+        "source_file": "welleng\\survey.py",
+        "risk_level": "MEDIUM",
+        "risk_reasons": [
+          "Large file: 70 functions",
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 70,
+        "has_tests": false,
+        "risk_score": 4
+      },
+      {
+        "source_file": "welleng\\torque_drag.py",
+        "risk_level": "MEDIUM",
+        "risk_reasons": [
+          "Large file: 21 functions",
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 21,
+        "has_tests": false,
+        "risk_score": 4
+      },
+      {
+        "source_file": "welleng\\visual.py",
+        "risk_level": "MEDIUM",
+        "risk_reasons": [
+          "Large file: 15 functions",
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 15,
+        "has_tests": false,
+        "risk_score": 4
+      },
+      {
+        "source_file": "welleng\\errors\\iscwsa_mwd.py",
+        "risk_level": "MEDIUM",
+        "risk_reasons": [
+          "Large file: 37 functions",
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 37,
+        "has_tests": false,
+        "risk_score": 4
+      },
+      {
+        "source_file": "welleng\\errors\\tool_errors.py",
+        "risk_level": "MEDIUM",
+        "risk_reasons": [
+          "Large file: 60 functions",
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 60,
+        "has_tests": false,
+        "risk_score": 4
+      },
+      {
+        "source_file": "welleng\\exchange\\edm.py",
+        "risk_level": "MEDIUM",
+        "risk_reasons": [
+          "Large file: 30 functions",
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 30,
+        "has_tests": false,
+        "risk_score": 4
+      },
+      {
+        "source_file": "welleng\\exchange\\wbp.py",
+        "risk_level": "MEDIUM",
+        "risk_reasons": [
+          "Large file: 32 functions",
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 32,
+        "has_tests": false,
+        "risk_score": 4
+      },
+      {
+        "source_file": "examples\\visualise_clc_edge_cases.py",
+        "risk_level": "MEDIUM",
+        "risk_reasons": [
+          "Medium file: 8 functions",
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 8,
+        "has_tests": false,
+        "risk_score": 3
+      },
+      {
+        "source_file": "welleng\\mesh.py",
+        "risk_level": "MEDIUM",
+        "risk_reasons": [
+          "Medium file: 14 functions",
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 14,
+        "has_tests": false,
+        "risk_score": 3
+      },
+      {
+        "source_file": "welleng\\errors\\conformance.py",
+        "risk_level": "MEDIUM",
+        "risk_reasons": [
+          "Medium file: 10 functions",
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 10,
+        "has_tests": false,
+        "risk_score": 3
+      },
+      {
+        "source_file": "welleng\\errors\\extract_owsg_codes_generic.py",
+        "risk_level": "MEDIUM",
+        "risk_reasons": [
+          "Medium file: 10 functions",
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 10,
+        "has_tests": false,
+        "risk_score": 3
+      },
+      {
+        "source_file": "welleng\\errors\\tools\\owsg_to_json.py",
+        "risk_level": "MEDIUM",
+        "risk_reasons": [
+          "Medium file: 13 functions",
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 13,
+        "has_tests": false,
+        "risk_score": 3
+      },
+      {
+        "source_file": "setup.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 0,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "docs\\conf.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 1,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "examples\\build_a_well_from_sections.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 0,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "examples\\calibrate_iscwsa_error_example_1.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 0,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "examples\\connect_cartesian_points.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 0,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "examples\\connect_two_random_points.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 0,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "examples\\evaluating_clearance.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 1,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "examples\\extract_torque_drag.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 1,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "examples\\gyro_survey_example.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 1,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "examples\\interpolate_sparse_survey.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 0,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "examples\\project_ahead_example.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 0,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "examples\\simple_example.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 0,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "examples\\using_error_models.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 3,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "examples\\volve_wells.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 0,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "reference\\make_standard_paths.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 1,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "welleng\\architecture.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 7,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "welleng\\connector.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "Large file: 52 functions"
+        ],
+        "import_count": 0,
+        "function_count": 52,
+        "has_tests": true,
+        "risk_score": 2
+      },
+      {
+        "source_file": "welleng\\io.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 6,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "welleng\\node.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 5,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "welleng\\target.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 2,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "welleng\\units.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 0,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "welleng\\utils.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "Large file: 36 functions"
+        ],
+        "import_count": 0,
+        "function_count": 36,
+        "has_tests": true,
+        "risk_score": 2
+      },
+      {
+        "source_file": "welleng\\version.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 0,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "welleng\\__init__.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 0,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "tests\\test_data\\extract_clearance_model_well_data.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 0,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "tests\\test_data\\extract_iscwsa_error_data.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 6,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "welleng\\errors\\copsegrove.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 2,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "welleng\\errors\\copsegrove_validate.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 3,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "welleng\\errors\\extract_iscwsa_codes.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 7,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "welleng\\errors\\interpreter.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 3,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "welleng\\errors\\iscwsa_ingest.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "Large file: 16 functions"
+        ],
+        "import_count": 0,
+        "function_count": 16,
+        "has_tests": true,
+        "risk_score": 2
+      },
+      {
+        "source_file": "welleng\\errors\\__init__.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 0,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "welleng\\exchange\\csv.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 1,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "welleng\\exchange\\__init__.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 0,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "welleng\\errors\\tools\\__init__.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 0,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "welleng\\fluid.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "Medium file: 11 functions"
+        ],
+        "import_count": 0,
+        "function_count": 11,
+        "has_tests": true,
+        "risk_score": 1
+      }
+    ],
+    "high_risk_count": 0,
+    "repository_risk_score": 7,
+    "top_risk_files": [
+      "welleng\\clearance.py",
+      "welleng\\error.py",
+      "welleng\\survey.py",
+      "welleng\\torque_drag.py",
+      "welleng\\visual.py"
+    ],
+    "notes": [
+      "SECONDARY_CALIBRATION_APPLIED: capped at 7 \u2014 zero HIGH risk components with score 10 is inconsistent.",
+      "SCOPE NOTE: This module identifies structurally high-risk components. Actual blast radius requires Module 5 (V3-017-021). Risk score is structural \u2014 business criticality requires domain context."
+    ]
+  }
+}

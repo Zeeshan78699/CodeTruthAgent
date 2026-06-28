@@ -1,0 +1,216 @@
+{
+  "core_report": {
+    "repository_root": "C:\\repos\\v3\\click",
+    "scan_timestamp": "2026-06-25T18:39:52.040338+00:00",
+    "total_files_scanned": 0,
+    "total_python_files": 0,
+    "total_model_files": 0,
+    "project_purpose": "click \u2014 Unknown \u2014 unknown scale",
+    "application_type": "UNKNOWN",
+    "primary_framework": "None",
+    "secondary_frameworks": [],
+    "detected_languages": [],
+    "detected_file_types": [],
+    "detected_model_files": [],
+    "technology_stack": [],
+    "build_systems": [],
+    "entry_points": [],
+    "configuration_files": [],
+    "documentation_files": [],
+    "test_directories": [],
+    "discovery_score": 0.0,
+    "classification_score": 0.0,
+    "confidence_score": 0.0,
+    "cognition_status": "FAILED",
+    "warnings": [
+      "No dependency files or configuration files found. Classification based on file extensions only.",
+      "Classification confidence low (0%). application_type could not be determined. Discovery scan is complete \u2014 structure, languages, and files are accurate."
+    ],
+    "unknown_file_extensions": [],
+    "error_message": ""
+  },
+  "identity": {
+    "repository_name": "click",
+    "application_type": "UNKNOWN",
+    "domain": "UNKNOWN",
+    "primary_framework": "None",
+    "project_purpose": "click \u2014 Unknown \u2014 unknown scale",
+    "classification_source": "COGNITION_ENGINE",
+    "confidence": 0.0,
+    "is_known": false
+  },
+  "architecture": {
+    "pattern": "UNKNOWN",
+    "confidence": "UNKNOWN",
+    "evidence": [],
+    "all_scores": {}
+  },
+  "boundary": {
+    "boundary_detected": false,
+    "root_path": "C:\\repos\\v3\\click",
+    "is_monorepo": false,
+    "sub_projects": [],
+    "total_files": 0,
+    "total_dirs": 0,
+    "scan_complete": false,
+    "notes": [
+      "Root path does not exist"
+    ]
+  },
+  "signals": {
+    "package_signals": {
+      "Finance": [],
+      "ML": [],
+      "ComputerVision": [],
+      "NLP": [],
+      "Robotics": [],
+      "Scientific": [],
+      "Medical": [],
+      "Web": [],
+      "Data": [],
+      "DevOps": []
+    },
+    "import_signals": {
+      "Finance": [],
+      "ML": [],
+      "ComputerVision": [],
+      "NLP": [],
+      "Robotics": [],
+      "Scientific": [],
+      "Medical": [],
+      "Web": [],
+      "Data": [],
+      "DevOps": []
+    },
+    "content_signals": {
+      "Finance": [],
+      "Medical": [],
+      "Aerospace": [],
+      "ML": [],
+      "Robotics": [],
+      "Energy": [],
+      "Web": []
+    },
+    "domain_scores": {
+      "ComputerVision": 0,
+      "NLP": 0,
+      "Finance": 0,
+      "Robotics": 0,
+      "Aerospace": 0,
+      "Energy": 0,
+      "ML": 0,
+      "Data": 0,
+      "Web": 0,
+      "DevOps": 0,
+      "Scientific": 0,
+      "Medical": 0
+    },
+    "top_domain": "UNKNOWN",
+    "top_score": 0
+  },
+  "classification_reason": {
+    "domain": "UNKNOWN",
+    "winning_reason": "Insufficient evidence to classify repository domain.",
+    "signal_summary": {
+      "ComputerVision": 0,
+      "NLP": 0,
+      "Finance": 0,
+      "Robotics": 0,
+      "Aerospace": 0,
+      "Energy": 0,
+      "ML": 0,
+      "Data": 0,
+      "Web": 0,
+      "DevOps": 0,
+      "Scientific": 0,
+      "Medical": 0
+    },
+    "top_signals": [],
+    "evidence_strength": "NONE",
+    "notes": [
+      "No domain signals found. Human review required before Module 2 proceeds."
+    ]
+  },
+  "gate": {
+    "gate_passed": false,
+    "gate_decision": "BLOCKED",
+    "checks": [
+      {
+        "check_name": "Cognition Status",
+        "passed": false,
+        "detail": "cognition_status = FAILED \u2014 repository could not be classified"
+      }
+    ],
+    "approved_for": "NONE",
+    "blocking_reason": "Cognition FAILED \u2014 classification required before gate can pass"
+  },
+  "knowledge_index": {
+    "readme_files": [],
+    "business_rule_docs": [],
+    "architecture_docs": [],
+    "functional_specs": [],
+    "total_docs_found": 0,
+    "notes": [
+      "Repository path does not exist"
+    ]
+  },
+  "assumptions": {
+    "assumptions": [],
+    "high_risk": [],
+    "total_found": 0,
+    "files_scanned": 0,
+    "overall_risk": "NONE",
+    "notes": [
+      "Repository path does not exist"
+    ]
+  },
+  "constraints": {
+    "constraints": [],
+    "by_category": {},
+    "total_found": 0,
+    "files_scanned": 0,
+    "notes": [
+      "Repository path does not exist"
+    ]
+  },
+  "decisions": {
+    "decisions": [],
+    "adr_files": [],
+    "framework_decisions": [],
+    "total_found": 0,
+    "notes": [
+      "Repository path does not exist"
+    ]
+  },
+  "knowledge_loss": {
+    "risks": [],
+    "high_severity": [],
+    "spof_files": [],
+    "undocumented": [],
+    "total_risks": 0,
+    "overall_severity": "NONE",
+    "notes": [
+      "Repository path does not exist"
+    ]
+  },
+  "traceability": {
+    "document_code_links": [],
+    "code_test_links": [],
+    "untraced_source": [],
+    "total_doc_links": 0,
+    "total_test_links": 0,
+    "coverage_note": "Repository path does not exist",
+    "notes": [
+      "Repository path does not exist."
+    ]
+  },
+  "risk": {
+    "critical_components": [],
+    "high_risk_count": 0,
+    "repository_risk_score": 0,
+    "top_risk_files": [],
+    "notes": [
+      "Repository path does not exist"
+    ]
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "repository_root": "C:\\repos\\v3\\striplog",
+  "scan_timestamp": "2026-06-25T18:42:51.488703+00:00",
+  "total_files_scanned": 102,
+  "total_python_files": 35,
+  "total_model_files": 0,
+  "project_purpose": "striplog \u2014 Unknown (NetworkX) \u2014 35 Python files",
+  "application_type": "UNKNOWN",
+  "primary_framework": "NetworkX",
+  "secondary_frameworks": [
+    "Pytest",
+    "Requests"
+  ],
+  "detected_languages": [
+    "CSS",
+    "Jupyter Notebook",
+    "Python",
+    "TOML",
+    "YAML"
+  ],
+  "detected_file_types": [
+    "Configuration File",
+    "Excel Spreadsheet",
+    "JSON",
+    "Markdown",
+    "ReStructuredText",
+    "Windows Batch Script"
+  ],
+  "detected_model_files": [],
+  "technology_stack": [
+    "Python"
+  ],
+  "build_systems": [
+    "Python Build",
+    "Setuptools",
+    "Make"
+  ],
+  "entry_points": [
+    "docs\\post_process_html.py",
+    "docs\\pre_process_ipynb.py"
+  ],
+  "configuration_files": [
+    ".\\pyproject.toml",
+    ".\\setup.cfg",
+    ".\\setup.py",
+    "docs\\Makefile"
+  ],
+  "documentation_files": [
+    ".\\AUTHORS.md",
+    ".\\CONTRIBUTING.md",
+    ".\\LICENSE",
+    ".\\README.md"
+  ],
+  "test_directories": [
+    "tests"
+  ],
+  "discovery_score": 1.0,
+  "classification_score": 0.75,
+  "confidence_score": 0.875,
+  "cognition_status": "COMPLETE",
+  "warnings": [
+    "3 file extension(s) not in language registry: .csv, .dat, .las. These files were counted but language not identified. Add to LANGUAGE_EXTENSIONS in framework_signatures.py."
+  ],
+  "unknown_file_extensions": [
+    ".csv",
+    ".dat",
+    ".las"
+  ],
+  "error_message": ""
+}

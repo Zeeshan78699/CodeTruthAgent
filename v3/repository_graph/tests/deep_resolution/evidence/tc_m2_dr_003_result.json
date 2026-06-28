@@ -1,0 +1,14 @@
+{
+  "dr_builtin_type": 0,
+  "dr_constructor": 0,
+  "dr_factory": 0,
+  "dr_property": 0,
+  "dr_inheritance": 0,
+  "dr_reflection": 0,
+  "dr_resolved_by_pipeline": 0,
+  "dr_remaining_unresolved": 2,
+  "dr_reduction_pct": 0.0,
+  "baseline_unresolved": 2,
+  "builtin_like_classified": 0,
+  "facts_extracted": 2
+}

@@ -1,0 +1,60 @@
+{
+  "repository_root": "C:\\repos\\v3\\rclpy",
+  "scan_timestamp": "2026-06-25T18:38:51.865458+00:00",
+  "total_files_scanned": 243,
+  "total_python_files": 128,
+  "total_model_files": 0,
+  "project_purpose": "rclpy \u2014 Robotics System \u2014 128 Python files",
+  "application_type": "ROBOTICS_SYSTEM",
+  "primary_framework": "None",
+  "secondary_frameworks": [],
+  "detected_languages": [
+    "C++",
+    "Python",
+    "XML",
+    "YAML"
+  ],
+  "detected_file_types": [
+    "Configuration File",
+    "Markdown",
+    "ReStructuredText",
+    "Text",
+    "Windows Batch Script"
+  ],
+  "detected_model_files": [],
+  "technology_stack": [
+    "Python"
+  ],
+  "build_systems": [
+    "CMake",
+    "Make"
+  ],
+  "entry_points": [
+    "rclpy\\rclpy\\action\\server.py"
+  ],
+  "configuration_files": [
+    "rclpy\\CMakeLists.txt",
+    "rclpy\\docs\\Makefile"
+  ],
+  "documentation_files": [
+    ".\\CONTRIBUTING.md",
+    ".\\LICENSE",
+    ".\\README.md",
+    "rclpy\\CHANGELOG.rst"
+  ],
+  "test_directories": [
+    "rclpy\\test"
+  ],
+  "discovery_score": 1.0,
+  "classification_score": 0.75,
+  "confidence_score": 0.875,
+  "cognition_status": "COMPLETE",
+  "warnings": [
+    "2 file extension(s) not in language registry: .pyi, .typed. These files were counted but language not identified. Add to LANGUAGE_EXTENSIONS in framework_signatures.py."
+  ],
+  "unknown_file_extensions": [
+    ".pyi",
+    ".typed"
+  ],
+  "error_message": ""
+}

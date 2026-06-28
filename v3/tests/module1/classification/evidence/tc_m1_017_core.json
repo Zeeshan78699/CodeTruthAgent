@@ -1,0 +1,97 @@
+{
+  "repository_root": "C:\\repos\\v3\\pandapower",
+  "scan_timestamp": "2026-06-25T18:41:40.789323+00:00",
+  "total_files_scanned": 1383,
+  "total_python_files": 506,
+  "total_model_files": 8,
+  "project_purpose": "pandapower \u2014 Energy System (pandapower) \u2014 506 Python files",
+  "application_type": "ENERGY_SYSTEM",
+  "primary_framework": "pandapower",
+  "secondary_frameworks": [
+    "Pytest"
+  ],
+  "detected_languages": [
+    "HTML",
+    "Julia",
+    "Jupyter Notebook",
+    "MATLAB",
+    "Objective-C",
+    "Python",
+    "TOML",
+    "YAML"
+  ],
+  "detected_file_types": [
+    "Configuration File",
+    "Excel Spreadsheet",
+    "JSON",
+    "Markdown",
+    "Microsoft Access Database",
+    "PDF Document",
+    "PowerPoint",
+    "ReStructuredText",
+    "Text",
+    "Windows Batch Script",
+    "Word Document"
+  ],
+  "detected_model_files": [
+    "Pickle Model"
+  ],
+  "technology_stack": [
+    "Python"
+  ],
+  "build_systems": [
+    "Python Build",
+    "Setuptools",
+    "Make"
+  ],
+  "entry_points": [
+    "pandapower\\contingency\\contingency_parallel.py",
+    "pandapower\\control\\controller\\DERController\\DERBasics.py",
+    "pandapower\\control\\controller\\DERController\\PQVAreas.py",
+    "pandapower\\control\\controller\\DERController\\QModels.py",
+    "pandapower\\control\\controller\\DERController\\der_control.py",
+    "pandapower\\control\\controller\\DERController\\der_control_plot.py",
+    "pandapower\\run.py"
+  ],
+  "configuration_files": [
+    ".\\pyproject.toml",
+    ".\\setup.py",
+    "doc\\Makefile"
+  ],
+  "documentation_files": [
+    ".\\AUTHORS",
+    ".\\CHANGELOG.rst",
+    ".\\CONTRIBUTING.md",
+    ".\\LICENSE",
+    ".\\README.rst",
+    "pandapower\\test\\test_files\\example_cim\\LICENSE.txt",
+    "tutorials\\example_cim\\LICENSE.txt"
+  ],
+  "test_directories": [
+    "pandapower\\test"
+  ],
+  "discovery_score": 1.0,
+  "classification_score": 1.0,
+  "confidence_score": 1.0,
+  "cognition_status": "COMPLETE",
+  "warnings": [
+    "14 file extension(s) not in language registry: .bib, .bmp, .csv, .dia, .drawio. These files were counted but language not identified. Add to LANGUAGE_EXTENSIONS in framework_signatures.py."
+  ],
+  "unknown_file_extensions": [
+    ".bib",
+    ".bmp",
+    ".csv",
+    ".dia",
+    ".drawio",
+    ".emf",
+    ".p",
+    ".pfd",
+    ".psd",
+    ".sin",
+    ".sxe",
+    ".uct",
+    ".vsd",
+    ".vsdx"
+  ],
+  "error_message": ""
+}

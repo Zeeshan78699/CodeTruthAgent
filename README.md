@@ -1,4 +1,19 @@
+# CodeTruth Agent
+
+[![HuggingFace Space](https://img.shields.io/badge/🤗%20HuggingFace-Space-yellow)](https://huggingface.co/spaces/ZeeshanSaud/CodeTruthAgent-V3)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20569647.svg)](https://doi.org/10.5281/zenodo.20569647)
+[![DOI M1 Core](https://img.shields.io/badge/DOI-M1%20Core-blue)](https://doi.org/10.5281/zenodo.20669542)
+[![DOI M1 Extension](https://img.shields.io/badge/DOI-M1%20Extension-blue)](https://doi.org/10.5281/zenodo.21005444)
+[![DOI M2 Core](https://img.shields.io/badge/DOI-M2%20Core-blue)](https://doi.org/10.5281/zenodo.20706591)
+[![DOI M2 Deep Resolution](https://img.shields.io/badge/DOI-M2%20Deep%20Resolution-blue)](https://doi.org/10.5281/zenodo.21005972)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-green.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
+> *AI imagines. CodeTruth checks. Nature tests. Humans decide.*
+
+## V3 — Modules 1 & 2 Complete ✅
+**[→ View CodeTruth V3 on HuggingFace](https://huggingface.co/spaces/ZeeshanSaud/CodeTruthAgent-V3)**
+
+---
 
 # CodeTruth Agent V2
 

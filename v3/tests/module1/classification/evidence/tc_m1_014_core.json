@@ -1,0 +1,70 @@
+{
+  "repository_root": "C:\\repos\\v3\\lasio",
+  "scan_timestamp": "2026-06-25T18:40:45.825932+00:00",
+  "total_files_scanned": 234,
+  "total_python_files": 32,
+  "total_model_files": 0,
+  "project_purpose": "lasio \u2014 Data Engineering \u2014 32 Python files",
+  "application_type": "DATA_ENGINEERING",
+  "primary_framework": "None",
+  "secondary_frameworks": [
+    "Pytest"
+  ],
+  "detected_languages": [
+    "Docker",
+    "Jupyter Notebook",
+    "Python",
+    "TOML",
+    "YAML"
+  ],
+  "detected_file_types": [
+    "Excel Spreadsheet",
+    "JSON",
+    "Markdown",
+    "PDF Document",
+    "ReStructuredText",
+    "Text",
+    "Windows Batch Script"
+  ],
+  "detected_model_files": [],
+  "technology_stack": [
+    "Python",
+    "Travis CI",
+    "Docker"
+  ],
+  "build_systems": [
+    "Python Build",
+    "Make"
+  ],
+  "entry_points": [
+    "lasio\\excel.py"
+  ],
+  "configuration_files": [
+    ".\\.travis.yml",
+    ".\\Dockerfile",
+    ".\\pyproject.toml",
+    "docs\\Makefile",
+    "docs\\requirements.txt"
+  ],
+  "documentation_files": [
+    ".\\LICENSE",
+    ".\\README.md",
+    "notebooks\\README.md"
+  ],
+  "test_directories": [
+    "tests"
+  ],
+  "discovery_score": 1.0,
+  "classification_score": 0.75,
+  "confidence_score": 0.875,
+  "cognition_status": "COMPLETE",
+  "warnings": [
+    "3 file extension(s) not in language registry: .cff, .csv, .las. These files were counted but language not identified. Add to LANGUAGE_EXTENSIONS in framework_signatures.py."
+  ],
+  "unknown_file_extensions": [
+    ".cff",
+    ".csv",
+    ".las"
+  ],
+  "error_message": ""
+}

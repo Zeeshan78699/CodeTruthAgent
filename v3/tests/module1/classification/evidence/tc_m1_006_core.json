@@ -1,0 +1,80 @@
+{
+  "repository_root": "C:\\repos\\v3\\fastapi",
+  "scan_timestamp": "2026-06-25T18:39:15.126715+00:00",
+  "total_files_scanned": 2945,
+  "total_python_files": 1120,
+  "total_model_files": 0,
+  "project_purpose": "fastapi \u2014 Api Service (FastAPI) \u2014 1120 Python files",
+  "application_type": "API_SERVICE",
+  "primary_framework": "FastAPI",
+  "secondary_frameworks": [
+    "Pytest",
+    "Pydantic",
+    "HTTPX"
+  ],
+  "detected_languages": [
+    "CSS",
+    "HTML",
+    "JavaScript",
+    "Python",
+    "Shell",
+    "TOML",
+    "YAML"
+  ],
+  "detected_file_types": [
+    "Markdown"
+  ],
+  "detected_model_files": [],
+  "technology_stack": [
+    "Python"
+  ],
+  "build_systems": [
+    "Python Build"
+  ],
+  "entry_points": [
+    "docs_src\\app_testing\\app_a_py310\\main.py",
+    "docs_src\\app_testing\\app_b_an_py310\\main.py",
+    "docs_src\\app_testing\\app_b_py310\\main.py",
+    "docs_src\\async_tests\\app_a_py310\\main.py",
+    "docs_src\\bigger_applications\\app_an_py310\\internal\\admin.py",
+    "docs_src\\bigger_applications\\app_an_py310\\main.py",
+    "docs_src\\bigger_applications\\app_an_py310\\routers\\items.py",
+    "docs_src\\bigger_applications\\app_an_py310\\routers\\users.py",
+    "docs_src\\settings\\app01_py310\\main.py",
+    "docs_src\\settings\\app02_an_py310\\main.py",
+    "docs_src\\settings\\app02_py310\\main.py",
+    "docs_src\\settings\\app03_an_py310\\main.py",
+    "docs_src\\settings\\app03_py310\\main.py",
+    "fastapi\\__main__.py",
+    "fastapi\\cli.py",
+    "fastapi\\middleware\\wsgi.py"
+  ],
+  "configuration_files": [
+    ".\\pyproject.toml",
+    "docs_src\\settings\\app01_py310\\config.py",
+    "docs_src\\settings\\app02_an_py310\\config.py",
+    "docs_src\\settings\\app02_py310\\config.py",
+    "docs_src\\settings\\app03_an_py310\\config.py",
+    "docs_src\\settings\\app03_py310\\config.py"
+  ],
+  "documentation_files": [
+    ".\\LICENSE",
+    ".\\README.md"
+  ],
+  "test_directories": [
+    "scripts\\tests",
+    "tests"
+  ],
+  "discovery_score": 1.0,
+  "classification_score": 1.0,
+  "confidence_score": 1.0,
+  "cognition_status": "COMPLETE",
+  "warnings": [
+    "2 file extension(s) not in language registry: .cff, .typed. These files were counted but language not identified. Add to LANGUAGE_EXTENSIONS in framework_signatures.py."
+  ],
+  "unknown_file_extensions": [
+    ".cff",
+    ".typed"
+  ],
+  "error_message": ""
+}

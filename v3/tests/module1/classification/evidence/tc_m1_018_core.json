@@ -1,0 +1,47 @@
+{
+  "repository_root": "C:\\repos\\v3\\pyreservoir",
+  "scan_timestamp": "2026-06-25T18:42:01.591359+00:00",
+  "total_files_scanned": 64,
+  "total_python_files": 14,
+  "total_model_files": 0,
+  "project_purpose": "pyreservoir \u2014 Monorepo \u2014 14 Python files",
+  "application_type": "MONOREPO",
+  "primary_framework": "None",
+  "secondary_frameworks": [],
+  "detected_languages": [
+    "Jupyter Notebook",
+    "Python"
+  ],
+  "detected_file_types": [
+    "Markdown",
+    "PDF Document",
+    "Text"
+  ],
+  "detected_model_files": [],
+  "technology_stack": [
+    "Python"
+  ],
+  "build_systems": [],
+  "entry_points": [],
+  "configuration_files": [],
+  "documentation_files": [
+    ".\\LICENSE",
+    ".\\README.md",
+    "docs\\README.md"
+  ],
+  "test_directories": [],
+  "discovery_score": 1.0,
+  "classification_score": 0.75,
+  "confidence_score": 0.875,
+  "cognition_status": "COMPLETE",
+  "warnings": [
+    "No dependency files or configuration files found. Classification based on file extensions only.",
+    "Multiple application types detected: DATA_ENGINEERING, ML_PIPELINE. Classified as MONOREPO. Module 2 Repository Graph Engine required for service boundary resolution.",
+    "2 file extension(s) not in language registry: .csv, .inc. These files were counted but language not identified. Add to LANGUAGE_EXTENSIONS in framework_signatures.py."
+  ],
+  "unknown_file_extensions": [
+    ".csv",
+    ".inc"
+  ],
+  "error_message": ""
+}

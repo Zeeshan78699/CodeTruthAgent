@@ -1,0 +1,492 @@
+{
+  "core_report": {
+    "repository_root": "C:\\repos\\v3\\pyreservoir",
+    "scan_timestamp": "2026-06-25T18:42:01.591359+00:00",
+    "total_files_scanned": 64,
+    "total_python_files": 14,
+    "total_model_files": 0,
+    "project_purpose": "pyreservoir \u2014 Monorepo \u2014 14 Python files",
+    "application_type": "MONOREPO",
+    "primary_framework": "None",
+    "secondary_frameworks": [],
+    "detected_languages": [
+      "Jupyter Notebook",
+      "Python"
+    ],
+    "detected_file_types": [
+      "Markdown",
+      "PDF Document",
+      "Text"
+    ],
+    "detected_model_files": [],
+    "technology_stack": [
+      "Python"
+    ],
+    "build_systems": [],
+    "entry_points": [],
+    "configuration_files": [],
+    "documentation_files": [
+      ".\\LICENSE",
+      ".\\README.md",
+      "docs\\README.md"
+    ],
+    "test_directories": [],
+    "discovery_score": 1.0,
+    "classification_score": 0.75,
+    "confidence_score": 0.875,
+    "cognition_status": "COMPLETE",
+    "warnings": [
+      "No dependency files or configuration files found. Classification based on file extensions only.",
+      "Multiple application types detected: DATA_ENGINEERING, ML_PIPELINE. Classified as MONOREPO. Module 2 Repository Graph Engine required for service boundary resolution.",
+      "2 file extension(s) not in language registry: .csv, .inc. These files were counted but language not identified. Add to LANGUAGE_EXTENSIONS in framework_signatures.py."
+    ],
+    "unknown_file_extensions": [
+      ".csv",
+      ".inc"
+    ],
+    "error_message": ""
+  },
+  "identity": {
+    "repository_name": "pyreservoir",
+    "application_type": "RESERVOIR_ENGINEERING",
+    "domain": "RESERVOIR_ENGINEERING",
+    "primary_framework": "None",
+    "project_purpose": "pyreservoir \u2014 Monorepo \u2014 14 Python files",
+    "classification_source": "COGNITION_ENGINE",
+    "confidence": 0.875,
+    "is_known": true
+  },
+  "architecture": {
+    "pattern": "UNKNOWN",
+    "confidence": "UNKNOWN",
+    "evidence": [],
+    "all_scores": {
+      "MVC": 0,
+      "LAYERED": 0,
+      "MICROSERVICES": 0,
+      "EVENT_DRIVEN": 0,
+      "PIPELINE": 0,
+      "LIBRARY": 0,
+      "MONOLITH": 0
+    }
+  },
+  "boundary": {
+    "boundary_detected": true,
+    "root_path": "C:\\repos\\v3\\pyreservoir",
+    "is_monorepo": false,
+    "sub_projects": [],
+    "total_files": 93,
+    "total_dirs": 28,
+    "scan_complete": true,
+    "notes": []
+  },
+  "signals": {
+    "package_signals": {
+      "Finance": [],
+      "ML": [],
+      "ComputerVision": [],
+      "NLP": [],
+      "Robotics": [],
+      "Scientific": [],
+      "Medical": [],
+      "Web": [],
+      "Data": [],
+      "DevOps": []
+    },
+    "import_signals": {
+      "Finance": [
+        "pandas"
+      ],
+      "ML": [
+        "sklearn"
+      ],
+      "ComputerVision": [],
+      "NLP": [],
+      "Robotics": [],
+      "Scientific": [
+        "numpy",
+        "matplotlib",
+        "scipy"
+      ],
+      "Medical": [],
+      "Web": [],
+      "Data": [],
+      "DevOps": []
+    },
+    "content_signals": {
+      "Finance": [
+        "erp"
+      ],
+      "Medical": [],
+      "Aerospace": [],
+      "ML": [
+        "model"
+      ],
+      "Robotics": [
+        "servo"
+      ],
+      "Energy": [
+        "pressure"
+      ],
+      "Web": [
+        "response"
+      ]
+    },
+    "domain_scores": {
+      "DevOps": 0,
+      "Data": 0,
+      "Aerospace": 0,
+      "ML": 2,
+      "Medical": 0,
+      "Energy": 1,
+      "ComputerVision": 0,
+      "NLP": 0,
+      "Scientific": 3,
+      "Web": 1,
+      "Finance": 2,
+      "Robotics": 1
+    },
+    "top_domain": "Scientific",
+    "top_score": 3
+  },
+  "classification_reason": {
+    "domain": "RESERVOIR_ENGINEERING",
+    "winning_reason": "Insufficient evidence to classify repository domain.",
+    "signal_summary": {
+      "DevOps": 0,
+      "Data": 0,
+      "Aerospace": 0,
+      "ML": 2,
+      "Medical": 0,
+      "Energy": 1,
+      "ComputerVision": 0,
+      "NLP": 0,
+      "Scientific": 3,
+      "Web": 1,
+      "Finance": 2,
+      "Robotics": 1
+    },
+    "top_signals": [],
+    "evidence_strength": "NONE",
+    "notes": [
+      "No domain signals found. Human review required before Module 2 proceeds."
+    ]
+  },
+  "gate": {
+    "gate_passed": true,
+    "gate_decision": "APPROVED",
+    "checks": [
+      {
+        "check_name": "Cognition Status",
+        "passed": true,
+        "detail": "cognition_status = COMPLETE"
+      },
+      {
+        "check_name": "Domain Classification",
+        "passed": true,
+        "detail": "domain = RESERVOIR_ENGINEERING, is_known = True"
+      },
+      {
+        "check_name": "Repository Boundary",
+        "passed": true,
+        "detail": "boundary_detected = True"
+      },
+      {
+        "check_name": "Repository Not Empty",
+        "passed": true,
+        "detail": "total_files = 93"
+      },
+      {
+        "check_name": "Confidence Score Present",
+        "passed": true,
+        "detail": "confidence_score = 0.875"
+      }
+    ],
+    "approved_for": "MODULE_2",
+    "blocking_reason": null
+  },
+  "knowledge_index": {
+    "readme_files": [
+      {
+        "doc_type": "README",
+        "path": "README.md",
+        "filename": "README.md",
+        "extension": ".md"
+      },
+      {
+        "doc_type": "README",
+        "path": "docs\\README.md",
+        "filename": "README.md",
+        "extension": ".md"
+      }
+    ],
+    "business_rule_docs": [],
+    "architecture_docs": [],
+    "functional_specs": [],
+    "total_docs_found": 2,
+    "notes": [
+      "SCOPE NOTE: This module reports document locations only. Content extraction and rule interpretation require V3-108 governance."
+    ]
+  },
+  "assumptions": {
+    "assumptions": [],
+    "high_risk": [],
+    "total_found": 0,
+    "files_scanned": 14,
+    "overall_risk": "NONE",
+    "notes": [
+      "All findings are POSSIBLE_ASSUMPTION \u2014 code evidence only. Confirm with domain experts before treating as verified business rules."
+    ]
+  },
+  "constraints": {
+    "constraints": [],
+    "by_category": {
+      "BUSINESS": [],
+      "TECHNICAL": [],
+      "COMPLIANCE": [],
+      "SAFETY": []
+    },
+    "total_found": 0,
+    "files_scanned": 14,
+    "notes": [
+      "Constraints are INFERRED from code patterns. Verify with domain experts and policy documents."
+    ]
+  },
+  "decisions": {
+    "decisions": [],
+    "adr_files": [],
+    "framework_decisions": [],
+    "total_found": 0,
+    "notes": [
+      "Decisions are INFERRED from structural evidence (ADR files, dependency choices, decision comments). Original decision rationale may require document review."
+    ]
+  },
+  "knowledge_loss": {
+    "risks": [],
+    "high_severity": [],
+    "spof_files": [],
+    "undocumented": [],
+    "total_risks": 0,
+    "overall_severity": "NONE",
+    "notes": [
+      "Knowledge risk is structural \u2014 based on import frequency and absence of tests/documentation. Business criticality requires domain expert confirmation."
+    ]
+  },
+  "traceability": {
+    "document_code_links": [
+      {
+        "document_name": "https://raw.githubusercontent.com/yohanesnuwara/pyreservoir/master/fluid_flow/Ei_table.txt",
+        "source_file": "fluid_flow\\flow_solutions.py",
+        "source_line": 40,
+        "reference_text": "Ei_table = np.loadtxt(\"https://raw.githubusercontent.com/yohanesnuwara/pyreservoir/master/fluid_flow/Ei_table.txt\")"
+      },
+      {
+        "document_name": "https://raw.githubusercontent.com/yohanesnuwara/reservoir-engineering/master/Appendix%20A.%20Values%20and%20Tabulations/Table%20A-1-Values%20for%20Exponential%20Integral.txt",
+        "source_file": "welltest\\wellflo.py",
+        "source_line": 318,
+        "reference_text": "Ei_table = Ei_table = np.loadtxt(\"https://raw.githubusercontent.com/yohanesnuwara/reservoir-engineering/master/Appendix%"
+      }
+    ],
+    "code_test_links": [],
+    "untraced_source": [
+      "core_analysis\\geoprovider.py",
+      "dca\\dca.py",
+      "fluid_flow\\flow_solutions.py",
+      "fluid_flow\\relperm.py",
+      "fluid_flow\\twophase.py",
+      "matbal\\aquifer.py",
+      "matbal\\drives.py",
+      "matbal\\mbal.py",
+      "pvt\\pvtcorrelation.py",
+      "pvt\\pvtlab.py",
+      "utilities.py",
+      "volumetrics\\volumetrics.py",
+      "welltest\\wellanalysis.py",
+      "welltest\\wellflo.py"
+    ],
+    "total_doc_links": 2,
+    "total_test_links": 0,
+    "coverage_note": "0/14 source files have test counterparts by naming convention (0.0%)",
+    "notes": [
+      "TEST_COVERAGE_METRIC_UNRELIABLE: No local file-pair test matches were found and no centralized test harness was detected.",
+      "SCOPE NOTE: Requirement->Code mapping is Module 9 (V3-106). This module traces document references and test structure only."
+    ]
+  },
+  "risk": {
+    "critical_components": [
+      {
+        "source_file": "pvt\\pvtcorrelation.py",
+        "risk_level": "MEDIUM",
+        "risk_reasons": [
+          "Large file: 19 functions",
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 19,
+        "has_tests": false,
+        "risk_score": 4
+      },
+      {
+        "source_file": "welltest\\wellanalysis.py",
+        "risk_level": "MEDIUM",
+        "risk_reasons": [
+          "Large file: 17 functions",
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 17,
+        "has_tests": false,
+        "risk_score": 4
+      },
+      {
+        "source_file": "dca\\dca.py",
+        "risk_level": "MEDIUM",
+        "risk_reasons": [
+          "Medium file: 8 functions",
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 8,
+        "has_tests": false,
+        "risk_score": 3
+      },
+      {
+        "source_file": "matbal\\aquifer.py",
+        "risk_level": "MEDIUM",
+        "risk_reasons": [
+          "Medium file: 11 functions",
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 11,
+        "has_tests": false,
+        "risk_score": 3
+      },
+      {
+        "source_file": "matbal\\mbal.py",
+        "risk_level": "MEDIUM",
+        "risk_reasons": [
+          "Medium file: 14 functions",
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 14,
+        "has_tests": false,
+        "risk_score": 3
+      },
+      {
+        "source_file": "welltest\\wellflo.py",
+        "risk_level": "MEDIUM",
+        "risk_reasons": [
+          "Medium file: 11 functions",
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 11,
+        "has_tests": false,
+        "risk_score": 3
+      },
+      {
+        "source_file": "utilities.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 2,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "core_analysis\\geoprovider.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 4,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "fluid_flow\\flow_solutions.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 4,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "fluid_flow\\relperm.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 1,
+        "function_count": 1,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "fluid_flow\\twophase.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 3,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "matbal\\drives.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 3,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "pvt\\pvtlab.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 2,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "volumetrics\\volumetrics.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 6,
+        "has_tests": false,
+        "risk_score": 2
+      }
+    ],
+    "high_risk_count": 0,
+    "repository_risk_score": 7,
+    "top_risk_files": [
+      "pvt\\pvtcorrelation.py",
+      "welltest\\wellanalysis.py",
+      "dca\\dca.py",
+      "matbal\\aquifer.py",
+      "matbal\\mbal.py"
+    ],
+    "notes": [
+      "SECONDARY_CALIBRATION_APPLIED: capped at 7 \u2014 zero HIGH risk components with score 10 is inconsistent.",
+      "SCOPE NOTE: This module identifies structurally high-risk components. Actual blast radius requires Module 5 (V3-017-021). Risk score is structural \u2014 business criticality requires domain context."
+    ]
+  }
+}

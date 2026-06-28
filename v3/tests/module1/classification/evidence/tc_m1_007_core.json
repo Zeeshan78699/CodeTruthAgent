@@ -1,0 +1,89 @@
+{
+  "repository_root": "C:\\repos\\v3\\flask",
+  "scan_timestamp": "2026-06-25T18:39:24.962100+00:00",
+  "total_files_scanned": 225,
+  "total_python_files": 83,
+  "total_model_files": 0,
+  "project_purpose": "flask \u2014 Web Application (Flask) \u2014 83 Python files",
+  "application_type": "WEB_APPLICATION",
+  "primary_framework": "Flask",
+  "secondary_frameworks": [
+    "Pytest",
+    "Celery",
+    "Redis",
+    "Requests"
+  ],
+  "detected_languages": [
+    "CSS",
+    "HTML",
+    "Python",
+    "SQL",
+    "TOML",
+    "YAML"
+  ],
+  "detected_file_types": [
+    "JSON",
+    "Markdown",
+    "ReStructuredText",
+    "Text",
+    "Windows Batch Script"
+  ],
+  "detected_model_files": [],
+  "technology_stack": [
+    "Python",
+    "Redis"
+  ],
+  "build_systems": [
+    "Python Build",
+    "Make"
+  ],
+  "entry_points": [
+    "examples\\celery\\src\\task_app\\__init__.py",
+    "examples\\javascript\\js_example\\views.py",
+    "examples\\tutorial\\flaskr\\__init__.py",
+    "examples\\tutorial\\flaskr\\db.py",
+    "src\\flask\\__main__.py",
+    "src\\flask\\app.py",
+    "src\\flask\\cli.py",
+    "src\\flask\\ctx.py",
+    "src\\flask\\helpers.py",
+    "src\\flask\\sansio\\app.py",
+    "src\\flask\\sansio\\scaffold.py"
+  ],
+  "configuration_files": [
+    ".\\pyproject.toml",
+    "docs\\Makefile",
+    "examples\\celery\\pyproject.toml",
+    "examples\\celery\\requirements.txt",
+    "examples\\javascript\\pyproject.toml",
+    "examples\\tutorial\\pyproject.toml",
+    "src\\flask\\config.py",
+    "tests\\test_apps\\.env"
+  ],
+  "documentation_files": [
+    ".\\LICENSE.txt",
+    ".\\README.md",
+    "examples\\celery\\README.md",
+    "examples\\javascript\\LICENSE.txt",
+    "examples\\javascript\\README.rst",
+    "examples\\tutorial\\LICENSE.txt",
+    "examples\\tutorial\\README.rst",
+    "src\\flask\\sansio\\README.md"
+  ],
+  "test_directories": [
+    "examples\\javascript\\tests",
+    "examples\\tutorial\\tests",
+    "tests"
+  ],
+  "discovery_score": 1.0,
+  "classification_score": 1.0,
+  "confidence_score": 1.0,
+  "cognition_status": "COMPLETE",
+  "warnings": [
+    "1 file extension(s) not in language registry: .typed. These files were counted but language not identified. Add to LANGUAGE_EXTENSIONS in framework_signatures.py."
+  ],
+  "unknown_file_extensions": [
+    ".typed"
+  ],
+  "error_message": ""
+}

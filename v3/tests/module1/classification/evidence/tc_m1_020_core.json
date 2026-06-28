@@ -1,0 +1,91 @@
+{
+  "repository_root": "C:\\repos\\v3\\fluids",
+  "scan_timestamp": "2026-06-25T18:42:35.073634+00:00",
+  "total_files_scanned": 385,
+  "total_python_files": 108,
+  "total_model_files": 0,
+  "project_purpose": "fluids \u2014 Data Engineering (Astropy) \u2014 108 Python files",
+  "application_type": "DATA_ENGINEERING",
+  "primary_framework": "Astropy",
+  "secondary_frameworks": [
+    "Pytest"
+  ],
+  "detected_languages": [
+    "AMPL Model",
+    "C",
+    "C++",
+    "CSS",
+    "D",
+    "Fortran",
+    "Go",
+    "HTML",
+    "Haskell",
+    "JavaScript",
+    "Julia",
+    "Jupyter Notebook",
+    "Objective-C",
+    "Perl",
+    "Python",
+    "R",
+    "Ruby",
+    "TOML",
+    "YAML"
+  ],
+  "detected_file_types": [
+    "JSON",
+    "Markdown",
+    "ReStructuredText",
+    "TSV",
+    "Text"
+  ],
+  "detected_model_files": [],
+  "technology_stack": [
+    "Python"
+  ],
+  "build_systems": [
+    "Conda",
+    "Python Build",
+    "Make",
+    "CMake",
+    "Go Modules",
+    "Cabal"
+  ],
+  "entry_points": [],
+  "configuration_files": [
+    ".\\environment.yml",
+    ".\\pyproject.toml",
+    "docs\\language_examples\\C\\Makefile",
+    "docs\\language_examples\\cpp\\CMakeLists.txt",
+    "docs\\language_examples\\go\\go.mod",
+    "docs\\language_examples\\haskell\\haskell-fluids-test.cabal"
+  ],
+  "documentation_files": [
+    ".\\AUTHORS",
+    ".\\CONTRIBUTING.md",
+    ".\\LICENSE.txt",
+    ".\\README.rst",
+    "docs\\language_examples\\haskell\\CHANGELOG.md",
+    "fluids\\nrlmsise00\\LICENSE",
+    "fluids\\nrlmsise00\\README"
+  ],
+  "test_directories": [
+    "tests"
+  ],
+  "discovery_score": 1.0,
+  "classification_score": 1.0,
+  "confidence_score": 1.0,
+  "cognition_status": "COMPLETE",
+  "warnings": [
+    "7 file extension(s) not in language registry: .cabal, .csv, .in, .lisp, .nim. These files were counted but language not identified. Add to LANGUAGE_EXTENSIONS in framework_signatures.py."
+  ],
+  "unknown_file_extensions": [
+    ".cabal",
+    ".csv",
+    ".in",
+    ".lisp",
+    ".nim",
+    ".op",
+    ".typed"
+  ],
+  "error_message": ""
+}

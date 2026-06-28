@@ -26,3 +26,17 @@ __pycache__/
 
 v3/outputs/module2_graphs/graph_transformers.json
 v3/outputs/module2_graphs/graph_odoo.json
+
+# IDE
+.vscode/
+
+# Communication drafts
+communications/
+
+# Large output files
+v3/outputs/module2_deep_resolution/
+v3/outputs/unresolved_pipeline/
+
+# Old/copy files
+*old*
+* - Copy*

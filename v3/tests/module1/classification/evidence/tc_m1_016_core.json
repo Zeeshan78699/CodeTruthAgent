@@ -1,0 +1,82 @@
+{
+  "repository_root": "C:\\repos\\v3\\welleng",
+  "scan_timestamp": "2026-06-25T18:41:18.773303+00:00",
+  "total_files_scanned": 269,
+  "total_python_files": 65,
+  "total_model_files": 1,
+  "project_purpose": "welleng \u2014 Graph Analytics (NetworkX) \u2014 65 Python files",
+  "application_type": "GRAPH_ANALYTICS",
+  "primary_framework": "NetworkX",
+  "secondary_frameworks": [
+    "Pytest"
+  ],
+  "detected_languages": [
+    "HTML",
+    "Python",
+    "TOML",
+    "YAML"
+  ],
+  "detected_file_types": [
+    "Configuration File",
+    "Excel Spreadsheet",
+    "JSON",
+    "Markdown",
+    "ReStructuredText",
+    "Text",
+    "Windows Batch Script",
+    "Word Document"
+  ],
+  "detected_model_files": [
+    "Pickle Model"
+  ],
+  "technology_stack": [
+    "Python"
+  ],
+  "build_systems": [
+    "Python Build",
+    "Setuptools",
+    "Make"
+  ],
+  "entry_points": [
+    "examples\\extract_torque_drag.py",
+    "examples\\using_error_models.py",
+    "examples\\visualise_clc_edge_cases.py",
+    "reference\\make_standard_paths.py",
+    "welleng\\errors\\conformance.py",
+    "welleng\\errors\\copsegrove_validate.py",
+    "welleng\\errors\\extract_iscwsa_codes.py",
+    "welleng\\errors\\extract_owsg_codes_generic.py",
+    "welleng\\errors\\iscwsa_validate.py",
+    "welleng\\errors\\tools\\owsg_to_json.py",
+    "welleng\\exchange\\edm.py",
+    "welleng\\fluid.py",
+    "welleng\\io.py"
+  ],
+  "configuration_files": [
+    ".\\pyproject.toml",
+    ".\\requirements.txt",
+    ".\\setup.cfg",
+    ".\\setup.py",
+    "docs\\Makefile"
+  ],
+  "documentation_files": [
+    ".\\LICENSE",
+    ".\\README.md",
+    "data\\iscwsa\\toolgroups\\README.md"
+  ],
+  "test_directories": [
+    "tests"
+  ],
+  "discovery_score": 1.0,
+  "classification_score": 1.0,
+  "confidence_score": 1.0,
+  "cognition_status": "COMPLETE",
+  "warnings": [
+    "2 file extension(s) not in language registry: .archived, .in. These files were counted but language not identified. Add to LANGUAGE_EXTENSIONS in framework_signatures.py."
+  ],
+  "unknown_file_extensions": [
+    ".archived",
+    ".in"
+  ],
+  "error_message": ""
+}

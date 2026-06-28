@@ -1,0 +1,83 @@
+{
+  "repository_root": "C:\\repos\\v3\\zipline",
+  "scan_timestamp": "2026-06-25T18:40:34.106680+00:00",
+  "total_files_scanned": 455,
+  "total_python_files": 288,
+  "total_model_files": 0,
+  "project_purpose": "zipline \u2014 Finance System (Zipline) \u2014 288 Python files",
+  "application_type": "FINANCE_SYSTEM",
+  "primary_framework": "Zipline",
+  "secondary_frameworks": [],
+  "detected_languages": [
+    "Cython",
+    "Docker",
+    "Emacs Lisp",
+    "Jupyter Notebook",
+    "PowerShell",
+    "Python",
+    "Shell",
+    "YAML"
+  ],
+  "detected_file_types": [
+    "Configuration File",
+    "Markdown",
+    "ReStructuredText",
+    "Text",
+    "Windows Batch Script"
+  ],
+  "detected_model_files": [],
+  "technology_stack": [
+    "Python",
+    "Travis CI",
+    "Docker",
+    "Vagrant"
+  ],
+  "build_systems": [
+    "Setuptools",
+    "Make"
+  ],
+  "entry_points": [
+    ".\\versioneer.py",
+    "ci\\make_conda_packages.py",
+    "docs\\deploy.py",
+    "etc\\conda_build_matrix.py",
+    "etc\\gen_type_stubs.py",
+    "zipline\\__main__.py",
+    "zipline\\utils\\cli.py"
+  ],
+  "configuration_files": [
+    ".\\.travis.yml",
+    ".\\Dockerfile",
+    ".\\Dockerfile-dev",
+    ".\\setup.cfg",
+    ".\\setup.py",
+    ".\\Vagrantfile",
+    "docs\\Makefile"
+  ],
+  "documentation_files": [
+    ".\\AUTHORS",
+    ".\\CONTRIBUTING.rst",
+    ".\\LICENSE",
+    ".\\README.rst",
+    "conda\\README.md"
+  ],
+  "test_directories": [
+    "tests",
+    "zipline\\testing"
+  ],
+  "discovery_score": 1.0,
+  "classification_score": 1.0,
+  "confidence_score": 1.0,
+  "cognition_status": "COMPLETE",
+  "warnings": [
+    "5 file extension(s) not in language registry: .cmd, .csv, .in, .pxi, .pyi. These files were counted but language not identified. Add to LANGUAGE_EXTENSIONS in framework_signatures.py."
+  ],
+  "unknown_file_extensions": [
+    ".cmd",
+    ".csv",
+    ".in",
+    ".pxi",
+    ".pyi"
+  ],
+  "error_message": ""
+}

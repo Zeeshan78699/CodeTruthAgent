@@ -1,0 +1,1651 @@
+{
+  "core_report": {
+    "repository_root": "C:\\repos\\v3\\dronekit-python",
+    "scan_timestamp": "2026-06-25T18:40:27.216912+00:00",
+    "total_files_scanned": 136,
+    "total_python_files": 47,
+    "total_model_files": 0,
+    "project_purpose": "dronekit-python \u2014 Drone Uav (DroneKit) \u2014 47 Python files",
+    "application_type": "DRONE_UAV",
+    "primary_framework": "DroneKit",
+    "secondary_frameworks": [],
+    "detected_languages": [
+      "CSS",
+      "HTML",
+      "Python",
+      "Shell",
+      "YAML"
+    ],
+    "detected_file_types": [
+      "Log File",
+      "Markdown",
+      "ReStructuredText",
+      "Text",
+      "Windows Batch Script"
+    ],
+    "detected_model_files": [],
+    "technology_stack": [
+      "Python",
+      "Travis CI",
+      "Vagrant"
+    ],
+    "build_systems": [
+      "Setuptools",
+      "Make"
+    ],
+    "entry_points": [],
+    "configuration_files": [
+      ".\\.travis.yml",
+      ".\\requirements.txt",
+      ".\\setup.py",
+      ".\\Vagrantfile",
+      "docs\\Makefile"
+    ],
+    "documentation_files": [
+      ".\\CHANGELOG.md",
+      ".\\CONTRIBUTING.md",
+      ".\\LICENSE",
+      ".\\README.md",
+      "dronekit\\test\\README.md",
+      "examples\\README.md"
+    ],
+    "test_directories": [
+      "dronekit\\test"
+    ],
+    "discovery_score": 1.0,
+    "classification_score": 1.0,
+    "confidence_score": 1.0,
+    "cognition_status": "COMPLETE",
+    "warnings": [
+      "4 file extension(s) not in language registry: .iss, .pip, .tlog, .yapf. These files were counted but language not identified. Add to LANGUAGE_EXTENSIONS in framework_signatures.py."
+    ],
+    "unknown_file_extensions": [
+      ".iss",
+      ".pip",
+      ".tlog",
+      ".yapf"
+    ],
+    "error_message": ""
+  },
+  "identity": {
+    "repository_name": "dronekit-python",
+    "application_type": "DRONE_UAV",
+    "domain": "DRONE_UAV",
+    "primary_framework": "DroneKit",
+    "project_purpose": "dronekit-python \u2014 Drone Uav (DroneKit) \u2014 47 Python files",
+    "classification_source": "COGNITION_ENGINE",
+    "confidence": 1.0,
+    "is_known": true
+  },
+  "architecture": {
+    "pattern": "LIBRARY",
+    "confidence": "MEDIUM",
+    "evidence": [
+      "setup.py",
+      "__init__.py"
+    ],
+    "all_scores": {
+      "MVC": 0,
+      "LAYERED": 0,
+      "MICROSERVICES": 0,
+      "EVENT_DRIVEN": 0,
+      "PIPELINE": 0,
+      "LIBRARY": 2,
+      "MONOLITH": 0
+    }
+  },
+  "boundary": {
+    "boundary_detected": true,
+    "root_path": "C:\\repos\\v3\\dronekit-python",
+    "is_monorepo": false,
+    "sub_projects": [],
+    "total_files": 166,
+    "total_dirs": 50,
+    "scan_complete": true,
+    "notes": []
+  },
+  "signals": {
+    "package_signals": {
+      "Finance": [],
+      "ML": [],
+      "ComputerVision": [],
+      "NLP": [],
+      "Robotics": [],
+      "Scientific": [],
+      "Medical": [],
+      "Web": [],
+      "Data": [],
+      "DevOps": []
+    },
+    "import_signals": {
+      "Finance": [],
+      "ML": [],
+      "ComputerVision": [],
+      "NLP": [],
+      "Robotics": [],
+      "Scientific": [],
+      "Medical": [],
+      "Web": [],
+      "Data": [],
+      "DevOps": []
+    },
+    "content_signals": {
+      "Finance": [],
+      "Medical": [],
+      "Aerospace": [
+        "flight",
+        "sensor",
+        "mission"
+      ],
+      "ML": [],
+      "Robotics": [],
+      "Energy": [
+        "sensor"
+      ],
+      "Web": [
+        "view",
+        "template"
+      ]
+    },
+    "domain_scores": {
+      "NLP": 0,
+      "Data": 0,
+      "Energy": 1,
+      "Medical": 0,
+      "ML": 0,
+      "Web": 2,
+      "Finance": 0,
+      "Scientific": 0,
+      "Robotics": 0,
+      "DevOps": 0,
+      "Aerospace": 3,
+      "ComputerVision": 0
+    },
+    "top_domain": "Aerospace",
+    "top_score": 3
+  },
+  "classification_reason": {
+    "domain": "DRONE_UAV",
+    "winning_reason": "Insufficient evidence to classify repository domain.",
+    "signal_summary": {
+      "NLP": 0,
+      "Data": 0,
+      "Energy": 1,
+      "Medical": 0,
+      "ML": 0,
+      "Web": 2,
+      "Finance": 0,
+      "Scientific": 0,
+      "Robotics": 0,
+      "DevOps": 0,
+      "Aerospace": 3,
+      "ComputerVision": 0
+    },
+    "top_signals": [],
+    "evidence_strength": "NONE",
+    "notes": [
+      "No domain signals found. Human review required before Module 2 proceeds."
+    ]
+  },
+  "gate": {
+    "gate_passed": true,
+    "gate_decision": "APPROVED",
+    "checks": [
+      {
+        "check_name": "Cognition Status",
+        "passed": true,
+        "detail": "cognition_status = COMPLETE"
+      },
+      {
+        "check_name": "Domain Classification",
+        "passed": true,
+        "detail": "domain = DRONE_UAV, is_known = True"
+      },
+      {
+        "check_name": "Repository Boundary",
+        "passed": true,
+        "detail": "boundary_detected = True"
+      },
+      {
+        "check_name": "Repository Not Empty",
+        "passed": true,
+        "detail": "total_files = 166"
+      },
+      {
+        "check_name": "Confidence Score Present",
+        "passed": true,
+        "detail": "confidence_score = 1.0"
+      }
+    ],
+    "approved_for": "MODULE_2",
+    "blocking_reason": null
+  },
+  "knowledge_index": {
+    "readme_files": [
+      {
+        "doc_type": "README",
+        "path": "README.md",
+        "filename": "README.md",
+        "extension": ".md"
+      },
+      {
+        "doc_type": "README",
+        "path": "examples\\README.md",
+        "filename": "README.md",
+        "extension": ".md"
+      },
+      {
+        "doc_type": "README",
+        "path": "dronekit\\test\\README.md",
+        "filename": "README.md",
+        "extension": ".md"
+      }
+    ],
+    "business_rule_docs": [
+      {
+        "doc_type": "BUSINESS_RULE",
+        "path": "docs\\develop\\coding_standards.rst",
+        "filename": "coding_standards.rst",
+        "extension": ".rst"
+      }
+    ],
+    "architecture_docs": [
+      {
+        "doc_type": "ARCHITECTURE",
+        "path": "docs\\about\\overview.rst",
+        "filename": "overview.rst",
+        "extension": ".rst"
+      }
+    ],
+    "functional_specs": [
+      {
+        "doc_type": "SPEC",
+        "path": "requirements.txt",
+        "filename": "requirements.txt",
+        "extension": ".txt"
+      }
+    ],
+    "total_docs_found": 6,
+    "notes": [
+      "SCOPE NOTE: This module reports document locations only. Content extraction and rule interpretation require V3-108 governance."
+    ]
+  },
+  "assumptions": {
+    "assumptions": [
+      {
+        "assumption_type": "Timeout/retry hardcoded",
+        "description": "Possible assumption: Timeout/retry hardcoded",
+        "confidence": "LOW",
+        "source_file": "dronekit\\mavlink.py",
+        "source_line": 175,
+        "raw_match": "timeout=0"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "dronekit\\mavlink.py",
+        "source_line": 323,
+        "raw_match": "assert len(msg.get_msgbuf()) > 0"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "dronekit\\mavlink.py",
+        "source_line": 337,
+        "raw_match": "assert len(msg.get_msgbuf()) > 0"
+      },
+      {
+        "assumption_type": "Network hardcoded",
+        "description": "Possible assumption: Network hardcoded",
+        "confidence": "LOW",
+        "source_file": "dronekit\\__init__.py",
+        "source_line": 1190,
+        "raw_match": "port = 0"
+      },
+      {
+        "assumption_type": "Validation boundary",
+        "description": "Possible assumption: Validation boundary",
+        "confidence": "LOW",
+        "source_file": "dronekit\\__init__.py",
+        "source_line": 2020,
+        "raw_match": "raise ValueError("
+      },
+      {
+        "assumption_type": "Validation boundary",
+        "description": "Possible assumption: Validation boundary",
+        "confidence": "LOW",
+        "source_file": "dronekit\\__init__.py",
+        "source_line": 2190,
+        "raw_match": "raise ValueError("
+      },
+      {
+        "assumption_type": "Validation boundary",
+        "description": "Possible assumption: Validation boundary",
+        "confidence": "LOW",
+        "source_file": "dronekit\\__init__.py",
+        "source_line": 2234,
+        "raw_match": "raise ValueError("
+      },
+      {
+        "assumption_type": "Rate/Tax constant",
+        "description": "Possible assumption: Rate/Tax constant",
+        "confidence": "HIGH",
+        "source_file": "dronekit\\__init__.py",
+        "source_line": 2304,
+        "raw_match": "rate=4"
+      },
+      {
+        "assumption_type": "Validation boundary",
+        "description": "Possible assumption: Validation boundary",
+        "confidence": "LOW",
+        "source_file": "dronekit\\__init__.py",
+        "source_line": 2405,
+        "raw_match": "raise ValueError("
+      },
+      {
+        "assumption_type": "Validation boundary",
+        "description": "Possible assumption: Validation boundary",
+        "confidence": "LOW",
+        "source_file": "dronekit\\__init__.py",
+        "source_line": 2700,
+        "raw_match": "raise ValueError("
+      },
+      {
+        "assumption_type": "Timeout/retry hardcoded",
+        "description": "Possible assumption: Timeout/retry hardcoded",
+        "confidence": "LOW",
+        "source_file": "dronekit\\__init__.py",
+        "source_line": 3133,
+        "raw_match": "timeout=30"
+      },
+      {
+        "assumption_type": "Rate/Tax constant",
+        "description": "Possible assumption: Rate/Tax constant",
+        "confidence": "HIGH",
+        "source_file": "dronekit\\__init__.py",
+        "source_line": 3138,
+        "raw_match": "rate=4"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "dronekit\\test\\sitl\\test_110.py",
+        "source_line": 48,
+        "raw_match": "assert armed_callback.called > 0, \"Callback should have been called within %d seconds\" % (time_max,)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "dronekit\\test\\sitl\\test_115.py",
+        "source_line": 26,
+        "raw_match": "assert mavlink_callback.count > 0"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "dronekit\\test\\sitl\\test_12.py",
+        "source_line": 28,
+        "raw_match": "assert end - start < 1000, 'time to set parameter was %s, over 1s' % (end - start, )"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "dronekit\\test\\sitl\\test_channels.py",
+        "source_line": 68,
+        "raw_match": "assert False, \"Can read over end of channels\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "dronekit\\test\\sitl\\test_channels.py",
+        "source_line": 74,
+        "raw_match": "assert False, \"Can read over start of channels\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "dronekit\\test\\sitl\\test_channels.py",
+        "source_line": 80,
+        "raw_match": "assert False, \"can write a channel value\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "dronekit\\test\\sitl\\test_channels.py",
+        "source_line": 111,
+        "raw_match": "assert False, \"can write channels.overrides 9\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "dronekit\\test\\sitl\\test_channels.py",
+        "source_line": 118,
+        "raw_match": "assert False, \"can write channels.overrides 9 with braces\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "dronekit\\test\\sitl\\test_channels.py",
+        "source_line": 124,
+        "raw_match": "assert '3' not in vehicle.channels.overrides, 'overrides hould not contain None'"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "dronekit\\test\\sitl\\test_channels.py",
+        "source_line": 128,
+        "raw_match": "assert '2' not in vehicle.channels.overrides, 'overrides hould not contain None'"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "dronekit\\test\\sitl\\test_channels.py",
+        "source_line": 154,
+        "raw_match": "assert result['success'], 'channels callback should be invoked.'"
+      },
+      {
+        "assumption_type": "Timeout/retry hardcoded",
+        "description": "Possible assumption: Timeout/retry hardcoded",
+        "confidence": "LOW",
+        "source_file": "dronekit\\test\\sitl\\test_locations.py",
+        "source_line": 53,
+        "raw_match": "timeout=60"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "dronekit\\test\\sitl\\test_locations.py",
+        "source_line": 85,
+        "raw_match": "assert ret['success'], 'Expected location object to emit notifications.'"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "dronekit\\test\\sitl\\test_mavlink.py",
+        "source_line": 27,
+        "raw_match": "assert result['success']"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "dronekit\\test\\sitl\\test_parameters.py",
+        "source_line": 20,
+        "raw_match": "assert False"
+      },
+      {
+        "assumption_type": "Timeout/retry hardcoded",
+        "description": "Possible assumption: Timeout/retry hardcoded",
+        "confidence": "LOW",
+        "source_file": "dronekit\\test\\sitl\\test_sensor_calibration.py",
+        "source_line": 15,
+        "raw_match": "timeout=30"
+      },
+      {
+        "assumption_type": "Timeout/retry hardcoded",
+        "description": "Possible assumption: Timeout/retry hardcoded",
+        "confidence": "LOW",
+        "source_file": "dronekit\\test\\sitl\\test_sensor_calibration.py",
+        "source_line": 30,
+        "raw_match": "timeout=30"
+      },
+      {
+        "assumption_type": "Timeout/retry hardcoded",
+        "description": "Possible assumption: Timeout/retry hardcoded",
+        "confidence": "LOW",
+        "source_file": "dronekit\\test\\sitl\\test_sensor_calibration.py",
+        "source_line": 47,
+        "raw_match": "timeout=30"
+      },
+      {
+        "assumption_type": "Timeout/retry hardcoded",
+        "description": "Possible assumption: Timeout/retry hardcoded",
+        "confidence": "LOW",
+        "source_file": "dronekit\\test\\sitl\\test_sensor_calibration.py",
+        "source_line": 66,
+        "raw_match": "timeout=30"
+      },
+      {
+        "assumption_type": "Timeout/retry hardcoded",
+        "description": "Possible assumption: Timeout/retry hardcoded",
+        "confidence": "LOW",
+        "source_file": "dronekit\\test\\sitl\\test_sensor_calibration.py",
+        "source_line": 80,
+        "raw_match": "timeout=30"
+      },
+      {
+        "assumption_type": "Timeout/retry hardcoded",
+        "description": "Possible assumption: Timeout/retry hardcoded",
+        "confidence": "LOW",
+        "source_file": "dronekit\\test\\sitl\\test_sensor_calibration.py",
+        "source_line": 92,
+        "raw_match": "timeout=30"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "dronekit\\test\\sitl\\test_simpledemo.py",
+        "source_line": 28,
+        "raw_match": "assert isinstance(v.mode, VehicleMode)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "dronekit\\test\\sitl\\test_timeout.py",
+        "source_line": 39,
+        "raw_match": "assert False"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "dronekit\\test\\sitl\\__init__.py",
+        "source_line": 14,
+        "raw_match": "assert that:"
+      },
+      {
+        "assumption_type": "Timeout/retry hardcoded",
+        "description": "Possible assumption: Timeout/retry hardcoded",
+        "confidence": "LOW",
+        "source_file": "dronekit\\test\\sitl\\__init__.py",
+        "source_line": 25,
+        "raw_match": "timeout=30"
+      },
+      {
+        "assumption_type": "Timeout/retry hardcoded",
+        "description": "Possible assumption: Timeout/retry hardcoded",
+        "confidence": "LOW",
+        "source_file": "examples\\follow_me\\follow_me.py",
+        "source_line": 43,
+        "raw_match": "timeout=300"
+      }
+    ],
+    "high_risk": [
+      {
+        "assumption_type": "Rate/Tax constant",
+        "description": "Possible assumption: Rate/Tax constant",
+        "confidence": "HIGH",
+        "source_file": "dronekit\\__init__.py",
+        "source_line": 2304,
+        "raw_match": "rate=4"
+      },
+      {
+        "assumption_type": "Rate/Tax constant",
+        "description": "Possible assumption: Rate/Tax constant",
+        "confidence": "HIGH",
+        "source_file": "dronekit\\__init__.py",
+        "source_line": 3138,
+        "raw_match": "rate=4"
+      }
+    ],
+    "total_found": 38,
+    "files_scanned": 47,
+    "overall_risk": "MEDIUM",
+    "notes": [
+      "All findings are POSSIBLE_ASSUMPTION \u2014 code evidence only. Confirm with domain experts before treating as verified business rules."
+    ]
+  },
+  "constraints": {
+    "constraints": [
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "dronekit\\mavlink.py",
+        "source_line": 46,
+        "raw_match": "must be"
+      },
+      {
+        "constraint_type": "Timeout constraint",
+        "category": "SAFETY",
+        "confidence": "LOW",
+        "source_file": "dronekit\\mavlink.py",
+        "source_line": 175,
+        "raw_match": "timeout=0"
+      },
+      {
+        "constraint_type": "Regulatory reference",
+        "category": "COMPLIANCE",
+        "confidence": "HIGH",
+        "source_file": "dronekit\\__init__.py",
+        "source_line": 1188,
+        "raw_match": "vat"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "dronekit\\__init__.py",
+        "source_line": 1519,
+        "raw_match": "must have"
+      },
+      {
+        "constraint_type": "Safety mechanism",
+        "category": "SAFETY",
+        "confidence": "HIGH",
+        "source_file": "dronekit\\__init__.py",
+        "source_line": 1839,
+        "raw_match": "EMERGENCY"
+      },
+      {
+        "constraint_type": "Safety mechanism",
+        "category": "SAFETY",
+        "confidence": "HIGH",
+        "source_file": "dronekit\\__init__.py",
+        "source_line": 1850,
+        "raw_match": "EMERGENCY"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "dronekit\\__init__.py",
+        "source_line": 1975,
+        "raw_match": "must first"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "dronekit\\__init__.py",
+        "source_line": 2175,
+        "raw_match": "must be"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "dronekit\\__init__.py",
+        "source_line": 2285,
+        "raw_match": "must be"
+      },
+      {
+        "constraint_type": "Timeout constraint",
+        "category": "SAFETY",
+        "confidence": "LOW",
+        "source_file": "dronekit\\__init__.py",
+        "source_line": 2304,
+        "raw_match": "timeout=30"
+      },
+      {
+        "constraint_type": "Timeout constraint",
+        "category": "SAFETY",
+        "confidence": "LOW",
+        "source_file": "dronekit\\test\\sitl\\test_locations.py",
+        "source_line": 53,
+        "raw_match": "timeout=60"
+      },
+      {
+        "constraint_type": "Safety mechanism",
+        "category": "SAFETY",
+        "confidence": "HIGH",
+        "source_file": "dronekit\\test\\sitl\\test_reboot.py",
+        "source_line": 17,
+        "raw_match": "shutdown"
+      },
+      {
+        "constraint_type": "Uniqueness constraint",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "dronekit\\test\\sitl\\test_reboot.py",
+        "source_line": 25,
+        "raw_match": "only one ACK"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "dronekit\\test\\sitl\\test_reboot.py",
+        "source_line": 27,
+        "raw_match": "must be"
+      },
+      {
+        "constraint_type": "Timeout constraint",
+        "category": "SAFETY",
+        "confidence": "LOW",
+        "source_file": "dronekit\\test\\sitl\\test_sensor_calibration.py",
+        "source_line": 15,
+        "raw_match": "timeout=30"
+      },
+      {
+        "constraint_type": "Timeout constraint",
+        "category": "SAFETY",
+        "confidence": "LOW",
+        "source_file": "dronekit\\test\\sitl\\test_sensor_calibration.py",
+        "source_line": 30,
+        "raw_match": "timeout=30"
+      },
+      {
+        "constraint_type": "Timeout constraint",
+        "category": "SAFETY",
+        "confidence": "LOW",
+        "source_file": "dronekit\\test\\sitl\\test_sensor_calibration.py",
+        "source_line": 47,
+        "raw_match": "timeout=30"
+      },
+      {
+        "constraint_type": "Timeout constraint",
+        "category": "SAFETY",
+        "confidence": "LOW",
+        "source_file": "dronekit\\test\\sitl\\test_sensor_calibration.py",
+        "source_line": 66,
+        "raw_match": "timeout=30"
+      },
+      {
+        "constraint_type": "Timeout constraint",
+        "category": "SAFETY",
+        "confidence": "LOW",
+        "source_file": "dronekit\\test\\sitl\\test_sensor_calibration.py",
+        "source_line": 80,
+        "raw_match": "timeout=30"
+      },
+      {
+        "constraint_type": "Timeout constraint",
+        "category": "SAFETY",
+        "confidence": "LOW",
+        "source_file": "dronekit\\test\\sitl\\test_sensor_calibration.py",
+        "source_line": 92,
+        "raw_match": "timeout=30"
+      },
+      {
+        "constraint_type": "Timeout constraint",
+        "category": "SAFETY",
+        "confidence": "LOW",
+        "source_file": "dronekit\\test\\sitl\\test_timeout.py",
+        "source_line": 11,
+        "raw_match": "timeout=20"
+      },
+      {
+        "constraint_type": "Timeout constraint",
+        "category": "SAFETY",
+        "confidence": "LOW",
+        "source_file": "dronekit\\test\\sitl\\test_timeout.py",
+        "source_line": 34,
+        "raw_match": "timeout=20"
+      },
+      {
+        "constraint_type": "Timeout constraint",
+        "category": "SAFETY",
+        "confidence": "LOW",
+        "source_file": "dronekit\\test\\sitl\\__init__.py",
+        "source_line": 12,
+        "raw_match": "timeout=10"
+      },
+      {
+        "constraint_type": "Timeout constraint",
+        "category": "SAFETY",
+        "confidence": "LOW",
+        "source_file": "dronekit\\test\\sitl\\__init__.py",
+        "source_line": 25,
+        "raw_match": "timeout=30"
+      },
+      {
+        "constraint_type": "Uniqueness constraint",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "dronekit\\test\\sitl\\__init__.py",
+        "source_line": 45,
+        "raw_match": "only one ACK"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "dronekit\\test\\sitl\\__init__.py",
+        "source_line": 47,
+        "raw_match": "must be"
+      },
+      {
+        "constraint_type": "Timeout constraint",
+        "category": "SAFETY",
+        "confidence": "LOW",
+        "source_file": "examples\\follow_me\\follow_me.py",
+        "source_line": 43,
+        "raw_match": "timeout=300"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "examples\\mission_basic\\mission_basic.py",
+        "source_line": 111,
+        "raw_match": "must have"
+      }
+    ],
+    "by_category": {
+      "BUSINESS": [
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "dronekit\\mavlink.py",
+          "source_line": 46,
+          "raw_match": "must be"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "dronekit\\__init__.py",
+          "source_line": 1519,
+          "raw_match": "must have"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "dronekit\\__init__.py",
+          "source_line": 1975,
+          "raw_match": "must first"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "dronekit\\__init__.py",
+          "source_line": 2175,
+          "raw_match": "must be"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "dronekit\\__init__.py",
+          "source_line": 2285,
+          "raw_match": "must be"
+        },
+        {
+          "constraint_type": "Uniqueness constraint",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "dronekit\\test\\sitl\\test_reboot.py",
+          "source_line": 25,
+          "raw_match": "only one ACK"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "dronekit\\test\\sitl\\test_reboot.py",
+          "source_line": 27,
+          "raw_match": "must be"
+        },
+        {
+          "constraint_type": "Uniqueness constraint",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "dronekit\\test\\sitl\\__init__.py",
+          "source_line": 45,
+          "raw_match": "only one ACK"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "dronekit\\test\\sitl\\__init__.py",
+          "source_line": 47,
+          "raw_match": "must be"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "examples\\mission_basic\\mission_basic.py",
+          "source_line": 111,
+          "raw_match": "must have"
+        }
+      ],
+      "TECHNICAL": [],
+      "COMPLIANCE": [
+        {
+          "constraint_type": "Regulatory reference",
+          "category": "COMPLIANCE",
+          "confidence": "HIGH",
+          "source_file": "dronekit\\__init__.py",
+          "source_line": 1188,
+          "raw_match": "vat"
+        }
+      ],
+      "SAFETY": [
+        {
+          "constraint_type": "Timeout constraint",
+          "category": "SAFETY",
+          "confidence": "LOW",
+          "source_file": "dronekit\\mavlink.py",
+          "source_line": 175,
+          "raw_match": "timeout=0"
+        },
+        {
+          "constraint_type": "Safety mechanism",
+          "category": "SAFETY",
+          "confidence": "HIGH",
+          "source_file": "dronekit\\__init__.py",
+          "source_line": 1839,
+          "raw_match": "EMERGENCY"
+        },
+        {
+          "constraint_type": "Safety mechanism",
+          "category": "SAFETY",
+          "confidence": "HIGH",
+          "source_file": "dronekit\\__init__.py",
+          "source_line": 1850,
+          "raw_match": "EMERGENCY"
+        },
+        {
+          "constraint_type": "Timeout constraint",
+          "category": "SAFETY",
+          "confidence": "LOW",
+          "source_file": "dronekit\\__init__.py",
+          "source_line": 2304,
+          "raw_match": "timeout=30"
+        },
+        {
+          "constraint_type": "Timeout constraint",
+          "category": "SAFETY",
+          "confidence": "LOW",
+          "source_file": "dronekit\\test\\sitl\\test_locations.py",
+          "source_line": 53,
+          "raw_match": "timeout=60"
+        },
+        {
+          "constraint_type": "Safety mechanism",
+          "category": "SAFETY",
+          "confidence": "HIGH",
+          "source_file": "dronekit\\test\\sitl\\test_reboot.py",
+          "source_line": 17,
+          "raw_match": "shutdown"
+        },
+        {
+          "constraint_type": "Timeout constraint",
+          "category": "SAFETY",
+          "confidence": "LOW",
+          "source_file": "dronekit\\test\\sitl\\test_sensor_calibration.py",
+          "source_line": 15,
+          "raw_match": "timeout=30"
+        },
+        {
+          "constraint_type": "Timeout constraint",
+          "category": "SAFETY",
+          "confidence": "LOW",
+          "source_file": "dronekit\\test\\sitl\\test_sensor_calibration.py",
+          "source_line": 30,
+          "raw_match": "timeout=30"
+        },
+        {
+          "constraint_type": "Timeout constraint",
+          "category": "SAFETY",
+          "confidence": "LOW",
+          "source_file": "dronekit\\test\\sitl\\test_sensor_calibration.py",
+          "source_line": 47,
+          "raw_match": "timeout=30"
+        },
+        {
+          "constraint_type": "Timeout constraint",
+          "category": "SAFETY",
+          "confidence": "LOW",
+          "source_file": "dronekit\\test\\sitl\\test_sensor_calibration.py",
+          "source_line": 66,
+          "raw_match": "timeout=30"
+        },
+        {
+          "constraint_type": "Timeout constraint",
+          "category": "SAFETY",
+          "confidence": "LOW",
+          "source_file": "dronekit\\test\\sitl\\test_sensor_calibration.py",
+          "source_line": 80,
+          "raw_match": "timeout=30"
+        },
+        {
+          "constraint_type": "Timeout constraint",
+          "category": "SAFETY",
+          "confidence": "LOW",
+          "source_file": "dronekit\\test\\sitl\\test_sensor_calibration.py",
+          "source_line": 92,
+          "raw_match": "timeout=30"
+        },
+        {
+          "constraint_type": "Timeout constraint",
+          "category": "SAFETY",
+          "confidence": "LOW",
+          "source_file": "dronekit\\test\\sitl\\test_timeout.py",
+          "source_line": 11,
+          "raw_match": "timeout=20"
+        },
+        {
+          "constraint_type": "Timeout constraint",
+          "category": "SAFETY",
+          "confidence": "LOW",
+          "source_file": "dronekit\\test\\sitl\\test_timeout.py",
+          "source_line": 34,
+          "raw_match": "timeout=20"
+        },
+        {
+          "constraint_type": "Timeout constraint",
+          "category": "SAFETY",
+          "confidence": "LOW",
+          "source_file": "dronekit\\test\\sitl\\__init__.py",
+          "source_line": 12,
+          "raw_match": "timeout=10"
+        },
+        {
+          "constraint_type": "Timeout constraint",
+          "category": "SAFETY",
+          "confidence": "LOW",
+          "source_file": "dronekit\\test\\sitl\\__init__.py",
+          "source_line": 25,
+          "raw_match": "timeout=30"
+        },
+        {
+          "constraint_type": "Timeout constraint",
+          "category": "SAFETY",
+          "confidence": "LOW",
+          "source_file": "examples\\follow_me\\follow_me.py",
+          "source_line": 43,
+          "raw_match": "timeout=300"
+        }
+      ]
+    },
+    "total_found": 28,
+    "files_scanned": 47,
+    "notes": [
+      "Constraints are INFERRED from code patterns. Verify with domain experts and policy documents."
+    ]
+  },
+  "decisions": {
+    "decisions": [
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# Note that not all possible configuration values are present in this",
+        "evidence": "# Note that not all possible configuration values are present in this",
+        "source_file": "docs\\conf.py",
+        "source_line": 8
+      },
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# TODO get rid of \"master\" object as exposed,",
+        "evidence": "# TODO get rid of \"master\" object as exposed,",
+        "source_file": "dronekit\\mavlink.py",
+        "source_line": 132
+      },
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# TODO this can block forever if parameters continue to be added",
+        "evidence": "# TODO this can block forever if parameters continue to be added",
+        "source_file": "dronekit\\mavlink.py",
+        "source_line": 306
+      },
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# TODO is this the proper check to do?",
+        "evidence": "# TODO is this the proper check to do?",
+        "source_file": "dronekit\\__init__.py",
+        "source_line": 908
+      },
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# FIXME support multiple GPSs per vehicle - possibly by using componentId",
+        "evidence": "self._fix_type = None  # FIXME support multiple GPSs per vehicle - possibly by using componentId",
+        "source_file": "dronekit\\__init__.py",
+        "source_line": 1212
+      },
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# TODO: Waypoint loop listeners",
+        "evidence": "# TODO: Waypoint loop listeners",
+        "source_file": "dronekit\\__init__.py",
+        "source_line": 1320
+      },
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# TODO dumbly reimplement this using timeout loops",
+        "evidence": "# TODO dumbly reimplement this using timeout loops",
+        "source_file": "dronekit\\__init__.py",
+        "source_line": 2789
+      },
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# NOTE these are *very inappropriate settings*",
+        "evidence": "# NOTE these are *very inappropriate settings*",
+        "source_file": "dronekit\\test\\sitl\\test_110.py",
+        "source_line": 11
+      },
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# NOTE wait crudely for ACK on mode update",
+        "evidence": "# NOTE wait crudely for ACK on mode update",
+        "source_file": "dronekit\\test\\sitl\\test_110.py",
+        "source_line": 23
+      },
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# NOTE: We test if armed_callback were treating adding each additional callback",
+        "evidence": "# NOTE: We test if armed_callback were treating adding each additional callback",
+        "source_file": "dronekit\\test\\sitl\\test_110.py",
+        "source_line": 52
+      },
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# NOTE wait crudely for ACK on mode update",
+        "evidence": "# NOTE wait crudely for ACK on mode update",
+        "source_file": "dronekit\\test\\sitl\\test_115.py",
+        "source_line": 22
+      },
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# NOTE wait crudely for ACK on mode update",
+        "evidence": "# NOTE wait crudely for ACK on mode update",
+        "source_file": "dronekit\\test\\sitl\\test_115.py",
+        "source_line": 34
+      },
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# NOTE wait crudely for ACK on mode update",
+        "evidence": "# NOTE wait crudely for ACK on mode update",
+        "source_file": "dronekit\\test\\sitl\\test_115.py",
+        "source_line": 42
+      },
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# NOTE these are *very inappropriate settings*",
+        "evidence": "# NOTE these are *very inappropriate settings*",
+        "source_file": "dronekit\\test\\sitl\\test_goto.py",
+        "source_line": 20
+      },
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# NOTE these are *very inappropriate settings*",
+        "evidence": "# NOTE these are *very inappropriate settings*",
+        "source_file": "dronekit\\test\\sitl\\test_locations.py",
+        "source_line": 11
+      },
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# TODO: change when APM is upgraded",
+        "evidence": "ack_result=mavutil.mavlink.MAV_RESULT_UNSUPPORTED,  # TODO: change when APM is upgraded",
+        "source_file": "dronekit\\test\\sitl\\test_sensor_calibration.py",
+        "source_line": 31
+      },
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# Note: If the GPS values differ heavily from EKF values, this command",
+        "evidence": "# Note: If the GPS values differ heavily from EKF values, this command",
+        "source_file": "dronekit\\test\\sitl\\test_waypoints.py",
+        "source_line": 32
+      },
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# NOTE: ",
+        "evidence": "# NOTE:",
+        "source_file": "examples\\channel_overrides\\channel_overrides.py",
+        "source_line": 11
+      },
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "#   Note that argument `cache=False` by default so listeners",
+        "evidence": "#   Note that argument `cache=False` by default so listeners",
+        "source_file": "examples\\create_attribute\\my_vehicle.py",
+        "source_line": 84
+      },
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# NOTE that this has to be called after the goto command as first \"move\" command of a particular type",
+        "evidence": "# NOTE that this has to be called after the goto command as first \"move\" command of a particular type",
+        "source_file": "examples\\guided_set_speed_yaw\\guided_set_speed_yaw.py",
+        "source_line": 490
+      },
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# Note for vy:",
+        "evidence": "# Note for vy:",
+        "source_file": "examples\\guided_set_speed_yaw\\guided_set_speed_yaw.py",
+        "source_line": 529
+      },
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# Note for vz: ",
+        "evidence": "# Note for vz:",
+        "source_file": "examples\\guided_set_speed_yaw\\guided_set_speed_yaw.py",
+        "source_line": 535
+      },
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# Note that it will be in front of original position due to inertia.",
+        "evidence": "# Note that it will be in front of original position due to inertia.",
+        "source_file": "examples\\set_attitude_target\\set_attitude_target.py",
+        "source_line": 172
+      }
+    ],
+    "adr_files": [],
+    "framework_decisions": [],
+    "total_found": 23,
+    "notes": [
+      "Decisions are INFERRED from structural evidence (ADR files, dependency choices, decision comments). Original decision rationale may require document review."
+    ]
+  },
+  "knowledge_loss": {
+    "risks": [
+      {
+        "risk_type": "UNDOCUMENTED_LOGIC",
+        "severity": "MEDIUM",
+        "source_file": "dronekit\\test\\__init__.py",
+        "description": "5 functions with no docstrings. Business logic may be implicit knowledge only.",
+        "evidence": "function_count=5, docstrings=0"
+      },
+      {
+        "risk_type": "UNDOCUMENTED_LOGIC",
+        "severity": "LOW",
+        "source_file": "dronekit\\test\\sitl\\test_channels.py",
+        "description": "3 functions with no docstrings. Business logic may be implicit knowledge only.",
+        "evidence": "function_count=3, docstrings=0"
+      },
+      {
+        "risk_type": "UNDOCUMENTED_LOGIC",
+        "severity": "LOW",
+        "source_file": "dronekit\\test\\sitl\\test_parameters.py",
+        "description": "4 functions with no docstrings. Business logic may be implicit knowledge only.",
+        "evidence": "function_count=4, docstrings=0"
+      },
+      {
+        "risk_type": "UNDOCUMENTED_LOGIC",
+        "severity": "LOW",
+        "source_file": "dronekit\\test\\sitl\\test_vehicleclass.py",
+        "description": "3 functions with no docstrings. Business logic may be implicit knowledge only.",
+        "evidence": "function_count=3, docstrings=0"
+      }
+    ],
+    "high_severity": [],
+    "spof_files": [],
+    "undocumented": [
+      "dronekit\\test\\__init__.py",
+      "dronekit\\test\\sitl\\test_channels.py",
+      "dronekit\\test\\sitl\\test_parameters.py",
+      "dronekit\\test\\sitl\\test_vehicleclass.py"
+    ],
+    "total_risks": 4,
+    "overall_severity": "LOW",
+    "notes": [
+      "Knowledge risk is structural \u2014 based on import frequency and absence of tests/documentation. Business criticality requires domain expert confirmation."
+    ]
+  },
+  "traceability": {
+    "document_code_links": [
+      {
+        "document_name": ".rst",
+        "source_file": "docs\\conf.py",
+        "source_line": 35,
+        "reference_text": "source_suffix = '.rst'"
+      },
+      {
+        "document_name": "mpmission.txt",
+        "source_file": "examples\\mission_import_export\\mission_import_export.py",
+        "source_line": 150,
+        "reference_text": "import_mission_filename = 'mpmission.txt'"
+      },
+      {
+        "document_name": "exportedmission.txt",
+        "source_file": "examples\\mission_import_export\\mission_import_export.py",
+        "source_line": 151,
+        "reference_text": "export_mission_filename = 'exportedmission.txt'"
+      },
+      {
+        "document_name": "README.md",
+        "source_file": "setup.py",
+        "source_line": 6,
+        "reference_text": "with open(os.path.join(os.path.dirname(__file__), 'README.md')) as f:"
+      }
+    ],
+    "code_test_links": [
+      {
+        "source_file": "dronekit\\mavlink.py",
+        "test_file": "dronekit\\test\\sitl\\test_mavlink.py",
+        "link_type": "NAMING_CONVENTION"
+      },
+      {
+        "source_file": "examples\\reboot\\reboot.py",
+        "test_file": "dronekit\\test\\sitl\\test_reboot.py",
+        "link_type": "NAMING_CONVENTION"
+      }
+    ],
+    "untraced_source": [
+      "docs\\conf.py",
+      "dronekit\\__init__.py",
+      "dronekit\\lib.py",
+      "dronekit\\util.py",
+      "examples\\channel_overrides\\channel_overrides.py",
+      "examples\\create_attribute\\create_attribute.py",
+      "examples\\create_attribute\\my_vehicle.py",
+      "examples\\drone_delivery\\drone_delivery.py",
+      "examples\\flight_replay\\flight_replay.py",
+      "examples\\follow_me\\follow_me.py",
+      "examples\\gcs\\microgcs.py",
+      "examples\\guided_set_speed_yaw\\guided_set_speed_yaw.py",
+      "examples\\mission_basic\\mission_basic.py",
+      "examples\\mission_import_export\\mission_import_export.py",
+      "examples\\play_tune\\play_tune.py",
+      "examples\\set_attitude_target\\set_attitude_target.py",
+      "examples\\simple_goto\\simple_goto.py",
+      "examples\\vehicle_state\\vehicle_state.py",
+      "setup.py",
+      "windows\\returnVersion.py"
+    ],
+    "total_doc_links": 4,
+    "total_test_links": 2,
+    "coverage_note": "2/22 source files have test counterparts by naming convention (9.1%) \u2014 LOW_COVERAGE_DETECTED",
+    "notes": [
+      "LOW_COVERAGE_DETECTED: Coverage is 9.1% (below the 30.0% floor) and no centralized test harness evidence was found. This is an honest result \u2014 not automatically promoted to CENTRALIZED_TEST_HARNESS_DETECTED without evidence.",
+      "SCOPE NOTE: Requirement->Code mapping is Module 9 (V3-106). This module traces document references and test structure only."
+    ]
+  },
+  "risk": {
+    "critical_components": [
+      {
+        "source_file": "dronekit\\__init__.py",
+        "risk_level": "MEDIUM",
+        "risk_reasons": [
+          "Large file: 196 functions",
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 196,
+        "has_tests": false,
+        "risk_score": 4
+      },
+      {
+        "source_file": "examples\\drone_delivery\\drone_delivery.py",
+        "risk_level": "MEDIUM",
+        "risk_reasons": [
+          "Large file: 21 functions",
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 21,
+        "has_tests": false,
+        "risk_score": 4
+      },
+      {
+        "source_file": "examples\\guided_set_speed_yaw\\guided_set_speed_yaw.py",
+        "risk_level": "MEDIUM",
+        "risk_reasons": [
+          "Medium file: 11 functions",
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 11,
+        "has_tests": false,
+        "risk_score": 3
+      },
+      {
+        "source_file": "setup.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 0,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "docs\\conf.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 0,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "dronekit\\lib.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 0,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "dronekit\\mavlink.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "Large file: 23 functions"
+        ],
+        "import_count": 0,
+        "function_count": 23,
+        "has_tests": true,
+        "risk_score": 2
+      },
+      {
+        "source_file": "dronekit\\util.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 4,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "windows\\returnVersion.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 0,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "dronekit\\test\\__init__.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 5,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "dronekit\\test\\sitl\\__init__.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 2,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "dronekit\\test\\unit\\__init__.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 0,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "examples\\channel_overrides\\channel_overrides.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 0,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "examples\\create_attribute\\create_attribute.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 1,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "examples\\create_attribute\\my_vehicle.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 1,
+        "function_count": 5,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "examples\\flight_replay\\flight_replay.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 4,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "examples\\follow_me\\follow_me.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 1,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "examples\\gcs\\microgcs.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 3,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "examples\\mission_basic\\mission_basic.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 6,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "examples\\mission_import_export\\mission_import_export.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 5,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "examples\\performance_test\\performance_test.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 7,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "examples\\play_tune\\play_tune.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 0,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "examples\\set_attitude_target\\set_attitude_target.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 4,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "examples\\simple_goto\\simple_goto.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 1,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "examples\\vehicle_state\\vehicle_state.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 5,
+        "has_tests": false,
+        "risk_score": 2
+      }
+    ],
+    "high_risk_count": 0,
+    "repository_risk_score": 7,
+    "top_risk_files": [
+      "dronekit\\__init__.py",
+      "examples\\drone_delivery\\drone_delivery.py",
+      "examples\\guided_set_speed_yaw\\guided_set_speed_yaw.py",
+      "setup.py",
+      "docs\\conf.py"
+    ],
+    "notes": [
+      "SECONDARY_CALIBRATION_APPLIED: capped at 7 \u2014 zero HIGH risk components with score 10 is inconsistent.",
+      "SCOPE NOTE: This module identifies structurally high-risk components. Actual blast radius requires Module 5 (V3-017-021). Risk score is structural \u2014 business criticality requires domain context."
+    ]
+  }
+}

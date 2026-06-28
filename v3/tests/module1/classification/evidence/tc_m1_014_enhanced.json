@@ -1,0 +1,2008 @@
+{
+  "core_report": {
+    "repository_root": "C:\\repos\\v3\\lasio",
+    "scan_timestamp": "2026-06-25T18:40:45.825932+00:00",
+    "total_files_scanned": 234,
+    "total_python_files": 32,
+    "total_model_files": 0,
+    "project_purpose": "lasio \u2014 Data Engineering \u2014 32 Python files",
+    "application_type": "DATA_ENGINEERING",
+    "primary_framework": "None",
+    "secondary_frameworks": [
+      "Pytest"
+    ],
+    "detected_languages": [
+      "Docker",
+      "Jupyter Notebook",
+      "Python",
+      "TOML",
+      "YAML"
+    ],
+    "detected_file_types": [
+      "Excel Spreadsheet",
+      "JSON",
+      "Markdown",
+      "PDF Document",
+      "ReStructuredText",
+      "Text",
+      "Windows Batch Script"
+    ],
+    "detected_model_files": [],
+    "technology_stack": [
+      "Python",
+      "Travis CI",
+      "Docker"
+    ],
+    "build_systems": [
+      "Python Build",
+      "Make"
+    ],
+    "entry_points": [
+      "lasio\\excel.py"
+    ],
+    "configuration_files": [
+      ".\\.travis.yml",
+      ".\\Dockerfile",
+      ".\\pyproject.toml",
+      "docs\\Makefile",
+      "docs\\requirements.txt"
+    ],
+    "documentation_files": [
+      ".\\LICENSE",
+      ".\\README.md",
+      "notebooks\\README.md"
+    ],
+    "test_directories": [
+      "tests"
+    ],
+    "discovery_score": 1.0,
+    "classification_score": 0.75,
+    "confidence_score": 0.875,
+    "cognition_status": "COMPLETE",
+    "warnings": [
+      "3 file extension(s) not in language registry: .cff, .csv, .las. These files were counted but language not identified. Add to LANGUAGE_EXTENSIONS in framework_signatures.py."
+    ],
+    "unknown_file_extensions": [
+      ".cff",
+      ".csv",
+      ".las"
+    ],
+    "error_message": ""
+  },
+  "identity": {
+    "repository_name": "lasio",
+    "application_type": "WELL_LOGGING",
+    "domain": "WELL_LOGGING",
+    "primary_framework": "None",
+    "project_purpose": "lasio \u2014 Data Engineering \u2014 32 Python files",
+    "classification_source": "COGNITION_ENGINE",
+    "confidence": 0.875,
+    "is_known": true
+  },
+  "architecture": {
+    "pattern": "LIBRARY",
+    "confidence": "MEDIUM",
+    "evidence": [
+      "pyproject.toml",
+      "__init__.py"
+    ],
+    "all_scores": {
+      "MVC": 0,
+      "LAYERED": 0,
+      "MICROSERVICES": 0,
+      "EVENT_DRIVEN": 0,
+      "PIPELINE": 0,
+      "LIBRARY": 2,
+      "MONOLITH": 0
+    }
+  },
+  "boundary": {
+    "boundary_detected": true,
+    "root_path": "C:\\repos\\v3\\lasio",
+    "is_monorepo": false,
+    "sub_projects": [],
+    "total_files": 266,
+    "total_dirs": 34,
+    "scan_complete": true,
+    "notes": []
+  },
+  "signals": {
+    "package_signals": {
+      "Finance": [
+        "pandas"
+      ],
+      "ML": [],
+      "ComputerVision": [],
+      "NLP": [],
+      "Robotics": [],
+      "Scientific": [
+        "numpy"
+      ],
+      "Medical": [],
+      "Web": [],
+      "Data": [],
+      "DevOps": []
+    },
+    "import_signals": {
+      "Finance": [],
+      "ML": [],
+      "ComputerVision": [],
+      "NLP": [],
+      "Robotics": [],
+      "Scientific": [
+        "numpy"
+      ],
+      "Medical": [],
+      "Web": [],
+      "Data": [],
+      "DevOps": []
+    },
+    "content_signals": {
+      "Finance": [],
+      "Medical": [],
+      "Aerospace": [],
+      "ML": [],
+      "Robotics": [],
+      "Energy": [],
+      "Web": [
+        "template",
+        "request"
+      ]
+    },
+    "domain_scores": {
+      "ComputerVision": 0,
+      "NLP": 0,
+      "Web": 2,
+      "Scientific": 2,
+      "Data": 0,
+      "DevOps": 0,
+      "Medical": 0,
+      "Aerospace": 0,
+      "Robotics": 0,
+      "Finance": 1,
+      "Energy": 0,
+      "ML": 0
+    },
+    "top_domain": "Scientific",
+    "top_score": 2
+  },
+  "classification_reason": {
+    "domain": "WELL_LOGGING",
+    "winning_reason": "Insufficient evidence to classify repository domain.",
+    "signal_summary": {
+      "ComputerVision": 0,
+      "NLP": 0,
+      "Web": 2,
+      "Scientific": 2,
+      "Data": 0,
+      "DevOps": 0,
+      "Medical": 0,
+      "Aerospace": 0,
+      "Robotics": 0,
+      "Finance": 1,
+      "Energy": 0,
+      "ML": 0
+    },
+    "top_signals": [],
+    "evidence_strength": "NONE",
+    "notes": [
+      "No domain signals found. Human review required before Module 2 proceeds."
+    ]
+  },
+  "gate": {
+    "gate_passed": true,
+    "gate_decision": "APPROVED",
+    "checks": [
+      {
+        "check_name": "Cognition Status",
+        "passed": true,
+        "detail": "cognition_status = COMPLETE"
+      },
+      {
+        "check_name": "Domain Classification",
+        "passed": true,
+        "detail": "domain = WELL_LOGGING, is_known = True"
+      },
+      {
+        "check_name": "Repository Boundary",
+        "passed": true,
+        "detail": "boundary_detected = True"
+      },
+      {
+        "check_name": "Repository Not Empty",
+        "passed": true,
+        "detail": "total_files = 266"
+      },
+      {
+        "check_name": "Confidence Score Present",
+        "passed": true,
+        "detail": "confidence_score = 0.875"
+      }
+    ],
+    "approved_for": "MODULE_2",
+    "blocking_reason": null
+  },
+  "knowledge_index": {
+    "readme_files": [
+      {
+        "doc_type": "README",
+        "path": "README.md",
+        "filename": "README.md",
+        "extension": ".md"
+      },
+      {
+        "doc_type": "README",
+        "path": "notebooks\\README.md",
+        "filename": "README.md",
+        "extension": ".md"
+      }
+    ],
+    "business_rule_docs": [
+      {
+        "doc_type": "BUSINESS_RULE",
+        "path": "standards\\LAS12_Standards.txt",
+        "filename": "LAS12_Standards.txt",
+        "extension": ".txt"
+      }
+    ],
+    "architecture_docs": [],
+    "functional_specs": [
+      {
+        "doc_type": "SPEC",
+        "path": "docs\\requirements.txt",
+        "filename": "requirements.txt",
+        "extension": ".txt"
+      },
+      {
+        "doc_type": "SPEC",
+        "path": ".github\\ISSUE_TEMPLATE\\feature_request.md",
+        "filename": "feature_request.md",
+        "extension": ".md"
+      }
+    ],
+    "total_docs_found": 5,
+    "notes": [
+      "SCOPE NOTE: This module reports document locations only. Content extraction and rule interpretation require V3-108 governance."
+    ]
+  },
+  "assumptions": {
+    "assumptions": [
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "lasio\\convert_version.py",
+        "source_line": 11,
+        "raw_match": "assert os.path.isfile(args.input)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "lasio\\excel.py",
+        "source_line": 96,
+        "raw_match": "assert xlsxfn.lower().endswith(\".xlsx\")"
+      },
+      {
+        "assumption_type": "Validation boundary",
+        "description": "Possible assumption: Validation boundary",
+        "confidence": "LOW",
+        "source_file": "lasio\\las.py",
+        "source_line": 1043,
+        "raw_match": "raise ValueError("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "lasio\\las.py",
+        "source_line": 1121,
+        "raw_match": "assert isinstance(curve_item, CurveItem)"
+      },
+      {
+        "assumption_type": "Validation boundary",
+        "description": "Possible assumption: Validation boundary",
+        "confidence": "LOW",
+        "source_file": "lasio\\las_items.py",
+        "source_line": 72,
+        "raw_match": "raise ValueError("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "lasio\\las_items.py",
+        "source_line": 366,
+        "raw_match": "assert type(default) in (HeaderItem, CurveItem)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "lasio\\las_items.py",
+        "source_line": 461,
+        "raw_match": "assert value.mnemonic == key"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "lasio\\reader.py",
+        "source_line": 387,
+        "raw_match": "assert len(set(item_counts)) == 1"
+      },
+      {
+        "assumption_type": "Validation boundary",
+        "description": "Possible assumption: Validation boundary",
+        "confidence": "LOW",
+        "source_file": "lasio\\reader.py",
+        "source_line": 485,
+        "raw_match": "raise ValueError("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "lasio\\reader.py",
+        "source_line": 698,
+        "raw_match": "assert mnemonic_case in (\"upper\", \"lower\", \"preserve\")"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "lasio\\writer.py",
+        "source_line": 97,
+        "raw_match": "assert version in (1.2, 2, None)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_api.py",
+        "source_line": 28,
+        "raw_match": "assert \".\" in lasio.__version__"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_api.py",
+        "source_line": 41,
+        "raw_match": "assert las.keys() == [\"DEPT\", \"DT\", \"RHOB\", \"NPHI\", \"SFLU\", \"SFLA\", \"ILM\", \"ILD\"]"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_api.py",
+        "source_line": 46,
+        "raw_match": "assert np.all(las[\"DT\"] == [123.45, 123.45, 123.45])"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_api.py",
+        "source_line": 51,
+        "raw_match": "assert np.all(las[1] == [123.45, 123.45, 123.45])"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_api.py",
+        "source_line": 56,
+        "raw_match": "assert np.all(las[-2] == [110.2, 110.2, 110.2])"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_api.py",
+        "source_line": 61,
+        "raw_match": "assert np.all(las[1] == las.data[:, 1])"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_api.py",
+        "source_line": 66,
+        "raw_match": "assert isinstance(las.curves[1], lasio.las.CurveItem)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_api.py",
+        "source_line": 71,
+        "raw_match": "assert las.get_curve(\"DT\") == las.curves[1]"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_api.py",
+        "source_line": 85,
+        "raw_match": "assert (las[\"TEST1\"] == las[\"TEST2\"]).all()"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_api.py",
+        "source_line": 95,
+        "raw_match": "assert (las.data == np.asarray([[1, 4, 7], [2, 5, 8], [3, 6, 9]])).all()"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_encoding.py",
+        "source_line": 20,
+        "raw_match": "assert las.encoding.upper() == \"UTF-8\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_encoding.py",
+        "source_line": 25,
+        "raw_match": "assert las.encoding.upper() == \"UTF-8\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_encoding.py",
+        "source_line": 32,
+        "raw_match": "assert las.encoding.upper() == \"UTF-8-SIG\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_encoding.py",
+        "source_line": 38,
+        "raw_match": "assert las.encoding.upper() == \"UTF-16\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_encoding.py",
+        "source_line": 44,
+        "raw_match": "assert las.encoding.upper() == \"UTF-16-LE\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_encoding.py",
+        "source_line": 50,
+        "raw_match": "assert las.encoding.upper() == \"UTF-16LE\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_encoding.py",
+        "source_line": 55,
+        "raw_match": "assert las.encoding.upper() == \"UTF-16\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_encoding.py",
+        "source_line": 60,
+        "raw_match": "assert las.encoding.upper() == \"ISO-8859-1\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_encoding.py",
+        "source_line": 66,
+        "raw_match": "assert las.encoding.upper() == \"ISO-8859-1\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_encoding.py",
+        "source_line": 76,
+        "raw_match": "assert las.encoding.upper() == \"UTF-8\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_enhancements.py",
+        "source_line": 36,
+        "raw_match": "assert m.index_unit == \"M\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_enhancements.py",
+        "source_line": 37,
+        "raw_match": "assert m_lower.index_unit == \"M\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_enhancements.py",
+        "source_line": 38,
+        "raw_match": "assert f.index_unit == \"FT\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_enhancements.py",
+        "source_line": 39,
+        "raw_match": "assert ft.index_unit == \"FT\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_enhancements.py",
+        "source_line": 40,
+        "raw_match": "assert err.index_unit is None"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_enhancements.py",
+        "source_line": 51,
+        "raw_match": "assert las.depth_ft[-1] * 0.3048 == las.index[-1]"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_enhancements.py",
+        "source_line": 56,
+        "raw_match": "assert las.depth_ft[-1] * 0.3048 == las.index[-1]"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_enhancements.py",
+        "source_line": 61,
+        "raw_match": "assert las.depth_m[-1] / 0.3048 == las.index[-1]"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_enhancements.py",
+        "source_line": 66,
+        "raw_match": "assert las.depth_m[-1] / 0.3048 == las.index[-1]"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_enhancements.py",
+        "source_line": 71,
+        "raw_match": "assert las.depth_m[-1] / 0.3048 == las.index[-1]"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_examples.py",
+        "source_line": 18,
+        "raw_match": "assert os.path.isdir(lasio.examples.get_local_examples_path())"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_examples.py",
+        "source_line": 24,
+        "raw_match": "assert l1._text == l2._text"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_examples.py",
+        "source_line": 30,
+        "raw_match": "assert l1._text == l2._text"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_examples.py",
+        "source_line": 36,
+        "raw_match": "assert l1._text == l2._text"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_header_items.py",
+        "source_line": 31,
+        "raw_match": "assert h.__repr__() == pformat(h)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_header_items.py",
+        "source_line": 47,
+        "raw_match": "assert h[\"mnemonic\"] == \"MN\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_header_items.py",
+        "source_line": 48,
+        "raw_match": "assert h.mnemonic == \"MN\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_header_items.py",
+        "source_line": 49,
+        "raw_match": "assert h.useful_mnemonic == \"MN\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_header_items.py",
+        "source_line": 53,
+        "raw_match": "assert h.useful_mnemonic == \"ZZZ\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_header_items.py",
+        "source_line": 59,
+        "raw_match": "assert h[\"mnemonic\"] == \"MN\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_header_items.py",
+        "source_line": 60,
+        "raw_match": "assert h[\"original_mnemonic\"] == \"MN\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_header_items.py",
+        "source_line": 61,
+        "raw_match": "assert h[\"useful_mnemonic\"] == \"MN\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_header_items.py",
+        "source_line": 62,
+        "raw_match": "assert h[\"unit\"] == \"m\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_header_items.py",
+        "source_line": 80,
+        "raw_match": "assert result[key] == \"HeaderItem\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_json.py",
+        "source_line": 33,
+        "raw_match": "assert t == \"null\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_json.py",
+        "source_line": 39,
+        "raw_match": "assert t == \"null\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_json.py",
+        "source_line": 47,
+        "raw_match": "assert len(pylj[\"metadata\"][\"Curves\"]) == len(pylj[\"data\"])"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_json.py",
+        "source_line": 54,
+        "raw_match": "assert pylj[\"metadata\"][\"Version\"][\"VERS\"] == 2.0"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_json.py",
+        "source_line": 55,
+        "raw_match": "assert pylj[\"metadata\"][\"Version\"][\"WRAP\"] == \"NO\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_json.py",
+        "source_line": 56,
+        "raw_match": "assert pylj[\"metadata\"][\"Well\"][\"STRT\"] == 1670"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_json.py",
+        "source_line": 57,
+        "raw_match": "assert pylj[\"metadata\"][\"Curves\"][\"DT\"] == \"60 520 32 00\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_json.py",
+        "source_line": 58,
+        "raw_match": "assert pylj[\"metadata\"][\"Parameter\"][\"DFD\"] == 1525"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_json.py",
+        "source_line": 64,
+        "raw_match": "assert lj == open(egfn(\"sample_null.json\"), \"r\").read()"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_null_policy.py",
+        "source_line": 25,
+        "raw_match": "assert numpy.isnan(las[\"DT\"][0])"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_null_policy.py",
+        "source_line": 30,
+        "raw_match": "assert numpy.isnan(las[\"DT\"][0])"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_null_policy.py",
+        "source_line": 35,
+        "raw_match": "assert las[\"DT\"][0] == -999.25"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_null_policy.py",
+        "source_line": 40,
+        "raw_match": "assert las[\"DT\"][1] == 9999"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_null_policy.py",
+        "source_line": 45,
+        "raw_match": "assert las[\"DT\"][1] == 9999"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_null_policy.py",
+        "source_line": 50,
+        "raw_match": "assert las[\"DT\"][1] == 9999"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_null_policy.py",
+        "source_line": 55,
+        "raw_match": "assert numpy.isnan(las[\"DT\"][1])"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_null_policy.py",
+        "source_line": 60,
+        "raw_match": "assert numpy.isnan(las[\"DT\"][1])"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_null_policy.py",
+        "source_line": 65,
+        "raw_match": "assert numpy.isnan(las[\"DT\"][0])"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_null_policy.py",
+        "source_line": 70,
+        "raw_match": "assert numpy.isnan(las[\"SFLA\"][2])"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_open_file.py",
+        "source_line": 25,
+        "raw_match": "assert isinstance(las, LASFile)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_open_file.py",
+        "source_line": 34,
+        "raw_match": "assert isinstance(las, LASFile)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_open_file.py",
+        "source_line": 43,
+        "raw_match": "assert las.well.keys() == ["
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_open_file.py",
+        "source_line": 62,
+        "raw_match": "assert isinstance(las, LASFile)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_open_file.py",
+        "source_line": 67,
+        "raw_match": "assert isinstance(las, LASFile)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_open_file.py",
+        "source_line": 74,
+        "raw_match": "assert not isinstance(las, LASFile)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_open_file.py",
+        "source_line": 127,
+        "raw_match": "assert isinstance(las, LASFile)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_read.py",
+        "source_line": 33,
+        "raw_match": "assert isinstance(las, LASFile)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_read.py",
+        "source_line": 38,
+        "raw_match": "assert isinstance(las, LASFile)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_read.py",
+        "source_line": 43,
+        "raw_match": "assert isinstance(las, LASFile)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_read.py",
+        "source_line": 48,
+        "raw_match": "assert isinstance(las, LASFile)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_read.py",
+        "source_line": 53,
+        "raw_match": "assert isinstance(las, LASFile)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_read.py",
+        "source_line": 58,
+        "raw_match": "assert isinstance(las, LASFile)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_read.py",
+        "source_line": 63,
+        "raw_match": "assert isinstance(las, LASFile)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_read.py",
+        "source_line": 68,
+        "raw_match": "assert isinstance(las, LASFile)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_read.py",
+        "source_line": 73,
+        "raw_match": "assert isinstance(las, LASFile)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_read.py",
+        "source_line": 80,
+        "raw_match": "assert isinstance(las, LASFile)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_read_30.py",
+        "source_line": 23,
+        "raw_match": "assert las.version[0].mnemonic == \"VERS\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_read_30.py",
+        "source_line": 24,
+        "raw_match": "assert las.version[0].value == 3.0"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_read_30.py",
+        "source_line": 25,
+        "raw_match": "assert las.version[0].descr == \"CWLS LOG ASCII STANDARD -VERSION 3.0\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_read_30.py",
+        "source_line": 26,
+        "raw_match": "assert len(las.data) == 3"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_read_30.py",
+        "source_line": 27,
+        "raw_match": "assert len(las.data[0]) == 15"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_read_30.py",
+        "source_line": 28,
+        "raw_match": "assert las.data[2][8] == \"2850000000000.0\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_read_30.py",
+        "source_line": 29,
+        "raw_match": "assert las.data[2][9] == \"LOST INTERVAL   \""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_read_30.py",
+        "source_line": 41,
+        "raw_match": "assert las.curves.DEPT.unit == \"M\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_read_30.py",
+        "source_line": 43,
+        "raw_match": "assert las.sections[\"Curves\"].DEPT.unit == \"M\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_read_30.py",
+        "source_line": 45,
+        "raw_match": "assert \"Log_Parameter\" not in las.sections.keys()"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_read_header_line.py",
+        "source_line": 13,
+        "raw_match": "assert result[\"value\"] == \"23:15 23-JAN-2001\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_read_header_line.py",
+        "source_line": 14,
+        "raw_match": "assert result[\"descr\"] == \"Time Logger: At Bottom\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_read_header_line.py",
+        "source_line": 21,
+        "raw_match": "assert result[\"value\"] == \"2012-09-16T07:44:12-05:00\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_read_header_line.py",
+        "source_line": 22,
+        "raw_match": "assert result[\"descr\"] == \"START DEPTH\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_read_header_line.py",
+        "source_line": 23,
+        "raw_match": "assert result[\"unit\"] == \"DateTime\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_read_header_line.py",
+        "source_line": 29,
+        "raw_match": "assert result[\"unit\"] == u\"\u043c\u0435\u0442\u0435\u0440\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_read_header_line.py",
+        "source_line": 35,
+        "raw_match": "assert result[\"unit\"] == u\".1IN\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_read_header_line.py",
+        "source_line": 41,
+        "raw_match": "assert result[\"value\"] == \"01\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_read_header_line.py",
+        "source_line": 42,
+        "raw_match": "assert result[\"descr\"] == \"RUN NUMBER\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_read_header_line.py",
+        "source_line": 48,
+        "raw_match": "assert result[\"value\"] == \"\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_sectionitems.py",
+        "source_line": 31,
+        "raw_match": "assert las.curves.keys() == [\"DEPT\", \"RHOB\", \"NPHI\", \"SFLU\", \"SFLA\", \"ILM\", \"ILD\"]"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_sectionitems.py",
+        "source_line": 37,
+        "raw_match": "assert las.params.keys() == [\"BHT\", \"FD\", \"MATR\", \"MDEN\", \"RMF\", \"DFD\"]"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_sectionitems.py",
+        "source_line": 43,
+        "raw_match": "assert las.params.keys() == [\"BHT\", \"BS\", \"FD\", \"MATR\", \"RMF\", \"DFD\"]"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_sectionitems.py",
+        "source_line": 49,
+        "raw_match": "assert sl.keys() == [\"DT\", \"RHOB\", \"NPHI\"]"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_sectionitems.py",
+        "source_line": 57,
+        "raw_match": "assert sl.keys() == [\"DT\", \"RHOB\", \"NPHI\"]"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_sectionitems.py",
+        "source_line": 68,
+        "raw_match": "assert [c.descr for c in las.curves] == [\"\", \"b1\", \"b2\"]"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_sectionitems.py",
+        "source_line": 79,
+        "raw_match": "assert [c.descr for c in las.curves] == [\"\", \"b1\", \"b2\"]"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_sectionitems.py",
+        "source_line": 90,
+        "raw_match": "assert [c.descr for c in las.curves] == [\"\", \"b2\", \"b1\"]"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_sectionitems.py",
+        "source_line": 102,
+        "raw_match": "assert [c.descr for c in las.curves] == [\"b2\", \"b1\"]"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_sectionitems.py",
+        "source_line": 118,
+        "raw_match": "assert [c.descr for c in las.curves] == [\"b2\", \"b1\"]"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_speed.py",
+        "source_line": 26,
+        "raw_match": "assert isinstance(las, lasio.LASFile)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_stack_curves.py",
+        "source_line": 20,
+        "raw_match": "assert ("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_stack_curves.py",
+        "source_line": 28,
+        "raw_match": "assert ("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_stack_curves.py",
+        "source_line": 36,
+        "raw_match": "assert ("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_stack_curves.py",
+        "source_line": 47,
+        "raw_match": "assert ("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_stack_curves.py",
+        "source_line": 57,
+        "raw_match": "assert ("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_stack_curves.py",
+        "source_line": 67,
+        "raw_match": "assert ("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_stack_curves.py",
+        "source_line": 77,
+        "raw_match": "assert ("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_stack_curves.py",
+        "source_line": 89,
+        "raw_match": "assert ("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_stack_curves.py",
+        "source_line": 123,
+        "raw_match": "assert e.value.args[0] == \"TCMR not found in LAS curves.\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_stack_curves.py",
+        "source_line": 130,
+        "raw_match": "assert (e.value.args[0] == \"TCMR, KTIM not found in LAS curves.\") or ("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_version.py",
+        "source_line": 17,
+        "raw_match": "assert result == \"\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_version.py",
+        "source_line": 35,
+        "raw_match": "assert result == \"\" or version_regex.match(result)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_version.py",
+        "source_line": 37,
+        "raw_match": "assert version_regex.match(result)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_version.py",
+        "source_line": 44,
+        "raw_match": "assert result == \"\" or version_regex.match(result)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_version.py",
+        "source_line": 46,
+        "raw_match": "assert version_regex.match(result)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_wrapped.py",
+        "source_line": 25,
+        "raw_match": "assert isinstance(las, LASFile)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_wrapped.py",
+        "source_line": 34,
+        "raw_match": "assert ("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_wrapped.py",
+        "source_line": 133,
+        "raw_match": "assert ("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_write.py",
+        "source_line": 26,
+        "raw_match": "assert capsys.readouterr()[0] == open(egfn(\"test_write_sect_widths_12.txt\")).read()"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_write.py",
+        "source_line": 32,
+        "raw_match": "assert os.path.isfile(\"test.las\")"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_write.py",
+        "source_line": 42,
+        "raw_match": "assert \"\\n\" + start in s.read()"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_write.py",
+        "source_line": 50,
+        "raw_match": "assert ("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_write.py",
+        "source_line": 102,
+        "raw_match": "assert ("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_write.py",
+        "source_line": 162,
+        "raw_match": "assert ("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_write.py",
+        "source_line": 229,
+        "raw_match": "assert ("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_write.py",
+        "source_line": 277,
+        "raw_match": "assert ("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_write.py",
+        "source_line": 326,
+        "raw_match": "assert ("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_write.py",
+        "source_line": 378,
+        "raw_match": "assert csv_output[0] == proof_output[0]"
+      }
+    ],
+    "high_risk": [],
+    "total_found": 150,
+    "files_scanned": 32,
+    "overall_risk": "MEDIUM",
+    "notes": [
+      "All findings are POSSIBLE_ASSUMPTION \u2014 code evidence only. Confirm with domain experts before treating as verified business rules."
+    ]
+  },
+  "constraints": {
+    "constraints": [
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "lasio\\las.py",
+        "source_line": 1010,
+        "raw_match": "must be"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "lasio\\las.py",
+        "source_line": 1043,
+        "raw_match": "must not"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "lasio\\las.py",
+        "source_line": 1051,
+        "raw_match": "must be"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "lasio\\reader.py",
+        "source_line": 129,
+        "raw_match": "must be"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "lasio\\writer.py",
+        "source_line": 55,
+        "raw_match": "must be"
+      },
+      {
+        "constraint_type": "Regulatory reference",
+        "category": "COMPLIANCE",
+        "confidence": "HIGH",
+        "source_file": "tests\\test_encoding.py",
+        "source_line": 58,
+        "raw_match": "iso88591"
+      },
+      {
+        "constraint_type": "Regulatory reference",
+        "category": "COMPLIANCE",
+        "confidence": "HIGH",
+        "source_file": "tests\\test_encoding.py",
+        "source_line": 59,
+        "raw_match": "iso88591"
+      },
+      {
+        "constraint_type": "Regulatory reference",
+        "category": "COMPLIANCE",
+        "confidence": "HIGH",
+        "source_file": "tests\\test_encoding.py",
+        "source_line": 105,
+        "raw_match": "iso88591"
+      },
+      {
+        "constraint_type": "Regulatory reference",
+        "category": "COMPLIANCE",
+        "confidence": "HIGH",
+        "source_file": "tests\\test_encoding.py",
+        "source_line": 106,
+        "raw_match": "iso88591"
+      }
+    ],
+    "by_category": {
+      "BUSINESS": [
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "lasio\\las.py",
+          "source_line": 1010,
+          "raw_match": "must be"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "lasio\\las.py",
+          "source_line": 1043,
+          "raw_match": "must not"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "lasio\\las.py",
+          "source_line": 1051,
+          "raw_match": "must be"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "lasio\\reader.py",
+          "source_line": 129,
+          "raw_match": "must be"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "lasio\\writer.py",
+          "source_line": 55,
+          "raw_match": "must be"
+        }
+      ],
+      "TECHNICAL": [],
+      "COMPLIANCE": [
+        {
+          "constraint_type": "Regulatory reference",
+          "category": "COMPLIANCE",
+          "confidence": "HIGH",
+          "source_file": "tests\\test_encoding.py",
+          "source_line": 58,
+          "raw_match": "iso88591"
+        },
+        {
+          "constraint_type": "Regulatory reference",
+          "category": "COMPLIANCE",
+          "confidence": "HIGH",
+          "source_file": "tests\\test_encoding.py",
+          "source_line": 59,
+          "raw_match": "iso88591"
+        },
+        {
+          "constraint_type": "Regulatory reference",
+          "category": "COMPLIANCE",
+          "confidence": "HIGH",
+          "source_file": "tests\\test_encoding.py",
+          "source_line": 105,
+          "raw_match": "iso88591"
+        },
+        {
+          "constraint_type": "Regulatory reference",
+          "category": "COMPLIANCE",
+          "confidence": "HIGH",
+          "source_file": "tests\\test_encoding.py",
+          "source_line": 106,
+          "raw_match": "iso88591"
+        }
+      ],
+      "SAFETY": []
+    },
+    "total_found": 9,
+    "files_scanned": 32,
+    "notes": [
+      "Constraints are INFERRED from code patterns. Verify with domain experts and policy documents."
+    ]
+  },
+  "decisions": {
+    "decisions": [
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# Note: `run-on(NaN.)` is now covered by `run-on(.)`",
+        "evidence": "# Note: `run-on(NaN.)` is now covered by `run-on(.)`",
+        "source_file": "lasio\\defaults.py",
+        "source_line": 132
+      },
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# TODO: Revise so that Version, Well and Parameter(Log_Parameter)",
+        "evidence": "# TODO: Revise so that Version, Well and Parameter(Log_Parameter)",
+        "source_file": "lasio\\las.py",
+        "source_line": 289
+      },
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# TODO: reimplement these warnings!!",
+        "evidence": "# TODO: reimplement these warnings!!",
+        "source_file": "lasio\\las.py",
+        "source_line": 517
+      },
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# TODO: If I implement 2D arrays, need to check here for :1 :2 :3 etc.",
+        "evidence": "# TODO: If I implement 2D arrays, need to check here for :1 :2 :3 etc.",
+        "source_file": "lasio\\las.py",
+        "source_line": 751
+      },
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# TODO: make above test in reverse-ordered LAS (e.g. STRT > STOP)",
+        "evidence": "# TODO: make above test in reverse-ordered LAS (e.g. STRT > STOP)",
+        "source_file": "tests\\test_enhancements.py",
+        "source_line": 92
+      }
+    ],
+    "adr_files": [],
+    "framework_decisions": [],
+    "total_found": 5,
+    "notes": [
+      "Decisions are INFERRED from structural evidence (ADR files, dependency choices, decision comments). Original decision rationale may require document review."
+    ]
+  },
+  "knowledge_loss": {
+    "risks": [
+      {
+        "risk_type": "UNDOCUMENTED_LOGIC",
+        "severity": "MEDIUM",
+        "source_file": "tests\\test_api.py",
+        "description": "15 functions with no docstrings. Business logic may be implicit knowledge only.",
+        "evidence": "function_count=15, docstrings=0"
+      },
+      {
+        "risk_type": "UNDOCUMENTED_LOGIC",
+        "severity": "MEDIUM",
+        "source_file": "tests\\test_enhancements.py",
+        "description": "23 functions with no docstrings. Business logic may be implicit knowledge only.",
+        "evidence": "function_count=23, docstrings=0"
+      },
+      {
+        "risk_type": "UNDOCUMENTED_LOGIC",
+        "severity": "MEDIUM",
+        "source_file": "tests\\test_examples.py",
+        "description": "5 functions with no docstrings. Business logic may be implicit knowledge only.",
+        "evidence": "function_count=5, docstrings=0"
+      },
+      {
+        "risk_type": "UNDOCUMENTED_LOGIC",
+        "severity": "MEDIUM",
+        "source_file": "tests\\test_header_items.py",
+        "description": "7 functions with no docstrings. Business logic may be implicit knowledge only.",
+        "evidence": "function_count=7, docstrings=0"
+      },
+      {
+        "risk_type": "UNDOCUMENTED_LOGIC",
+        "severity": "MEDIUM",
+        "source_file": "tests\\test_json.py",
+        "description": "7 functions with no docstrings. Business logic may be implicit knowledge only.",
+        "evidence": "function_count=7, docstrings=0"
+      },
+      {
+        "risk_type": "UNDOCUMENTED_LOGIC",
+        "severity": "MEDIUM",
+        "source_file": "tests\\test_null_policy.py",
+        "description": "26 functions with no docstrings. Business logic may be implicit knowledge only.",
+        "evidence": "function_count=26, docstrings=0"
+      },
+      {
+        "risk_type": "UNDOCUMENTED_LOGIC",
+        "severity": "MEDIUM",
+        "source_file": "tests\\test_read.py",
+        "description": "75 functions with no docstrings. Business logic may be implicit knowledge only.",
+        "evidence": "function_count=75, docstrings=0"
+      },
+      {
+        "risk_type": "UNDOCUMENTED_LOGIC",
+        "severity": "MEDIUM",
+        "source_file": "tests\\test_sectionitems.py",
+        "description": "24 functions with no docstrings. Business logic may be implicit knowledge only.",
+        "evidence": "function_count=24, docstrings=0"
+      },
+      {
+        "risk_type": "UNDOCUMENTED_LOGIC",
+        "severity": "LOW",
+        "source_file": "tests\\test_serialization.py",
+        "description": "3 functions with no docstrings. Business logic may be implicit knowledge only.",
+        "evidence": "function_count=3, docstrings=0"
+      },
+      {
+        "risk_type": "UNDOCUMENTED_LOGIC",
+        "severity": "LOW",
+        "source_file": "tests\\test_speed.py",
+        "description": "3 functions with no docstrings. Business logic may be implicit knowledge only.",
+        "evidence": "function_count=3, docstrings=0"
+      },
+      {
+        "risk_type": "UNDOCUMENTED_LOGIC",
+        "severity": "MEDIUM",
+        "source_file": "tests\\test_stack_curves.py",
+        "description": "15 functions with no docstrings. Business logic may be implicit knowledge only.",
+        "evidence": "function_count=15, docstrings=0"
+      },
+      {
+        "risk_type": "UNDOCUMENTED_LOGIC",
+        "severity": "LOW",
+        "source_file": "tests\\test_version.py",
+        "description": "3 functions with no docstrings. Business logic may be implicit knowledge only.",
+        "evidence": "function_count=3, docstrings=0"
+      }
+    ],
+    "high_severity": [],
+    "spof_files": [],
+    "undocumented": [
+      "tests\\test_api.py",
+      "tests\\test_enhancements.py",
+      "tests\\test_examples.py",
+      "tests\\test_header_items.py",
+      "tests\\test_json.py",
+      "tests\\test_null_policy.py",
+      "tests\\test_read.py",
+      "tests\\test_sectionitems.py",
+      "tests\\test_serialization.py",
+      "tests\\test_speed.py",
+      "tests\\test_stack_curves.py",
+      "tests\\test_version.py"
+    ],
+    "total_risks": 12,
+    "overall_severity": "MEDIUM",
+    "notes": [
+      "Knowledge risk is structural \u2014 based on import frequency and absence of tests/documentation. Business criticality requires domain expert confirmation."
+    ]
+  },
+  "traceability": {
+    "document_code_links": [
+      {
+        "document_name": ".rst",
+        "source_file": "docs\\source\\conf.py",
+        "source_line": 24,
+        "reference_text": "source_suffix = \".rst\""
+      },
+      {
+        "document_name": ".xlsx",
+        "source_file": "lasio\\excel.py",
+        "source_line": 96,
+        "reference_text": "assert xlsxfn.lower().endswith(\".xlsx\")"
+      },
+      {
+        "document_name": ".xlsx",
+        "source_file": "lasio\\excel.py",
+        "source_line": 132,
+        "reference_text": "xlsxfn = lasfn.lower().replace(\".las\", \".xlsx\")"
+      }
+    ],
+    "code_test_links": [
+      {
+        "source_file": "lasio\\examples.py",
+        "test_file": "tests\\test_examples.py",
+        "link_type": "NAMING_CONVENTION"
+      }
+    ],
+    "untraced_source": [
+      "docs\\source\\conf.py",
+      "lasio\\__init__.py",
+      "lasio\\convert_version.py",
+      "lasio\\defaults.py",
+      "lasio\\excel.py",
+      "lasio\\exceptions.py",
+      "lasio\\las.py",
+      "lasio\\las_items.py",
+      "lasio\\las_version.py",
+      "lasio\\reader.py",
+      "lasio\\writer.py"
+    ],
+    "total_doc_links": 3,
+    "total_test_links": 1,
+    "coverage_note": "8.3% (CENTRALIZED_TEST_HARNESS_DETECTED)",
+    "notes": [
+      "CENTRALIZED_TEST_HARNESS_DETECTED: Coverage is 8.3% (below the 30.0% floor) but physical harness evidence was found. Hybrid test architecture suspected.",
+      "SCOPE NOTE: Requirement->Code mapping is Module 9 (V3-106). This module traces document references and test structure only."
+    ]
+  },
+  "risk": {
+    "critical_components": [
+      {
+        "source_file": "lasio\\las.py",
+        "risk_level": "MEDIUM",
+        "risk_reasons": [
+          "Large file: 51 functions",
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 51,
+        "has_tests": false,
+        "risk_score": 4
+      },
+      {
+        "source_file": "lasio\\las_items.py",
+        "risk_level": "MEDIUM",
+        "risk_reasons": [
+          "Large file: 41 functions",
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 41,
+        "has_tests": false,
+        "risk_score": 4
+      },
+      {
+        "source_file": "lasio\\reader.py",
+        "risk_level": "MEDIUM",
+        "risk_reasons": [
+          "Large file: 28 functions",
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 28,
+        "has_tests": false,
+        "risk_score": 4
+      },
+      {
+        "source_file": "lasio\\excel.py",
+        "risk_level": "MEDIUM",
+        "risk_reasons": [
+          "Medium file: 9 functions",
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 9,
+        "has_tests": false,
+        "risk_score": 3
+      },
+      {
+        "source_file": "lasio\\writer.py",
+        "risk_level": "MEDIUM",
+        "risk_reasons": [
+          "Medium file: 8 functions",
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 8,
+        "has_tests": false,
+        "risk_score": 3
+      },
+      {
+        "source_file": "lasio\\convert_version.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 2,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "lasio\\defaults.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 1,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "lasio\\exceptions.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 0,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "lasio\\las_version.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 2,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "lasio\\__init__.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 4,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "tests\\__init__.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 0,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "docs\\source\\conf.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 0,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "tests\\examples\\generate_csv_test_proofs.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 0,
+        "has_tests": false,
+        "risk_score": 2
+      }
+    ],
+    "high_risk_count": 0,
+    "repository_risk_score": 7,
+    "top_risk_files": [
+      "lasio\\las.py",
+      "lasio\\las_items.py",
+      "lasio\\reader.py",
+      "lasio\\excel.py",
+      "lasio\\writer.py"
+    ],
+    "notes": [
+      "SECONDARY_CALIBRATION_APPLIED: capped at 7 \u2014 zero HIGH risk components with score 10 is inconsistent.",
+      "SCOPE NOTE: This module identifies structurally high-risk components. Actual blast radius requires Module 5 (V3-017-021). Risk score is structural \u2014 business criticality requires domain context."
+    ]
+  }
+}

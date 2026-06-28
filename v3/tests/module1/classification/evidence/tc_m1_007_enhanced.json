@@ -1,0 +1,4219 @@
+{
+  "core_report": {
+    "repository_root": "C:\\repos\\v3\\flask",
+    "scan_timestamp": "2026-06-25T18:39:24.962100+00:00",
+    "total_files_scanned": 225,
+    "total_python_files": 83,
+    "total_model_files": 0,
+    "project_purpose": "flask \u2014 Web Application (Flask) \u2014 83 Python files",
+    "application_type": "WEB_APPLICATION",
+    "primary_framework": "Flask",
+    "secondary_frameworks": [
+      "Pytest",
+      "Celery",
+      "Redis",
+      "Requests"
+    ],
+    "detected_languages": [
+      "CSS",
+      "HTML",
+      "Python",
+      "SQL",
+      "TOML",
+      "YAML"
+    ],
+    "detected_file_types": [
+      "JSON",
+      "Markdown",
+      "ReStructuredText",
+      "Text",
+      "Windows Batch Script"
+    ],
+    "detected_model_files": [],
+    "technology_stack": [
+      "Python",
+      "Redis"
+    ],
+    "build_systems": [
+      "Python Build",
+      "Make"
+    ],
+    "entry_points": [
+      "examples\\celery\\src\\task_app\\__init__.py",
+      "examples\\javascript\\js_example\\views.py",
+      "examples\\tutorial\\flaskr\\__init__.py",
+      "examples\\tutorial\\flaskr\\db.py",
+      "src\\flask\\__main__.py",
+      "src\\flask\\app.py",
+      "src\\flask\\cli.py",
+      "src\\flask\\ctx.py",
+      "src\\flask\\helpers.py",
+      "src\\flask\\sansio\\app.py",
+      "src\\flask\\sansio\\scaffold.py"
+    ],
+    "configuration_files": [
+      ".\\pyproject.toml",
+      "docs\\Makefile",
+      "examples\\celery\\pyproject.toml",
+      "examples\\celery\\requirements.txt",
+      "examples\\javascript\\pyproject.toml",
+      "examples\\tutorial\\pyproject.toml",
+      "src\\flask\\config.py",
+      "tests\\test_apps\\.env"
+    ],
+    "documentation_files": [
+      ".\\LICENSE.txt",
+      ".\\README.md",
+      "examples\\celery\\README.md",
+      "examples\\javascript\\LICENSE.txt",
+      "examples\\javascript\\README.rst",
+      "examples\\tutorial\\LICENSE.txt",
+      "examples\\tutorial\\README.rst",
+      "src\\flask\\sansio\\README.md"
+    ],
+    "test_directories": [
+      "examples\\javascript\\tests",
+      "examples\\tutorial\\tests",
+      "tests"
+    ],
+    "discovery_score": 1.0,
+    "classification_score": 1.0,
+    "confidence_score": 1.0,
+    "cognition_status": "COMPLETE",
+    "warnings": [
+      "1 file extension(s) not in language registry: .typed. These files were counted but language not identified. Add to LANGUAGE_EXTENSIONS in framework_signatures.py."
+    ],
+    "unknown_file_extensions": [
+      ".typed"
+    ],
+    "error_message": ""
+  },
+  "identity": {
+    "repository_name": "flask",
+    "application_type": "WEB_APPLICATION",
+    "domain": "Web",
+    "primary_framework": "Flask",
+    "project_purpose": "flask \u2014 Web Application (Flask) \u2014 83 Python files",
+    "classification_source": "COGNITION_ENGINE",
+    "confidence": 1.0,
+    "is_known": true
+  },
+  "architecture": {
+    "pattern": "LIBRARY",
+    "confidence": "HIGH",
+    "evidence": [
+      "pyproject.toml",
+      "__init__.py",
+      "src"
+    ],
+    "all_scores": {
+      "MVC": 1,
+      "LAYERED": 0,
+      "MICROSERVICES": 0,
+      "EVENT_DRIVEN": 0,
+      "PIPELINE": 0,
+      "LIBRARY": 3,
+      "MONOLITH": 1
+    }
+  },
+  "boundary": {
+    "boundary_detected": true,
+    "root_path": "C:\\repos\\v3\\flask",
+    "is_monorepo": true,
+    "sub_projects": [
+      "examples\\celery",
+      "examples\\javascript",
+      "examples\\tutorial"
+    ],
+    "total_files": 265,
+    "total_dirs": 67,
+    "scan_complete": true,
+    "notes": [
+      "Monorepo detected: 3 sub-projects found"
+    ]
+  },
+  "signals": {
+    "package_signals": {
+      "Finance": [],
+      "ML": [],
+      "ComputerVision": [],
+      "NLP": [],
+      "Robotics": [],
+      "Scientific": [],
+      "Medical": [],
+      "Web": [
+        "flask"
+      ],
+      "Data": [],
+      "DevOps": []
+    },
+    "import_signals": {
+      "Finance": [],
+      "ML": [],
+      "ComputerVision": [],
+      "NLP": [],
+      "Robotics": [],
+      "Scientific": [],
+      "Medical": [],
+      "Web": [
+        "flask"
+      ],
+      "Data": [],
+      "DevOps": []
+    },
+    "content_signals": {
+      "Finance": [],
+      "Medical": [],
+      "Aerospace": [],
+      "ML": [],
+      "Robotics": [],
+      "Energy": [],
+      "Web": [
+        "route",
+        "view",
+        "template",
+        "request",
+        "session",
+        "auth"
+      ]
+    },
+    "domain_scores": {
+      "Robotics": 0,
+      "DevOps": 0,
+      "Energy": 0,
+      "Data": 0,
+      "NLP": 0,
+      "Medical": 0,
+      "Scientific": 0,
+      "Finance": 0,
+      "Web": 8,
+      "ComputerVision": 0,
+      "ML": 0,
+      "Aerospace": 0
+    },
+    "top_domain": "Web",
+    "top_score": 8
+  },
+  "classification_reason": {
+    "domain": "Web",
+    "winning_reason": "Web signals dominate (score=8, evidence=[flask, route, view, template, request]).",
+    "signal_summary": {
+      "Robotics": 0,
+      "DevOps": 0,
+      "Energy": 0,
+      "Data": 0,
+      "NLP": 0,
+      "Medical": 0,
+      "Scientific": 0,
+      "Finance": 0,
+      "Web": 8,
+      "ComputerVision": 0,
+      "ML": 0,
+      "Aerospace": 0
+    },
+    "top_signals": [
+      "flask",
+      "route",
+      "view",
+      "template",
+      "request",
+      "session",
+      "auth"
+    ],
+    "evidence_strength": "STRONG",
+    "notes": []
+  },
+  "gate": {
+    "gate_passed": true,
+    "gate_decision": "APPROVED",
+    "checks": [
+      {
+        "check_name": "Cognition Status",
+        "passed": true,
+        "detail": "cognition_status = COMPLETE"
+      },
+      {
+        "check_name": "Domain Classification",
+        "passed": true,
+        "detail": "domain = Web, is_known = True"
+      },
+      {
+        "check_name": "Repository Boundary",
+        "passed": true,
+        "detail": "boundary_detected = True"
+      },
+      {
+        "check_name": "Repository Not Empty",
+        "passed": true,
+        "detail": "total_files = 265"
+      },
+      {
+        "check_name": "Confidence Score Present",
+        "passed": true,
+        "detail": "confidence_score = 1.0"
+      }
+    ],
+    "approved_for": "MODULE_2",
+    "blocking_reason": null
+  },
+  "knowledge_index": {
+    "readme_files": [
+      {
+        "doc_type": "README",
+        "path": "README.md",
+        "filename": "README.md",
+        "extension": ".md"
+      },
+      {
+        "doc_type": "README",
+        "path": "examples\\celery\\README.md",
+        "filename": "README.md",
+        "extension": ".md"
+      },
+      {
+        "doc_type": "README",
+        "path": "examples\\javascript\\README.rst",
+        "filename": "README.rst",
+        "extension": ".rst"
+      },
+      {
+        "doc_type": "README",
+        "path": "examples\\tutorial\\README.rst",
+        "filename": "README.rst",
+        "extension": ".rst"
+      },
+      {
+        "doc_type": "README",
+        "path": "src\\flask\\sansio\\README.md",
+        "filename": "README.md",
+        "extension": ".md"
+      }
+    ],
+    "business_rule_docs": [
+      {
+        "doc_type": "BUSINESS_RULE",
+        "path": "docs\\patterns\\urlprocessors.rst",
+        "filename": "urlprocessors.rst",
+        "extension": ".rst"
+      }
+    ],
+    "architecture_docs": [
+      {
+        "doc_type": "ARCHITECTURE",
+        "path": "docs\\blueprints.rst",
+        "filename": "blueprints.rst",
+        "extension": ".rst"
+      },
+      {
+        "doc_type": "ARCHITECTURE",
+        "path": "docs\\design.rst",
+        "filename": "design.rst",
+        "extension": ".rst"
+      }
+    ],
+    "functional_specs": [
+      {
+        "doc_type": "SPEC",
+        "path": ".github\\ISSUE_TEMPLATE\\feature-request.md",
+        "filename": "feature-request.md",
+        "extension": ".md"
+      },
+      {
+        "doc_type": "SPEC",
+        "path": "examples\\celery\\requirements.txt",
+        "filename": "requirements.txt",
+        "extension": ".txt"
+      }
+    ],
+    "total_docs_found": 10,
+    "notes": [
+      "SCOPE NOTE: This module reports document locations only. Content extraction and rule interpretation require V3-108 governance."
+    ]
+  },
+  "assumptions": {
+    "assumptions": [
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\conftest.py",
+        "source_line": 96,
+        "raw_match": "assert not leaks"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_appctx.py",
+        "source_line": 20,
+        "raw_match": "assert rv == \"https://localhost/\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_appctx.py",
+        "source_line": 36,
+        "raw_match": "assert flask.current_app._get_current_object() is app"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_appctx.py",
+        "source_line": 37,
+        "raw_match": "assert not flask.current_app"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_appctx.py",
+        "source_line": 42,
+        "raw_match": "assert flask.current_app._get_current_object() is app"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_appctx.py",
+        "source_line": 43,
+        "raw_match": "assert not flask.current_app"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_appctx.py",
+        "source_line": 56,
+        "raw_match": "assert cleanup_stuff == [None]"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_appctx.py",
+        "source_line": 74,
+        "raw_match": "assert cleanup_stuff == [None]"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_appctx.py",
+        "source_line": 90,
+        "raw_match": "assert cleanup_stuff == [None]"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_appctx.py",
+        "source_line": 113,
+        "raw_match": "assert cleanup_stuff == [None, None]"
+      },
+      {
+        "assumption_type": "Validation boundary",
+        "description": "Possible assumption: Validation boundary",
+        "confidence": "LOW",
+        "source_file": "tests\\test_appctx.py",
+        "source_line": 126,
+        "raw_match": "raise ValueError("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_async.py",
+        "source_line": 85,
+        "raw_match": "assert b\"GET\" in response.get_data()"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_async.py",
+        "source_line": 87,
+        "raw_match": "assert b\"POST\" in response.get_data()"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_async.py",
+        "source_line": 94,
+        "raw_match": "assert response.status_code == 412"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_async.py",
+        "source_line": 141,
+        "raw_match": "assert app_before_called"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_async.py",
+        "source_line": 142,
+        "raw_match": "assert app_after_called"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_async.py",
+        "source_line": 144,
+        "raw_match": "assert bp_before_called"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_async.py",
+        "source_line": 145,
+        "raw_match": "assert bp_after_called"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_basic.py",
+        "source_line": 38,
+        "raw_match": "assert sorted(rv.allow) == [\"GET\", \"HEAD\", \"OPTIONS\", \"POST\"]"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_basic.py",
+        "source_line": 39,
+        "raw_match": "assert rv.data == b\"\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_basic.py",
+        "source_line": 52,
+        "raw_match": "assert sorted(rv.allow) == [\"GET\", \"HEAD\", \"OPTIONS\", \"POST\", \"PUT\"]"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_basic.py",
+        "source_line": 64,
+        "raw_match": "assert client_method(\"/\").data == b\"Hello\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_basic.py",
+        "source_line": 83,
+        "raw_match": "assert rv.status_code == 405"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_basic.py",
+        "source_line": 100,
+        "raw_match": "assert rv.allow == {\"GET\", \"HEAD\", \"OPTIONS\"}"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_basic.py",
+        "source_line": 113,
+        "raw_match": "assert rv.status_code == 405"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_basic.py",
+        "source_line": 126,
+        "raw_match": "assert rv.headers[\"X-Test\"] == \"test\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_basic.py",
+        "source_line": 138,
+        "raw_match": "assert client.get(\"/\").data == b\"GET\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_basic.py",
+        "source_line": 140,
+        "raw_match": "assert rv.status_code == 405"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_blueprints.py",
+        "source_line": 41,
+        "raw_match": "assert client.get(\"/frontend-no\").data == b\"frontend says no\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_blueprints.py",
+        "source_line": 42,
+        "raw_match": "assert client.get(\"/backend-no\").data == b\"backend says no\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_blueprints.py",
+        "source_line": 43,
+        "raw_match": "assert client.get(\"/what-is-a-sideend\").data == b\"application itself says no\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_blueprints.py",
+        "source_line": 57,
+        "raw_match": "assert isinstance(e, MyDecoratorException)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_blueprints.py",
+        "source_line": 61,
+        "raw_match": "assert isinstance(e, MyFunctionException)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_blueprints.py",
+        "source_line": 76,
+        "raw_match": "assert client.get(\"/decorator\").data == b\"boom\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_blueprints.py",
+        "source_line": 77,
+        "raw_match": "assert client.get(\"/function\").data == b\"bam\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_blueprints.py",
+        "source_line": 100,
+        "raw_match": "assert client.get(\"/forbidden\").data == b\"you shall not pass\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_blueprints.py",
+        "source_line": 101,
+        "raw_match": "assert client.get(\"/nope\").data == b\"you shall not pass\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_blueprints.py",
+        "source_line": 128,
+        "raw_match": "assert client.get(url).status_code == 204"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_cli.py",
+        "source_line": 45,
+        "raw_match": "assert testapp.cli.name == testapp.name"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_cli.py",
+        "source_line": 52,
+        "raw_match": "assert find_best_app(Module) == Module.app"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_cli.py",
+        "source_line": 57,
+        "raw_match": "assert find_best_app(Module) == Module.application"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_cli.py",
+        "source_line": 62,
+        "raw_match": "assert find_best_app(Module) == Module.myapp"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_cli.py",
+        "source_line": 70,
+        "raw_match": "assert isinstance(app, Flask)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_cli.py",
+        "source_line": 71,
+        "raw_match": "assert app.name == \"appname\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_cli.py",
+        "source_line": 79,
+        "raw_match": "assert isinstance(app, Flask)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_cli.py",
+        "source_line": 80,
+        "raw_match": "assert app.name == \"appname\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_cli.py",
+        "source_line": 88,
+        "raw_match": "assert isinstance(app, Flask)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_cli.py",
+        "source_line": 89,
+        "raw_match": "assert app.name == \"appname\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_config.py",
+        "source_line": 14,
+        "raw_match": "assert app.secret_key == \"config\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_config.py",
+        "source_line": 15,
+        "raw_match": "assert app.config[\"TEST_KEY\"] == \"foo\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_config.py",
+        "source_line": 16,
+        "raw_match": "assert \"TestConfig\" not in app.config"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_config.py",
+        "source_line": 60,
+        "raw_match": "assert app.config[\"STRING\"] == \"value\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_config.py",
+        "source_line": 61,
+        "raw_match": "assert app.config[\"BOOL\"] is True"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_config.py",
+        "source_line": 62,
+        "raw_match": "assert app.config[\"INT\"] == 1"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_config.py",
+        "source_line": 63,
+        "raw_match": "assert app.config[\"FLOAT\"] == 1.2"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_config.py",
+        "source_line": 64,
+        "raw_match": "assert app.config[\"LIST\"] == [1, 2]"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_config.py",
+        "source_line": 65,
+        "raw_match": "assert app.config[\"DICT\"] == {\"k\": \"v\"}"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_config.py",
+        "source_line": 66,
+        "raw_match": "assert \"OTHER\" not in app.config"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_converters.py",
+        "source_line": 23,
+        "raw_match": "assert client.get(\"/1,2,3\").data == b\"1|2|3\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_converters.py",
+        "source_line": 26,
+        "raw_match": "assert url_for(\"index\", args=[4, 5, 6]) == \"/4,5,6\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_converters.py",
+        "source_line": 32,
+        "raw_match": "assert request is not None"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_converters.py",
+        "source_line": 33,
+        "raw_match": "assert session is not None"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_converters.py",
+        "source_line": 42,
+        "raw_match": "assert client.get(\"/admin\").data == b\"admin\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_helpers.py",
+        "source_line": 39,
+        "raw_match": "assert rv.direct_passthrough"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_helpers.py",
+        "source_line": 40,
+        "raw_match": "assert rv.mimetype == \"text/html\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_helpers.py",
+        "source_line": 42,
+        "raw_match": "assert rv.data == expect"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_helpers.py",
+        "source_line": 49,
+        "raw_match": "assert rv.cache_control.max_age is None"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_helpers.py",
+        "source_line": 53,
+        "raw_match": "assert rv.cache_control.max_age is None"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_helpers.py",
+        "source_line": 59,
+        "raw_match": "assert rv.cache_control.max_age == 3600"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_helpers.py",
+        "source_line": 63,
+        "raw_match": "assert rv.cache_control.max_age == 3600"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_helpers.py",
+        "source_line": 67,
+        "raw_match": "assert rv.cache_control.max_age == 3600"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_helpers.py",
+        "source_line": 78,
+        "raw_match": "assert rv.cache_control.max_age == 10"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_helpers.py",
+        "source_line": 82,
+        "raw_match": "assert rv.cache_control.max_age == 10"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_instance_config.py",
+        "source_line": 13,
+        "raw_match": "assert app.instance_path == os.fspath(modules_tmp_path)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_instance_config.py",
+        "source_line": 27,
+        "raw_match": "assert app.instance_path == os.fspath(modules_tmp_path / \"instance\")"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_instance_config.py",
+        "source_line": 43,
+        "raw_match": "assert app.instance_path == os.fspath(modules_tmp_path / \"instance\")"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_instance_config.py",
+        "source_line": 62,
+        "raw_match": "assert app.instance_path == os.fspath(project2 / \"instance\")"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_instance_config.py",
+        "source_line": 75,
+        "raw_match": "assert app.instance_path == os.fspath("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_instance_config.py",
+        "source_line": 94,
+        "raw_match": "assert app.instance_path == os.fspath("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_instance_config.py",
+        "source_line": 109,
+        "raw_match": "assert site_package.app.instance_path == os.fspath("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_json.py",
+        "source_line": 25,
+        "raw_match": "assert rv.status_code == 400"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_json.py",
+        "source_line": 27,
+        "raw_match": "assert contains == debug"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_json.py",
+        "source_line": 36,
+        "raw_match": "assert rv.status_code == 400"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_json.py",
+        "source_line": 45,
+        "raw_match": "assert rv.data == b\"foo\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_json.py",
+        "source_line": 54,
+        "raw_match": "assert rv == expected"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_json.py",
+        "source_line": 64,
+        "raw_match": "assert rv == test_data"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_json.py",
+        "source_line": 74,
+        "raw_match": "assert rv.mimetype == \"application/json\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_json.py",
+        "source_line": 75,
+        "raw_match": "assert flask.json.loads(rv.data) == test_value"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_json.py",
+        "source_line": 101,
+        "raw_match": "assert rv.mimetype == \"application/json\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_json.py",
+        "source_line": 102,
+        "raw_match": "assert flask.json.loads(rv.data) == d"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_json_tag.py",
+        "source_line": 29,
+        "raw_match": "assert s.loads(s.dumps(data)) == data"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_json_tag.py",
+        "source_line": 39,
+        "raw_match": "assert isinstance(s.tags[\" d\"], TagDict)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_json_tag.py",
+        "source_line": 40,
+        "raw_match": "assert isinstance(s.order[0], TagDict)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_json_tag.py",
+        "source_line": 63,
+        "raw_match": "assert s.loads(s.dumps(Foo(\"bar\"))).data == \"bar\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_json_tag.py",
+        "source_line": 83,
+        "raw_match": "assert isinstance(s.order[-2], Tag1)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_json_tag.py",
+        "source_line": 86,
+        "raw_match": "assert isinstance(s.order[-1], Tag2)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_logging.py",
+        "source_line": 37,
+        "raw_match": "assert app.logger.name == \"flask_test\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_logging.py",
+        "source_line": 38,
+        "raw_match": "assert app.logger.level == logging.NOTSET"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_logging.py",
+        "source_line": 39,
+        "raw_match": "assert app.logger.handlers == [default_handler]"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_logging.py",
+        "source_line": 44,
+        "raw_match": "assert app.logger.level == logging.DEBUG"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_logging.py",
+        "source_line": 45,
+        "raw_match": "assert app.logger.handlers == [default_handler]"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_logging.py",
+        "source_line": 50,
+        "raw_match": "assert app.logger.level == logging.NOTSET"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_logging.py",
+        "source_line": 51,
+        "raw_match": "assert not app.logger.handlers"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_logging.py",
+        "source_line": 62,
+        "raw_match": "assert \"ERROR in test_logging: test\" in stream.getvalue()"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_logging.py",
+        "source_line": 64,
+        "raw_match": "assert wsgi_errors_stream._get_current_object() is sys.stderr"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_logging.py",
+        "source_line": 67,
+        "raw_match": "assert wsgi_errors_stream._get_current_object() is stream"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_regression.py",
+        "source_line": 26,
+        "raw_match": "assert location_parts[0] == \"http://localhost\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_regression.py",
+        "source_line": 28,
+        "raw_match": "assert location_parts[2] == \"test\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_regression.py",
+        "source_line": 30,
+        "raw_match": "assert rv.data == b\"42\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_reqctx.py",
+        "source_line": 24,
+        "raw_match": "assert buffer == []"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_reqctx.py",
+        "source_line": 26,
+        "raw_match": "assert buffer == [None]"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_reqctx.py",
+        "source_line": 42,
+        "raw_match": "assert buffer == []"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_reqctx.py",
+        "source_line": 43,
+        "raw_match": "assert buffer == [None]"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_reqctx.py",
+        "source_line": 54,
+        "raw_match": "assert buffer == []"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_reqctx.py",
+        "source_line": 59,
+        "raw_match": "assert buffer == [None]"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_reqctx.py",
+        "source_line": 74,
+        "raw_match": "assert ("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_reqctx.py",
+        "source_line": 80,
+        "raw_match": "assert ("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_reqctx.py",
+        "source_line": 116,
+        "raw_match": "assert index() == \"Hello World!\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_reqctx.py",
+        "source_line": 118,
+        "raw_match": "assert meh() == \"http://localhost/meh\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_request.py",
+        "source_line": 22,
+        "raw_match": "assert rv.data == b\"42\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_request.py",
+        "source_line": 32,
+        "raw_match": "assert r.max_content_length is None"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_request.py",
+        "source_line": 33,
+        "raw_match": "assert r.max_form_memory_size == 500_000"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_request.py",
+        "source_line": 34,
+        "raw_match": "assert r.max_form_parts == 1_000"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_request.py",
+        "source_line": 38,
+        "raw_match": "assert r.max_content_length == 100"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_request.py",
+        "source_line": 39,
+        "raw_match": "assert r.max_form_memory_size == 50"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_request.py",
+        "source_line": 40,
+        "raw_match": "assert r.max_form_parts == 3"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_request.py",
+        "source_line": 47,
+        "raw_match": "assert r.max_content_length == 90"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_request.py",
+        "source_line": 48,
+        "raw_match": "assert r.max_form_memory_size == 30"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_request.py",
+        "source_line": 49,
+        "raw_match": "assert r.max_form_parts == 4"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_session_interface.py",
+        "source_line": 18,
+        "raw_match": "assert request.endpoint is not None"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_session_interface.py",
+        "source_line": 28,
+        "raw_match": "assert response.status_code == 200"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_signals.py",
+        "source_line": 17,
+        "raw_match": "assert len(recorded) == 1"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_signals.py",
+        "source_line": 19,
+        "raw_match": "assert template.name == \"simple_template.html\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_signals.py",
+        "source_line": 20,
+        "raw_match": "assert context[\"whiskey\"] == 42"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_signals.py",
+        "source_line": 41,
+        "raw_match": "assert len(recorded) == 1"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_signals.py",
+        "source_line": 43,
+        "raw_match": "assert template.name == \"simple_template.html\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_signals.py",
+        "source_line": 44,
+        "raw_match": "assert context[\"whiskey\"] == 43"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_signals.py",
+        "source_line": 45,
+        "raw_match": "assert rv.data == b\"<h1>43</h1>\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_signals.py",
+        "source_line": 58,
+        "raw_match": "assert response.data == b\"stuff\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_signals.py",
+        "source_line": 81,
+        "raw_match": "assert rv.data == b\"stuff\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_signals.py",
+        "source_line": 83,
+        "raw_match": "assert calls == ["
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_subclassing.py",
+        "source_line": 19,
+        "raw_match": "assert rv.status_code == 500"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_subclassing.py",
+        "source_line": 20,
+        "raw_match": "assert b\"Internal Server Error\" in rv.data"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_subclassing.py",
+        "source_line": 21,
+        "raw_match": "assert not out.getvalue()"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_templating.py",
+        "source_line": 21,
+        "raw_match": "assert rv.data == b\"<p>23|42\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_templating.py",
+        "source_line": 30,
+        "raw_match": "assert rv.data == b\"42\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_templating.py",
+        "source_line": 39,
+        "raw_match": "assert rv.data == b\"42\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_templating.py",
+        "source_line": 50,
+        "raw_match": "assert rv == \"Hello Special World 42\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_templating.py",
+        "source_line": 68,
+        "raw_match": "assert rv.data.split() == [b\"42\", b\"23\", b\"False\", b\"aha\"]"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_templating.py",
+        "source_line": 81,
+        "raw_match": "assert lines == ["
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_templating.py",
+        "source_line": 101,
+        "raw_match": "assert lines == ["
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_templating.py",
+        "source_line": 114,
+        "raw_match": "assert flask.render_template_string(\"{{ foo }}\", foo=\"<test>\") == \"&lt;test&gt;\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_templating.py",
+        "source_line": 115,
+        "raw_match": "assert flask.render_template(\"mail.txt\", foo=\"<test>\") == \"<test> Mail\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_templating.py",
+        "source_line": 120,
+        "raw_match": "assert macro(\"World\") == \"Hello World!\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_testing.py",
+        "source_line": 24,
+        "raw_match": "assert ctx.request.url == \"http://example.com:1234/foo/\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_testing.py",
+        "source_line": 27,
+        "raw_match": "assert rv.data == b\"http://example.com:1234/foo/\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_testing.py",
+        "source_line": 36,
+        "raw_match": "assert ctx.request.url == \"http://localhost/\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_testing.py",
+        "source_line": 39,
+        "raw_match": "assert rv.data == b\"http://localhost/\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_testing.py",
+        "source_line": 51,
+        "raw_match": "assert flask.g.remote_addr == \"127.0.0.1\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_testing.py",
+        "source_line": 52,
+        "raw_match": "assert flask.g.user_agent == ("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_testing.py",
+        "source_line": 69,
+        "raw_match": "assert flask.g.remote_addr == \"192.168.0.22\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_testing.py",
+        "source_line": 70,
+        "raw_match": "assert flask.g.user_agent == \"Foo\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_testing.py",
+        "source_line": 81,
+        "raw_match": "assert rv.data == b\"127.0.0.1\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_testing.py",
+        "source_line": 86,
+        "raw_match": "assert rv.data == b\"127.0.0.2\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_user_error_handler.py",
+        "source_line": 16,
+        "raw_match": "assert isinstance(e, CustomException)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_user_error_handler.py",
+        "source_line": 22,
+        "raw_match": "assert \"CustomException() is an instance, not a class.\" in str(exc_info.value)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_user_error_handler.py",
+        "source_line": 27,
+        "raw_match": "assert \"'list' is not a subclass of Exception.\" in str(exc_info.value)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_user_error_handler.py",
+        "source_line": 31,
+        "raw_match": "assert isinstance(e, InternalServerError)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_user_error_handler.py",
+        "source_line": 41,
+        "raw_match": "assert \"Use a subclass of HTTPException\" in str(exc_info.value)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_user_error_handler.py",
+        "source_line": 56,
+        "raw_match": "assert client.get(\"/custom\").data == b\"custom\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_user_error_handler.py",
+        "source_line": 57,
+        "raw_match": "assert client.get(\"/keyerror\").data == b\"wrapped KeyError\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_user_error_handler.py",
+        "source_line": 58,
+        "raw_match": "assert client.get(\"/abort\").data == b\"direct\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_user_error_handler.py",
+        "source_line": 73,
+        "raw_match": "assert isinstance(e, ParentException)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_user_error_handler.py",
+        "source_line": 78,
+        "raw_match": "assert isinstance(e, ChildExceptionRegistered)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_views.py",
+        "source_line": 11,
+        "raw_match": "assert c.get(\"/\").data == b\"GET\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_views.py",
+        "source_line": 12,
+        "raw_match": "assert c.post(\"/\").data == b\"POST\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_views.py",
+        "source_line": 13,
+        "raw_match": "assert c.put(\"/\").status_code == 405"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_views.py",
+        "source_line": 15,
+        "raw_match": "assert sorted(meths) == [\"GET\", \"HEAD\", \"OPTIONS\", \"POST\"]"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_views.py",
+        "source_line": 78,
+        "raw_match": "assert sorted(meths) == [\"DELETE\", \"GET\", \"HEAD\", \"OPTIONS\", \"POST\"]"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_views.py",
+        "source_line": 98,
+        "raw_match": "assert rv.headers[\"X-Parachute\"] == \"awesome\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_views.py",
+        "source_line": 99,
+        "raw_match": "assert rv.data == b\"Awesome\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_views.py",
+        "source_line": 115,
+        "raw_match": "assert rv.status_code == 405"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_views.py",
+        "source_line": 134,
+        "raw_match": "assert rv.allow == {\"GET\", \"HEAD\", \"OPTIONS\"}"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_views.py",
+        "source_line": 150,
+        "raw_match": "assert rv.headers[\"X-Test\"] == \"test\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "examples\\javascript\\tests\\test_js_example.py",
+        "source_line": 16,
+        "raw_match": "assert template.name == template_name"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "examples\\javascript\\tests\\test_js_example.py",
+        "source_line": 27,
+        "raw_match": "assert response.get_json()[\"result\"] == result"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "examples\\tutorial\\tests\\test_auth.py",
+        "source_line": 10,
+        "raw_match": "assert client.get(\"/auth/register\").status_code == 200"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "examples\\tutorial\\tests\\test_auth.py",
+        "source_line": 14,
+        "raw_match": "assert response.headers[\"Location\"] == \"/auth/login\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "examples\\tutorial\\tests\\test_auth.py",
+        "source_line": 18,
+        "raw_match": "assert ("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "examples\\tutorial\\tests\\test_auth.py",
+        "source_line": 36,
+        "raw_match": "assert message in response.data"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "examples\\tutorial\\tests\\test_auth.py",
+        "source_line": 41,
+        "raw_match": "assert client.get(\"/auth/login\").status_code == 200"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "examples\\tutorial\\tests\\test_auth.py",
+        "source_line": 45,
+        "raw_match": "assert response.headers[\"Location\"] == \"/\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "examples\\tutorial\\tests\\test_auth.py",
+        "source_line": 51,
+        "raw_match": "assert session[\"user_id\"] == 1"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "examples\\tutorial\\tests\\test_auth.py",
+        "source_line": 52,
+        "raw_match": "assert g.user[\"username\"] == \"test\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "examples\\tutorial\\tests\\test_auth.py",
+        "source_line": 61,
+        "raw_match": "assert message in response.data"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "examples\\tutorial\\tests\\test_auth.py",
+        "source_line": 69,
+        "raw_match": "assert \"user_id\" not in session"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "examples\\tutorial\\tests\\test_blog.py",
+        "source_line": 8,
+        "raw_match": "assert b\"Log In\" in response.data"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "examples\\tutorial\\tests\\test_blog.py",
+        "source_line": 9,
+        "raw_match": "assert b\"Register\" in response.data"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "examples\\tutorial\\tests\\test_blog.py",
+        "source_line": 13,
+        "raw_match": "assert b\"test title\" in response.data"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "examples\\tutorial\\tests\\test_blog.py",
+        "source_line": 14,
+        "raw_match": "assert b\"by test on 2018-01-01\" in response.data"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "examples\\tutorial\\tests\\test_blog.py",
+        "source_line": 15,
+        "raw_match": "assert b\"test\\nbody\" in response.data"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "examples\\tutorial\\tests\\test_blog.py",
+        "source_line": 16,
+        "raw_match": "assert b'href=\"/1/update\"' in response.data"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "examples\\tutorial\\tests\\test_blog.py",
+        "source_line": 22,
+        "raw_match": "assert response.headers[\"Location\"] == \"/auth/login\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "examples\\tutorial\\tests\\test_blog.py",
+        "source_line": 34,
+        "raw_match": "assert client.post(\"/1/update\").status_code == 403"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "examples\\tutorial\\tests\\test_blog.py",
+        "source_line": 35,
+        "raw_match": "assert client.post(\"/1/delete\").status_code == 403"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "examples\\tutorial\\tests\\test_blog.py",
+        "source_line": 37,
+        "raw_match": "assert b'href=\"/1/update\"' not in client.get(\"/\").data"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "examples\\tutorial\\tests\\test_db.py",
+        "source_line": 11,
+        "raw_match": "assert db is get_db()"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "examples\\tutorial\\tests\\test_db.py",
+        "source_line": 16,
+        "raw_match": "assert \"closed\" in str(e.value)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "examples\\tutorial\\tests\\test_db.py",
+        "source_line": 28,
+        "raw_match": "assert \"Initialized\" in result.output"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "examples\\tutorial\\tests\\test_db.py",
+        "source_line": 29,
+        "raw_match": "assert Recorder.called"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "examples\\tutorial\\tests\\test_factory.py",
+        "source_line": 6,
+        "raw_match": "assert not create_app().testing"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "examples\\tutorial\\tests\\test_factory.py",
+        "source_line": 7,
+        "raw_match": "assert create_app({\"TESTING\": True}).testing"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "examples\\tutorial\\tests\\test_factory.py",
+        "source_line": 12,
+        "raw_match": "assert response.data == b\"Hello, World!\""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "src\\flask\\app.py",
+        "source_line": 352,
+        "raw_match": "assert bool(static_host) == host_matching, ("
+      },
+      {
+        "assumption_type": "Validation boundary",
+        "description": "Possible assumption: Validation boundary",
+        "confidence": "LOW",
+        "source_file": "src\\flask\\app.py",
+        "source_line": 438,
+        "raw_match": "raise ValueError("
+      },
+      {
+        "assumption_type": "Network hardcoded",
+        "description": "Possible assumption: Network hardcoded",
+        "confidence": "LOW",
+        "source_file": "src\\flask\\app.py",
+        "source_line": 730,
+        "raw_match": "host = \""
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "src\\flask\\app.py",
+        "source_line": 776,
+        "raw_match": "assert request.args['vodka'] == '42'"
+      },
+      {
+        "assumption_type": "Validation boundary",
+        "description": "Possible assumption: Validation boundary",
+        "confidence": "LOW",
+        "source_file": "src\\flask\\app.py",
+        "source_line": 1200,
+        "raw_match": "raise ValueError("
+      },
+      {
+        "assumption_type": "Validation boundary",
+        "description": "Possible assumption: Validation boundary",
+        "confidence": "LOW",
+        "source_file": "src\\flask\\blueprints.py",
+        "source_line": 121,
+        "raw_match": "raise ValueError("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "src\\flask\\debughelpers.py",
+        "source_line": 59,
+        "raw_match": "assert isinstance(exc, RequestRedirect)"
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "src\\flask\\testing.py",
+        "source_line": 59,
+        "raw_match": "assert not (base_url or subdomain or url_scheme) or ("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "src\\flask\\views.py",
+        "source_line": 190,
+        "raw_match": "assert meth is not None, f\"Unimplemented method {request.method!r}\""
+      },
+      {
+        "assumption_type": "Validation boundary",
+        "description": "Possible assumption: Validation boundary",
+        "confidence": "LOW",
+        "source_file": "src\\flask\\sansio\\app.py",
+        "source_line": 303,
+        "raw_match": "raise ValueError("
+      },
+      {
+        "assumption_type": "Validation boundary",
+        "description": "Possible assumption: Validation boundary",
+        "confidence": "LOW",
+        "source_file": "src\\flask\\sansio\\blueprints.py",
+        "source_line": 196,
+        "raw_match": "raise ValueError("
+      },
+      {
+        "assumption_type": "Validation boundary",
+        "description": "Possible assumption: Validation boundary",
+        "confidence": "LOW",
+        "source_file": "src\\flask\\sansio\\blueprints.py",
+        "source_line": 199,
+        "raw_match": "raise ValueError("
+      },
+      {
+        "assumption_type": "Validation boundary",
+        "description": "Possible assumption: Validation boundary",
+        "confidence": "LOW",
+        "source_file": "src\\flask\\sansio\\blueprints.py",
+        "source_line": 270,
+        "raw_match": "raise ValueError("
+      },
+      {
+        "assumption_type": "Validation boundary",
+        "description": "Possible assumption: Validation boundary",
+        "confidence": "LOW",
+        "source_file": "src\\flask\\sansio\\blueprints.py",
+        "source_line": 310,
+        "raw_match": "raise ValueError("
+      },
+      {
+        "assumption_type": "Validation boundary",
+        "description": "Possible assumption: Validation boundary",
+        "confidence": "LOW",
+        "source_file": "src\\flask\\sansio\\blueprints.py",
+        "source_line": 428,
+        "raw_match": "raise ValueError("
+      },
+      {
+        "assumption_type": "Validation boundary",
+        "description": "Possible assumption: Validation boundary",
+        "confidence": "LOW",
+        "source_file": "src\\flask\\sansio\\blueprints.py",
+        "source_line": 431,
+        "raw_match": "raise ValueError("
+      },
+      {
+        "assumption_type": "Validation boundary",
+        "description": "Possible assumption: Validation boundary",
+        "confidence": "LOW",
+        "source_file": "src\\flask\\sansio\\scaffold.py",
+        "source_line": 673,
+        "raw_match": "raise ValueError("
+      },
+      {
+        "assumption_type": "Validation boundary",
+        "description": "Possible assumption: Validation boundary",
+        "confidence": "LOW",
+        "source_file": "src\\flask\\sansio\\scaffold.py",
+        "source_line": 689,
+        "raw_match": "raise ValueError("
+      },
+      {
+        "assumption_type": "Assert assumption",
+        "description": "Possible assumption: Assert assumption",
+        "confidence": "MEDIUM",
+        "source_file": "src\\flask\\sansio\\scaffold.py",
+        "source_line": 705,
+        "raw_match": "assert view_func is not None, \"expected view func if endpoint is not provided.\""
+      },
+      {
+        "assumption_type": "Validation boundary",
+        "description": "Possible assumption: Validation boundary",
+        "confidence": "LOW",
+        "source_file": "src\\flask\\sansio\\scaffold.py",
+        "source_line": 717,
+        "raw_match": "raise ValueError("
+      }
+    ],
+    "high_risk": [],
+    "total_found": 233,
+    "files_scanned": 83,
+    "overall_risk": "MEDIUM",
+    "notes": [
+      "All findings are POSSIBLE_ASSUMPTION \u2014 code evidence only. Confirm with domain experts before treating as verified business rules."
+    ]
+  },
+  "constraints": {
+    "constraints": [
+      {
+        "constraint_type": "Access constraint",
+        "category": "BUSINESS",
+        "confidence": "HIGH",
+        "source_file": "tests\\test_basic.py",
+        "source_line": 1011,
+        "raw_match": "raise Forbidden("
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_basic.py",
+        "source_line": 1270,
+        "raw_match": "must have"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_blueprints.py",
+        "source_line": 85,
+        "raw_match": "shall not"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_blueprints.py",
+        "source_line": 100,
+        "raw_match": "shall not"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_blueprints.py",
+        "source_line": 101,
+        "raw_match": "shall not"
+      },
+      {
+        "constraint_type": "Maximum limit",
+        "category": "TECHNICAL",
+        "confidence": "HIGH",
+        "source_file": "tests\\test_blueprints.py",
+        "source_line": 197,
+        "raw_match": "max_age = 3600"
+      },
+      {
+        "constraint_type": "Maximum limit",
+        "category": "TECHNICAL",
+        "confidence": "HIGH",
+        "source_file": "tests\\test_blueprints.py",
+        "source_line": 199,
+        "raw_match": "max_age = 7200"
+      },
+      {
+        "constraint_type": "Null-safety constraint",
+        "category": "SAFETY",
+        "confidence": "LOW",
+        "source_file": "tests\\test_converters.py",
+        "source_line": 32,
+        "raw_match": "assert request is not None"
+      },
+      {
+        "constraint_type": "Null-safety constraint",
+        "category": "SAFETY",
+        "confidence": "LOW",
+        "source_file": "tests\\test_converters.py",
+        "source_line": 33,
+        "raw_match": "assert session is not None"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "tests\\test_instance_config.py",
+        "source_line": 9,
+        "raw_match": "must be"
+      },
+      {
+        "constraint_type": "Maximum limit",
+        "category": "TECHNICAL",
+        "confidence": "HIGH",
+        "source_file": "tests\\test_reqctx.py",
+        "source_line": 150,
+        "raw_match": "max_workers=2"
+      },
+      {
+        "constraint_type": "Safety mechanism",
+        "category": "SAFETY",
+        "confidence": "HIGH",
+        "source_file": "tests\\test_reqctx.py",
+        "source_line": 151,
+        "raw_match": "shutdown"
+      },
+      {
+        "constraint_type": "Null-safety constraint",
+        "category": "SAFETY",
+        "confidence": "LOW",
+        "source_file": "tests\\test_reqctx.py",
+        "source_line": 173,
+        "raw_match": "assert result is not None"
+      },
+      {
+        "constraint_type": "Maximum limit",
+        "category": "TECHNICAL",
+        "confidence": "HIGH",
+        "source_file": "tests\\test_request.py",
+        "source_line": 43,
+        "raw_match": "max_content_length = 90"
+      },
+      {
+        "constraint_type": "Maximum limit",
+        "category": "TECHNICAL",
+        "confidence": "HIGH",
+        "source_file": "tests\\test_request.py",
+        "source_line": 44,
+        "raw_match": "max_form_memory_size = 30"
+      },
+      {
+        "constraint_type": "Maximum limit",
+        "category": "TECHNICAL",
+        "confidence": "HIGH",
+        "source_file": "tests\\test_request.py",
+        "source_line": 45,
+        "raw_match": "max_form_parts = 4"
+      },
+      {
+        "constraint_type": "Null-safety constraint",
+        "category": "SAFETY",
+        "confidence": "LOW",
+        "source_file": "tests\\test_testing.py",
+        "source_line": 187,
+        "raw_match": "assert req is not None"
+      },
+      {
+        "constraint_type": "Access constraint",
+        "category": "BUSINESS",
+        "confidence": "HIGH",
+        "source_file": "tests\\test_user_error_handler.py",
+        "source_line": 119,
+        "raw_match": "raise Forbidden("
+      },
+      {
+        "constraint_type": "Access constraint",
+        "category": "BUSINESS",
+        "confidence": "HIGH",
+        "source_file": "tests\\test_user_error_handler.py",
+        "source_line": 183,
+        "raw_match": "raise Forbidden("
+      },
+      {
+        "constraint_type": "Access constraint",
+        "category": "BUSINESS",
+        "confidence": "HIGH",
+        "source_file": "tests\\test_user_error_handler.py",
+        "source_line": 200,
+        "raw_match": "raise Forbidden("
+      },
+      {
+        "constraint_type": "Encryption requirement",
+        "category": "COMPLIANCE",
+        "confidence": "MEDIUM",
+        "source_file": "examples\\tutorial\\flaskr\\auth.py",
+        "source_line": 68,
+        "raw_match": "hash("
+      },
+      {
+        "constraint_type": "Encryption requirement",
+        "category": "COMPLIANCE",
+        "confidence": "MEDIUM",
+        "source_file": "examples\\tutorial\\flaskr\\auth.py",
+        "source_line": 98,
+        "raw_match": "hash("
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "src\\flask\\app.py",
+        "source_line": 183,
+        "raw_match": "Required when"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "src\\flask\\app.py",
+        "source_line": 405,
+        "raw_match": "must be"
+      },
+      {
+        "constraint_type": "Regulatory reference",
+        "category": "COMPLIANCE",
+        "confidence": "HIGH",
+        "source_file": "src\\flask\\app.py",
+        "source_line": 575,
+        "raw_match": "vat"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "src\\flask\\app.py",
+        "source_line": 760,
+        "raw_match": "must set"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "src\\flask\\app.py",
+        "source_line": 1200,
+        "raw_match": "must be"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "src\\flask\\app.py",
+        "source_line": 1229,
+        "raw_match": "must return"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "src\\flask\\app.py",
+        "source_line": 1301,
+        "raw_match": "must have"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "src\\flask\\app.py",
+        "source_line": 1338,
+        "raw_match": "must be"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "src\\flask\\blueprints.py",
+        "source_line": 95,
+        "raw_match": "must be"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "src\\flask\\cli.py",
+        "source_line": 143,
+        "raw_match": "must be"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "src\\flask\\cli.py",
+        "source_line": 386,
+        "raw_match": "required in"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "src\\flask\\cli.py",
+        "source_line": 458,
+        "raw_match": "required if"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "src\\flask\\cli.py",
+        "source_line": 503,
+        "raw_match": "must be"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "src\\flask\\cli.py",
+        "source_line": 523,
+        "raw_match": "must be"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "src\\flask\\cli.py",
+        "source_line": 556,
+        "raw_match": "required for"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "src\\flask\\cli.py",
+        "source_line": 829,
+        "raw_match": "must be"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "src\\flask\\cli.py",
+        "source_line": 856,
+        "raw_match": "must also"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "src\\flask\\ctx.py",
+        "source_line": 123,
+        "raw_match": "must be"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "src\\flask\\ctx.py",
+        "source_line": 453,
+        "raw_match": "must currently"
+      },
+      {
+        "constraint_type": "Regulatory reference",
+        "category": "COMPLIANCE",
+        "confidence": "HIGH",
+        "source_file": "src\\flask\\debughelpers.py",
+        "source_line": 86,
+        "raw_match": "vat"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "src\\flask\\helpers.py",
+        "source_line": 289,
+        "raw_match": "must be"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "src\\flask\\helpers.py",
+        "source_line": 566,
+        "raw_match": "must be"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "src\\flask\\helpers.py",
+        "source_line": 567,
+        "raw_match": "must not"
+      },
+      {
+        "constraint_type": "Regulatory reference",
+        "category": "COMPLIANCE",
+        "confidence": "HIGH",
+        "source_file": "src\\flask\\helpers.py",
+        "source_line": 594,
+        "raw_match": "vat"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "src\\flask\\sessions.py",
+        "source_line": 129,
+        "raw_match": "must be"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "src\\flask\\sessions.py",
+        "source_line": 253,
+        "raw_match": "must return"
+      },
+      {
+        "constraint_type": "Regulatory reference",
+        "category": "COMPLIANCE",
+        "confidence": "HIGH",
+        "source_file": "src\\flask\\sessions.py",
+        "source_line": 296,
+        "raw_match": "vat"
+      },
+      {
+        "constraint_type": "Regulatory reference",
+        "category": "COMPLIANCE",
+        "confidence": "HIGH",
+        "source_file": "src\\flask\\sessions.py",
+        "source_line": 318,
+        "raw_match": "vat"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "src\\flask\\views.py",
+        "source_line": 79,
+        "raw_match": "must override"
+      },
+      {
+        "constraint_type": "Null-safety constraint",
+        "category": "SAFETY",
+        "confidence": "LOW",
+        "source_file": "src\\flask\\views.py",
+        "source_line": 190,
+        "raw_match": "assert meth is not None"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "src\\flask\\json\\provider.py",
+        "source_line": 153,
+        "raw_match": "must all"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "src\\flask\\json\\__init__.py",
+        "source_line": 95,
+        "raw_match": "must be"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "src\\flask\\json\\__init__.py",
+        "source_line": 129,
+        "raw_match": "must be"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "src\\flask\\sansio\\app.py",
+        "source_line": 133,
+        "raw_match": "Required when"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "src\\flask\\sansio\\app.py",
+        "source_line": 304,
+        "raw_match": "must be"
+      },
+      {
+        "constraint_type": "Uniqueness constraint",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "src\\flask\\sansio\\app.py",
+        "source_line": 457,
+        "raw_match": "Only one format"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "src\\flask\\sansio\\app.py",
+        "source_line": 625,
+        "raw_match": "must be"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "src\\flask\\sansio\\app.py",
+        "source_line": 846,
+        "raw_match": "must avoid"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "src\\flask\\sansio\\app.py",
+        "source_line": 847,
+        "raw_match": "must surround"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "src\\flask\\sansio\\scaffold.py",
+        "source_line": 405,
+        "raw_match": "must be"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "src\\flask\\sansio\\scaffold.py",
+        "source_line": 490,
+        "raw_match": "must return"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "src\\flask\\sansio\\scaffold.py",
+        "source_line": 496,
+        "raw_match": "must execute"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "src\\flask\\sansio\\scaffold.py",
+        "source_line": 527,
+        "raw_match": "must avoid"
+      },
+      {
+        "constraint_type": "Mandatory condition",
+        "category": "BUSINESS",
+        "confidence": "MEDIUM",
+        "source_file": "src\\flask\\sansio\\scaffold.py",
+        "source_line": 528,
+        "raw_match": "must surround"
+      },
+      {
+        "constraint_type": "Null-safety constraint",
+        "category": "SAFETY",
+        "confidence": "LOW",
+        "source_file": "src\\flask\\sansio\\scaffold.py",
+        "source_line": 705,
+        "raw_match": "assert view_func is not None"
+      }
+    ],
+    "by_category": {
+      "BUSINESS": [
+        {
+          "constraint_type": "Access constraint",
+          "category": "BUSINESS",
+          "confidence": "HIGH",
+          "source_file": "tests\\test_basic.py",
+          "source_line": 1011,
+          "raw_match": "raise Forbidden("
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "tests\\test_basic.py",
+          "source_line": 1270,
+          "raw_match": "must have"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "tests\\test_blueprints.py",
+          "source_line": 85,
+          "raw_match": "shall not"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "tests\\test_blueprints.py",
+          "source_line": 100,
+          "raw_match": "shall not"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "tests\\test_blueprints.py",
+          "source_line": 101,
+          "raw_match": "shall not"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "tests\\test_instance_config.py",
+          "source_line": 9,
+          "raw_match": "must be"
+        },
+        {
+          "constraint_type": "Access constraint",
+          "category": "BUSINESS",
+          "confidence": "HIGH",
+          "source_file": "tests\\test_user_error_handler.py",
+          "source_line": 119,
+          "raw_match": "raise Forbidden("
+        },
+        {
+          "constraint_type": "Access constraint",
+          "category": "BUSINESS",
+          "confidence": "HIGH",
+          "source_file": "tests\\test_user_error_handler.py",
+          "source_line": 183,
+          "raw_match": "raise Forbidden("
+        },
+        {
+          "constraint_type": "Access constraint",
+          "category": "BUSINESS",
+          "confidence": "HIGH",
+          "source_file": "tests\\test_user_error_handler.py",
+          "source_line": 200,
+          "raw_match": "raise Forbidden("
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "src\\flask\\app.py",
+          "source_line": 183,
+          "raw_match": "Required when"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "src\\flask\\app.py",
+          "source_line": 405,
+          "raw_match": "must be"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "src\\flask\\app.py",
+          "source_line": 760,
+          "raw_match": "must set"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "src\\flask\\app.py",
+          "source_line": 1200,
+          "raw_match": "must be"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "src\\flask\\app.py",
+          "source_line": 1229,
+          "raw_match": "must return"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "src\\flask\\app.py",
+          "source_line": 1301,
+          "raw_match": "must have"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "src\\flask\\app.py",
+          "source_line": 1338,
+          "raw_match": "must be"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "src\\flask\\blueprints.py",
+          "source_line": 95,
+          "raw_match": "must be"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "src\\flask\\cli.py",
+          "source_line": 143,
+          "raw_match": "must be"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "src\\flask\\cli.py",
+          "source_line": 386,
+          "raw_match": "required in"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "src\\flask\\cli.py",
+          "source_line": 458,
+          "raw_match": "required if"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "src\\flask\\cli.py",
+          "source_line": 503,
+          "raw_match": "must be"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "src\\flask\\cli.py",
+          "source_line": 523,
+          "raw_match": "must be"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "src\\flask\\cli.py",
+          "source_line": 556,
+          "raw_match": "required for"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "src\\flask\\cli.py",
+          "source_line": 829,
+          "raw_match": "must be"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "src\\flask\\cli.py",
+          "source_line": 856,
+          "raw_match": "must also"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "src\\flask\\ctx.py",
+          "source_line": 123,
+          "raw_match": "must be"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "src\\flask\\ctx.py",
+          "source_line": 453,
+          "raw_match": "must currently"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "src\\flask\\helpers.py",
+          "source_line": 289,
+          "raw_match": "must be"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "src\\flask\\helpers.py",
+          "source_line": 566,
+          "raw_match": "must be"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "src\\flask\\helpers.py",
+          "source_line": 567,
+          "raw_match": "must not"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "src\\flask\\sessions.py",
+          "source_line": 129,
+          "raw_match": "must be"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "src\\flask\\sessions.py",
+          "source_line": 253,
+          "raw_match": "must return"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "src\\flask\\views.py",
+          "source_line": 79,
+          "raw_match": "must override"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "src\\flask\\json\\provider.py",
+          "source_line": 153,
+          "raw_match": "must all"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "src\\flask\\json\\__init__.py",
+          "source_line": 95,
+          "raw_match": "must be"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "src\\flask\\json\\__init__.py",
+          "source_line": 129,
+          "raw_match": "must be"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "src\\flask\\sansio\\app.py",
+          "source_line": 133,
+          "raw_match": "Required when"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "src\\flask\\sansio\\app.py",
+          "source_line": 304,
+          "raw_match": "must be"
+        },
+        {
+          "constraint_type": "Uniqueness constraint",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "src\\flask\\sansio\\app.py",
+          "source_line": 457,
+          "raw_match": "Only one format"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "src\\flask\\sansio\\app.py",
+          "source_line": 625,
+          "raw_match": "must be"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "src\\flask\\sansio\\app.py",
+          "source_line": 846,
+          "raw_match": "must avoid"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "src\\flask\\sansio\\app.py",
+          "source_line": 847,
+          "raw_match": "must surround"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "src\\flask\\sansio\\scaffold.py",
+          "source_line": 405,
+          "raw_match": "must be"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "src\\flask\\sansio\\scaffold.py",
+          "source_line": 490,
+          "raw_match": "must return"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "src\\flask\\sansio\\scaffold.py",
+          "source_line": 496,
+          "raw_match": "must execute"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "src\\flask\\sansio\\scaffold.py",
+          "source_line": 527,
+          "raw_match": "must avoid"
+        },
+        {
+          "constraint_type": "Mandatory condition",
+          "category": "BUSINESS",
+          "confidence": "MEDIUM",
+          "source_file": "src\\flask\\sansio\\scaffold.py",
+          "source_line": 528,
+          "raw_match": "must surround"
+        }
+      ],
+      "TECHNICAL": [
+        {
+          "constraint_type": "Maximum limit",
+          "category": "TECHNICAL",
+          "confidence": "HIGH",
+          "source_file": "tests\\test_blueprints.py",
+          "source_line": 197,
+          "raw_match": "max_age = 3600"
+        },
+        {
+          "constraint_type": "Maximum limit",
+          "category": "TECHNICAL",
+          "confidence": "HIGH",
+          "source_file": "tests\\test_blueprints.py",
+          "source_line": 199,
+          "raw_match": "max_age = 7200"
+        },
+        {
+          "constraint_type": "Maximum limit",
+          "category": "TECHNICAL",
+          "confidence": "HIGH",
+          "source_file": "tests\\test_reqctx.py",
+          "source_line": 150,
+          "raw_match": "max_workers=2"
+        },
+        {
+          "constraint_type": "Maximum limit",
+          "category": "TECHNICAL",
+          "confidence": "HIGH",
+          "source_file": "tests\\test_request.py",
+          "source_line": 43,
+          "raw_match": "max_content_length = 90"
+        },
+        {
+          "constraint_type": "Maximum limit",
+          "category": "TECHNICAL",
+          "confidence": "HIGH",
+          "source_file": "tests\\test_request.py",
+          "source_line": 44,
+          "raw_match": "max_form_memory_size = 30"
+        },
+        {
+          "constraint_type": "Maximum limit",
+          "category": "TECHNICAL",
+          "confidence": "HIGH",
+          "source_file": "tests\\test_request.py",
+          "source_line": 45,
+          "raw_match": "max_form_parts = 4"
+        }
+      ],
+      "COMPLIANCE": [
+        {
+          "constraint_type": "Encryption requirement",
+          "category": "COMPLIANCE",
+          "confidence": "MEDIUM",
+          "source_file": "examples\\tutorial\\flaskr\\auth.py",
+          "source_line": 68,
+          "raw_match": "hash("
+        },
+        {
+          "constraint_type": "Encryption requirement",
+          "category": "COMPLIANCE",
+          "confidence": "MEDIUM",
+          "source_file": "examples\\tutorial\\flaskr\\auth.py",
+          "source_line": 98,
+          "raw_match": "hash("
+        },
+        {
+          "constraint_type": "Regulatory reference",
+          "category": "COMPLIANCE",
+          "confidence": "HIGH",
+          "source_file": "src\\flask\\app.py",
+          "source_line": 575,
+          "raw_match": "vat"
+        },
+        {
+          "constraint_type": "Regulatory reference",
+          "category": "COMPLIANCE",
+          "confidence": "HIGH",
+          "source_file": "src\\flask\\debughelpers.py",
+          "source_line": 86,
+          "raw_match": "vat"
+        },
+        {
+          "constraint_type": "Regulatory reference",
+          "category": "COMPLIANCE",
+          "confidence": "HIGH",
+          "source_file": "src\\flask\\helpers.py",
+          "source_line": 594,
+          "raw_match": "vat"
+        },
+        {
+          "constraint_type": "Regulatory reference",
+          "category": "COMPLIANCE",
+          "confidence": "HIGH",
+          "source_file": "src\\flask\\sessions.py",
+          "source_line": 296,
+          "raw_match": "vat"
+        },
+        {
+          "constraint_type": "Regulatory reference",
+          "category": "COMPLIANCE",
+          "confidence": "HIGH",
+          "source_file": "src\\flask\\sessions.py",
+          "source_line": 318,
+          "raw_match": "vat"
+        }
+      ],
+      "SAFETY": [
+        {
+          "constraint_type": "Null-safety constraint",
+          "category": "SAFETY",
+          "confidence": "LOW",
+          "source_file": "tests\\test_converters.py",
+          "source_line": 32,
+          "raw_match": "assert request is not None"
+        },
+        {
+          "constraint_type": "Null-safety constraint",
+          "category": "SAFETY",
+          "confidence": "LOW",
+          "source_file": "tests\\test_converters.py",
+          "source_line": 33,
+          "raw_match": "assert session is not None"
+        },
+        {
+          "constraint_type": "Safety mechanism",
+          "category": "SAFETY",
+          "confidence": "HIGH",
+          "source_file": "tests\\test_reqctx.py",
+          "source_line": 151,
+          "raw_match": "shutdown"
+        },
+        {
+          "constraint_type": "Null-safety constraint",
+          "category": "SAFETY",
+          "confidence": "LOW",
+          "source_file": "tests\\test_reqctx.py",
+          "source_line": 173,
+          "raw_match": "assert result is not None"
+        },
+        {
+          "constraint_type": "Null-safety constraint",
+          "category": "SAFETY",
+          "confidence": "LOW",
+          "source_file": "tests\\test_testing.py",
+          "source_line": 187,
+          "raw_match": "assert req is not None"
+        },
+        {
+          "constraint_type": "Null-safety constraint",
+          "category": "SAFETY",
+          "confidence": "LOW",
+          "source_file": "src\\flask\\views.py",
+          "source_line": 190,
+          "raw_match": "assert meth is not None"
+        },
+        {
+          "constraint_type": "Null-safety constraint",
+          "category": "SAFETY",
+          "confidence": "LOW",
+          "source_file": "src\\flask\\sansio\\scaffold.py",
+          "source_line": 705,
+          "raw_match": "assert view_func is not None"
+        }
+      ]
+    },
+    "total_found": 67,
+    "files_scanned": 83,
+    "notes": [
+      "Constraints are INFERRED from code patterns. Verify with domain experts and policy documents."
+    ]
+  },
+  "decisions": {
+    "decisions": [
+      {
+        "decision_type": "IMPLICIT_NOTE",
+        "description": "# Note we do this without checking if static_folder exists.",
+        "evidence": "# Note we do this without checking if static_folder exists.",
+        "source_file": "src\\flask\\app.py",
+        "source_line": 348
+      }
+    ],
+    "adr_files": [],
+    "framework_decisions": [],
+    "total_found": 1,
+    "notes": [
+      "Decisions are INFERRED from structural evidence (ADR files, dependency choices, decision comments). Original decision rationale may require document review."
+    ]
+  },
+  "knowledge_loss": {
+    "risks": [
+      {
+        "risk_type": "UNDOCUMENTED_LOGIC",
+        "severity": "MEDIUM",
+        "source_file": "tests\\test_appctx.py",
+        "description": "35 functions with no docstrings. Business logic may be implicit knowledge only.",
+        "evidence": "function_count=35, docstrings=0"
+      },
+      {
+        "risk_type": "UNDOCUMENTED_LOGIC",
+        "severity": "MEDIUM",
+        "source_file": "tests\\test_async.py",
+        "description": "6 functions with no docstrings. Business logic may be implicit knowledge only.",
+        "evidence": "function_count=6, docstrings=0"
+      },
+      {
+        "risk_type": "UNDOCUMENTED_LOGIC",
+        "severity": "MEDIUM",
+        "source_file": "tests\\test_blueprints.py",
+        "description": "165 functions with no docstrings. Business logic may be implicit knowledge only.",
+        "evidence": "function_count=165, docstrings=0"
+      },
+      {
+        "risk_type": "UNDOCUMENTED_LOGIC",
+        "severity": "MEDIUM",
+        "source_file": "tests\\test_config.py",
+        "description": "18 functions with no docstrings. Business logic may be implicit knowledge only.",
+        "evidence": "function_count=18, docstrings=0"
+      },
+      {
+        "risk_type": "UNDOCUMENTED_LOGIC",
+        "severity": "MEDIUM",
+        "source_file": "tests\\test_converters.py",
+        "description": "7 functions with no docstrings. Business logic may be implicit knowledge only.",
+        "evidence": "function_count=7, docstrings=0"
+      },
+      {
+        "risk_type": "UNDOCUMENTED_LOGIC",
+        "severity": "MEDIUM",
+        "source_file": "tests\\test_instance_config.py",
+        "description": "8 functions with no docstrings. Business logic may be implicit knowledge only.",
+        "evidence": "function_count=8, docstrings=0"
+      },
+      {
+        "risk_type": "UNDOCUMENTED_LOGIC",
+        "severity": "MEDIUM",
+        "source_file": "tests\\test_json_tag.py",
+        "description": "9 functions with no docstrings. Business logic may be implicit knowledge only.",
+        "evidence": "function_count=9, docstrings=0"
+      },
+      {
+        "risk_type": "UNDOCUMENTED_LOGIC",
+        "severity": "MEDIUM",
+        "source_file": "tests\\test_logging.py",
+        "description": "9 functions with no docstrings. Business logic may be implicit knowledge only.",
+        "evidence": "function_count=9, docstrings=0"
+      },
+      {
+        "risk_type": "UNDOCUMENTED_LOGIC",
+        "severity": "LOW",
+        "source_file": "tests\\test_regression.py",
+        "description": "4 functions with no docstrings. Business logic may be implicit knowledge only.",
+        "evidence": "function_count=4, docstrings=0"
+      },
+      {
+        "risk_type": "UNDOCUMENTED_LOGIC",
+        "severity": "MEDIUM",
+        "source_file": "tests\\test_reqctx.py",
+        "description": "27 functions with no docstrings. Business logic may be implicit knowledge only.",
+        "evidence": "function_count=27, docstrings=0"
+      },
+      {
+        "risk_type": "UNDOCUMENTED_LOGIC",
+        "severity": "MEDIUM",
+        "source_file": "tests\\test_request.py",
+        "description": "6 functions with no docstrings. Business logic may be implicit knowledge only.",
+        "evidence": "function_count=6, docstrings=0"
+      },
+      {
+        "risk_type": "UNDOCUMENTED_LOGIC",
+        "severity": "MEDIUM",
+        "source_file": "tests\\test_signals.py",
+        "description": "25 functions with no docstrings. Business logic may be implicit knowledge only.",
+        "evidence": "function_count=25, docstrings=0"
+      },
+      {
+        "risk_type": "UNDOCUMENTED_LOGIC",
+        "severity": "LOW",
+        "source_file": "tests\\test_subclassing.py",
+        "description": "3 functions with no docstrings. Business logic may be implicit knowledge only.",
+        "evidence": "function_count=3, docstrings=0"
+      },
+      {
+        "risk_type": "UNDOCUMENTED_LOGIC",
+        "severity": "LOW",
+        "source_file": "examples\\celery\\src\\task_app\\tasks.py",
+        "description": "3 functions with no docstrings. Business logic may be implicit knowledge only.",
+        "evidence": "function_count=3, docstrings=0"
+      },
+      {
+        "risk_type": "UNDOCUMENTED_LOGIC",
+        "severity": "LOW",
+        "source_file": "examples\\celery\\src\\task_app\\views.py",
+        "description": "4 functions with no docstrings. Business logic may be implicit knowledge only.",
+        "evidence": "function_count=4, docstrings=0"
+      },
+      {
+        "risk_type": "UNDOCUMENTED_LOGIC",
+        "severity": "LOW",
+        "source_file": "examples\\celery\\src\\task_app\\__init__.py",
+        "description": "4 functions with no docstrings. Business logic may be implicit knowledge only.",
+        "evidence": "function_count=4, docstrings=0"
+      },
+      {
+        "risk_type": "UNDOCUMENTED_LOGIC",
+        "severity": "LOW",
+        "source_file": "examples\\javascript\\tests\\test_js_example.py",
+        "description": "3 functions with no docstrings. Business logic may be implicit knowledge only.",
+        "evidence": "function_count=3, docstrings=0"
+      },
+      {
+        "risk_type": "UNDOCUMENTED_LOGIC",
+        "severity": "MEDIUM",
+        "source_file": "examples\\tutorial\\tests\\test_auth.py",
+        "description": "5 functions with no docstrings. Business logic may be implicit knowledge only.",
+        "evidence": "function_count=5, docstrings=0"
+      },
+      {
+        "risk_type": "UNDOCUMENTED_LOGIC",
+        "severity": "MEDIUM",
+        "source_file": "examples\\tutorial\\tests\\test_blog.py",
+        "description": "8 functions with no docstrings. Business logic may be implicit knowledge only.",
+        "evidence": "function_count=8, docstrings=0"
+      },
+      {
+        "risk_type": "UNDOCUMENTED_LOGIC",
+        "severity": "LOW",
+        "source_file": "examples\\tutorial\\tests\\test_db.py",
+        "description": "3 functions with no docstrings. Business logic may be implicit knowledge only.",
+        "evidence": "function_count=3, docstrings=0"
+      },
+      {
+        "risk_type": "SINGLE_POINT_OF_FAILURE",
+        "severity": "HIGH",
+        "source_file": "src\\flask\\typing.py",
+        "description": "Imported by ~23 files but has no test file. Loss of this file has wide structural impact.",
+        "evidence": "import_count=23, test_file=None"
+      },
+      {
+        "risk_type": "UNDOCUMENTED_LOGIC",
+        "severity": "LOW",
+        "source_file": "tests\\type_check\\typing_app_decorators.py",
+        "description": "3 functions with no docstrings. Business logic may be implicit knowledge only.",
+        "evidence": "function_count=3, docstrings=0"
+      },
+      {
+        "risk_type": "UNDOCUMENTED_LOGIC",
+        "severity": "LOW",
+        "source_file": "tests\\type_check\\typing_error_handler.py",
+        "description": "4 functions with no docstrings. Business logic may be implicit knowledge only.",
+        "evidence": "function_count=4, docstrings=0"
+      },
+      {
+        "risk_type": "UNDOCUMENTED_LOGIC",
+        "severity": "MEDIUM",
+        "source_file": "tests\\type_check\\typing_route.py",
+        "description": "17 functions with no docstrings. Business logic may be implicit knowledge only.",
+        "evidence": "function_count=17, docstrings=0"
+      },
+      {
+        "risk_type": "UNDOCUMENTED_LOGIC",
+        "severity": "LOW",
+        "source_file": "tests\\test_apps\\cliapp\\factory.py",
+        "description": "3 functions with no docstrings. Business logic may be implicit knowledge only.",
+        "evidence": "function_count=3, docstrings=0"
+      },
+      {
+        "risk_type": "SINGLE_POINT_OF_FAILURE",
+        "severity": "HIGH",
+        "source_file": "tests\\test_apps\\cliapp\\inner1\\inner2\\flask.py",
+        "description": "Imported by ~139 files but has no test file. Loss of this file has wide structural impact.",
+        "evidence": "import_count=139, test_file=None"
+      }
+    ],
+    "high_severity": [
+      {
+        "risk_type": "SINGLE_POINT_OF_FAILURE",
+        "severity": "HIGH",
+        "source_file": "src\\flask\\typing.py",
+        "description": "Imported by ~23 files but has no test file. Loss of this file has wide structural impact.",
+        "evidence": "import_count=23, test_file=None"
+      },
+      {
+        "risk_type": "SINGLE_POINT_OF_FAILURE",
+        "severity": "HIGH",
+        "source_file": "tests\\test_apps\\cliapp\\inner1\\inner2\\flask.py",
+        "description": "Imported by ~139 files but has no test file. Loss of this file has wide structural impact.",
+        "evidence": "import_count=139, test_file=None"
+      }
+    ],
+    "spof_files": [
+      "src\\flask\\typing.py",
+      "tests\\test_apps\\cliapp\\inner1\\inner2\\flask.py"
+    ],
+    "undocumented": [
+      "tests\\test_appctx.py",
+      "tests\\test_async.py",
+      "tests\\test_blueprints.py",
+      "tests\\test_config.py",
+      "tests\\test_converters.py",
+      "tests\\test_instance_config.py",
+      "tests\\test_json_tag.py",
+      "tests\\test_logging.py",
+      "tests\\test_regression.py",
+      "tests\\test_reqctx.py",
+      "tests\\test_request.py",
+      "tests\\test_signals.py",
+      "tests\\test_subclassing.py",
+      "examples\\celery\\src\\task_app\\tasks.py",
+      "examples\\celery\\src\\task_app\\views.py",
+      "examples\\celery\\src\\task_app\\__init__.py",
+      "examples\\javascript\\tests\\test_js_example.py",
+      "examples\\tutorial\\tests\\test_auth.py",
+      "examples\\tutorial\\tests\\test_blog.py",
+      "examples\\tutorial\\tests\\test_db.py",
+      "tests\\type_check\\typing_app_decorators.py",
+      "tests\\type_check\\typing_error_handler.py",
+      "tests\\type_check\\typing_route.py",
+      "tests\\test_apps\\cliapp\\factory.py"
+    ],
+    "total_risks": 26,
+    "overall_severity": "MEDIUM",
+    "notes": [
+      "Knowledge risk is structural \u2014 based on import frequency and absence of tests/documentation. Business criticality requires domain expert confirmation."
+    ]
+  },
+  "traceability": {
+    "document_code_links": [],
+    "code_test_links": [
+      {
+        "source_file": "examples\\celery\\src\\task_app\\views.py",
+        "test_file": "tests\\test_views.py",
+        "link_type": "NAMING_CONVENTION"
+      },
+      {
+        "source_file": "examples\\javascript\\js_example\\views.py",
+        "test_file": "tests\\test_views.py",
+        "link_type": "NAMING_CONVENTION"
+      },
+      {
+        "source_file": "examples\\tutorial\\flaskr\\auth.py",
+        "test_file": "examples\\tutorial\\tests\\test_auth.py",
+        "link_type": "NAMING_CONVENTION"
+      },
+      {
+        "source_file": "examples\\tutorial\\flaskr\\blog.py",
+        "test_file": "examples\\tutorial\\tests\\test_blog.py",
+        "link_type": "NAMING_CONVENTION"
+      },
+      {
+        "source_file": "examples\\tutorial\\flaskr\\db.py",
+        "test_file": "examples\\tutorial\\tests\\test_db.py",
+        "link_type": "NAMING_CONVENTION"
+      },
+      {
+        "source_file": "src\\flask\\blueprints.py",
+        "test_file": "tests\\test_blueprints.py",
+        "link_type": "NAMING_CONVENTION"
+      },
+      {
+        "source_file": "src\\flask\\cli.py",
+        "test_file": "tests\\test_cli.py",
+        "link_type": "NAMING_CONVENTION"
+      },
+      {
+        "source_file": "src\\flask\\config.py",
+        "test_file": "tests\\test_config.py",
+        "link_type": "NAMING_CONVENTION"
+      },
+      {
+        "source_file": "src\\flask\\helpers.py",
+        "test_file": "tests\\test_helpers.py",
+        "link_type": "NAMING_CONVENTION"
+      },
+      {
+        "source_file": "src\\flask\\logging.py",
+        "test_file": "tests\\test_logging.py",
+        "link_type": "NAMING_CONVENTION"
+      },
+      {
+        "source_file": "src\\flask\\sansio\\blueprints.py",
+        "test_file": "tests\\test_blueprints.py",
+        "link_type": "NAMING_CONVENTION"
+      },
+      {
+        "source_file": "src\\flask\\signals.py",
+        "test_file": "tests\\test_signals.py",
+        "link_type": "NAMING_CONVENTION"
+      },
+      {
+        "source_file": "src\\flask\\templating.py",
+        "test_file": "tests\\test_templating.py",
+        "link_type": "NAMING_CONVENTION"
+      },
+      {
+        "source_file": "src\\flask\\testing.py",
+        "test_file": "tests\\test_testing.py",
+        "link_type": "NAMING_CONVENTION"
+      },
+      {
+        "source_file": "src\\flask\\views.py",
+        "test_file": "tests\\test_views.py",
+        "link_type": "NAMING_CONVENTION"
+      }
+    ],
+    "untraced_source": [
+      "docs\\conf.py",
+      "examples\\celery\\make_celery.py",
+      "examples\\celery\\src\\task_app\\__init__.py",
+      "examples\\celery\\src\\task_app\\tasks.py",
+      "examples\\javascript\\js_example\\__init__.py",
+      "examples\\tutorial\\flaskr\\__init__.py",
+      "src\\flask\\__init__.py",
+      "src\\flask\\__main__.py",
+      "src\\flask\\app.py",
+      "src\\flask\\ctx.py",
+      "src\\flask\\debughelpers.py",
+      "src\\flask\\globals.py",
+      "src\\flask\\json\\__init__.py",
+      "src\\flask\\json\\provider.py",
+      "src\\flask\\json\\tag.py",
+      "src\\flask\\sansio\\app.py",
+      "src\\flask\\sansio\\scaffold.py",
+      "src\\flask\\sessions.py",
+      "src\\flask\\typing.py",
+      "src\\flask\\wrappers.py"
+    ],
+    "total_doc_links": 0,
+    "total_test_links": 15,
+    "coverage_note": "15/35 source files have test counterparts by naming convention (42.9%)",
+    "notes": [
+      "SCOPE NOTE: Requirement->Code mapping is Module 9 (V3-106). This module traces document references and test structure only."
+    ]
+  },
+  "risk": {
+    "critical_components": [
+      {
+        "source_file": "src\\flask\\typing.py",
+        "risk_level": "MEDIUM",
+        "risk_reasons": [
+          "Imported by ~23 files",
+          "No test file found"
+        ],
+        "import_count": 23,
+        "function_count": 0,
+        "has_tests": false,
+        "risk_score": 5
+      },
+      {
+        "source_file": "tests\\test_apps\\cliapp\\inner1\\inner2\\flask.py",
+        "risk_level": "MEDIUM",
+        "risk_reasons": [
+          "Imported by ~139 files",
+          "No test file found"
+        ],
+        "import_count": 139,
+        "function_count": 0,
+        "has_tests": false,
+        "risk_score": 5
+      },
+      {
+        "source_file": "src\\flask\\app.py",
+        "risk_level": "MEDIUM",
+        "risk_reasons": [
+          "Large file: 41 functions",
+          "No test file found"
+        ],
+        "import_count": 4,
+        "function_count": 41,
+        "has_tests": false,
+        "risk_score": 4
+      },
+      {
+        "source_file": "src\\flask\\ctx.py",
+        "risk_level": "MEDIUM",
+        "risk_reasons": [
+          "Large file: 32 functions",
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 32,
+        "has_tests": false,
+        "risk_score": 4
+      },
+      {
+        "source_file": "src\\flask\\sessions.py",
+        "risk_level": "MEDIUM",
+        "risk_reasons": [
+          "Large file: 22 functions",
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 22,
+        "has_tests": false,
+        "risk_score": 4
+      },
+      {
+        "source_file": "src\\flask\\__main__.py",
+        "risk_level": "MEDIUM",
+        "risk_reasons": [
+          "Critical name signals: main",
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 0,
+        "has_tests": false,
+        "risk_score": 4
+      },
+      {
+        "source_file": "src\\flask\\json\\tag.py",
+        "risk_level": "MEDIUM",
+        "risk_reasons": [
+          "Large file: 37 functions",
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 37,
+        "has_tests": false,
+        "risk_score": 4
+      },
+      {
+        "source_file": "src\\flask\\sansio\\app.py",
+        "risk_level": "MEDIUM",
+        "risk_reasons": [
+          "Large file: 42 functions",
+          "No test file found"
+        ],
+        "import_count": 4,
+        "function_count": 42,
+        "has_tests": false,
+        "risk_score": 4
+      },
+      {
+        "source_file": "src\\flask\\sansio\\scaffold.py",
+        "risk_level": "MEDIUM",
+        "risk_reasons": [
+          "Large file: 43 functions",
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 43,
+        "has_tests": false,
+        "risk_score": 4
+      },
+      {
+        "source_file": "tests\\type_check\\typing_route.py",
+        "risk_level": "MEDIUM",
+        "risk_reasons": [
+          "Large file: 17 functions",
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 17,
+        "has_tests": false,
+        "risk_score": 4
+      },
+      {
+        "source_file": "tests\\conftest.py",
+        "risk_level": "MEDIUM",
+        "risk_reasons": [
+          "Medium file: 13 functions",
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 13,
+        "has_tests": false,
+        "risk_score": 3
+      },
+      {
+        "source_file": "src\\flask\\wrappers.py",
+        "risk_level": "MEDIUM",
+        "risk_reasons": [
+          "Medium file: 12 functions",
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 12,
+        "has_tests": false,
+        "risk_score": 3
+      },
+      {
+        "source_file": "src\\flask\\json\\provider.py",
+        "risk_level": "MEDIUM",
+        "risk_reasons": [
+          "Medium file: 11 functions",
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 11,
+        "has_tests": false,
+        "risk_score": 3
+      },
+      {
+        "source_file": "docs\\conf.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 2,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "examples\\celery\\make_celery.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 0,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "examples\\celery\\src\\task_app\\tasks.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 3,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "examples\\celery\\src\\task_app\\__init__.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 4,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "examples\\javascript\\js_example\\__init__.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 0,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "examples\\javascript\\tests\\conftest.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 2,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "examples\\tutorial\\flaskr\\auth.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "Critical name signals: auth"
+        ],
+        "import_count": 0,
+        "function_count": 6,
+        "has_tests": true,
+        "risk_score": 2
+      },
+      {
+        "source_file": "examples\\tutorial\\flaskr\\__init__.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 2,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "examples\\tutorial\\tests\\conftest.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 7,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "src\\flask\\cli.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "Large file: 36 functions"
+        ],
+        "import_count": 0,
+        "function_count": 36,
+        "has_tests": true,
+        "risk_score": 2
+      },
+      {
+        "source_file": "src\\flask\\debughelpers.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 7,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "src\\flask\\globals.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 2,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "src\\flask\\helpers.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "Large file: 30 functions"
+        ],
+        "import_count": 0,
+        "function_count": 30,
+        "has_tests": true,
+        "risk_score": 2
+      },
+      {
+        "source_file": "src\\flask\\templating.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "Large file: 15 functions"
+        ],
+        "import_count": 0,
+        "function_count": 15,
+        "has_tests": true,
+        "risk_score": 2
+      },
+      {
+        "source_file": "src\\flask\\__init__.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 0,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "src\\flask\\json\\__init__.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 5,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "src\\flask\\sansio\\blueprints.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "Large file: 40 functions"
+        ],
+        "import_count": 0,
+        "function_count": 40,
+        "has_tests": true,
+        "risk_score": 2
+      },
+      {
+        "source_file": "tests\\type_check\\typing_app_decorators.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 3,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "tests\\type_check\\typing_error_handler.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 4,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "tests\\test_apps\\blueprintapp\\__init__.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 0,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "tests\\test_apps\\cliapp\\app.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 4,
+        "function_count": 0,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "tests\\test_apps\\cliapp\\importerrorapp.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 0,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "tests\\test_apps\\cliapp\\multiapp.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 0,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "tests\\test_apps\\cliapp\\__init__.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 0,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "tests\\test_apps\\helloworld\\hello.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 1,
+        "function_count": 1,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "tests\\test_apps\\helloworld\\wsgi.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 0,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "tests\\test_apps\\subdomaintestmodule\\__init__.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 0,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "tests\\test_apps\\blueprintapp\\apps\\__init__.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 0,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "tests\\test_apps\\blueprintapp\\apps\\admin\\__init__.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 2,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "tests\\test_apps\\blueprintapp\\apps\\frontend\\__init__.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 2,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "tests\\test_apps\\cliapp\\inner1\\__init__.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 0,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "tests\\test_apps\\cliapp\\inner1\\inner2\\__init__.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "No test file found"
+        ],
+        "import_count": 0,
+        "function_count": 0,
+        "has_tests": false,
+        "risk_score": 2
+      },
+      {
+        "source_file": "src\\flask\\config.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "Medium file: 14 functions"
+        ],
+        "import_count": 0,
+        "function_count": 14,
+        "has_tests": true,
+        "risk_score": 1
+      },
+      {
+        "source_file": "src\\flask\\testing.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "Medium file: 12 functions"
+        ],
+        "import_count": 0,
+        "function_count": 12,
+        "has_tests": true,
+        "risk_score": 1
+      },
+      {
+        "source_file": "src\\flask\\views.py",
+        "risk_level": "LOW",
+        "risk_reasons": [
+          "Medium file: 9 functions"
+        ],
+        "import_count": 0,
+        "function_count": 9,
+        "has_tests": true,
+        "risk_score": 1
+      }
+    ],
+    "high_risk_count": 0,
+    "repository_risk_score": 7,
+    "top_risk_files": [
+      "src\\flask\\typing.py",
+      "tests\\test_apps\\cliapp\\inner1\\inner2\\flask.py",
+      "src\\flask\\app.py",
+      "src\\flask\\ctx.py",
+      "src\\flask\\sessions.py"
+    ],
+    "notes": [
+      "SECONDARY_CALIBRATION_APPLIED: capped at 7 \u2014 zero HIGH risk components with score 10 is inconsistent.",
+      "SCOPE NOTE: This module identifies structurally high-risk components. Actual blast radius requires Module 5 (V3-017-021). Risk score is structural \u2014 business criticality requires domain context."
+    ]
+  }
+}

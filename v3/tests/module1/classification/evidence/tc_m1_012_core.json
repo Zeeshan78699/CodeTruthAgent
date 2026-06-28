@@ -1,0 +1,68 @@
+{
+  "repository_root": "C:\\repos\\v3\\dronekit-python",
+  "scan_timestamp": "2026-06-25T18:40:27.216912+00:00",
+  "total_files_scanned": 136,
+  "total_python_files": 47,
+  "total_model_files": 0,
+  "project_purpose": "dronekit-python \u2014 Drone Uav (DroneKit) \u2014 47 Python files",
+  "application_type": "DRONE_UAV",
+  "primary_framework": "DroneKit",
+  "secondary_frameworks": [],
+  "detected_languages": [
+    "CSS",
+    "HTML",
+    "Python",
+    "Shell",
+    "YAML"
+  ],
+  "detected_file_types": [
+    "Log File",
+    "Markdown",
+    "ReStructuredText",
+    "Text",
+    "Windows Batch Script"
+  ],
+  "detected_model_files": [],
+  "technology_stack": [
+    "Python",
+    "Travis CI",
+    "Vagrant"
+  ],
+  "build_systems": [
+    "Setuptools",
+    "Make"
+  ],
+  "entry_points": [],
+  "configuration_files": [
+    ".\\.travis.yml",
+    ".\\requirements.txt",
+    ".\\setup.py",
+    ".\\Vagrantfile",
+    "docs\\Makefile"
+  ],
+  "documentation_files": [
+    ".\\CHANGELOG.md",
+    ".\\CONTRIBUTING.md",
+    ".\\LICENSE",
+    ".\\README.md",
+    "dronekit\\test\\README.md",
+    "examples\\README.md"
+  ],
+  "test_directories": [
+    "dronekit\\test"
+  ],
+  "discovery_score": 1.0,
+  "classification_score": 1.0,
+  "confidence_score": 1.0,
+  "cognition_status": "COMPLETE",
+  "warnings": [
+    "4 file extension(s) not in language registry: .iss, .pip, .tlog, .yapf. These files were counted but language not identified. Add to LANGUAGE_EXTENSIONS in framework_signatures.py."
+  ],
+  "unknown_file_extensions": [
+    ".iss",
+    ".pip",
+    ".tlog",
+    ".yapf"
+  ],
+  "error_message": ""
+}

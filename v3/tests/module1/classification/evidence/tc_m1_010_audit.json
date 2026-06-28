@@ -1,0 +1,10 @@
+{
+  "test_id": "TC_M1_010",
+  "repository": "C:\\repos\\v3\\home-assistant-core",
+  "date": "2026-06-25T18:40:05.839525+00:00",
+  "result": "PASS",
+  "active_domains": 0,
+  "dominant_domain": "UNKNOWN",
+  "cognition_status": "FAILED",
+  "scope_boundary": true
+}

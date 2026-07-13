@@ -1,0 +1,106 @@
+{
+  "uat_spec_version": "module-uat-1.0.0",
+  "frozen_before_run": true,
+  "tests": [
+    {
+      "id": "SMOKE-001",
+      "objective": "Full platform runs M1 -> gate -> M2 -> M3 as one governed pass from the single canonical path, producing a structured report with zero fabrications.",
+      "requirement": "Phase 1 - Platform Integration (one-scan governed pipeline).",
+      "maturity": "Impl - Pending UAT",
+      "entrypoint": "run_codetruth.run_platform",
+      "checks": [
+        {
+          "name": "pipeline_completed",
+          "expected": "status == COMPLETE"
+        },
+        {
+          "name": "gate_not_blocking",
+          "expected": "gate in {APPROVED, REVIEW_REQUIRED}"
+        },
+        {
+          "name": "m1_produced_identity",
+          "expected": "module1 has non-empty application_type and framework"
+        },
+        {
+          "name": "m2_scanned_structure",
+          "expected": "module2.files_scanned > 0"
+        },
+        {
+          "name": "m3_zero_guesses",
+          "expected": "module3.truth_boundary.guesses == 0 (Python); honest note otherwise"
+        }
+      ]
+    },
+    {
+      "id": "M1-001",
+      "objective": "Module 1 alone understands the repository: emits a governance decision and a non-empty identity with bounded confidence.",
+      "requirement": "Phase 2 - Module 1 Repository Cognition.",
+      "maturity": "Validated",
+      "entrypoint": "run_m1.run_module1",
+      "checks": [
+        {
+          "name": "m1_status_complete",
+          "expected": "status == COMPLETE"
+        },
+        {
+          "name": "m1_gate_decided",
+          "expected": "gate in {APPROVED, REVIEW_REQUIRED, BLOCKED}"
+        },
+        {
+          "name": "m1_identity_present",
+          "expected": "non-empty application_type, framework, architecture"
+        },
+        {
+          "name": "m1_confidence_bounded",
+          "expected": "confidence is numeric in [0.0, 1.0]"
+        }
+      ]
+    },
+    {
+      "id": "M2-001",
+      "objective": "Module 2 alone builds a structural model: scans files and returns a governance gate and COMPLETE status (Python).",
+      "requirement": "Phase 3 - Module 2 Structural Intelligence.",
+      "maturity": "Validated",
+      "entrypoint": "run_m2.run_module2 (language=python)",
+      "checks": [
+        {
+          "name": "m2_status_complete",
+          "expected": "status == COMPLETE"
+        },
+        {
+          "name": "m2_gate_present",
+          "expected": "governance_gate is set (not UNKNOWN)"
+        },
+        {
+          "name": "m2_files_scanned",
+          "expected": "files_scanned > 0"
+        }
+      ]
+    },
+    {
+      "id": "M3-001",
+      "objective": "Module 3 alone reasons over structure: produces phase 3A/3B results with zero guesses and no fabricated confidence.",
+      "requirement": "Phase 4 - Module 3 Repository Reasoning.",
+      "maturity": "Validated",
+      "entrypoint": "v3.repository_reasoning.module3_pipeline.run_module3",
+      "checks": [
+        {
+          "name": "m3_phases_present",
+          "expected": "report has phase_3a and phase_3b"
+        },
+        {
+          "name": "m3_zero_guesses",
+          "expected": "truth_boundary.guesses == 0"
+        },
+        {
+          "name": "m3_no_fabricated_confidence",
+          "expected": "truth_boundary.numeric_confidence_scores == 0"
+        },
+        {
+          "name": "m3_3a_resolution_reported",
+          "expected": "phase_3a reports attr_calls_total over baseline"
+        }
+      ]
+    }
+  ]
+}

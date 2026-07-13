@@ -1,0 +1,14 @@
+{
+  "target": "flask.app.Flask.dispatch_request",
+  "resolved": true,
+  "direct_callers": [
+    "flask.app.Flask.full_dispatch_request"
+  ],
+  "direct_count_field": 1,
+  "affected_callers": [
+    "flask.app.Flask.__call__",
+    "flask.app.Flask.full_dispatch_request",
+    "flask.app.Flask.wsgi_app"
+  ],
+  "impact_count_field": 3
+}

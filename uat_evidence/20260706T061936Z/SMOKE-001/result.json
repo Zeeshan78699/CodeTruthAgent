@@ -1,0 +1,80 @@
+{
+  "repo": "C:\\repos\\v3\\flask",
+  "run_time": "2026-07-06T06:19:36.947063+00:00",
+  "status": "COMPLETE",
+  "gate": "APPROVED",
+  "module1": {
+    "application_type": "WEB_APPLICATION",
+    "framework": "Flask",
+    "gate": "APPROVED",
+    "architecture": "LIBRARY",
+    "confidence": 1.0
+  },
+  "module2": {
+    "language": "python",
+    "files_scanned": 83,
+    "functions": 1460,
+    "classes": 160,
+    "call_graph_edges": 686,
+    "unresolved_calls": 2732,
+    "gate": "APPROVED"
+  },
+  "module3": {
+    "phase_3a": {
+      "baseline_attr_calls": 2506,
+      "attr_calls_resolved": 18,
+      "attr_calls_ambiguous": 0,
+      "attr_calls_total": 18,
+      "pct_of_baseline": 0.72,
+      "reexport_symbols_grounded": 1,
+      "registry_uncertain_edges": 0
+    },
+    "phase_3b": {
+      "internal_edges_chainable": 302,
+      "terminal_edges": 395,
+      "callers_with_internal_edges": 187
+    },
+    "by_label": {
+      "RESOLVED": 18,
+      "INFERRED": 0,
+      "AMBIGUOUS": 0,
+      "UNCERTAIN": 0,
+      "UNRESOLVABLE": 0
+    },
+    "truth_boundary": {
+      "numeric_confidence_scores": 0,
+      "guesses": 0,
+      "note": "categorical labels only; bounded sets preserved; remaining attribute_calls retain documented reasons"
+    },
+    "local_receiver_counts": {
+      "local_typed_method_call": 0,
+      "local_inherited_method_call": 17,
+      "typed_recv_method_unverified": 0,
+      "ambiguous_receiver": 0,
+      "builtin_receiver": 1,
+      "super_call": 0,
+      "super_unresolved": 4,
+      "super_decline_external": 0,
+      "super_decline_inrepo_miss": 0,
+      "super_decline_nested_fid": 0,
+      "super_decline_no_bases": 4,
+      "super_decline_cyclic": 0,
+      "inrepo_miss_init_chain": 0,
+      "inrepo_miss_deep_mro": 0,
+      "inrepo_miss_name_collision": 0,
+      "inrepo_miss_other": 0
+    },
+    "imported_receiver_counts": {
+      "imported_class_method_call": 0,
+      "imported_inherited_method_call": 0,
+      "imported_target_external": 203,
+      "imported_unresolved": 591,
+      "not_imported_receiver": 1425
+    },
+    "edge_provenance": {
+      "module2_edges": 686,
+      "local_receiver_added": 11,
+      "total_edges": 697
+    }
+  }
+}

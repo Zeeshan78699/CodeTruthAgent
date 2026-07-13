@@ -1,0 +1,14 @@
+{
+  "repo_path": "C:\\repos\\v3\\flask",
+  "run_time": "2026-07-06T05:46:24.261670+00:00",
+  "application_type": "WEB_APPLICATION",
+  "framework": "Flask",
+  "confidence": 1.0,
+  "architecture": "LIBRARY",
+  "gate": "APPROVED",
+  "risk_score": 7,
+  "assumptions": 233,
+  "constraints": 67,
+  "module": "M1",
+  "status": "COMPLETE"
+}

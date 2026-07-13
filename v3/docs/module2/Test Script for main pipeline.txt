@@ -1,0 +1,41 @@
+Test Script for main pipeline:
+
+5 domain tests — run in order:
+
+Test 1 — Web / Django:
+powershellpython run_m1.py "C:\repos\v3\django"
+python run_m2.py "C:\repos\v3\django"
+python pipeline.py "C:\repos\v3\django"
+Expected: WEB_APPLICATION / Django / APPROVED
+
+Test 2 — ML / PyTorch (large 50K+ files):
+powershellpython run_m1.py "C:\repos\v3\pytorch"
+python run_m2.py "C:\repos\v3\pytorch"
+python pipeline.py "C:\repos\v3\pytorch"
+Expected: ML_PIPELINE / PyTorch / APPROVED ⚠️ takes ~8 mins
+
+Test 3 — Bioinformatics:
+powershellpython run_m1.py "C:\repos\v3\biopython"
+python run_m2.py "C:\repos\v3\biopython"
+python pipeline.py "C:\repos\v3\biopython"
+Expected: BIOINFORMATICS_SYSTEM / biopython / APPROVED
+
+Test 4 — Aerospace / Simulation:
+powershellpython run_m1.py "C:\repos\v3\OpenMDAO"
+python run_m2.py "C:\repos\v3\OpenMDAO"
+python pipeline.py "C:\repos\v3\OpenMDAO"
+Expected: SIMULATION_TOOL / OpenMDAO / APPROVED
+
+Test 5 — Oil & Gas / Well Logging:
+powershellpython run_m1.py "C:\repos\v3\lasio"
+python run_m2.py "C:\repos\v3\lasio"
+python pipeline.py "C:\repos\v3\lasio"
+Expected: WELL_LOGGING / lasio / APPROVED
+
+Run tip — skip PyTorch if time is short:
+powershell# Quick 4-test run (skip pytorch)
+python pipeline.py "C:\repos\v3\django"
+python pipeline.py "C:\repos\v3\biopython"
+python pipeline.py "C:\repos\v3\OpenMDAO"
+python pipeline.py "C:\repos\v3\lasio"
+Share outputs when done — looking for consistent APPROVED and correct domain detection across all 5 domains.

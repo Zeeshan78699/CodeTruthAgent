@@ -1,0 +1,47 @@
+{
+  "target": "flask.app.Flask.send_static_file",
+  "target_split": [
+    "flask.app",
+    "Flask",
+    "send_static_file"
+  ],
+  "direct_callers": [],
+  "direct_count": 0,
+  "affected_callers": [],
+  "affected_count": 0,
+  "affected_files": [],
+  "affected_classes": [],
+  "affected_modules": [],
+  "call_chains": [],
+  "max_depth": 0,
+  "who_boundary": "internal callers only; external callers not visible",
+  "impact_boundary": "in-repo call-reachability only; NOT semantic breakage; external/dynamic callers not included",
+  "outgoing_calls": [
+    [
+      "flask.app.Flask.get_send_file_max_age",
+      "internal",
+      409,
+      "self_method_call"
+    ],
+    [
+      "<external>.src.flask.helpers.send_from_directory",
+      "external",
+      410,
+      "external_constructor_call"
+    ]
+  ],
+  "public_api": true,
+  "core_framework": false,
+  "regression_risk": "LOW",
+  "risk_inputs": {
+    "public_api": true,
+    "max_depth": 0,
+    "affected_count": 0,
+    "conditions_met": 1
+  },
+  "scope": {
+    "functions_in_index": 421,
+    "graph_edges": 697,
+    "guesses": 0
+  }
+}

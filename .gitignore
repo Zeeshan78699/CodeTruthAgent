@@ -44,3 +44,25 @@ v3/outputs/unresolved_pipeline/
 # Large graph output files
 v3/outputs/module2_graphs/*.json
 v3/outputs/module2_graphs/*.csv
+
+_scratch/
+_clones/
+hf_download/
+**/_scratch/
+**/_clones/
+
+/*_result.json
+/codetruth_report.json
+/flask_report.json
+/module3_report.json
+/change_impact.md
+/impact.md
+/impact.txt
+/flask_assessment.md
+/truth_boundary_demo.md
+/evaluation_summary.md
+/shapes.txt
+/Test_Status_check.txt
+/run_m3.py
+/probe_language_composition.py
+/inheritance_baseline.json

@@ -1,0 +1,17 @@
+{
+  "target": "django.db.models.query.QuerySet.filter",
+  "resolved": true,
+  "direct_callers": [
+    "django.db.models.query.QuerySet.contains",
+    "django.db.models.query.QuerySet.get",
+    "tests.custom_managers.models.CustomQuerySet.filter"
+  ],
+  "direct_count_field": 3,
+  "affected_callers": [
+    "django.db.models.query.QuerySet.contains",
+    "django.db.models.query.QuerySet.get",
+    "django.db.models.query.QuerySet.get_or_create",
+    "tests.custom_managers.models.CustomQuerySet.filter"
+  ],
+  "impact_count_field": 4
+}

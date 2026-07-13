@@ -1,0 +1,443 @@
+{
+  "repo_root": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go",
+  "language": "go",
+  "module_name": "github.com/codetruth/example",
+  "framework": "net_http",
+  "files_scanned": 3,
+  "parse_errors": 0,
+  "packages": {
+    "models": {
+      "files": [
+        "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\models\\user.go"
+      ],
+      "structs": [
+        "User",
+        "Order",
+        "OrderItem"
+      ],
+      "interfaces": [],
+      "functions": [
+        "NewUser"
+      ]
+    },
+    "repository": {
+      "files": [
+        "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\repository\\user_repo.go"
+      ],
+      "structs": [
+        "PostgresUserRepo"
+      ],
+      "interfaces": [
+        "UserRepository",
+        "OrderRepository"
+      ],
+      "functions": [
+        "NewPostgresUserRepo"
+      ]
+    },
+    "service": {
+      "files": [
+        "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\service\\user_service.go"
+      ],
+      "structs": [
+        "UserService"
+      ],
+      "interfaces": [],
+      "functions": [
+        "NewUserService",
+        "HealthCheck"
+      ]
+    }
+  },
+  "structs": {
+    "models.User": {
+      "simple_name": "User",
+      "package": "models",
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\models\\user.go",
+      "type": "STRUCT",
+      "methods": [
+        "Validate",
+        "GetDisplayName"
+      ]
+    },
+    "models.Order": {
+      "simple_name": "Order",
+      "package": "models",
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\models\\user.go",
+      "type": "STRUCT",
+      "methods": [
+        "AddItem"
+      ]
+    },
+    "models.OrderItem": {
+      "simple_name": "OrderItem",
+      "package": "models",
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\models\\user.go",
+      "type": "STRUCT",
+      "methods": []
+    },
+    "repository.PostgresUserRepo": {
+      "simple_name": "PostgresUserRepo",
+      "package": "repository",
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\repository\\user_repo.go",
+      "type": "STRUCT",
+      "methods": [
+        "GetByID",
+        "GetAll",
+        "Create",
+        "Update",
+        "Delete"
+      ]
+    },
+    "service.UserService": {
+      "simple_name": "UserService",
+      "package": "service",
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\service\\user_service.go",
+      "type": "STRUCT",
+      "methods": [
+        "CreateUser",
+        "GetAllUsers",
+        "PlaceOrder",
+        "ProcessAsync"
+      ]
+    }
+  },
+  "interfaces": {
+    "repository.UserRepository": {
+      "simple_name": "UserRepository",
+      "package": "repository",
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\repository\\user_repo.go",
+      "type": "INTERFACE"
+    },
+    "repository.OrderRepository": {
+      "simple_name": "OrderRepository",
+      "package": "repository",
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\repository\\user_repo.go",
+      "type": "INTERFACE"
+    }
+  },
+  "functions": {
+    "models.NewUser": {
+      "simple_name": "NewUser",
+      "package": "models",
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\models\\user.go",
+      "type": "FUNCTION"
+    },
+    "repository.NewPostgresUserRepo": {
+      "simple_name": "NewPostgresUserRepo",
+      "package": "repository",
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\repository\\user_repo.go",
+      "type": "FUNCTION"
+    },
+    "service.NewUserService": {
+      "simple_name": "NewUserService",
+      "package": "service",
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\service\\user_service.go",
+      "type": "FUNCTION"
+    },
+    "service.HealthCheck": {
+      "simple_name": "HealthCheck",
+      "package": "service",
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\service\\user_service.go",
+      "type": "FUNCTION"
+    }
+  },
+  "methods": {
+    "models.User.Validate": {
+      "receiver": "User",
+      "method": "Validate",
+      "package": "models",
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\models\\user.go",
+      "type": "METHOD"
+    },
+    "models.User.GetDisplayName": {
+      "receiver": "User",
+      "method": "GetDisplayName",
+      "package": "models",
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\models\\user.go",
+      "type": "METHOD"
+    },
+    "models.Order.AddItem": {
+      "receiver": "Order",
+      "method": "AddItem",
+      "package": "models",
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\models\\user.go",
+      "type": "METHOD"
+    },
+    "repository.PostgresUserRepo.GetByID": {
+      "receiver": "PostgresUserRepo",
+      "method": "GetByID",
+      "package": "repository",
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\repository\\user_repo.go",
+      "type": "METHOD"
+    },
+    "repository.PostgresUserRepo.GetAll": {
+      "receiver": "PostgresUserRepo",
+      "method": "GetAll",
+      "package": "repository",
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\repository\\user_repo.go",
+      "type": "METHOD"
+    },
+    "repository.PostgresUserRepo.Create": {
+      "receiver": "PostgresUserRepo",
+      "method": "Create",
+      "package": "repository",
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\repository\\user_repo.go",
+      "type": "METHOD"
+    },
+    "repository.PostgresUserRepo.Update": {
+      "receiver": "PostgresUserRepo",
+      "method": "Update",
+      "package": "repository",
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\repository\\user_repo.go",
+      "type": "METHOD"
+    },
+    "repository.PostgresUserRepo.Delete": {
+      "receiver": "PostgresUserRepo",
+      "method": "Delete",
+      "package": "repository",
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\repository\\user_repo.go",
+      "type": "METHOD"
+    },
+    "service.UserService.CreateUser": {
+      "receiver": "UserService",
+      "method": "CreateUser",
+      "package": "service",
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\service\\user_service.go",
+      "type": "METHOD"
+    },
+    "service.UserService.GetAllUsers": {
+      "receiver": "UserService",
+      "method": "GetAllUsers",
+      "package": "service",
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\service\\user_service.go",
+      "type": "METHOD"
+    },
+    "service.UserService.PlaceOrder": {
+      "receiver": "UserService",
+      "method": "PlaceOrder",
+      "package": "service",
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\service\\user_service.go",
+      "type": "METHOD"
+    },
+    "service.UserService.ProcessAsync": {
+      "receiver": "UserService",
+      "method": "ProcessAsync",
+      "package": "service",
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\service\\user_service.go",
+      "type": "METHOD"
+    }
+  },
+  "node_counts": {
+    "packages": 3,
+    "structs": 5,
+    "interfaces": 2,
+    "functions": 4,
+    "methods": 12,
+    "total": 26
+  },
+  "edge_counts": {
+    "calls": 16,
+    "struct_inits": 6,
+    "goroutines": 1,
+    "total": 23
+  },
+  "resolution": {
+    "resolved_count": 7,
+    "unresolved_count": 16,
+    "resolved_entries": [
+      {
+        "target": "User",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\models\\user.go",
+        "ref_type": "STRUCT_INIT",
+        "resolved": true,
+        "resolved_to": "new User{}"
+      },
+      {
+        "target": "PostgresUserRepo",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\repository\\user_repo.go",
+        "ref_type": "STRUCT_INIT",
+        "resolved": true,
+        "resolved_to": "new PostgresUserRepo{}"
+      },
+      {
+        "target": "User",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\repository\\user_repo.go",
+        "ref_type": "STRUCT_INIT",
+        "resolved": true,
+        "resolved_to": "new User{}"
+      },
+      {
+        "target": "User",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\repository\\user_repo.go",
+        "ref_type": "STRUCT_INIT",
+        "resolved": true,
+        "resolved_to": "new User{}"
+      },
+      {
+        "caller_pkg": "models",
+        "method": "NewUser",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\service\\user_service.go",
+        "ref_type": "CALL",
+        "resolved": true,
+        "resolved_to": "models.NewUser"
+      },
+      {
+        "target": "UserService",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\service\\user_service.go",
+        "ref_type": "STRUCT_INIT",
+        "resolved": true,
+        "resolved_to": "new UserService{}"
+      },
+      {
+        "target": "Order",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\service\\user_service.go",
+        "ref_type": "STRUCT_INIT",
+        "resolved": true,
+        "resolved_to": "new Order{}"
+      }
+    ],
+    "unresolved_entries": [
+      {
+        "caller_pkg": "db",
+        "method": "QueryRow",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\repository\\user_repo.go",
+        "ref_type": "CALL",
+        "resolved": false,
+        "reason": "PACKAGE_OR_TYPE_UNKNOWN"
+      },
+      {
+        "caller_pkg": "db",
+        "method": "Query",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\repository\\user_repo.go",
+        "ref_type": "CALL",
+        "resolved": false,
+        "reason": "PACKAGE_OR_TYPE_UNKNOWN"
+      },
+      {
+        "caller_pkg": "rows",
+        "method": "Close",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\repository\\user_repo.go",
+        "ref_type": "CALL",
+        "resolved": false,
+        "reason": "PACKAGE_OR_TYPE_UNKNOWN"
+      },
+      {
+        "caller_pkg": "rows",
+        "method": "Next",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\repository\\user_repo.go",
+        "ref_type": "CALL",
+        "resolved": false,
+        "reason": "PACKAGE_OR_TYPE_UNKNOWN"
+      },
+      {
+        "caller_pkg": "rows",
+        "method": "Scan",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\repository\\user_repo.go",
+        "ref_type": "CALL",
+        "resolved": false,
+        "reason": "PACKAGE_OR_TYPE_UNKNOWN"
+      },
+      {
+        "caller_pkg": "db",
+        "method": "Exec",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\repository\\user_repo.go",
+        "ref_type": "CALL",
+        "resolved": false,
+        "reason": "PACKAGE_OR_TYPE_UNKNOWN"
+      },
+      {
+        "caller_pkg": "db",
+        "method": "Exec",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\repository\\user_repo.go",
+        "ref_type": "CALL",
+        "resolved": false,
+        "reason": "PACKAGE_OR_TYPE_UNKNOWN"
+      },
+      {
+        "caller_pkg": "db",
+        "method": "Exec",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\repository\\user_repo.go",
+        "ref_type": "CALL",
+        "resolved": false,
+        "reason": "PACKAGE_OR_TYPE_UNKNOWN"
+      },
+      {
+        "caller_pkg": "user",
+        "method": "Validate",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\service\\user_service.go",
+        "ref_type": "CALL",
+        "resolved": false,
+        "reason": "PACKAGE_OR_TYPE_UNKNOWN"
+      },
+      {
+        "caller_pkg": "userRepo",
+        "method": "Create",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\service\\user_service.go",
+        "ref_type": "CALL",
+        "resolved": false,
+        "reason": "PACKAGE_OR_TYPE_UNKNOWN"
+      },
+      {
+        "caller_pkg": "userRepo",
+        "method": "GetAll",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\service\\user_service.go",
+        "ref_type": "CALL",
+        "resolved": false,
+        "reason": "PACKAGE_OR_TYPE_UNKNOWN"
+      },
+      {
+        "caller_pkg": "userRepo",
+        "method": "GetByID",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\service\\user_service.go",
+        "ref_type": "CALL",
+        "resolved": false,
+        "reason": "PACKAGE_OR_TYPE_UNKNOWN"
+      },
+      {
+        "caller_pkg": "user",
+        "method": "GetDisplayName",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\service\\user_service.go",
+        "ref_type": "CALL",
+        "resolved": false,
+        "reason": "PACKAGE_OR_TYPE_UNKNOWN"
+      },
+      {
+        "caller_pkg": "orderRepo",
+        "method": "Create",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\service\\user_service.go",
+        "ref_type": "CALL",
+        "resolved": false,
+        "reason": "PACKAGE_OR_TYPE_UNKNOWN"
+      },
+      {
+        "caller_pkg": "userRepo",
+        "method": "GetByID",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\service\\user_service.go",
+        "ref_type": "CALL",
+        "resolved": false,
+        "reason": "PACKAGE_OR_TYPE_UNKNOWN"
+      },
+      {
+        "target": "s.userRepo.GetByID",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\go\\service\\user_service.go",
+        "ref_type": "GOROUTINE",
+        "resolved": false,
+        "reason": "GOROUTINE_TARGET_UNKNOWN"
+      }
+    ],
+    "resolution_pct": 30.43
+  },
+  "resolved_calls": 7,
+  "unresolved_total": 16,
+  "resolution_pct": 30.43,
+  "governance_gate": "APPROVED",
+  "language_composition": {
+    "go": {
+      "file_count": 3,
+      "implemented": true,
+      "framework": "net_http",
+      "module": "github.com/codetruth/example"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "status": "COMPLETE",
+  "gate": "APPROVED",
+  "health_rating": "SOUND",
+  "risk_level": "LOW",
+  "guesses": 0,
+  "uncategorized_declines": 0,
+  "metrics": {
+    "call_graph_edges_total": 697,
+    "reasoning_edges_added": 11,
+    "attribute_calls_resolved": 18,
+    "attribute_call_baseline": 2506,
+    "attr_resolution_coverage_pct": 0.7,
+    "unresolved_calls": 2732,
+    "guesses": 0,
+    "fixable_inrepo_miss": 0,
+    "uncategorized_declines": 0
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "target": "flask.app.Flask.dispatch_request",
+  "verdict": "VERIFIED_IMPACT",
+  "guesses": 0,
+  "direct_callers": [
+    "flask.app.Flask.full_dispatch_request"
+  ],
+  "direct_count": 1,
+  "affected_count": 3,
+  "surface_reading": "A guess-based reading might overstate or understate impact, or miss that these are exact call-graph edges.",
+  "codetruth_reading": "1 VERIFIED direct caller(s), each a real edge in the call graph (not inferred): `flask.app.Flask.full_dispatch_request`. Transitive verified impact: 3. Guesses made: 0."
+}

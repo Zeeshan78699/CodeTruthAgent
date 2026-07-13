@@ -1,26 +1,49 @@
 📂 CodeTruthAgent
 │   📄 .gitignore
 │   📄 billing.py
+│   📄 change_impact.md
+│   📄 codetruth_report.json
+│   📄 codetruth_report.py
 │   📄 db_prod.py
 │   📄 db_test.py
+│   📄 evaluation_summary.md
 │   📄 FAQ.md
+│   📄 flask_assessment.md
+│   📄 flask_report.json
 │   📄 generate_structure.py
 │   📄 helpers.py
+│   📄 impact.md
+│   📄 impact.txt
+│   📄 inheritance_baseline.json
+│   📄 invariant_results.csv
 │   📄 inventory.py
 │   📄 LICENSE
 │   📄 main.py
 │   📄 main_v2.py
 │   📄 memory_template.json
 │   📄 memory_v2.json
+│   📄 module1_evaluation.csv
+│   📄 module3_report.json
+│   📄 odoo_result.json
 │   📄 orders.py
+│   📄 pipeline.py
 │   📄 PROJECT_STRUCTURE.txt
+│   📄 pytorch_result.json
 │   📄 QUICKSTART.md
 │   📄 README.md
 │   📄 README_V1.md
 │   📄 reports.py
 │   📄 requirements.txt
+│   📄 run_corpus_eval.py
+│   📄 run_m1.py
+│   📄 run_m2.py
+│   📄 run_m3.py
 │   📄 sample_code.py
+│   📄 shapes.txt
 │   📄 Test_Result_Summary.md
+│   📄 Test_Status_check.txt
+│   📄 transformers_result.json
+│   📄 truth_boundary_demo.md
 │   📄 utils.py
 │   📄 V2_BLOCK_PRECISION_AUDIT.md
 │   📂 ai
@@ -160,6 +183,16 @@
 │   │   │   📄 memory_archive_cleanup_7.json
 │   │   │   📄 memory_archive_cleanup_8.json
 │   │   │   📄 memory_archive_cleanup_9.json
+│   📂 codetruth_live_OLD
+│   │   📄 app.py
+│   │   📄 index.html
+│   │   📄 README.md
+│   │   📄 requirements.txt
+│   │   📄 service.py
+│   │   📂 _clones
+│   📂 communications
+│   │   📄 MODULE1_GITHUB_DISCUSSION.md
+│   │   📄 MODULE2_GITHUB_DISCUSSION.md
 │   📂 core
 │   │   📄 code_modifier.py
 │   │   📄 dependency_tracker.py
@@ -174,6 +207,28 @@
 │   📂 docs
 │   │   📄 CodeTruth_V1_Final_Project_Overview.docx
 │   │   📄 CodeTruth_V2_Final_Project_Overview.docx
+│   📂 hf_download
+│   │   📄 click_report.json
+│   │   📄 django_report.json
+│   │   📄 drf_report.json
+│   │   📄 flask_report.json
+│   │   📄 httpx_report.json
+│   │   📄 rich_report.json
+│   │   📄 transformers_report.json
+│   │   📄 tutorial_report.json
+│   │   📂 .cache
+│   │   │   📂 huggingface
+│   │   │   │   📄 .gitignore
+│   │   │   │   📄 CACHEDIR.TAG
+│   │   │   │   📂 download
+│   │   │   │   │   📄 click_report.json.metadata
+│   │   │   │   │   📄 django_report.json.metadata
+│   │   │   │   │   📄 drf_report.json.metadata
+│   │   │   │   │   📄 flask_report.json.metadata
+│   │   │   │   │   📄 httpx_report.json.metadata
+│   │   │   │   │   📄 rich_report.json.metadata
+│   │   │   │   │   📄 transformers_report.json.metadata
+│   │   │   │   │   📄 tutorial_report.json.metadata
 │   📂 memory
 │   │   📄 governance_memory_engine.py
 │   │   📄 memory_store_v2.py
@@ -515,23 +570,413 @@
 │   │   │   │   📂 workflow_orchestrator_reports
 │   │   │   │   │   📄 orchestrator_test_file.py
 │   │   │   │   │   📄 tc_v2_032_report.json
+│   📂 uat_evidence
+│   │   📄 20260706T061648Z.zip
+│   │   📄 20260706T061936Z.zip
+│   │   📄 20260706T063227Z.zip
+│   │   📄 20260706T065219Z.zip
+│   │   📄 20260706T070651Z.zip
+│   │   📄 20260706T071009Z.zip
+│   │   📄 20260706T071746Z.zip
+│   │   📄 20260706T072701Z.zip
+│   │   📄 20260706T074031Z.zip
+│   │   📄 20260706T082356Z.zip
+│   │   📄 20260706T090756Z.zip
+│   │   📄 20260706T091608Z.zip
+│   │   📄 20260706T103735Z.zip
+│   │   📄 20260706T121903Z.zip
+│   │   📂 20260706T053143Z
+│   │   │   📂 SMOKE-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   📂 20260706T054601Z
+│   │   │   📂 M1-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 M2-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 M3-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 SMOKE-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   📂 20260706T061648Z
+│   │   │   📄 checksums.sha256
+│   │   │   📄 manifest.json
+│   │   │   📄 README.md
+│   │   │   📄 spec_snapshot.json
+│   │   │   📄 summary.json
+│   │   │   📄 SUMMARY.md
+│   │   │   📄 VERSION.json
+│   │   │   📂 M1-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 M2-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 M3-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 SMOKE-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   📂 20260706T061936Z
+│   │   │   📄 checksums.sha256
+│   │   │   📄 manifest.json
+│   │   │   📄 README.md
+│   │   │   📄 spec_snapshot.json
+│   │   │   📄 summary.json
+│   │   │   📄 SUMMARY.md
+│   │   │   📄 VERSION.json
+│   │   │   📂 M1-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 M2-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 M3-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 SMOKE-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   📂 20260706T063227Z
+│   │   │   📄 checksums.sha256
+│   │   │   📄 manifest.json
+│   │   │   📄 README.md
+│   │   │   📄 spec_snapshot.json
+│   │   │   📄 summary.json
+│   │   │   📄 SUMMARY.md
+│   │   │   📄 VERSION.json
+│   │   │   📂 HEALTH-001
+│   │   │   │   📄 assessment_report.md
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 IMPACT-METHOD-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   📂 20260706T065219Z
+│   │   │   📄 checksums.sha256
+│   │   │   📄 manifest.json
+│   │   │   📄 README.md
+│   │   │   📄 spec_snapshot.json
+│   │   │   📄 summary.json
+│   │   │   📄 SUMMARY.md
+│   │   │   📄 VERSION.json
+│   │   │   📂 DEADCODE-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 HEALTH-001
+│   │   │   │   📄 assessment_report.md
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 IMPACT-METHOD-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 IMPACT-METHOD-002
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   📂 20260706T070651Z
+│   │   │   📄 checksums.sha256
+│   │   │   📄 manifest.json
+│   │   │   📄 README.md
+│   │   │   📄 spec_snapshot.json
+│   │   │   📄 summary.json
+│   │   │   📄 SUMMARY.md
+│   │   │   📄 VERSION.json
+│   │   │   📂 DEADCODE-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 HEALTH-001
+│   │   │   │   📄 assessment_report.md
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 IMPACT-METHOD-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 IMPACT-METHOD-002
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   📂 20260706T071009Z
+│   │   │   📄 checksums.sha256
+│   │   │   📄 manifest.json
+│   │   │   📄 README.md
+│   │   │   📄 spec_snapshot.json
+│   │   │   📄 summary.json
+│   │   │   📄 SUMMARY.md
+│   │   │   📄 VERSION.json
+│   │   │   📂 DEADCODE-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 HEALTH-001
+│   │   │   │   📄 assessment_report.md
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 IMPACT-METHOD-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 IMPACT-METHOD-002
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   📂 20260706T071746Z
+│   │   │   📄 checksums.sha256
+│   │   │   📄 manifest.json
+│   │   │   📄 README.md
+│   │   │   📄 spec_snapshot.json
+│   │   │   📄 summary.json
+│   │   │   📄 SUMMARY.md
+│   │   │   📄 VERSION.json
+│   │   │   📂 DEADCODE-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 HEALTH-001
+│   │   │   │   📄 assessment_report.md
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 IMPACT-METHOD-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 IMPACT-METHOD-002
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   📂 20260706T072701Z
+│   │   │   📄 checksums.sha256
+│   │   │   📄 manifest.json
+│   │   │   📄 README.md
+│   │   │   📄 spec_snapshot.json
+│   │   │   📄 summary.json
+│   │   │   📄 SUMMARY.md
+│   │   │   📄 VERSION.json
+│   │   │   📂 DEADCODE-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 HEALTH-001
+│   │   │   │   📄 assessment_report.md
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 IMPACT-CLASS-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 IMPACT-METHOD-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 IMPACT-METHOD-002
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   📂 20260706T074031Z
+│   │   │   📄 checksums.sha256
+│   │   │   📄 manifest.json
+│   │   │   📄 README.md
+│   │   │   📄 spec_snapshot.json
+│   │   │   📄 summary.json
+│   │   │   📄 SUMMARY.md
+│   │   │   📄 VERSION.json
+│   │   │   📂 DEADCODE-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 HEALTH-001
+│   │   │   │   📄 assessment_report.md
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 IMPACT-CLASS-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 IMPACT-METHOD-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 IMPACT-METHOD-002
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   📂 20260706T082356Z
+│   │   │   📄 checksums.sha256
+│   │   │   📄 manifest.json
+│   │   │   📄 README.md
+│   │   │   📄 spec_snapshot.json
+│   │   │   📄 summary.json
+│   │   │   📄 SUMMARY.md
+│   │   │   📄 VERSION.json
+│   │   │   📂 CHANGE-IMPACT-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 CHANGE-IMPACT-002
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 DEADCODE-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 HEALTH-001
+│   │   │   │   📄 assessment_report.md
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 IMPACT-CLASS-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 IMPACT-METHOD-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 IMPACT-METHOD-002
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   📂 20260706T090756Z
+│   │   │   📄 checksums.sha256
+│   │   │   📄 manifest.json
+│   │   │   📄 README.md
+│   │   │   📄 spec_snapshot.json
+│   │   │   📄 summary.json
+│   │   │   📄 SUMMARY.md
+│   │   │   📄 VERSION.json
+│   │   │   📂 CHANGE-IMPACT-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 CHANGE-IMPACT-002
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 DEADCODE-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 HEALTH-001
+│   │   │   │   📄 assessment_report.md
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 IMPACT-CLASS-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 IMPACT-METHOD-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 IMPACT-METHOD-002
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   📂 20260706T091608Z
+│   │   │   📄 checksums.sha256
+│   │   │   📄 manifest.json
+│   │   │   📄 README.md
+│   │   │   📄 spec_snapshot.json
+│   │   │   📄 summary.json
+│   │   │   📄 SUMMARY.md
+│   │   │   📄 VERSION.json
+│   │   │   📂 CHANGE-IMPACT-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 CHANGE-IMPACT-002
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 DEADCODE-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 HEALTH-001
+│   │   │   │   📄 assessment_report.md
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 IMPACT-CLASS-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 IMPACT-METHOD-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 IMPACT-METHOD-002
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   📂 20260706T103735Z
+│   │   │   📄 checksums.sha256
+│   │   │   📄 manifest.json
+│   │   │   📄 README.md
+│   │   │   📄 spec_snapshot.json
+│   │   │   📄 summary.json
+│   │   │   📄 SUMMARY.md
+│   │   │   📄 VERSION.json
+│   │   │   📂 CHANGE-IMPACT-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 CHANGE-IMPACT-002
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 DEADCODE-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 HEALTH-001
+│   │   │   │   📄 assessment_report.md
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 IMPACT-CLASS-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 IMPACT-METHOD-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 IMPACT-METHOD-002
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   📂 20260706T121903Z
+│   │   │   📄 checksums.sha256
+│   │   │   📄 manifest.json
+│   │   │   📄 README.md
+│   │   │   📄 spec_snapshot.json
+│   │   │   📄 summary.json
+│   │   │   📄 SUMMARY.md
+│   │   │   📄 VERSION.json
+│   │   │   📂 CHANGE-IMPACT-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 CHANGE-IMPACT-002
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 DEADCODE-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 HEALTH-001
+│   │   │   │   📄 assessment_report.md
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 IMPACT-CLASS-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 IMPACT-METHOD-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 IMPACT-METHOD-002
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 TRUTH-BOUNDARY-001
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
+│   │   │   📂 TRUTH-BOUNDARY-002
+│   │   │   │   📄 record.md
+│   │   │   │   📄 result.json
 │   📂 v3
 │   │   📄 README.md
+│   │   📄 run_codetruth.py
 │   │   📄 __init__.py
 │   │   📂 docs
 │   │   │   📄 PROJECT_RECORD_v3.0.0-module2.docx
 │   │   │   📄 PROJECT_RECORD_v3.0.0-module2.md
 │   │   │   📂 module1
+│   │   │   │   📄 CHANGELOG.md
+│   │   │   │   📄 CHANGELOG_v3.0.0-extension.md
+│   │   │   │   📄 Language_Registry_Extension_Guide.docx
+│   │   │   │   📄 Language_Registry_Extension_Guide.md
 │   │   │   │   📄 MODULE1_CAPABILITY_PROOF.md
 │   │   │   │   📄 MODULE1_COMPONENTS_AND_CAPABILITIES.md
 │   │   │   │   📄 MODULE1_DOCUMENTATION.md
+│   │   │   │   📄 MODULE1_EXTENSION_FULL_DOCUMENTATION.md
 │   │   │   │   📄 MODULE1_EXTENSION_GUIDE.md
+│   │   │   │   📄 Module1_Extension_Layer.md
 │   │   │   │   📄 MODULE1_QUESTION_AND_ANSWER.md
 │   │   │   │   📄 MODULE1_REAL_WORLD_PROBLEM.md
 │   │   │   │   📄 MODULE1_TEST_REGISTER.md
+│   │   │   │   📄 MODULE1_VALIDATION_REPORT.md
 │   │   │   │   📄 QUICKSTART_MODULE1.md
+│   │   │   │   📄 README_MODULE1_SECTION.md
 │   │   │   │   📄 RELEASE_NOTES_v3.0.0-module1.md
+│   │   │   │   📄 RUN_MODULE1_GUIDE.md
 │   │   │   📂 module2
+│   │   │   │   📄 ATTRIBUTE_CALL_GAP_ANALYSIS.md
+│   │   │   │   📄 CODETRUTH_V3_COMBINED_DOCUMENTATION.md
+│   │   │   │   📄 GO_DEEP_RESOLUTION_ROADMAP.md
+│   │   │   │   📄 MODULE1_MODULE2_INTEGRATION_GUIDE.md
+│   │   │   │   📄 MODULE2_CAPABILITY_MATRIX.md
 │   │   │   │   📄 MODULE2_CAPABILITY_PROOF.docx
 │   │   │   │   📄 MODULE2_CAPABILITY_PROOF.md
 │   │   │   │   📄 MODULE2_COMPONENTS_AND_CAPABILITIES.docx
@@ -552,12 +997,249 @@
 │   │   │   │   📄 MODULE2_REAL_WORLD_PROBLEM.md
 │   │   │   │   📄 MODULE2_TEST_REGISTER.docx
 │   │   │   │   📄 MODULE2_TEST_REGISTER.md
+│   │   │   │   📄 MODULE2_VALIDATION_REPORT.md
 │   │   │   │   📄 MODULE2_VALIDATION_SUMMARY.docx
 │   │   │   │   📄 MODULE2_VALIDATION_SUMMARY.md
 │   │   │   │   📄 QUICKSTART_MODULE2.docx
 │   │   │   │   📄 QUICKSTART_MODULE2.md
 │   │   │   │   📄 RELEASE_NOTES_v3.0.0-module2.docx
 │   │   │   │   📄 RELEASE_NOTES_v3.0.0-module2.md
+│   │   │   │   📄 RUN_MODULE1_GUIDE.md
+│   │   │   │   📄 RUN_MODULE2_GUIDE.md
+│   │   │   │   📄 RUN_PIPELINE_GUIDE.md
+│   │   │   │   📄 Test Script for main pipeline.txt
+│   │   │   │   📄 UNRESOLVED_PIPELINE_RESEARCH_LOG.md
+│   │   │   │   📄 V1_V2_GAP_CLOSURE_STATUS.md
+│   │   │   📂 module3
+│   │   │   │   📄 classifying 76 repos.txt
+│   │   │   │   📄 CodeTruth_Engineering_Gap_Scenarios.md
+│   │   │   │   📄 CodeTruth_Live_User_Guide.md
+│   │   │   │   📄 CodeTruth_V3_AI_Transformer_Reference.docx
+│   │   │   │   📄 MODULE3_CAPABILITY_MATRIX.md
+│   │   │   │   📄 MODULE3_CAPABILITY_PROOF.md
+│   │   │   │   📄 MODULE3_DECISIONS.md
+│   │   │   │   📄 MODULE3_GAPS_AND_ROADMAP.md
+│   │   │   │   📄 MODULE3_TEST_REGISTER.md
+│   │   │   │   📄 MODULE3_TYPE_INFERENCE_SPEC.md
+│   │   │   │   📄 MODULE3_VALIDATION_REPORT.md
+│   │   │   │   📄 MODULE_INTEGRATION_GUIDE.md
+│   │   │   │   📄 RELEASE_NOTES_v3.0.0-module3.md
+│   │   │   │   📄 V1_V2_GAP_CLOSURE_STATUS.md
+│   │   📂 main_pipeline_to_run
+│   │   │   📄 app.py
+│   │   │   📄 index.html
+│   │   │   📄 pipeline.py
+│   │   │   📄 run_m1.py
+│   │   │   📄 run_m2.py
+│   │   │   📄 run_m3.py
+│   │   │   📄 run_module_uat.py
+│   │   │   📄 run_scenario_uat.py
+│   │   │   📄 run_uat.py
+│   │   │   📄 service.py
+│   │   │   📄 test_codetruth_fixes.py
+│   │   │   📂 profiles
+│   │   │   │   📄 django.py
+│   │   │   │   📄 flask.py
+│   │   │   📂 _clones
+│   │   │   │   📂 ctlive_3ljyvbl9
+│   │   │   │   📂 ctlive_caex6oyz
+│   │   │   │   📂 ctlive_dmv90h6y
+│   │   │   │   📂 ctlive_gxsgp6_8
+│   │   │   │   📂 ctlive_hsw8enpn
+│   │   │   │   📂 ctlive_i3nlv186
+│   │   │   │   📂 ctlive_l84_7qp0
+│   │   │   │   📂 ctlive_lq8ttya9
+│   │   │   │   📂 ctlive_p2go7v9b
+│   │   │   │   📂 ctlive_t14vyjn8
+│   │   │   │   📂 ctlive_tavjal61
+│   │   │   │   📂 ctlive_tp71la5b
+│   │   │   │   📂 ctlive_tqau74p5
+│   │   │   │   📂 ctlive_vtuarzvq
+│   │   │   │   📂 ctlive__c_b0u3x
+│   │   │   │   📂 ctlive__xiwk6oz
+│   │   │   │   📂 rec_test
+│   │   │   │   │   📄 .gitignore
+│   │   │   │   │   📄 .travis.yml
+│   │   │   │   │   📄 HISTORY.rst
+│   │   │   │   │   📄 LICENSE
+│   │   │   │   │   📄 Makefile
+│   │   │   │   │   📄 MANIFEST.in
+│   │   │   │   │   📄 README.md
+│   │   │   │   │   📄 README.rst
+│   │   │   │   │   📄 records.py
+│   │   │   │   │   📄 requirements.txt
+│   │   │   │   │   📄 setup.py
+│   │   │   │   │   📄 tox.ini
+│   │   │   │   │   📂 .github
+│   │   │   │   │   │   📄 FUNDING.yml
+│   │   │   │   │   │   📂 workflows
+│   │   │   │   │   │   │   📄 ci.yml
+│   │   │   │   │   📂 examples
+│   │   │   │   │   │   📄 randomuser-sqlite.py
+│   │   │   │   │   📂 tests
+│   │   │   │   │   │   📄 conftest.py
+│   │   │   │   │   │   📄 test_105.py
+│   │   │   │   │   │   📄 test_69.py
+│   │   │   │   │   │   📄 test_records.py
+│   │   │   │   │   │   📄 test_transactions.py
+│   │   │   │   │   │   📄 __init__.py
+│   │   │   │   📂 test_clone
+│   │   │   │   │   📄 .coveragerc
+│   │   │   │   │   📄 .git-blame-ignore-revs
+│   │   │   │   │   📄 .gitignore
+│   │   │   │   │   📄 .pre-commit-config.yaml
+│   │   │   │   │   📄 .readthedocs.yaml
+│   │   │   │   │   📄 AUTHORS.rst
+│   │   │   │   │   📄 HISTORY.md
+│   │   │   │   │   📄 LICENSE
+│   │   │   │   │   📄 Makefile
+│   │   │   │   │   📄 MANIFEST.in
+│   │   │   │   │   📄 NOTICE
+│   │   │   │   │   📄 pyproject.toml
+│   │   │   │   │   📄 README.md
+│   │   │   │   │   📄 requirements-dev.txt
+│   │   │   │   │   📄 setup.py
+│   │   │   │   │   📄 tox.ini
+│   │   │   │   │   📂 .github
+│   │   │   │   │   │   📄 AI_POLICY.md
+│   │   │   │   │   │   📄 CODEOWNERS
+│   │   │   │   │   │   📄 CODE_OF_CONDUCT.md
+│   │   │   │   │   │   📄 CONTRIBUTING.md
+│   │   │   │   │   │   📄 dependabot.yml
+│   │   │   │   │   │   📄 FUNDING.yml
+│   │   │   │   │   │   📄 ISSUE_TEMPLATE.md
+│   │   │   │   │   │   📄 SECURITY.md
+│   │   │   │   │   │   📂 ISSUE_TEMPLATE
+│   │   │   │   │   │   │   📄 Bug_report.md
+│   │   │   │   │   │   │   📄 Custom.md
+│   │   │   │   │   │   │   📄 Feature_request.md
+│   │   │   │   │   │   📂 workflows
+│   │   │   │   │   │   │   📄 close-issues.yml
+│   │   │   │   │   │   │   📄 codeql-analysis.yml
+│   │   │   │   │   │   │   📄 lint.yml
+│   │   │   │   │   │   │   📄 lock-issues.yml
+│   │   │   │   │   │   │   📄 publish.yml
+│   │   │   │   │   │   │   📄 run-tests.yml
+│   │   │   │   │   │   │   📄 typecheck.yml
+│   │   │   │   │   │   │   📄 zizmor.yml
+│   │   │   │   │   📂 docs
+│   │   │   │   │   │   📄 .nojekyll
+│   │   │   │   │   │   📄 api.rst
+│   │   │   │   │   │   📄 conf.py
+│   │   │   │   │   │   📄 index.rst
+│   │   │   │   │   │   📄 make.bat
+│   │   │   │   │   │   📄 Makefile
+│   │   │   │   │   │   📄 requirements.txt
+│   │   │   │   │   │   📂 community
+│   │   │   │   │   │   │   📄 faq.rst
+│   │   │   │   │   │   │   📄 out-there.rst
+│   │   │   │   │   │   │   📄 recommended.rst
+│   │   │   │   │   │   │   📄 release-process.rst
+│   │   │   │   │   │   │   📄 support.rst
+│   │   │   │   │   │   │   📄 updates.rst
+│   │   │   │   │   │   │   📄 vulnerabilities.rst
+│   │   │   │   │   │   📂 dev
+│   │   │   │   │   │   │   📄 authors.rst
+│   │   │   │   │   │   │   📄 contributing.rst
+│   │   │   │   │   │   📂 user
+│   │   │   │   │   │   │   📄 advanced.rst
+│   │   │   │   │   │   │   📄 authentication.rst
+│   │   │   │   │   │   │   📄 install.rst
+│   │   │   │   │   │   │   📄 quickstart.rst
+│   │   │   │   │   │   📂 _static
+│   │   │   │   │   │   │   📄 custom.css
+│   │   │   │   │   │   │   📄 requests-sidebar.png
+│   │   │   │   │   │   📂 _templates
+│   │   │   │   │   │   │   📄 sidebar.html
+│   │   │   │   │   │   📂 _themes
+│   │   │   │   │   │   │   📄 .gitignore
+│   │   │   │   │   │   │   📄 flask_theme_support.py
+│   │   │   │   │   │   │   📄 LICENSE
+│   │   │   │   │   📂 ext
+│   │   │   │   │   │   📄 kr.png
+│   │   │   │   │   │   📄 LICENSE
+│   │   │   │   │   │   📄 psf.png
+│   │   │   │   │   │   📄 requests-logo-compressed.png
+│   │   │   │   │   │   📄 requests-logo.ai
+│   │   │   │   │   │   📄 requests-logo.png
+│   │   │   │   │   │   📄 requests-logo.svg
+│   │   │   │   │   📂 src
+│   │   │   │   │   │   📂 requests
+│   │   │   │   │   │   │   📄 adapters.py
+│   │   │   │   │   │   │   📄 api.py
+│   │   │   │   │   │   │   📄 auth.py
+│   │   │   │   │   │   │   📄 certs.py
+│   │   │   │   │   │   │   📄 compat.py
+│   │   │   │   │   │   │   📄 cookies.py
+│   │   │   │   │   │   │   📄 exceptions.py
+│   │   │   │   │   │   │   📄 help.py
+│   │   │   │   │   │   │   📄 hooks.py
+│   │   │   │   │   │   │   📄 models.py
+│   │   │   │   │   │   │   📄 packages.py
+│   │   │   │   │   │   │   📄 py.typed
+│   │   │   │   │   │   │   📄 sessions.py
+│   │   │   │   │   │   │   📄 status_codes.py
+│   │   │   │   │   │   │   📄 structures.py
+│   │   │   │   │   │   │   📄 utils.py
+│   │   │   │   │   │   │   📄 _internal_utils.py
+│   │   │   │   │   │   │   📄 _types.py
+│   │   │   │   │   │   │   📄 __init__.py
+│   │   │   │   │   │   │   📄 __version__.py
+│   │   │   │   │   📂 tests
+│   │   │   │   │   │   📄 compat.py
+│   │   │   │   │   │   📄 conftest.py
+│   │   │   │   │   │   📄 test_adapters.py
+│   │   │   │   │   │   📄 test_help.py
+│   │   │   │   │   │   📄 test_hooks.py
+│   │   │   │   │   │   📄 test_lowlevel.py
+│   │   │   │   │   │   📄 test_packages.py
+│   │   │   │   │   │   📄 test_requests.py
+│   │   │   │   │   │   📄 test_structures.py
+│   │   │   │   │   │   📄 test_testserver.py
+│   │   │   │   │   │   📄 test_utils.py
+│   │   │   │   │   │   📄 utils.py
+│   │   │   │   │   │   📄 __init__.py
+│   │   │   │   │   │   📂 certs
+│   │   │   │   │   │   │   📄 README.md
+│   │   │   │   │   │   │   📂 expired
+│   │   │   │   │   │   │   │   📄 Makefile
+│   │   │   │   │   │   │   │   📄 README.md
+│   │   │   │   │   │   │   │   📂 ca
+│   │   │   │   │   │   │   │   │   📄 ca-private.key
+│   │   │   │   │   │   │   │   │   📄 ca.cnf
+│   │   │   │   │   │   │   │   │   📄 ca.crt
+│   │   │   │   │   │   │   │   │   📄 ca.srl
+│   │   │   │   │   │   │   │   │   📄 Makefile
+│   │   │   │   │   │   │   │   📂 server
+│   │   │   │   │   │   │   │   │   📄 cert.cnf
+│   │   │   │   │   │   │   │   │   📄 Makefile
+│   │   │   │   │   │   │   │   │   📄 server.csr
+│   │   │   │   │   │   │   │   │   📄 server.key
+│   │   │   │   │   │   │   │   │   📄 server.pem
+│   │   │   │   │   │   │   📂 mtls
+│   │   │   │   │   │   │   │   📄 Makefile
+│   │   │   │   │   │   │   │   📄 README.md
+│   │   │   │   │   │   │   │   📂 client
+│   │   │   │   │   │   │   │   │   📄 ca
+│   │   │   │   │   │   │   │   │   📄 cert.cnf
+│   │   │   │   │   │   │   │   │   📄 client.csr
+│   │   │   │   │   │   │   │   │   📄 client.key
+│   │   │   │   │   │   │   │   │   📄 client.pem
+│   │   │   │   │   │   │   │   │   📄 Makefile
+│   │   │   │   │   │   │   📂 valid
+│   │   │   │   │   │   │   │   📄 ca
+│   │   │   │   │   │   │   │   📂 server
+│   │   │   │   │   │   │   │   │   📄 cert.cnf
+│   │   │   │   │   │   │   │   │   📄 Makefile
+│   │   │   │   │   │   │   │   │   📄 server.csr
+│   │   │   │   │   │   │   │   │   📄 server.key
+│   │   │   │   │   │   │   │   │   📄 server.pem
+│   │   │   │   │   │   📂 testserver
+│   │   │   │   │   │   │   📄 server.py
+│   │   │   │   │   │   │   📄 __init__.py
+│   │   │   📂 _scratch
+│   │   │   │   📄 diag_depends_on_class.py
+│   │   │   │   📄 pipeline.py
 │   │   📂 module1
 │   │   │   📄 pyproject.toml
 │   │   │   📄 README.md
@@ -568,6 +1250,11 @@
 │   │   │   📄 requirements-languages.txt
 │   │   │   📄 requirements.txt
 │   │   📂 outputs
+│   │   │   📂 module1
+│   │   │   📂 module2_deep_resolution
+│   │   │   │   📄 DEEP_RESOLUTION_FULL_SUMMARY.csv
+│   │   │   │   📄 DEEP_RESOLUTION_FULL_SUMMARY.json
+│   │   │   │   📄 DEEP_RESOLUTION_FULL_SUMMARY.md
 │   │   │   📂 module2_graphs
 │   │   │   │   📄 graph_amaranth.json
 │   │   │   │   📄 graph_ardupilot.json
@@ -640,10 +1327,9 @@
 │   │   │   │   📄 graph_zipline.json
 │   │   │   │   📄 LANGUAGE_ADAPTERS_SUMMARY.csv
 │   │   │   │   📄 LANGUAGE_ADAPTERS_SUMMARY.json
-│   │   │   │   📄 LANGUAGE_ADAPTERS_SUMMARY.md
+│   │   │   │   📄 MODULE2_FULL_SUMMARY old.json
 │   │   │   │   📄 MODULE2_FULL_SUMMARY.csv
 │   │   │   │   📄 MODULE2_FULL_SUMMARY.json
-│   │   │   │   📄 MODULE2_FULL_SUMMARY.md
 │   │   │   📂 real_scans
 │   │   │   │   📄 FULL_DOMAIN_SUMMARY.csv
 │   │   │   │   📄 FULL_DOMAIN_SUMMARY.json
@@ -786,25 +1472,72 @@
 │   │   │   │   📄 scan_zephyr.txt
 │   │   │   │   📄 scan_zipline.md
 │   │   │   │   📄 scan_zipline.txt
+│   │   │   📂 unresolved_pipeline
+│   │   │   │   📄 flask_resolution_report.json
 │   │   📂 repository_cognition
 │   │   │   📄 cognition_engine.py
 │   │   │   📄 cognition_report.py
 │   │   │   📄 framework_signatures.py
 │   │   │   📄 report_writer.py
 │   │   │   📄 __init__.py
+│   │   │   📂 module1_extensions
+│   │   │   │   📄 architecture_detector.py
+│   │   │   │   📄 assumption_discovery.py
+│   │   │   │   📄 boundary_detector.py
+│   │   │   │   📄 classification_reason.py
+│   │   │   │   📄 constraint_discovery.py
+│   │   │   │   📄 decision_discovery.py
+│   │   │   │   📄 domain_knowledge_discovery.py
+│   │   │   │   📄 domain_signatures.py
+│   │   │   │   📄 domain_weights.py
+│   │   │   │   📄 enhanced_report_builder.py
+│   │   │   │   📄 evidence_traceability.py
+│   │   │   │   📄 executive_report_builder.py
+│   │   │   │   📄 final_enterprise_report.py
+│   │   │   │   📄 gate_validator.py
+│   │   │   │   📄 knowledge_loss_detector.py
+│   │   │   │   📄 language_registry_expansion.py
+│   │   │   │   📄 repository_identity.py
+│   │   │   │   📄 repository_risk_discovery.py
+│   │   │   │   📄 signal_analyzer.py
+│   │   │   │   📄 __init__.py
 │   │   📂 repository_graph
 │   │   │   📄 call_graph.py
 │   │   │   📄 class_graph.py
 │   │   │   📄 dependency_graph.py
+│   │   │   📄 framework_knowledge_base.py
 │   │   │   📄 function_graph.py
 │   │   │   📄 graph_engine.py
 │   │   │   📄 import_graph.py
+│   │   │   📄 model_graph_tracer.py
 │   │   │   📄 module_graph.py
+│   │   │   📄 package_root.py
+│   │   │   📄 subtree_naming.py
 │   │   │   📄 topology.py
+│   │   │   📄 type_inference.py
 │   │   │   📄 verify_pipeline_integrity.py
 │   │   │   📄 __init__.py
+│   │   │   📂 deep_resolution
+│   │   │   │   📄 assignment_chain_builder.py
+│   │   │   │   📄 builtin_type_engine.py
+│   │   │   │   📄 cause_classifier.py
+│   │   │   │   📄 constructor_tracking_engine.py
+│   │   │   │   📄 factory_origin_tracker.py
+│   │   │   │   📄 factory_return_engine.py
+│   │   │   │   📄 fact_extractor_v2.py
+│   │   │   │   📄 flatten_class_graph.py
+│   │   │   │   📄 inheritance_resolver.py
+│   │   │   │   📄 known_framework_functions.py
+│   │   │   │   📄 property_type_engine.py
+│   │   │   │   📄 property_type_table_builder.py
+│   │   │   │   📄 reflection_resolver.py
+│   │   │   │   📄 resolution_pipeline.py
+│   │   │   │   📄 unresolved_analyzer.py
+│   │   │   │   📄 variable_origin_extractor.py
+│   │   │   │   📄 __init__.py
 │   │   │   📂 languages
 │   │   │   │   📄 base_adapter.py
+│   │   │   │   📄 csharp_adapter.py
 │   │   │   │   📄 c_cpp_adapter.py
 │   │   │   │   📄 go_adapter.py
 │   │   │   │   📄 javascript_adapter.py
@@ -812,25 +1545,473 @@
 │   │   │   │   📄 python_adapter.py
 │   │   │   │   📄 registry.py
 │   │   │   │   📄 rust_adapter.py
+│   │   │   │   📄 sql_adapter.py
 │   │   │   │   📄 __init__.py
 │   │   │   📂 poc
 │   │   │   │   📄 graph_engine_poc.py
 │   │   │   📂 tests
+│   │   │   │   📄 debug_assignment_trace.py
+│   │   │   │   📄 debug_ast_minimal.py
+│   │   │   │   📄 debug_factory_trace.py
 │   │   │   │   📄 module2_multi_repo_results.json
 │   │   │   │   📄 module2_test_output.json
+│   │   │   │   📄 reflection_diagnostic.py
 │   │   │   │   📄 scan_all_repos_languages.py
 │   │   │   │   📄 scan_all_repos_module2.py
+│   │   │   │   📄 scan_all_repos_with_deep_resolution.py
+│   │   │   │   📄 tc_m2_cs_001_csharp_adapter.md
+│   │   │   │   📄 tc_m2_cs_001_csharp_adapter.py
+│   │   │   │   📄 tc_m2_go_001_go_adapter.md
+│   │   │   │   📄 tc_m2_go_001_go_adapter.py
+│   │   │   │   📄 tc_m2_sql_001_sql_adapter.md
+│   │   │   │   📄 tc_m2_sql_001_sql_adapter.py
 │   │   │   │   📄 test_java_js_adapters.py
 │   │   │   │   📄 test_language_composition.py
 │   │   │   │   📄 test_lang_adapters_real_repo.py
 │   │   │   │   📄 test_module2_graph_poc.py
 │   │   │   │   📄 test_module2_multi_repo.py
 │   │   │   │   📄 test_module2_repository_graph.py
+│   │   │   │   📄 test_module3_gap_fixes old.py
+│   │   │   │   📄 test_module3_gap_fixes.py
+│   │   │   │   📄 test_real_repo.py
+│   │   │   │   📄 test_reflection_fix_isolated.py
+│   │   │   │   📄 test_unresolved_resolution_pipeline.py
+│   │   │   │   📂 deep_resolution
+│   │   │   │   │   📄 annotation_resolver.py
+│   │   │   │   │   📄 annotation_resolver_corpus_validation.py
+│   │   │   │   │   📄 tc_m2_dr_000_diagnostics.py
+│   │   │   │   │   📄 tc_m2_dr_001_builtin_type.md
+│   │   │   │   │   📄 tc_m2_dr_001_builtin_type.py
+│   │   │   │   │   📄 tc_m2_dr_002_constructor.md
+│   │   │   │   │   📄 tc_m2_dr_002_constructor.py
+│   │   │   │   │   📄 tc_m2_dr_003_factory.md
+│   │   │   │   │   📄 tc_m2_dr_003_factory.py
+│   │   │   │   │   📄 tc_m2_dr_004_property.md
+│   │   │   │   │   📄 tc_m2_dr_004_property.py
+│   │   │   │   │   📄 tc_m2_dr_005_inheritance.md
+│   │   │   │   │   📄 tc_m2_dr_005_inheritance.py
+│   │   │   │   │   📄 tc_m2_dr_006_reflection.md
+│   │   │   │   │   📄 tc_m2_dr_006_reflection.py
+│   │   │   │   │   📄 tc_m2_dr_007_pipeline_integration.md
+│   │   │   │   │   📄 tc_m2_dr_007_pipeline_integration.py
+│   │   │   │   │   📄 tc_m2_dr_008_annotation_resolver.md
+│   │   │   │   │   📄 tc_m2_dr_008_annotation_resolver.py
+│   │   │   │   │   📂 corpus_validation
+│   │   │   │   │   │   📄 annotation_resolver_corpus_report.md
+│   │   │   │   │   │   📄 annotation_resolver_corpus_results.json
+│   │   │   │   │   📂 evidence
+│   │   │   │   │   │   📄 tc_m2_dr_001_result.json
+│   │   │   │   │   │   📄 tc_m2_dr_002_result.json
+│   │   │   │   │   │   📄 tc_m2_dr_003_result.json
+│   │   │   │   │   │   📄 tc_m2_dr_004_result.json
+│   │   │   │   │   │   📄 tc_m2_dr_005_result.json
+│   │   │   │   │   │   📄 tc_m2_dr_006_result.json
+│   │   │   │   │   │   📄 tc_m2_dr_007_result.json
+│   │   │   │   │   │   📄 tc_m2_dr_008_result.json
+│   │   │   │   │   📂 fixtures
+│   │   │   │   │   │   📂 annotation
+│   │   │   │   │   │   │   📄 models.py
+│   │   │   │   │   │   │   📄 service.py
+│   │   │   │   │   │   │   📄 __init__.py
+│   │   │   │   │   │   📂 builtin_type
+│   │   │   │   │   │   │   📄 builtin_usage.py
+│   │   │   │   │   │   │   📄 __init__.py
+│   │   │   │   │   │   📂 constructor
+│   │   │   │   │   │   │   📄 db.py
+│   │   │   │   │   │   │   📄 models.py
+│   │   │   │   │   │   │   📄 operations.py
+│   │   │   │   │   │   │   📄 pipeline.py
+│   │   │   │   │   │   │   📄 repository.py
+│   │   │   │   │   │   │   📄 service.py
+│   │   │   │   │   │   │   📄 workflow.py
+│   │   │   │   │   │   │   📄 __init__.py
+│   │   │   │   │   │   📂 factory
+│   │   │   │   │   │   │   📄 factory_usage.py
+│   │   │   │   │   │   │   📄 __init__.py
+│   │   │   │   │   │   📂 inheritance
+│   │   │   │   │   │   │   📄 inheritance_usage.py
+│   │   │   │   │   │   │   📄 __init__.py
+│   │   │   │   │   │   📂 pipeline_integration
+│   │   │   │   │   │   │   📄 models.py
+│   │   │   │   │   │   │   📄 pipeline.py
+│   │   │   │   │   │   │   📄 services.py
+│   │   │   │   │   │   │   📄 __init__.py
+│   │   │   │   │   │   📂 property
+│   │   │   │   │   │   │   📄 property_usage.py
+│   │   │   │   │   │   │   📄 __init__.py
+│   │   │   │   │   │   📂 reflection
+│   │   │   │   │   │   │   📄 reflection_usage.py
+│   │   │   │   │   │   │   📄 __init__.py
+│   │   │   │   📂 evidence
+│   │   │   │   │   📄 tc_m2_cs_001_result.json
+│   │   │   │   │   📄 tc_m2_go_001_result.json
+│   │   │   │   │   📄 tc_m2_sql_001_result.json
+│   │   │   │   📂 fixtures
+│   │   │   │   │   📂 csharp
+│   │   │   │   │   │   📂 Controllers
+│   │   │   │   │   │   │   📄 UserController.cs
+│   │   │   │   │   │   📂 Interfaces
+│   │   │   │   │   │   │   📄 IUserRepository.cs
+│   │   │   │   │   │   📂 Models
+│   │   │   │   │   │   │   📄 User.cs
+│   │   │   │   │   │   📂 Services
+│   │   │   │   │   │   │   📄 UserService.cs
+│   │   │   │   │   📂 go
+│   │   │   │   │   │   📄 go.mod
+│   │   │   │   │   │   📂 models
+│   │   │   │   │   │   │   📄 user.go
+│   │   │   │   │   │   📂 repository
+│   │   │   │   │   │   │   📄 user_repo.go
+│   │   │   │   │   │   📂 service
+│   │   │   │   │   │   │   📄 user_service.go
+│   │   │   │   │   📂 sql
+│   │   │   │   │   │   📄 functions.sql
+│   │   │   │   │   │   📄 procedures.sql
+│   │   │   │   │   │   📄 schema.sql
+│   │   │   │   │   │   📄 triggers.sql
+│   │   │   │   │   │   📄 views.sql
+│   │   │   │   📂 unresolved_pipeline
+│   │   │   │   │   📄 assignment_chain_builder.py
+│   │   │   │   │   📄 attribute_return_benchmark.py
+│   │   │   │   │   📄 attribute_return_resolver.py
+│   │   │   │   │   📄 builtin_type_engine.py
+│   │   │   │   │   📄 call_classification_benchmark.py
+│   │   │   │   │   📄 cause_classifier.py
+│   │   │   │   │   📄 constructor_call_classifier.py
+│   │   │   │   │   📄 constructor_origin_tracker.py
+│   │   │   │   │   📄 constructor_tracking_engine.py
+│   │   │   │   │   📄 corpus_package_root_scan.py
+│   │   │   │   │   📄 factory_origin_tracker.py
+│   │   │   │   │   📄 factory_return_engine.py
+│   │   │   │   │   📄 fact_extractor.py
+│   │   │   │   │   📄 fact_extractor_v2.py
+│   │   │   │   │   📄 final_resolution_benchmark.py
+│   │   │   │   │   📄 flatten_class_graph.py
+│   │   │   │   │   📄 full_log_classification_benchmark.py
+│   │   │   │   │   📄 inheritance_resolver.py
+│   │   │   │   │   📄 known_framework_functions.py
+│   │   │   │   │   📄 object_method_benchmark.py
+│   │   │   │   │   📄 object_method_resolver.py
+│   │   │   │   │   📄 origin_resolution_benchmark.py
+│   │   │   │   │   📄 property_resolution_benchmark.py
+│   │   │   │   │   📄 property_type_engine.py
+│   │   │   │   │   📄 property_type_table_builder.py
+│   │   │   │   │   📄 reflection_resolver.py
+│   │   │   │   │   📄 report_generator.py
+│   │   │   │   │   📄 resolution_pipeline.py
+│   │   │   │   │   📄 resolution_scorecard.py
+│   │   │   │   │   📄 return_flow_benchmark.py
+│   │   │   │   │   📄 return_flow_tracker.py
+│   │   │   │   │   📄 return_flow_tracker_v2.py
+│   │   │   │   │   📄 test_real_repo.py
+│   │   │   │   │   📄 test_unresolved_resolution_pipeline.py
+│   │   │   │   │   📄 type_propagation_resolver.py
+│   │   │   │   │   📄 unknown_call_analyzer.py
+│   │   │   │   │   📄 unknown_call_benchmark.py
+│   │   │   │   │   📄 unresolved_analyzer.py
+│   │   │   │   │   📄 variable_origin_extractor.py
+│   │   📂 repository_reasoning
+│   │   │   📄 advanced_reasoning.py
+│   │   │   📄 change_impact.py
+│   │   │   📄 classify_declines.py
+│   │   │   📄 classify_patterns.py
+│   │   │   📄 cross_module_type_resolver.py
+│   │   │   📄 csharp_call_graph.py
+│   │   │   📄 go_call_graph.py
+│   │   │   📄 imported_receiver_edges.py
+│   │   │   📄 java_type_inference.py
+│   │   │   📄 language_adapter_bridge.py
+│   │   │   📄 local_receiver_edges.py
+│   │   │   📄 module3_pipeline.py
+│   │   │   📄 multi_hop_analyzer.py
+│   │   │   📄 reasoning_engine.py
+│   │   │   📄 reasoning_queries.py
+│   │   │   📄 registry_string_resolver.py
+│   │   │   📄 return_type_inferencer.py
+│   │   │   📄 self_attribute_typer.py
+│   │   │   📄 sql_lineage.py
+│   │   │   📄 truth_boundary_demo.py
+│   │   │   📄 type_fact_aggregator.py
+│   │   │   📄 type_flow_tracer.py
+│   │   │   📄 variable_type_propagator.py
+│   │   │   📂 benchmarks
+│   │   │   │   📄 __init__.py
+│   │   │   │   📂 crosscodeeval
+│   │   │   │   │   📄 bench_against_crosscodeeval.py
+│   │   │   │   │   📄 bench_against_networkx.py
+│   │   │   │   │   📄 cceval_evaluate.py
+│   │   │   │   │   📄 cceval_gap_analysis.py
+│   │   │   │   │   📄 cceval_gap_refine.py
+│   │   │   │   │   📄 cceval_repo_fetch.py
+│   │   │   │   │   📄 run_cceval_avail.py
+│   │   │   │   │   📄 run_cceval_full.py
+│   │   │   │   │   📄 run_cceval_stage2.py
+│   │   │   │   │   📄 test_imported_cceval.py
+│   │   │   │   │   📄 __init__.py
+│   │   │   │   📂 TraceEval
+│   │   │   │   │   📄 patch_find.py
+│   │   │   │   │   📄 patch_import.py
+│   │   │   │   │   📄 run_traceeval.py
+│   │   │   │   │   📄 run_traceeval_v2.py
+│   │   │   │   │   📄 test_traceeval_harness.py
+│   │   │   │   │   📄 traceeval_harness.py
+│   │   │   │   │   📄 verify_traceeval.py
+│   │   │   │   │   📄 __init__.py
+│   │   │   📂 tests
+│   │   │   │   📄 test_advanced_reasoning.py
+│   │   │   │   📄 test_bench_against_networkx.py
+│   │   │   │   📄 test_bench_crosscodeeval.py
+│   │   │   │   📄 test_cross_module_type_resolver.py
+│   │   │   │   📄 test_csharp_call_graph.py
+│   │   │   │   📄 test_emitter_final.py
+│   │   │   │   📄 test_go_call_graph.py
+│   │   │   │   📄 test_imported.py
+│   │   │   │   📄 test_java_enrichment.py
+│   │   │   │   📄 test_java_type_inference.py
+│   │   │   │   📄 test_language_adapter_bridge.py
+│   │   │   │   📄 test_language_agnostic_3b.py
+│   │   │   │   📄 test_local_edges.py
+│   │   │   │   📄 test_multi_hop_analyzer.py
+│   │   │   │   📄 test_reasoning_queries.py
+│   │   │   │   📄 test_return_type_inferencer.py
+│   │   │   │   📄 test_sql_lineage.py
+│   │   │   │   📄 test_super.py
+│   │   │   │   📄 test_type_fact_aggregator.py
+│   │   │   │   📄 test_variable_type_propagator.py
+│   │   │   📂 _scratch
+│   │   │   │   📄 add_m2scan.py
+│   │   │   │   📄 apply_merge.py
+│   │   │   │   📄 apply_merge2.py
+│   │   │   │   📄 check_patch.py
+│   │   │   │   📄 collect_inheritance_data.py
+│   │   │   │   📄 conform_m3.py
+│   │   │   │   📄 conform_pipeline.py
+│   │   │   │   📄 diagnose_local_edges.py
+│   │   │   │   📄 diag_emit_trace.py
+│   │   │   │   📄 diag_fid.py
+│   │   │   │   📄 diag_imports.py
+│   │   │   │   📄 diag_init_bug.py
+│   │   │   │   📄 diag_keymismatch.py
+│   │   │   │   📄 diag_keymismatch2.py
+│   │   │   │   📄 diag_pynastran.py
+│   │   │   │   📄 diag_real_emit.py
+│   │   │   │   📄 diag_recursion.py
+│   │   │   │   📄 diag_super_flask.py
+│   │   │   │   📄 fix_report_structure.py
+│   │   │   │   📄 inheritance_baseline.json
+│   │   │   │   📄 inheritance_baseline_PRE.json
+│   │   │   │   📄 inspect_index.py
+│   │   │   │   📄 measure_inheritance_gap.py
+│   │   │   │   📄 patch_c3_mro.py
+│   │   │   │   📄 patch_c3_v2.py
+│   │   │   │   📄 patch_decline_reasons.py
+│   │   │   │   📄 patch_mro_cycle.py
+│   │   │   │   📄 patch_scope_resolution.py
+│   │   │   │   📄 patch_subreason.py
+│   │   │   │   📄 patch_super.py
+│   │   │   │   📄 probe_bridge.py
+│   │   │   │   📄 probe_csharp.py
+│   │   │   │   📄 probe_csharp2.py
+│   │   │   │   📄 probe_cs_sql.py
+│   │   │   │   📄 probe_imports.py
+│   │   │   │   📄 probe_imports2.py
+│   │   │   │   📄 probe_inheritance_edges.py
+│   │   │   │   📄 probe_java.py
+│   │   │   │   📄 probe_java2.py
+│   │   │   │   📄 probe_namespace.py
+│   │   │   │   📄 probe_shapes.py
+│   │   │   │   📄 probe_sql_model.py
+│   │   │   │   📄 probe_super.py
+│   │   │   │   📄 rank_targets.py
+│   │   │   │   📄 run_csharp_diff.py
+│   │   │   │   📄 run_sql_diff.py
+│   │   │   │   📄 show_decline.py
+│   │   │   │   📄 show_queries.py
+│   │   │   │   📄 show_resolver.py
+│   │   │   │   📄 show_super.py
+│   │   │   │   📄 spotcheck.py
+│   │   │   │   📄 test_query.py
+│   │   │   │   📄 trace_imported.py
+│   │   │   │   📄 trace_imported2.py
+│   │   │   │   📄 trace_json.py
+│   │   │   │   📄 trace_lookup.py
+│   │   │   │   📄 validate_csharp.py
+│   │   │   │   📄 validate_csharp_scale.py
+│   │   │   │   📄 validate_init_chain.py
+│   │   │   │   📄 validate_sql.py
+│   │   │   │   📄 validate_sql_queries.py
+│   │   │   │   📄 verify_init_real.py
+│   │   │   │   📄 wire_imported.py
+│   │   │   │   📄 wire_local_edges.py
 │   │   📂 tests
 │   │   │   📄 clone_repos.ps1
 │   │   │   📄 scan_all_repos_v3.py
 │   │   │   📄 test_module1_cognition.py
 │   │   │   📄 __init__.py
+│   │   │   📂 module1
+│   │   │   │   📂 classification
+│   │   │   │   │   📄 scan_unknown_extensions.py
+│   │   │   │   │   📄 tc_m1_001_finance_repository.md
+│   │   │   │   │   📄 tc_m1_001_finance_repository.py
+│   │   │   │   │   📄 tc_m1_002_medical_repository.md
+│   │   │   │   │   📄 tc_m1_002_medical_repository.py
+│   │   │   │   │   📄 tc_m1_003_robotics_repository.md
+│   │   │   │   │   📄 tc_m1_003_robotics_repository.py
+│   │   │   │   │   📄 tc_m1_004_climate_repository.md
+│   │   │   │   │   📄 tc_m1_004_climate_repository.py
+│   │   │   │   │   📄 tc_m1_005_fpga_repository.md
+│   │   │   │   │   📄 tc_m1_005_fpga_repository.py
+│   │   │   │   │   📄 tc_m1_006_api_repository.md
+│   │   │   │   │   📄 tc_m1_006_api_repository.py
+│   │   │   │   │   📄 tc_m1_007_web_repository.md
+│   │   │   │   │   📄 tc_m1_007_web_repository.py
+│   │   │   │   │   📄 tc_m1_008_ml_repository.md
+│   │   │   │   │   📄 tc_m1_008_ml_repository.py
+│   │   │   │   │   📄 tc_m1_009_cli_repository.md
+│   │   │   │   │   📄 tc_m1_009_cli_repository.py
+│   │   │   │   │   📄 tc_m1_010_multidomain_repository.md
+│   │   │   │   │   📄 tc_m1_010_multidomain_repository.py
+│   │   │   │   │   📄 tc_m1_011_pynastran_repository.md
+│   │   │   │   │   📄 tc_m1_011_pynastran_repository.py
+│   │   │   │   │   📄 tc_m1_012_dronekit_python_repository.md
+│   │   │   │   │   📄 tc_m1_012_dronekit_python_repository.py
+│   │   │   │   │   📄 tc_m1_013_zipline_repository.md
+│   │   │   │   │   📄 tc_m1_013_zipline_repository.py
+│   │   │   │   │   📄 tc_m1_014_lasio_repository.md
+│   │   │   │   │   📄 tc_m1_014_lasio_repository.py
+│   │   │   │   │   📄 tc_m1_015_pymodbus_repository.md
+│   │   │   │   │   📄 tc_m1_015_pymodbus_repository.py
+│   │   │   │   │   📄 tc_m1_016_welleng_repository.md
+│   │   │   │   │   📄 tc_m1_016_welleng_repository.py
+│   │   │   │   │   📄 tc_m1_017_pandapower_repository.md
+│   │   │   │   │   📄 tc_m1_017_pandapower_repository.py
+│   │   │   │   │   📄 tc_m1_018_pyreservoir_repository.md
+│   │   │   │   │   📄 tc_m1_018_pyreservoir_repository.py
+│   │   │   │   │   📄 tc_m1_019_pypsa_repository.md
+│   │   │   │   │   📄 tc_m1_019_pypsa_repository.py
+│   │   │   │   │   📄 tc_m1_020_fluids_repository.md
+│   │   │   │   │   📄 tc_m1_020_fluids_repository.py
+│   │   │   │   │   📄 tc_m1_021_striplog_repository.md
+│   │   │   │   │   📄 tc_m1_021_striplog_repository.py
+│   │   │   │   │   📄 tc_m1_022_poliastro_repository.md
+│   │   │   │   │   📄 tc_m1_022_poliastro_repository.py
+│   │   │   │   │   📄 tc_m1_023_astropy_repository.md
+│   │   │   │   │   📄 tc_m1_023_astropy_repository.py
+│   │   │   │   │   📄 tc_m1_024_monorepo_repository.md
+│   │   │   │   │   📄 tc_m1_024_monorepo_repository.py
+│   │   │   │   │   📄 tc_m1_025_broken_repository.md
+│   │   │   │   │   📄 tc_m1_025_broken_repository.py
+│   │   │   │   │   📄 tc_m1_026_incomplete_repository.md
+│   │   │   │   │   📄 tc_m1_026_incomplete_repository.py
+│   │   │   │   │   📄 tc_m1_027_custom_framework_repository.md
+│   │   │   │   │   📄 tc_m1_027_custom_framework_repository.py
+│   │   │   │   │   📄 tc_m1_028_no_dependencies_repository.md
+│   │   │   │   │   📄 tc_m1_028_no_dependencies_repository.py
+│   │   │   │   │   📄 tc_m1_029_mixed_stack_repository.md
+│   │   │   │   │   📄 tc_m1_029_mixed_stack_repository.py
+│   │   │   │   │   📄 tc_m1_030_django_repository.md
+│   │   │   │   │   📄 tc_m1_030_django_repository.py
+│   │   │   │   │   📄 tc_m1_031_pytorch_repository.md
+│   │   │   │   │   📄 tc_m1_031_pytorch_repository.py
+│   │   │   │   │   📄 tc_m1_032_python_repository.md
+│   │   │   │   │   📄 tc_m1_032_python_repository.py
+│   │   │   │   │   📂 evidence
+│   │   │   │   │   │   📄 tc_m1_001_audit.json
+│   │   │   │   │   │   📄 tc_m1_001_core.json
+│   │   │   │   │   │   📄 tc_m1_001_enhanced.json
+│   │   │   │   │   │   📄 tc_m1_002_audit.json
+│   │   │   │   │   │   📄 tc_m1_002_core.json
+│   │   │   │   │   │   📄 tc_m1_002_enhanced.json
+│   │   │   │   │   │   📄 tc_m1_0030_audit.json
+│   │   │   │   │   │   📄 tc_m1_0031_audit.json
+│   │   │   │   │   │   📄 tc_m1_0032_audit.json
+│   │   │   │   │   │   📄 tc_m1_003_audit.json
+│   │   │   │   │   │   📄 tc_m1_003_core.json
+│   │   │   │   │   │   📄 tc_m1_003_enhanced.json
+│   │   │   │   │   │   📄 tc_m1_004_audit.json
+│   │   │   │   │   │   📄 tc_m1_004_core.json
+│   │   │   │   │   │   📄 tc_m1_004_enhanced.json
+│   │   │   │   │   │   📄 tc_m1_005_audit.json
+│   │   │   │   │   │   📄 tc_m1_005_core.json
+│   │   │   │   │   │   📄 tc_m1_005_enhanced.json
+│   │   │   │   │   │   📄 tc_m1_006_audit.json
+│   │   │   │   │   │   📄 tc_m1_006_core.json
+│   │   │   │   │   │   📄 tc_m1_006_enhanced.json
+│   │   │   │   │   │   📄 tc_m1_007_audit.json
+│   │   │   │   │   │   📄 tc_m1_007_core.json
+│   │   │   │   │   │   📄 tc_m1_007_enhanced.json
+│   │   │   │   │   │   📄 tc_m1_008_audit.json
+│   │   │   │   │   │   📄 tc_m1_008_core.json
+│   │   │   │   │   │   📄 tc_m1_008_enhanced.json
+│   │   │   │   │   │   📄 tc_m1_009_audit.json
+│   │   │   │   │   │   📄 tc_m1_009_core.json
+│   │   │   │   │   │   📄 tc_m1_009_enhanced.json
+│   │   │   │   │   │   📄 tc_m1_010_audit.json
+│   │   │   │   │   │   📄 tc_m1_010_core.json
+│   │   │   │   │   │   📄 tc_m1_010_enhanced.json
+│   │   │   │   │   │   📄 tc_m1_011_audit.json
+│   │   │   │   │   │   📄 tc_m1_011_core.json
+│   │   │   │   │   │   📄 tc_m1_011_enhanced.json
+│   │   │   │   │   │   📄 tc_m1_012_audit.json
+│   │   │   │   │   │   📄 tc_m1_012_core.json
+│   │   │   │   │   │   📄 tc_m1_012_enhanced.json
+│   │   │   │   │   │   📄 tc_m1_013_audit.json
+│   │   │   │   │   │   📄 tc_m1_013_core.json
+│   │   │   │   │   │   📄 tc_m1_013_enhanced.json
+│   │   │   │   │   │   📄 tc_m1_014_audit.json
+│   │   │   │   │   │   📄 tc_m1_014_core.json
+│   │   │   │   │   │   📄 tc_m1_014_enhanced.json
+│   │   │   │   │   │   📄 tc_m1_015_audit.json
+│   │   │   │   │   │   📄 tc_m1_015_core.json
+│   │   │   │   │   │   📄 tc_m1_015_enhanced.json
+│   │   │   │   │   │   📄 tc_m1_016_audit.json
+│   │   │   │   │   │   📄 tc_m1_016_core.json
+│   │   │   │   │   │   📄 tc_m1_016_enhanced.json
+│   │   │   │   │   │   📄 tc_m1_017_audit.json
+│   │   │   │   │   │   📄 tc_m1_017_core.json
+│   │   │   │   │   │   📄 tc_m1_017_enhanced.json
+│   │   │   │   │   │   📄 tc_m1_018_audit.json
+│   │   │   │   │   │   📄 tc_m1_018_core.json
+│   │   │   │   │   │   📄 tc_m1_018_enhanced.json
+│   │   │   │   │   │   📄 tc_m1_019_audit.json
+│   │   │   │   │   │   📄 tc_m1_019_core.json
+│   │   │   │   │   │   📄 tc_m1_019_enhanced.json
+│   │   │   │   │   │   📄 tc_m1_020_audit.json
+│   │   │   │   │   │   📄 tc_m1_020_core.json
+│   │   │   │   │   │   📄 tc_m1_020_enhanced.json
+│   │   │   │   │   │   📄 tc_m1_021_audit.json
+│   │   │   │   │   │   📄 tc_m1_021_core.json
+│   │   │   │   │   │   📄 tc_m1_021_enhanced.json
+│   │   │   │   │   │   📄 tc_m1_022_audit.json
+│   │   │   │   │   │   📄 tc_m1_022_core.json
+│   │   │   │   │   │   📄 tc_m1_022_enhanced.json
+│   │   │   │   │   │   📄 tc_m1_023_audit.json
+│   │   │   │   │   │   📄 tc_m1_023_core.json
+│   │   │   │   │   │   📄 tc_m1_023_enhanced.json
+│   │   │   │   │   │   📄 tc_m1_024_audit.json
+│   │   │   │   │   │   📄 tc_m1_024_core.json
+│   │   │   │   │   │   📄 tc_m1_025_audit.json
+│   │   │   │   │   │   📄 tc_m1_026_audit.json
+│   │   │   │   │   │   📄 tc_m1_027_audit.json
+│   │   │   │   │   │   📄 tc_m1_028_audit.json
+│   │   │   │   │   │   📄 tc_m1_029_audit.json
+│   │   │   │   │   📂 fixtures
+│   │   │   │   │   │   📂 broken_repo
+│   │   │   │   │   │   │   📄 broken_module.py
+│   │   │   │   │   │   │   📄 empty.py
+│   │   │   │   │   │   │   📄 README.md
+│   │   │   │   │   │   │   📄 truncated.py
+│   │   │   │   │   │   📂 incomplete_repo
+│   │   │   │   │   │   │   📄 .gitignore
+│   │   │   │   │   │   │   📄 README.md
+│   │   │   │   │   │   📂 no_deps_repo
+│   │   │   │   │   │   │   📄 main.py
+│   │   │   │   │   │   │   📄 README.md
+│   │   │   │   │   │   │   📄 utils.py
+│   │   │   │   📂 governance
+│   │   │   │   │   📄 TC_M1_003_GATE.py
+│   │   │   │   │   📂 evidence
+│   │   │   │   │   │   📄 override_signature.json
 │   📂 validation
 │   │   📄 approval_engine.py
 │   │   📄 rollback_manager.py

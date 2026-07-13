@@ -1,0 +1,15 @@
+{
+  "target": "flask.app.Flask.dispatch_request",
+  "resolved": true,
+  "impact": {
+    "direct": 5,
+    "transitive": 6,
+    "sample": [
+      "query",
+      "target",
+      "affected_callers",
+      "count",
+      "label"
+    ]
+  }
+}

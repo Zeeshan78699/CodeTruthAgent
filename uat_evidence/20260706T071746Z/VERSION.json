@@ -1,0 +1,18 @@
+{
+  "declared": {
+    "codetruth_platform": "v3.0.0",
+    "module1": "v3.0.0-module1 (published: GitHub tag / HF / Zenodo)",
+    "module2": "v3.0.0-module2 (published: GitHub tag / HF / Zenodo)",
+    "module3": "v3.0.0-module3 (frozen; not yet published)",
+    "uat_spec_version": "module-uat-1.0.0",
+    "benchmark_version": "n/a"
+  },
+  "observed_code_git": {
+    "status": "ok",
+    "commit": "c238c9ee1870304a357976a9c4ee1d4f5faa627d",
+    "describe": "v3.0.0-module2-1-gc238c9e-dirty",
+    "branch": "main",
+    "dirty": true
+  },
+  "note": "declared versions are human-maintained; observed_code_git is captured automatically and is the objective anchor."
+}

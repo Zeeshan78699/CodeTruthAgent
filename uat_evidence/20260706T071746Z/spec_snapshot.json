@@ -1,0 +1,118 @@
+{
+  "uat_spec_version": "module-uat-1.0.0",
+  "frozen_before_run": true,
+  "tests": [
+    {
+      "id": "HEALTH-001",
+      "objective": "Repository Health Check: is this repository's analysis trustworthy? Produce the 11-section assessment and a health verdict grounded in integrity, not coverage.",
+      "requirement": "Phase 5 - Engineering Scenario: Repository Health Check.",
+      "maturity": "Impl - Pending UAT",
+      "entrypoint": "codetruth_report._health + generate (over run_platform)",
+      "scenario": "GIVEN an unfamiliar repository, WHEN a developer asks 'can I trust an automated analysis of this codebase?', THEN CodeTruth runs the full pipeline and returns a health verdict where SOUND means zero fabrications and every decline categorized - explicitly NOT a claim about resolution coverage.",
+      "expected_result": "status=COMPLETE; health_rating=SOUND; guesses=0; uncategorized_declines=0. The 11-section assessment report is attached as evidence. (UNVERIFIED here would be a genuine integrity failure, not a coverage issue.)",
+      "checks": [
+        {
+          "name": "health_completed",
+          "expected": "platform status == COMPLETE"
+        },
+        {
+          "name": "health_sound",
+          "expected": "health_rating == SOUND (integrity intact)"
+        },
+        {
+          "name": "health_zero_guesses",
+          "expected": "metrics.guesses == 0"
+        },
+        {
+          "name": "health_all_declines_categorized",
+          "expected": "metrics.uncategorized_declines == 0"
+        }
+      ]
+    },
+    {
+      "id": "IMPACT-METHOD-001",
+      "objective": "Change Impact (populated): before modifying a method, show its verified blast radius over the reasoning-resolved call graph.",
+      "requirement": "Phase 5 - Engineering Scenario: Change Impact (method).",
+      "maturity": "Impl - Pending UAT",
+      "entrypoint": "reasoning_queries.who_calls / impact_of (engine-direct)",
+      "scenario": "GIVEN a developer about to change Flask.dispatch_request, WHEN they ask 'what verifiably breaks?', THEN CodeTruth returns the verified direct callers and the call-reachable affected set over the verified call graph - no guessing, and identity-checked.",
+      "expected_result": "who_calls and impact_of both return; direct_callers has exactly 1 entry and it IS flask.app.Flask.full_dispatch_request; each list length matches its query count field. Identity-level, not shape-only - a wrong caller or count fails this test (this is the upgrade the helper-bug incident demanded).",
+      "checks": [
+        {
+          "name": "impact_resolved",
+          "expected": "who_calls and impact_of both returned"
+        },
+        {
+          "name": "impact_direct_consistent",
+          "expected": "direct_callers list length == who_calls count field"
+        },
+        {
+          "name": "impact_direct_is_one",
+          "expected": "exactly 1 direct caller (identity-checked below)"
+        },
+        {
+          "name": "impact_direct_identity",
+          "expected": "the caller IS flask.app.Flask.full_dispatch_request"
+        },
+        {
+          "name": "impact_reachable_consistent",
+          "expected": "affected_callers length == impact_of count field"
+        }
+      ]
+    },
+    {
+      "id": "IMPACT-METHOD-002",
+      "objective": "Change Impact (honest-empty boundary): a method with 0 verified callers is reported as a known-unknown - never as 'safe to delete'.",
+      "requirement": "Phase 5 - Engineering Scenario: Change Impact (Truth Boundary).",
+      "maturity": "Impl - Pending UAT",
+      "entrypoint": "reasoning_queries.who_calls / impact_of (engine-direct)",
+      "scenario": "GIVEN Flask.send_static_file, which has no in-repo callers, WHEN a developer asks 'is it safe to change or delete?', THEN CodeTruth reports 0 verified callers AND treats that as a known-unknown (the method may be reached via dynamic dispatch, framework routing, or external code) - it does NOT claim 'safe'.",
+      "expected_result": "who_calls returns 0 direct_callers for send_static_file, consistent with its count field, and this 0 is treated as a known-unknown - NOT 'safe to delete'. Read directly from the engine query, not the report helper. (The criterion direct==0 is unchanged from the earlier FAIL; only the measurement was corrected - the goalpost was not moved.)",
+      "checks": [
+        {
+          "name": "impact_resolved",
+          "expected": "who_calls and impact_of both returned"
+        },
+        {
+          "name": "impact_direct_consistent",
+          "expected": "direct_callers list length == who_calls count field"
+        },
+        {
+          "name": "impact_honest_empty",
+          "expected": "0 direct callers, reported as known-unknown (never 'safe to delete')"
+        }
+      ]
+    },
+    {
+      "id": "DEADCODE-001",
+      "objective": "Dead Code Candidates: list functions with no inbound internal call edge as CANDIDATES for review - never labeled confirmed dead code, since static analysis cannot prove unreachability in dynamic frameworks like Flask.",
+      "requirement": "Phase 5 - Engineering Scenario: Dead Code Candidates / Technical Debt.",
+      "maturity": "Impl - Pending UAT",
+      "entrypoint": "v3.repository_reasoning.reasoning_queries.dead_code",
+      "scenario": "GIVEN a repository accumulating unused code, WHEN a developer asks 'what looks unused?', THEN CodeTruth returns functions with no inbound internal call edge, LABELED as CANDIDATES with an explicit boundary that entry points, framework callbacks, and dynamic dispatch may appear falsely - narrowing the search, not authorizing deletion.",
+      "expected_result": "query=dead_code; candidates is a list; count == len(candidates); label == CANDIDATES; a boundary note is present. The tool surfaces candidates and refuses to call them dead - the human decides.",
+      "checks": [
+        {
+          "name": "deadcode_query",
+          "expected": "query == dead_code"
+        },
+        {
+          "name": "deadcode_candidates_list",
+          "expected": "candidates is a list"
+        },
+        {
+          "name": "deadcode_count_consistent",
+          "expected": "count == len(candidates)"
+        },
+        {
+          "name": "deadcode_labeled_candidates",
+          "expected": "label == CANDIDATES (not a deletion verdict)"
+        },
+        {
+          "name": "deadcode_boundary_stated",
+          "expected": "explicit boundary note present (Truth Boundary)"
+        }
+      ]
+    }
+  ]
+}

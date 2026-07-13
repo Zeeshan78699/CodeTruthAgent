@@ -1,0 +1,239 @@
+{
+  "uat_spec_version": "module-uat-1.0.0",
+  "frozen_before_run": true,
+  "tests": [
+    {
+      "id": "HEALTH-001",
+      "objective": "health scenario for django",
+      "requirement": "Phase 5 - Engineering Scenario: Repository Health Check.",
+      "maturity": "Impl - Pending UAT",
+      "entrypoint": "codetruth_report._health + generate (over run_platform)",
+      "scenario": "GIVEN an unfamiliar repository, WHEN a developer asks whether an automated analysis can be trusted, THEN the health verdict is SOUND iff zero fabrications and every decline categorized (integrity, not coverage).",
+      "expected_result": "kind=health; rating=SOUND; frozen before the run; identity/consistency-level checks.",
+      "checks": [
+        {
+          "name": "health_completed",
+          "expected": "status == COMPLETE"
+        },
+        {
+          "name": "health_rating",
+          "expected": "health_rating == SOUND"
+        },
+        {
+          "name": "health_zero_guesses",
+          "expected": "guesses == 0"
+        },
+        {
+          "name": "health_all_declines_categorized",
+          "expected": "uncategorized_declines == 0"
+        }
+      ]
+    },
+    {
+      "id": "DEADCODE-001",
+      "objective": "dead_code scenario for django",
+      "requirement": "Phase 5 - Engineering Scenario: Dead Code Candidates / Technical Debt.",
+      "maturity": "Impl - Pending UAT",
+      "entrypoint": "reasoning_queries.dead_code",
+      "scenario": "GIVEN a repository accumulating unused code, WHEN a developer asks 'what looks unused?', THEN CodeTruth returns functions with no inbound internal edge, LABELED as CANDIDATES with an explicit boundary - not a deletion verdict.",
+      "expected_result": "kind=dead_code; candidate_count=3345; frozen before the run; identity/consistency-level checks.",
+      "checks": [
+        {
+          "name": "deadcode_query",
+          "expected": "query == dead_code"
+        },
+        {
+          "name": "deadcode_candidates_list",
+          "expected": "candidates is a list"
+        },
+        {
+          "name": "deadcode_count_consistent",
+          "expected": "count == len(candidates)"
+        },
+        {
+          "name": "deadcode_labeled_candidates",
+          "expected": "label == CANDIDATES (not a verdict)"
+        },
+        {
+          "name": "deadcode_boundary_stated",
+          "expected": "boundary note present (Truth Boundary)"
+        },
+        {
+          "name": "deadcode_candidate_count",
+          "expected": "count == 3345"
+        }
+      ]
+    },
+    {
+      "id": "IMPACT-METHOD-001",
+      "objective": "impact_method scenario for django",
+      "requirement": "Phase 5 - Engineering Scenario: Change Impact (method).",
+      "maturity": "Impl - Pending UAT",
+      "entrypoint": "reasoning_queries.who_calls / impact_of (engine-direct)",
+      "scenario": "GIVEN a developer about to change django.db.models.query.QuerySet.filter, WHEN they ask 'what verifiably breaks?', THEN CodeTruth returns the verified direct callers and call-reachable set - identity-checked, no guessing.",
+      "expected_result": "kind=impact_method; target=django.db.models.query.QuerySet.filter; direct_callers=['django.db.models.query.QuerySet.contains', 'django.db.models.query.QuerySet.get', 'tests.custom_managers.models.CustomQuerySet.filter']; affected_count=4; frozen before the run; identity/consistency-level checks.",
+      "checks": [
+        {
+          "name": "impact_resolved",
+          "expected": "who_calls and impact_of both returned"
+        },
+        {
+          "name": "impact_target",
+          "expected": "target IS django.db.models.query.QuerySet.filter"
+        },
+        {
+          "name": "impact_direct_consistent",
+          "expected": "direct_callers length == who_calls count"
+        },
+        {
+          "name": "impact_reachable_consistent",
+          "expected": "affected_callers length == impact_of count"
+        },
+        {
+          "name": "impact_direct_identity",
+          "expected": "direct_callers == ['django.db.models.query.QuerySet.contains', 'django.db.models.query.QuerySet.get', 'tests.custom_managers.models.CustomQuerySet.filter']"
+        },
+        {
+          "name": "impact_affected_count",
+          "expected": "affected_count == 4"
+        }
+      ]
+    },
+    {
+      "id": "IMPACT-METHOD-002",
+      "objective": "impact_method scenario for django",
+      "requirement": "Phase 5 - Engineering Scenario: Change Impact (Truth Boundary / honest-empty).",
+      "maturity": "Impl - Pending UAT",
+      "entrypoint": "reasoning_queries.who_calls / impact_of (engine-direct)",
+      "scenario": "GIVEN a developer about to change django.db.models.functions.comparison.Least.__init__, WHEN they ask 'what verifiably breaks?', THEN CodeTruth returns the verified direct callers and call-reachable set - identity-checked, no guessing.",
+      "expected_result": "kind=impact_method; target=django.db.models.functions.comparison.Least.__init__; direct_callers=[]; affected_count=0; frozen before the run; identity/consistency-level checks.",
+      "checks": [
+        {
+          "name": "impact_resolved",
+          "expected": "who_calls and impact_of both returned"
+        },
+        {
+          "name": "impact_target",
+          "expected": "target IS django.db.models.functions.comparison.Least.__init__"
+        },
+        {
+          "name": "impact_direct_consistent",
+          "expected": "direct_callers length == who_calls count"
+        },
+        {
+          "name": "impact_reachable_consistent",
+          "expected": "affected_callers length == impact_of count"
+        },
+        {
+          "name": "impact_direct_identity",
+          "expected": "direct_callers == []"
+        },
+        {
+          "name": "impact_affected_count",
+          "expected": "affected_count == 0"
+        }
+      ]
+    },
+    {
+      "id": "CHANGE-IMPACT-001",
+      "objective": "change_impact scenario for django",
+      "requirement": "Phase 5 - Engineering Scenario: Change Impact (flagship tool, parity).",
+      "maturity": "Impl - Pending UAT",
+      "entrypoint": "v3.repository_reasoning.change_impact.analyze",
+      "scenario": "GIVEN a developer running the FLAGSHIP change_impact tool on django.db.models.query.QuerySet.filter, WHEN they ask 'what verifiably breaks?', THEN the tool reports exactly the engine's verified answer (parity), with zero guesses.",
+      "expected_result": "kind=change_impact; target=django.db.models.query.QuerySet.filter; direct_callers=['django.db.models.query.QuerySet.contains', 'django.db.models.query.QuerySet.get', 'tests.custom_managers.models.CustomQuerySet.filter']; affected_count=4; frozen before the run; identity/consistency-level checks.",
+      "checks": [
+        {
+          "name": "flagship_no_error",
+          "expected": "analyze() returned without error"
+        },
+        {
+          "name": "flagship_target",
+          "expected": "resolved target IS django.db.models.query.QuerySet.filter"
+        },
+        {
+          "name": "flagship_direct_identity",
+          "expected": "direct_callers == ['django.db.models.query.QuerySet.contains', 'django.db.models.query.QuerySet.get', 'tests.custom_managers.models.CustomQuerySet.filter']"
+        },
+        {
+          "name": "flagship_affected_count",
+          "expected": "affected_count == 4"
+        },
+        {
+          "name": "flagship_zero_guesses",
+          "expected": "scope.guesses == 0"
+        }
+      ]
+    },
+    {
+      "id": "CHANGE-IMPACT-002",
+      "objective": "change_impact scenario for django",
+      "requirement": "Phase 5 - Engineering Scenario: Change Impact (flagship tool, Truth Boundary).",
+      "maturity": "Impl - Pending UAT",
+      "entrypoint": "v3.repository_reasoning.change_impact.analyze",
+      "scenario": "GIVEN a developer running the FLAGSHIP change_impact tool on django.db.models.functions.comparison.Least.__init__, WHEN they ask 'what verifiably breaks?', THEN the tool reports exactly the engine's verified answer (parity), with zero guesses.",
+      "expected_result": "kind=change_impact; target=django.db.models.functions.comparison.Least.__init__; direct_callers=[]; affected_count=0; frozen before the run; identity/consistency-level checks.",
+      "checks": [
+        {
+          "name": "flagship_no_error",
+          "expected": "analyze() returned without error"
+        },
+        {
+          "name": "flagship_target",
+          "expected": "resolved target IS django.db.models.functions.comparison.Least.__init__"
+        },
+        {
+          "name": "flagship_direct_identity",
+          "expected": "direct_callers == []"
+        },
+        {
+          "name": "flagship_affected_count",
+          "expected": "affected_count == 0"
+        },
+        {
+          "name": "flagship_zero_guesses",
+          "expected": "scope.guesses == 0"
+        }
+      ]
+    },
+    {
+      "id": "IMPACT-CLASS-001",
+      "objective": "impact_class scenario for django",
+      "requirement": "Phase 5 - Engineering Scenario: Safe Refactoring (class impact).",
+      "maturity": "Impl - Pending UAT",
+      "entrypoint": "reasoning_queries.depends_on_class (engine-direct)",
+      "scenario": "GIVEN a developer about to refactor django.db.models.query.QuerySet, WHEN they ask 'what depends on this class?', THEN CodeTruth returns the in-repo callers of its methods (excluding its own), honestly reporting 0 when callers are internal/dynamic.",
+      "expected_result": "kind=impact_class; target=django.db.models.query.QuerySet; external_dependents_count=13; methods_count=99; frozen before the run; identity/consistency-level checks.",
+      "checks": [
+        {
+          "name": "class_query",
+          "expected": "query == depends_on_class"
+        },
+        {
+          "name": "class_target_echoed",
+          "expected": "target echoes django.db.models.query.QuerySet"
+        },
+        {
+          "name": "class_lists_present",
+          "expected": "methods and external_dependents are lists"
+        },
+        {
+          "name": "class_boundary_stated",
+          "expected": "boundary note present (Truth Boundary)"
+        },
+        {
+          "name": "class_count_consistent",
+          "expected": "count == number of external_dependents"
+        },
+        {
+          "name": "class_external_count",
+          "expected": "external dependents == 13"
+        },
+        {
+          "name": "class_methods_count",
+          "expected": "methods == 99"
+        }
+      ]
+    }
+  ]
+}

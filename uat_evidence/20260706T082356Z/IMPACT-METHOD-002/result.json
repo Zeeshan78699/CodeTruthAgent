@@ -1,0 +1,8 @@
+{
+  "target": "flask.app.Flask.send_static_file",
+  "resolved": true,
+  "direct_callers": [],
+  "direct_count_field": 0,
+  "affected_callers": [],
+  "impact_count_field": 0
+}

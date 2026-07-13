@@ -1,0 +1,79 @@
+{
+  "target": "django.db.models.query.QuerySet.filter",
+  "target_split": [
+    "django.db.models.query",
+    "QuerySet",
+    "filter"
+  ],
+  "direct_callers": [
+    "django.db.models.query.QuerySet.contains",
+    "django.db.models.query.QuerySet.get",
+    "tests.custom_managers.models.CustomQuerySet.filter"
+  ],
+  "direct_count": 3,
+  "affected_callers": [
+    "django.db.models.query.QuerySet.contains",
+    "django.db.models.query.QuerySet.get",
+    "django.db.models.query.QuerySet.get_or_create",
+    "tests.custom_managers.models.CustomQuerySet.filter"
+  ],
+  "affected_count": 4,
+  "affected_files": [
+    "django.db.models.query",
+    "tests.custom_managers.models"
+  ],
+  "affected_classes": [
+    "django.db.models.query.QuerySet",
+    "tests.custom_managers.models.CustomQuerySet"
+  ],
+  "affected_modules": [
+    "django.db.models.query",
+    "tests.custom_managers.models"
+  ],
+  "call_chains": [
+    [
+      "django.db.models.query.QuerySet.contains",
+      "django.db.models.query.QuerySet.filter"
+    ],
+    [
+      "tests.custom_managers.models.CustomQuerySet.filter",
+      "django.db.models.query.QuerySet.filter"
+    ],
+    [
+      "django.db.models.query.QuerySet.get_or_create",
+      "django.db.models.query.QuerySet.get",
+      "django.db.models.query.QuerySet.filter"
+    ]
+  ],
+  "max_depth": 3,
+  "who_boundary": "internal callers only; external callers not visible",
+  "impact_boundary": "in-repo call-reachability only; NOT semantic breakage; external/dynamic callers not included",
+  "outgoing_calls": [
+    [
+      "django.db.models.query.QuerySet._not_support_combined_queries",
+      "internal",
+      1652,
+      "self_method_call"
+    ],
+    [
+      "django.db.models.query.QuerySet._filter_or_exclude",
+      "internal",
+      1653,
+      "self_method_call"
+    ]
+  ],
+  "public_api": true,
+  "core_framework": true,
+  "regression_risk": "HIGH",
+  "risk_inputs": {
+    "public_api": true,
+    "max_depth": 3,
+    "affected_count": 4,
+    "conditions_met": 3
+  },
+  "scope": {
+    "functions_in_index": 22864,
+    "graph_edges": 67289,
+    "guesses": 0
+  }
+}

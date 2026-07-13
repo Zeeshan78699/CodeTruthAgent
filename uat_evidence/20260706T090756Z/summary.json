@@ -1,0 +1,340 @@
+{
+  "run_stamp": "20260706T090756Z",
+  "overall": "ALL PASS",
+  "tests_total": 7,
+  "tests_passed": 7,
+  "tests": [
+    {
+      "id": "HEALTH-001",
+      "status": "PASS",
+      "requirement": "Phase 5 - Engineering Scenario: Repository Health Check.",
+      "maturity": "Impl - Pending UAT",
+      "entrypoint": "codetruth_report._health + generate (over run_platform)",
+      "scenario": "GIVEN an unfamiliar repository, WHEN a developer asks whether an automated analysis can be trusted, THEN the health verdict is SOUND iff zero fabrications and every decline categorized (integrity, not coverage).",
+      "expected_result": "kind=health; rating=SOUND; frozen before the run; identity/consistency-level checks.",
+      "repo": "C:\\repos\\v3\\flask",
+      "checks_passed": 4,
+      "checks_total": 4,
+      "checks": [
+        {
+          "name": "health_completed",
+          "expected": "status == COMPLETE",
+          "observed": "status=COMPLETE",
+          "passed": true
+        },
+        {
+          "name": "health_rating",
+          "expected": "health_rating == SOUND",
+          "observed": "health_rating=SOUND (expected SOUND, risk=LOW)",
+          "passed": true
+        },
+        {
+          "name": "health_zero_guesses",
+          "expected": "guesses == 0",
+          "observed": "guesses=0",
+          "passed": true
+        },
+        {
+          "name": "health_all_declines_categorized",
+          "expected": "uncategorized_declines == 0",
+          "observed": "uncategorized_declines=0",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "IMPACT-METHOD-001",
+      "status": "PASS",
+      "requirement": "Phase 5 - Engineering Scenario: Change Impact (method).",
+      "maturity": "Impl - Pending UAT",
+      "entrypoint": "reasoning_queries.who_calls / impact_of (engine-direct)",
+      "scenario": "GIVEN a developer about to change flask.app.Flask.dispatch_request, WHEN they ask 'what verifiably breaks?', THEN CodeTruth returns the verified direct callers and call-reachable set - identity-checked, no guessing.",
+      "expected_result": "kind=impact_method; target=flask.app.Flask.dispatch_request; direct_callers=['flask.app.Flask.full_dispatch_request']; affected_count=3; frozen before the run; identity/consistency-level checks.",
+      "repo": "C:\\repos\\v3\\flask",
+      "checks_passed": 6,
+      "checks_total": 6,
+      "checks": [
+        {
+          "name": "impact_resolved",
+          "expected": "who_calls and impact_of both returned",
+          "observed": "resolved=True target=flask.app.Flask.dispatch_request",
+          "passed": true
+        },
+        {
+          "name": "impact_target",
+          "expected": "target IS flask.app.Flask.dispatch_request",
+          "observed": "target=flask.app.Flask.dispatch_request (expected flask.app.Flask.dispatch_request)",
+          "passed": true
+        },
+        {
+          "name": "impact_direct_consistent",
+          "expected": "direct_callers length == who_calls count",
+          "observed": "direct_n=1, count_field=1",
+          "passed": true
+        },
+        {
+          "name": "impact_reachable_consistent",
+          "expected": "affected_callers length == impact_of count",
+          "observed": "affected_n=3, count_field=3",
+          "passed": true
+        },
+        {
+          "name": "impact_direct_identity",
+          "expected": "direct_callers == ['flask.app.Flask.full_dispatch_request']",
+          "observed": "direct_callers=['flask.app.Flask.full_dispatch_request'] (expected ['flask.app.Flask.full_dispatch_request'])",
+          "passed": true
+        },
+        {
+          "name": "impact_affected_count",
+          "expected": "affected_count == 3",
+          "observed": "affected_count=3 (expected 3)",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "IMPACT-METHOD-002",
+      "status": "PASS",
+      "requirement": "Phase 5 - Engineering Scenario: Change Impact (Truth Boundary / honest-empty).",
+      "maturity": "Impl - Pending UAT",
+      "entrypoint": "reasoning_queries.who_calls / impact_of (engine-direct)",
+      "scenario": "GIVEN a developer about to change flask.app.Flask.send_static_file, WHEN they ask 'what verifiably breaks?', THEN CodeTruth returns the verified direct callers and call-reachable set - identity-checked, no guessing.",
+      "expected_result": "kind=impact_method; target=flask.app.Flask.send_static_file; direct_callers=[]; affected_count=0; frozen before the run; identity/consistency-level checks.",
+      "repo": "C:\\repos\\v3\\flask",
+      "checks_passed": 6,
+      "checks_total": 6,
+      "checks": [
+        {
+          "name": "impact_resolved",
+          "expected": "who_calls and impact_of both returned",
+          "observed": "resolved=True target=flask.app.Flask.send_static_file",
+          "passed": true
+        },
+        {
+          "name": "impact_target",
+          "expected": "target IS flask.app.Flask.send_static_file",
+          "observed": "target=flask.app.Flask.send_static_file (expected flask.app.Flask.send_static_file)",
+          "passed": true
+        },
+        {
+          "name": "impact_direct_consistent",
+          "expected": "direct_callers length == who_calls count",
+          "observed": "direct_n=0, count_field=0",
+          "passed": true
+        },
+        {
+          "name": "impact_reachable_consistent",
+          "expected": "affected_callers length == impact_of count",
+          "observed": "affected_n=0, count_field=0",
+          "passed": true
+        },
+        {
+          "name": "impact_direct_identity",
+          "expected": "direct_callers == []",
+          "observed": "direct_callers=[] (expected [])",
+          "passed": true
+        },
+        {
+          "name": "impact_affected_count",
+          "expected": "affected_count == 0",
+          "observed": "affected_count=0 (expected 0)",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEADCODE-001",
+      "status": "PASS",
+      "requirement": "Phase 5 - Engineering Scenario: Dead Code Candidates / Technical Debt.",
+      "maturity": "Impl - Pending UAT",
+      "entrypoint": "reasoning_queries.dead_code",
+      "scenario": "GIVEN a repository accumulating unused code, WHEN a developer asks 'what looks unused?', THEN CodeTruth returns functions with no inbound internal edge, LABELED as CANDIDATES with an explicit boundary - not a deletion verdict.",
+      "expected_result": "kind=dead_code; candidate_count=139; frozen before the run; identity/consistency-level checks.",
+      "repo": "C:\\repos\\v3\\flask",
+      "checks_passed": 6,
+      "checks_total": 6,
+      "checks": [
+        {
+          "name": "deadcode_query",
+          "expected": "query == dead_code",
+          "observed": "query=dead_code",
+          "passed": true
+        },
+        {
+          "name": "deadcode_candidates_list",
+          "expected": "candidates is a list",
+          "observed": "candidates_is_list=True, n=139",
+          "passed": true
+        },
+        {
+          "name": "deadcode_count_consistent",
+          "expected": "count == len(candidates)",
+          "observed": "count=139, len(candidates)=139",
+          "passed": true
+        },
+        {
+          "name": "deadcode_labeled_candidates",
+          "expected": "label == CANDIDATES (not a verdict)",
+          "observed": "label=CANDIDATES",
+          "passed": true
+        },
+        {
+          "name": "deadcode_boundary_stated",
+          "expected": "boundary note present (Truth Boundary)",
+          "observed": "boundary_present=True",
+          "passed": true
+        },
+        {
+          "name": "deadcode_candidate_count",
+          "expected": "count == 139",
+          "observed": "count=139 (expected 139)",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "IMPACT-CLASS-001",
+      "status": "PASS",
+      "requirement": "Phase 5 - Engineering Scenario: Safe Refactoring (class impact).",
+      "maturity": "Impl - Pending UAT",
+      "entrypoint": "reasoning_queries.depends_on_class (engine-direct)",
+      "scenario": "GIVEN a developer about to refactor flask.app.Flask, WHEN they ask 'what depends on this class?', THEN CodeTruth returns the in-repo callers of its methods (excluding its own), honestly reporting 0 when callers are internal/dynamic.",
+      "expected_result": "kind=impact_class; target=flask.app.Flask; external_dependents_count=0; methods_count=30; frozen before the run; identity/consistency-level checks.",
+      "repo": "C:\\repos\\v3\\flask",
+      "checks_passed": 7,
+      "checks_total": 7,
+      "checks": [
+        {
+          "name": "class_query",
+          "expected": "query == depends_on_class",
+          "observed": "query=depends_on_class",
+          "passed": true
+        },
+        {
+          "name": "class_target_echoed",
+          "expected": "target echoes flask.app.Flask",
+          "observed": "target=flask.app.Flask (expected flask.app.Flask)",
+          "passed": true
+        },
+        {
+          "name": "class_lists_present",
+          "expected": "methods and external_dependents are lists",
+          "observed": "methods_is_list=True(n=30), external_is_list=True(n=0)",
+          "passed": true
+        },
+        {
+          "name": "class_boundary_stated",
+          "expected": "boundary note present (Truth Boundary)",
+          "observed": "boundary_present=True",
+          "passed": true
+        },
+        {
+          "name": "class_count_consistent",
+          "expected": "count == number of external_dependents",
+          "observed": "count=0, external_dependents_n=0",
+          "passed": true
+        },
+        {
+          "name": "class_external_count",
+          "expected": "external dependents == 0",
+          "observed": "external_dependents count=0 (expected 0)",
+          "passed": true
+        },
+        {
+          "name": "class_methods_count",
+          "expected": "methods == 30",
+          "observed": "methods_n=30 (expected 30)",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "CHANGE-IMPACT-001",
+      "status": "PASS",
+      "requirement": "Phase 5 - Engineering Scenario: Change Impact (flagship tool, parity).",
+      "maturity": "Impl - Pending UAT",
+      "entrypoint": "v3.repository_reasoning.change_impact.analyze",
+      "scenario": "GIVEN a developer running the FLAGSHIP change_impact tool on flask.app.Flask.dispatch_request, WHEN they ask 'what verifiably breaks?', THEN the tool reports exactly the engine's verified answer (parity), with zero guesses.",
+      "expected_result": "kind=change_impact; target=flask.app.Flask.dispatch_request; direct_callers=['flask.app.Flask.full_dispatch_request']; affected_count=3; frozen before the run; identity/consistency-level checks.",
+      "repo": "C:\\repos\\v3\\flask",
+      "checks_passed": 5,
+      "checks_total": 5,
+      "checks": [
+        {
+          "name": "flagship_no_error",
+          "expected": "analyze() returned without error",
+          "observed": "error=none",
+          "passed": true
+        },
+        {
+          "name": "flagship_target",
+          "expected": "resolved target IS flask.app.Flask.dispatch_request",
+          "observed": "resolved target=flask.app.Flask.dispatch_request (expected flask.app.Flask.dispatch_request)",
+          "passed": true
+        },
+        {
+          "name": "flagship_direct_identity",
+          "expected": "direct_callers == ['flask.app.Flask.full_dispatch_request']",
+          "observed": "direct_callers=['flask.app.Flask.full_dispatch_request'], direct_count=1 (expected ['flask.app.Flask.full_dispatch_request'])",
+          "passed": true
+        },
+        {
+          "name": "flagship_affected_count",
+          "expected": "affected_count == 3",
+          "observed": "affected_count=3, affected_n=3 (expected 3)",
+          "passed": true
+        },
+        {
+          "name": "flagship_zero_guesses",
+          "expected": "scope.guesses == 0",
+          "observed": "guesses=0",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "CHANGE-IMPACT-002",
+      "status": "PASS",
+      "requirement": "Phase 5 - Engineering Scenario: Change Impact (flagship tool, Truth Boundary).",
+      "maturity": "Impl - Pending UAT",
+      "entrypoint": "v3.repository_reasoning.change_impact.analyze",
+      "scenario": "GIVEN a developer running the FLAGSHIP change_impact tool on flask.app.Flask.send_static_file, WHEN they ask 'what verifiably breaks?', THEN the tool reports exactly the engine's verified answer (parity), with zero guesses.",
+      "expected_result": "kind=change_impact; target=flask.app.Flask.send_static_file; direct_callers=[]; affected_count=0; frozen before the run; identity/consistency-level checks.",
+      "repo": "C:\\repos\\v3\\flask",
+      "checks_passed": 5,
+      "checks_total": 5,
+      "checks": [
+        {
+          "name": "flagship_no_error",
+          "expected": "analyze() returned without error",
+          "observed": "error=none",
+          "passed": true
+        },
+        {
+          "name": "flagship_target",
+          "expected": "resolved target IS flask.app.Flask.send_static_file",
+          "observed": "resolved target=flask.app.Flask.send_static_file (expected flask.app.Flask.send_static_file)",
+          "passed": true
+        },
+        {
+          "name": "flagship_direct_identity",
+          "expected": "direct_callers == []",
+          "observed": "direct_callers=[], direct_count=0 (expected [])",
+          "passed": true
+        },
+        {
+          "name": "flagship_affected_count",
+          "expected": "affected_count == 0",
+          "observed": "affected_count=0, affected_n=0 (expected 0)",
+          "passed": true
+        },
+        {
+          "name": "flagship_zero_guesses",
+          "expected": "scope.guesses == 0",
+          "observed": "guesses=0",
+          "passed": true
+        }
+      ]
+    }
+  ]
+}

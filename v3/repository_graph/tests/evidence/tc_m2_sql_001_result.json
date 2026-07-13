@@ -1,0 +1,273 @@
+{
+  "repo_root": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\sql",
+  "language": "sql",
+  "dialect": "oracle_plsql",
+  "files_scanned": 5,
+  "parse_errors": 0,
+  "tables": {
+    "users": {
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\sql\\schema.sql",
+      "type": "TABLE"
+    },
+    "orders": {
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\sql\\schema.sql",
+      "type": "TABLE"
+    },
+    "order_items": {
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\sql\\schema.sql",
+      "type": "TABLE"
+    },
+    "products": {
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\sql\\schema.sql",
+      "type": "TABLE"
+    }
+  },
+  "views": {
+    "active_users": {
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\sql\\views.sql",
+      "type": "VIEW"
+    },
+    "order_summary": {
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\sql\\views.sql",
+      "type": "VIEW"
+    },
+    "product_inventory": {
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\sql\\views.sql",
+      "type": "VIEW"
+    }
+  },
+  "procedures": {
+    "create_order": {
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\sql\\procedures.sql",
+      "type": "PROCEDURE"
+    },
+    "update_user_status": {
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\sql\\procedures.sql",
+      "type": "PROCEDURE"
+    },
+    "process_orders": {
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\sql\\procedures.sql",
+      "type": "PROCEDURE"
+    }
+  },
+  "functions": {
+    "get_user_total_orders": {
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\sql\\functions.sql",
+      "type": "FUNCTION"
+    },
+    "calculate_discount": {
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\sql\\functions.sql",
+      "type": "FUNCTION"
+    }
+  },
+  "triggers": {
+    "trg_order_audit": {
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\sql\\triggers.sql",
+      "type": "TRIGGER"
+    },
+    "trg_check_stock": {
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\sql\\triggers.sql",
+      "type": "TRIGGER"
+    }
+  },
+  "packages": {},
+  "node_counts": {
+    "tables": 4,
+    "views": 3,
+    "procedures": 3,
+    "functions": 2,
+    "triggers": 2,
+    "packages": 0,
+    "total": 14
+  },
+  "edge_counts": {
+    "table_references": 17,
+    "procedure_calls": 1,
+    "oracle_pkg_calls": 7,
+    "total": 25
+  },
+  "resolution": {
+    "resolved_count": 18,
+    "unresolved_count": 7,
+    "resolved_entries": [
+      {
+        "target": "orders",
+        "ref_type": "SELECT",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\sql\\functions.sql",
+        "resolved": true
+      },
+      {
+        "target": "orders",
+        "ref_type": "SELECT",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\sql\\functions.sql",
+        "resolved": true
+      },
+      {
+        "target": "orders",
+        "ref_type": "SELECT",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\sql\\procedures.sql",
+        "resolved": true
+      },
+      {
+        "target": "orders",
+        "ref_type": "SELECT",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\sql\\procedures.sql",
+        "resolved": true
+      },
+      {
+        "target": "orders",
+        "ref_type": "INSERT",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\sql\\procedures.sql",
+        "resolved": true
+      },
+      {
+        "target": "users",
+        "ref_type": "UPDATE",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\sql\\procedures.sql",
+        "resolved": true
+      },
+      {
+        "target": "order_items",
+        "ref_type": "UPDATE",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\sql\\procedures.sql",
+        "resolved": true
+      },
+      {
+        "target": "create_order",
+        "ref_type": "CALL",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\sql\\procedures.sql",
+        "resolved": true
+      },
+      {
+        "target": "products",
+        "ref_type": "SELECT",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\sql\\triggers.sql",
+        "resolved": true
+      },
+      {
+        "target": "products",
+        "ref_type": "UPDATE",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\sql\\triggers.sql",
+        "resolved": true
+      },
+      {
+        "target": "orders",
+        "ref_type": "TRIGGER_ON",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\sql\\triggers.sql",
+        "resolved": true
+      },
+      {
+        "target": "order_items",
+        "ref_type": "TRIGGER_ON",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\sql\\triggers.sql",
+        "resolved": true
+      },
+      {
+        "target": "users",
+        "ref_type": "SELECT",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\sql\\views.sql",
+        "resolved": true
+      },
+      {
+        "target": "orders",
+        "ref_type": "SELECT",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\sql\\views.sql",
+        "resolved": true
+      },
+      {
+        "target": "products",
+        "ref_type": "SELECT",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\sql\\views.sql",
+        "resolved": true
+      },
+      {
+        "target": "users",
+        "ref_type": "JOIN",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\sql\\views.sql",
+        "resolved": true
+      },
+      {
+        "target": "order_items",
+        "ref_type": "JOIN",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\sql\\views.sql",
+        "resolved": true
+      },
+      {
+        "target": "orders",
+        "ref_type": "JOIN",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\sql\\views.sql",
+        "resolved": true
+      }
+    ],
+    "unresolved_entries": [
+      {
+        "package": "DBMS_OUTPUT",
+        "method": "PUT_LINE",
+        "ref_type": "USES_PKG",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\sql\\procedures.sql",
+        "resolved": false,
+        "reason": "ORACLE_SYSTEM_PACKAGE"
+      },
+      {
+        "package": "DBMS_STATS",
+        "method": "GATHER_TABLE_STATS",
+        "ref_type": "USES_PKG",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\sql\\procedures.sql",
+        "resolved": false,
+        "reason": "ORACLE_SYSTEM_PACKAGE"
+      },
+      {
+        "package": "DBMS_OUTPUT",
+        "method": "PUT_LINE",
+        "ref_type": "USES_PKG",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\sql\\procedures.sql",
+        "resolved": false,
+        "reason": "ORACLE_SYSTEM_PACKAGE"
+      },
+      {
+        "package": "DBMS_OUTPUT",
+        "method": "PUT_LINE",
+        "ref_type": "USES_PKG",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\sql\\procedures.sql",
+        "resolved": false,
+        "reason": "ORACLE_SYSTEM_PACKAGE"
+      },
+      {
+        "package": "DBMS_OUTPUT",
+        "method": "PUT_LINE",
+        "ref_type": "USES_PKG",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\sql\\triggers.sql",
+        "resolved": false,
+        "reason": "ORACLE_SYSTEM_PACKAGE"
+      },
+      {
+        "package": "DBMS_OUTPUT",
+        "method": "PUT_LINE",
+        "ref_type": "USES_PKG",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\sql\\triggers.sql",
+        "resolved": false,
+        "reason": "ORACLE_SYSTEM_PACKAGE"
+      },
+      {
+        "package": "DBMS_OUTPUT",
+        "method": "PUT_LINE",
+        "ref_type": "USES_PKG",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\sql\\triggers.sql",
+        "resolved": false,
+        "reason": "ORACLE_SYSTEM_PACKAGE"
+      }
+    ],
+    "resolution_pct": 72.0
+  },
+  "resolved_calls": 18,
+  "unresolved_total": 7,
+  "resolution_pct": 72.0,
+  "governance_gate": "APPROVED",
+  "language_composition": {
+    "sql": {
+      "file_count": 5,
+      "implemented": true,
+      "dialect": "oracle_plsql"
+    }
+  }
+}

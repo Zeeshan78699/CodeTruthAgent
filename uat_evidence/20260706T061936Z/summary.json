@@ -1,0 +1,160 @@
+{
+  "run_stamp": "20260706T061936Z",
+  "overall": "ALL PASS",
+  "tests_total": 4,
+  "tests_passed": 4,
+  "tests": [
+    {
+      "id": "SMOKE-001",
+      "status": "PASS",
+      "requirement": "Phase 1 - Platform Integration (one-scan governed pipeline).",
+      "maturity": "Impl - Pending UAT",
+      "entrypoint": "run_codetruth.run_platform",
+      "scenario": "GIVEN the full CodeTruth platform and a real repository, WHEN it is run in one governed pass (M1 -> gate -> M2 -> M3), THEN the pipeline completes end-to-end, the gate is a real decision, structure is scanned, and reasoning fabricates nothing.",
+      "expected_result": "status=COMPLETE; gate in {APPROVED, REVIEW_REQUIRED}; M1 emits an identity; M2 scans >=1 file; M3 guesses=0.",
+      "repo": "C:\\repos\\v3\\flask",
+      "checks_passed": 5,
+      "checks_total": 5,
+      "checks": [
+        {
+          "name": "pipeline_completed",
+          "expected": "status == COMPLETE",
+          "observed": "status=COMPLETE",
+          "passed": true
+        },
+        {
+          "name": "gate_not_blocking",
+          "expected": "gate in {APPROVED, REVIEW_REQUIRED}",
+          "observed": "gate=APPROVED",
+          "passed": true
+        },
+        {
+          "name": "m1_produced_identity",
+          "expected": "module1 has non-empty application_type and framework",
+          "observed": "application_type=WEB_APPLICATION, framework=Flask, arch=LIBRARY",
+          "passed": true
+        },
+        {
+          "name": "m2_scanned_structure",
+          "expected": "module2.files_scanned > 0",
+          "observed": "files_scanned=83, functions=1460, edges=686",
+          "passed": true
+        },
+        {
+          "name": "m3_zero_guesses",
+          "expected": "module3.truth_boundary.guesses == 0 (Python); honest note otherwise",
+          "observed": "guesses=0",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "M1-001",
+      "status": "PASS",
+      "requirement": "Phase 2 - Module 1 Repository Cognition.",
+      "maturity": "Validated",
+      "entrypoint": "run_m1.run_module1",
+      "scenario": "GIVEN only Module 1 and a repository, WHEN cognition runs, THEN it produces a governance decision and a non-empty identity (application type, framework, architecture) with a bounded confidence - with no downstream modules involved.",
+      "expected_result": "status=COMPLETE; gate in {APPROVED, REVIEW_REQUIRED, BLOCKED}; identity fields non-empty; confidence in [0,1]. (Identity CORRECTNESS is out of scope - Phase 2.)",
+      "repo": "C:\\repos\\v3\\flask",
+      "checks_passed": 4,
+      "checks_total": 4,
+      "checks": [
+        {
+          "name": "m1_status_complete",
+          "expected": "status == COMPLETE",
+          "observed": "status=COMPLETE",
+          "passed": true
+        },
+        {
+          "name": "m1_gate_decided",
+          "expected": "gate in {APPROVED, REVIEW_REQUIRED, BLOCKED}",
+          "observed": "gate=APPROVED",
+          "passed": true
+        },
+        {
+          "name": "m1_identity_present",
+          "expected": "non-empty application_type, framework, architecture",
+          "observed": "application_type=WEB_APPLICATION, framework=Flask, architecture=LIBRARY",
+          "passed": true
+        },
+        {
+          "name": "m1_confidence_bounded",
+          "expected": "confidence is numeric in [0.0, 1.0]",
+          "observed": "confidence=1.0",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "M2-001",
+      "status": "PASS",
+      "requirement": "Phase 3 - Module 2 Structural Intelligence.",
+      "maturity": "Validated",
+      "entrypoint": "run_m2.run_module2 (language=python)",
+      "scenario": "GIVEN only Module 2 and a Python repository, WHEN the structural scan runs, THEN it parses files and returns a governance gate and a COMPLETE status.",
+      "expected_result": "status=COMPLETE; governance_gate set (not UNKNOWN); files_scanned>0. (Graph MAGNITUDES are informational - the runner return is thin by contract.)",
+      "repo": "C:\\repos\\v3\\flask",
+      "checks_passed": 3,
+      "checks_total": 3,
+      "checks": [
+        {
+          "name": "m2_status_complete",
+          "expected": "status == COMPLETE",
+          "observed": "status=COMPLETE",
+          "passed": true
+        },
+        {
+          "name": "m2_gate_present",
+          "expected": "governance_gate is set (not UNKNOWN)",
+          "observed": "gate=APPROVED",
+          "passed": true
+        },
+        {
+          "name": "m2_files_scanned",
+          "expected": "files_scanned > 0",
+          "observed": "files_scanned=83",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "M3-001",
+      "status": "PASS",
+      "requirement": "Phase 4 - Module 3 Repository Reasoning.",
+      "maturity": "Validated",
+      "entrypoint": "v3.repository_reasoning.module3_pipeline.run_module3",
+      "scenario": "GIVEN only Module 3 and a repository, WHEN reasoning runs, THEN it produces phase 3A and 3B results and holds the Truth Boundary - declining what it cannot verify rather than guessing.",
+      "expected_result": "phase_3a and phase_3b present; truth_boundary.guesses=0; numeric_confidence_scores=0; 3A reports resolved/baseline. (3A COVERAGE %% is informational, not a pass criterion.)",
+      "repo": "C:\\repos\\v3\\flask",
+      "checks_passed": 4,
+      "checks_total": 4,
+      "checks": [
+        {
+          "name": "m3_phases_present",
+          "expected": "report has phase_3a and phase_3b",
+          "observed": "phase_3a=y, phase_3b=y",
+          "passed": true
+        },
+        {
+          "name": "m3_zero_guesses",
+          "expected": "truth_boundary.guesses == 0",
+          "observed": "guesses=0",
+          "passed": true
+        },
+        {
+          "name": "m3_no_fabricated_confidence",
+          "expected": "truth_boundary.numeric_confidence_scores == 0",
+          "observed": "numeric_confidence_scores=0",
+          "passed": true
+        },
+        {
+          "name": "m3_3a_resolution_reported",
+          "expected": "phase_3a reports attr_calls_total over baseline",
+          "observed": "attr_calls_total=18/2506 baseline",
+          "passed": true
+        }
+      ]
+    }
+  ]
+}

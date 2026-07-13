@@ -1,0 +1,210 @@
+{
+  "run_stamp": "20260706T072701Z",
+  "overall": "FAIL / INCOMPLETE",
+  "tests_total": 5,
+  "tests_passed": 4,
+  "tests": [
+    {
+      "id": "HEALTH-001",
+      "status": "PASS",
+      "requirement": "Phase 5 - Engineering Scenario: Repository Health Check.",
+      "maturity": "Impl - Pending UAT",
+      "entrypoint": "codetruth_report._health + generate (over run_platform)",
+      "scenario": "GIVEN an unfamiliar repository, WHEN a developer asks 'can I trust an automated analysis of this codebase?', THEN CodeTruth runs the full pipeline and returns a health verdict where SOUND means zero fabrications and every decline categorized - explicitly NOT a claim about resolution coverage.",
+      "expected_result": "status=COMPLETE; health_rating=SOUND; guesses=0; uncategorized_declines=0. The 11-section assessment report is attached as evidence. (UNVERIFIED here would be a genuine integrity failure, not a coverage issue.)",
+      "repo": "C:\\repos\\v3\\flask",
+      "checks_passed": 4,
+      "checks_total": 4,
+      "checks": [
+        {
+          "name": "health_completed",
+          "expected": "platform status == COMPLETE",
+          "observed": "status=COMPLETE",
+          "passed": true
+        },
+        {
+          "name": "health_sound",
+          "expected": "health_rating == SOUND (integrity intact)",
+          "observed": "health_rating=SOUND (risk=LOW)",
+          "passed": true
+        },
+        {
+          "name": "health_zero_guesses",
+          "expected": "metrics.guesses == 0",
+          "observed": "guesses=0",
+          "passed": true
+        },
+        {
+          "name": "health_all_declines_categorized",
+          "expected": "metrics.uncategorized_declines == 0",
+          "observed": "uncategorized_declines=0",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "IMPACT-METHOD-001",
+      "status": "PASS",
+      "requirement": "Phase 5 - Engineering Scenario: Change Impact (method).",
+      "maturity": "Impl - Pending UAT",
+      "entrypoint": "reasoning_queries.who_calls / impact_of (engine-direct)",
+      "scenario": "GIVEN a developer about to change Flask.dispatch_request, WHEN they ask 'what verifiably breaks?', THEN CodeTruth returns the verified direct callers and the call-reachable affected set over the verified call graph - no guessing, and identity-checked.",
+      "expected_result": "who_calls and impact_of both return; direct_callers has exactly 1 entry and it IS flask.app.Flask.full_dispatch_request; each list length matches its query count field. Identity-level, not shape-only - a wrong caller or count fails this test (this is the upgrade the helper-bug incident demanded).",
+      "repo": "C:\\repos\\v3\\flask",
+      "checks_passed": 5,
+      "checks_total": 5,
+      "checks": [
+        {
+          "name": "impact_resolved",
+          "expected": "who_calls and impact_of both returned",
+          "observed": "resolved=True target=flask.app.Flask.dispatch_request",
+          "passed": true
+        },
+        {
+          "name": "impact_direct_consistent",
+          "expected": "direct_callers list length == who_calls count field",
+          "observed": "direct_callers_n=1, count_field=1",
+          "passed": true
+        },
+        {
+          "name": "impact_direct_is_one",
+          "expected": "exactly 1 direct caller (identity-checked below)",
+          "observed": "direct_callers=['flask.app.Flask.full_dispatch_request'] (expected 1)",
+          "passed": true
+        },
+        {
+          "name": "impact_direct_identity",
+          "expected": "the caller IS flask.app.Flask.full_dispatch_request",
+          "observed": "'flask.app.Flask.full_dispatch_request' present? True | direct_callers=['flask.app.Flask.full_dispatch_request']",
+          "passed": true
+        },
+        {
+          "name": "impact_reachable_consistent",
+          "expected": "affected_callers length == impact_of count field",
+          "observed": "affected_callers_n=3, count_field=3",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "IMPACT-METHOD-002",
+      "status": "PASS",
+      "requirement": "Phase 5 - Engineering Scenario: Change Impact (Truth Boundary).",
+      "maturity": "Impl - Pending UAT",
+      "entrypoint": "reasoning_queries.who_calls / impact_of (engine-direct)",
+      "scenario": "GIVEN Flask.send_static_file, which has no in-repo callers, WHEN a developer asks 'is it safe to change or delete?', THEN CodeTruth reports 0 verified callers AND treats that as a known-unknown (the method may be reached via dynamic dispatch, framework routing, or external code) - it does NOT claim 'safe'.",
+      "expected_result": "who_calls returns 0 direct_callers for send_static_file, consistent with its count field, and this 0 is treated as a known-unknown - NOT 'safe to delete'. Read directly from the engine query, not the report helper. (The criterion direct==0 is unchanged from the earlier FAIL; only the measurement was corrected - the goalpost was not moved.)",
+      "repo": "C:\\repos\\v3\\flask",
+      "checks_passed": 3,
+      "checks_total": 3,
+      "checks": [
+        {
+          "name": "impact_resolved",
+          "expected": "who_calls and impact_of both returned",
+          "observed": "resolved=True target=flask.app.Flask.send_static_file",
+          "passed": true
+        },
+        {
+          "name": "impact_direct_consistent",
+          "expected": "direct_callers list length == who_calls count field",
+          "observed": "direct_callers_n=0, count_field=0",
+          "passed": true
+        },
+        {
+          "name": "impact_honest_empty",
+          "expected": "0 direct callers, reported as known-unknown (never 'safe to delete')",
+          "observed": "direct_callers=[] (expected 0)",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEADCODE-001",
+      "status": "PASS",
+      "requirement": "Phase 5 - Engineering Scenario: Dead Code Candidates / Technical Debt.",
+      "maturity": "Impl - Pending UAT",
+      "entrypoint": "v3.repository_reasoning.reasoning_queries.dead_code",
+      "scenario": "GIVEN a repository accumulating unused code, WHEN a developer asks 'what looks unused?', THEN CodeTruth returns functions with no inbound internal call edge, LABELED as CANDIDATES with an explicit boundary that entry points, framework callbacks, and dynamic dispatch may appear falsely - narrowing the search, not authorizing deletion.",
+      "expected_result": "query=dead_code; candidates is a list; count == len(candidates); label == CANDIDATES; a boundary note is present. The tool surfaces candidates and refuses to call them dead - the human decides.",
+      "repo": "C:\\repos\\v3\\flask",
+      "checks_passed": 5,
+      "checks_total": 5,
+      "checks": [
+        {
+          "name": "deadcode_query",
+          "expected": "query == dead_code",
+          "observed": "query=dead_code",
+          "passed": true
+        },
+        {
+          "name": "deadcode_candidates_list",
+          "expected": "candidates is a list",
+          "observed": "candidates_is_list=True, n=139",
+          "passed": true
+        },
+        {
+          "name": "deadcode_count_consistent",
+          "expected": "count == len(candidates)",
+          "observed": "count=139, len(candidates)=139",
+          "passed": true
+        },
+        {
+          "name": "deadcode_labeled_candidates",
+          "expected": "label == CANDIDATES (not a deletion verdict)",
+          "observed": "label=CANDIDATES",
+          "passed": true
+        },
+        {
+          "name": "deadcode_boundary_stated",
+          "expected": "explicit boundary note present (Truth Boundary)",
+          "observed": "boundary_present=True",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "IMPACT-CLASS-001",
+      "status": "FAIL",
+      "requirement": "Phase 5 - Engineering Scenario: Safe Refactoring (class impact).",
+      "maturity": "Impl - Pending UAT",
+      "entrypoint": "reasoning_queries.depends_on_class (engine-direct)",
+      "scenario": "GIVEN a developer about to refactor the Flask class, WHEN they ask 'what depends on this class?', THEN CodeTruth returns the in-repo callers of the class's methods (excluding the class's own methods), bounded to static/in-repo reach.",
+      "expected_result": "query=depends_on_class; target echoes flask.app.Flask; methods and external_dependents are lists; boundary present; and count>0 (a core class must have in-repo dependents). NOTE: this uses the QUALIFIED name after the bare 'Flask' returned 0 - a 0 HERE would confirm an index / target-format defect, not a passing test. Identity-level method checks will be added once a populated result is observed.",
+      "repo": "C:\\repos\\v3\\flask",
+      "checks_passed": 4,
+      "checks_total": 5,
+      "checks": [
+        {
+          "name": "class_query",
+          "expected": "query == depends_on_class",
+          "observed": "query=depends_on_class",
+          "passed": true
+        },
+        {
+          "name": "class_target_echoed",
+          "expected": "target echoes flask.app.Flask (qualified name)",
+          "observed": "target=flask.app.Flask (expected flask.app.Flask)",
+          "passed": true
+        },
+        {
+          "name": "class_lists_present",
+          "expected": "methods and external_dependents are lists",
+          "observed": "methods_is_list=True(n=30), external_is_list=True(n=0)",
+          "passed": true
+        },
+        {
+          "name": "class_boundary_stated",
+          "expected": "boundary note present (Truth Boundary)",
+          "observed": "boundary_present=True",
+          "passed": true
+        },
+        {
+          "name": "class_has_dependents",
+          "expected": "a core class has >=1 in-repo dependent (count > 0)",
+          "observed": "count=0, methods_n=30, external_n=0 -> dependents NONE (investigate: qualified target or index gap)",
+          "passed": false
+        }
+      ]
+    }
+  ]
+}

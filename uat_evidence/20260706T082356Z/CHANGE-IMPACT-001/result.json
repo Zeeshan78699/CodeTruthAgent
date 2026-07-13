@@ -1,0 +1,72 @@
+{
+  "target": "flask.app.Flask.dispatch_request",
+  "target_split": [
+    "flask.app",
+    "Flask",
+    "dispatch_request"
+  ],
+  "direct_callers": [
+    "flask.app.Flask.full_dispatch_request"
+  ],
+  "direct_count": 1,
+  "affected_callers": [
+    "flask.app.Flask.__call__",
+    "flask.app.Flask.full_dispatch_request",
+    "flask.app.Flask.wsgi_app"
+  ],
+  "affected_count": 3,
+  "affected_files": [
+    "flask.app"
+  ],
+  "affected_classes": [
+    "flask.app.Flask"
+  ],
+  "affected_modules": [
+    "flask.app"
+  ],
+  "call_chains": [
+    [
+      "flask.app.Flask.__call__",
+      "flask.app.Flask.wsgi_app",
+      "flask.app.Flask.full_dispatch_request",
+      "flask.app.Flask.dispatch_request"
+    ]
+  ],
+  "max_depth": 4,
+  "who_boundary": "internal callers only; external callers not visible",
+  "impact_boundary": "in-repo call-reachability only; NOT semantic breakage; external/dynamic callers not included",
+  "outgoing_calls": [
+    [
+      "flask.app.Flask.raise_routing_exception",
+      "internal",
+      979,
+      "self_method_call"
+    ],
+    [
+      "flask.app.Flask.make_default_options_response",
+      "internal",
+      987,
+      "self_method_call"
+    ],
+    [
+      "flask.app.Flask.ensure_sync",
+      "internal",
+      990,
+      "self_method_call"
+    ]
+  ],
+  "public_api": true,
+  "core_framework": true,
+  "regression_risk": "HIGH",
+  "risk_inputs": {
+    "public_api": true,
+    "max_depth": 4,
+    "affected_count": 3,
+    "conditions_met": 3
+  },
+  "scope": {
+    "functions_in_index": 421,
+    "graph_edges": 697,
+    "guesses": 0
+  }
+}

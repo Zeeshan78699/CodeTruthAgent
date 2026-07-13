@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CodeTruth Live — Deterministic Repository Analysis</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.0/marked.min.js"></script>
+<style>
+  :root {
+    --ink: #0d1b2a;
+    --paper: #f7f9fb;
+    --panel: #ffffff;
+    --line: #d7dee6;
+    --verified: #1b7a4b;
+    --unknown: #b06a00;
+    --accent: #14507a;
+    --accent-soft: #e7f0f7;
+    --mono: 'SFMono-Regular', ui-monospace, 'Cascadia Code', Consolas, monospace;
+    --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--paper); color: var(--ink);
+    font-family: var(--sans); line-height: 1.5;
+  }
+  header {
+    border-bottom: 2px solid var(--ink);
+    padding: 20px 28px; background: var(--panel);
+    display: flex; align-items: baseline; gap: 16px;
+  }
+  header .logo { font-family: var(--mono); font-weight: 700; font-size: 20px;
+    letter-spacing: -0.5px; }
+  header .logo b { color: var(--verified); }
+  header .tag { font-size: 13px; color: #5a6b7a; font-family: var(--mono); }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 28px; }
+  .control {
+    background: var(--panel); border: 1px solid var(--line);
+    border-radius: 10px; padding: 22px; margin-bottom: 24px;
+  }
+  .modes { display: flex; gap: 8px; margin-bottom: 18px; flex-wrap: wrap; }
+  .mode-btn {
+    flex: 1; min-width: 180px; padding: 12px 14px; border: 1px solid var(--line);
+    background: #fff; border-radius: 8px; cursor: pointer; text-align: left;
+    font-family: var(--sans); font-size: 14px; transition: all .12s;
+  }
+  .mode-btn .t { font-weight: 600; display: block; }
+  .mode-btn .d { font-size: 12px; color: #6a7a89; margin-top: 3px; }
+  .mode-btn.active { border-color: var(--accent); background: var(--accent-soft);
+    box-shadow: inset 0 0 0 1px var(--accent); }
+  .row { display: flex; gap: 12px; margin-bottom: 12px; flex-wrap: wrap; }
+  .row > div { flex: 1; min-width: 220px; }
+  label { display: block; font-size: 12px; font-weight: 600; color: #52606d;
+    margin-bottom: 5px; text-transform: uppercase; letter-spacing: .4px; }
+  select, input[type=text] {
+    width: 100%; padding: 10px 12px; border: 1px solid var(--line);
+    border-radius: 7px; font-family: var(--mono); font-size: 13px; background: #fff;
+  }
+  input[type=text]:focus, select:focus { outline: 2px solid var(--accent);
+    border-color: var(--accent); }
+  .src-toggle { display: flex; gap: 6px; margin-bottom: 12px; }
+  .src-toggle button {
+    padding: 7px 14px; border: 1px solid var(--line); background: #fff;
+    border-radius: 6px; cursor: pointer; font-size: 13px; font-family: var(--mono);
+  }
+  .src-toggle button.active { background: var(--ink); color: #fff;
+    border-color: var(--ink); }
+  .analyze {
+    width: 100%; padding: 14px; margin-top: 8px; border: none;
+    background: var(--verified); color: #fff; border-radius: 8px;
+    font-size: 15px; font-weight: 600; cursor: pointer; font-family: var(--sans);
+  }
+  .analyze:hover { background: #155e39; }
+  .analyze:disabled { background: #9bb0a3; cursor: not-allowed; }
+  .hint { font-size: 12px; color: #6a7a89; margin-top: 8px; font-family: var(--mono); }
+  #status { margin: 18px 0; font-family: var(--mono); font-size: 13px; }
+  #status .running { color: var(--accent); }
+  #status .err { color: #b3261e; }
+  .report {
+    background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+    padding: 32px 40px; margin-top: 8px; display: none;
+  }
+  .report.show { display: block; }
+  .report h1 { font-size: 24px; border-bottom: 2px solid var(--ink);
+    padding-bottom: 10px; margin-top: 0; }
+  .report h2 { font-size: 18px; color: var(--accent); margin-top: 28px;
+    border-bottom: 1px solid var(--line); padding-bottom: 6px; }
+  .report h3 { font-size: 15px; margin-top: 20px; }
+  .report code { font-family: var(--mono); font-size: 12.5px; background: #eef2f5;
+    padding: 1px 5px; border-radius: 4px; }
+  .report pre { background: #0d1b2a; color: #dbe6ef; padding: 16px; border-radius: 8px;
+    overflow-x: auto; font-family: var(--mono); font-size: 12.5px; line-height: 1.5; }
+  .report pre code { background: none; color: inherit; padding: 0; }
+  .report table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 13px; }
+  .report th { background: var(--ink); color: #fff; text-align: left; padding: 8px 12px; }
+  .report td { border: 1px solid var(--line); padding: 8px 12px; }
+  .report blockquote { border-left: 4px solid var(--verified); background: #f0f7f3;
+    margin: 14px 0; padding: 12px 18px; border-radius: 0 6px 6px 0; }
+  .report hr { border: none; border-top: 1px solid var(--line); margin: 22px 0; }
+  .report ul { padding-left: 22px; }
+  .badge { display: inline-block; font-family: var(--mono); font-size: 11px;
+    padding: 2px 8px; border-radius: 20px; margin-left: 8px; }
+  .badge.v { background: #e3f4ea; color: var(--verified); }
+  footer { text-align: center; padding: 30px; color: #8a99a8; font-size: 12px;
+    font-family: var(--mono); }
+  .tree-mod { margin: 6px 0; }
+  .tree-mod > .mod-name { color: #6a7a89; font-weight: 600; cursor: pointer; }
+  .tree-cls { margin-left: 16px; }
+  .tree-cls > .cls-name { color: var(--accent); cursor: pointer; font-weight: 600; }
+  .tree-cls > .cls-name:hover, .tree-method:hover { text-decoration: underline; }
+  .tree-method { margin-left: 32px; cursor: pointer; color: var(--ink); padding: 2px 0; }
+  .tree-method:before { content: "→ "; color: var(--verified); }
+  .tree-fn { margin-left: 16px; cursor: pointer; color: var(--ink); padding: 2px 0; }
+  .tree-fn:before { content: "ƒ "; color: var(--unknown); }
+  /* pipeline stage animation */
+  .pipeline { display:none; margin: 18px 0; padding: 18px 20px; background: var(--panel);
+    border: 1px solid var(--line); border-radius: 10px; }
+  .pipeline.show { display: block; }
+  .pl-row { display:flex; align-items:center; gap:12px; padding: 7px 0; font-family: var(--mono);
+    font-size: 13px; color: #9aa8b5; transition: color .3s; }
+  .pl-row.active { color: var(--accent); font-weight: 600; }
+  .pl-row.done { color: var(--verified); }
+  .pl-dot { width: 20px; height: 20px; border-radius: 50%; border: 2px solid #cfd8e0;
+    display:flex; align-items:center; justify-content:center; font-size: 12px; flex-shrink:0;
+    transition: all .3s; }
+  .pl-row.active .pl-dot { border-color: var(--accent); animation: pulse 1s infinite; }
+  .pl-row.done .pl-dot { border-color: var(--verified); background: var(--verified); color:#fff; }
+  .pl-bar { flex:1; height: 2px; background: linear-gradient(90deg, var(--verified) var(--pct,0%), #e3e9ef var(--pct,0%)); }
+  @keyframes pulse { 0%,100%{ box-shadow:0 0 0 0 rgba(20,80,122,.4);} 50%{ box-shadow:0 0 0 6px rgba(20,80,122,0);} }
+  /* repo metadata preview */
+  .meta { display:none; margin: 0 0 20px; padding: 16px 20px; background: var(--accent-soft);
+    border: 1px solid #cfe0ee; border-radius: 10px; }
+  .meta.show { display:block; }
+  .meta-grid { display:flex; gap: 26px; flex-wrap:wrap; font-family: var(--mono); font-size: 13px; }
+  .meta-grid .k { color:#5a6b7a; display:block; font-size:11px; text-transform:uppercase; letter-spacing:.4px; }
+  .meta-grid .v { color: var(--ink); font-weight:600; font-size:14px; }
+  .meta-grid .v.ok { color: var(--verified); }
+  .exports { display:none; gap:8px; margin: 14px 0 0; }
+  .exports.show { display:flex; }
+  .exports button { padding: 8px 16px; border:1px solid var(--line); background:#fff;
+    border-radius:7px; cursor:pointer; font-family: var(--mono); font-size:12px; color: var(--ink); }
+  .exports button:hover { border-color: var(--accent); background: var(--accent-soft); }
+  .spin { display: inline-block; width: 12px; height: 12px; border: 2px solid var(--accent);
+    border-top-color: transparent; border-radius: 50%; animation: s .7s linear infinite;
+    vertical-align: middle; margin-right: 8px; }
+  @keyframes s { to { transform: rotate(360deg); } }
+  /* hero: front-door value statement + Truth Boundary badges */
+  .hero { max-width: 1080px; margin: 0 auto; padding: 22px 28px 0; }
+  .hero-line { font-size: 17px; font-weight: 600; color: var(--ink); line-height: 1.4; }
+  .hero-line b { color: var(--verified); }
+  .badges { display: flex; gap: 8px; flex-wrap: wrap; margin: 12px 0 2px; }
+  .tb-badge { font-family: var(--mono); font-size: 12px; font-weight: 600;
+    padding: 5px 12px; border-radius: 20px; border: 1px solid transparent; }
+  .tb-badge.shield { background: var(--ink); color: #fff; }
+  .tb-badge.ok { background: #e3f4ea; color: var(--verified); border-color: #bfe4cd; }
+  /* primary / secondary action buttons */
+  .analyze.primary { background: var(--verified); font-size: 16px; letter-spacing: .2px;
+    box-shadow: 0 2px 10px rgba(27,122,75,.28); }
+  .analyze.primary:hover { background: #155e39; box-shadow: 0 3px 14px rgba(27,122,75,.36); }
+  .analyze.secondary { background: #fff; color: var(--accent); border: 1px solid var(--accent);
+    font-weight: 600; box-shadow: none; }
+  .analyze.secondary:hover { background: var(--accent-soft); }
+  /* compact buttons for the local folder picker (do NOT stretch like .analyze) */
+  .mini-btn { width: auto; margin: 0; padding: 7px 14px; border-radius: 8px;
+    border: 1px solid var(--accent); background: #fff; color: var(--accent);
+    font-family: var(--mono); font-size: 13px; font-weight: 600; cursor: pointer; }
+  .mini-btn:hover { background: var(--accent-soft); }
+  .mini-btn.go { background: var(--verified); border-color: var(--verified); color: #fff; }
+  .mini-btn.go:hover { background: #155e39; }
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">Code<b>Truth</b> Live</div>
+  <div class="tag">deterministic · static · 0 guesses</div>
+</header>
+
+<div class="hero">
+  <div class="hero-line">Deterministic repository intelligence with <b>zero guesses</b> and reproducible engineering evidence.</div>
+  <div class="badges">
+    <span class="tb-badge shield">🛡 Truth Boundary</span>
+    <span class="tb-badge ok">✓ Zero Guesses</span>
+    <span class="tb-badge ok">✓ Deterministic</span>
+    <span class="tb-badge ok">✓ Reproducible</span>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="control">
+    <div class="modes" id="modes">
+      <button class="mode-btn active" data-mode="repo">
+        <span class="t">Repository Assessment</span>
+        <span class="d">Full 11-section engineering report</span>
+      </button>
+      <button class="mode-btn" data-mode="method">
+        <span class="t">Method Change Impact</span>
+        <span class="d">What's affected if I change a method</span>
+      </button>
+      <button class="mode-btn" data-mode="class">
+        <span class="t">Class Change Impact</span>
+        <span class="d">Aggregate impact across a class</span>
+      </button>
+      <button class="mode-btn" data-mode="deadcode">
+        <span class="t">Dead Code Candidates</span>
+        <span class="d">What looks unused — candidates, not a verdict</span>
+      </button>
+      <button class="mode-btn" data-mode="demo">
+        <span class="t">Truth Boundary Demo ⭐</span>
+        <span class="d">Watch it refuse to guess</span>
+      </button>
+      <button class="mode-btn" data-mode="report">
+        <span class="t">Project Intelligence Report</span>
+        <span class="d">Full evidence-tiered project document — for humans &amp; AI</span>
+      </button>
+    </div>
+
+    <div class="src-toggle" id="srcToggle">
+      <button data-src="curated" class="active">Curated repo (instant)</button>
+      <button data-src="url">GitHub URL (clones, slower)</button>
+      <button data-src="local">Local path</button>
+    </div>
+
+    <div class="row">
+      <div id="curatedWrap">
+        <label>Repository</label>
+        <select id="curatedSel"><option>loading…</option></select>
+      </div>
+      <div id="urlWrap" style="display:none">
+        <label>GitHub URL</label>
+        <input type="text" id="urlInput" placeholder="https://github.com/owner/repo">
+      </div>
+      <div id="localWrap" style="display:none">
+        <label>Local folder path (this machine only)</label>
+        <div style="display:flex;gap:8px;align-items:stretch">
+          <input type="text" id="localInput" placeholder="C:\repos\my-project" style="flex:1;margin:0">
+          <button type="button" id="browseLocalBtn" class="mini-btn" style="flex:0 0 auto">Browse…</button>
+        </div>
+      </div>
+      <div id="targetWrap" style="display:none">
+        <label id="targetLabel">Method</label>
+        <input type="text" id="targetInput" placeholder="Flask.dispatch_request">
+      </div>
+    </div>
+
+    <div style="display:flex;gap:10px">
+      <button class="analyze primary" id="analyzeBtn" style="flex:2">Analyze</button>
+      <button class="analyze secondary" id="stopBtn" style="flex:1;display:none;color:var(--unknown);border-color:var(--unknown)">■ Stop</button>
+      <button class="analyze secondary" id="browseBtn" style="flex:1">Browse methods</button>
+    </div>
+    <div class="hint" id="hint">Curated repos return in seconds. GitHub URLs are cloned live (Python repos, size-capped). Use <b>Browse methods</b> to click a method instead of typing its name.</div>
+  </div>
+
+  <div class="control" id="treePanel" style="display:none">
+    <label>Repository structure — click a method or class to analyze it</label>
+    <input type="text" id="treeFilter" placeholder="filter… (e.g. dispatch)" style="margin-bottom:12px">
+    <div id="tree" style="max-height:360px;overflow-y:auto;font-family:var(--mono);font-size:13px;border:1px solid var(--line);border-radius:8px;padding:10px"></div>
+  </div>
+
+  <div class="meta" id="meta">
+    <div class="meta-grid" id="metaGrid"></div>
+  </div>
+
+  <div class="pipeline" id="pipeline">
+    <div class="pl-row" data-stage="clone"><div class="pl-dot">1</div> Clone / locate repository</div>
+    <div class="pl-row" data-stage="m1"><div class="pl-dot">2</div> Module 1 — Repository Cognition</div>
+    <div class="pl-row" data-stage="m2"><div class="pl-dot">3</div> Module 2 — Structural Analysis</div>
+    <div class="pl-row" data-stage="m3"><div class="pl-dot">4</div> Module 3 — Repository Reasoning</div>
+    <div class="pl-row" data-stage="report"><div class="pl-dot">5</div> Generate engineering report</div>
+  </div>
+
+  <div id="status"></div>
+  <button type="button" id="forceBtn" class="mini-btn" style="display:none;margin-top:8px;color:var(--unknown);border-color:var(--unknown)">Analyze anyway (proceed past governance review) →</button>
+  <div class="exports" id="exports">
+    <button onclick="exportAs('md')">Export Markdown</button>
+    <button onclick="exportAs('json')">Export JSON</button>
+    <button onclick="window.print()">Export PDF (print)</button>
+  </div>
+  <div class="report" id="report"></div>
+</div>
+
+<footer>CodeTruth — proves what it can, flags what it can't, never guesses.</footer>
+
+<script>
+let mode = "repo", source = "curated";
+let currentAbort = null;
+function currentRepo() {
+  if (source === "curated") return document.getElementById("curatedSel").value;
+  if (source === "local")   return document.getElementById("localInput").value.trim();
+  return document.getElementById("urlInput").value.trim();
+}
+
+// mode buttons
+document.querySelectorAll(".mode-btn").forEach(b => b.onclick = () => {
+  document.querySelectorAll(".mode-btn").forEach(x => x.classList.remove("active"));
+  b.classList.add("active"); mode = b.dataset.mode;
+  const needTarget = (mode === "method" || mode === "class");
+  document.getElementById("targetWrap").style.display = needTarget ? "" : "none";
+  document.getElementById("targetLabel").textContent = mode === "class" ? "Class" : "Method";
+  document.getElementById("targetInput").placeholder =
+    mode === "class" ? "Flask" : "Flask.dispatch_request";
+  // demo, deadcode & report: no target, no browse (they run on the whole repo)
+  document.getElementById("browseBtn").style.display =
+    (mode === "demo" || mode === "deadcode" || mode === "report") ? "none" : "";
+  document.getElementById("hint").innerHTML =
+    (mode === "demo")
+      ? "The Truth Boundary demo runs on the selected repository: it finds a method that HAS verified callers and one that does NOT, and shows how CodeTruth reports the empty case as a <b>known-unknown</b> — never \"safe to delete\". Curated repos use validated targets; others are auto-selected."
+    : (mode === "report")
+      ? "Generates a full <b>Project Intelligence Report</b> — a plain-language project document built entirely from verified evidence. Every field is tagged <b>OBSERVED</b>, <b>DERIVED</b>, <b>INFERRED</b>, or <b>not determined</b>. Sections CodeTruth cannot yet populate are shown as UNKNOWN, never guessed — the report's honesty about what it doesn't know is the point. Readable by an engineer, a manager, or another AI."
+    : (mode === "deadcode")
+      ? "Lists functions with <b>no inbound internal call edge</b> as <b>candidates</b> — not a deletion verdict. Test methods and framework callbacks (invoked dynamically) commonly appear and are <b>known-unknowns</b>, not dead. This narrows the search; it never authorizes removal."
+      : "Curated repos return in seconds. GitHub URLs are cloned live (Python repos, size-capped). Use <b>Browse methods</b> to click a method instead of typing its name.";
+  // clear any previous analysis output when switching workflows
+  if (currentAbort) { currentAbort.abort(); currentAbort = null; }
+  document.getElementById("stopBtn").style.display = "none";
+  const rep = document.getElementById("report");
+  rep.classList.remove("show"); rep.innerHTML = "";
+  document.getElementById("exports").classList.remove("show");
+  document.getElementById("status").innerHTML = "";
+  document.getElementById("pipeline").classList.remove("show");
+  document.getElementById("treePanel").style.display = "none";
+  document.getElementById("tree").innerHTML = "";
+  lastMarkdown = "";
+});
+
+// source toggle
+document.querySelectorAll("#srcToggle button").forEach(b => b.onclick = () => {
+  document.querySelectorAll("#srcToggle button").forEach(x => x.classList.remove("active"));
+  b.classList.add("active"); source = b.dataset.src;
+  document.getElementById("curatedWrap").style.display = source === "curated" ? "" : "none";
+  document.getElementById("urlWrap").style.display = source === "url" ? "" : "none";
+  document.getElementById("localWrap").style.display = source === "local" ? "" : "none";
+  // new query context: clear the previous report and structure tree
+  if (currentAbort) { currentAbort.abort(); currentAbort = null; }
+  document.getElementById("stopBtn").style.display = "none";
+  const rep2 = document.getElementById("report");
+  rep2.classList.remove("show"); rep2.innerHTML = "";
+  document.getElementById("exports").classList.remove("show");
+  document.getElementById("status").innerHTML = "";
+  document.getElementById("pipeline").classList.remove("show");
+  document.getElementById("treePanel").style.display = "none";
+  document.getElementById("tree").innerHTML = "";
+  lastMarkdown = "";
+});
+
+// ---- local folder picker: native OS dialog (LOCAL USE ONLY) ----
+document.getElementById("browseLocalBtn").onclick = async () => {
+  const btn = document.getElementById("browseLocalBtn");
+  const prev = btn.textContent;
+  btn.disabled = true; btn.textContent = "Opening…";
+  try {
+    const res = await fetch("/api/pick_folder");
+    const d = await res.json();
+    if (d.ok && d.path) {
+      document.getElementById("localInput").value = d.path;
+    } else if (d.error) {
+      document.getElementById("status").innerHTML =
+        '<span style="color:var(--unknown)">' + d.error +
+        ' You can also type or paste the folder path.</span>';
+    }
+  } catch (e) {
+    document.getElementById("status").innerHTML =
+      '<span class="err">Could not open the folder dialog. Type or paste the path instead.</span>';
+  }
+  btn.disabled = false; btn.textContent = prev;
+};
+
+// load curated
+fetch("/api/curated").then(r => r.json()).then(d => {
+  const sel = document.getElementById("curatedSel");
+  sel.innerHTML = "";
+  // placeholder: nothing selected until the user picks a repo
+  const ph = document.createElement("option");
+  ph.value = ""; ph.textContent = "— select a repository —";
+  ph.disabled = true; ph.selected = true;
+  sel.appendChild(ph);
+  (d.repos || []).forEach(r => {
+    const o = document.createElement("option");
+    o.value = r.name; o.textContent = r.label; o.dataset.method = r.sample_method || "";
+    sel.appendChild(o);
+  });
+  if (!d.repos || !d.repos.length) {
+    const none = document.createElement("option");
+    none.textContent = "no curated repos found"; none.disabled = true;
+    sel.appendChild(none);
+  }
+  sel.value = "";  // ensure placeholder is the active value
+}).catch(() => {
+  document.getElementById("curatedSel").innerHTML = "<option>backend unavailable</option>";
+});
+
+// prefill sample method when curated repo changes
+document.getElementById("curatedSel").onchange = e => {
+  const m = e.target.selectedOptions[0]?.dataset.method || "";
+  if (m && (mode === "method")) document.getElementById("targetInput").value = m;
+  // different repo selected = new query context: clear prior report + tree
+  const rep3 = document.getElementById("report");
+  rep3.classList.remove("show"); rep3.innerHTML = "";
+  document.getElementById("exports").classList.remove("show");
+  document.getElementById("status").innerHTML = "";
+  document.getElementById("treePanel").style.display = "none";
+  document.getElementById("tree").innerHTML = "";
+  lastMarkdown = "";
+};
+
+let treeData = null;
+
+document.getElementById("browseBtn").onclick = async () => {
+  const status = document.getElementById("status");
+  const repo = currentRepo();
+  if (!repo) { status.innerHTML = '<span class="err">Choose a repository or enter a URL first.</span>'; return; }
+  status.innerHTML = '<span class="running"><span class="spin"></span>Loading repository structure…</span>';
+  try {
+    const res = await fetch("/api/structure", {
+      method: "POST", headers: {"Content-Type":"application/json"},
+      body: JSON.stringify({ source, repo })
+    });
+    const d = await res.json();
+    if (!d.ok) { status.innerHTML = '<span class="err">' + (d.error||"error") + '</span>'; return; }
+    treeData = d;
+    status.innerHTML = '<span style="color:var(--verified)">' + d.counts.modules + ' modules, ' +
+      d.counts.classes + ' classes, ' + d.counts.callable_nodes + ' callable nodes.</span>';
+    renderTree("");
+    document.getElementById("treePanel").style.display = "";
+  } catch(e) { status.innerHTML = '<span class="err">' + e.message + '</span>'; }
+};
+
+function renderTree(filter) {
+  if (!treeData) return;
+  const box = document.getElementById("tree");
+  const f = filter.toLowerCase();
+  box.innerHTML = "";
+  treeData.modules.forEach(mod => {
+    const modDiv = document.createElement("div"); modDiv.className = "tree-mod";
+    let any = false;
+    const mn = document.createElement("div"); mn.className = "mod-name"; mn.textContent = mod.module;
+    modDiv.appendChild(mn);
+    mod.classes.forEach(c => {
+      const matchCls = c.class.toLowerCase().includes(f);
+      const methods = c.methods.filter(m => !f || m.name.toLowerCase().includes(f) || matchCls);
+      if (!f || matchCls || methods.length) {
+        any = true;
+        const cd = document.createElement("div"); cd.className = "tree-cls";
+        const cn = document.createElement("div"); cn.className = "cls-name";
+        cn.textContent = "▸ " + c.class + "  (class)";
+        cn.onclick = () => pick("class", c.class_id);
+        cd.appendChild(cn);
+        methods.forEach(m => {
+          const md = document.createElement("div"); md.className = "tree-method";
+          md.textContent = m.name;
+          md.onclick = () => pick("method", m.id);
+          cd.appendChild(md);
+        });
+        modDiv.appendChild(cd);
+      }
+    });
+    mod.functions.forEach(fn => {
+      if (!f || fn.name.toLowerCase().includes(f)) {
+        any = true;
+        const fd = document.createElement("div"); fd.className = "tree-fn";
+        fd.textContent = fn.name;
+        fd.onclick = () => pick("method", fn.id);
+        modDiv.appendChild(fd);
+      }
+    });
+    if (any) box.appendChild(modDiv);
+  });
+}
+
+function pick(kind, id) {
+  // set mode + target and scroll to analyze
+  const modeBtn = document.querySelector('.mode-btn[data-mode="' + kind + '"]');
+  if (modeBtn) modeBtn.click();
+  document.getElementById("targetInput").value = id;
+  document.getElementById("status").innerHTML =
+    '<span style="color:var(--accent)">Selected <code>' + id + '</code> — click Analyze.</span>';
+  document.querySelector(".control").scrollIntoView({behavior:"smooth"});
+}
+
+document.getElementById("treeFilter").oninput = e => renderTree(e.target.value);
+
+// ---- pipeline stage animation ----
+const STAGES = ["clone","m1","m2","m3","report"];
+let stageTimer = null;
+function pipelineStart(hasClone) {
+  const pl = document.getElementById("pipeline");
+  pl.classList.add("show");
+  document.querySelectorAll(".pl-row").forEach(r => r.classList.remove("active","done"));
+  let i = hasClone ? 0 : 1;  // skip clone for curated
+  // advance stages on a gentle timer while the real call runs
+  const advance = () => {
+    document.querySelectorAll(".pl-row").forEach((r, idx) => {
+      const si = STAGES.indexOf(r.dataset.stage);
+      r.classList.toggle("done", si < i);
+      r.classList.toggle("active", si === i);
+    });
+    i++;
+    if (i <= STAGES.length) stageTimer = setTimeout(advance, i <= 2 ? 500 : 900);
+  };
+  advance();
+}
+function pipelineFinish() {
+  if (stageTimer) clearTimeout(stageTimer);
+  document.querySelectorAll(".pl-row").forEach(r => { r.classList.remove("active"); r.classList.add("done"); });
+}
+function pipelineHide() {
+  if (stageTimer) clearTimeout(stageTimer);
+  document.getElementById("pipeline").classList.remove("show");
+}
+
+// ---- repository metadata preview (shows Module 1 before full run) ----
+let metaSeq = 0;
+async function loadMeta() {
+  const repo = currentRepo();
+  const meta = document.getElementById("meta");
+  const grid = document.getElementById("metaGrid");
+  // only auto-preview for curated (instant); URL requires clone
+  if (!repo || source !== "curated") { meta.classList.remove("show"); grid.innerHTML = ""; return; }
+  const myseq = ++metaSeq;
+  // clear stale data IMMEDIATELY and show a loading state for the new selection,
+  // so the panel can never show a repo that isn't the one currently selected
+  grid.innerHTML =
+    '<div><span class="k">Repository</span><span class="v">' + repo + '</span></div>' +
+    '<div><span class="v"><span class="spin"></span>reading Module 1…</span></div>';
+  meta.classList.add("show");
+  try {
+    const res = await fetch("/api/meta", {
+      method:"POST", headers:{"Content-Type":"application/json"},
+      body: JSON.stringify({ source, repo })
+    });
+    const d = await res.json();
+    // ignore this response if a newer selection started, or the dropdown moved on
+    if (myseq !== metaSeq || document.getElementById("curatedSel").value !== repo) return;
+    if (!d.ok) { meta.classList.remove("show"); grid.innerHTML = ""; return; }
+    grid.innerHTML =
+      metaItem("Repository", repo) +
+      metaItem("Language", d.language || "?") +
+      metaItem("Framework", d.framework || "?") +
+      metaItem("Architecture", d.architecture || "?") +
+      metaItem("Governance", d.gate || "?", d.gate === "APPROVED");
+    meta.classList.add("show");
+  } catch(e) {
+    if (myseq === metaSeq) { meta.classList.remove("show"); grid.innerHTML = ""; }
+  }
+}
+function metaItem(k, v, ok) {
+  return '<div><span class="k">'+k+'</span><span class="v'+(ok?' ok':'')+'">'+v+'</span></div>';
+}
+document.getElementById("curatedSel").addEventListener("change", loadMeta);
+// also clear the panel when toggling source (curated <-> URL)
+document.querySelectorAll("#srcToggle button").forEach(b =>
+  b.addEventListener("click", () => { metaSeq++; loadMeta(); }));
+// no auto-preview on load: metadata loads only after the user selects a repository
+
+// ---- exports ----
+let lastMarkdown = "";
+function exportAs(kind) {
+  if (!lastMarkdown) return;
+  let blob, name;
+  if (kind === "md") { blob = new Blob([lastMarkdown], {type:"text/markdown"}); name="codetruth_report.md"; }
+  else if (kind === "json") {
+    blob = new Blob([JSON.stringify({markdown:lastMarkdown}, null, 2)], {type:"application/json"});
+    name = "codetruth_report.json";
+  }
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob); a.download = name; a.click();
+}
+
+async function runAnalyze(force) {
+  const btn = document.getElementById("analyzeBtn");
+  const status = document.getElementById("status");
+  const report = document.getElementById("report");
+  const forceBtn = document.getElementById("forceBtn");
+  forceBtn.style.display = "none";
+  report.classList.remove("show");
+
+  const repo = currentRepo();
+  const target = document.getElementById("targetInput").value.trim();
+
+  if (!repo) { status.innerHTML = '<span class="err">Choose a repository or enter a URL.</span>'; return; }
+  if ((mode === "method" || mode === "class") && !target) {
+    status.innerHTML = '<span class="err">Enter a ' + (mode === "class" ? "class" : "method") + ' name.</span>'; return;
+  }
+
+  btn.disabled = true;
+  const stopBtn = document.getElementById("stopBtn");
+  currentAbort = new AbortController();
+  stopBtn.style.display = "";
+  document.getElementById("exports").classList.remove("show");
+  report.classList.remove("show");
+  status.innerHTML = '<span class="running"><span class="spin"></span>Running the CodeTruth pipeline on ' + repo
+    + (force ? ' (manual override)' : '') + '…</span>';
+  pipelineStart(source === "url");
+
+  try {
+    const res = await fetch("/api/analyze", {
+      method: "POST", headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({ mode, source, repo, target, force: !!force }),
+      signal: currentAbort.signal
+    });
+    const d = await res.json();
+    if (!d.ok) {
+      pipelineHide();
+      status.innerHTML = '<span class="err">Error: ' + (d.error || "unknown") + '</span>';
+      stopBtn.style.display = "none"; currentAbort = null; btn.disabled = false; return;
+    }
+    pipelineFinish();
+    lastMarkdown = d.markdown;
+    report.innerHTML = marked.parse(d.markdown);
+    report.classList.add("show");
+    document.getElementById("exports").classList.add("show");
+    // Honest status: the UI follows the same Truth Boundary as the engine.
+    const gate = d.gate, st = d.status, m3 = d.module3_ran;
+    let msg, col;
+    if (gate === "BLOCKED" || st === "BLOCKED") {
+      msg = "BLOCKED by governance gate — no analysis performed.";
+      col = "var(--unknown)";
+      report.classList.remove("show");                       // no findings to show
+    } else if (st === "REVIEW_REQUIRED") {
+      // held (not forced): offer an explicit human-approved override
+      msg = "Held: REVIEW_REQUIRED — Module 1 governance gate flagged an uncertain "
+          + "classification; no findings generated. You can proceed with review.";
+      col = "var(--unknown)";
+      report.classList.remove("show");
+      forceBtn.style.display = "";                            // show "Analyze anyway"
+    } else if (st === "COMPLETE" && gate === "REVIEW_REQUIRED") {
+      // forced past review and completed — honest override-complete state
+      msg = "Analysis complete under manual override (gate had flagged classification "
+          + "for review) — deterministic, 0 guesses.";
+      col = "var(--verified)";
+    } else if (st && st !== "COMPLETE") {
+      msg = "Pipeline did not complete (" + st + ") — no findings generated.";
+      col = "var(--unknown)";
+    } else {
+      msg = m3 ? "Analysis complete — deterministic, 0 guesses." : "Analysis complete.";
+      col = "var(--verified)";
+    }
+    status.innerHTML = '<span style="color:' + col + '">' + msg + '</span>';
+    setTimeout(() => { pipelineHide(); report.scrollIntoView({ behavior: "smooth", block: "start" }); }, 700);
+  } catch (e) {
+    pipelineHide();
+    if (e.name === "AbortError") {
+      status.innerHTML = '<span style="color:var(--unknown)">Stopped watching this run. '
+        + 'Note: the server may still finish the analysis in the background — this cancels '
+        + 'the browser wait, not the server job.</span>';
+    } else {
+      status.innerHTML = '<span class="err">Request failed: ' + e.message + '</span>';
+    }
+  }
+  stopBtn.style.display = "none";
+  currentAbort = null;
+  btn.disabled = false;
+}
+
+document.getElementById("analyzeBtn").onclick = () => runAnalyze(false);
+document.getElementById("forceBtn").onclick = () => runAnalyze(true);
+
+// Stop = abort the client wait (honest: does not kill the server-side job)
+document.getElementById("stopBtn").onclick = () => {
+  if (currentAbort) currentAbort.abort();
+  document.getElementById("stopBtn").style.display = "none";
+};
+</script>
+</body>
+</html>

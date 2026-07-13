@@ -1,0 +1,548 @@
+{
+  "generated": "2026-07-02T15:00:44.819039",
+  "note": "PRE qualified-name fix baseline (regression guard)",
+  "aggregate": {
+    "local_typed_method_call": 1883,
+    "local_inherited_method_call": 3372,
+    "typed_recv_method_unverified": 3958,
+    "ambiguous_receiver": 275,
+    "builtin_receiver": 11453,
+    "super_call": 18510,
+    "super_unresolved": 18191
+  },
+  "per_repo": [
+    {
+      "repo": "FreeCAD",
+      "local": 3,
+      "inherited": 28,
+      "super_call": 820,
+      "super_unres": 176
+    },
+    {
+      "repo": "LibreCAD",
+      "local": 0,
+      "inherited": 0,
+      "super_call": 0,
+      "super_unres": 0
+    },
+    {
+      "repo": "MetPy",
+      "local": 0,
+      "inherited": 0,
+      "super_call": 0,
+      "super_unres": 2
+    },
+    {
+      "repo": "OpenMDAO",
+      "local": 24,
+      "inherited": 652,
+      "super_call": 502,
+      "super_unres": 228
+    },
+    {
+      "repo": "PyPSA",
+      "local": 8,
+      "inherited": 35,
+      "super_call": 19,
+      "super_unres": 11
+    },
+    {
+      "repo": "amaranth",
+      "local": 7,
+      "inherited": 10,
+      "super_call": 97,
+      "super_unres": 59
+    },
+    {
+      "repo": "ardupilot",
+      "local": 12,
+      "inherited": 0,
+      "super_call": 113,
+      "super_unres": 47
+    },
+    {
+      "repo": "astropy",
+      "local": 90,
+      "inherited": 62,
+      "super_call": 506,
+      "super_unres": 315
+    },
+    {
+      "repo": "biopython",
+      "local": 48,
+      "inherited": 5,
+      "super_call": 66,
+      "super_unres": 28
+    },
+    {
+      "repo": "ccxt",
+      "local": 12,
+      "inherited": 2,
+      "super_call": 474,
+      "super_unres": 49
+    },
+    {
+      "repo": "circuitpython",
+      "local": 2,
+      "inherited": 0,
+      "super_call": 34,
+      "super_unres": 25
+    },
+    {
+      "repo": "cocotb",
+      "local": 2,
+      "inherited": 0,
+      "super_call": 1,
+      "super_unres": 7
+    },
+    {
+      "repo": "cvxpy",
+      "local": 14,
+      "inherited": 19,
+      "super_call": 178,
+      "super_unres": 7
+    },
+    {
+      "repo": "django",
+      "local": 108,
+      "inherited": 1093,
+      "super_call": 1270,
+      "super_unres": 639
+    },
+    {
+      "repo": "drake",
+      "local": 8,
+      "inherited": 0,
+      "super_call": 1,
+      "super_unres": 30
+    },
+    {
+      "repo": "dronekit-python",
+      "local": 0,
+      "inherited": 0,
+      "super_call": 9,
+      "super_unres": 1
+    },
+    {
+      "repo": "elasticsearch",
+      "local": 0,
+      "inherited": 0,
+      "super_call": 0,
+      "super_unres": 0
+    },
+    {
+      "repo": "fastapi",
+      "local": 0,
+      "inherited": 0,
+      "super_call": 20,
+      "super_unres": 16
+    },
+    {
+      "repo": "ffmpeg-python",
+      "local": 0,
+      "inherited": 0,
+      "super_call": 8,
+      "super_unres": 1
+    },
+    {
+      "repo": "flask",
+      "local": 0,
+      "inherited": 17,
+      "super_call": 0,
+      "super_unres": 4
+    },
+    {
+      "repo": "fluids",
+      "local": 6,
+      "inherited": 5,
+      "super_call": 1,
+      "super_unres": 2
+    },
+    {
+      "repo": "geopandas",
+      "local": 5,
+      "inherited": 3,
+      "super_call": 1,
+      "super_unres": 40
+    },
+    {
+      "repo": "gnuradio",
+      "local": 9,
+      "inherited": 40,
+      "super_call": 92,
+      "super_unres": 77
+    },
+    {
+      "repo": "go",
+      "local": 0,
+      "inherited": 0,
+      "super_call": 0,
+      "super_unres": 0
+    },
+    {
+      "repo": "gst-python",
+      "local": 0,
+      "inherited": 0,
+      "super_call": 2,
+      "super_unres": 0
+    },
+    {
+      "repo": "hl7apy",
+      "local": 0,
+      "inherited": 66,
+      "super_call": 57,
+      "super_unres": 7
+    },
+    {
+      "repo": "kivy",
+      "local": 23,
+      "inherited": 3,
+      "super_call": 506,
+      "super_unres": 172
+    },
+    {
+      "repo": "kubernetes-python",
+      "local": 5,
+      "inherited": 0,
+      "super_call": 10,
+      "super_unres": 12
+    },
+    {
+      "repo": "lasio",
+      "local": 15,
+      "inherited": 0,
+      "super_call": 1,
+      "super_unres": 15
+    },
+    {
+      "repo": "librosa",
+      "local": 0,
+      "inherited": 0,
+      "super_call": 0,
+      "super_unres": 0
+    },
+    {
+      "repo": "micropython",
+      "local": 4,
+      "inherited": 0,
+      "super_call": 59,
+      "super_unres": 23
+    },
+    {
+      "repo": "napalm",
+      "local": 0,
+      "inherited": 6,
+      "super_call": 20,
+      "super_unres": 1
+    },
+    {
+      "repo": "netmiko",
+      "local": 0,
+      "inherited": 0,
+      "super_call": 426,
+      "super_unres": 0
+    },
+    {
+      "repo": "networkx",
+      "local": 2,
+      "inherited": 10,
+      "super_call": 21,
+      "super_unres": 8
+    },
+    {
+      "repo": "nginx",
+      "local": 0,
+      "inherited": 0,
+      "super_call": 0,
+      "super_unres": 0
+    },
+    {
+      "repo": "nltk",
+      "local": 29,
+      "inherited": 11,
+      "super_call": 88,
+      "super_unres": 42
+    },
+    {
+      "repo": "odoo",
+      "local": 96,
+      "inherited": 3,
+      "super_call": 1844,
+      "super_unres": 5681
+    },
+    {
+      "repo": "opencv-python",
+      "local": 0,
+      "inherited": 0,
+      "super_call": 0,
+      "super_unres": 0
+    },
+    {
+      "repo": "pandapower",
+      "local": 4,
+      "inherited": 0,
+      "super_call": 62,
+      "super_unres": 35
+    },
+    {
+      "repo": "pennylane",
+      "local": 75,
+      "inherited": 175,
+      "super_call": 489,
+      "super_unres": 351
+    },
+    {
+      "repo": "poliastro",
+      "local": 0,
+      "inherited": 0,
+      "super_call": 2,
+      "super_unres": 0
+    },
+    {
+      "repo": "pulp",
+      "local": 0,
+      "inherited": 0,
+      "super_call": 3,
+      "super_unres": 2
+    },
+    {
+      "repo": "pulumi",
+      "local": 0,
+      "inherited": 0,
+      "super_call": 606,
+      "super_unres": 1372
+    },
+    {
+      "repo": "pwntools",
+      "local": 10,
+      "inherited": 4,
+      "super_call": 37,
+      "super_unres": 34
+    },
+    {
+      "repo": "py-evm",
+      "local": 0,
+      "inherited": 0,
+      "super_call": 42,
+      "super_unres": 20
+    },
+    {
+      "repo": "pyNastran",
+      "local": 99,
+      "inherited": 304,
+      "super_call": 101,
+      "super_unres": 42
+    },
+    {
+      "repo": "pydicom",
+      "local": 1,
+      "inherited": 0,
+      "super_call": 8,
+      "super_unres": 37
+    },
+    {
+      "repo": "pymodbus",
+      "local": 15,
+      "inherited": 0,
+      "super_call": 34,
+      "super_unres": 5
+    },
+    {
+      "repo": "pyreservoir",
+      "local": 0,
+      "inherited": 0,
+      "super_call": 0,
+      "super_unres": 0
+    },
+    {
+      "repo": "python",
+      "local": 75,
+      "inherited": 328,
+      "super_call": 529,
+      "super_unres": 1134
+    },
+    {
+      "repo": "python-igraph",
+      "local": 0,
+      "inherited": 0,
+      "super_call": 2,
+      "super_unres": 4
+    },
+    {
+      "repo": "python-jenkins",
+      "local": 1,
+      "inherited": 0,
+      "super_call": 19,
+      "super_unres": 3
+    },
+    {
+      "repo": "python-sgp4",
+      "local": 0,
+      "inherited": 0,
+      "super_call": 0,
+      "super_unres": 0
+    },
+    {
+      "repo": "pytorch",
+      "local": 719,
+      "inherited": 183,
+      "super_call": 6281,
+      "super_unres": 6160
+    },
+    {
+      "repo": "qiskit",
+      "local": 130,
+      "inherited": 36,
+      "super_call": 667,
+      "super_unres": 145
+    },
+    {
+      "repo": "rclpy",
+      "local": 105,
+      "inherited": 7,
+      "super_call": 27,
+      "super_unres": 34
+    },
+    {
+      "repo": "react",
+      "local": 0,
+      "inherited": 0,
+      "super_call": 0,
+      "super_unres": 0
+    },
+    {
+      "repo": "redis",
+      "local": 0,
+      "inherited": 0,
+      "super_call": 5,
+      "super_unres": 0
+    },
+    {
+      "repo": "rust",
+      "local": 0,
+      "inherited": 0,
+      "super_call": 0,
+      "super_unres": 5
+    },
+    {
+      "repo": "scapy",
+      "local": 4,
+      "inherited": 14,
+      "super_call": 339,
+      "super_unres": 233
+    },
+    {
+      "repo": "shapely",
+      "local": 8,
+      "inherited": 0,
+      "super_call": 0,
+      "super_unres": 4
+    },
+    {
+      "repo": "solana-py",
+      "local": 0,
+      "inherited": 0,
+      "super_call": 6,
+      "super_unres": 7
+    },
+    {
+      "repo": "spaCy",
+      "local": 22,
+      "inherited": 50,
+      "super_call": 10,
+      "super_unres": 9
+    },
+    {
+      "repo": "spring-boot",
+      "local": 0,
+      "inherited": 0,
+      "super_call": 0,
+      "super_unres": 0
+    },
+    {
+      "repo": "striplog",
+      "local": 4,
+      "inherited": 0,
+      "super_call": 0,
+      "super_unres": 12
+    },
+    {
+      "repo": "toga",
+      "local": 0,
+      "inherited": 107,
+      "super_call": 313,
+      "super_unres": 112
+    },
+    {
+      "repo": "transformers",
+      "local": 0,
+      "inherited": 30,
+      "super_call": 754,
+      "super_unres": 273
+    },
+    {
+      "repo": "u-boot",
+      "local": 6,
+      "inherited": 5,
+      "super_call": 289,
+      "super_unres": 43
+    },
+    {
+      "repo": "ui5-webcomponents",
+      "local": 0,
+      "inherited": 0,
+      "super_call": 0,
+      "super_unres": 0
+    },
+    {
+      "repo": "ultralytics",
+      "local": 1,
+      "inherited": 0,
+      "super_call": 238,
+      "super_unres": 182
+    },
+    {
+      "repo": "vscode",
+      "local": 1,
+      "inherited": 0,
+      "super_call": 2,
+      "super_unres": 6
+    },
+    {
+      "repo": "welleng",
+      "local": 1,
+      "inherited": 0,
+      "super_call": 4,
+      "super_unres": 7
+    },
+    {
+      "repo": "whisper",
+      "local": 2,
+      "inherited": 0,
+      "super_call": 2,
+      "super_unres": 6
+    },
+    {
+      "repo": "xarray",
+      "local": 46,
+      "inherited": 1,
+      "super_call": 89,
+      "super_unres": 28
+    },
+    {
+      "repo": "zephyr",
+      "local": 2,
+      "inherited": 0,
+      "super_call": 106,
+      "super_unres": 88
+    },
+    {
+      "repo": "zipline",
+      "local": 20,
+      "inherited": 58,
+      "super_call": 198,
+      "super_unres": 73
+    }
+  ],
+  "errors": []
+}

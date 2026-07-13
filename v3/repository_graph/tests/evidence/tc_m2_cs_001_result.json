@@ -1,0 +1,865 @@
+{
+  "repo_root": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp",
+  "language": "csharp",
+  "framework": "aspnet_core",
+  "files_scanned": 4,
+  "parse_errors": 0,
+  "classes": {
+    "ECommerceApp.Controllers.UserController": {
+      "simple_name": "UserController",
+      "namespace": "ECommerceApp.Controllers",
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Controllers\\UserController.cs",
+      "type": "CLASS",
+      "methods": [
+        "CreateUser",
+        "GetUsers",
+        "PlaceOrder",
+        "CancelOrder"
+      ],
+      "implements": []
+    },
+    "ECommerceApp.Models.User": {
+      "simple_name": "User",
+      "namespace": "ECommerceApp.Models",
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Models\\User.cs",
+      "type": "CLASS",
+      "methods": [
+        "GetDisplayName",
+        "Validate",
+        "AddItem"
+      ],
+      "implements": []
+    },
+    "ECommerceApp.Models.Order": {
+      "simple_name": "Order",
+      "namespace": "ECommerceApp.Models",
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Models\\User.cs",
+      "type": "CLASS",
+      "methods": [
+        "GetDisplayName",
+        "Validate",
+        "AddItem"
+      ],
+      "implements": []
+    },
+    "ECommerceApp.Models.OrderItem": {
+      "simple_name": "OrderItem",
+      "namespace": "ECommerceApp.Models",
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Models\\User.cs",
+      "type": "CLASS",
+      "methods": [
+        "GetDisplayName",
+        "Validate",
+        "AddItem"
+      ],
+      "implements": []
+    },
+    "ECommerceApp.Services.UserService": {
+      "simple_name": "UserService",
+      "namespace": "ECommerceApp.Services",
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+      "type": "CLASS",
+      "methods": [
+        "CreateUserAsync",
+        "GetActiveUsersAsync",
+        "PlaceOrderAsync",
+        "CancelOrderAsync",
+        "GetUserOrdersAsync"
+      ],
+      "implements": []
+    },
+    "ECommerceApp.Services.OrderService": {
+      "simple_name": "OrderService",
+      "namespace": "ECommerceApp.Services",
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+      "type": "CLASS",
+      "methods": [
+        "CreateUserAsync",
+        "GetActiveUsersAsync",
+        "PlaceOrderAsync",
+        "CancelOrderAsync",
+        "GetUserOrdersAsync"
+      ],
+      "implements": []
+    }
+  },
+  "interfaces": {
+    "ECommerceApp.Interfaces.IUserRepository": {
+      "simple_name": "IUserRepository",
+      "namespace": "ECommerceApp.Interfaces",
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Interfaces\\IUserRepository.cs",
+      "type": "INTERFACE",
+      "methods": []
+    },
+    "ECommerceApp.Interfaces.IOrderRepository": {
+      "simple_name": "IOrderRepository",
+      "namespace": "ECommerceApp.Interfaces",
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Interfaces\\IUserRepository.cs",
+      "type": "INTERFACE",
+      "methods": []
+    },
+    "ECommerceApp.Interfaces.IEmailService": {
+      "simple_name": "IEmailService",
+      "namespace": "ECommerceApp.Interfaces",
+      "defined_in": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Interfaces\\IUserRepository.cs",
+      "type": "INTERFACE",
+      "methods": []
+    }
+  },
+  "enums": {},
+  "structs": {},
+  "namespaces": {
+    "ECommerceApp.Controllers": {
+      "files": [
+        "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Controllers\\UserController.cs"
+      ]
+    },
+    "ECommerceApp.Interfaces": {
+      "files": [
+        "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Interfaces\\IUserRepository.cs"
+      ]
+    },
+    "ECommerceApp.Models": {
+      "files": [
+        "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Models\\User.cs"
+      ]
+    },
+    "ECommerceApp.Services": {
+      "files": [
+        "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs"
+      ]
+    }
+  },
+  "node_counts": {
+    "classes": 6,
+    "interfaces": 3,
+    "enums": 0,
+    "structs": 0,
+    "namespaces": 4,
+    "total": 13
+  },
+  "edge_counts": {
+    "method_calls": 32,
+    "constructor_calls": 3,
+    "di_dependencies": 2,
+    "total": 37
+  },
+  "resolution": {
+    "resolved_count": 4,
+    "unresolved_count": 33,
+    "resolved_entries": [
+      {
+        "target": "User",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "CONSTRUCTOR_CALL",
+        "resolved": true,
+        "resolved_to": "new User()"
+      },
+      {
+        "target": "Order",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "CONSTRUCTOR_CALL",
+        "resolved": true,
+        "resolved_to": "new Order()"
+      },
+      {
+        "interface": "IUserRepository",
+        "param_name": "userRepository",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "DEPENDENCY_INJECTION",
+        "resolved": true,
+        "resolved_to": "IUserRepository"
+      },
+      {
+        "interface": "IOrderRepository",
+        "param_name": "orderRepository",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "DEPENDENCY_INJECTION",
+        "resolved": true,
+        "resolved_to": "IOrderRepository"
+      }
+    ],
+    "unresolved_entries": [
+      {
+        "caller_obj": "_userService",
+        "method": "CreateUserAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Controllers\\UserController.cs",
+        "ref_type": "METHOD_CALL",
+        "resolved": false,
+        "reason": "OBJECT_TYPE_UNKNOWN"
+      },
+      {
+        "caller_obj": "_userService",
+        "method": "GetActiveUsersAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Controllers\\UserController.cs",
+        "ref_type": "METHOD_CALL",
+        "resolved": false,
+        "reason": "OBJECT_TYPE_UNKNOWN"
+      },
+      {
+        "caller_obj": "_userService",
+        "method": "PlaceOrderAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Controllers\\UserController.cs",
+        "ref_type": "METHOD_CALL",
+        "resolved": false,
+        "reason": "OBJECT_TYPE_UNKNOWN"
+      },
+      {
+        "caller_obj": "_orderService",
+        "method": "CancelOrderAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Controllers\\UserController.cs",
+        "ref_type": "METHOD_CALL",
+        "resolved": false,
+        "reason": "OBJECT_TYPE_UNKNOWN"
+      },
+      {
+        "caller_obj": "_userService",
+        "method": "CreateUserAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Controllers\\UserController.cs",
+        "ref_type": "AWAIT_CALL",
+        "resolved": false,
+        "reason": "OBJECT_TYPE_UNKNOWN"
+      },
+      {
+        "caller_obj": "_userService",
+        "method": "GetActiveUsersAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Controllers\\UserController.cs",
+        "ref_type": "AWAIT_CALL",
+        "resolved": false,
+        "reason": "OBJECT_TYPE_UNKNOWN"
+      },
+      {
+        "caller_obj": "_userService",
+        "method": "PlaceOrderAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Controllers\\UserController.cs",
+        "ref_type": "AWAIT_CALL",
+        "resolved": false,
+        "reason": "OBJECT_TYPE_UNKNOWN"
+      },
+      {
+        "caller_obj": "_orderService",
+        "method": "CancelOrderAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Controllers\\UserController.cs",
+        "ref_type": "AWAIT_CALL",
+        "resolved": false,
+        "reason": "OBJECT_TYPE_UNKNOWN"
+      },
+      {
+        "caller_obj": "Name",
+        "method": "ToUpper",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Models\\User.cs",
+        "ref_type": "METHOD_CALL",
+        "resolved": false,
+        "reason": "OBJECT_TYPE_UNKNOWN"
+      },
+      {
+        "caller_obj": "Email",
+        "method": "Contains",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Models\\User.cs",
+        "ref_type": "METHOD_CALL",
+        "resolved": false,
+        "reason": "OBJECT_TYPE_UNKNOWN"
+      },
+      {
+        "caller_obj": "Items",
+        "method": "Add",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Models\\User.cs",
+        "ref_type": "METHOD_CALL",
+        "resolved": false,
+        "reason": "OBJECT_TYPE_UNKNOWN"
+      },
+      {
+        "caller_obj": "user",
+        "method": "Validate",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "METHOD_CALL",
+        "resolved": false,
+        "reason": "OBJECT_TYPE_UNKNOWN"
+      },
+      {
+        "caller_obj": "_userRepository",
+        "method": "CreateAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "METHOD_CALL",
+        "resolved": false,
+        "reason": "OBJECT_TYPE_UNKNOWN"
+      },
+      {
+        "caller_obj": "_emailService",
+        "method": "SendWelcomeEmailAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "METHOD_CALL",
+        "resolved": false,
+        "reason": "OBJECT_TYPE_UNKNOWN"
+      },
+      {
+        "caller_obj": "_userRepository",
+        "method": "GetAllAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "METHOD_CALL",
+        "resolved": false,
+        "reason": "OBJECT_TYPE_UNKNOWN"
+      },
+      {
+        "caller_obj": "_userRepository",
+        "method": "GetByIdAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "METHOD_CALL",
+        "resolved": false,
+        "reason": "OBJECT_TYPE_UNKNOWN"
+      },
+      {
+        "caller_obj": "_orderRepository",
+        "method": "CreateAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "METHOD_CALL",
+        "resolved": false,
+        "reason": "OBJECT_TYPE_UNKNOWN"
+      },
+      {
+        "caller_obj": "_emailService",
+        "method": "SendOrderConfirmationAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "METHOD_CALL",
+        "resolved": false,
+        "reason": "OBJECT_TYPE_UNKNOWN"
+      },
+      {
+        "caller_obj": "_orderRepository",
+        "method": "GetByIdAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "METHOD_CALL",
+        "resolved": false,
+        "reason": "OBJECT_TYPE_UNKNOWN"
+      },
+      {
+        "caller_obj": "_orderRepository",
+        "method": "UpdateStatusAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "METHOD_CALL",
+        "resolved": false,
+        "reason": "OBJECT_TYPE_UNKNOWN"
+      },
+      {
+        "caller_obj": "_userRepository",
+        "method": "GetByIdAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "METHOD_CALL",
+        "resolved": false,
+        "reason": "OBJECT_TYPE_UNKNOWN"
+      },
+      {
+        "caller_obj": "_orderRepository",
+        "method": "GetByUserIdAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "METHOD_CALL",
+        "resolved": false,
+        "reason": "OBJECT_TYPE_UNKNOWN"
+      },
+      {
+        "caller_obj": "_userRepository",
+        "method": "CreateAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "AWAIT_CALL",
+        "resolved": false,
+        "reason": "OBJECT_TYPE_UNKNOWN"
+      },
+      {
+        "caller_obj": "_emailService",
+        "method": "SendWelcomeEmailAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "AWAIT_CALL",
+        "resolved": false,
+        "reason": "OBJECT_TYPE_UNKNOWN"
+      },
+      {
+        "caller_obj": "_userRepository",
+        "method": "GetAllAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "AWAIT_CALL",
+        "resolved": false,
+        "reason": "OBJECT_TYPE_UNKNOWN"
+      },
+      {
+        "caller_obj": "_userRepository",
+        "method": "GetByIdAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "AWAIT_CALL",
+        "resolved": false,
+        "reason": "OBJECT_TYPE_UNKNOWN"
+      },
+      {
+        "caller_obj": "_orderRepository",
+        "method": "CreateAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "AWAIT_CALL",
+        "resolved": false,
+        "reason": "OBJECT_TYPE_UNKNOWN"
+      },
+      {
+        "caller_obj": "_emailService",
+        "method": "SendOrderConfirmationAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "AWAIT_CALL",
+        "resolved": false,
+        "reason": "OBJECT_TYPE_UNKNOWN"
+      },
+      {
+        "caller_obj": "_orderRepository",
+        "method": "GetByIdAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "AWAIT_CALL",
+        "resolved": false,
+        "reason": "OBJECT_TYPE_UNKNOWN"
+      },
+      {
+        "caller_obj": "_orderRepository",
+        "method": "UpdateStatusAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "AWAIT_CALL",
+        "resolved": false,
+        "reason": "OBJECT_TYPE_UNKNOWN"
+      },
+      {
+        "caller_obj": "_userRepository",
+        "method": "GetByIdAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "AWAIT_CALL",
+        "resolved": false,
+        "reason": "OBJECT_TYPE_UNKNOWN"
+      },
+      {
+        "caller_obj": "_orderRepository",
+        "method": "GetByUserIdAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "AWAIT_CALL",
+        "resolved": false,
+        "reason": "OBJECT_TYPE_UNKNOWN"
+      },
+      {
+        "target": "ArgumentException",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "CONSTRUCTOR_CALL",
+        "resolved": false,
+        "reason": "CLASS_NOT_IN_REPO"
+      }
+    ],
+    "resolution_pct": 10.81
+  },
+  "resolved_calls": 4,
+  "unresolved_total": 33,
+  "resolution_pct": 10.81,
+  "deep_resolution": {
+    "dr_field_type": 28,
+    "dr_interface": 0,
+    "dr_di_constructor": 0,
+    "dr_resolved_by_pipeline": 28,
+    "dr_remaining_unresolved": 5,
+    "dr_reduction_pct": 84.85,
+    "resolver_results": {
+      "field_type": 28,
+      "interface": 0,
+      "di_constructor": 0
+    },
+    "final": {
+      "resolved_by_pipeline": 28,
+      "remaining_unresolved": 5,
+      "reduction_pct": 84.85
+    },
+    "resolved_entries": [
+      {
+        "caller_obj": "_userService",
+        "method": "CreateUserAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Controllers\\UserController.cs",
+        "ref_type": "METHOD_CALL",
+        "resolved": true,
+        "reason": "OBJECT_TYPE_UNKNOWN",
+        "resolved_to": "UserService.CreateUserAsync",
+        "resolver": "field_type_resolver",
+        "field_type": "UserService",
+        "confidence": "HIGH"
+      },
+      {
+        "caller_obj": "_userService",
+        "method": "GetActiveUsersAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Controllers\\UserController.cs",
+        "ref_type": "METHOD_CALL",
+        "resolved": true,
+        "reason": "OBJECT_TYPE_UNKNOWN",
+        "resolved_to": "UserService.GetActiveUsersAsync",
+        "resolver": "field_type_resolver",
+        "field_type": "UserService",
+        "confidence": "HIGH"
+      },
+      {
+        "caller_obj": "_userService",
+        "method": "PlaceOrderAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Controllers\\UserController.cs",
+        "ref_type": "METHOD_CALL",
+        "resolved": true,
+        "reason": "OBJECT_TYPE_UNKNOWN",
+        "resolved_to": "UserService.PlaceOrderAsync",
+        "resolver": "field_type_resolver",
+        "field_type": "UserService",
+        "confidence": "HIGH"
+      },
+      {
+        "caller_obj": "_orderService",
+        "method": "CancelOrderAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Controllers\\UserController.cs",
+        "ref_type": "METHOD_CALL",
+        "resolved": true,
+        "reason": "OBJECT_TYPE_UNKNOWN",
+        "resolved_to": "OrderService.CancelOrderAsync",
+        "resolver": "field_type_resolver",
+        "field_type": "OrderService",
+        "confidence": "HIGH"
+      },
+      {
+        "caller_obj": "_userService",
+        "method": "CreateUserAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Controllers\\UserController.cs",
+        "ref_type": "AWAIT_CALL",
+        "resolved": true,
+        "reason": "OBJECT_TYPE_UNKNOWN",
+        "resolved_to": "UserService.CreateUserAsync",
+        "resolver": "field_type_resolver",
+        "field_type": "UserService",
+        "confidence": "HIGH"
+      },
+      {
+        "caller_obj": "_userService",
+        "method": "GetActiveUsersAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Controllers\\UserController.cs",
+        "ref_type": "AWAIT_CALL",
+        "resolved": true,
+        "reason": "OBJECT_TYPE_UNKNOWN",
+        "resolved_to": "UserService.GetActiveUsersAsync",
+        "resolver": "field_type_resolver",
+        "field_type": "UserService",
+        "confidence": "HIGH"
+      },
+      {
+        "caller_obj": "_userService",
+        "method": "PlaceOrderAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Controllers\\UserController.cs",
+        "ref_type": "AWAIT_CALL",
+        "resolved": true,
+        "reason": "OBJECT_TYPE_UNKNOWN",
+        "resolved_to": "UserService.PlaceOrderAsync",
+        "resolver": "field_type_resolver",
+        "field_type": "UserService",
+        "confidence": "HIGH"
+      },
+      {
+        "caller_obj": "_orderService",
+        "method": "CancelOrderAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Controllers\\UserController.cs",
+        "ref_type": "AWAIT_CALL",
+        "resolved": true,
+        "reason": "OBJECT_TYPE_UNKNOWN",
+        "resolved_to": "OrderService.CancelOrderAsync",
+        "resolver": "field_type_resolver",
+        "field_type": "OrderService",
+        "confidence": "HIGH"
+      },
+      {
+        "caller_obj": "_userRepository",
+        "method": "CreateAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "METHOD_CALL",
+        "resolved": true,
+        "reason": "OBJECT_TYPE_UNKNOWN",
+        "resolved_to": "IUserRepository.CreateAsync",
+        "resolver": "field_type_resolver",
+        "field_type": "IUserRepository",
+        "confidence": "HIGH"
+      },
+      {
+        "caller_obj": "_emailService",
+        "method": "SendWelcomeEmailAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "METHOD_CALL",
+        "resolved": true,
+        "reason": "OBJECT_TYPE_UNKNOWN",
+        "resolved_to": "IEmailService.SendWelcomeEmailAsync",
+        "resolver": "field_type_resolver",
+        "field_type": "IEmailService",
+        "confidence": "HIGH"
+      },
+      {
+        "caller_obj": "_userRepository",
+        "method": "GetAllAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "METHOD_CALL",
+        "resolved": true,
+        "reason": "OBJECT_TYPE_UNKNOWN",
+        "resolved_to": "IUserRepository.GetAllAsync",
+        "resolver": "field_type_resolver",
+        "field_type": "IUserRepository",
+        "confidence": "HIGH"
+      },
+      {
+        "caller_obj": "_userRepository",
+        "method": "GetByIdAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "METHOD_CALL",
+        "resolved": true,
+        "reason": "OBJECT_TYPE_UNKNOWN",
+        "resolved_to": "IUserRepository.GetByIdAsync",
+        "resolver": "field_type_resolver",
+        "field_type": "IUserRepository",
+        "confidence": "HIGH"
+      },
+      {
+        "caller_obj": "_orderRepository",
+        "method": "CreateAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "METHOD_CALL",
+        "resolved": true,
+        "reason": "OBJECT_TYPE_UNKNOWN",
+        "resolved_to": "IOrderRepository.CreateAsync",
+        "resolver": "field_type_resolver",
+        "field_type": "IOrderRepository",
+        "confidence": "HIGH"
+      },
+      {
+        "caller_obj": "_emailService",
+        "method": "SendOrderConfirmationAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "METHOD_CALL",
+        "resolved": true,
+        "reason": "OBJECT_TYPE_UNKNOWN",
+        "resolved_to": "IEmailService.SendOrderConfirmationAsync",
+        "resolver": "field_type_resolver",
+        "field_type": "IEmailService",
+        "confidence": "HIGH"
+      },
+      {
+        "caller_obj": "_orderRepository",
+        "method": "GetByIdAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "METHOD_CALL",
+        "resolved": true,
+        "reason": "OBJECT_TYPE_UNKNOWN",
+        "resolved_to": "IOrderRepository.GetByIdAsync",
+        "resolver": "field_type_resolver",
+        "field_type": "IOrderRepository",
+        "confidence": "HIGH"
+      },
+      {
+        "caller_obj": "_orderRepository",
+        "method": "UpdateStatusAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "METHOD_CALL",
+        "resolved": true,
+        "reason": "OBJECT_TYPE_UNKNOWN",
+        "resolved_to": "IOrderRepository.UpdateStatusAsync",
+        "resolver": "field_type_resolver",
+        "field_type": "IOrderRepository",
+        "confidence": "HIGH"
+      },
+      {
+        "caller_obj": "_userRepository",
+        "method": "GetByIdAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "METHOD_CALL",
+        "resolved": true,
+        "reason": "OBJECT_TYPE_UNKNOWN",
+        "resolved_to": "IUserRepository.GetByIdAsync",
+        "resolver": "field_type_resolver",
+        "field_type": "IUserRepository",
+        "confidence": "HIGH"
+      },
+      {
+        "caller_obj": "_orderRepository",
+        "method": "GetByUserIdAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "METHOD_CALL",
+        "resolved": true,
+        "reason": "OBJECT_TYPE_UNKNOWN",
+        "resolved_to": "IOrderRepository.GetByUserIdAsync",
+        "resolver": "field_type_resolver",
+        "field_type": "IOrderRepository",
+        "confidence": "HIGH"
+      },
+      {
+        "caller_obj": "_userRepository",
+        "method": "CreateAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "AWAIT_CALL",
+        "resolved": true,
+        "reason": "OBJECT_TYPE_UNKNOWN",
+        "resolved_to": "IUserRepository.CreateAsync",
+        "resolver": "field_type_resolver",
+        "field_type": "IUserRepository",
+        "confidence": "HIGH"
+      },
+      {
+        "caller_obj": "_emailService",
+        "method": "SendWelcomeEmailAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "AWAIT_CALL",
+        "resolved": true,
+        "reason": "OBJECT_TYPE_UNKNOWN",
+        "resolved_to": "IEmailService.SendWelcomeEmailAsync",
+        "resolver": "field_type_resolver",
+        "field_type": "IEmailService",
+        "confidence": "HIGH"
+      },
+      {
+        "caller_obj": "_userRepository",
+        "method": "GetAllAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "AWAIT_CALL",
+        "resolved": true,
+        "reason": "OBJECT_TYPE_UNKNOWN",
+        "resolved_to": "IUserRepository.GetAllAsync",
+        "resolver": "field_type_resolver",
+        "field_type": "IUserRepository",
+        "confidence": "HIGH"
+      },
+      {
+        "caller_obj": "_userRepository",
+        "method": "GetByIdAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "AWAIT_CALL",
+        "resolved": true,
+        "reason": "OBJECT_TYPE_UNKNOWN",
+        "resolved_to": "IUserRepository.GetByIdAsync",
+        "resolver": "field_type_resolver",
+        "field_type": "IUserRepository",
+        "confidence": "HIGH"
+      },
+      {
+        "caller_obj": "_orderRepository",
+        "method": "CreateAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "AWAIT_CALL",
+        "resolved": true,
+        "reason": "OBJECT_TYPE_UNKNOWN",
+        "resolved_to": "IOrderRepository.CreateAsync",
+        "resolver": "field_type_resolver",
+        "field_type": "IOrderRepository",
+        "confidence": "HIGH"
+      },
+      {
+        "caller_obj": "_emailService",
+        "method": "SendOrderConfirmationAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "AWAIT_CALL",
+        "resolved": true,
+        "reason": "OBJECT_TYPE_UNKNOWN",
+        "resolved_to": "IEmailService.SendOrderConfirmationAsync",
+        "resolver": "field_type_resolver",
+        "field_type": "IEmailService",
+        "confidence": "HIGH"
+      },
+      {
+        "caller_obj": "_orderRepository",
+        "method": "GetByIdAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "AWAIT_CALL",
+        "resolved": true,
+        "reason": "OBJECT_TYPE_UNKNOWN",
+        "resolved_to": "IOrderRepository.GetByIdAsync",
+        "resolver": "field_type_resolver",
+        "field_type": "IOrderRepository",
+        "confidence": "HIGH"
+      },
+      {
+        "caller_obj": "_orderRepository",
+        "method": "UpdateStatusAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "AWAIT_CALL",
+        "resolved": true,
+        "reason": "OBJECT_TYPE_UNKNOWN",
+        "resolved_to": "IOrderRepository.UpdateStatusAsync",
+        "resolver": "field_type_resolver",
+        "field_type": "IOrderRepository",
+        "confidence": "HIGH"
+      },
+      {
+        "caller_obj": "_userRepository",
+        "method": "GetByIdAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "AWAIT_CALL",
+        "resolved": true,
+        "reason": "OBJECT_TYPE_UNKNOWN",
+        "resolved_to": "IUserRepository.GetByIdAsync",
+        "resolver": "field_type_resolver",
+        "field_type": "IUserRepository",
+        "confidence": "HIGH"
+      },
+      {
+        "caller_obj": "_orderRepository",
+        "method": "GetByUserIdAsync",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "AWAIT_CALL",
+        "resolved": true,
+        "reason": "OBJECT_TYPE_UNKNOWN",
+        "resolved_to": "IOrderRepository.GetByUserIdAsync",
+        "resolver": "field_type_resolver",
+        "field_type": "IOrderRepository",
+        "confidence": "HIGH"
+      }
+    ],
+    "still_unresolved": [
+      {
+        "caller_obj": "Name",
+        "method": "ToUpper",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Models\\User.cs",
+        "ref_type": "METHOD_CALL",
+        "resolved": false,
+        "reason": "OBJECT_TYPE_UNKNOWN"
+      },
+      {
+        "caller_obj": "Email",
+        "method": "Contains",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Models\\User.cs",
+        "ref_type": "METHOD_CALL",
+        "resolved": false,
+        "reason": "OBJECT_TYPE_UNKNOWN"
+      },
+      {
+        "caller_obj": "Items",
+        "method": "Add",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Models\\User.cs",
+        "ref_type": "METHOD_CALL",
+        "resolved": false,
+        "reason": "OBJECT_TYPE_UNKNOWN"
+      },
+      {
+        "caller_obj": "user",
+        "method": "Validate",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "METHOD_CALL",
+        "resolved": false,
+        "reason": "OBJECT_TYPE_UNKNOWN"
+      },
+      {
+        "target": "ArgumentException",
+        "source_file": "C:\\AI_Project\\CodeTruthAgent\\v3\\repository_graph\\tests\\fixtures\\csharp\\Services\\UserService.cs",
+        "ref_type": "CONSTRUCTOR_CALL",
+        "resolved": false,
+        "reason": "CLASS_NOT_IN_REPO"
+      }
+    ]
+  },
+  "dr_field_type": 28,
+  "dr_interface": 0,
+  "dr_di_constructor": 0,
+  "dr_resolved_by_pipeline": 28,
+  "dr_reduction_pct": 84.85,
+  "overall_resolved": 32,
+  "overall_pct": 86.49,
+  "baseline_unresolved": 33,
+  "governance_gate": "APPROVED",
+  "language_composition": {
+    "csharp": {
+      "file_count": 4,
+      "implemented": true,
+      "framework": "aspnet_core"
+    }
+  }
+}
